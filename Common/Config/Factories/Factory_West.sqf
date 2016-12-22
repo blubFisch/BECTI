@@ -637,6 +637,25 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 1) then {
 		//NATO Tropic CUP
+
+	_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
+	_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
+	_u pushBack 'CUP_B_M1128_MGS_Woodland';
+	_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
+	_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
+	_u pushBack 'CUP_B_M1133_MEV_Woodland';
+	_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
+	_u pushBack 'CUP_B_M1128_MGS_Woodland';
+	_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
+	_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
+	_u pushBack 'CUP_B_M2Bradley_USA_W';
+	_u pushBack 'CUP_B_M2A3Bradley_USA_W';
+	_u pushBack 'CUP_B_M6LineBacker_USA_W';
+	_u pushBack 'CUP_B_FV510_GB_W_SLAT';
+	_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
+    _u pushBack 'CUP_B_FV510_GB_W';
+	_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    	
+	/*
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 		_u pushBack 'CUP_B_M1128_MGS_Woodland';
@@ -657,27 +676,25 @@ if (CTI_CUP_ADDON > 0) then {
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    
 		_u pushBack 'CUP_B_Challenger2_Woodland_BAF';
 		_u pushBack 'CUP_B_Challenger2_2CW_BAF';		
-			
+		*/	
 		};
 		if (CTI_FACTION_WEST == 2) then {
 			//NATO Winter CUP
-		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
-		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
-		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
-		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
-		_u pushBack 'CUP_B_M1133_MEV_Woodland';
+	_u pushBack 'OFPS_S_M2';
+	_u pushBack 'OFPS_S_M1A1'; 
+	_u pushBack 'OFPS_S_M1126_HMG';
+	_u pushBack 'OFPS_S_M1126_GMG';
+	_u pushBack 'OFPS_S_M1133_MEV';
+	_u pushBack 'OFPS_S_M1129_SPG';	
 		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
 		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2Bradley_USA_W';
 		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
 		_u pushBack 'CUP_B_M6LineBacker_USA_W';
 		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
 		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
 		_u pushBack 'CUP_B_FV510_GB_W';
-		_u pushBack 'CUP_B_M1A1_Woodland_US_Army';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army'; 
 			_u pushBack 'CUP_B_Challenger2_Snow_BAF';
 			_u pushBack 'CUP_B_Challenger2_2CS_BAF';
