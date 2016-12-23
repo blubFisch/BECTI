@@ -478,7 +478,7 @@ CTI_BASE_HQ_REPAIR_RANGE = 100; //--- The range needed between the HQ wreck and 
 CTI_BASE_HQ_REPAIR_TIME = 60; //--- The time needed to repair the HQ
 
 //--- Base: Supply depots
-CTI_BASE_SUPPLY_BASE_VALUE = 20000; //--- Max supply base value
+CTI_BASE_SUPPLY_BASE_VALUE = 5000; //--- Max supply base value
 CTI_BASE_SUPPLY_DEPOT_VALUE = 5000; //--- Supply depot supply value
 
 //--- Base: Misc
