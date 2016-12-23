@@ -807,6 +807,10 @@ _i pushBack "B_UAV_01_backpack_F";
 _u pushBack 2;
 _p pushBack 2000;
 
+_i pushBack "B_Static_Designator_01_weapon_F";
+_u pushBack 1;
+_p pushBack 500;
+
 _i pushBack "B_HMG_01_support_F";
 _u pushBack 0;
 _p pushBack 5;
@@ -829,6 +833,14 @@ _p pushBack 300;
 
 _i pushBack "B_GMG_01_high_weapon_F";
 _u pushBack 2;
+_p pushBack 800;
+
+_i pushBack "B_HMG_01_A_weapon_F";
+_u pushBack 4;
+_p pushBack 500;
+
+_i pushBack "B_GMG_01_weapon_F";
+_u pushBack 4;
 _p pushBack 800;
 
 _i pushBack "B_Mortar_01_support_F";
