@@ -14,6 +14,15 @@ with missionNamespace do {
 		_this addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", CTI_P_SideID]];
 	};
 	
+	//--- The client receives supply max warning
+	CTI_PVF_CLT_SupplyMaxReached = {
+		_side = _this select 0;
+		_supplymax = _this select 1;
+		if (call CTI_CL_FNC_IsPlayerCommander) then {
+			hint parseText format["<t size='1.3' color='#2394ef'>Information</t><br /><br />Max supply reached <t color='#F5D363'>(%1)</t>, build more supply depots.", _supplymax];
+		};
+	};
+	
 	//--- The client receives an Air unit to track
 	CTI_PVF_CLT_OnAirUnitTracked = {
 		_vehicle = _this;

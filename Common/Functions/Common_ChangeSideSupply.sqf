@@ -28,7 +28,7 @@
 	  -> Assuming west had 1000 before: 950
 */
 
-private ["_side", "_supply", "_value", "_structures", "_supply_depots", "_supply_depots_count", "_supply_limit", "_commander"];
+private ["_side", "_supply", "_value", "_structures", "_supply_depots", "_supply_depots_count", "_supply_limit"];
 
 _side = _this select 0;
 _value = _this select 1;
@@ -48,10 +48,7 @@ if (_value > 0) then {
 	if (_supply <= _supply_limit) then {
 		_logic setVariable ["cti_supply", _supply + _value, true];
 	} else {
-		_commander = (_side) call CTI_CO_FNC_GetSideCommanderTeam;
-		if (isPlayer leader _commander) then {
-			hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Max supply reached, build more depots.";
-		};
+		[_side, _supply_limit] remoteExec ["CTI_PVF_CLT_SupplyMaxReached", CTI_PV_CLIENTS];
 	};
 } else {
 	if ((_supply + _value) < 0) then {
