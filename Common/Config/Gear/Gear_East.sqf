@@ -651,7 +651,7 @@ _i pushBack "O_HMG_01_A_weapon_F";
 _u pushBack 4;
 _p pushBack 500;
 
-_i pushBack "B_GMG_01_A_weapon_F";
+_i pushBack "O_GMG_01_A_weapon_F";
 _u pushBack 4;
 _p pushBack 800;
 
