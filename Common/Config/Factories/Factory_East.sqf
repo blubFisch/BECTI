@@ -456,7 +456,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_Dingo_GL_GER_Wdl';		
 	_u pushBack 'CUP_O_Ural_RU';			
 	_u pushBack 'CUP_O_BRDM2_ATGM_RUS';  
-        _u pushBack 'CUP_O_BTR60_CSAT';   		
+    _u pushBack 'CUP_O_BTR60_CSAT';   		
 	_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';		
 	_u pushBack 'CUP_O_UAZ_METIS_RU';		
 	_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';		
@@ -477,10 +477,6 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_I_SUV_Armored_ION';
 	_u pushBack 'CUP_C_Datsun';
 	_u pushBack 'CUP_O_Datsun_PK_Random';
-	_u pushBack 'CUP_O_BRDM2_CSAT';
-	_u pushBack 'CUP_O_BRDM2_ATGM_CSAT';
-	_u pushBack 'CUP_O_BRDM2_HQ_CSAT';
-	_u pushBack 'CUP_O_BTR60_CSAT';
 	_u pushBack 'CUP_O_BTR90_RU';
 	_u pushBack 'CUP_O_BTR90_HQ_RU';
 	_u pushBack 'CUP_B_LR_Ambulance_CZ_W';
@@ -511,6 +507,10 @@ if (CTI_CUP_ADDON > 0) then {
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid CUP
+	_u pushBack 'CUP_O_BRDM2_CSAT';
+	_u pushBack 'CUP_O_BRDM2_ATGM_CSAT';
+	_u pushBack 'CUP_O_BRDM2_HQ_CSAT';
+	_u pushBack 'CUP_O_BTR60_CSAT';
 		
 	};
 	if (CTI_FACTION_EAST == 1) then {
@@ -522,7 +522,19 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-		
+	_u pushBack 'OFPS_S_BRDM2_T';
+	_u pushBack 'OFPS_S_BRDM2ATGM_T';
+	_u pushBack 'OFPS_S_BRDM2HQ_T';
+	_u pushBack 'OFPS_S_BTR60';
+	_u pushBack 'OFPS_S_UAZ';
+	_u pushBack 'OFPS_S_UAZ_AGS30';
+	_u pushBack 'OFPS_S_UAZ_MG';
+	_u pushBack 'OFPS_S_UAZ_METIS';
+	_u pushBack 'OFPS_S_UAZ_SPG9';
+	_u pushBack 'OFPS_S_LR_MG';
+	_u pushBack 'OFPS_S_LR_S';
+	_u pushBack 'OFPS_S_LR_SPG9';
+	_u pushBack 'OFPS_S_LR_SX';
 	};
 };
 //--- OFPS UNITS
@@ -610,11 +622,15 @@ if (CTI_APEX_ADDON > 0) then {
 //--- CUP UNITS
 if (CTI_CUP_ADDON > 0) then { 
 	//Universal CUP
-	_u pushBack 'CUP_O_BMP1P_TKA';		
+	/*_u pushBack 'CUP_O_BMP1P_TKA';		
 	_u pushBack 'CUP_O_BMP2_RU';			
 	_u pushBack 'CUP_O_BMP3_RU';		
 	_u pushBack 'CUP_O_T55_CSAT';		
 	_u pushBack 'CUP_O_BMP2_AMB_RU';	
+	_u pushBack 'CUP_O_ZSU23_SLA';*/				
+	_u pushBack 'CUP_B_T72_CZ';		
+	_u pushBack 'CUP_O_BM21_RU'; 
+	_u pushBack 'CUP_O_2S6M_RU';
 	_u pushBack 'CUP_O_ZSU23_SLA';		
 	_u pushBack 'CUP_O_2S6_RU';
 	_u pushBack 'CUP_O_2S6M_RU';	
@@ -635,13 +651,23 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'OFPS_BMP3_T';
 */
 
+
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid CUP
+	_u pushBack 'OFPS_BMP1';
+	_u pushBack 'CUP_O_BMP1P_CSAT';
+	_u pushBack 'OFPS_BMP2';
+	_u pushBack 'OFPS_BMP2_M';
+	_u pushBack 'OFPS_BMP2_ZSU';
+	_u pushBack 'OFPS_T55';
+	_u pushBack 'OFPS_ZSU23';
+	_u pushBack 'OFPS_BMP3';
 		
 	};
 	if (CTI_FACTION_EAST == 1) then {
 		//CSAT Tropic CUP
-	_u pushBack 'OFPS_T55_T';		
+	_u pushBack 'OFPS_T55_T';	
+	_u pushBack 'OFPS_T72_T';	
 	_u pushBack 'OFPS_BMP1_T';
 	_u pushBack 'OFPS_BMP1P_T';
 	_u pushBack 'OFPS_BMP2_T';
@@ -654,12 +680,22 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-		
+	_u pushBack 'OFPS_S_BMP1';
+	_u pushBack 'OFPS_S_BMP1P';
+	_u pushBack 'OFPS_S_BMP2';
+	_u pushBack 'OFPS_S_BMP2_HQ';
+	_u pushBack 'OFPS_S_BMP2_M';
+	_u pushBack 'OFPS_S_ZSU23';
+	_u pushBack 'OFPS_T55_S';
+	_u pushBack 'OFPS_T72_S';
+	_u pushBack 'OFPS_S_BMP3';
+	
 	};
 };
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
+
 	_u pushBack 'OFPS_BMP1P';		
 	_u pushBack 'OFPS_BMP2';			
 	_u pushBack 'CUP_O_BMP3_RU';		
@@ -667,6 +703,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'OFPS_BMP2_M';			
 	_u pushBack 'CUP_O_2S6M_RU';				
     _u pushBack 'OFPS_BMP2_ZSU';
+
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -803,13 +840,16 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-			_u pushBack 'CUP_O_MI6T_TKA';			
+	_u pushBack 'OFPS_MI6S';			
 	_u pushBack 'CUP_B_Mi24_D_MEV_CDF';		
 	_u pushBack 'CUP_O_Mi24_P_RU';		
 	_u pushBack 'CUP_O_Mi24_V_RU';
 	_u pushBack 'CUP_I_Mi24_Mk4_Empty_ION';		
 	_u pushBack 'CUP_I_Mi24_Mk4_ION';		
 	_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';
+	_u pushBack 'OFPS_S_SU25';
+	_u pushBack 'OFPS_S_SU34_AGM';
+	_u pushBack 'OFPS_S_SU34_LGB';
 	};
 };
 //--- OFPS UNITS

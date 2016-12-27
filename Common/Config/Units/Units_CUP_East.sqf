@@ -308,7 +308,17 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'OFPS_BRDM2';
+_c pushBack 'CUP_O_BRDM2_CSAT';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1200;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BRDM2_T';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1200;
@@ -328,7 +338,17 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'OFPS_BRDM2ATGM';
+_c pushBack 'OFPS_S_BRDM2ATGM_T';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 4700;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'CUP_O_BRDM2_ATGM_CSAT';
 _p pushBack '';
 _n pushBack 'BRDM ATGM';
 _o pushBack 4700;
@@ -358,7 +378,17 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'OFPS_BRDM2HQ';
+_c pushBack 'CUP_O_BRDM2_HQ_CSAT';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BRDM2HQ_T';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -378,9 +408,19 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'OFPS_BTR60';
+_c pushBack 'CUP_O_BTR60_CSAT';
 _p pushBack '';
 _n pushBack 'BTR60 HMG, MG';
+_o pushBack 2700;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BTR60';
+_p pushBack '';
+_n pushBack '';
 _o pushBack 2700;
 _t pushBack 10;
 _u pushBack 1;
@@ -417,8 +457,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-
+*/
 _c pushBack 'OFPS_LR_MG';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 400;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_LR_MG';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
@@ -437,10 +487,20 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
+
+_c pushBack 'OFPS_S_LR_S';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 600;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'OFPS_LR_SPG9';
 _p pushBack '';
-_n pushBack 'UAZ SPG9';
+_n pushBack '';
 _o pushBack 3000;
 _t pushBack 30;
 _u pushBack 0;
@@ -448,7 +508,17 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'OFPS_LR_SX';
+_c pushBack 'OFPS_S_LR_SPG9';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 3000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_LR_SX';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 700;
@@ -458,6 +528,16 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_S_LR_SX';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 700;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+/*
 _c pushBack 'CUP_C_LR_Transport_CTK';
 _p pushBack '';
 _n pushBack '';
@@ -478,10 +558,29 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_S_UAZ';
+_p pushBack '';
+_n pushBack 'UAZ Unarmed (Snow)';
+_o pushBack 750;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
 
 _c pushBack 'OFPS_UAZ_AGS30';
 _p pushBack '';
 _n pushBack 'UAZ GMG';
+_o pushBack 1850;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_UAZ_AGS30';
+_p pushBack '';
+_n pushBack 'UAZ GMG (Snow)';
 _o pushBack 1850;
 _t pushBack 30;
 _u pushBack 2;
@@ -499,9 +598,29 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_S_UAZ_MG';
+_p pushBack '';
+_n pushBack 'UAZ MG (Snow)';
+_o pushBack 1150;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'OFPS_UAZ_METIS';
 _p pushBack '';
 _n pushBack 'UAZ Metis';
+_o pushBack 5300;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_UAZ_METIS';
+_p pushBack '';
+_n pushBack 'UAZ Metis (Snow)';
 _o pushBack 5300;
 _t pushBack 30;
 _u pushBack 2;
@@ -520,6 +639,16 @@ _s pushBack "";
 _d pushBack 0;*/
 
 _c pushBack 'OFPS_UAZ_SPG9';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_UAZ_SPG9';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1800;
@@ -681,20 +810,40 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_BMP1_CSAT';
+_c pushBack 'OFPS_BMP1';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 3000;
+_o pushBack 5000;
 _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-_c pushBack 'OFPS_BMP1';
+_c pushBack 'CUP_O_BMP1P_CSAT';
 _p pushBack '';
-_n pushBack 'BMP1-P';
-_o pushBack 5500;
+_n pushBack '';
+_o pushBack 6500;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BMP1';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BMP1P';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 6500;
 _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -703,8 +852,18 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP1_T';
 _p pushBack '';
-_n pushBack 'BMP1-P (Pacific)';
+_n pushBack 'BMP1 (Pacific)';
 _o pushBack 5500;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_BMP1P_T';
+_p pushBack '';
+_n pushBack 'BMP1-P (Pacific)';
+_o pushBack 6500;
 _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -713,10 +872,20 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP2';
 _p pushBack '';
-_n pushBack 'BMP2';
+_n pushBack '';
 _o pushBack 6800;
 _t pushBack 20;
-_u pushBack 0;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BMP2';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 6800;
+_t pushBack 20;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -726,32 +895,32 @@ _p pushBack '';
 _n pushBack 'BMP2 (Pacific)';
 _o pushBack 6800;
 _t pushBack 20;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'OFPS_BMP2_M';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 6400;
-_t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
+_s pushBack "";
 _d pushBack 0;
 
 _c pushBack 'OFPS_BMP2_M_T';
 _p pushBack '';
 _n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 6400;
+_o pushBack 5000;
 _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
 
-_c pushBack 'CUP_O_BMP2_AMB_CSAT';
+_c pushBack 'OFPS_S_BMP2_M';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'OFPS_BMP2_M';
 _p pushBack '';
 _n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 5000;
@@ -803,7 +972,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_T72_CZ';
 _p pushBack '';
-_n pushBack 'T-72';
+_n pushBack 'T-72b (Command TI)';
 _o pushBack 18000;
 _t pushBack 20;
 _u pushBack 2;
@@ -811,12 +980,41 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
+<<<<<<< HEAD
+_c pushBack 'OFPS_T72';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 17000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_T72_S';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 17000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_T72_T';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 17000;
+_t pushBack 20;
+_u pushBack 2;
+=======
 _c pushBack 'CUP_O_T90_RU';
 _p pushBack '';
 _n pushBack 'T-90';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 3;
+>>>>>>> refs/remotes/origin/master
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -831,9 +1029,19 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_S_ZSU23';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 4350;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'OFPS_ZSU23_T';
 _p pushBack '';
-_n pushBack 'ZSU23 Shilka';
+_n pushBack 'ZSU23 Shilka (Tropic)';
 _o pushBack 4350;
 _t pushBack 20;
 _u pushBack 2;
@@ -876,7 +1084,17 @@ _p pushBack '';
 _n pushBack 'BMP3';
 _o pushBack 12200;
 _t pushBack 20;
-_u pushBack 1;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_BMP3';
+_p pushBack '';
+_n pushBack 'BMP3';
+_o pushBack 12200;
+_t pushBack 20;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -886,7 +1104,7 @@ _p pushBack '';
 _n pushBack 'BMP3';
 _o pushBack 12200;
 _t pushBack 20;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -1048,6 +1266,16 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_MI6S';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 6000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 /*_c pushBack 'CUP_O_Mi8_medevac_CHDKZ';
 _p pushBack '';
 _n pushBack (format ["Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
@@ -1093,7 +1321,7 @@ _p pushBack '';
 _n pushBack 'L39 FAB250';
 _o pushBack 12300;
 _t pushBack 20;
-_u pushBack 3;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
@@ -1101,6 +1329,16 @@ _d pushBack 0;
 _c pushBack 'CUP_O_Su25_RU_3';
 _p pushBack '';
 _n pushBack 'SU-25 (Unguided Bombs, Rocket Pods)';
+_o pushBack 30000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_SU25';
+_p pushBack '';
+_n pushBack 'SU-25 (Snow)';
 _o pushBack 30000;
 _t pushBack 20;
 _u pushBack 2;
@@ -1138,9 +1376,29 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'OFPS_S_SU34_LGB';
+_p pushBack '';
+_n pushBack 'SU-34 LGB (Snow)';
+_o pushBack 56300;
+_t pushBack 20;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'CUP_B_SU34_AGM_CSAT';
 _p pushBack '';
 _n pushBack 'SU-34 AGM';
+_o pushBack 60000;
+_t pushBack 20;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_SU34_AGM';
+_p pushBack '';
+_n pushBack 'SU-34 AGM (Snow)';
 _o pushBack 60000;
 _t pushBack 20;
 _u pushBack 5;
