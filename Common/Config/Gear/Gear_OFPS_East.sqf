@@ -164,6 +164,10 @@ _i pushBack "IP_B_Kitbag_SnowTiger";
 _u pushBack 0;
 _p pushBack 300;
 
+//Deployable Boat
+_i pushBack "AP_Deployable_Boat_backpack";
+_u pushBack 3;
+_p pushBack 500;
 
 //pistols
 
