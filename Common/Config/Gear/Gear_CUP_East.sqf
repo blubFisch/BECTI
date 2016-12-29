@@ -1183,6 +1183,15 @@ _i pushBack "CUP_optic_PechenegScope";
 _u pushBack 2;
 _p pushBack 600;
 
+//--Launcher Optics
+
+_i pushBack "CUP_optic_PGO7V3";
+_u pushBack 2;
+_p pushBack 200;
+
+_i pushBack "CUP_optic_NSPU_RPG";
+_u pushBack 3;
+_p pushBack 1000;
 
 //--Nightvision TWS Optics
 
