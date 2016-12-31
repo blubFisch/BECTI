@@ -31,7 +31,7 @@ _sideNum = switch (_side) do {
 };
 
 _logFctn = {
-	_text = "SAM Control : " + _this;
+	private _text = "SAM Control : " + _this;
 	//[player,_text] remoteExec ["commandChat"];
 	//diag_log _text;
 };
@@ -150,7 +150,7 @@ while {true} do {
 			sleep _missileLockTime;
 			
 			// Last check - LOS is clear and target alive
-			if (terrainIntersectASL [eyePos _useLauncher, getPosASL _launcherTarget] || !(alive _launcherTarget)) exitWith {
+			if (terrainIntersectASL [eyePos _useLauncher, aimPos _launcherTarget] || !(alive _launcherTarget)) exitWith {
 				// Prevent AI from shooting again on its own
 				(gunner _useLauncher) doWatch objNull;
 			};
