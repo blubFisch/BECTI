@@ -1,13 +1,13 @@
 /*
   # HEADER #
 	Description:	Fire control of C-RAMs. All targets (Rockets/Missiles, Arty, Mortar and other airborne targets, configurable) within a configurable envelope will be engaged.
-					This script fully occupies all given manned turrets for the given side.
+					This script occupies all manned C-RAM turrets for the given side.
 					Approach:
 						- The environment of all CRAM turrets will be scanned for targets regularly
 						- If targets appear in "tracking range", they will be assigned to a turret
 							- Tt will begin to turn and aim at the target
 							- Once target is in "open fire range", it will be fired upon
-							- Once the CRAM bullets reach proximity to the target, they will explode and damage/destroy the target
+							- Once the CRAM rounds reach proximity to the target, they will explode and damage/destroy the target
 						- Targets are prioritized according to distance to the CRAMs - closest first
 
   # PARAMETERS #
@@ -60,7 +60,7 @@ FNC_CRAMControl_AimAndFire =
 	
 	private _aimHelpTarget = "at_phalanx_target" createVehicle [getPosATL _target select 0, getPosATL _target select 1, (getPosATL _target select 2) + 20];
 	
-	private _weaponClass = currentWeapon _cram;
+	private _weaponClass = currentWeapon _cram;	//TODO: selection
 	private _skipTarget = false;
 	
 	private _gunner = gunner _cram;
@@ -93,7 +93,7 @@ FNC_CRAMControl_AimAndFire =
 			};
 			
 			// Proximity hit detection and reaction
-			_nearRounds = _target nearObjects ["at_phalanx_35mm_AA", _proximityForAmmoDestruction]; //at_phalanx_missile_35mm_AA
+			_nearRounds = _target nearObjects ["at_phalanx_35_AA", _proximityForAmmoDestruction]; //at_phalanx_missile_35mm_AA	//TODO: ammo type for diff turrets
 			hintSilent ("Distance: " + str _targetDistance + " Aim: " + str _aimingQuality + ", Proximity: " + str count _nearRounds + ", Lead: " + str (_aimHelpTarget distance _target));
 			if( count _nearRounds > 0 ) then {
 				// Simulate proximity explosion
