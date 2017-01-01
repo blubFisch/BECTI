@@ -571,6 +571,16 @@ _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;*/
 
+_c pushBack 'O_G_Offroad_01_repair_F';
+_p pushBack '';
+_n pushBack 'Defense Truck';
+_o pushBack 4000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "service-defensetruck";
+_d pushBack 0;
+
 _c pushBack 'O_Truck_03_repair_F';
 _p pushBack '';
 _n pushBack 'Repair Truck';

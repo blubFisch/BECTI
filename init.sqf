@@ -46,7 +46,6 @@ if (CTI_IsClient && isMultiplayer) then {
 		12452 cutText ["Receiving mission intel...", "BLACK FADED", 50000];
 	};
 };
-
 //--- In MP, we get the parameters.
 if (isMultiplayer) then {call Compile preprocessFileLineNumbers "Common\Init\Init_Parameters.sqf"};
 
@@ -75,6 +74,9 @@ execVM "Common\Init\Init_Locations.sqf";
 if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) then {
 	call compile preprocessFileLineNumbers "Common\Init\Init_LocationsTerritorial.sqf";
 };
+
+//--- Call Vehicle Protection scripts
+call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_init.sqf";
 
 //--- Common Part is over
 CTI_Init_Common = true;
@@ -287,3 +289,5 @@ if (isNil "Radio_Say3D") then {
       _array = _this select 1;
      (_array select 0) say3D (_array select 1);
 };
+// Burn script for later
+//BIS_Effects_Burn=compile preprocessFileLineNumbers "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";

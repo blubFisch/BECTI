@@ -51,9 +51,24 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
-
+//Base Health Upgrade
+_upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
+_upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
+_baseratio = 1;
+		switch (_upgrade_basehealth) do {
+			case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
+			case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
+			case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
+			case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
+			case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+		};
+_reduce_damages = _reduce_damages * _baseratio;
 //--- Do we have to reduce the damages?
-if (_reduce_damages > 0) then {_damage = _damage / _reduce_damages};
+if (_reduce_damages > 0 ) then {
+	_damage = _damage / _reduce_damages;
+} else {
+	_damage = _damage / _baseratio;
+};
 
 _virtual_damages = _damaged getVariable "cti_altdmg";
 if (isNil '_virtual_damages') then {_virtual_damages = 0};

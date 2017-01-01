@@ -53,6 +53,5 @@ if (alive _vehicle) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_HandleEmptyVehicle.sqf", format["Vehicle [%1] will now get removed after an empty delay of [%2]", _vehicle, _delay]] call CTI_CO_FNC_Log;
 	};
-
 	deleteVehicle _vehicle;
 }; //--- If we got out of the loop then we can just delete the vehicle

@@ -265,6 +265,10 @@ _i pushBack "CUP_lmg_M249";
 _u pushBack 1;
 _p pushBack 450;
 
+_i pushBack "CUP_lmg_m249_SQuantoon";
+_u pushBack 1;
+_p pushBack 500;
+
 
 //M240 Family
 	

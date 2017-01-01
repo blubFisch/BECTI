@@ -186,20 +186,11 @@ _i pushBack "sfp_ksp58";
 _u pushBack 0;
 _p pushBack 300;
 
-_i pushBack "CUP_lmg_m249_SQuantoon";
-_u pushBack 1;
-_p pushBack 500;
-
-
-
 //snipers
 _i pushBack "sfp_psg90";
 _u pushBack 2;
 _p pushBack 400;
 
-_i pushBack "srifle_DMR_06_olive_F";
-_u pushBack 2;
-_p pushBack 300;
 
 //support
 

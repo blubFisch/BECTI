@@ -12,6 +12,10 @@ switch (_source) do {
 		_areaSize = CTI_COIN_AREA_REPAIR;
 		_origin = _this select 0;
 	};
+	case "DefenseTruck": {
+		_areaSize = CTI_COIN_AREA_DEFENSE;
+		_origin = _this select 0;
+	};
 };
 
 [_origin, _source, _areaSize] execVM "Client\GUI\GUI_CoinMenu.sqf";

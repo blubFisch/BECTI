@@ -84,7 +84,7 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 	_vehicle addAction ["<t color='#2E9AFE'>Eject With Parachute</t>", "Client\Actions\Action_Eject.sqs",[],0,false,true,"","player in _target && getPos _target select 2 >80"];
 };
 
-//--- Radio - only huey for now
+//--- Radio - only helis
 if (_vehicle isKindOf "Helicopter" || _vehicle isKindOf "CUP_B_UH1D_GER_KSK") then {
 	_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
 };
@@ -92,11 +92,25 @@ if (_vehicle isKindOf "Helicopter" || _vehicle isKindOf "CUP_B_UH1D_GER_KSK") th
 if (_sideID != CTI_P_SideID) exitWith {};
 
 if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
+	_vehicle addItemCargo ["ToolKit",1];
 	if (CTI_BASE_FOB_MAX > 0) then {
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Dismantle Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB_DISMANTLE, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB_Dismantle < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Dismantle Nearest FOB</t>", "Client\Actions\Action_DismantleFOB.sqf", "", 92, false, true, "", "_this == player && (CTI_P_TeamsRequests_FOB_Dismantle > 0 || call CTI_CL_FNC_IsPlayerCommander)"];
 	};
+};
+
+//Defense Truck Cargo
+if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
+	_marker_size = [0.75,0.75];
+	_marker_type = CTI_P_MarkerPrefix+"maint"; //type is ok? b_support ?
+	_vehicle addItemCargo ["ToolKit",1];
+	_vehicle addMagazineCargo ["ATMine_Range_Mag",8];
+	_vehicle addMagazineCargo ["APERSMine_Range_Mag",4];
+	_vehicle addMagazineCargo ["APERSBoundingMine_Range_Mag",4];
+	_vehicle addMagazineCargo ["SLAMDirectionalMine_Wire_Mag",4];
+	_vehicle addMagazineCargo ["APERSTripMine_Wire_Mag",4];
+	_vehicle addMagazineCargo ["ClaymoreDirectionalMine_Remote_Mag",4];
 };
 
 //--- Get a proper icon

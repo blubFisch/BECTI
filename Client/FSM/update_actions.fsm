@@ -12,7 +12,7 @@ link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
 globals[] = {25.000000,1,0,0,0,640,480,1,133,6316128,1,-457.107819,165.700150,575.219543,-317.919952,190,635,1};
-window[] = {0,-1,-1,-1,-1,833,52,1307,52,1,208};
+window[] = {0,-1,-1,-1,-1,989,208,1463,208,1,208};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -100,6 +100,7 @@ class FSM
        "CTI_Base_NavalInRange = if !(isNull ([CTI_NAVAL, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
        "" \n
        "CTI_Base_RepairInRange_Mobile = if (count([player, CTI_SPECIAL_REPAIRTRUCK, CTI_SERVICE_REPAIR_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};" \n
+       "CTI_Base_DefenseTruckInRange_Mobile = if (count([player, CTI_SPECIAL_DEFENSETRUCK, CTI_SERVICE_DEFENSE_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};" \n
        "" \n
        "//--- Depot check" \n
        "_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;" \n

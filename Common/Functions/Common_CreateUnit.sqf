@@ -68,4 +68,7 @@ if !(isNil "ADMIN_ZEUS") then {
 	};
 };
 
+//---Add APS system tracking
+[_unit] spawn FNC_APS_ACTIONS;
+
 _unit

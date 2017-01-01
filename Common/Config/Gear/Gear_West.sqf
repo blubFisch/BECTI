@@ -566,7 +566,7 @@ _u pushBack 0;
 _p pushBack 200; 
 */
 
-_i pushBack " srifle_DMR_02_F  ";
+_i pushBack "srifle_DMR_02_F";
 _u pushBack 4;
 _p pushBack 1000;
 
@@ -650,6 +650,10 @@ _p pushBack 600;
 _i pushBack "srifle_DMR_03_multicam_F";
 _u pushBack 2;
 _p pushBack 600;
+
+_i pushBack "srifle_DMR_06_olive_F";
+_u pushBack 2;
+_p pushBack 300;
 
 _i pushBack "MMG_02_camo_F";
 _u pushBack 3;
@@ -839,9 +843,6 @@ _i pushBack "B_HMG_01_A_weapon_F";
 _u pushBack 4;
 _p pushBack 500;
 
-_i pushBack "B_GMG_01_weapon_F";
-_u pushBack 4;
-_p pushBack 800;
 
 _i pushBack "B_Mortar_01_support_F";
 _u pushBack 5;
@@ -981,10 +982,6 @@ _p pushBack 200;
 _i pushBack "optic_ACO_grn";
 _u pushBack 0;
 _p pushBack 200;
-
-_i pushBack "optic_SOS";
-_u pushBack 4;
-_p pushBack 800;
 
 _i pushBack "optic_SOS";
 _u pushBack 4;

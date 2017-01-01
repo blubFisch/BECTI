@@ -910,6 +910,7 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
 
 //Universal Vanilla
+_u pushBack "B_G_Offroad_01_repair_F";
 _u pushBack "B_Truck_01_Repair_F";
 _u pushBack "CTI_Salvager_West";
 _u pushBack 'B_Slingload_01_Repair_F';
@@ -919,9 +920,6 @@ _u pushBack 'B_Slingload_01_Fuel_F';
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
 
-
-
-	
 };
 if (CTI_FACTION_WEST == 1) then {
 	//NATO Tropic Vanilla

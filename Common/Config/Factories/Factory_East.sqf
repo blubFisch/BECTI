@@ -902,6 +902,7 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
 
 //Universal Vanilla
+_u pushBack "O_G_Offroad_01_repair_F";
 _u pushBack "Land_Pod_Heli_Transport_04_repair_F";
 _u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
 _u pushBack "O_Truck_03_fuel_F";

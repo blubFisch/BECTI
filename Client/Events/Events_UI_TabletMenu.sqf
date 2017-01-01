@@ -8,7 +8,7 @@ switch (_action) do {
 		//--- Factory available?
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777102) ctrlEnable (if (!CTI_P_PreBuilding && (CTI_Base_BarracksInRange || CTI_Base_LightInRange || CTI_Base_HeavyInRange || CTI_Base_AirInRange || CTI_Base_AmmoInRange || CTI_Base_RepairInRange || CTI_Base_NavalInRange || CTI_Base_DepotInRange)) then {true} else {false});
 		//--- Build available?
-		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777103) ctrlEnable (if ((call CTI_CL_FNC_IsPlayerCommander && CTI_Base_HQInRange) || CTI_Base_RepairInRange_Mobile) then {true} else {false});
+		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777103) ctrlEnable (if ((call CTI_CL_FNC_IsPlayerCommander && CTI_Base_HQInRange) || CTI_Base_RepairInRange_Mobile || CTI_Base_DefenseTruckInRange_Mobile) then {true} else {false});
 		//--- Halo available?
 		if (time - CTI_HALO_LASTTIME >= CTI_HALO_COOLDOWN) then {
 			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;

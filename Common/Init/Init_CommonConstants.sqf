@@ -64,7 +64,7 @@ CTI_SPECIAL_MEDICALVEHICLE = 2;
 CTI_SPECIAL_FUELTRUCK = 3;
 CTI_SPECIAL_GEAR = 4;
 CTI_SPECIAL_NUKETRUCK = 5;
-// CTI_SPECIAL_ALLPURPOSETRUCK = 3;
+CTI_SPECIAL_DEFENSETRUCK = 6;
 
 CTI_AI_COMMANDER_BUYTO_INFANTRY = 20;
 CTI_AI_COMMANDER_BUYTO_LIGHT = 13;
@@ -238,10 +238,12 @@ CTI_UPGRADE_HALO = 12;
 CTI_UPGRADE_AIRR = 13;
 CTI_UPGRADE_ARTR = 14;
 CTI_UPGRADE_REST = 15;
-CTI_UPGRADE_IRSMOKE = 16;
-CTI_UPGRADE_SATELLITE = 17;
-CTI_UPGRADE_NUKE = 18;
-CTI_UPGRADE_SUPPLY_RATE = 19;
+CTI_UPGRADE_LVOSS = 16;
+CTI_UPGRADE_ERA = 17;
+CTI_UPGRADE_SATELLITE = 18;
+CTI_UPGRADE_NUKE = 19;
+CTI_UPGRADE_SUPPLY_RATE = 20;
+CTI_UPGRADE_BASE_HEALTH = 21;
 
 //--- Supply
 CTI_UPGRADE_CST_SUPPLY_COEF = [1, 2, 3, 4]; //--- Supply coefficient (Default * upgrade)
@@ -483,6 +485,7 @@ CTI_BASE_SUPPLY_DEPOT_VALUE = 5000; //--- Supply depot supply value
 
 //--- Base: Misc
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
+CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
@@ -544,6 +547,7 @@ CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 2; //--- Repair trucks build s
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR = 0.01; //--- Repair trucks repair iteration per action over a structure.
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR_RANGE = 25; //--- Repair trucks may repair structures in that range
 CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT = 3; //--- Repair truck build tax multiplier
+CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT = 2; //--- Defense truck build tax multiplier
 
 //--- Vehicles: Salvage Trucks
 CTI_VEHICLES_SALVAGE_INDEPENDENT_MAX = 2; //--- Maximum amount of Independent Salvage Trucks which may be present per side
@@ -551,6 +555,11 @@ CTI_VEHICLES_SALVAGE_INDEPENDENT_EFFECTIVE_RANGE = 5000; //--- An independent Sa
 CTI_VEHICLES_SALVAGE_RATE = 0.4; //--- This coefficient determine the value of a salvaged wreck (wreck value * x)
 CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a Wreck and Salvage Truck
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
+
+//--- Vehicles: LVOSS and ERA SYSTEMS
+CTI_VEHICLES_APS_SCAN_DISTANCE = 6000; //--- Scan distance for LVOSS and ERA scripts, must be fired within this range to detect
+CTI_VEHICLES_LVOSS_COOLDOWN_TIME = 120; //--- Max cooldown time between LVOSS charges, upgrades remove 30s - 120/90
+CTI_VEHICLES_ERA_COOLDOWN_TIME = 150; //--- Max cooldown time between ERA charges, upgrades remove 30s - 150/120/90/60
 
 //--- Vehicles: Parameter
 with missionNamespace do {
@@ -573,6 +582,7 @@ CTI_COIN_AREA_DEFAULT = [30, 10];
 CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
 CTI_COIN_AREA_HQ_MOBILIZED = [20, 10];
 CTI_COIN_AREA_REPAIR = [45, 10];
+CTI_COIN_AREA_DEFENSE = [30, 6];
 
 CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 30; //--- Keep values of 10
 
@@ -618,6 +628,7 @@ CTI_SERVICE_AMMO_TOWN_DEPOT_TIME = 50;
 CTI_SERVICE_REPAIR_DEPOT_RANGE = 300;
 CTI_SERVICE_REPAIR_DEPOT_TIME = 30;
 CTI_SERVICE_REPAIR_TRUCK_RANGE = 10;
+CTI_SERVICE_DEFENSE_TRUCK_RANGE = 10;
 CTI_SERVICE_REPAIR_TRUCK_TIME = 50;
 CTI_SERVICE_AMMO_BOX_RANGE = 10;
 CTI_SERVICE_AMMO_BOX_TIME = 120;

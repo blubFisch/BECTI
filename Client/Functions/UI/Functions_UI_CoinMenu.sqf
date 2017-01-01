@@ -18,6 +18,13 @@ CTI_Coin_CreateRootMenu = {
 				[1]
 			]
 		};
+		case "DefenseTruck": {
+			[
+				["CTI_COIN_Items_1"],
+				["Defenses"],
+				[1]
+			]
+		};
 		default {[[]]};
 	};
 	
@@ -78,6 +85,7 @@ CTI_Coin_LoadSubMenu = {
 				if ((missionNamespace getVariable "CTI_COIN_SOURCE") in (_info select 6)) then {
 					_price = "";
 					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
+					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
 					_sub_items pushBack format["%1  -  $%2", _info select 0, _price];
 					_sub_itemEnabled pushBack (if (_funds >= _price) then {1} else {0});
 					_sub_itemVariable pushBack _x;
@@ -347,6 +355,7 @@ CTI_Coin_OnPreviewPlacement = {
 				case 'DEFENSES': {
 					_price = "";
 					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((CTI_COIN_PARAM select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (CTI_COIN_PARAM select 2)};
+					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((CTI_COIN_PARAM select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (CTI_COIN_PARAM select 2)};
 					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, CTI_COIN_PARAM select 1];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
 					[_variable, CTI_P_SideJoined, _position, _direction, player, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];

@@ -44,7 +44,7 @@
 	  -> Create a locked and handled "B_Quadbike_01_F" at the player's position facing South on the player's initial side
 */
 
-private ["_direction", "_handle", "_locked", "_net", "_position", "_side", "_sideID", "_special", "_type", "_vehicle", "_velocity"];
+private ["_direction", "_handle", "_locked", "_net", "_position", "_side", "_sideID", "_special", "_type", "_vehicle", "_velocity", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
 
 _type = _this select 0;
 _position = _this select 1;
@@ -113,12 +113,20 @@ clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
+//set basic supplies to all
+_vehicle addItemCargo ["FirstAidKit",2];
+//Add basic chutes to air units
+if (_vehicle isKindOf "Air") then {
+	_vehicle addBackpackCargo ["NonSteerable_Parachute_F",2];
+	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
+};
+
 //slingload modification
 if (_type isKindOf 'Slingload_01_Base_F') then {_vehicle setmass [4000,0]};
 if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,0]};
 // weight fix
 if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
-		
+
 //--- ZEUS Curator Editable
 if !(isNil "ADMIN_ZEUS") then {
 	if (CTI_IsServer) then {
@@ -127,5 +135,67 @@ if !(isNil "ADMIN_ZEUS") then {
 		[ADMIN_ZEUS, _vehicle] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
 	};
 };
+//---APS system
+_upgrades = nil;
+_upgrade_lvoss = 0;
+_upgrade_era = 0;
+if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
+	_upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
+	_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;
+	_upgrade_era = _upgrades select CTI_UPGRADE_ERA;
+};
+if (isNil "_upgrade_lvoss") then {_upgrade_lvoss = 0;};
+if (isNil "_upgrade_era") then {_upgrade_era = 0;};
+//---Add LVOSS system
+if (_vehicle isKindOf "Car") then {
+	if (_upgrade_lvoss > 0) then {
+		switch (_upgrade_lvoss) do {
+			case 0: {
+				_vehicle setVariable ["ammo_left", 0, true];
+				_vehicle setVariable ["ammo_right", 0, true];
+			};
+			case 1: {
+				_vehicle setVariable ["ammo_left", 1, true];
+				_vehicle setVariable ["ammo_right", 1, true];
+			};
+			case 2: {
+				_vehicle setVariable ["ammo_left", 2, true];
+				_vehicle setVariable ["ammo_right", 2, true];
+			};
+		};
+		_vehicle setVariable ["reloading_left", 0, true];
+		_vehicle setVariable ["reloading_right", 0, true];
+	};
+};
+//---Add ERA system
+if (_vehicle isKindOf "Tank") then {
+	if (_upgrade_era > 0) then {
+		switch (_upgrade_era) do {
+			case 0: {
+				_vehicle setVariable ["ammo_left", 0, true];
+				_vehicle setVariable ["ammo_right", 0, true];
+			};
+			case 1: {
+				_vehicle setVariable ["ammo_left", 1, true];
+				_vehicle setVariable ["ammo_right", 1, true];
+			};
+			case 2: {
+				_vehicle setVariable ["ammo_left", 2, true];
+				_vehicle setVariable ["ammo_right", 2, true];
+			};
+			case 3: {
+				_vehicle setVariable ["ammo_left", 3, true];
+				_vehicle setVariable ["ammo_right", 3, true];
+			};
+			case 4: {
+				_vehicle setVariable ["ammo_left", 4, true];
+				_vehicle setVariable ["ammo_right", 4, true];
+			};			
+		};
+		_vehicle setVariable ["reloading_left", 0, true];
+		_vehicle setVariable ["reloading_right", 0, true];
+	};
+};
+[_vehicle] spawn FNC_APS_ACTIONS;
 
 _vehicle

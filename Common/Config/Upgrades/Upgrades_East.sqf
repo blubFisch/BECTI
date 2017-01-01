@@ -19,10 +19,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Air Radar
 	true, //--- Art Radar
 	true, //--- Respawn Range
-	true, //--- IR SMOKE
+	true, //--- LVOSS System
+	true, //--- ERA System
 	true, //--- Satellite
 	true, //--- Nuke
-	true //--- Supply Rate
+	true, //--- Supply Rate
+	true //--- Base Health
 ]];
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -42,10 +44,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[1500, 3000, 5000], //--- Air Radar
 	[1500, 3000, 5000], //--- Art Radar
 	[1500,2500,3500], //--- Respawn Range
-	[1500], //--- IR SMOKE
+	[1500,2000], //--- LVOSS System
+	[2000,4000,6000,8000], //--- ERA System
 	[75000], //--- Satellite
 	[40000], //--- Nuke
-	[4000, 8000, 12000] //--- Supply Rate
+	[4000, 8000, 12000], //--- Supply Rate
+	[4000, 8000, 12000, 16000] //--- Base Health
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -65,10 +69,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[1500, 3000, 5000], //--- Air Radar
 	[1500, 3000, 5000], //--- Art Radar
 	[1500,2500,3500], //--- Respawn Range
-	[1500], //--- IR SMOKE
-	[75000], //--- Satellite
+	[1500,2000], //--- LVOSS System
+	[2000,4000,6000,8000], //--- ERA System
+	[40000], //--- Satellite
 	[40000], //--- Nuke
-	[4000, 8000, 12000] //--- Supply Rate
+	[4000, 8000, 12000], //--- Supply Rate
+	[4000, 8000, 12000, 16000] //--- Base Health
 ]];
 };
 
@@ -90,10 +96,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	1, //--- Air Radar
 	1, //--- Art Radar
 	3, //--- Respawn Range
-	0, //--- IR Smoke
+	0, //--- LVOSS System
+	0, //--- ERA System
 	0, //--- Satellite
 	0, //--- Nuke
-	3 //--- Supply Rate
+	3, //--- Supply Rate
+	4 //--- Base Health
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
@@ -113,10 +121,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	3, //--- Air Radar
 	3, //--- Art Radar
 	3, //--- Respawn Range
-	1, //--- IR Smoke
+	2, //--- LVOSS System
+	4, //--- ERA System
 	1, //--- Satellite
 	1, //--- Nuke
-	3 //--- Supply Rate
+	3, //--- Supply Rate
+	4 //--- Base Health
 ]];
 };
 
@@ -137,10 +147,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[]], //--- Air Radar
 	[[],[],[]], //--- Art Radar
 	[[],[],[]], //--- Respawn Range
-	[[]], //--- IR Smoke
+	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
+	[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
 	[[CTI_UPGRADE_AIR, 3]], //--- Satellite
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
-	[[],[],[]] //--- Supply Rate
+	[[],[],[]], //--- Supply Rate
+	[[],[],[],[]] //--- Base Health
 ]];
 
 if (CTI_DEV_MODE > 0) then { 
@@ -161,10 +173,12 @@ if (CTI_DEV_MODE > 0) then {
 		[1, 1, 1], //--- Air Radar
 		[1, 1, 1], //--- Art Radar
 		[1, 1, 1], //--- Respawn Range
-		[1], //--- IR Smoke
+		[1, 1], //--- LVOSS System
+		[1, 1, 1, 1], //--- ERA System
 		[1], //--- Satellite
 		[1], //--- Nuke
-		[1,1,1] //--- Supply Rate
+		[1,1,1], //--- Supply Rate
+		[1,1,1,1] //--- Base Health
 	]];
 }else {
 	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
@@ -185,10 +199,12 @@ if (CTI_DEV_MODE > 0) then {
 			[60, 60, 60], //--- Air Radar
 			[60, 60, 60], //--- Art Radar
 			[60, 60, 60], //--- Respawn Range
-			[60], //--- IR Smoke
+			[60, 60], //--- LVOSS System
+			[60, 60, 60, 60], //--- ERA System
 			[600], //--- Satellite
 			[300], //--- Nuke
-			[60,75,90] //--- Supply Rate
+			[60,75,90], //--- Supply Rate
+			[60,120,180,240] //--- Base Health
 		]];
 	} else {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
@@ -208,10 +224,12 @@ if (CTI_DEV_MODE > 0) then {
 			[60, 60, 60], //--- Air Radar
 			[60, 60, 60], //--- Art Radar
 			[60, 60, 60], //--- Respawn Range
-			[60], //--- IR Smoke
+			[60, 60], //--- LVOSS System
+			[60, 60, 60, 60], //--- ERA System
 			[600], //--- Satellite
 			[300], //--- Nuke
-			[60,75,90] //--- Supply Rate
+			[60,75,90], //--- Supply Rate
+			[60,120,180,240] //--- Base Health
 		]];
 	};
 };
@@ -240,7 +258,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 	[CTI_UPGRADE_AIRR, 1],
 	[CTI_UPGRADE_ARTR, 1],
 	[CTI_UPGRADE_REST, 1],
-	[CTI_UPGRADE_IRSMOKE, 1],
+	[CTI_UPGRADE_LVOSS, 1],
+	[CTI_UPGRADE_ERA, 1],
 	[CTI_UPGRADE_SATELLITE, 1],
 	[CTI_UPGRADE_NUKE, 1]
 ]];
@@ -263,10 +282,12 @@ if (CTI_IsClient) then {
 		["Air Radar", "Increase Range of Air Radar"], //--- Air Radar
 		["Artillery Radar", "Increase Range of Artillery Radar"], //--- Art Radar
 		["Respawn Range", "Increase the max range of the respawn trucks, town camps and FOBS."], //--- Respawn Range
-		["(DISABLED) IR Smoke", "Enable IR Smoke Deployment from Vehicles"], //--- IR Smoke
-		["(DISABLED) Satellite", "Allows the use of the satellite camera"], //--- Satellite
+		["LVOSS System", "Enables Light Vehicle Obscuration Smoke System (LVOSS), each lvl improves ammo capacity, cooldown time and effectiveness. Full 360 degree coverage."], //--- LVOSS System
+		["ERA System", "Enable Explosive Reactive Armor system (ERA) at lvl 1-2, Arena at lvl 3-4 for Heavy Vehicles, each lvl improves ammo capacity, cooldown time and effectiveness. Tanks still vulnerable from the rear."], //--- ERA System
+		["Satellite", "Allows the use of the satellite camera"], //--- Satellite
 		["Nuclear Arms Deal", "Unlock Nuke Truck in Light Factory"], //--- Nuke
-		["Supply Rate", "Improves rate at which Town SV Raises"] //--- Supply Rate
+		["Supply Rate", "Improves rate at which Town SV Raises"], //--- Supply Rate
+		["Base Health", "Improves base structures health"] //--- Base Health
 	]];
 };
 

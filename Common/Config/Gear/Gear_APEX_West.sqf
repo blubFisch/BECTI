@@ -304,19 +304,10 @@ _p pushBack 200;
 //Supressors:
 //(Mk-I EMR)
 /*
-_i pushBack "muzzle_snds_B_khk_F";
-_u pushBack 2;
-_p pushBack 700;
-
 (MX Series)
 _i pushBack "muzzle_snd";
 _u pushBack 1;
 _p pushBack 650;
-
-(Mk-I EMR)
-_i pushBack "muzzle_snds_B_khk_F";
-_u pushBack 2;
-_p pushBack 700;
 
 (MX Series)
 _i pushBack "muzzle_snds_H_khk_F";
