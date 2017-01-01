@@ -53,7 +53,7 @@ FNC_CRAMControl_AimAndFire =
 	
 	_cram setVariable ["CRAMControl_isBusy", true];
 	
-	// TOOD: doesnt work, strange effects (arma 3 1.66)  / this is an alternative to manually doing proximity detection and exploding stuff
+	// TOOD: next bit doesnt work, strange effects (arma 3 1.66)  / this is an alternative to manually doing proximity detection and exploding stuff
 	// Add proximity simulation target
 	//_proxTarget = "SAM_targetSAM_CM" createVehicle [getPosATL _target select 0, getPosATL _target select 1, (getPosATL _target select 2) + 10];
 	//_proxTarget attachTo [_target, [0,0,1]];
@@ -93,7 +93,7 @@ FNC_CRAMControl_AimAndFire =
 			};
 			
 			// Proximity hit detection and reaction
-			_nearRounds = _target nearObjects ["at_phalanx_35_AA", _proximityForAmmoDestruction]; //at_phalanx_missile_35mm_AA	//TODO: ammo type for diff turrets
+			_nearRounds = _target nearObjects ["at_phalanx_35mm_AA", _proximityForAmmoDestruction]; //at_phalanx_missile_35mm_AA	//TODO: ammo type for diff turrets
 			hintSilent ("Distance: " + str _targetDistance + " Aim: " + str _aimingQuality + ", Proximity: " + str count _nearRounds + ", Lead: " + str (_aimHelpTarget distance _target));
 			if( count _nearRounds > 0 ) then {
 				// Simulate proximity explosion
@@ -158,7 +158,7 @@ while { true } do
 		{
 			private _class = _x;
 			{
-				if (alive _x) then {
+				if (alive _x && [side _x, _side] call BIS_fnc_sideIsEnemy) then {
 					_confirmedTargets pushBackUnique _x;
 				};
 			} forEach (_cram nearObjects [_class, _trackingRange]);
@@ -172,7 +172,7 @@ while { true } do
 		};
 	} forEach _targetsInEngagement;
 	
-	"Scanning. "  + str count _readyCRAMs + "/" + str count _availableCRAMs + " CRAMs ready, engaging " + str count _targetsInEngagement + "/" + str count _confirmedTargets + " targets" call FNC_CRAMControl_Log;
+	"Scan: "  + str count _readyCRAMs + "/" + str count _availableCRAMs + " CRAMs ready, engaging " + str count _targetsInEngagement + "/" + str count _confirmedTargets + " targets" call FNC_CRAMControl_Log;
 	
 	// Sort targets, closest to any turret first
 	private _confirmedTargetsOrdered = _confirmedTargets apply {
