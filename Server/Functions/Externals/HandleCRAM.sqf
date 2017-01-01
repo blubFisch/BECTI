@@ -99,9 +99,9 @@ FNC_CRAMControl_AimAndFire =
 				// Simulate proximity explosion
 				{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
 				
-				// Immetiately delete all kinds of Ammo
+				// Immediately delete all kinds of ammo
 				if ((typeof _target) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
-					deleteVehicle _target;
+					_target remoteExec ["deleteVehicle"];	// TODO: hackfix, doesnt work on HC otherwise?!
 				};
 	
 			};
