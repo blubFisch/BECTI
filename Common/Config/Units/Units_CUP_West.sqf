@@ -567,7 +567,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_Mastiff_GMG_GB_D';
+/*_c pushBack 'CUP_B_Mastiff_GMG_GB_D';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1800;
@@ -626,6 +626,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+*/
 
 _c pushBack 'C_Quadbike_01_F';
 _p pushBack '';
