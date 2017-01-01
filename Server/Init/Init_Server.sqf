@@ -294,3 +294,26 @@ if !( isNil "ADMIN_ZEUS") then {
 		[west] spawn FNC_HandleSAMSite;
 	};
 };
+
+// Initialize control scripts for C-RAM turrets
+// Must have exactly 1 instance per side, running on HC if possible
+0 spawn {
+	// Give HCs some init time
+	sleep 30;
+	
+	_hcs = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
+	
+	// Run on server or HC
+	if ( !isNil '_hcs' && {count _hcs > 0} ) then {
+		_hc = (_hcs select 0) select 0;
+		{
+			FNC_HandleCRAM = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\HandleCRAM.sqf";
+			[east] spawn FNC_HandleCRAM;
+			[west] spawn FNC_HandleCRAM;
+		} remoteExec ["bis_fnc_call", _hc];
+	} else {
+		FNC_HandleCRAM = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\HandleCRAM.sqf";
+		[east] spawn FNC_HandleCRAM;
+		[west] spawn FNC_HandleCRAM;
+	};
+};
