@@ -980,7 +980,6 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-<<<<<<< HEAD
 _c pushBack 'OFPS_T72';
 _p pushBack '';
 _n pushBack '';
@@ -1007,14 +1006,16 @@ _n pushBack '';
 _o pushBack 17000;
 _t pushBack 20;
 _u pushBack 2;
-=======
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'CUP_O_T90_RU';
 _p pushBack '';
 _n pushBack 'T-90';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 3;
->>>>>>> refs/remotes/origin/master
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
