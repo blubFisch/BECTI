@@ -666,13 +666,13 @@ _categories pushBack 	"Fortification";
 _coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 _coinblacklist pushBack [];
 
-/*_headers pushBack 		"Concrete Vehicle Bunker";
+_headers pushBack 		"Concrete Vehicle Bunker";
 _classes pushBack 		"Land_Ammostore2";
-_prices pushBack 		1000;
+_prices pushBack 		4000;
 _placements pushBack 	[90, 7];
 _categories pushBack 	"Fortification";
 _coinmenus pushBack 	["HQ"];
-_coinblacklist pushBack [];*/
+_coinblacklist pushBack [];
 
 _headers pushBack 		"Large Hangar (Green)";
 _classes pushBack 		"Land_Ss_hangar";
