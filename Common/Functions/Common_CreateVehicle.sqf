@@ -117,7 +117,8 @@ clearBackpackCargoGlobal _vehicle;
 _vehicle addItemCargoGlobal ["FirstAidKit",2];
 //Add basic chutes to air units
 if (_vehicle isKindOf "Air") then {
-	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",2];
+	_vehicle addItemCargoGlobal ["ToolKit",1];
+	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",4];
 	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
 };
 
