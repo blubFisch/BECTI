@@ -114,10 +114,10 @@ clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
 //set basic supplies to all
-_vehicle addItemCargo ["FirstAidKit",2];
+_vehicle addItemCargoGlobal ["FirstAidKit",2];
 //Add basic chutes to air units
 if (_vehicle isKindOf "Air") then {
-	_vehicle addBackpackCargo ["NonSteerable_Parachute_F",2];
+	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",2];
 	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
 };
 
