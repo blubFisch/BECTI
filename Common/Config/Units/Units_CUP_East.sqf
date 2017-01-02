@@ -74,7 +74,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_AT';
 _p pushBack '';
-_n pushBack 'Russian Army Soldier (AT)'; 
+_n pushBack 'Russian Army Soldier (AT-RPG7)'; 
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 1;
@@ -84,7 +84,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_HAT';
 _p pushBack '';
-_n pushBack 'Russian Army Soldier (Metis)'; 
+_n pushBack 'Russian Army Soldier (AT-Metis)'; 
 _o pushBack 1400;
 _t pushBack 5;
 _u pushBack 3;
@@ -206,7 +206,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_AT_VDV_EMR';
 _p pushBack '';
-_n pushBack 'Russian Airborne Soldier (AT)'; 
+_n pushBack 'Russian Airborne Soldier (AT-RPG7)'; 
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 1;
@@ -300,7 +300,7 @@ _d pushBack 0;*/
 
 _c pushBack 'CUP_I_SUV_Armored_ION';
 _p pushBack '';
-_n pushBack 'SUV Armed';
+_n pushBack 'SUV Minigun';
 _o pushBack 1650;
 _t pushBack 30;
 _u pushBack 1;
@@ -310,7 +310,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_BRDM2_CSAT';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BRDM2 (Arid)';
 _o pushBack 1200;
 _t pushBack 10;
 _u pushBack 0;
@@ -320,7 +320,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BRDM2_T';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BRDM2 (Snow)';
 _o pushBack 1200;
 _t pushBack 10;
 _u pushBack 0;
@@ -340,7 +340,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BRDM2ATGM_T';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BRDM2 ATGM (Snow)';
 _o pushBack 4700;
 _t pushBack 30;
 _u pushBack 0;
@@ -350,7 +350,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_BRDM2_ATGM_CSAT';
 _p pushBack '';
-_n pushBack 'BRDM ATGM';
+_n pushBack 'BRDM ATGM (Arid)';
 _o pushBack 4700;
 _t pushBack 30;
 _u pushBack 0;
@@ -390,7 +390,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BRDM2HQ_T';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BRDM2 HQ (Snow)';
 _o pushBack 1000;
 _t pushBack 10;
 _u pushBack 0;
@@ -410,7 +410,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_BTR60_CSAT';
 _p pushBack '';
-_n pushBack 'BTR60 HMG, MG';
+_n pushBack 'BTR60 HMG/MG (Arid)';
 _o pushBack 2700;
 _t pushBack 10;
 _u pushBack 1;
@@ -420,7 +420,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BTR60';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BTR60 HMG/MG (Snow)';
 _o pushBack 2700;
 _t pushBack 10;
 _u pushBack 1;
@@ -430,7 +430,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_BTR90_RU';
 _p pushBack '';
-_n pushBack 'BTR90';
+_n pushBack 'BTR90 (Arid)';
 _o pushBack 8700;
 _t pushBack 30;
 _u pushBack 1;
@@ -460,7 +460,7 @@ _d pushBack 0;
 */
 _c pushBack 'OFPS_LR_MG';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover MG (Arid)';
 _o pushBack 400;
 _t pushBack 10;
 _u pushBack 0;
@@ -470,7 +470,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_LR_MG';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover MG (Snow)';
 _o pushBack 400;
 _t pushBack 10;
 _u pushBack 0;
@@ -480,7 +480,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_LR_S';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover GMG/MG (Arid)';
 _o pushBack 600;
 _t pushBack 10;
 _u pushBack 0;
@@ -490,7 +490,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_LR_S';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover (Snow)';
 _o pushBack 600;
 _t pushBack 10;
 _u pushBack 0;
@@ -500,7 +500,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_LR_SPG9';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover SPG9 (Arid)';
 _o pushBack 3000;
 _t pushBack 30;
 _u pushBack 0;
@@ -510,7 +510,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_LR_SPG9';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover SPG9 (Snow)';
 _o pushBack 3000;
 _t pushBack 30;
 _u pushBack 0;
@@ -520,7 +520,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_LR_SX';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover HMG/GMG (Arid)';
 _o pushBack 700;
 _t pushBack 10;
 _u pushBack 1;
@@ -530,7 +530,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_LR_SX';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'LandRover HMG/GMG (Snow)';
 _o pushBack 700;
 _t pushBack 10;
 _u pushBack 1;
@@ -570,7 +570,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_UAZ_AGS30';
 _p pushBack '';
-_n pushBack 'UAZ GMG';
+_n pushBack 'UAZ GMG (Arid)';
 _o pushBack 1850;
 _t pushBack 30;
 _u pushBack 2;
@@ -590,7 +590,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_UAZ_MG';
 _p pushBack '';
-_n pushBack 'UAZ MG';
+_n pushBack 'UAZ MG (Arid)';
 _o pushBack 1150;
 _t pushBack 20;
 _u pushBack 0;
@@ -640,7 +640,7 @@ _d pushBack 0;*/
 
 _c pushBack 'OFPS_UAZ_SPG9';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'UAZ SPG9 (Arid)';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -650,7 +650,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_UAZ_SPG9';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'UAZ SP9 (Snow)';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -716,7 +716,8 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
+*/
 
 _c pushBack 'CUP_I_BTR40_MG_TKG';
 _p pushBack '';
@@ -750,7 +751,7 @@ _d pushBack 0;*/
 
 _c pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';
 _p pushBack '';
-_n pushBack 'Vodnik SOP';
+_n pushBack 'Vodnik GMG/MG';
 _o pushBack 2650;
 _t pushBack 30;
 _u pushBack 0;
@@ -812,7 +813,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP1';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP1 (Arid)';
 _o pushBack 5000;
 _t pushBack 20;
 _u pushBack 0;
@@ -822,7 +823,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_BMP1P_CSAT';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP1P (Arid)';
 _o pushBack 6500;
 _t pushBack 20;
 _u pushBack 0;
@@ -832,7 +833,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BMP1';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP1 (Snow)';
 _o pushBack 5000;
 _t pushBack 20;
 _u pushBack 0;
@@ -842,7 +843,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BMP1P';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP1P (Snow)';
 _o pushBack 6500;
 _t pushBack 20;
 _u pushBack 0;
@@ -862,7 +863,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP1P_T';
 _p pushBack '';
-_n pushBack 'BMP1-P (Pacific)';
+_n pushBack 'BMP1P (Pacific)';
 _o pushBack 6500;
 _t pushBack 20;
 _u pushBack 0;
@@ -872,7 +873,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP2';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP2 (Arid)';
 _o pushBack 6800;
 _t pushBack 20;
 _u pushBack 1;
@@ -882,7 +883,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BMP2';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP2 (Snow)';
 _o pushBack 6800;
 _t pushBack 20;
 _u pushBack 1;
@@ -932,7 +933,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP2_ZSU';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'BMP2 ZSU (Arid)';
 _o pushBack 3000;
 _t pushBack 20;
 _u pushBack 0;
@@ -952,7 +953,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_T55';
 _p pushBack '';
-_n pushBack 'T-55';
+_n pushBack 'T-55 (Arid)';
 _o pushBack 7000;
 _t pushBack 20;
 _u pushBack 0;
@@ -982,7 +983,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_T72';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'T72 (Arid)';
 _o pushBack 17000;
 _t pushBack 20;
 _u pushBack 2;
@@ -992,7 +993,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_T72_S';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'T72 (Snow)';
 _o pushBack 17000;
 _t pushBack 20;
 _u pushBack 2;
@@ -1002,7 +1003,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_T72_T';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'T72 (Pacific)';
 _o pushBack 17000;
 _t pushBack 20;
 _u pushBack 2;
@@ -1022,7 +1023,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_ZSU23';
 _p pushBack '';
-_n pushBack 'ZSU23 Shilka';
+_n pushBack 'ZSU23 Shilka (Arid)';
 _o pushBack 4350;
 _t pushBack 20;
 _u pushBack 2;
@@ -1032,7 +1033,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_ZSU23';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'ZSU23 Shilka (Snow)';
 _o pushBack 4350;
 _t pushBack 20;
 _u pushBack 2;
@@ -1042,7 +1043,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_ZSU23_T';
 _p pushBack '';
-_n pushBack 'ZSU23 Shilka (Tropic)';
+_n pushBack 'ZSU23 Shilka (Pacific)';
 _o pushBack 4350;
 _t pushBack 20;
 _u pushBack 2;
@@ -1082,7 +1083,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP3';
 _p pushBack '';
-_n pushBack 'BMP3';
+_n pushBack 'BMP3 (Arid)';
 _o pushBack 12200;
 _t pushBack 20;
 _u pushBack 2;
@@ -1092,7 +1093,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_BMP3';
 _p pushBack '';
-_n pushBack 'BMP3';
+_n pushBack 'BMP3 (Snow)';
 _o pushBack 12200;
 _t pushBack 20;
 _u pushBack 2;
@@ -1102,7 +1103,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_BMP3_T';
 _p pushBack '';
-_n pushBack 'BMP3';
+_n pushBack 'BMP3 (Pacific)';
 _o pushBack 12200;
 _t pushBack 20;
 _u pushBack 2;

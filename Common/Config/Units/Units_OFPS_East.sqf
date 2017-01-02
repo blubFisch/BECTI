@@ -365,17 +365,6 @@ _d pushBack 0;
 
 //--- Heavy Vehicles
 
-
-_c pushBack 'OFPS_BMP2_ZSU';
-_p pushBack '';
-_n pushBack 'BMP2 ZSU';
-_o pushBack 3200;
-_t pushBack 20;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
 _c pushBack 'sfp_ikv91';
 _p pushBack '';
 _n pushBack 'IKV91 (90mm)';
