@@ -97,7 +97,7 @@ if (!isNil '_var') then {
 				
 				//--- If there is more than one group to award then we split the bounty equally
 				_bounty = round(_cost * CTI_BOUNTY_COEF);
-				
+
 				//--- PVP Leader Reward for AI/Players
 				_killed_pname = "";
 				if (_isplayable_killed) then { 
@@ -106,6 +106,9 @@ if (!isNil '_var') then {
 				};
 				
 				if (count _award_groups > 1) then { _bounty = round(_bounty / (count _award_groups))};
+				
+				//--- AI Skill Reward
+				_killer call FNC_RewardPlayerAISkill;
 				
 				//--- Award
 				{

@@ -508,6 +508,7 @@ if ( CTI_PLAYERS_GROUPSIZE == 0) then {
 };
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
+FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 //Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
