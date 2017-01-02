@@ -74,7 +74,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_AT';
 _p pushBack '';
-_n pushBack 'Russian Army Soldier (AT)'; 
+_n pushBack 'Russian Army Soldier (AT-RPG7)'; 
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 1;
@@ -84,7 +84,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_HAT';
 _p pushBack '';
-_n pushBack 'Russian Army Soldier (Metis)'; 
+_n pushBack 'Russian Army Soldier (AT-Metis)'; 
 _o pushBack 1400;
 _t pushBack 5;
 _u pushBack 3;
@@ -206,7 +206,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_O_RU_Soldier_AT_VDV_EMR';
 _p pushBack '';
-_n pushBack 'Russian Airborne Soldier (AT)'; 
+_n pushBack 'Russian Airborne Soldier (AT-RPG7)'; 
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 1;
