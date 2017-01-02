@@ -469,7 +469,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_UAZ_Unarmed_CDF';		
         _u pushBack 'CUP_O_Ural_Refuel_RU';		
 	_u pushBack 'CUP_O_BTR90_RU';	
-	_u pushBack 'CUP_O_LR_SPG9_TKA';
+/*	_u pushBack 'CUP_O_LR_SPG9_TKA';*/
 	_u pushBack 'CUP_M1030';
 	_u pushBack 'CUP_B_TowingTractor_USMC';
 	_u pushBack 'CUP_C_Skoda_White_CIV';
