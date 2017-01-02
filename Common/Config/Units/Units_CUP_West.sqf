@@ -397,7 +397,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_SOV_USA';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'HMMWV GMG/HMG';
 _o pushBack 1700;
 _t pushBack 10;
 _u pushBack 2;
@@ -479,7 +479,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_M2';
 _p pushBack '';
-_n pushBack 'RG 31 HMG';
+_n pushBack 'RG31 HMG';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -489,8 +489,8 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_M2_GC';
 _p pushBack '';
-_n pushBack 'RG31 HMG';
-_o pushBack 1800;
+_n pushBack 'RG31 HMG Thermal Sight';
+_o pushBack 2000;
 _t pushBack 10;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
