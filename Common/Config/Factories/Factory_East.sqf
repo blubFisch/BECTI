@@ -624,13 +624,8 @@ if (CTI_CUP_ADDON > 0) then {
 	//Universal CUP
 	/*_u pushBack 'CUP_O_BMP1P_TKA';		
 	_u pushBack 'CUP_O_BMP2_RU';			
-	_u pushBack 'CUP_O_BMP3_RU';		
-	_u pushBack 'CUP_O_T55_CSAT';		
-	_u pushBack 'CUP_O_BMP2_AMB_RU';	
-	_u pushBack 'CUP_O_ZSU23_SLA';*/				
-	_u pushBack 'CUP_B_T72_CZ';		
-	_u pushBack 'CUP_O_BM21_RU'; 
-	_u pushBack 'CUP_O_2S6M_RU';
+	_u pushBack 'CUP_O_BMP2_AMB_RU';*/	
+	_u pushBack 'CUP_O_BMP3_RU';	
 	_u pushBack 'CUP_O_ZSU23_SLA';		
 	_u pushBack 'CUP_O_2S6_RU';
 	_u pushBack 'CUP_O_2S6M_RU';	
@@ -639,16 +634,13 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_T90_RU';
 /* 
 	_u pushBack 'CUP_O_BMP1_CSAT';
-	_u pushBack 'CUP_O_BMP1P_CSAT';
 	_u pushBack 'CUP_O_BMP2_CSAT';
 	_u pushBack 'CUP_O_BMP_HQ_CSAT';
 	_u pushBack 'CUP_O_BMP2_AMB_CSAT';
 	_u pushBack 'CUP_O_BMP2_ZU_CSAT';
 	_u pushBack 'CUP_O_T55_CSAT';
 	_u pushBack 'CUP_O_ZSU23_CSAT';
-	_u pushBack 'CUP_O_2S6M_RU';
-	_u pushBack 'OFPS_BMP3';
-	_u pushBack 'OFPS_BMP3_T';
+	_u pushBack 'OFPS_BMP3';';
 */
 
 
@@ -697,12 +689,10 @@ if (CTI_OFPS_ADDON > 0) then {
 	//Universal OFPS
 
 	_u pushBack 'OFPS_BMP1P';		
-	_u pushBack 'OFPS_BMP2';			
-	_u pushBack 'CUP_O_BMP3_RU';		
-	_u pushBack 'OFPS_T55';		
-	_u pushBack 'OFPS_BMP2_M';			
-	_u pushBack 'CUP_O_2S6M_RU';				
-    _u pushBack 'OFPS_BMP2_ZSU';
+	//_u pushBack 'OFPS_BMP2';					
+	//_u pushBack 'OFPS_T55';		
+	//_u pushBack 'OFPS_BMP2_M';							
+    //_u pushBack 'OFPS_BMP2_ZSU';
 
 
 	if (CTI_FACTION_EAST == 0) then {
