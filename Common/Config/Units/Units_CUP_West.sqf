@@ -257,7 +257,7 @@ _d pushBack 0;*/
 
 _c pushBack 'CUP_I_SUV_Armored_ION';
 _p pushBack '';
-_n pushBack 'SUV Armed';
+_n pushBack 'SUV Minigun';
 _o pushBack 1650;
 _t pushBack 10;
 _u pushBack 1;
@@ -265,7 +265,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_C_SUV_CIV';
+/*_c pushBack 'CUP_C_SUV_CIV';
 _p pushBack '';
 _n pushBack 'Civil SUV';
 _o pushBack 550;
@@ -275,7 +275,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_Dingo_GL_CZ_Wdl';
+_c pushBack 'CUP_B_Dingo_GL_CZ_Wdl';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 800;
@@ -317,7 +317,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_Crows_M2_USA';
 _p pushBack '';
-_n pushBack 'HMMV Crows M2';
+_n pushBack 'HMMWV Crows M2';
 _o pushBack 2350;
 _t pushBack 10;
 _u pushBack 3;
@@ -327,7 +327,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_Crows_MK19_USA';
 _p pushBack '';
-_n pushBack 'HMMV Crows MK19';
+_n pushBack 'HMMWV Crows MK19';
 _o pushBack 3050;
 _t pushBack 10;
 _u pushBack 3;
@@ -367,7 +367,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_M2_USMC';
 _p pushBack '';
-_n pushBack 'HMMV HMG';
+_n pushBack 'HMMWV HMG';
 _o pushBack 1350;
 _t pushBack 10;
 _u pushBack 0;
@@ -387,7 +387,7 @@ _d pushBack 0;*/
 
 _c pushBack 'CUP_B_HMMWV_MK19_USMC';
 _p pushBack '';
-_n pushBack 'HMMV GMG';
+_n pushBack 'HMMWV GMG';
 _o pushBack 1050;
 _t pushBack 10;
 _u pushBack 2;
@@ -407,7 +407,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_TOW_USMC';
 _p pushBack '';
-_n pushBack 'HMMV TOW';
+_n pushBack 'HMMWV TOW';
 _o pushBack 3500;
 _t pushBack 10;
 _u pushBack 2;
@@ -479,7 +479,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_M2';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'RG 31 HMG';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -489,7 +489,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_M2_GC';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'RG31 HMG';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -499,7 +499,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_M2_OD';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'RG31 HMG';
 _o pushBack 1800;
 _t pushBack 10;
 _u pushBack 1;
@@ -509,7 +509,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_Mk19';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'RG31 GMG';
 _o pushBack 1900;
 _t pushBack 10;
 _u pushBack 2;
@@ -519,7 +519,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_RG31_Mk19_OD';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'RG31 GMG';
 _o pushBack 1900;
 _t pushBack 10;
 _u pushBack 2;
@@ -658,32 +658,11 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'B_MRAP_01_gmg_F';
-_p pushBack '';
-_n pushBack 'Hunter GMG';
-_o pushBack 2850;
-_t pushBack 10;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'B_MRAP_01_hmg_F';
-_p pushBack '';
-_n pushBack 'Hunter HMG';
-_o pushBack 2150;
-_t pushBack 10;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-
-
 //--- Heavy Vehicles
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Desert';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker MG (Arid)';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 1;
@@ -693,7 +672,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_M1126_HMG';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker MG (Snow)';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 1;
@@ -703,7 +682,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_M1126_GMG';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker GMG (Snow)';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 1;
@@ -713,7 +692,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker GMG (Arid)';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 1;
@@ -723,7 +702,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1128_MGS_Desert';
 _p pushBack '';
-_n pushBack 'M1128 Stryker MGS';
+_n pushBack 'Stryker MGS (Arid)';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -733,7 +712,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Desert';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker Motar/GMG (Arid)';
 _o pushBack 25000;
 _t pushBack 10;
 _u pushBack 4;
@@ -743,7 +722,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_S_M1129_SPG';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker Motar/GMG (snow)';
 _o pushBack 25000;
 _t pushBack 10;
 _u pushBack 4;
@@ -773,7 +752,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1135_ATGMV_Desert';
 _p pushBack '';
-_n pushBack 'Stryker FLIR, ATGM';
+_n pushBack 'Stryker FLIR, ATGM (Arid)';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -783,7 +762,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker MG (Pacific)';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 1;
@@ -793,7 +772,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Stryker GMG (Pacific)';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 1;
@@ -803,7 +782,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1128_MGS_Woodland';
 _p pushBack '';
-_n pushBack 'M1128 Stryker MGS';
+_n pushBack 'M1128 Stryker MGS (Pacific)';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -1232,17 +1211,6 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Repair Vehicles
-
-_c pushBack 'CUP_B_MTVR_Refuel_USA';
-_p pushBack '';
-_n pushBack 'MTVR Fuel';
-_o pushBack 2850;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "";
-_d pushBack 0;
-
 
 //--- Ammo Vehicles
 
