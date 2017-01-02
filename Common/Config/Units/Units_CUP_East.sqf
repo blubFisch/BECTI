@@ -480,7 +480,7 @@ _d pushBack 0;
 
 _c pushBack 'OFPS_LR_S';
 _p pushBack '';
-_n pushBack 'LandRover (Arid)';
+_n pushBack 'LandRover GMG/MG (Arid)';
 _o pushBack 600;
 _t pushBack 10;
 _u pushBack 0;
