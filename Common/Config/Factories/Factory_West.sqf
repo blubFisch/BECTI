@@ -471,8 +471,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';	
 	_u pushBack 'CUP_B_HMMWV_MK19_USMC';		
 	_u pushBack 'CUP_I_SUV_Armored_ION';	
-	_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';	
-	_u pushBack 'CUP_B_MTVR_Refuel_USA';		
+	_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';		
 	_u pushBack 'CUP_B_Jackal2_GMG_GB_W';
 	_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';		
 	_u pushBack 'CUP_B_HMMWV_Crows_MK19_USA';	
@@ -899,9 +898,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-_u pushBack "AAF_D_Heli_Transport_02_F";
-_u pushBack "AAF_D_Heli_light_03_F";
-_u pushBack "AAF_D_Heli_light_03_unarmed_F";
+	_u pushBack "AAF_D_Heli_Transport_02_F";
+	_u pushBack "AAF_D_Heli_light_03_F";
+	_u pushBack "AAF_D_Heli_light_03_unarmed_F";
 		
 	};
 };
@@ -910,12 +909,12 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
 
 //Universal Vanilla
-_u pushBack "B_G_Offroad_01_repair_F";
-_u pushBack "B_Truck_01_Repair_F";
-_u pushBack "CTI_Salvager_West";
-_u pushBack 'B_Slingload_01_Repair_F';
-_u pushBack "B_Truck_01_fuel_F";
-_u pushBack 'B_Slingload_01_Fuel_F';
+	_u pushBack "B_G_Offroad_01_repair_F";
+	_u pushBack "B_Truck_01_Repair_F";
+	_u pushBack "CTI_Salvager_West";
+	_u pushBack 'B_Slingload_01_Repair_F';
+	_u pushBack "B_Truck_01_fuel_F";
+	_u pushBack 'B_Slingload_01_Fuel_F';
 
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
@@ -950,7 +949,7 @@ if (CTI_APEX_ADDON > 0) then {
 };
 //--- CUP UNITS
 if (CTI_CUP_ADDON > 0) then { 
-	//Universal CUP
+	//Universal CUP	
 	
 
 	if (CTI_FACTION_WEST == 0) then {
