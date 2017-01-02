@@ -297,7 +297,7 @@ if !( isNil "ADMIN_ZEUS") then {
 
 // Initialize control scripts for C-RAM turrets
 // Must have exactly 1 instance per side, running on HC if possible
-0 spawn {
+/*0 spawn {
 	// Give HCs some init time
 	sleep 30;
 	
@@ -316,4 +316,4 @@ if !( isNil "ADMIN_ZEUS") then {
 		[east] spawn FNC_HandleCRAM;
 		[west] spawn FNC_HandleCRAM;
 	};
-};
+};*/
