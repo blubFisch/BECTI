@@ -456,7 +456,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_Dingo_GL_GER_Wdl';		
 	_u pushBack 'CUP_O_Ural_RU';			
 	_u pushBack 'CUP_O_BRDM2_ATGM_RUS';  
-    _u pushBack 'CUP_O_BTR60_CSAT';   		
+        _u pushBack 'CUP_O_BTR60_CSAT';   		
 	_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';		
 	_u pushBack 'CUP_O_UAZ_METIS_RU';		
 	_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';		
@@ -674,7 +674,6 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'OFPS_BMP2_HQ_T';
 	_u pushBack 'OFPS_BMP2_M_T';
 	_u pushBack 'OFPS_BMP2_ZSU_T';
-	_u pushBack 'OFPS_BMP3';
 	_u pushBack 'OFPS_BMP3_T';
 		
 	};
@@ -702,7 +701,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'OFPS_T55';		
 	_u pushBack 'OFPS_BMP2_M';			
 	_u pushBack 'CUP_O_2S6M_RU';				
-    _u pushBack 'OFPS_BMP2_ZSU';
+        _u pushBack 'OFPS_BMP2_ZSU';
 
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -727,7 +726,7 @@ _u = [];
 
 //Universal Vanilla
 	_u pushBack 'O_Heli_Transport_04_F'; 
-    _u pushBack 'O_Heli_Light_02_unarmed_F';
+        _u pushBack 'O_Heli_Light_02_unarmed_F';
 	_u pushBack "O_Heli_Transport_04_ammo_F";
 	_u pushBack "O_Heli_Transport_04_bench_F";
 	_u pushBack "O_Heli_Transport_04_covered_F";
