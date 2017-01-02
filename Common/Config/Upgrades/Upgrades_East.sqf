@@ -24,7 +24,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Satellite
 	true, //--- Nuke
 	true, //--- Supply Rate
-	true //--- Base Health
+	true, //--- Base Health
+	true  //--- Base Defense Upgrade	
 ]];
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -49,7 +50,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[75000], //--- Satellite
 	[40000], //--- Nuke
 	[4000, 8000, 12000], //--- Supply Rate
-	[4000, 8000, 12000, 16000] //--- Base Health
+	[4000, 8000, 12000, 16000], //--- Base Health
+	[4000, 8000, 12000, 16000] //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -74,7 +76,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[40000], //--- Satellite
 	[40000], //--- Nuke
 	[4000, 8000, 12000], //--- Supply Rate
-	[4000, 8000, 12000, 16000] //--- Base Health
+	[4000, 8000, 12000, 16000], //--- Base Health
+	[4000, 8000, 12000, 16000] //--- Base Defense
 ]];
 };
 
@@ -101,7 +104,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	0, //--- Satellite
 	0, //--- Nuke
 	3, //--- Supply Rate
-	4 //--- Base Health
+	4, //--- Base Health
+	4 //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
@@ -126,7 +130,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	1, //--- Satellite
 	1, //--- Nuke
 	3, //--- Supply Rate
-	4 //--- Base Health
+	4, //--- Base Health
+	4 //--- Base Defense
 ]];
 };
 
@@ -152,7 +157,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_AIR, 3]], //--- Satellite
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 	[[],[],[]], //--- Supply Rate
-	[[],[],[],[]] //--- Base Health
+	[[],[],[],[]], //--- Base Health
+	[[],[],[],[]] //--- Base Defense
 ]];
 
 if (CTI_DEV_MODE > 0) then { 
@@ -178,7 +184,8 @@ if (CTI_DEV_MODE > 0) then {
 		[1], //--- Satellite
 		[1], //--- Nuke
 		[1,1,1], //--- Supply Rate
-		[1,1,1,1] //--- Base Health
+		[1,1,1,1], //--- Base Health
+		[1,1,1,1] //--- Base Defense
 	]];
 }else {
 	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
@@ -204,7 +211,8 @@ if (CTI_DEV_MODE > 0) then {
 			[600], //--- Satellite
 			[300], //--- Nuke
 			[60,75,90], //--- Supply Rate
-			[60,120,180,240] //--- Base Health
+			[60,120,180,240], //--- Base Health
+			[120,240,480,600] //--- Base Defense
 		]];
 	} else {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
@@ -229,7 +237,8 @@ if (CTI_DEV_MODE > 0) then {
 			[600], //--- Satellite
 			[300], //--- Nuke
 			[60,75,90], //--- Supply Rate
-			[60,120,180,240] //--- Base Health
+			[60,120,180,240], //--- Base Health
+			[120,240,480,600] //--- Base Defense
 		]];
 	};
 };
@@ -287,7 +296,8 @@ if (CTI_IsClient) then {
 		["Satellite", "Allows the use of the satellite camera"], //--- Satellite
 		["Nuclear Arms Deal", "Unlock Nuke Truck in Light Factory"], //--- Nuke
 		["Supply Rate", "Improves rate at which Town SV Raises"], //--- Supply Rate
-		["Base Health", "Improves base structures health"] //--- Base Health
+		["Base Health", "Improves base structures health"], //--- Base Health
+		["Base Defenses", "Unlock better defenses structures and weapons"] //--- Base defense
 	]];
 };
 
