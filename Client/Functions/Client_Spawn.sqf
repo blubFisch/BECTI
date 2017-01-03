@@ -22,5 +22,3 @@ if(ZAM_showNames_default_on) then {
 	sleep 5;
 	player call ZAM_fnc_showNames_Press;
 };
-//---Add APS system tracking
-[] spawn FNC_APS_ACTIONS;

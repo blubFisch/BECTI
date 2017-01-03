@@ -144,6 +144,10 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- External Functions/Modules
 (east) call compile preprocessFileLineNumbers "Common\Functions\External\Functions_SHK.sqf";
 
+call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
+
+call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
+
 //--- Respawn markers
 createMarkerLocal ["respawn_east",getMarkerPos "CTI_EastRespawn"];
 "respawn_east" setMarkerColorLocal "ColorRed";
