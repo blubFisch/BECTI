@@ -718,6 +718,36 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'CUP_B_M1133_MEV_Desert';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_M1133_MEV_Woodland';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_M1133_MEV';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
 _c pushBack 'CUP_B_LAV25M240_USMC';
 _p pushBack '';
 _n pushBack 'LAV25 MG (Pacific)';
@@ -778,36 +808,6 @@ _t pushBack 10;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1133_MEV_Desert';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1133_MEV_Woodland';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
-_d pushBack 0;
-
-_c pushBack 'OFPS_S_M1133_MEV';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
 _d pushBack 0;
 
 _c pushBack 'CUP_B_M1128_MGS_Desert';
