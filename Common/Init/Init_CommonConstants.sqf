@@ -746,5 +746,7 @@ with missionNamespace do {
 	if (isNil 'CTI_DEV_MODE') then {CTI_DEV_MODE = 0};
 	if (isNil 'CTI_ZOMBIE_MODE') then {CTI_ZOMBIE_MODE = 0};
 	if (isNil 'CTI_GUERILLA_MODE') then {CTI_GUERILLA_MODE = 0};
+	
+	if (isnil "CTI_GAMEPLAY_DARTER") then {CTI_GAMEPLAY_DARTER = 4000};
 
 };

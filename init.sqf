@@ -289,5 +289,13 @@ if (isNil "Radio_Say3D") then {
       _array = _this select 1;
      (_array select 0) say3D (_array select 1);
 };
+
+
+//UAV RANGE limit
+	UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
+	if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
+		["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
+	};
+
 // Burn script for later
 //BIS_Effects_Burn=compile preprocessFileLineNumbers "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";

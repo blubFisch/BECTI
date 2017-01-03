@@ -616,7 +616,7 @@ _u pushBack 1;
 _p pushBack 5;
 
 _i pushBack "O_UAV_01_backpack_F";
-_u pushBack 2;
+_u pushBack 3;
 _p pushBack 2000;
 
 _i pushBack "O_Static_Designator_02_weapon_F";

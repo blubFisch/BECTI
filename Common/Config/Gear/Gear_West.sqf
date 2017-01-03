@@ -808,7 +808,7 @@ _u pushBack 0;
 _p pushBack 10;
 
 _i pushBack "B_UAV_01_backpack_F";
-_u pushBack 2;
+_u pushBack 3;
 _p pushBack 2000;
 
 _i pushBack "B_Static_Designator_01_weapon_F";
