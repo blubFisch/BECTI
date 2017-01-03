@@ -658,15 +658,23 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-//--- Heavy Vehicles
-
 _c pushBack 'CUP_B_M1126_ICV_M2_Desert';
 _p pushBack '';
 _n pushBack 'Stryker MG (Arid)';
 _o pushBack 2000;
 _t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
+_p pushBack '';
+_n pushBack 'Stryker MG (Pacific)';
+_o pushBack 2000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
@@ -675,18 +683,8 @@ _p pushBack '';
 _n pushBack 'Stryker MG (Snow)';
 _o pushBack 2000;
 _t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'OFPS_S_M1126_GMG';
-_p pushBack '';
-_n pushBack 'Stryker GMG (Snow)';
-_o pushBack 2200;
-_t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
@@ -695,25 +693,87 @@ _p pushBack '';
 _n pushBack 'Stryker GMG (Arid)';
 _o pushBack 2200;
 _t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_M1128_MGS_Desert';
+_c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker MGS (Arid)';
-_o pushBack 21800;
-_t pushBack 20;
+_n pushBack 'Stryker GMG (Pacific)';
+_o pushBack 2200;
+_t pushBack 10;
 _u pushBack 3;
-_f pushBack CTI_FACTORY_HEAVY;
+_f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+
+_c pushBack 'OFPS_S_M1126_GMG';
+_p pushBack '';
+_n pushBack 'Stryker GMG (Snow)';
+_o pushBack 2200;
+_t pushBack 10;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_M1133_MEV_Desert';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_M1133_MEV_Woodland';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'OFPS_S_M1133_MEV';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_LAV25M240_USMC';
+_p pushBack '';
+_n pushBack 'LAV25 MG (Pacific)';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+//--- Heavy Vehicles
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Desert';
 _p pushBack '';
 _n pushBack 'Stryker Motar/GMG (Arid)';
 _o pushBack 25000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'CUP_B_M1129_MC_MK19_Woodland';
+_p pushBack '';
+_n pushBack 'Stryker Mortar/GMG (Pacific)';
+_o pushBack 15000;
 _t pushBack 10;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -730,29 +790,9 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_M1133_MEV_Desert';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
-_d pushBack 0;
-
-_c pushBack 'OFPS_S_M1133_MEV';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
-_d pushBack 0;
-
 _c pushBack 'CUP_B_M1135_ATGMV_Desert';
 _p pushBack '';
-_n pushBack 'Stryker FLIR, ATGM (Arid)';
+_n pushBack 'Stryker ATGM (Arid)';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -760,29 +800,19 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
+_c pushBack 'CUP_B_M1135_ATGMV_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker MG (Pacific)';
-_o pushBack 2000;
+_n pushBack 'Stryker ATGM (Pacific)';
+_o pushBack 6700;
 _t pushBack 10;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
+_c pushBack 'CUP_B_M1128_MGS_Desert';
 _p pushBack '';
-_n pushBack 'Stryker GMG (Pacific)';
-_o pushBack 2200;
-_t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1128_MGS_Woodland';
-_p pushBack '';
-_n pushBack 'M1128 Stryker MGS (Pacific)';
+_n pushBack 'Stryker MGS (Arid)';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -790,52 +820,12 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'CUP_B_M1129_MC_MK19_Woodland';
+_c pushBack 'CUP_B_M1128_MGS_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker Mortar';
-_o pushBack 15000;
-_t pushBack 10;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1130_CV_M2_Woodland';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 2000;
-_t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1133_MEV_Woodland';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_M1135_ATGMV_Woodland';
-_p pushBack '';
-_n pushBack 'Stryker FLIR, ATGM';
-_o pushBack 6700;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'CUP_B_LAV25M240_USMC';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 8000;
-_t pushBack 10;
-_u pushBack 1;
+_n pushBack 'Stryker MGS (Pacific)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
