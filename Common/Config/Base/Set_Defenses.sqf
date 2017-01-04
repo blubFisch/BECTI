@@ -1,4 +1,4 @@
-private ["_categories", "_classes", "_defenses", "_defenses_cname", "_headers", "_index", "_placements", "_prices", "_side", "_sub_categories", "_sub_categories_index"];
+private ["_categories", "_classes", "_defenses", "_defenses_cname", "_headers", "_index", "_placements", "_prices", "_side", "_sub_categories", "_sub_categories_index","_upgrade","_specials"];
 
 _side = _this select 0;
 _headers = _this select 1;
@@ -8,6 +8,8 @@ _placements = _this select 4;
 _categories = _this select 5;
 _coinmenus = _this select 6;
 _coinblacklist = _this select 7;
+_upgrade = _this select 8;
+_specials = _this select 9;
 
 _defenses = [];
 _defenses_cname = [];
@@ -39,7 +41,9 @@ for '_i' from 0 to (count _headers) -1 do {
 			_placements select _i,
 			_special,
 			_coinmenus select _i,
-			_coinblacklist select _i
+			_coinblacklist select _i,
+			_upgrade select _i,
+			_specials select _i
 		];
 		
 		if !((_categories select _i) in _sub_categories) then {

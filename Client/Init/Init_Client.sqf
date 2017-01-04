@@ -501,11 +501,12 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 // 3P restrict
 0 execVM "Client\Functions\Externals\Restrict_3dperson\Client_3pRestrict.sqf";
 
-//group size scripts
-if ( CTI_PLAYERS_GROUPSIZE == 0) then {
-	//0 execVM "Client\Functions\Externals\Adaptive_playerAI\Client_AdaptGroup.sqf";
-	0 execVM "Client\Functions\Client_SetPlayerAI.sqf";
-};
+// Set Perks and Traits and Player Ai if rank based
+0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
+
+//group size script
+//0 execVM "Client\Functions\Externals\Adaptive_playerAI\Client_AdaptGroup.sqf";
+
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
 FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";

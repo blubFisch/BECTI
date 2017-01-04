@@ -76,7 +76,7 @@ if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) then {
 };
 
 //--- Call Vehicle Protection scripts
-call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_init.sqf";
+call compile preprocessFileLineNumbers  "Common\Functions\External\Baked_AIS\Baked_AIS_init.sqf";
 
 //--- Common Part is over
 CTI_Init_Common = true;

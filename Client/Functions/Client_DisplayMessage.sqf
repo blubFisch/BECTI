@@ -69,6 +69,10 @@ switch (_message_var) do {
 		};
 	};
 	case "commander-vote-start": {CTI_P_ChatID commandChat format["%1 has initiated a commander vote!", _parameters]};//--- Todo, popup system with helper on/off
+	case "defense-attacked": {
+		_var = missionNamespace getVariable (_parameters select 0);
+		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select 0), mapGridPosition (_parameters select 1)];
+	};
 	case "hq-destroyed": {
 		CTI_P_ChatID commandChat "The HQ has been destroyed!";
 		playMusic "EventTrack02_F_Curator";
@@ -144,6 +148,12 @@ switch (_message_var) do {
 	};
 	case "upgrade-ended": {
 		CTI_P_ChatID commandChat format ["%1 has been upgraded to level %2", ((missionNamespace getVariable format["CTI_%1_UPGRADES_LABELS", CTI_P_SideJoined]) select (_parameters select 0)) select 0, (_parameters select 1)];
+		playMusic "LeadTrack03a_F_EPA";
+	};
+	case "rank-up": {
+		CTI_P_ChatID commandChat format ["%1 ranked up to %2", _parameters select 0, _parameters select 1];
+		//player groupChat format ["Rank Up"];
+		hint parseText format ["<t align='center'>Rank Up<t size='1.3'> | </t> <t size='1.2' color='#FCBE18'>%1</t></t><br /><br /><t>You gained <t color='#FCBE18'>%2</t> abilities and are now in command of <t color='#FCBE18'>%3</t> soldiers.</t>", _parameters select 1, _parameters select 2, _parameters select 3];
 		playMusic "LeadTrack03a_F_EPA";
 	};
 };

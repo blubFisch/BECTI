@@ -20,5 +20,5 @@ if (isServer) then
 	onPlayerConnected "[] spawn FNC_APS_ACTIONS";
 };
 // Call & cache functions
-call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
+call compile preprocessFileLineNumbers  "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
 

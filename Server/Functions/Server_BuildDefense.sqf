@@ -93,9 +93,21 @@ if (_defense emptyPositions "gunner" < 1 && !_fob) then { //--- Soft defense
 };
 
 //--- Make the defense stronger?
-_stronger = -1;
-{if (_x select 0 == "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select 5);
-if (_stronger != -1) then {_defense addEventHandler ["handleDamage", format["getDammage (_this select 0)+(_this select 2)/%1",_stronger]]};
+//_stronger = -1;
+//{if (_x select 0 == "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select 5);
+//if (_stronger != -1) then {_defense addEventHandler ["handleDamage", format["getDammage (_this select 0)+(_this select 2)/%1",_stronger]]};
+//["test-var", [_variable]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+_alternative_damages = false;
+_reduce_damages = 0;
+{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}} forEach (_var select 9);
+if (_alternative_damages) then {
+	_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages]];
+} else {
+	if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
+		_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position]];
+		
+	};
+};
 
 //--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 _ruins = "";

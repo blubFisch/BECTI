@@ -30,12 +30,13 @@
 	Common Function: CTI_CO_FNC_GetSideFromID
 	Common Function: CTI_CO_FNC_GetSideLogic
 	Server Function: CTI_SE_FNC_OnBuildingDestroyed
+	Server Function: CTI_SE_FNC_OnDefenseDestroyed
 	
   # EXAMPLE #
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages"];
+private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -44,8 +45,7 @@ _variable = _this select 3;
 _sideID = _this select 4;
 _position = _this select 5;
 _direction = _this select 6;
-_completion_ratio = _this select 7;
-_reduce_damages = _this select 8;
+_reduce_damages = _this select 7;
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -82,23 +82,19 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	_damaged setDammage 1;
 	
 	_var = missionNamespace getVariable _variable;
-		if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then {
-			if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FILE: Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf", format["HQ [%1] from side [%2] has been destroyed (virtual damages) by [%3]", _damaged, _side, _shooter]] call CTI_CO_FNC_Log;
-			};
-			[_damaged, _shooter, _sideID] spawn CTI_SE_FNC_OnHQDestroyed;
-		} else {
-			if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FILE: Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", ((_var select 0) select 1), _side, _shooter]] call CTI_CO_FNC_Log;
-			};
-			[_damaged, _shooter, _variable, _sideID, _position, _direction, _completion_ratio] spawn CTI_SE_FNC_OnBuildingDestroyed;
+		if (CTI_Log_Level >= CTI_Log_Information) then {
+			["INFORMATION", "FILE: Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select 0, _side, _shooter]] call CTI_CO_FNC_Log;
 		};
+		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
+		_ruins = "";
+		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
+		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
 
 //--- Display a message to the team
 if (time - (_logic getVariable "cti_structures_lasthit") > 30 && _damage >= 0.02 && alive _damaged) then {
 	_logic setVariable ["cti_structures_lasthit", time];
-	["structure-attacked", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	["defense-attacked", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
 
 0

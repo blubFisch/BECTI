@@ -38,7 +38,7 @@ CTI_Coin_CreateRootMenu = {
 
 //--- Used to create the root submenus
 CTI_Coin_LoadSubMenu = {
-	private["_price"];
+	private["_price","_upgrade","_upgrades","_upgrade_defense"];
 	params["_categories"];
 
 	//--- Load the structures if needed
@@ -70,6 +70,9 @@ CTI_Coin_LoadSubMenu = {
 		
 		_funds = call CTI_CL_FNC_GetPlayerFunds;
 		
+		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
+		_upgrade_defense = _upgrades select CTI_UPGRADE_BASE_DEFENSES;
+		
 		{
 			_category = (missionNamespace getVariable format["CTI_COIN_%1_DEFENSE_CATEGORIES", CTI_P_SideJoined]) select _x;
 			_items pushBack _category;
@@ -82,13 +85,16 @@ CTI_Coin_LoadSubMenu = {
 			_sub_itemVariable = [];
 			{
 				_info = missionNamespace getVariable _x;
-				if ((missionNamespace getVariable "CTI_COIN_SOURCE") in (_info select 6)) then {
-					_price = "";
-					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
-					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
-					_sub_items pushBack format["%1  -  $%2", _info select 0, _price];
-					_sub_itemEnabled pushBack (if (_funds >= _price) then {1} else {0});
-					_sub_itemVariable pushBack _x;
+				_upgrade = _info select 8;
+				if (_upgrade_defense >= _upgrade) then {
+					if ((missionNamespace getVariable "CTI_COIN_SOURCE") in (_info select 6)) then {
+						_price = "";
+						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
+						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)} else {_price = (_info select 2)};
+						_sub_items pushBack format["%1  -  $%2", _info select 0, _price];
+						_sub_itemEnabled pushBack (if (_funds >= _price) then {1} else {0});
+						_sub_itemVariable pushBack _x;
+					};
 				};
 			} forEach (missionNamespace getVariable format["CTI_COIN_%1_DEFENSE_CATEGORY_%2", CTI_P_SideJoined, _x]);
 			

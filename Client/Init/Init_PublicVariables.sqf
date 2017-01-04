@@ -325,4 +325,16 @@ with missionNamespace do {
 		// _vehicle setVehicleAmmoDef _amount;
 		_vehicle setVehicleAmmo _amount;
 	};
+	//--- APS Smoke effects
+	CTI_PVF_CLT_APS_SMOKESCREEN = { 
+		private ["_loc", "_upgrade"];
+		_loc = _this select 0;
+		_upgrade = _this select 1;
+		[_loc, _upgrade] spawn DEPLOY_SMOKE_CLOUD;
+	};
+	CTI_PVF_CLT_APS_SHOCKWAVE = { 
+		private ["_loc"];
+		_loc = _this select 0;
+		[_loc] spawn DEPLOY_SHOCK_WAVE;
+	};
 };

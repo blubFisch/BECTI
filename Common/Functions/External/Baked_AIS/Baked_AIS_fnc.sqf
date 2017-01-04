@@ -77,10 +77,38 @@ DEPLOY_SHOCK_WAVE = {
 	} foreach _smokes;
 };
 DEPLOY_SMOKE_CLOUD = {
-	private ["_loc","_aslLoc","_smoke1","_smoke2","_smokes","_upgrade"];
+	private ["_loc","_aslLoc","_smoke1","_smoke2","_smokes","_upgrade","_smokewave1","_smokewave2","_smokewave3","_smokewave4","_smokewaves"];
 	_loc = _this select 0;
 	_aslLoc = [_loc select 0, _loc select 1, getTerrainHeightASL [_loc select 0, _loc select 1]];
 	_upgrade = _this select 1;
+	
+	_smokewave1 = "#particlesource" createVehicle _aslLoc;
+	_smokewave1 setposasl _aslLoc;
+	_smokewave1 setParticleCircle [0, [0, 0, 0]];
+	_smokewave1 setParticleRandom [0, [8, 8, 2], [10, 10, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.1], 0, 0];
+	_smokewave1 setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [6, 8, 10], [[0, 0, 0, 1], [0.35, 0.35, 0.35, 0.35], [0.35, 0.35, 0.35, 0]], [0.08], 1, 0, "", "", _aslLoc];
+	_smokewave1 setDropInterval .0004;
+	
+	_smokewave2 = "#particlesource" createVehicle _aslLoc;
+	_smokewave2 setposasl _aslLoc;
+	_smokewave2 setParticleCircle [0, [0, 0, 0]];
+	_smokewave2 setParticleRandom [0, [8, 8, 2], [10, 10, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.1], 0, 0];
+	_smokewave2 setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [6, 8, 10], [[.78, .76, .71, 1], [.35, .35, .35, 0.35], [0.35, 0.35, 0.35, 0]], [0.08], 1, 0, "", "", _aslLoc];
+	_smokewave2 setDropInterval .0004;
+	
+	_smokewave3 = "#particlesource" createVehicle _aslLoc;
+	_smokewave3 setposasl _aslLoc;
+	_smokewave3 setParticleCircle [0, [0, 0, 0]];
+	_smokewave3 setParticleRandom [0, [8, 8, 2], [10, 10, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.1], 0, 0];
+	_smokewave3 setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [6, 8, 10], [[.55, .47, .37, 1], [.35, .35, .35, 0.35], [0.35, 0.35, 0.35, 0]], [0.08], 1, 0, "", "", _aslLoc];
+	_smokewave3 setDropInterval .0004;
+	
+	_smokewave4 = "#particlesource" createVehicle _aslLoc;
+	_smokewave4 setposasl _aslLoc;
+	_smokewave4 setParticleCircle [0, [0, 0, 0]];
+	_smokewave4 setParticleRandom [0, [8, 8, 2], [10, 10, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.1], 0, 0];
+	_smokewave4 setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [6, 8, 10], [[.1, .1, .1, 1], [.2, .2, .2, 0.35], [0.35, 0.35, 0.35, 0]], [0.08], 1, 0, "", "", _aslLoc];
+	_smokewave4 setDropInterval .0004;
 	
 	_smoke1 = "#particlesource" createVehicle _aslLoc;
 	_smoke1 setposasl _aslLoc;
@@ -88,6 +116,12 @@ DEPLOY_SMOKE_CLOUD = {
 	_smoke1 setParticleRandom [30, [3, 3, 0.2], [0.01, 0.01, 0.01], 1, 0.25, [0, 0, 0, 0], 0.001, 0.001];
 	_smoke1 setParticleParams [["\A3\data_f\ParticleEffects\Universal\smoke.p3d", 1, 0, 1], "", "Billboard", 1, 30, [0, 0, 0], [0.1, 0.1, 0.1], 1, 1.285, 1, 0, [6, 2, 4], [[0.1, 0.1, 0.1, 0.8], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [1], 0, 0, "", "", _aslLoc];
 	_smoke1 setDropInterval 0.13;
+
+	_smokewaves = [_smokewave1, _smokewave2, _smokewave3, _smokewave4];
+	sleep .07;
+	{
+		deletevehicle _x;
+	} foreach _smokewaves;
 	
 	_smokes = [_smoke1];
 	//Smoke Cloud Length
@@ -377,8 +411,9 @@ FNC_BAPS_BLOCK_SMOKE =
 						//_sfx1 = createVehicle ["SmallSecondary", _toleftside, [], 0, "CAN_COLLIDE"];
 						_sfx2 = createVehicle ["CMflareAmmo", _toleftside, [], 0, "CAN_COLLIDE"];
 						_sfx3 = createVehicle ["CMflare_Chaff_Ammo", _toleftside, [], 0, "CAN_COLLIDE"];
-						[_toleftside] spawn DEPLOY_SHOCK_WAVE;
-						[_toleftside, _upgrade_lvoss] spawn DEPLOY_SMOKE_CLOUD;
+						//[_toleftside] spawn DEPLOY_SHOCK_WAVE;
+						//[_toleftside, _upgrade_lvoss] spawn DEPLOY_SMOKE_CLOUD;
+						[_toleftside, _upgrade_lvoss] remoteExec ["CTI_PVF_CLT_APS_SMOKESCREEN"];
 					};	
 					if (_block == "right") then 
 					{
@@ -386,8 +421,9 @@ FNC_BAPS_BLOCK_SMOKE =
 						//_sfx4 = createVehicle ["SmallSecondary", _torightside, [], 0, "CAN_COLLIDE"];
 						_sfx5 = createVehicle ["CMflareAmmo", _torightside, [], 0, "CAN_COLLIDE"];
 						_sfx6 = createVehicle ["CMflare_Chaff_Ammo", _torightside, [], 0, "CAN_COLLIDE"];
-						[_torightside] spawn DEPLOY_SHOCK_WAVE;
-						[_torightside, _upgrade_lvoss] spawn DEPLOY_SMOKE_CLOUD;
+						//[_torightside] spawn DEPLOY_SHOCK_WAVE;
+						//[_torightside, _upgrade_lvoss] spawn DEPLOY_SMOKE_CLOUD;
+						[_torightside, _upgrade_lvoss] remoteExec ["CTI_PVF_CLT_APS_SMOKESCREEN"];
 
 					};
 					// Do reload and ammo functions
@@ -556,7 +592,8 @@ FNC_BAPS_BLOCK =
 					// Remove the threat and create FX
 					deleteVehicle _projectile;
 					_sfx = createVehicle ["SmallSecondary", position _projectile, [], 0, "CAN_COLLIDE"];
-					[position _projectile] spawn DEPLOY_SHOCK_WAVE;
+					//[position _projectile] spawn DEPLOY_SHOCK_WAVE;
+					[position _projectile] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
 					// Do reload and ammo functions
 					if (_block == "true" || _block == "left") then 
 					{
