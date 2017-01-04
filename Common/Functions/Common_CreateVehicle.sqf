@@ -191,6 +191,6 @@ if (_vehicle isKindOf "Tank") then {
 	};
 };
 
-_vehicle call CTI_CO_FNC_UnitOrVehicleCreated;
+_vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle

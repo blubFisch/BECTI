@@ -510,9 +510,9 @@ if ( CTI_PLAYERS_GROUPSIZE == 0) then {
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
 FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
-player call CTI_CO_FNC_UnitOrVehicleCreated;
+player call CTI_CO_FNC_UnitCreated;
 
-ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitOrVehicleCreated;}];
+ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];
 
 //Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };

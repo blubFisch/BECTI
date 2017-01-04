@@ -91,6 +91,7 @@ CTI_CO_FNC_SanitizeAircraftCM = compileFinal preprocessFileLineNumbers "Common\F
 CTI_CO_FNC_SanitizeAircraftFFAR = compileFinal preprocessFileLineNumbers "Common\Functions\Common_SanitizeAircraftFFAR.sqf";
 CTI_CO_FNC_SanitizeAircraftDAR = compileFinal preprocessFileLineNumbers "Common\Functions\Common_SanitizeAircraftDAR.sqf";
 CTI_CO_FNC_SanitizeArtillery = compileFinal preprocessFileLineNumbers "Common\Functions\Common_SanitizeArtillery.sqf";
+CTI_CO_FNC_UnitCreated = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UnitCreated.sqf";
 
 //--- External Functions
 CTI_CO_FNC_EXT_HandleTiresDamages = compileFinal preprocessFileLineNumbers "Common\Functions\External\External_HandleTiresDamages.sqf";

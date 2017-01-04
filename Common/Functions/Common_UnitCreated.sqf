@@ -1,6 +1,6 @@
 /*
   # HEADER #
-	Alias:			CTI_CO_FNC_UnitOrVehicleCreated
+	Alias:			CTI_CO_FNC_UnitCreated
 	Description:	Various functions to be executed after units or vehicles have been created
 	
   # PARAMETERS #
@@ -10,18 +10,18 @@
 	None
 */
 
-private ["_object"];
+private ["_unit"];
 
-_object = _this select 0;
+_unit = _this;
 
-if (_object isKindOf "Man") then {
+if (_unit isKindOf "Man") then {
 
 } else {
 
 };
 
 // Keep track of locality changes to recreate EH
-//_object addEventHandler ["Local", {if (_this select 1) then {};}];
+//_unit addEventHandler ["Local", {if (_this select 1) then {};}];
 
 
 //---Add APS system tracking

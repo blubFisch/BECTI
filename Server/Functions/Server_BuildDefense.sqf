@@ -120,6 +120,6 @@ if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
 	}
 };
 
-_defense call CTI_CO_FNC_UnitOrVehicleCreated;
+_defense call CTI_CO_FNC_UnitCreated;
 
 _defense
