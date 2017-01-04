@@ -67,9 +67,8 @@ if (_reduce_damages > 0 ) then {
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
-if (time - (_logic getVariable "cti_structures_lasthit") > 30 && _damage >= 0.02 && alive _damaged) then {
-	_logic setVariable ["cti_structures_lasthit", time];
-	["defense-attacked", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+if (!alive _damaged) then {
+	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
 
 _damage
