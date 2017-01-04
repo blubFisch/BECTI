@@ -59,16 +59,6 @@ if (_net) then {_unit setVariable ["cti_net", _sideID, true]};
 //--- Add a Killed EH.
 _unit addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", _sideID]];
 
-//--- ZEUS Curator Editable
-if !(isNil "ADMIN_ZEUS") then {
-	if (CTI_IsServer) then {
-		ADMIN_ZEUS addCuratorEditableObjects [[_unit], true];
-	} else {
-		[ADMIN_ZEUS, _unit] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
-	};
-};
-
-//---Add APS system tracking
-[_unit] spawn FNC_APS_ACTIONS;
+_unit call CTI_CO_FNC_UnitCreated;
 
 _unit

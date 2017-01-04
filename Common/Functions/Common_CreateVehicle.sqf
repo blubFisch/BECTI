@@ -128,14 +128,7 @@ if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,
 // weight fix
 if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
 
-//--- ZEUS Curator Editable
-if !(isNil "ADMIN_ZEUS") then {
-	if (CTI_IsServer) then {
-		ADMIN_ZEUS addCuratorEditableObjects [[_vehicle], true];
-	} else {
-		[ADMIN_ZEUS, _vehicle] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
-	};
-};
+
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;
@@ -197,6 +190,7 @@ if (_vehicle isKindOf "Tank") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
-[_vehicle] spawn FNC_APS_ACTIONS;
+
+_vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle

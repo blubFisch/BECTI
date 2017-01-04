@@ -18,6 +18,9 @@
 */
 
 // --- Configuration ---            // All units denominated in SI (metres, seconds)
+
+// Warning: Configuration also needs to be made in the clientside code CRAMControl_FiredEvent
+
 _proximityForAmmoDestruction = 10;	// When a CRAM shell gets closer than this, incoming ammo will be destroyed
 _trackingRange = 2000;				// Turrets will aim, but not fire withing this range and _openFireRange
 _openFireRange = 1000;
@@ -37,7 +40,7 @@ sleep 1;
 
 FNC_CRAMControl_Log = {
 	private _text = "CRAM Control: " + _this;
-	[player, _text] remoteExec ["commandChat"];
+	_text remoteExec ["systemChat"];
 	diag_log _text;
 }; 
 
@@ -96,12 +99,14 @@ FNC_CRAMControl_AimAndFire =
 			_nearRounds = _target nearObjects ["at_phalanx_35mm_AA", _proximityForAmmoDestruction]; //at_phalanx_missile_35mm_AA	//TODO: ammo type for diff turrets
 			hintSilent ("Distance: " + str _targetDistance + " Aim: " + str _aimingQuality + ", Proximity: " + str count _nearRounds + ", Lead: " + str (_aimHelpTarget distance _target));
 			if( count _nearRounds > 0 ) then {
-				// Simulate proximity explosion
-				{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
 				
 				// Immediately delete all kinds of ammo
 				if ((typeof _target) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
-					_target remoteExec ["deleteVehicle"];	// TODO: hackfix, doesnt work on HC otherwise?!
+					// This will delete the round only server-side. The round is still alive on the client as a different object, and the client script will handle it
+					deleteVehicle _target;	
+				} else {
+					// Simulate proximity explosion
+					{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
 				};
 	
 			};
