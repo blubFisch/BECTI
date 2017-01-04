@@ -1,7 +1,7 @@
 /*
   # HEADER #
-	Script: 		Server\Functions\Server_OnBuildingHandleDamage.sqf
-	Alias:			CTI_SE_FNC_OnBuildingHandleDamage
+	Script: 		Server\Functions\Server_OnDefenseHandleDamage.sqf
+	Alias:			CTI_SE_FNC_OnDefenseHandleDamage
 	Description:	Triggered by the handleDamage EH whenever a structure get hit
 					Note this function shall only be called by an Event Handler (EH)
 	Author: 		Benny
@@ -21,14 +21,14 @@
 	[Number]: The afflicted damage
 	
   # SYNTAX #
-	[STRUCTURE, DAMAGES, SHOOTER, SIDE ID, DAMAGE REDUCTION, VARIABLE, POSITION] call CTI_SE_FNC_OnBuildingHandleDamage
+	[STRUCTURE, DAMAGES, SHOOTER, SIDE ID, DAMAGE REDUCTION, VARIABLE, POSITION] call CTI_SE_FNC_OnDefenseHandleDamage
 	
   # DEPENDENCIES #
 	Common Function: CTI_CO_FNC_GetSideFromID
 	Common Function: CTI_CO_FNC_GetSideLogic
 	
   # EXAMPLE #
-    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
+    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
 private ["_damage", "_damaged", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];

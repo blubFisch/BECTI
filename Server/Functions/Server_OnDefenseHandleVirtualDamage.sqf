@@ -1,8 +1,8 @@
 /*
   # HEADER #
-	Script: 		Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf
-	Alias:			CTI_SE_FNC_OnBuildingHandleVirtualDamage
-	Description:	Triggered by the handleDamage EH whenever a structure get hit
+	Script: 		Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf
+	Alias:			CTI_SE_FNC_OnDefenseHandleVirtualDamage
+	Description:	Triggered by the handleDamage EH whenever a Defense get hit
 					Note this function shall only be called by an Event Handler (EH).
 					The damages are virtual so we return 0 all the time.
 	Author: 		Benny
@@ -24,7 +24,7 @@
 	[Number]: The negated afflicted damage
 	
   # SYNTAX #
-	[STRUCTURE, DAMAGES, SHOOTER, STRUCTURE VARIABLE, SIDE ID, POSITION, DIRECTION, COMPLETION RATIO, POSITION] call CTI_SE_FNC_OnBuildingHandleDamage
+	[STRUCTURE, DAMAGES, SHOOTER, STRUCTURE VARIABLE, SIDE ID, POSITION, DIRECTION, COMPLETION RATIO, POSITION] call CTI_SE_FNC_OnDefenseHandleDamage
 	
   # DEPENDENCIES #
 	Common Function: CTI_CO_FNC_GetSideFromID
@@ -33,7 +33,7 @@
 	Server Function: CTI_SE_FNC_OnDefenseDestroyed
 	
   # EXAMPLE #
-    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
+    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
 private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
