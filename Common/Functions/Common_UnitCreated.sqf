@@ -22,7 +22,7 @@ if (local _unit) then {
 	diag_log("BLUBDBG: adding EH");
 } else {
 	if (CTI_Log_Level >= CTI_Log_Error) then {
-		["ERROR", "FILE: Common\Functions\Common_UnitCreated.sqf", "Unit " + _unit + " is not local"] call CTI_CO_FNC_Log;
+		["ERROR", "FILE: Common\Functions\Common_UnitCreated.sqf", "Unit " + str(_unit) + " is not local"] call CTI_CO_FNC_Log;
 	};
 };
 

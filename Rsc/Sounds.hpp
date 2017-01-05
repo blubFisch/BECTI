@@ -14,7 +14,7 @@
 	};
 };*/
 class CfgSounds {
-	sounds[] = {prison,nuke,nuclear_boom,nuclear_heartbeat,nuclear_geiger,geiger_1,geiger_2,geiger_3,akbar,choppa,AR_Rappel_Loop,AR_Rappel_Start,AR_Rappel_End,AUR_Rappel_Loop,AUR_Rappel_Start,AUR_Rappel_End,Vent,Vent2,Para,valkyries_loud};
+	sounds[] = {prison,nuke,nuclear_boom,nuclear_heartbeat,nuclear_geiger,geiger_1,geiger_2,geiger_3,akbar,choppa,incoming,AR_Rappel_Loop,AR_Rappel_Start,AR_Rappel_End,AUR_Rappel_Loop,AUR_Rappel_Start,AUR_Rappel_End,Vent,Vent2,Para,valkyries_loud};
 	class prison {
 		name = "prison";
 		sound[] = {"Rsc\Sounds\prison.ogg", 1, 1.0};
@@ -73,6 +73,11 @@ class CfgSounds {
 		sound[] = {"Rsc\Sounds\choppa.ogg", 1, 1.0};
 		titles[] = {};
 			
+	};
+	class incoming {
+		name = "incoming";
+		sound[] = {"Rsc\Sounds\incoming.ogg", db+4, 1.0};
+		titles[] = {};
 	};
 	class AR_Rappel_Loop
 	{
