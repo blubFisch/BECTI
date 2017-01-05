@@ -1169,6 +1169,7 @@ if (CTI_FACTION_WEST == 0) then {
 	_u pushBack "B_crew_F";
 	_u pushBack "B_MRAP_01_F";
 	_u pushBack "B_MRAP_01_hmg_F";
+	_u pushBack "B_G_Offroad_01_repair_F";
 
 };
 if (CTI_FACTION_WEST == 1) then {

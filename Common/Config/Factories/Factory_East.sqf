@@ -1155,6 +1155,7 @@ _u pushBack 'C_Van_01_transport_F';
 _u pushBack 'O_Truck_02_transport_F';
 _u pushBack 'C_Boat_Civil_01_F';
 _u pushBack 'O_Boat_Transport_01_F';
+_u pushBack "O_G_Offroad_01_repair_F";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
