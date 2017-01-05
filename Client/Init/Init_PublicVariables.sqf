@@ -63,6 +63,15 @@ with missionNamespace do {
 		(_award) call CTI_CL_FNC_ChangePlayerFunds;
 	};
 	
+	//--- The client receives a bounty for killing a defense
+	CTI_PVF_CLT_OnBountyDefense = {
+		_label = _this select 0;
+		_award = _this select 1;
+		
+		["award-bounty-defense", [_award, _label]] call CTI_CL_FNC_DisplayMessage;
+		(_award) call CTI_CL_FNC_ChangePlayerFunds;
+	};
+	
 	//--- The client receives a bounty for killing a unit/vehicle
 	CTI_PVF_CLT_OnBountyUnit = {
 		_type_killed = _this select 0;

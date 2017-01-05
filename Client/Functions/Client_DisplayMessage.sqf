@@ -48,6 +48,9 @@ switch (_message_var) do {
 	case "award-bounty-structure": {
 		player groupChat format ["$%1 awarded for the neutralization of %2 structure", _parameters select 0, _parameters select 1];
 	};
+	case "award-bounty-defense": {
+		player groupChat format ["$%1 awarded for the neutralization of %2 structure", _parameters select 0, _parameters select 1];
+	};
 	case "build-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
 		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];

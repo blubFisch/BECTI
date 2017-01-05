@@ -42,13 +42,28 @@ _var = missionNamespace getVariable _varname;
 _fob = false;
 {if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
 
+_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 if (_fob) then { //--- Erase this FOB upon destruction
-	_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 	_logic = (_side) call CTI_CO_FNC_GetSideLogic;
 	_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") - [objNull, _killed], true];
 };
 
 sleep 5;
+
+//--- Bounty
+if !(isNull _killer) then {
+	if (side _killer != sideEnemy && side _killer != _side && (group _killer) call CTI_CO_FNC_IsGroupPlayable) then {
+		if (isPlayer _killer) then {
+			_label = ((_var select 0));
+			_award = round((_var select 2) * CTI_BASE_CONSTRUCTION_BOUNTY);
+				
+			[_label, _award] remoteExec ["CTI_PVF_CLT_OnBountyDefense", _killer];
+			["structure-destroyed", [name _killer, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
+		} else {
+			//--- AI Reward
+		};
+	};
+};
 
 //--- If the building has some ruins upon destruction then we remove them
 if (_ruins != "") then {
