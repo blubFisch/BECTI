@@ -30,7 +30,7 @@ _CRAMClassnames = [
 	"B_at_phalanx_35AI",
 	"B_at_phalanx_missile_35AI"];
 _cramAmmoSpeedMuzzle = 1440;
-_targetClasses = ["RocketCore", "ShellCore", "BombCore", "MissileCore", "Air"];
+_targetClasses = ["RocketCore", "ShellCore", "BombCore", "MissileCore", "Air"];	// If adding clases here, it might need adjustment for hostility detection in the main loop
 _scanInterval = 0.2;
 // ---------------------
 
@@ -40,7 +40,7 @@ sleep 1;
 
 FNC_CRAMControl_Log = {
 	private _text = "CRAM Control: " + _this;
-	_text remoteExec ["systemChat"];
+	//_text remoteExec ["systemChat"];
 	diag_log _text;
 }; 
 
@@ -102,11 +102,13 @@ FNC_CRAMControl_AimAndFire =
 				
 				// Immediately delete all kinds of ammo
 				if ((typeof _target) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
-					// This will delete the round only server-side. The round is still alive on the client as a different object, and the client script will handle it
+					// This will delete the round only server-side. The round is still alive on the client as a different object, and the attcker fired event script should handle it
 					deleteVehicle _target;	
 				} else {
-					// Simulate proximity explosion
-					{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
+					// Simulate proximity explosion for a part of the rounds. Leave them a chance for direct hits.
+					if (random 1 > 0.5) then {
+						{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
+					};
 				};
 	
 			};
@@ -163,8 +165,23 @@ while { true } do
 		{
 			private _class = _x;
 			{
-				if (alive _x && [side _x, _side] call BIS_fnc_sideIsEnemy) then {
-					_confirmedTargets pushBackUnique _x;
+				if (alive _x) then {
+					private _isHostile = false;
+					if ((typeof _x) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
+						private _parents = getShotParents _x;
+						private _projectileSide = side (_parents select 0);
+						_isHostile = [_projectileSide, _side] call BIS_fnc_sideIsEnemy;
+					} else {
+						if ((typeof _x) isKindOf ["Air", configFile >> "CfgVehicles"]) then {
+							if (count crew _x > 0) then {
+								_isHostile = [side _x, _side] call BIS_fnc_sideIsEnemy;
+							};
+						};
+					};
+					
+					if (_isHostile) then {
+						_confirmedTargets pushBackUnique _x;
+					};
 				};
 			} forEach (_cram nearObjects [_class, _trackingRange]);
 		} forEach _targetClasses;
@@ -212,6 +229,12 @@ while { true } do
 				_targetsInEngagement pushBack _tgt;
 				[_bestCRAM, _tgt, _openFireRange, _trackingRange, _cramAmmoSpeedMuzzle, _proximityForAmmoDestruction] spawn FNC_CRAMControl_AimAndFire;
 				_readyCRAMs = _readyCRAMs - [_bestCRAM];
+				
+				if ((typeof _tgt) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
+					str _side + " C-RAM turrets are engaging an enemy projectile at our base!" remoteExec ["systemChat"];
+				} else {
+					str _side + " C-RAM turrets are engaging an enemy air object at our base!" remoteExec ["systemChat"];
+				};
 			} else {
 				("No ready turret for target: " + str _tgt) call FNC_CRAMControl_Log;
 			};
