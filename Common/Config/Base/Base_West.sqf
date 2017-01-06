@@ -931,7 +931,7 @@ _specials = [];
 		_specials pushBack 		[];
 		*/
 
-		_headers pushBack 		"C-RAM Phalanx";
+		_headers pushBack 		"C-RAM Phalanx (Engages incoming rounds)";
 		_classes pushBack 		"C_at_phalanx_35AI";
 		_prices pushBack 		20000;
 		_placements pushBack 	[180, 15];
