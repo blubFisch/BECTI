@@ -26,9 +26,7 @@ _trackingRange = 2000;				// Turrets will aim, but not fire withing this range a
 _openFireRange = 1000;
 _CRAMClassnames = [
 	"C_at_phalanx_35AI",
-	"C_at_phalanx_missile_35AI",
-	"B_at_phalanx_35AI",
-	"B_at_phalanx_missile_35AI"];
+	"B_at_phalanx_35AI"];
 _cramAmmoSpeedMuzzle = 1440;
 _targetClasses = ["RocketCore", "ShellCore", "BombCore", "MissileCore", "Air"];	// If adding clases here, it might need adjustment for hostility detection in the main loop
 _scanInterval = 0.2;
