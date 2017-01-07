@@ -1,5 +1,5 @@
 CTI_UI_Respawn_GetAvailableLocations = {
-	private ["_fobs", "_hq", "_ignore_mobile_crew", "_list", "_mobile", "_structures","_up","_respawnrangefob"];
+	private ["_fobs","_large_fobs", "_hq", "_ignore_mobile_crew", "_list", "_mobile", "_structures","_up","_respawnrangefob","_respawnrangelargefob"];
 	
 	_list = [];
 	
@@ -15,6 +15,14 @@ CTI_UI_Respawn_GetAvailableLocations = {
 		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) == 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		_respawnrangefob=CTI_RESPAWN_FOB_RANGE+500*_up;
 		{if (alive _x && _x distance CTI_DeathPosition <= _respawnrangefob) then {_list pushBack _x}} forEach _fobs;
+	};
+	
+	//--- Add Large FOBs if available.
+	if (CTI_BASE_LARGE_FOB_MAX > 0) then {
+		_large_fobs = CTI_P_SideLogic getVariable ["cti_large_fobs", []];
+		_upl=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) == 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
+		_respawnrangelargefob=CTI_RESPAWN_LARGE_FOB_RANGE+500*_upl;
+		{if (alive _x && _x distance CTI_DeathPosition <= _respawnrangelargefob) then {_list pushBack _x}} forEach _large_fobs;
 	};
 	
 	//--- Add camps if camp respawn is enabled
@@ -90,6 +98,10 @@ CTI_UI_Respawn_GetRespawnLabel = {
 		case (!isNil {_location getVariable "cti_structure_type"}): { 
 			_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _location getVariable "cti_structure_type"];
 			_value = (_var select 0) select 1;
+		};
+		case (!isNil {_location getVariable "cti_large_fob"}): { 
+			_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _location getVariable "cti_large_fob"];
+			_value = "Large FOB";
 		};
 		case (_location isKindOf "AllVehicles"): { _value = getText(configFile >> "CfgVehicles" >> typeOf _location >> "displayName") };
 	};

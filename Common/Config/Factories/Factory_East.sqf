@@ -1257,6 +1257,106 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
 
 //Universal Vanilla
+_u pushBack "B_Quadbike_01_F";
+_u pushBack "O_G_Offroad_01_F";
+_u pushBack "O_G_Offroad_01_armed_F";
+_u pushBack 'C_Van_01_transport_F';
+_u pushBack 'O_Truck_02_transport_F';
+_u pushBack "O_G_Offroad_01_repair_F";
+
+if (CTI_FACTION_EAST == 0) then {
+	//CSAT Arid Vanilla
+	_u pushBack 'O_Soldier_F';
+	_u pushBack 'O_crew_F';
+	_u pushBack 'O_MRAP_02_F';
+	_u pushBack 'O_MRAP_02_hmg_F';
+};
+if (CTI_FACTION_EAST == 1) then {
+	//CSAT Tropic Vanilla
+
+
+	
+};
+if (CTI_FACTION_EAST == 2) then {
+	//CSAT Winter Vanilla
+	
+};
+//--- APEX UNITS
+if (CTI_APEX_ADDON > 0) then { 
+	//Universal APEX
+	_u pushBack 'O_T_LSV_02_armed_F';		
+	_u pushBack 'O_T_LSV_02_unarmed_F';	
+	_u pushBack "C_Scooter_Transport_01_F";
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid APEX
+		
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic APEX
+	_u pushBack 'O_T_Soldier_F';
+	_u pushBack 'O_T_crew_F';
+	_u pushBack 'O_T_Truck_03_transport_ghex_F';
+	_u pushBack 'O_T_MRAP_02_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter APEX
+		
+	};
+};
+//--- CUP UNITS
+if (CTI_CUP_ADDON > 0) then { 
+	//Universal CUP
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid CUP
+		_u pushBack 'CUP_O_RU_Soldier';
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic CUP
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter CUP
+		
+	};
+};
+//--- OFPS UNITS
+if (CTI_OFPS_ADDON > 0) then { 
+	//Universal OFPS
+	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
+	_u pushBack 'OFPS_UAZ';
+	_u pushBack 'OFPS_UAZ_MG';
+	_u pushBack 'OFPS_UAZ_AGS30';
+	//_u pushBack 'usaf_police_car2';
+	//_u pushBack 'usaf_police_offroad';
+	
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter OFPS
+		_u pushBack 'IP_O_Soldier_FST';
+		_u pushBack 'IP_O_crew_FST';
+		_u pushBack 'sfp_bv206_winter';
+		_u pushBack 'AAF_D_MRAP_03_F';
+		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+	};
+};
+
+missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
+_u = [];
+
+//Universal Vanilla
 _u pushBack 'C_Boat_Civil_01_F';
 _u pushBack 'O_Boat_Transport_01_F';
 _u pushBack 'O_Boat_Armed_01_hmg_F';

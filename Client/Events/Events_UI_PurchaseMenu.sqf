@@ -74,7 +74,7 @@ switch (_action) do {
 		_factory_index = _this select 1;
 		_factory_type = _this select 2;
 		
-		_available = [CTI_Base_BarracksInRange, CTI_Base_LightInRange, CTI_Base_HeavyInRange, CTI_Base_AirInRange, CTI_Base_RepairInRange, CTI_Base_AmmoInRange, CTI_Base_NavalInRange, CTI_Base_DepotInRange];
+		_available = [CTI_Base_BarracksInRange, CTI_Base_LightInRange, CTI_Base_HeavyInRange, CTI_Base_AirInRange, CTI_Base_RepairInRange, CTI_Base_AmmoInRange, CTI_Base_NavalInRange, CTI_Base_DepotInRange,CTI_Base_LargeFOBInRange];
 		
 		if (_available select _factory_index) then {
 			(_factory_type) call CTI_UI_Purchase_LoadFactories;

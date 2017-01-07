@@ -39,6 +39,9 @@ if (isMultiplayer) then {sleep 5}; //--- Wait in MP for the net var to kick in
 //--- Track FOB(s) if needed
 {(_x) spawn CTI_PVF_CLT_OnFOBDeployment} forEach (CTI_P_SideLogic getVariable ["cti_fobs", []]);
 
+//--- Track Large FOB(s) if needed
+{(_x) spawn CTI_PVF_CLT_OnLargeFOBDeployment} forEach (CTI_P_SideLogic getVariable ["cti_large_fobs", []]);
+
 //--- Add lock/unlock to team vehicles if needed.
 {
 	if (effectiveCommander _x in units player) then {

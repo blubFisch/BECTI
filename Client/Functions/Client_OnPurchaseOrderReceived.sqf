@@ -115,9 +115,17 @@ if (_funds < _cost) exitWith { [_req_seed, _req_classname, _req_buyer, _factory]
 if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: Client\Functions\Client_OnPurchaseOrderReceived.sqf", format["Purchase order concerning classname [%1] with seed [%2] from [%3] on factory [%4, (%5)] is done. Processing the creation...", _req_classname, _req_seed, _req_buyer, _factory, _factory getVariable ["cti_structure_type", "Depot"]]] call CTI_CO_FNC_Log };
 
 //--- Creation.
+//if Depot
 _direction = 360 - CTI_TOWNS_DEPOT_BUILD_DIRECTION;
 _distance = CTI_TOWNS_DEPOT_BUILD_DISTANCE + (_var_classname select CTI_UNIT_DISTANCE);
 _factory_label = "Depot";
+
+//if Large FOB
+if !(isNil {_factory getVariable "cti_large_fob"}) then {
+	_direction = 360 - CTI_TOWNS_LARGE_FOB_BUILD_DIRECTION;
+	_distance = CTI_TOWNS_LARGE_FOB_BUILD_DISTANCE + (_var_classname select CTI_UNIT_DISTANCE);
+	_factory_label = "Large FOB";
+};
 
 _var = missionNamespace getVariable [format ["CTI_%1_%2", CTI_P_SideJoined, _factory getVariable ["cti_structure_type", ""]], []];
 if (count _var > 0) then {

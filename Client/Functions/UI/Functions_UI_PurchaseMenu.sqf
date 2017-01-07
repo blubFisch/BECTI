@@ -29,6 +29,10 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 	_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;
 	if !(isNull _depot) then {_availables pushBack _depot};
 	
+	//--- Check for large FOB
+	_large_fob = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestLargeFOB;
+	if !(isNull _large_fob) then {_availables pushBack _large_fob};
+	
 	if (count _availables > 0) then {
 		_fetched = [player, _availables] call CTI_CO_FNC_GetClosestEntity;
 		_nearAction = uiNamespace getVariable "cti_dialog_ui_purchasemenu_action";
@@ -57,6 +61,10 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 				_index = CTI_FACTORY_DEPOT;
 				_type = CTI_DEPOT;
 			};
+			if !(isNil {_fetched getVariable "cti_large_fob"}) then {
+				_index = CTI_FACTORY_DEPOT;//use depot index instead CTI_FACTORY_LARGE_FOB
+				_type = CTI_LARGE_FOB;
+			};
 		};
 	};
 	
@@ -84,6 +92,7 @@ CTI_UI_Purchase_FillUnitsList = {
 		case CTI_NAVAL: {CTI_UPGRADE_NAVAL};
 		case CTI_DEPOT: {CTI_UPGRADE_TOWNS};
 		case CTI_DEPOT_NAVAL: {CTI_UPGRADE_TOWNS};
+		case CTI_LARGE_FOB: {CTI_UPGRADE_TOWNS};
 		default {-1};
 	};
 	_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
@@ -206,14 +215,14 @@ CTI_UI_Purchase_OnUnitListLoad = {
 };
 
 CTI_UI_Purchase_LoadFactories = {
-	private ["_closest", "_fetched", "_structures", "_structure_text", "_type", "_var"];
+	private ["_closest", "_fetched", "_structures", "_structure_text", "_type", "_var","_depot","_large_fob"];
 	_type = _this;
 	
 	_fetched = [];
 	
 	lbClear ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009);
 	
-	if (_type != CTI_DEPOT) then {
+	if ((_type != CTI_DEPOT) && (_type != CTI_LARGE_FOB)) then {
 		_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 		_fetched = [_type, _structures, player, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetSideStructuresByType;
 		
@@ -225,11 +234,19 @@ CTI_UI_Purchase_LoadFactories = {
 			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009) lbAdd format ["%1 - %2 (%3m)", _structure_text, _closest getVariable "cti_town_name", round(_closest distance _x)];
 		} forEach _fetched;
 	} else {
-		_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;
-		if !(isNull _depot) then {
-			_fetched = [_depot];
-			
-			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009) lbAdd format ["Depot - %1", (_depot getVariable "cti_depot") getVariable ["cti_town_name", ""]];
+		if (_type != CTI_LARGE_FOB) then {
+			_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;
+			if !(isNull _depot) then {
+				_fetched = [_depot];
+				
+				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009) lbAdd format ["Depot - %1", (_depot getVariable "cti_depot") getVariable ["cti_town_name", ""]];
+			};
+		} else {
+			_large_fob = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestLargeFob;
+			if !(isNull _large_fob) then {
+				_fetched = [_large_fob];
+				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009) lbAdd format ["Large FOB"];
+			};
 		};
 	};
 	

@@ -85,6 +85,7 @@ switch (_message_var) do {
 		playsound "bobcat_engine_start";
 	};
 	case "fob-sold": {CTI_P_ChatID commandChat format ["A FOB has been sold at Grid %1", _parameters]};
+	case "fob-large-sold": {CTI_P_ChatID commandChat format ["A Large FOB has been sold at Grid %1", _parameters]};
 	case "funds-transfer": {
 		player groupChat format ["%2 has transfered you $%1", _parameters select 0, name (_parameters select 1) ];
 		hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t color='#55bcfc'>%3</t> transfered <t color='%1'>$%2</t> to you.", CTI_P_Coloration_Money, _parameters select 0, name (_parameters select 1)];
@@ -158,5 +159,13 @@ switch (_message_var) do {
 		//player groupChat format ["Rank Up"];
 		hint parseText format ["<t align='center'>Rank Up<t size='1.3'> | </t> <t size='1.2' color='#FCBE18'>%1</t></t><br /><br /><t>You gained <t color='#FCBE18'>%2</t> abilities and are now in command of <t color='#FCBE18'>%3</t> soldiers.</t>", _parameters select 1, _parameters select 2, _parameters select 3];
 		playMusic "LeadTrack03a_F_EPA";
+	};
+	case "dev-notification": {
+		////DEV DEBUG TESTING HINT NOTIFICATION AREA
+		////USAGE: Place where you need it
+		////["dev-notification", [_anythinghere]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
+		//CTI_P_ChatID commandChat format ["%1 ranked up to %2", _parameters select 0, _parameters select 1];
+		//player groupChat format ["Rank Up"];
+		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%1</t></t><br /><br /><t>3: <t color='#FCBE18'>%2</t></t><br /><br /><t>4: <t color='#FCBE18'>%3</t></t><br /><br /><t>5: <t color='#FCBE18'>%4</t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4];
 	};
 };

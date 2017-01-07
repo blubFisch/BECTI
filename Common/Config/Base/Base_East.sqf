@@ -864,7 +864,7 @@ _specials = [];
 
 	_headers pushBack 		["FOB",[["RuinOnDestroyed", "Land_Medevac_house_V1_ruins_F"], ["FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_fobs")}; (_cpt < CTI_BASE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
 	_classes pushBack 		"Land_Medevac_house_V1_F";
-	_prices pushBack 		10000;
+	_prices pushBack 		15000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Fortification";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -1003,6 +1003,28 @@ _specials = [];
 
 
 //******************************BASE DEFENSE 4******************************
+
+	if (CTI_CUP_ADDON > 0) then { 
+		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
+		_classes pushBack 		"WarfareBDepot";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		4;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
+	} else {
+		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
+		_classes pushBack 		"Land_Cargo_House_V3_F";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		4;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", .001]];
+	};
 
 	_headers pushBack 		"Dome (Small)";
 	_classes pushBack 		"Land_Dome_Small_F";

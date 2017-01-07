@@ -31,7 +31,7 @@
     _defense = [_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir, CTI_P_WallsAutoAlign, CTI_P_DefensesAutoManning] call CTI_SE_FNC_BuildDefense;
 */
 
-private ["_autoalign", "_defense", "_direction", "_direction_structure", "_fob", "_limit", "_logic", "_manned", "_origin", "_position", "_ruins", "_side", "_sideID", "_stronger", "_var", "_varname"];
+private ["_autoalign", "_defense", "_direction", "_direction_structure", "_fob","_large_fob", "_limit","_limit_large", "_logic", "_manned", "_origin", "_position", "_ruins", "_side", "_sideID", "_stronger", "_var", "_varname"];
 
 _varname = _this select 0;
 _var = missionNamespace getVariable _varname;
@@ -55,6 +55,13 @@ _limit = false;
 {if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
 if (_fob) then {if (count(_logic getVariable "cti_fobs") >= CTI_BASE_FOB_MAX) then {_limit = true}};
 if (_limit) exitWith {};
+
+//--- Is it a large fob?
+_large_fob = false;
+_limit_large = false;
+{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
+if (_large_fob) then {if (count(_logic getVariable "cti_large_fobs") >= CTI_BASE_LARGE_FOB_MAX) then {_limit_large = true}};
+if (_limit_large) exitWith {};
 
 _position set [2, 0];
 
@@ -83,10 +90,15 @@ if (_fob) then {
 	(_defense) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
 	_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") + [_defense], true];
 };
+if (_large_fob) then {
+	_defense setVariable ["cti_large_fob",true];
+	(_defense) remoteExec ["CTI_PVF_CLT_OnLargeFOBDeployment", _side];
+	_logic setVariable ["cti_large_fobs", (_logic getVariable "cti_large_fobs") + [_defense], true];
+};
 
 _defense setDir _direction;
 _defense setPos _position;
-if (_defense emptyPositions "gunner" < 1 && !_fob) then { //--- Soft defense
+if (_defense emptyPositions "gunner" < 1 && !_fob && !_large_fob) then { //--- Soft defense
 	_defense setDir _direction;
 	// _defense setVectorUp [0,0,0];
 	if !(isNull _origin) then {(_defense) remoteExec ["CTI_PVF_CLT_OnDefensePlaced", _origin]};
@@ -105,7 +117,6 @@ if (_alternative_damages) then {
 } else {
 	if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
 		_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position]];
-		
 	};
 };
 

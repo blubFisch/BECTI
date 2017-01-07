@@ -41,11 +41,16 @@ _position = getPos _killed;
 _var = missionNamespace getVariable _varname;
 _fob = false;
 {if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
+_large_fob = false;
+{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
+_logic = (_side) call CTI_CO_FNC_GetSideLogic;
 if (_fob) then { //--- Erase this FOB upon destruction
-	_logic = (_side) call CTI_CO_FNC_GetSideLogic;
 	_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") - [objNull, _killed], true];
+};
+if (_large_fob) then { //--- Erase this Large FOB upon destruction
+	_logic setVariable ["cti_large_fobs", (_logic getVariable "cti_large_fobs") - [objNull, _killed], true];
 };
 
 sleep 5;

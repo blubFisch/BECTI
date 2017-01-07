@@ -150,6 +150,26 @@ with missionNamespace do {
 		};
 	};
 	
+	//--- The client receives a Large FOB deployment notification
+	CTI_PVF_CLT_OnLargeFOBDeployment = {
+		_fob = _this;
+		
+		_marker = createMarkerLocal [Format ["cti_structure_%1", CTI_P_MarkerIterator], getPos _fob];CTI_P_MarkerIterator = CTI_P_MarkerIterator + 1;
+		_marker setMarkerTypeLocal format["%1med", CTI_P_MarkerPrefix];
+		_marker setMarkerColorLocal CTI_P_SideColor;
+		_marker setMarkerSizeLocal [0.75, 0.75]; 
+		_marker setMarkerTextLocal "LARGE FOB";
+
+		[_fob, _marker] spawn {
+			_structure = _this select 0;
+			_marker = _this select 1;
+			
+			waitUntil { sleep 5; !alive _structure };
+			
+			deleteMarkerLocal _marker;
+		};
+	};
+	
 	//--- The client receives a base structure destruction notification
 	CTI_PVF_CLT_OnFriendlyStructureDestroyed = { _this spawn CTI_CL_FNC_OnFriendlyStructureDestroyed };
 	

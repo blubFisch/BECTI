@@ -319,7 +319,7 @@ CTI_UI_Gear_DisplayShoppingItems = {
 	_upgrade_gear = _upgrades select CTI_UPGRADE_GEAR;
 	
 	//--- Depot only? use the town upgrade level then
-	if (CTI_Base_GearInRange_Depot && !(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB)) then {
+	if (CTI_Base_GearInRange_Depot && !(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB)) then {
 		_upgrade_gear = _upgrades select CTI_UPGRADE_TOWNS;
 	};
 	
@@ -1418,23 +1418,29 @@ CTI_UI_Gear_LoadAvailableUnits = {
 	_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 	_list = [];
 	_fobs = CTI_P_SideLogic getVariable ["cti_fobs", []];
+	_large_fobs = CTI_P_SideLogic getVariable ["cti_large_fobs", []];
 	_vehicles = [];
 	
 	{
 		_nearest = [CTI_BARRACKS, _x, _structures, CTI_BASE_GEAR_RANGE] call CTI_CO_FNC_GetClosestStructure;
 		_ammo_trucks = [_x, CTI_SPECIAL_AMMOTRUCK, CTI_BASE_GEAR_RANGE/4] call CTI_CO_FNC_GetNearestSpecialVehicles;
 		_fob_in_range = false;
+		_large_fob_in_range = false;
 		if (count _fobs > 0) then {
 			_fob = [_x, _fobs] call CTI_CO_FNC_GetClosestEntity;
 			if (_fob distance _x <= (CTI_BASE_GEAR_FOB_RANGE*2)) then {_fob_in_range = true};
 		};
-		if (!isNull _nearest || _x == player || count _ammo_trucks > 0 || _fob_in_range) then {//todo add fob
+		if (count _large_fobs > 0) then {
+			_large_fob = [_x, _large_fobs] call CTI_CO_FNC_GetClosestEntity;
+			if (_large_fob distance _x <= (CTI_BASE_GEAR_LARGE_FOB_RANGE*2)) then {_large_fob_in_range = true};
+		};
+		if (!isNull _nearest || _x == player || count _ammo_trucks > 0 || _fob_in_range || _large_fob_in_range) then {//todo add fob
 			_list pushBack _x;
 			((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70201) lbAdd Format["[%1] %2", _x call CTI_CL_FNC_GetAIDigit, getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName")];
 		};
 		if (vehicle _x != _x && !(vehicle _x in _vehicles)) then { //--- Vehicle check
 			if (getNumber(configFile >> "CfgVehicles" >> typeOf vehicle _x >> "maximumLoad") > 0) then {
-				if (!isNull _nearest || count _ammo_trucks > 0 || _fob_in_range) then {
+				if (!isNull _nearest || count _ammo_trucks > 0 || _fob_in_range || _large_fob_in_range) then {
 					_list pushBack vehicle _x;
 					((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70201) lbAdd Format["[%1] %2", _x call CTI_CL_FNC_GetAIDigit, getText(configFile >> "CfgVehicles" >> typeOf vehicle _x >> "displayName")];
 					_vehicles pushBack vehicle _x;
@@ -1447,13 +1453,18 @@ CTI_UI_Gear_LoadAvailableUnits = {
 		_nearest = [CTI_BARRACKS, _x, _structures, CTI_BASE_GEAR_RANGE] call CTI_CO_FNC_GetClosestStructure;
 		_ammo_trucks = [_x, CTI_SPECIAL_AMMOTRUCK, CTI_BASE_GEAR_RANGE/4] call CTI_CO_FNC_GetNearestSpecialVehicles;
 		_fob_in_range = false;
+		_large_fob_in_range = false;
 		if (count _fobs > 0) then {
 			_fob = [_x, _fobs] call CTI_CO_FNC_GetClosestEntity;
 			if (_fob distance _x <= (CTI_BASE_GEAR_FOB_RANGE*2)) then {_fob_in_range = true};
 		};
+		if (count _large_fobs > 0) then {
+			_large_fob = [_x, _large_fobs] call CTI_CO_FNC_GetClosestEntity;
+			if (_large_fob distance _x <= (CTI_BASE_GEAR_LARGE_FOB_RANGE*2)) then {_large_fob_in_range = true};
+		};
 		if !(_x in _vehicles) then { //--- Vehicle check
 			if (getNumber(configFile >> "CfgVehicles" >> typeOf _x >> "maximumLoad") > 0 && local _x) then {
-				if (!isNull _nearest || count _ammo_trucks > 0 || _fob_in_range) then {
+				if (!isNull _nearest || count _ammo_trucks > 0 || _fob_in_range || _large_fob_in_range) then {
 					_list pushBack _x;
 					((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70201) lbAdd Format["%1", getText(configFile >> "CfgVehicles" >> typeOf _x >> "displayName")];
 					_vehicles pushBack _x;

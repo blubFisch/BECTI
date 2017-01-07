@@ -112,6 +112,9 @@ if !(CTI_VAR_StructureCanceled) then {
 		_fob = false;
 		{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
 		if (_fob) then {CTI_P_TeamsRequests_FOB = 0};
+		_large_fob = false;
+		{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
+		if (_large_fob) then {CTI_P_TeamsRequests_FOB = 0};
 	} else {
 		hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Not all conditions are met to construct this defense.";
 	};

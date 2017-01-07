@@ -145,6 +145,8 @@ if (_attempts >= 500) then {
 	
 	//--- Add FOB if needed
 	if (CTI_BASE_FOB_MAX > 0) then {_logic setVariable ["cti_fobs", [], true]};
+	//--- Add LARGE FOB if needed
+	if (CTI_BASE_LARGE_FOB_MAX > 0) then {_logic setVariable ["cti_large_fobs", [], true]};
 	
 	//--- Startup vehicles
 	{

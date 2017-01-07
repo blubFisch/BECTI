@@ -57,12 +57,17 @@ _baseratio = 1;
 _reduce_damages = _reduce_damages * _baseratio;
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
-if (_reduce_damages > 0 ) then {
+if (_reduce_damages > 1 ) then {
 	_currentdmg = getDammage _damaged; 
 	_damage = _currentdmg + ((_damage - _currentdmg) / _reduce_damages);
 } else {
-	_currentdmg = getDammage _damaged;
-	_damage = _currentdmg + ((_damage - _currentdmg) / _baseratio);
+	if (_reduce_damages > 0 ) then {
+		_currentdmg = getDammage _damaged; 
+		_damage = _currentdmg - (_damage / _reduce_damages);
+	} else {
+		_currentdmg = getDammage _damaged;
+		_damage = _currentdmg + ((_damage - _currentdmg) / _baseratio);
+	};
 };
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;

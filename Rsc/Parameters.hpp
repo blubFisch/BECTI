@@ -35,6 +35,12 @@ class Params {
 		texts[] = {"Disabled","1","2","3","4","5","6","7","8","9","10"};
 		default = 4;
 	};
+	class CTI_BASE_LARGE_FOB_MAX {
+		title = "BASE: Large FOB Limit";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10};
+		texts[] = {"Disabled","1","2","3","4","5","6","7","8","9","10"};
+		default = 1;
+	};
 	class CTI_BASE_STARTUP_PLACEMENT {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
@@ -202,6 +208,12 @@ class Params {
 		values[] = {500,750,1000,1250,1500,1750,2000};
 		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM"};
 		default = 1500;
+	};
+	class CTI_RESPAWN_LARGE_FOB_RANGE {
+		title = "RESPAWN: FOB Range";
+		values[] = {500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000};
+		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM","2.25 KM","2.5 KM","2.75 KM","3 KM"};
+		default = 2500;
 	};
 	class CTI_RESPAWN_MOBILE {
 		title = "RESPAWN: Mobile";
@@ -483,6 +495,6 @@ class Params {
 		title = "DEV: Dev Mode";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 };

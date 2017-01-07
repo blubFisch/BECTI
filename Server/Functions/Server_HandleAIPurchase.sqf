@@ -78,6 +78,11 @@ if (_funds < _cost) exitWith { [_req_seed, _req_classname, _req_target, _factory
 
 _direction = 360 - CTI_TOWNS_DEPOT_BUILD_DIRECTION;
 _distance = CTI_TOWNS_DEPOT_BUILD_DISTANCE + (_var_classname select CTI_UNIT_DISTANCE);
+//if Large FOB
+if !(isNil {_factory getVariable "cti_large_fob"}) then {
+	_direction = 360 - CTI_TOWNS_LARGE_FOB_BUILD_DIRECTION;
+	_distance = CTI_TOWNS_LARGE_FOB_BUILD_DISTANCE + (_var_classname select CTI_UNIT_DISTANCE);
+};
 _var = missionNamespace getVariable [format ["CTI_%1_%2", _req_side, _factory getVariable ["cti_structure_type", ""]], []];
 if (count _var > 0) then {
 	_direction = 360 - ((_var select 4) select 0);

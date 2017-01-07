@@ -9,6 +9,7 @@ CTI_FACTORY_NAVAL = 6;
 CTI_FACTORY_DEPOT = 7;
 CTI_FACTORY_RADAR = 8;
 CTI_FACTORY_RADAR_ART = 9;
+CTI_FACTORY_LARGE_FOB = 10;
 
 CTI_PV_SERVER = 2;
 CTI_PV_CLIENTS = if (!isMultiplayer || CTI_IsHostedServer) then {0} else {-2};
@@ -28,6 +29,7 @@ CTI_RADAR_ART = "RadarArt";
 CTI_HQ_DEPLOY = "HQDeployed";
 CTI_HQ_MOBILIZE = "HQMobilized";
 CTI_SUPPLY_DEPOT = "SupplyDepot";
+CTI_LARGE_FOB = "LargeFOB";
 
 CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL,CTI_RADAR,CTI_RADAR_ART,CTI_SUPPLY_DEPOT];
 
@@ -484,12 +486,19 @@ CTI_BASE_HQ_REPAIR_TIME = 60; //--- The time needed to repair the HQ
 CTI_BASE_SUPPLY_BASE_VALUE = 5000; //--- Max supply base value
 CTI_BASE_SUPPLY_DEPOT_VALUE = 5000; //--- Supply depot supply value
 
+//--- Base: Large FOB
+CTI_TOWNS_LARGE_FOB_BUILD_DIRECTION = 0; //--- Determine the direction a vehicle will use while being spawned from the Large FOB
+CTI_TOWNS_LARGE_FOB_BUILD_DISTANCE = 20; //--- Determine how far a unit/vehicle will spawn from the Large FOB
+CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_Cargo_House_V3_F","USMC_WarfareBBarracks","WarfareBDepot","USMC_WarfareBFieldhHospital"]; //--- The classname(s) used for town depots in editor
+CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be from a Large FOB in order to use it
+
 //--- Base: Misc
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
+CTI_BASE_GEAR_LARGE_FOB_RANGE = 30; //--- Determine how far a player has to be from a FOB to access the Gear Menu
 CTI_BASE_GEAR_RANGE = 300; //--- Determine how far a player has to be from a Barracks to access the Gear Menu
 CTI_BASE_PURCHASE_UNITS_RANGE = 150; //--- Determine how far a player has to be from a factory to access the Factory Menu without CC
 CTI_BASE_PURCHASE_UNITS_RANGE_CC = 15000; //--- Determine how far a player has to be from a factory to access the Factory Menu with CC
@@ -511,6 +520,7 @@ with missionNamespace do {
 	if (isNil 'CTI_BASE_AREA_MAX') then {CTI_BASE_AREA_MAX = 2}; //--- Amount of base areas which may be built
 	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 0}; //--- Construction mode to use for structures (0: Timed, 1: Workers)
 	if (isNil 'CTI_BASE_FOB_MAX') then {CTI_BASE_FOB_MAX = 2}; //--- Maximum amount of FOBs which a side may place
+	if (isNil 'CTI_BASE_LARGE_FOB_MAX') then {CTI_BASE_LARGE_FOB_MAX = 2}; //--- Maximum amount of Large FOBs which a side may place
 	if (isNil 'CTI_BASE_HQ_REPAIR') then {CTI_BASE_HQ_REPAIR = 1}; //--- Determine whether the HQ can be repaired or not
 	if (isNil 'CTI_BASE_STARTUP_PLACEMENT') then {CTI_BASE_STARTUP_PLACEMENT = 4000}; //--- Each side need to be further than x meters
 };
@@ -547,7 +557,7 @@ CTI_VEHICLES_PROTECT_TIRES = 1; //--- Determine whether the damages applied to t
 CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 2; //--- Repair trucks build speed multiplier (<coefficient> / (<structure build time> / 100)), higher is faster.
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR = 0.01; //--- Repair trucks repair iteration per action over a structure.
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR_RANGE = 25; //--- Repair trucks may repair structures in that range
-CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT = 3; //--- Repair truck build tax multiplier
+CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT = 2; //--- Repair truck build tax multiplier
 CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT = 2; //--- Defense truck build tax multiplier
 
 //--- Vehicles: Salvage Trucks
@@ -615,6 +625,7 @@ CTI_SERVICE_PRICE_REFUEL = 200;
 CTI_SERVICE_PRICE_REFUEL_COEF = 0;
 CTI_SERVICE_PRICE_HEAL = 50;
 CTI_SERVICE_PRICE_DEPOT_COEF = 0;
+CTI_SERVICE_PRICE_LARGE_FOB_COEF = 0;
 
 CTI_MORTAR_REARM_RATIO=9;
 CTI_ART_REARM_RATIO=15;
@@ -626,6 +637,7 @@ CTI_SERVICE_AMMO_DEPOT_TIME = 30;
 CTI_SERVICE_AMMO_TRUCK_RANGE = 50;
 CTI_SERVICE_AMMO_TRUCK_TIME = 60;
 CTI_SERVICE_AMMO_TOWN_DEPOT_TIME = 50;
+CTI_SERVICE_AMMO_LARGE_FOB_TIME = 50;
 CTI_SERVICE_REPAIR_DEPOT_RANGE = 300;
 CTI_SERVICE_REPAIR_DEPOT_TIME = 30;
 CTI_SERVICE_REPAIR_TRUCK_RANGE = 10;
@@ -634,6 +646,7 @@ CTI_SERVICE_REPAIR_TRUCK_TIME = 50;
 CTI_SERVICE_AMMO_BOX_RANGE = 10;
 CTI_SERVICE_AMMO_BOX_TIME = 120;
 CTI_SERVICE_REPAIR_TOWN_DEPOT_TIME = 50;
+CTI_SERVICE_REPAIR_LARGE_FOB_TIME = 50;
 
 CTI_SCORE_BUILD_VALUE_PERPOINT = 1500; //--- Structure value / x
 CTI_SCORE_SALVAGE_VALUE_PERPOINT = 2000; //--- Unit value / x
@@ -711,6 +724,7 @@ with missionNamespace do {
 	if (isNil 'CTI_RESPAWN_CAMPS') then {CTI_RESPAWN_CAMPS = 1}; //--- Camp mode (1: Classic, 2: Nearby)
 	if (isNil 'CTI_RESPAWN_CAMPS_CONDITION') then {CTI_RESPAWN_CAMPS_CONDITION = 2}; //--- Camp respawn condition (0: Unlimited, 1: Priced, 2: Limited per capture)
 	if (isNil 'CTI_RESPAWN_FOB_RANGE') then {CTI_RESPAWN_FOB_RANGE = 1750}; //--- Range at which a unit can spawn at a FOB
+	if (isNil 'CTI_RESPAWN_LARGE_FOB_RANGE') then {CTI_RESPAWN__LARGE_FOB_RANGE = 2500}; //--- Range at which a unit can spawn at a Large FOB
 	if (isNil 'CTI_RESPAWN_MOBILE') then {CTI_RESPAWN_MOBILE = 1};
 	if (isNil 'CTI_RESPAWN_TIMER') then {CTI_RESPAWN_TIMER = 30};
 

@@ -19,6 +19,7 @@ CTI_CO_FNC_EquipVehicleCargo = compileFinal preprocessFileLineNumbers "Common\Fu
 CTI_CO_FNC_EquipVehicleCargoSpace = compileFinal preprocessFileLineNumbers "Common\Functions\Common_EquipVehicleCargoSpace.sqf";
 CTI_CO_FNC_GetAreaEnemiesCount = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetAreaEnemiesCount.sqf";
 CTI_CO_FNC_GetClosestDepot = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetClosestDepot.sqf";
+CTI_CO_FNC_GetClosestLargeFOB = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetClosestLargeFOB.sqf";
 CTI_CO_FNC_GetClosestEnemyTown = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetClosestEnemyTown.sqf";
 CTI_CO_FNC_GetClosestEntity = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetClosestEntity.sqf";
 CTI_CO_FNC_GetClosestFriendlyTown = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetClosestFriendlyTown.sqf";

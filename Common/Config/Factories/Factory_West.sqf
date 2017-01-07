@@ -1259,6 +1259,103 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
 
 //Universal Vanilla
+_u pushBack "B_Quadbike_01_F";
+_u pushBack "B_G_Offroad_01_F";
+_u pushBack "B_G_Offroad_01_armed_F";
+_u pushBack "C_Van_01_transport_F";
+_u pushBack "B_Truck_01_transport_F";
+
+if (CTI_FACTION_WEST == 0) then {
+	//NATO Arid Vanilla
+	_u pushBack "B_Soldier_F";
+	_u pushBack "B_crew_F";
+	_u pushBack "B_MRAP_01_F";
+	_u pushBack "B_MRAP_01_hmg_F";
+	_u pushBack "B_G_Offroad_01_repair_F";
+
+};
+if (CTI_FACTION_WEST == 1) then {
+	//NATO Tropic Vanilla
+
+};
+if (CTI_FACTION_WEST == 2) then {
+	//NATO Winter Vanilla
+	
+};
+//--- APEX UNITS
+if (CTI_APEX_ADDON > 0) then { 
+	//Universal APEX
+	_u pushBack 'B_T_LSV_01_unarmed_F';
+	_u pushBack 'B_T_LSV_01_armed_F';
+	_u pushBack "C_Scooter_Transport_01_F";
+	
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid APEX
+		
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic APEX
+		_u pushBack "B_T_Soldier_F";
+		_u pushBack "B_T_crew_F";
+		_u pushBack "OFPS_HUNTER";
+		_u pushBack "OFPS_HUNTER_HMG";
+
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//NATO Winter APEX
+		
+	};
+};
+//--- CUP UNITS
+if (CTI_CUP_ADDON > 0) then { 
+	//Universal CUP
+	_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
+	_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
+	_u pushBack 'CUP_B_HMMWV_MK19_USMC';	
+	
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid CUP
+		_u pushBack 'CUP_B_US_Soldier';
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic CUP
+		
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//NATO Winter CUP
+		
+	};
+};
+//--- OFPS UNITS
+if (CTI_OFPS_ADDON > 0) then { 
+	//Universal OFPS
+	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
+	//_u pushBack 'usaf_police_car2';
+	//_u pushBack 'usaf_police_offroad';
+
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//NATO Winter OFPS
+		_u pushBack 'sfp_m90s_rifleman_ak5';
+		_u pushBack 'sfp_m90s_crew';
+		_u pushBack 'sfp_bv206_winter';
+		_u pushBack 'Meaty_Hunter_Sn';		
+		_u pushBack 'Meaty_HunterHMG_Sn';
+	};
+};
+
+missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
+_u = [];
+
+//Universal Vanilla
 _u pushBack "C_Boat_Civil_01_F";
 _u pushBack "B_Boat_Transport_01_F";
 _u pushBack "B_Boat_Armed_01_minigun_F";

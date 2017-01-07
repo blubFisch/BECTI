@@ -12,7 +12,7 @@ link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
 globals[] = {25.000000,1,0,0,0,640,480,1,133,6316128,1,-457.107819,165.700150,575.219543,-317.919952,190,635,1};
-window[] = {0,-1,-1,-1,-1,989,208,1463,208,1,208};
+window[] = {0,-1,-1,-1,-1,911,130,1385,130,1,208};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -114,6 +114,15 @@ class FSM
        "	if (_nearest distance vehicle player <= CTI_BASE_GEAR_FOB_RANGE) then {_in_range = true};" \n
        "};" \n
        "CTI_Base_GearInRange_FOB = _in_range;" \n
+       "" \n
+       "//--- Large FOB Check" \n
+       "_in_range_large = false;" \n
+       "if (CTI_BASE_LARGE_FOB_MAX > 0) then {" \n
+       "	_nearest = [vehicle player, CTI_P_SideLogic getVariable [""cti_large_fobs"",[]]] call CTI_CO_FNC_GetClosestEntity;" \n
+       "	if (_nearest distance vehicle player <= CTI_BASE_GEAR_LARGE_FOB_RANGE) then {_in_range_large = true};" \n
+       "};" \n
+       "CTI_Base_LargeFOBInRange = _in_range_large;" \n
+       "CTI_Base_GearInRange_LARGE_FOB = _in_range_large;" \n
        "" \n
        "//--- Track the player's gear" \n
        "if (CTI_GEAR_RESPAWN_WITH_LAST > 0) then {" \n
