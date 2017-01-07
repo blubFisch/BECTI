@@ -31,7 +31,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-private ["_damage", "_damaged", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
+private ["_damage", "_damaged", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -40,6 +40,7 @@ _sideID = _this select 3;
 _reduce_damages = _this select 4;
 _variable = _this select 5;
 _position = _this select 6;
+_multiply_damages = _this select 7;
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
@@ -54,16 +55,17 @@ _baseratio = 1;
 			case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
 			case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 		};
-_reduce_damages = _reduce_damages * _baseratio;
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
-if (_reduce_damages > 1 ) then {
+if (_reduce_damages > 0 ) then {
+	_reduce_damages = _reduce_damages * _baseratio;
 	_currentdmg = getDammage _damaged; 
 	_damage = _currentdmg + ((_damage - _currentdmg) / _reduce_damages);
 } else {
-	if (_reduce_damages > 0 ) then {
+	_multiply_damages = _multiply_damages / _baseratio;
+	if (_multiply_damages > 0 ) then {
 		_currentdmg = getDammage _damaged; 
-		_damage = _currentdmg - (_damage / _reduce_damages);
+		_damage = _currentdmg - (_damage * _multiply_damages);
 	} else {
 		_currentdmg = getDammage _damaged;
 		_damage = _currentdmg + ((_damage - _currentdmg) / _baseratio);

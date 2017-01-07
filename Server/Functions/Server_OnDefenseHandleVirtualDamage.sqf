@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
+private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -46,6 +46,7 @@ _sideID = _this select 4;
 _position = _this select 5;
 _direction = _this select 6;
 _reduce_damages = _this select 7;
+_multiply_damages = _this select 8;
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -62,12 +63,18 @@ _baseratio = 1;
 			case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
 			case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 		};
-_reduce_damages = _reduce_damages * _baseratio;
+
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
+	_reduce_damages = _reduce_damages * _baseratio;
 	_damage = _damage / _reduce_damages;
 } else {
-	_damage = _damage / _baseratio;
+	_multiply_damages = _multiply_damages / _baseratio;
+	if (_multiply_damages > 0 ) then {
+		_damage = _damage * _multiply_damages;
+	} else {
+		_damage = _damage / _baseratio;
+	};
 };
 
 _virtual_damages = _damaged getVariable "cti_altdmg";

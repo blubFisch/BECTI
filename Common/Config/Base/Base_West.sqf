@@ -958,8 +958,8 @@ _specials = [];
 		_categories pushBack 	"Fortification";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 20]];
 	} else {
 		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
 		_classes pushBack 		"Land_Cargo_House_V3_F";
@@ -968,8 +968,8 @@ _specials = [];
 		_categories pushBack 	"Fortification";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", .001]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
 	};
 
 	_headers pushBack 		"Dome (Small)";
