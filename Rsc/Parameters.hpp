@@ -33,13 +33,13 @@ class Params {
 		title = "BASE: FOB Limit";
 		values[] = {0,1,2,3,4,5,6,7,8,9,10};
 		texts[] = {"Disabled","1","2","3","4","5","6","7","8","9","10"};
-		default = 4;
+		default = 2;
 	};
 	class CTI_BASE_LARGE_FOB_MAX {
 		title = "BASE: Large FOB Limit";
 		values[] = {0,1,2,3,4,5,6,7,8,9,10};
 		texts[] = {"Disabled","1","2","3","4","5","6","7","8","9","10"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_BASE_STARTUP_PLACEMENT {
 		title = "BASE: Startup Placement";
@@ -495,6 +495,6 @@ class Params {
 		title = "DEV: Dev Mode";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 };
