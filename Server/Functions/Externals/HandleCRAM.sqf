@@ -229,10 +229,10 @@ while { true } do
 				_readyCRAMs = _readyCRAMs - [_bestCRAM];
 				
 				if ((typeof _tgt) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
-					str _side + " C-RAM turrets are engaging an enemy projectile at our base!" remoteExec ["systemChat"];
+					//str _side + " C-RAM turrets are engaging an enemy projectile at our base!" remoteExec ["systemChat"];
 					[_bestCRAM,"incoming"] call Common_Say3D;
 				} else {
-					str _side + " C-RAM turrets are engaging an enemy air object at our base!" remoteExec ["systemChat"];
+					//str _side + " C-RAM turrets are engaging an enemy air object at our base!" remoteExec ["systemChat"];
 				};
 			} else {
 				("No ready turret for target: " + str _tgt) call FNC_CRAMControl_Log;
