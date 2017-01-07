@@ -22,7 +22,7 @@ while {! CTI_GameOver} do {
 			_playerai = 5;
 			player setUnitTrait ["Medic",true];
 			if (_info2 == 0) then {
-				["rank-up", [name player ,_rank, "Explosive Specialist", _playerai]] call CTI_CL_FNC_DisplayMessage;
+				["rank-up", [name player ,_rank, "Medic", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info2 = 1;
 			};
 		};
@@ -30,7 +30,7 @@ while {! CTI_GameOver} do {
 			_playerai = 6;
 			player setUnitTrait ["explosiveSpecialist",true];
 			if (_info3 == 0) then {
-				["rank-up", [name player ,_rank, "Engineer", _playerai]] call CTI_CL_FNC_DisplayMessage;
+				["rank-up", [name player ,_rank, "Explosive Specialist", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info3 = 1;
 			};
 		};
@@ -38,7 +38,7 @@ while {! CTI_GameOver} do {
 			_playerai = 7;
 			player setUnitTrait ["Engineer",true];
 			if (_info4 == 0) then {
-				["rank-up", [name player ,_rank, "UAVHacker", _playerai]] call CTI_CL_FNC_DisplayMessage;
+				["rank-up", [name player ,_rank, "Engineer", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info4 = 1;
 			};
 		};
@@ -46,7 +46,7 @@ while {! CTI_GameOver} do {
 			_playerai = 8;
 			player setUnitTrait ["UAVHacker",true];
 			if (_info5 == 0) then {
-				["rank-up", [name player ,_rank, "increased stamina", _playerai]] call CTI_CL_FNC_DisplayMessage;
+				["rank-up", [name player ,_rank, "UAVHacker", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info5 = 1;
 			};
 		};
@@ -54,7 +54,7 @@ while {! CTI_GameOver} do {
 			_playerai = 9;
 			player setUnitTrait ["loadCoef",0.9];
 			if (_info6 == 0) then {
-				["rank-up", [name player ,_rank, "silent", _playerai]] call CTI_CL_FNC_DisplayMessage;
+				["rank-up", [name player ,_rank, "increased stamina", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info6 = 1;
 			};
 		};
