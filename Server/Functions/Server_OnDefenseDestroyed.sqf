@@ -60,10 +60,10 @@ if !(isNull _killer) then {
 	if (side _killer != sideEnemy && side _killer != _side && (group _killer) call CTI_CO_FNC_IsGroupPlayable) then {
 		if (isPlayer _killer) then {
 			_label = ((_var select 0));
-			_award = round((_var select 2) * CTI_BASE_CONSTRUCTION_BOUNTY);
+			_award = round((_var select 2) * CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY);
 				
 			[_label, _award] remoteExec ["CTI_PVF_CLT_OnBountyDefense", _killer];
-			["structure-destroyed", [name _killer, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
+			["defense-destroyed", [name _killer, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 		} else {
 			//--- AI Reward
 		};
