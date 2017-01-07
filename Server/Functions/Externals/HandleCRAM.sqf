@@ -22,8 +22,8 @@
 // Warning: Configuration also needs to be made in the clientside code CRAMControl_FiredEvent
 
 _proximityForAmmoDestruction = 10;	// When a CRAM shell gets closer than this, incoming ammo will be destroyed
-_trackingRange = 2500;				// Turrets will aim, but not fire within this range and _openFireRange
-_openFireRange = 1200;
+_trackingRange = 2000;				// Turrets will aim, but not fire withing this range and _openFireRange
+_openFireRange = 1000;
 _CRAMClassnames = [
 	"C_at_phalanx_35AI",
 	"B_at_phalanx_35AI"];
