@@ -108,7 +108,7 @@ if (!isNil '_var') then {
 				if (count _award_groups > 1) then { _bounty = round(_bounty / (count _award_groups))};
 				
 				//--- AI Skill Reward
-				_killer call FNC_RewardPlayerAISkill;
+				if (!isNil '_killer') then {_killer call FNC_RewardPlayerAISkill;};
 				
 				//--- Award
 				{

@@ -1,6 +1,6 @@
 /*
   # HEADER #
-	Description:	Adjust skill for players vehicle crew
+	Description:	Adjust skill for players AI
 
   # PARAMETERS #
     0	[Object]: Unit
@@ -11,8 +11,8 @@
 */
 
 private ["_unit","_aimingAccuracy","_aimingShake","_aimingSpeed","_spotDistance","_spotTime","_courage","_reloadSpeed","_commanding","_general","_skill","_skill_max","_skill_reward"];
-
 _unit = _this;
+
 _aimingAccuracy = _unit skill "aimingAccuracy";
 _aimingShake = _unit skill "aimingShake";
 _aimingSpeed = _unit skill "aimingSpeed";
