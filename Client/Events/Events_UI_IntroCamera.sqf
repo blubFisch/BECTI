@@ -1,4 +1,4 @@
-private ["_campos1", "_campos2", "_targetcam","_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord", "_dist", "_distclose", "_dir", "_dir2", "_campos1_random", "_campos2_random", "_camera", "_nvgstate"];
+private ["_campos1", "_campos2", "_targetcam","_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord", "_dist", "_distclose", "_dir", "_dir2", "_campos1_random", "_campos2_random", "_camera", "_nvgstate", "_loop"];
 // 
 // _camera_shot= [position_1_name, position_2_name, target_name, duration, zoom_level1, zoom_level_2, attached, x_rel_coord, y_rel_coord, z_rel_coord] execVM "camera_work.sqf";
 /* 
@@ -50,8 +50,14 @@ if (_cam_attached) then {
 	
 	_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
 	camUseNVG _nvgstate;
-
-	sleep _camera_duration;
+	_loop = 0;
+	while{(_loop < _camera_duration)} do { 
+		sleep 1;
+		if (player getVariable "cti_intro" == 1) exitwith {};
+		_loop = _loop + 1; 
+	};
+	_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+	//sleep _camera_duration;
 
 	_camera cameraeffect ["terminate", "back"];
 	camDestroy _camera;
@@ -75,7 +81,8 @@ _camera camCommitPrepared _camera_duration;
 _nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
 camUseNVG _nvgstate;
 
-sleep _camera_duration;
+_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+//sleep _camera_duration;
 
 _camera cameraeffect ["terminate", "back"];
 camDestroy _camera;

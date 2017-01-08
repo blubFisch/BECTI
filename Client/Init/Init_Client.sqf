@@ -241,8 +241,7 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 	};
 
 	waitUntil {time > 0};
-			
-			MissionIntro = [] spawn {
+			MissionIntro = [] spawn {				
 				playMusic "EventTrack02a_F_EPB";
 				cutText ["Welcome", "BLACK IN", 3];
 				//Gather game settings
@@ -374,33 +373,44 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 				_introtext_7 = format ["%1", _mode_guerrilla];
 				_introtext_8 = format ["%1", _mode_zombie];
 
-				if (CTI_DEV_MODE == 0) then {
+				if (CTI_DEV_MODE == 0) then {	
+					//press spacebar to skip 0x39
+					player setVariable ["cti_intro",0,true];
+					//add skip keyhandler
+					waituntil {!isnull (finddisplay 46)};
+					_skipintro = (findDisplay 46) displayAddEventHandler ["KeyDown", {if ((_this select 1) == 0x39) then {player setVariable ["cti_intro",1,true]};}];
 					if (!isNil "_camera_run") exitWith {};
 					_camera_run = true;
 					_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
 					_firstshot = [_hq, _hq, _hq, 40, 0.5, 0.4, false, 0, 0, 1] execVM "Client\Events\Events_UI_IntroCamera.sqf";
 					sleep 4;
-					[
+					//option to skip
+					_skiptext = format ["Press Space to Skip or Win key to open Tablet"];
+					titleText [_skiptext, "PLAIN DOWN", 15];
+					if (player getVariable "cti_intro" == 0) then {[
 						[["OFPS CTI WARFARE","<t align = 'center' shadow = '1' size = '1.4' font='PuristaBold'>%1</t><br/>"],
 						["CAPTURE THE ISLAND","<t align = 'center' shadow = '1' size = '1.2' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_1,"<br/><t align = 'center' shadow = '1' size = '1.1' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_6,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"]]
-					] spawn BIS_fnc_typeText;
-					sleep 13;
-					[
+					] spawn BIS_fnc_typeText;};
+					_loop = 0;while{(_loop < 13)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+					if (player getVariable "cti_intro" == 0) then {[
 						[[_introtext_2,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_3,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"]]
-					] spawn BIS_fnc_typeText;
-					sleep 10;
-					titleText [_introtext_4, "PLAIN", 1];sleep 4;titleFadeOut 1;
-					titleText [_introtext_5, "PLAIN", 1];sleep 4;titleFadeOut 1;
-					if (CTI_GUERILLA_MODE == 1) then {
+					] spawn BIS_fnc_typeText;};
+					_loop = 0;while{(_loop < 10)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+					if (player getVariable "cti_intro" == 0) then {titleText [_introtext_4, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
+					if (player getVariable "cti_intro" == 0) then {titleText [_introtext_5, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
+					if (CTI_GUERILLA_MODE == 1 && player getVariable "cti_intro" == 0) then {
 						titleText [_introtext_7, "PLAIN", 1];sleep 4;titleFadeOut 1;
 					};
-					if (CTI_ZOMBIE_MODE == 1) then {
+					if (CTI_ZOMBIE_MODE == 1 && player getVariable "cti_intro" == 0) then {
 						titleText [_introtext_8, "PLAIN", 1];sleep 4;titleFadeOut 1;
 					};
-					waitUntil {scriptdone _firstshot};
+					waitUntil {scriptdone _firstshot || player getVariable "cti_intro" == 1};
+					//remove keyhandler
+					(findDisplay 46) displayRemoveEventHandler ["KeyDown", _skipintro];
+					player setVariable ["cti_intro",0,true];
 				};
 				cutText ["", "BLACK", 2];
 				cutText ["", "BLACK IN", 2];
