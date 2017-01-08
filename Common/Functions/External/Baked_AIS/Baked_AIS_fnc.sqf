@@ -150,6 +150,7 @@ FNC_BAPS_SCAN_SMOKE =
 		_block = "true";
 
 		_relativeDir = [_defender, _projectile] call BIS_fnc_relativeDirTo;
+		if (isNil "_relativeDir") then {_relativeDir = 0;};
 		if (_relativeDir < 0) then { _relativeDir = _relativeDir + 360; };	
 		// Remove the default blocking
 		_block = "false";
@@ -171,6 +172,7 @@ FNC_BAPS_SCAN_SMOKE =
 			{
 				// Scan for vehicles infront of the projectile
 				_dir = [_projectile, _defender] call BIS_fnc_relativeDirTo;
+				if (isNil "_dir") then {_dir = 0;};
 				if (_dir > 330) then 
 				{
 					_dir = 360 - _dir;
@@ -222,6 +224,7 @@ FNC_BAPS_SCAN =
 			_turretDir = _weaponDeg - _vehicleDir;
 			if (_turretDir < 0) then { _turretDir = _turretDir + 360; };
 			_relativeDir = [_defender, _projectile] call BIS_fnc_relativeDirTo;
+			if (isNil "_relativeDir") then {_relativeDir = 0;};
 			_relativeDir = _relativeDir - _turretDir;
 			if (_relativeDir < 0) then { _relativeDir = _relativeDir + 360; };	
 			// Remove the default blocking
@@ -237,6 +240,7 @@ FNC_BAPS_SCAN =
 			};
 		} else {
 			_relativeDir = [_defender, _projectile] call BIS_fnc_relativeDirTo;
+			if (isNil "_relativeDir") then {_relativeDir = 0;};
 			if (_relativeDir < 0) then { _relativeDir = _relativeDir + 360; };	
 			// Remove the default blocking
 			_block = "false";
@@ -259,6 +263,7 @@ FNC_BAPS_SCAN =
 			{
 				// Scan for vehicles infront of the projectile
 				_dir = [_projectile, _defender] call BIS_fnc_relativeDirTo;
+				if (isNil "_dir") then {_dir = 0;};
 				if (_dir > 330) then 
 				{
 					_dir = 360 - _dir;
