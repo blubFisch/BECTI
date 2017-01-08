@@ -39,7 +39,7 @@ sleep 1;
 FNC_CRAMControl_Log = {
 	private _text = "CRAM Control: " + _this;
 	//_text remoteExec ["systemChat"];
-	diag_log _text;
+	//diag_log _text;
 }; 
 
 // Aim a turret at target and fire when close enough

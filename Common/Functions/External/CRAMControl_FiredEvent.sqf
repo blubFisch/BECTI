@@ -64,7 +64,7 @@ FNC_CRAMControl_AttackerFiredEH =
 	
 	if (!_isCRAMTurret) then {
 		//hintSilent ("potential attacker firing " + str(_projectile));
-		diag_log ("potential attacker firing " + str(_projectile));
+		//diag_log ("potential attacker firing " + str(_projectile));
 		
 		while {alive _projectile} do {
 			_nearRounds = _projectile nearObjects ["at_phalanx_35mm_AA", CRAMControl_proximityForAmmoDestructionAtAttacker];
@@ -77,7 +77,7 @@ FNC_CRAMControl_AttackerFiredEH =
 				{"SmallSecondary" createVehicle position _x; deleteVehicle _x;} forEach _nearRounds;	// Explosion variants: "SmallSecondary", "HelicopterExploSmall"
 				deleteVehicle _projectile;
 				//hintSilent ("deleted " + str _projectile);
-				diag_log ("deleted " + str _projectile);
+				//diag_log ("deleted " + str _projectile);
 			};
 			sleep 0.001;	// sleep until next frame // TODO: fixme?
 		};
