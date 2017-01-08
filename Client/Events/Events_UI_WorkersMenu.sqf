@@ -58,8 +58,15 @@ switch (_action) do {
 				if (alive _fob && ((_fob distance _mappos) < (_nearest distance _mappos))) then {_fobr = _fob};
 			};
 			
+			//--- Add Large FOBs if available.
+			_foblarger = objNull;
+			if (CTI_BASE_LARGE_FOB_MAX > 0) then {
+				_foblarge = [_mappos, (CTI_P_SideLogic getVariable ["cti_large_fobs", []])] call CTI_CO_FNC_GetClosestLargeFOB;
+				if (alive _foblarge && ((_foblarge distance _mappos) < (_nearest distance _mappos))) then {_foblarger = _foblarge};
+			};
+			
 			//--- Deal with a structure
-			if (_nearest distance _mappos < 500 && isNull _fobr) then {
+			if (_nearest distance _mappos < 50 && isNull _fobr && isNull _foblarger) then {
 				if (isNil {_nearest getVariable "cti_sell"}) then {
 					//--- Commander Refund
 					if (!isNil {_nearest getVariable "cti_structure_type"} && isNil{_nearest getVariable "cti_sell"}) then {
@@ -86,6 +93,15 @@ switch (_action) do {
 				deleteVehicle _fobr;
 				
 				["fob-sold", _coords] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_P_SideJoined];
+			};
+			
+			//--- Deal with a Large FOB
+			if !(isNull _foblarger) then {
+				CTI_P_SideLogic setVariable ["cti_large_fobs", (CTI_P_SideLogic getVariable "cti_large_fobs") - [_foblarger, objNull], true];
+				_coordlarge = mapGridPosition _foblarger;
+				deleteVehicle _foblarger;
+				
+				["fob-large-sold", _coordlarge] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_P_SideJoined];
 			};
 			
 			uiNamespace setVariable ["cti_dialog_ui_workersmenu_sellmode", 0];
