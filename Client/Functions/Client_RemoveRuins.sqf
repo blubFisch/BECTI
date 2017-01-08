@@ -26,10 +26,16 @@ private ["_classnames", "_position", "_var", "_variable"];
 
 _position = _this select 0;
 _variable = _this select 1;
+_classnames = [];
 
+if (typeName _variable == "ARRAY") then {
 _var = missionNamespace getVariable _variable;
 _classnames = _var select 1;
 _classnames = if (count _classnames > 2) then {[_classnames select 1] + (_classnames select 2)} else {[_classnames select 1]};
+};
+if (typeName _variable == "STRING") then {
+	_classnames = [_variable];
+};
 
 //--- Only pure clients will have to clean it
 if !(CTI_IsHostedServer) then {{if (local _x) then {deleteVehicle _x}} forEach (nearestObjects [_position, _classnames, 25])};
