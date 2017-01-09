@@ -207,6 +207,7 @@ Added: Bounties to defensive structures and Fortifications <br/>
 Added: Defensive structures now have a upgrade tree <br/>
 Added: Base health now on a upgrade tree Max health is the old starter health <br/>
 Added: New Fob type added as a small forward base Resupply/light units/infantry/gear <br/>
+Added: Teamstack system will not apply to players that are reconnecting <br/>
 Removed: SPG9_TKA from OPFOR as it was pulling Resistance prices <br/>
 Removed: Mastiff, Ridgeback, Wolfhound due to broken dmg states. <br/>
 Removed: Gear crates because they where spawning advance gear in them <br/>
