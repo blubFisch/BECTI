@@ -385,7 +385,7 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 					_firstshot = [_hq, _hq, _hq, 40, 0.5, 0.4, false, 0, 0, 1] execVM "Client\Events\Events_UI_IntroCamera.sqf";
 					sleep 4;
 					//option to skip
-					_skiptext = format ["Press Space to Skip or Win key to open Tablet"];
+					_skiptext = format ["Open Map for Server rules! Press Space to Skip or Win key to open Tablet"];
 					titleText [_skiptext, "PLAIN DOWN", 15];
 					if (player getVariable "cti_intro" == 0) then {[
 						[["OFPS CTI WARFARE","<t align = 'center' shadow = '1' size = '1.4' font='PuristaBold'>%1</t><br/>"],
