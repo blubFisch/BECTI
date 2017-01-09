@@ -14,7 +14,7 @@ player createDiaryRecord ["menu1",
 player createDiaryRecord ["menu1",
 ["Server Rules","<br/>
 <font color='#2ae916' size='14'>Gameplay Rules</font><br/>
-- It is the players responsibility be familiar with all rules<br/>
+- It is the players responsibility to be familiar with all rules<br/>
 - No Team Killing (includes AI), eliminate AI via OPTIONS-AI Management.<br/>
 - No Friendly Asset Destruction (Vehicles, mortar tubes, defence structures, etc).<br/>
 - No stealing of friendly MHQ, only for Commander use.<br/>
