@@ -167,4 +167,49 @@ Removed Mark V Soc boat due to FPS drop<br/>
 Replaced S-300 system with Patriot on opfor due to texture glitch<br/>
 Removed m113 respawn<br/>
 
+<font color='#2ae916' size='14'>V1.03</font><br/>
+Fixed: Various map/mission fixes<br/>
+Fixed: Intro/Outro Fix <br/>
+Fixed: Nuke truck<br/>
+Fixed: Salvager bug on tropic maps <br/>
+Fixed: Money transfer display bug fixed<br/>
+Tweaked: View distance set for 3500<br/>
+Tweaked: BTR 90, LAV25 moved to Light Factory 4 <br/>
+Tweaked: Vodnik BPPU moved to Light Factory 3 <br/>
+Tweaked: Weapon sway changed to "none" "However, weapon sway at "NONE" still creates a reasonable amount of weapon sway.<br/>
+Tweaked: AI crew has improved spotting<br/>
+Tweaked: Darter moved to gear 3 <br/>
+Tweaked: RPG-7 Scope's added to Gear 2/3 <br/>
+Tweaked: Darter now has a range limit of 4k <br/>
+Tweaked: HMG/GMG/MED Strykers moved to Light Factory 2/3 <br/>
+Tweaked: Names of units updated to better describe them to new players (WIP)<br/> 
+Tweaked: Titan Launchers had a price update to reduce dependency/spam <br/>
+Tweaked: Alpha jet and I39 moved to air 3 <br/>
+Tweaked: Various price adjustments <br/>
+Tweaked: S300/Patriot Range now 3.5 Km <br/>
+Tweaked: Starting Supply max reduced to 5k <br/>
+Tweaked: Repair trucks have a tax multiplier to build things. HQ does not.<br/>
+Added: VON now keeps players out of global <br/>
+Added: Defense Truck added to Depots/Repair Factory. Comes With a small collection of mines and can build basic fortifications. <br/>
+Added: Winter units<br/>
+Added: Player rank system improved. starts with 4 AI slots every rank gain 1 AI slots 
+Rank system now gives perks at each level, Corporal-Medic, Sergeant-explosive specialist/engineer, Lieutenant-UAV hacker, Captain-Increased stamina, Major-reduced load, Colonel-increased camo vs AI and decreased noise.<br/>
+Added: Tags added to reduce FF from Newbs, can be turned off by player <br/>
+Added: AI Now get better based off of how many enemy kills they have. Keep your men alive! <br/>
+Added: ERA AND LVOSS added to Heavy and Light units on upgrade tree <br/>
+Added: Toolkits and Parachutes added to all Air units <br/>
+Added: Toolkits added to all repair trucks <br/>
+Added: Deployable Backpack boat added to gear 3 <br/>
+Added: Autonomous HMG/GMG added to gear 4<br/>
+Added: New Supply system-Bases now store supply in the supply Depot building costs 2.5 supply to build stores 5k supply if destroyed you lose that much supply, has debt protection. <br/>
+Added: Base CRAM can now destroy incoming projectiles and kill darters at 1K<br/>
+Added: Bounties to defensive structures and Fortifications <br/>
+Added: Defensive structures now have a upgrade tree <br/>
+Added: Base health now on a upgrade tree Max health is the old starter health <br/>
+Added: New Fob type added as a small forward base Resupply/light units/infantry/gear <br/>
+Removed: SPG9_TKA from OPFOR as it was pulling Resistance prices <br/>
+Removed: Mastiff, Ridgeback, Wolfhound due to broken dmg states. <br/>
+Removed: Gear crates because they where spawning advance gear in them <br/>
+Removed: D30 from repair trucks<br/>
+
 "]];
