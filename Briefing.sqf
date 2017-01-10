@@ -176,7 +176,7 @@ Fixed: Money transfer display bug fixed<br/>
 Tweaked: View distance set for 3500<br/>
 Tweaked: BTR 90, LAV25 moved to Light Factory 4 <br/>
 Tweaked: Vodnik BPPU moved to Light Factory 3 <br/>
-Tweaked: Weapon sway changed to "none" "However, weapon sway at "NONE" still creates a reasonable amount of weapon sway.<br/>
+Tweaked: Weapon sway changed to none -However, weapon sway at NONE still creates a reasonable amount of weapon sway.<br/>
 Tweaked: AI crew has improved spotting<br/>
 Tweaked: Darter moved to gear 3 <br/>
 Tweaked: RPG-7 Scope's added to Gear 2/3 <br/>
