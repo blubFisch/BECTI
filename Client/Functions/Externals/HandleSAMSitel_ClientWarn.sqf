@@ -5,7 +5,7 @@
 */
 
 // --- Configuration ---
-_detectionMinAlt = 0.5;	// !!!! Should also be same as in HandleSAMSite.sqf
+_detectionMinAlt = 1000;	// !!!! Should also be same as in HandleSAMSite.sqf
 // ---------------------
 
 HandleSAMSite_ClientWarn_detectionAlt = _detectionMinAlt;
