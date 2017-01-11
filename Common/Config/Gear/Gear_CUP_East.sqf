@@ -327,6 +327,10 @@ _i pushBack "CUP_MakarovSD";
 _u pushBack 0;
 _p pushBack 100;
 
+_i pushBack "CUP_hgun_Makarov";
+_u pushBack 0;
+_p pushBack 100;
+
 //PB 6P9 Family
 
 _i pushBack "CUP_hgun_PB6P9";
@@ -656,11 +660,11 @@ _p pushBack 70;
 
 
 //---Caliber 9x21mm
-/* 
+
 _i pushBack "16Rnd_9x21_Mag";
 _u pushBack 0;
 _p pushBack 50;
- */
+
 _i pushBack "30Rnd_9x21_Mag";
 _u pushBack 0;
 _p pushBack 50;
@@ -1291,6 +1295,10 @@ _p pushBack 100;
 
 //--Uniforms
 
+_i pushBack "CUP_U_O_RUS_EMR_1_VDV";
+_u pushBack 0;
+_p pushBack 100;
+
 _i pushBack "CUP_U_O_SLA_Officer_Suit";
 _u pushBack 0;
 _p pushBack 100;
@@ -1373,6 +1381,10 @@ _i pushBack "CUP_V_O_TK_Vest_1";
 _u pushBack 1;
 _p pushBack 100;
 /* 
+_i pushBack "CUP_V_C_Police_Holster";
+_u pushBack 0;
+_p pushBack 100;
+
 _i pushBack "CUP_V_O_TK_CrewBelt";
 _u pushBack 1;
 _p pushBack 100;
@@ -1489,6 +1501,14 @@ _p pushBack 100;
 
 _i pushBack "CUP_B_RPGPack_Khaki";
 _u pushBack 1;
+_p pushBack 175;
+
+_i pushBack "B_AssaultPack_rgr";
+_u pushBack 0;
+_p pushBack 175;
+
+_i pushBack "B_FieldPack_oli";
+_u pushBack 0;
 _p pushBack 175;
 
 _i pushBack "CUP_B_RUS_Backpack";
@@ -1621,6 +1641,10 @@ _p pushBack 1000;
 _i pushBack "CUP_LRTV";
 _u pushBack 3;
 _p pushBack 1000;
+
+_i pushBack "CUP_H_RUS_6B27_NVG_olive";
+_u pushBack 1;
+_p pushBack 100;
 
 _i pushBack "CUP_Vector21Nite";
 _u pushBack 1;
