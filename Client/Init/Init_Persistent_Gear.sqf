@@ -1,21 +1,22 @@
 _templates = profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined];
-_templates = [];
 
 _side_gear = [];
 {
 	_side_gear = _side_gear + ((missionNamespace getVariable _x) call CTI_CO_FNC_ArrayToLower);
 } forEach ["cti_gear_list_primary","cti_gear_list_secondary","cti_gear_list_pistol","cti_gear_list_magazines","cti_gear_list_accessories","cti_gear_list_misc","cti_gear_list_special","cti_gear_list_uniforms","cti_gear_list_vests","cti_gear_list_backpacks","cti_gear_list_headgear","cti_gear_list_glasses","cti_gear_list_explosives"];
 
+_loadFailReason = "";
+
 //--- Attempt to load the "proper" templates
 _list = [];
 if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 	{
+		_flag_load = true;
 		// [_label, _picture, _cost, _x]
 		if (typeName _x == "ARRAY") then { //--- Each items are arrays >> [_label, _picture, _cost, _x, upgrade]
 			_gear = _x select 3;
 			if (typeName (_x select 0) == "STRING" && typeName (_x select 1) == "STRING" && typeName _gear == "ARRAY") then { //--- The label is a string, the picture is a string and the template is an array. Cost and upgrade are re-calculated at the end to prevent third party modification
 				if (count _gear == 4) then { //--- Make sure that we have the sections (weapons/container+mags/equipment/equipment2)
-					_flag_load = true;
 					
 					//--- #1 Now the party begin! first we check the weapons (primary/secondary/handgun)
 					_gear_sub = _gear select 0;
@@ -29,44 +30,45 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 									_magazine = (_x select 2) call CTI_CO_FNC_ArrayToLower;
 									
 									if (typeName _weapon == "STRING" && typeName _accessories == "ARRAY" && typeName _magazine == "ARRAY") then { //--- The data format is valid
-										if ((!isClass (configFile >> "CfgWeapons" >> _weapon) || !(_weapon in _side_gear)) && _weapon != "") exitWith {_flag_load = false}; //--- Abort if: the weapon is invalid or if it's not within the side's owned templates
-										if (!(getNumber(configFile >> "CfgWeapons" >> _weapon >> "type") in [CTI_TYPE_RIFLE,CTI_TYPE_PISTOL,CTI_TYPE_LAUNCHER,CTI_TYPE_RIFLE2H]) && _weapon != "") exitWith {_flag_load = false}; //--- Make sure that the weapon is a weapon
+										if ((!isClass (configFile >> "CfgWeapons" >> _weapon) || !(_weapon in _side_gear)) && _weapon != "") exitWith {_flag_load = false;_loadFailReason = "2"}; //--- Abort if: the weapon is invalid or if it's not within the side's owned templates
+										if (!(getNumber(configFile >> "CfgWeapons" >> _weapon >> "type") in [CTI_TYPE_RIFLE,CTI_TYPE_PISTOL,CTI_TYPE_LAUNCHER,CTI_TYPE_RIFLE2H]) && _weapon != "") exitWith {_flag_load = false;_loadFailReason = "3";}; //--- Make sure that the weapon is a weapon
 										
-										if !(count _accessories in [0,3]) exitWith {_flag_load = false}; //--- The data format is invalid for the accesories
+										if !(count _accessories in [0,4]) exitWith {_flag_load = false;_loadFailReason = "4";}; //--- The data format is invalid for the accesories
 										{
 											if (typeName _x == "STRING") then { //--- The accessory is a string
 												if (_x != "") then { //--- Empty accessories are skipped
-													if (!isClass (configFile >> "CfgWeapons" >> _x) || !(_x in _side_gear)) exitWith {_flag_load = false}; //--- The accessory ain't valid or it's not within the side's gear
-													if (getNumber(configFile >> "CfgWeapons" >> _x >> "type") != CTI_TYPE_ITEM) exitWith {_flag_load = false}; //--- The accessory is not a valid base class!
-													if !(getNumber(configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") in [CTI_SUBTYPE_ACC_MUZZLE,CTI_SUBTYPE_ACC_OPTIC,CTI_SUBTYPE_ACC_SIDE]) exitWith {_flag_load = false}; //--- The accessory is not a valid base class (we don't care bout the order)!
+													if (!isClass (configFile >> "CfgWeapons" >> _x) || !(_x in _side_gear)) exitWith {_flag_load = false;_loadFailReason = "5";}; //--- The accessory ain't valid or it's not within the side's gear
+													if (getNumber(configFile >> "CfgWeapons" >> _x >> "type") != CTI_TYPE_ITEM) exitWith {_flag_load = false;_loadFailReason = "6";}; //--- The accessory is not a valid base class!
+													if !(getNumber(configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") in [CTI_SUBTYPE_ACC_MUZZLE,CTI_SUBTYPE_ACC_OPTIC,CTI_SUBTYPE_ACC_SIDE]) exitWith {_flag_load = false;_loadFailReason = "8";}; //--- The accessory is not a valid base class (we don't care bout the order)!
 												};
 											};
 											if !(_flag_load) exitWith {};
 										} forEach _accessories;
 										if !(_flag_load) exitWith {}; //--- Something went wrong with the accessories
 										
-										if !(count _magazine in [0,1]) exitWith {_flag_load = false};
+										if !(count _magazine in [0,1]) exitWith {_flag_load = false;_loadFailReason = "9";};
 										if (count _magazine == 1) then { //--- Make sure that the magazine is valid
 											_magazine = _magazine select 0;
-											if (!isClass (configFile >> "CfgMagazines" >> _magazine) || !(_magazine in _side_gear)) exitWith {_flag_load = false};
+											if (!isClass (configFile >> "CfgMagazines" >> _magazine) || !(_magazine in _side_gear)) exitWith {_flag_load = false;_loadFailReason = "10";};
 										};
 										if !(_flag_load) exitWith {}; //--- Something went wrong with the magazine
 									} else {
-										_flag_load = false;
+										_flag_load = false; _loadFailReason = "12";
 									};
 								} else {
-									_flag_load = false;
+									_flag_load = false; _loadFailReason = "13";
 								};
 							} else {
-								_flag_load = false;
+								_flag_load = false; _loadFailReason = "14";
 							};
 							
 							if !(_flag_load) exitWith {}; //--- Something went wrong with the process
 						} forEach _gear_sub;
 					} else {
 						_flag_load = false;
+						_loadFailReason = "15";
 					};
-					
+
 					if (_flag_load) then {
 						//--- #2 then we check the containers (uniform/vest/backpack)
 						_gear_sub = _gear select 1;
@@ -83,13 +85,13 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 												if (_container != "") then { //--- If the container is empty, we don't bother any further
 													switch (true) do {
 														case (_forEachIndex in [0,1]): { //--- Uniform & vest
-															if (!isClass (configFile >> "CfgWeapons" >> _container) || !(_container in _side_gear)) exitWith {_flag_load = false}; //--- Abort if: the container is invalid or if it's not within the side's owned templates
-															if (getNumber(configFile >> "CfgWeapons" >> _container >> "type") != CTI_TYPE_ITEM) exitWith {_flag_load = false}; //--- The container is not a valid base class!
-															if !(getNumber(configFile >> "CfgWeapons" >> _container >> "ItemInfo" >> "type") in [CTI_SUBTYPE_UNIFORM,CTI_SUBTYPE_VEST]) exitWith {_flag_load = false}; //--- The container is not a valid uniform/vest
+															if (!isClass (configFile >> "CfgWeapons" >> _container) || !(_container in _side_gear)) exitWith {_flag_load = false;_loadFailReason = "16";}; //--- Abort if: the container is invalid or if it's not within the side's owned templates
+															if (getNumber(configFile >> "CfgWeapons" >> _container >> "type") != CTI_TYPE_ITEM) exitWith {_flag_load = false;_loadFailReason = "17";}; //--- The container is not a valid base class!
+															if !(getNumber(configFile >> "CfgWeapons" >> _container >> "ItemInfo" >> "type") in [CTI_SUBTYPE_UNIFORM,CTI_SUBTYPE_VEST]) exitWith {_flag_load = false;_loadFailReason = "17";}; //--- The container is not a valid uniform/vest
 														};
 														case (_forEachIndex == 2): { //--- Backpack
-															if (!isClass (configFile >> "CfgVehicles" >> _container) || !(_container in _side_gear)) exitWith {_flag_load = false}; //--- Abort if: the container is invalid or if it's not within the side's owned templates
-															if (getNumber(configFile >> "CfgVehicles" >> _container >> "isbackpack") != 1) exitWith {_flag_load = false}; //--- The container is not a valid backpack
+															if (!isClass (configFile >> "CfgVehicles" >> _container) || !(_container in _side_gear)) exitWith {_flag_load = false;_loadFailReason = "18 -> " + str _container;}; //--- Abort if: the container is invalid or if it's not within the side's owned templates
+															if (getNumber(configFile >> "CfgVehicles" >> _container >> "isbackpack") != 1) exitWith {_flag_load = false;_loadFailReason = "19";}; //--- The container is not a valid backpack
 														};
 													};
 													
@@ -97,7 +99,7 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 													
 													//--- We check the items sanity now
 													{
-														if (typeName _x != "STRING") exitWith {_flag_load = false};
+														if (typeName _x != "STRING") exitWith {_flag_load = false;_loadFailReason = "19";};
 														_config_type = switch (true) do { //--- Determine the kind of item that we're dealing with
 															case (isClass (configFile >> "CfgWeapons" >> _x)): {"CfgWeapons"};
 															case (isClass (configFile >> "CfgMagazines" >> _x)): {"CfgMagazines"};
@@ -106,26 +108,26 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 															default {"nil"};
 														};
 														
-														if (_config_type == "nil") exitWith {_flag_load = false};
+														if (_config_type == "nil") exitWith {_flag_load = false;_loadFailReason = "20";};
 													} forEach _items;
 												};
 												
 												if !(_flag_load) exitWith {};
 											} else {
-												_flag_load = false;
+												_flag_load = false;_loadFailReason = "21";
 											};
 										} else {
-											_flag_load = false;
+											_flag_load = false;_loadFailReason = "22";
 										};
 									} else {
-										_flag_load = false;
+										_flag_load = false;_loadFailReason = "23";
 									};
 								} forEach _gear_sub;
 							} else {
-								_flag_load = false;
+								_flag_load = false;_loadFailReason = "24";
 							};
 						}  else {
-							_flag_load = false;
+							_flag_load = false;_loadFailReason = "25";
 						};
 					};
 					
@@ -208,6 +210,13 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 						};
 					};
 				};
+			};
+		};
+		
+		if (!_flag_load) then {
+			diag_log ("Init_Persistent_Gear");
+			if (CTI_Log_Level >= CTI_Log_Information) then {
+				["INFORMATION", "FILE: Client\Init\Init_Persistent_Gear.sqf", format["A gear template could not be loaded, Info: [%1]", _loadFailReason]] call CTI_CO_FNC_Log;
 			};
 		};
 	} forEach _templates;
