@@ -39,7 +39,7 @@ player addAction ["<t color='#c7a5ff'>SKILL: Repair</t>", "Client\Actions\Action
 
 // Attach Charge Action
 if (isNil "EtVInitialized") then {
-	execVM "Client\Actions\Action_Attach_charge.sqf";
+	//execVM "Client\Actions\Action_Attach_charge.sqf";	// commented out by blub because invalid path, this is also apparently already being loaded somewhere else .. -.-  - 
 	waitUntil {!isNil "EtVInitialized"};
 };
 [player] call EtV_Actions;
