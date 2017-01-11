@@ -1526,11 +1526,11 @@ _p pushBack 100;
 _i pushBack "CUP_U_B_USMC_MARPAT_WDL_RollUpKneepad";
 _u pushBack 0;
 _p pushBack 100;
-/* 
+
 _i pushBack "CUP_U_B_USMC_MARPAT_WDL_RolledUp";
 _u pushBack 0;
 _p pushBack 100;
- */
+
 _i pushBack "CUP_U_B_USMC_MARPAT_WDL_Kneepad";
 _u pushBack 0;
 _p pushBack 100;
@@ -1613,6 +1613,10 @@ _u pushBack 0;
 _p pushBack 100;
  */
 //--Vests
+
+_i pushBack "CUP_V_C_Police_Holster";
+_u pushBack 0;
+_p pushBack 100;
 
 _i pushBack "CUP_V_B_GER_Carrier_Vest";
 _u pushBack 3;
@@ -1737,6 +1741,10 @@ _p pushBack 100;
 
 //--Packs
 
+
+_i pushBack "B_AssaultPack_rgr";
+_u pushBack 0;
+_p pushBack 100;
 
 _i pushBack "CUP_B_CivPack_WDL";
 _u pushBack 3;
