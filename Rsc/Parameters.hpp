@@ -210,7 +210,7 @@ class Params {
 		default = 1500;
 	};
 	class CTI_RESPAWN_LARGE_FOB_RANGE {
-		title = "RESPAWN: FOB Range";
+		title = "RESPAWN: Large FOB Range";
 		values[] = {500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000};
 		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM","2.25 KM","2.5 KM","2.75 KM","3 KM"};
 		default = 2500;
