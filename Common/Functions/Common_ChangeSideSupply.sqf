@@ -48,7 +48,7 @@ if (_value > 0) then {
 	if (_supply <= _supply_limit) then {
 		_logic setVariable ["cti_supply", _supply + _value, true];
 	} else {
-		[_side, _supply_limit] remoteExec ["CTI_PVF_CLT_SupplyMaxReached", CTI_PV_CLIENTS];
+		[_supply_limit] remoteExec ["CTI_PVF_CLT_SupplyMaxReached", _side];
 	};
 } else {
 	if ((_supply + _value) < 0) then {
