@@ -3,13 +3,13 @@ class Params {
 		title = "FACTION: West Forces";
 		values[] = {0,1,2};
 		texts[] = {"NATO Arid","NATO Tropic","NATO Winter"};
-		default = 0;
+		default = 2;
 	};
 	class CTI_FACTION_EAST {
 		title = "FACTION: East Forces";
 		values[] = {0,1,2};
 		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
-		default = 0;
+		default = 2;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
@@ -129,19 +129,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter"};
-		default = 6;
+		default = 8;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter"};
-		default = 2;
+		default = 4;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter"};
-		default = 2;
+		default = 4;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -339,7 +339,7 @@ class Params {
 	title = "GAMEPLAY: Darter Range limitation";
 	values[] = {0,500,1000,2000,4000,6000,8000};
 	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+	default = 4000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";
@@ -381,7 +381,7 @@ class Params {
 		title = "WEATHER: Inital Time";
 		values[] = {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		texts[] = {"12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Random"};
-		default = 0;
+		default = 9;
 	};
 	class CTI_WEATHER_RAIN {
 		title = "WEATHER: Rain (Rain Requires Overcast Greater High)";
@@ -393,7 +393,7 @@ class Params {
 		title = "WEATHER: Snow Storms";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Clear","Light","Medium","High","Max"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_WEATHER_SAND {
 		title = "WEATHER: Sand Storms";
@@ -405,13 +405,13 @@ class Params {
 		title = "WEATHER: Overcast";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
-		default = -1;
+		default = 100;
 	};
 	class CTI_WEATHER_FOG {
 		title = "WEATHER: Fog";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
-		default = -1;
+		default = 100;
 	};
 	class CTI_WEATHER_WIND {
 		title = "WEATHER: Wind";
@@ -423,7 +423,7 @@ class Params {
 		title = "WEATHER: Waves";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
-		default = -1;
+		default = 100;
 	};
   	class CTI_WEATHER_FAST {
 		title = "WEATHER: Day Duration";

@@ -3,13 +3,13 @@ class Params {
 		title = "FACTION: West Forces";
 		values[] = {0,1,2};
 		texts[] = {"NATO Arid","NATO Tropic","NATO Winter"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_FACTION_EAST {
 		title = "FACTION: East Forces";
 		values[] = {0,1,2};
 		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
-		default = 0;
+		default = 1;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
@@ -339,7 +339,7 @@ class Params {
 	title = "GAMEPLAY: Darter Range limitation";
 	values[] = {0,500,1000,2000,4000,6000,8000};
 	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+	default = 4000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";

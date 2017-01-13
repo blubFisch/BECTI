@@ -129,19 +129,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter"};
-		default = 6;
+		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -339,7 +339,7 @@ class Params {
 	title = "GAMEPLAY: Darter Range limitation";
 	values[] = {0,500,1000,2000,4000,6000,8000};
 	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+	default = 4000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";
@@ -399,7 +399,7 @@ class Params {
 		title = "WEATHER: Sand Storms";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Clear","Light","Medium","High","Max"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_WEATHER_OVERCAST {
 		title = "WEATHER: Overcast";
@@ -417,7 +417,7 @@ class Params {
 		title = "WEATHER: Wind";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
-		default = -1;
+		default = 50;
 	};
 	class CTI_WEATHER_WAVES {
 		title = "WEATHER: Waves";
