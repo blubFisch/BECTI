@@ -21,11 +21,18 @@ if (CTI_WEATHER_SNOW > 0) then {
 	_wind_setting = 0.8;
 	_waves_setting = 90;
 };
-if (CTI_WEATHER_SAND > 0) then { 
+if (CTI_WEATHER_DUST > 0) then { 
 	_rain_setting = 0;
 	_overcast_setting = 0;
 	_fog_setting = 0;
 	_wind_setting = 0.8;
+	_waves_setting = 90;
+};
+if (CTI_WEATHER_MONSOON > 0) then { 
+	_rain_setting = 1;
+	_overcast_setting = 1;
+	_fog_setting = 0;
+	_wind_setting = 0.9;
 	_waves_setting = 90;
 };
 
@@ -59,7 +66,7 @@ while {!CTI_GameOver} do {
 		_nexttime setWindStr _wind_setting;
 		//_nexttime setWindDir random 360;
 	}
-}
+};
 
 /* OLD SCRIPT FOR REF
 #define MAXFOG 0.3

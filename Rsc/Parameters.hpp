@@ -210,7 +210,7 @@ class Params {
 		default = 1500;
 	};
 	class CTI_RESPAWN_LARGE_FOB_RANGE {
-		title = "RESPAWN: FOB Range";
+		title = "RESPAWN: Large FOB Range";
 		values[] = {500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000};
 		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM","2.25 KM","2.5 KM","2.75 KM","3 KM"};
 		default = 2500;
@@ -395,10 +395,16 @@ class Params {
 		texts[] = {"Clear","Light","Medium","High","Max"};
 		default = 0;
 	};
-	class CTI_WEATHER_SAND {
-		title = "WEATHER: Sand Storms";
+	class CTI_WEATHER_DUST {
+		title = "WEATHER: Dust Storms";
 		values[] = {0,1,2,3,4};
-		texts[] = {"Clear","Light","Medium","High","Max"};
+		texts[] = {"Clear","Light","Medium - Adds Wall of Dust","High - Adds Effect on Objects","Max - Adds Lethal Wall"};
+		default = 0;
+	};
+	class CTI_WEATHER_MONSOON {
+		title = "WEATHER: Monsoon Storms";
+		values[] = {0,1,2};
+		texts[] = {"Clear","No Damage","Damage Objects"};
 		default = 0;
 	};
 	class CTI_WEATHER_OVERCAST {
