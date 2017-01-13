@@ -265,6 +265,10 @@ if (CTI_ZOMBIE_MODE == 0) then {
 	};
 };
 
+//--- The server is initialized, notify everyone
+CTI_InitServer = true;
+publicVariable "CTI_InitServer";
+
 // Zeus admin for players
 if !( isNil "ADMIN_ZEUS") then {
 	0 spawn {
