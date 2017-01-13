@@ -57,7 +57,7 @@ if (isMultiplayer && CTI_IsServer) then {
 	// onPlayerConnected {[_uid, _name, _id] spawn CTI_SE_FNC_OnPlayerConnected};
 	// onPlayerDisconnected {[_uid, _name, _id] call CTI_SE_FNC_OnPlayerDisconnected};
 	addMissionEventHandler ["HandleDisconnect",{_this spawn CTI_SE_FNC_OnPlayerDisconnected}];
-	["CTI_Join", "onPlayerConnected", {[_uid, _name, _id] spawn CTI_SE_FNC_OnPlayerConnected}] call BIS_fnc_addStackedEventHandler;
+	["CTI_Join", "onPlayerConnected", {[_uid, _name, _id, _jip, _owner] spawn CTI_SE_FNC_OnPlayerConnected}] call BIS_fnc_addStackedEventHandler;
 };
 
 //--- JIP Part is over
@@ -191,64 +191,89 @@ if ( !isNull _displayscorehud ) then {
 };
 
 ///Snow and Sand Weather
-/*
-null = [direction_storm,duration_storm,effect_on_objects,ambient_sounds_al,breath_vapors] execvm "AL_snowstorm\al_snow.sqf";
-direction_storm		- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_storm		- integer, life time of the SNOW STORM expressed in seconds//hardset to fulltime
-effect_on_objects	- boolean, if is true occasionally a random object will be thrown in the air
-ambient_sounds_al	- seconds/number, a random number will be generated based on your input value and used to set the frequency for played ambient sounds
-					- also determines interval at which snow gusts are generated
-					- i recommend a value of 120 or higher
-breath_vapors		- boolean, if true you will see breath vapors for all units, however if you have many units in your mission you should set this false to diminish the impact on frames
-*/
-if (CTI_WEATHER_SNOW > 0) then { 	
+if (CTI_WEATHER_SNOW > 0) then { 		
+    MKY_arSnowEFX = [];
+	// snow - [[fog data],int Overcast,ppEfx,allow rain, vary fog, use audio]
 	if (CTI_WEATHER_SNOW == 1) then { 
-		null = [80,0,false,450,false] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
+		MKY_arSnowEFX = [[0.23,0.020,100],1,true,false,true,true];
 	};
 	if (CTI_WEATHER_SNOW == 2) then { 
-		null = [80,0,false,300,false] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
+		MKY_arSnowEFX = [[0.35,0.015,200],1,true,false,true,true];
 	};
 	if (CTI_WEATHER_SNOW == 3) then { 
-		null = [80,0,true,150,true] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
+		MKY_arSnowEFX = [[0.50,0.010,300],1,true,false,true,true];
 	};
 	if (CTI_WEATHER_SNOW == 4) then { 
-		null = [80,0,true,100,true] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
+		MKY_arSnowEFX = [[0.75,0.005,400],1,true,false,false,true];
+	};
+	
+	// suggested to disable environment so butterflies and snakes aren't seen during snow lol
+	[] spawn {enableEnvironment false;};
+	// handle JIP with this
+	if (!isServer && isNull player) then {
+		waitUntil {sleep 1;!(isNull player)};
+		JIP_varSnowData = [player];
+		publicVariableServer "JIP_varSnowData";
+	};
+	// wait for snow data to exist before starting snow
+	if (hasInterface) then {
+		0 = [] spawn {
+			// wait for variable to exist
+			waitUntil {sleep 5;!(isNil "varEnableSnow")};
+			0 = MKY_arSnowEFX execVM "Client\Functions\Externals\MKY_Snow_Client.sqf";
+		};
+	};
+	// when the rest of mission is ready, start the snow server script
+	if (isServer) then {
+		if (CTI_WEATHER_SNOW == 1) then { 
+			nul = [1,false] execVM "Server\Functions\Externals\MKY_Snow_Server.sqf";
+		};
+		if (CTI_WEATHER_SNOW == 2) then { 
+			nul = [2,false] execVM "Server\Functions\Externals\MKY_Snow_Server.sqf";
+		};
+		if (CTI_WEATHER_SNOW == 3) then { 
+			nul = [3,false] execVM "Server\Functions\Externals\MKY_Snow_Server.sqf";
+		};
+		if (CTI_WEATHER_SNOW == 4) then { 
+			nul = [3,false] execVM "Server\Functions\Externals\MKY_Snow_Server.sqf";
+		};
 	};
 };
-/*
-null = [direction_duststorm, duration_duststorm, effect_on_objects, wall_of_dust, lethal_wall] execvm "AL_dust_storm\al_duststorm.sqf";
-direction_duststorm	- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_duststorm	- integer, life time of the duststorm expressed in seconds
-effect_on_objects	- boolean, if is true occasionally a random object near playable units will be thrown in the air
-wall_of_dust		- boolean, if true a wall of dust is created, make it false if mission is too laggy with this option
-lethal_wall			- boolean, if true the wall of dust becomes destructive, it may generate severe frame drops so use it with care !!!
-*/
-if (CTI_WEATHER_DUST > 0) then { 
-	if (CTI_WEATHER_DUST == 1) then { 
-		null = [340,0,false,false,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
+if (CTI_WEATHER_SAND > 0) then { 
+	MKY_arSandEFX = [];				
+	//sand - [fog,overcast,use ppEfx,allow rain,force wind,vary fog,use wind audio,EFX strength]
+	if (CTI_WEATHER_SAND == 1) then { 
+		MKY_arSandEFX = [[0.10,0.020,100],"",true,false,true,true,true,1];
 	};
-	if (CTI_WEATHER_DUST == 2) then { 
-		null = [340,0,false,false,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
+	if (CTI_WEATHER_SAND == 2) then { 
+		MKY_arSandEFX = [[0.30,0.015,200],"",true,false,true,true,true,2];
 	};
-	if (CTI_WEATHER_DUST == 3) then { 
-		null = [340,0,true,true,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
+	if (CTI_WEATHER_SAND == 3) then { 
+		MKY_arSandEFX = [[0.50,0.010,300],"",true,false,true,true,true,3];
 	};
-	if (CTI_WEATHER_DUST == 4) then { 
-		null = [340,0,true,true,true] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
+	if (CTI_WEATHER_SAND == 4) then { 
+		MKY_arSandEFX = [[0.75,0.005,400],"",true,false,true,true,true,3];
 	};
-};
-/*
-null = [direction_monsoon, duration_monsoon, effect_on_objects] execvm "AL_monsoon\al_monsoon.sqf";
-direction_monsoon	- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_monsoon	- integer, life time of the monsoon expressed in seconds
-effect_on_objects	- boolean, if is true occasionally a random object will be thrown in the air
-*/
-if (CTI_WEATHER_MONSOON > 0) then { 
-	if (CTI_WEATHER_MONSOON == 1) then { 
-		null = [100,0,false] execvm "Common\Functions\External\AL_monsoon\al_monsoon.sqf";
+	
+	// suggested to disable environment so butterflies and snakes aren't seen during snow lol
+	[] spawn {enableEnvironment false;};
+	// handle JIP with this
+	if (!isServer && isNull player) then {
+		waitUntil {sleep 1;!(isNull player)};
+		JIP_varSandData = [player];
+		publicVariableServer "JIP_varSandData";
 	};
-	if (CTI_WEATHER_MONSOON == 2) then { 
-		null = [100,0,true] execvm "Common\Functions\External\AL_monsoon\al_monsoon.sqf";
+	// wait for snow data to exist before starting snow
+	if (hasInterface) then {
+		0 = [] spawn {
+			// wait for variable to exist
+			waitUntil {sleep 5;!(isNil "varEnableSand")};
+			0 = MKY_arSandEFX execVM "Client\Functions\Externals\MKY_Sand_Client.sqf";
+		};
+	};
+	// when the rest of mission is ready, start the snow server script
+	if (isServer) then {
+		nul = [] execVM "Server\Functions\Externals\MKY_Sand_Server.sqf";
 	};
 };
 //Radio

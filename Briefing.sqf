@@ -29,9 +29,9 @@ player createDiaryRecord ["menu1",
 - Overall malicious behaviour (such as harassing other players) will not be tolerated.<br/>
 - Exploit-No firing from Slingloaded units (ghetto Attack helis) All AI must be set HOLD FIRE(Dont try to circumvent).<br/>
 - No Kamikaze aircraft.<br/>
-- No hiding of base structures inside indestructible Map buildings or buildings that don't have room for the structure (if you don't know don't do it).<br/>
+- No hiding of base structures inside indestructible Map buildings &/or buildings that don't have room for the structure (if you don't know don't do it).<br/>
 - Commander is forbidden from retaliation selling/Ending the game before being voted out of command.<br/>
-- If it seems like cheating or unfair play ask BEFORE (if no admin is available DONT do it).<br/>
+- If it seems like cheating or unfair play ask BEFORE (if no admin is available DONT do it).<br/><br/>
 "]];
 
 player createDiarySubject ["menu2","Controls"];
