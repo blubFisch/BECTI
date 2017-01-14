@@ -395,10 +395,16 @@ class Params {
 		texts[] = {"Clear","Light","Medium","High","Max"};
 		default = 1;
 	};
-	class CTI_WEATHER_SAND {
-		title = "WEATHER: Sand Storms";
+	class CTI_WEATHER_DUST {
+		title = "WEATHER: Dust Storms";
 		values[] = {0,1,2,3,4};
-		texts[] = {"Clear","Light","Medium","High","Max"};
+		texts[] = {"Clear","Light","Medium - Adds Wall of Dust","High - Adds Effect on Objects","Max - Adds Lethal Wall"};
+		default = 0;
+	};
+	class CTI_WEATHER_MONSOON {
+		title = "WEATHER: Monsoon Storms";
+		values[] = {0,1,2};
+		texts[] = {"Clear","No Damage","Damage Objects"};
 		default = 0;
 	};
 	class CTI_WEATHER_OVERCAST {
