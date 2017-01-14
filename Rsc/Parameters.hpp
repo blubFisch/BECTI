@@ -336,10 +336,10 @@ class Params {
 		default = 0;
 	};
 	class CTI_GAMEPLAY_DARTER {
-	title = "GAMEPLAY: Darter Range limitation";
-	values[] = {0,500,1000,2000,4000,6000,8000};
-	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+		title = "GAMEPLAY: Darter Range limitation";
+		values[] = {0,500,1000,2000,4000,6000,8000};
+		texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
+		default = 2000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";
