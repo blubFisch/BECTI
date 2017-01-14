@@ -16,8 +16,7 @@ with missionNamespace do {
 	
 	//--- The client receives supply max warning
 	CTI_PVF_CLT_SupplyMaxReached = {
-		_side = _this select 0;
-		_supplymax = _this select 1;
+		_supplymax = _this select 0;
 		if (call CTI_CL_FNC_IsPlayerCommander) then {
 			hint parseText format["<t size='1.3' color='#2394ef'>Information</t><br /><br />Max supply reached <t color='#F5D363'>(%1)</t>, build more supply depots.", _supplymax];
 		};

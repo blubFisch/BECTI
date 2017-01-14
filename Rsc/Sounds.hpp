@@ -62,17 +62,16 @@ class CfgSounds {
 		sound[] = {"Common\Functions\External\nuclear\script\geiger_3.ogg", db+0, 1.0};
 		titles[] = {};
 	};
-  class akbar
-  {
-    name = "akbar";
-    sound[] = {"Common\Functions\External\nuclear\script\akbar.ogg", db+1, 1.0};
-	titles[] = {""};
-  };
- class choppa {
+	class akbar
+	{
+		name = "akbar";
+		sound[] = {"Common\Functions\External\nuclear\script\akbar.ogg", db+1, 1.0};
+		titles[] = {""};
+	};
+	class choppa {
 		name = "choppa";
 		sound[] = {"Rsc\Sounds\choppa.ogg", 1, 1.0};
-		titles[] = {};
-			
+		titles[] = {};	
 	};
 	class incoming {
 		name = "incoming";
@@ -126,6 +125,7 @@ class CfgSounds {
 	};
 	//weather scripts
 	//now in ofps pack
+	//snow
 	/*class bcg_wind
 	{
 		name = "bcg_wind";
@@ -332,3 +332,4 @@ class CfgSounds {
 		titles[] = {1, ""};
 	};*/	
 };
+
