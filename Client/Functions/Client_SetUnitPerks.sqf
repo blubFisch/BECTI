@@ -6,6 +6,7 @@ _info3 = 0;
 _info4 = 0;
 _info5 = 0;
 _info6 = 0;
+_info7 = 0;
 _playerai = 3;
 
 while {! CTI_GameOver} do {
@@ -61,7 +62,7 @@ while {! CTI_GameOver} do {
 		case (_rank == "COLONEL") : { 
 			_playerai = 10;
 			player setUnitTrait ["camouflageCoef",0.9];
-			//player setUnitTrait ["audibleCoef",0.9];
+			player setUnitTrait ["audibleCoef",0.9];
 			if (_info7 == 0) then {
 				["rank-up", [name player ,_rank, "stealth and camouflage", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info7 = 1;
