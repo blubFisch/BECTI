@@ -197,13 +197,16 @@ if (typeName _templates == "ARRAY") then { //--- The variable itself is an array
 							};
 							
 							if (_flag_load) then {
-								//todo, get cost & upgrade
 								_flat = (_x select 3) call CTI_CO_FNC_ConvertGearToFlat;
 								_cost = 0;
+								_upgrade_max = 0;
 								{
-									_cost = _cost + (_x call CTI_CO_FNC_GetGearItemCost);
+									_cost = _cost + (_x call CTI_CO_FNC_GetGearItemCost); //--- Retrieve the item current cost
+									_upgrade = ((missionNamespace getVariable [format["cti_%1", _item], [[0, 0]]]) select 0) select 0; //--- Retrieve the item current upgrade level
+									if (_upgrade > _upgrade_max) then {_upgrade_max = _upgrade}; //--- We retrieve the highest upgrade level needed for the template
 								} forEach _flat;
 								_x set [2, _cost];
+								_x set [4, _upgrade_max];
 								
 								_list pushBack _x;
 							};
