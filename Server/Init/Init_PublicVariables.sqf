@@ -227,6 +227,9 @@ with missionNamespace do {
 				//--- Format is [UID, Funds, Original side, Last Joined side, Last known loadout]
 				missionNamespace setVariable [format["CTI_SERVER_CLIENT_%1", _uid], [_uid, 0, _side, _side, []]];
 				
+				//--- If the player joins for the first time then we initialize his funds with the default values
+				_team setVariable ["cti_funds", missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_FUNDS_%1", _side], true];
+				
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were stored for the first time", _name, _uid]] call CTI_CO_FNC_Log};
 			} else {
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were not initially stored since he is not allowed to join", _name, _uid]] call CTI_CO_FNC_Log};
@@ -292,10 +295,13 @@ with missionNamespace do {
 				};
 				
 				//--- Make sure that the player didn't teamswap.
-				if (_side_origin != _side || isNil '_funds') then { _funds = missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_FUNDS_%1", _side] };
+				if (_side_origin != _side || isNil '_funds') then { 
+					_funds = missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_FUNDS_%1", _side];
+					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] funds are now using the default value [%3] since he either swaped or had no funds", _name, _uid, _funds]] call CTI_CO_FNC_Log};
+				};
 				
 				_team setVariable ["cti_funds", _funds, true];
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Joined side is [%3], Teamswap? [%4]", _name, _uid, _side, (_side_origin != _side)]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Current side is [%3] and funds are [%4], Teamswap? [%5]", _name, _uid, _side, _funds, (_side_origin != _side)]] call CTI_CO_FNC_Log};
 			} else {
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were not stored since he is not allowed to join", _name, _uid]] call CTI_CO_FNC_Log};
 			};
