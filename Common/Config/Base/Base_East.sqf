@@ -639,7 +639,7 @@ _specials = [];
 	if (CTI_CUP_ADDON > 0) then {
 
 		_headers pushBack 		"ZU-23";
-		_classes pushBack 		"CUP_O_ZU23_CDF";
+		_classes pushBack 		"CUP_B_ZU23_CDF";
 		_prices pushBack 		4000;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
