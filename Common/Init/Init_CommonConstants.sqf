@@ -612,7 +612,9 @@ CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied 
 CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2500; //--- Determine the range needed to respawn at a town's camps (from the town center)
 CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2500; //--- Determine the range needed to respawn at a town's camps (from a camp)
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable a camp's respawn if enemies are around it
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
+CTI_RESPAWN_MOBILE_SAFE_RANGE = 30; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_RANGE = 500;
 
 CTI_SATCAM_ZOOM_MIN = 50;
