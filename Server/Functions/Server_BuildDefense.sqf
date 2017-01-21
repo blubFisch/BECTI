@@ -139,7 +139,7 @@ if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
 		(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 	};
 	
-	if (typeOf(_defense) find "POOK_ANMPQ53" == 0 || typeOf(_defense) find "pook_SNR75_radar" == 0 || typeOf(_defense) find "pook_MIM104_PAC2" == 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery" == 0) then {
+	if (typeOf(_defense) find "POOK_ANMPQ53" == 0 || typeOf(_defense) find "pook_SNR75_radar" == 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery" == 0 || typeOf(_defense) find "pook_SA20_static_INS" == 0) then {
 		_defense setVehicleLock "LOCKED";
 	}
 };

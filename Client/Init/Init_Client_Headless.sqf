@@ -83,7 +83,7 @@ with missionNamespace do {
 		// TODO: proper/extensible vehicle switch
 		
 		//--- Configure the weapon / gunner
-		if (typeOf(_static) find "POOK_ANMPQ53" == 0 || typeOf(_static) find "pook_SNR75_radar" == 0 || typeOf(_static) find "pook_MIM104_PAC2" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery" == 0) then {
+		if (typeOf(_static) find "POOK_ANMPQ53" == 0 || typeOf(_static) find "pook_SNR75_radar" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery" == 0 || typeOf(_static) find "pook_SA20_static_INS" == 0) then {
 			_ai disableAI "AUTOTARGET";
 			_ai disableAI "TARGET";
 		} else {
