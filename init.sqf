@@ -1,7 +1,3 @@
-//--- Initial View Distance and Object View Distance for both clients and server
-setViewDistance 1000;
-setObjectViewDistance 1000;
-
 //--- Early definition, will be override later on in the init files.
 CTI_P_SideJoined = civilian;
 
