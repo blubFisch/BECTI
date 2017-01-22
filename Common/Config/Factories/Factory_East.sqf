@@ -631,7 +631,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_2S6M_RU';	
 	_u pushBack 'CUP_B_T72_CZ';		
 	_u pushBack 'CUP_O_BM21_RU';
-	_u pushBack 'CUP_O_T90_RU';
+//	_u pushBack 'CUP_O_T90_RU';
 /* 
 	_u pushBack 'CUP_O_BMP1_CSAT';
 	_u pushBack 'CUP_O_BMP2_CSAT';
