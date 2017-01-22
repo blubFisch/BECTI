@@ -83,7 +83,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
-	4, //--- Gear
+	3, //--- Gear
 	3, //--- Barracks
 	5, //--- Light
 	0, //--- Heavy
