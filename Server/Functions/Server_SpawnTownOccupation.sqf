@@ -287,9 +287,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC1", 2, 30]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 50]
 						]
 						];
 					};
@@ -316,9 +313,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20]
 						]
 						];
 					};
@@ -345,10 +339,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
@@ -375,10 +365,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
@@ -405,10 +391,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
