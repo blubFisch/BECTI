@@ -637,30 +637,86 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_tigr_msv';
-_u pushBack 'rhs_tigr_m_msv';
-_u pushBack 'rhs_gaz66_msv';
-_u pushBack 'rhs_kamaz5350_msv';
-_u pushBack 'rhs_tigr_m_3camo_msv';
-_u pushBack 'rhs_tigr_3camo_msv';
-_u pushBack 'RHS_UAZ_MSV_01';
-_u pushBack 'rhs_uaz_open_MSV_01';
-_u pushBack 'rhsgref_BRDM2_HQ_msv';
-_u pushBack 'rhsgref_ins_uaz_dshkm';
-_u pushBack 'rhsgref_ins_uaz_ags';
-_u pushBack 'rhs_tigr_sts_msv';
-_u pushBack 'rhsgref_BRDM2_msv';
-_u pushBack 'rhs_gaz66_ap2_msv';
-_u pushBack 'rhs_tigr_sts_3camo_msv';
-_u pushBack 'rhs_btr60_msv';
-_u pushBack 'rhs_btr70_msv';
-_u pushBack 'rhs_btr80_msv';
-_u pushBack 'rhs_gaz66_zu23_msv';
-_u pushBack 'rhsgref_BRDM2_ATGM_msv';
-_u pushBack 'rhs_btr80a_msv';
-_u pushBack 'RHS_BM21_MSV_01';
-_u pushBack 'rhs_9k79';
-_u pushBack 'rhs_9k79_K';
+_u pushBack 'rhsusf_mrzr4_d';
+_u pushBack 'rhsusf_m998_w_2dr';
+_u pushBack 'rhsusf_m1025_w';
+_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_rg33_usmc_d';
+_u pushBack 'rhsusf_rg33_usmc_wd';
+_u pushBack 'rhsusf_m1025_d';
+_u pushBack 'rhsusf_m1025_w_m2';
+_u pushBack 'rhsusf_m1025_w_mk19';
+_u pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_rg33_m2_usmc_d';
+_u pushBack 'rhsusf_M1232_M2_usarmy_d';
+_u pushBack 'rhsusf_M1232_MK19_usarmy_d';
+_u pushBack 'rhsusf_rg33_m2_usmc_wd';
+_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
+_u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
+_u pushBack 'rhsusf_m998_d_2dr_fulltop';
+_u pushBack 'rhsusf_m1025_d_Mk19';
+_u pushBack 'rhsusf_m998_d_2dr_fulltop';
+_u pushBack 'rhsusf_m998_d_4dr_fulltop';
+_u pushBack 'rhsusf_m998_d_4dr_halftop';
+_u pushBack 'rhsusf_m998_d_4dr';
+_u pushBack 'rhsusf_M1083A1P2_B_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_d_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1232_usarmy_d';
+_u pushBack 'rhsusf_M1078A1P2_d_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_d_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_d_open_fmtv_usarmy';
+_u pushBack 'rhsusf_m998_w_4dr_halftop';
+_u pushBack 'rhsusf_m998_w_4dr_fulltop';
+_u pushBack 'rhsusf_m998_w_4dr';
+_u pushBack 'rhsusf_M1078A1P2_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_m1025_d_s_m2';
+_u pushBack 'rhsusf_m1025_d_s_Mk19';
+_u pushBack 'rhsusf_m1025_d_s';
+_u pushBack 'rhsusf_m998_d_s_2dr_halftop';
+_u pushBack 'rhsusf_m998_d_s_2dr';
+_u pushBack 'rhsusf_m998_d_s_2dr_fulltop';
+_u pushBack 'rhsusf_m998_d_s_4dr_halftop';
+_u pushBack 'rhsusf_m998_d_s_4dr';
+_u pushBack 'rhsusf_m998_d_s_4dr_fulltop';
+_u pushBack 'rhsusf_rg33_usmc_d';
+_u pushBack 'rhsusf_M1237_M2_usarmy_d';
+_u pushBack 'rhsusf_M1237_M2_usarmy_wd';
+_u pushBack 'rhsusf_M1237_MK19_usarmy_wd';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_d_MHQ_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1232_MK19_usarmy_d';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_M2_d_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_M2_d_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1078A1P2_B_M2_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_wd_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_wd_flatbed_fmtv_usarmy';
+_u pushBack 'rhsusf_M1083A1P2_B_M2_wd_open_fmtv_usarmy';
+_u pushBack 'rhsusf_M1117_W';
+_u pushBack 'rhsusf_M1117_O';
+_u pushBack 'rhsusf_M1117_D';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
@@ -830,29 +886,21 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_bmp1_msv'; 
-_u pushBack 'rhs_bmd1'; 
-_u pushBack 'rhs_pts_vmf'; 
-_u pushBack 'rhs_prp3_msv'; 
-_u pushBack 'rhs_bmp1p_msv'; 
-_u pushBack 'rhs_bmd2'; 
-_u pushBack 'rhs_bmd1r'; 
-_u pushBack 'rhs_zsu234_aa'; 
-_u pushBack 'rh_bmp2e_msv'; 
-_u pushBack 'rhs_bmp2d_msv'; 
-_u pushBack 'rhs_Obj_681_2'; 
-_u pushBack 'rhs_t72ba_tv'; 
-_u pushBack 'rhs_sprut_vdv'; 
-_u pushBack 'rhs_bmp3_msv'; 
-_u pushBack 'rhs_bmd2m'; 
-_u pushBack 'rhs_brm1k_msv'; 
-_u pushBack 'rhs_t80bv'; 
-_u pushBack 'rhs_bmd4_vdv'; 
-_u pushBack 'rhs_t80um'; 
-_u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t90a_tv'; 
-_u pushBack 'rhs_bmp3mera_msv'; 
-_u pushBack 'rhs_bmd4ma_vdv'; 
+_u pushBack 'RHS_M2A2';
+_u pushBack 'RHSUSF_M113D_USARMY';
+_u pushBack 'RHS_M2A2_BUSKI';
+_u pushBack 'RHSUSF_M113D_USARMY_MK19';
+_u pushBack 'RHSUSF_M1A1FEP_D';
+_u pushBack 'RHSUSF_M1A1AIMD_USARMY';
+_u pushBack 'RHS_M2A3';
+_u pushBack 'rhs_m6';
+_u pushBack 'RHS_M2A3_BUSKI';
+_u pushBack 'RHSUSF_M1A1AIM_TUSKI_D';
+_u pushBack 'RHSUSF_M1A2SEP1D_USARMY';
+_u pushBack 'RHS_M2A3_BUSKIII';
+_u pushBack 'RHSUSF_M1A2SEP1TUSKID_USARMY';
+_u pushBack 'RHSUSF_M1A2SEP1TUSKIID_USARMY';
+_u pushBack 'RHSUSF_M109D_USARMY';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
@@ -1029,28 +1077,33 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_Mi8AMT_vvsc';
-_u pushBack 'rhs_ka60_c';
-_u pushBack 'RHS_Mi8mt_vvsc';
-_u pushBack 'RHS_Mi8MTV3_vvsc';
-_u pushBack 'RHS_Mi8MTV3_FAB_vvsc';
-_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
-_u pushBack 'RHS_Su25SM_vvs';
-_u pushBack 'RHS_Su25SM_CAS_vvs';
-_u pushBack 'RHS_Mi24V_vvsc';
-_u pushBack 'RHS_Mi24V_FAB_vvsc';
-_u pushBack 'RHS_Mi24V_UPK23_vvsc';
-_u pushBack 'RHS_Mi24P_vvsc';
-_u pushBack 'RHS_Mi24P_CAS_vvsc';
-_u pushBack 'RHS_Mi24V_AT_vvsc';
-_u pushBack 'RHS_Mi24P_AT_vvsc';
-_u pushBack 'RHS_Ka52_vvsc';
-_u pushBack 'RHS_Ka52_UPK23_vvsc';
-_u pushBack 'RHS_Su25SM_KH29_vvs';
-_u pushBack 'RHS_T50_vvs_052';
-_u pushBack 'RHS_TU95MS_vvs_tambov';
-_u pushBack 'rhs_mi28n_vvsc';
-_u pushBack 'rhs_mi28n_s13_vvsc';
+_u pushBack 'RHS_UH1Y_UNARMED_d';
+_u pushBack 'RHS_UH60M_MEV2_d';
+_u pushBack 'RHS_MELB_MH6M';
+_u pushBack 'RHS_UH60M_d';
+_u pushBack 'RHS_CH_47F_10';
+_u pushBack 'rhsusf_CH53E_USCM_D';
+_u pushBack 'RHS_UH1Y_d';
+_u pushBack 'RHS_UH1Y_FFAR_d';
+_u pushBack 'RHS_UH1Y_d_GS';
+_u pushBack 'RHS_AH1Z_GS';
+_u pushBack 'RHS_C130J';
+_u pushBack 'RHS_MELB_AH6M_L';
+_u pushBack 'RHS_A10';
+_u pushBack 'RHS_AH64D_noradar_GS';
+_u pushBack 'RHS_AH1Z';
+_u pushBack 'RHS_MELB_AH6M_M';
+_u pushBack 'RHS_AH64D_GS';
+_u pushBack 'rhsusf_f22';
+_u pushBack 'RHS_AH64D_noradar_AA';
+_u pushBack 'RHS_AH1Z_CS';
+_u pushBack 'RHS_AH64D_noradar';
+_u pushBack 'RHS_MELB_AH6M_H';
+_u pushBack 'RHS_AH64D_CS';
+_u pushBack 'RHS_A10_AT';
+_u pushBack 'RHS_AH64DGrey';
+_u pushBack 'RHS_AH64D';
+_u pushBack 'RHS_AH64D_AA';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
@@ -1132,10 +1185,19 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 };
 //--- RHS UNITS
-if (CTI_RHS_ADDON > 0) then {  
+if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'RHS_Ural_Fuel_MSV_01';
-_u pushBack 'rhs_kamaz5350_flatbed_msv';
+_u pushBack 'rhsusf_M977A4_usarmy_d';
+_u pushBack 'rhsusf_M977A4_REPAIR_usarmy_d';
+_u pushBack 'rhsusf_M977A4_BKIT_usarmy_d';
+_u pushBack 'rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d';
+_u pushBack 'rhsusf_M977A4_REPAIR_BKIT_usarmy_d';
+_u pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_d';
+_u pushBack 'rhsusf_M977A4_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_REPAIR_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_BKIT_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_wd';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
@@ -1218,7 +1280,16 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_gaz66_ammo_msv';
+_u pushBack 'rhsusf_M977A4_AMMO_usarmy_d';
+_u pushBack 'rhsusf_M977A4_AMMO_BKIT_usarmy_d';
+_u pushBack 'rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d';
+_u pushBack 'rhsusf_M978A4_BKIT_usarmy_d';
+_u pushBack 'rhsusf_M977A4_AMMO_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_AMMO_BKIT_usarmy_wd';
+_u pushBack 'rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd';
+_u pushBack 'rhsusf_M978A4_usarmy_d';
+_u pushBack 'rhsusf_M978A4_BKIT_usarmy_wd';
+_u pushBack 'rhsusf_M978A4_usarmy_wd';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
