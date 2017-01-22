@@ -271,6 +271,60 @@ if (CTI_TOWNS_OCCUPATION_WEST == 4) then {
 	WEST_NAVAL_MEDIUM_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 	WEST_NAVAL_LARGE_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 };
+if (CTI_TOWNS_OCCUPATION_WEST == 5) then { 
+//--- RHS US ARMY ARID
+//--- Infantry
+	WEST_SOLDIER = "rhsusf_army_ocp_rifleman";
+	WEST_SOLDIER_AA = "rhsusf_army_ocp_aa";
+	WEST_SOLDIER_AR = "rhsusf_army_ocp_autorifleman";
+	WEST_SOLDIER_AT = "rhsusf_army_ocp_riflemanat";
+	WEST_SOLDIER_CREW = "rhsusf_army_ocp_combatcrewman";
+	WEST_SOLDIER_LAT = "rhsusf_army_ocp_riflemanat";
+	WEST_SOLDIER_HAT = "rhsusf_usmc_marpat_d_javelin";
+	WEST_SOLDIER_ENGINEER = "rhsusf_army_ocp_engineer";
+	WEST_SOLDIER_EXP = "rhsusf_army_ocp_explosives";
+	WEST_SOLDIER_GL = "rhsusf_army_ocp_grenadier";
+	WEST_SOLDIER_MEDIC = "rhsusf_army_ocp_medic";
+	WEST_SOLDIER_MG = "rhsusf_army_ocp_machinegunner";
+	WEST_SOLDIER_PILOT = "rhsusf_army_ocp_helipilot";
+	WEST_SOLDIER_SNIPER = "rhsusf_army_ocp_sniper";
+	WEST_SOLDIER_TEAMLEADER = "rhsusf_army_ocp_teamleader";
+	WEST_SOLDIER_SQUADLEADER = "rhsusf_army_ocp_squadleader";
+	//--- Naval Units
+	WEST_SOLDIER_NAVAL_INFANTRY = "B_diver_F";
+	WEST_SOLDIER_NAVAL_SQUADLEADER = "B_diver_TL_F";
+	//--- Light Vehicles
+	WEST_VEHICLE_LIGHT1 = ["rhsusf_m1025_d"];
+	WEST_VEHICLE_LIGHT2 = ["rhsusf_m1025_d_mk19"];
+	WEST_VEHICLE_LIGHT3 = ["rhsusf_rg33_m2_usmc_d"];
+	WEST_VEHICLE_LIGHT4 = ["rhsusf_M1232_M2_usarmy_d"];
+	WEST_VEHICLE_LIGHT5 = ["rhsusf_M1232_Mk19_usarmy_d"];
+	WEST_VEHICLE_LIGHT6 = ["rhsusf_M1117_D"];
+	WEST_VEHICLE_LIGHT7 = ["rhsusf_M1117_D"];
+	//--- APCs
+	WEST_VEHICLE_APC1 = ["rhsusf_m113d_usarmy"];
+	WEST_VEHICLE_APC2 = ["rhs_m2a2"];
+	WEST_VEHICLE_APC3 = ["rhs_m2a3_buskiii"];
+	//--- Tanks
+	WEST_VEHICLE_ARMORED1 = ["rhsusf_m1a1fep_d"];	
+	WEST_VEHICLE_ARMORED2 = ["rhsusf_m1a2sep1d_usarmy"];
+	WEST_VEHICLE_ARMORED3 = ["rhsusf_m1a2sep1tuskiid_usarmy"];
+	//--- AA Vehicles
+	WEST_VEHICLE_AA1 = ["rhs_m2a2"];
+	WEST_VEHICLE_AA2 = ["rhs_m6"];
+	WEST_VEHICLE_AA3 = ["rhs_m6"];
+	//--- Air
+	WEST_AIR_HELI1 = ["RHS_MELB_AH6M_M"]; //pawnee
+	WEST_AIR_HELI2 = ["RHS_UH60M"]; //ghosthawk
+	WEST_AIR_HELI_ATTACK = ["RHS_AH64D"];
+	WEST_AIR_AA = [""];
+	WEST_AIR_CAS = ["RHS_A10"];
+	//--- Boats
+	WEST_NAVAL_ASSAULT_BOAT1 = ["B_Boat_Armed_01_minigun_F"];
+	WEST_NAVAL_ASSAULT_BOAT2 = ["B_Boat_Armed_01_minigun_F"];
+	WEST_NAVAL_MEDIUM_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
+	WEST_NAVAL_LARGE_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
+};
 //--- Town Teams Templates
 //--- Infantry Squads
 WEST_TOWNS_SQUAD_RIFLEMEN1 = [WEST_SOLDIER_SQUADLEADER, WEST_SOLDIER_AR, WEST_SOLDIER, WEST_SOLDIER, WEST_SOLDIER_MEDIC];

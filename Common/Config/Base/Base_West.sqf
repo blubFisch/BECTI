@@ -138,38 +138,56 @@ _placements pushBack 	[180, 60];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
-if (CTI_CUP_ADDON > 0) then { 
-	_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
-	_classes pushBack 		["GUE_WarfareBAntiAirRadar", "Land_TTowerBig_1_ruins_F"];
-	_prices pushBack 		2000;
-	_times pushBack 		60;
-	_placements pushBack 	[180, 30, false];
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
-	_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+if (CTI_RHS_ADDON > 0) then { 
+		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
+		_classes pushBack 		["rhs_p37", "Land_TTowerBig_1_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
-	_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
-	_classes pushBack 		["Gue_WarfareBArtilleryRadar", "Land_TTowerBig_2_ruins_F"];
-	_prices pushBack 		2000;
-	_times pushBack 		60;
-	_placements pushBack 	[180, 30, false];
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
-	_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
+		_classes pushBack 		["rhs_prv13", "Land_TTowerBig_2_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 } else {
-	_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
-	_classes pushBack 		["Land_TTowerBig_1_F", "Land_TTowerBig_1_ruins_F"];
-	_prices pushBack 		2000;
-	_times pushBack 		60;
-	_placements pushBack 	[180, 30, false];
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
-	_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+	if (CTI_CUP_ADDON > 0) then { 
+		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
+		_classes pushBack 		["GUE_WarfareBAntiAirRadar", "Land_TTowerBig_1_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
-	_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
-	_classes pushBack 		["Land_TTowerBig_2_F", "Land_TTowerBig_2_ruins_F"];
-	_prices pushBack 		2000;
-	_times pushBack 		60;
-	_placements pushBack 	[180, 30, false];
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
-	_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
+		_classes pushBack 		["Gue_WarfareBArtilleryRadar", "Land_TTowerBig_2_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+	} else {
+		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
+		_classes pushBack 		["Land_TTowerBig_1_F", "Land_TTowerBig_1_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+
+		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
+		_classes pushBack 		["Land_TTowerBig_2_F", "Land_TTowerBig_2_ruins_F"];
+		_prices pushBack 		2000;
+		_times pushBack 		60;
+		_placements pushBack 	[180, 30, false];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+	};
 };
 
 _headers pushBack 		[CTI_SUPPLY_DEPOT, "Supply Depot", "Supply Depot"];
@@ -1048,7 +1066,68 @@ _specials = [];
 	};	
 
 
-
+if (CTI_RHS_ADDON > 0) then { 
+	_headers pushBack 		"M252";
+	_classes pushBack 		"RHS_M252_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+	_headers pushBack 		"M41A4 TOW";
+	_classes pushBack 		"RHS_TOW_TriPod_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+	_headers pushBack 		"FIM-92F (DMS)";
+	_classes pushBack 		"RHS_Stinger_AA_pod_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+	_headers pushBack 		"M2HB (M3)";
+	_classes pushBack 		"RHS_M2StaticMG_MiniTriPod_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+	_headers pushBack 		"M2HB (M3 AA)";
+	_classes pushBack 		"RHS_M2StaticMG_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+	_headers pushBack 		"Mk.19 (M3)";
+	_classes pushBack 		"RHS_MK19_TriPod_D";
+	_prices pushBack 		1000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		0;	
+	_specials pushBack 		[];
+	
+};
 //Disabled Assets Here
 /*
 _headers pushBack 		"Empty Crate";

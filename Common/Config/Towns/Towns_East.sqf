@@ -271,6 +271,60 @@ if (CTI_TOWNS_OCCUPATION_EAST == 4) then {
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
+if (CTI_TOWNS_OCCUPATION_EAST == 5) then { 
+//--- RHS TOWN OCCUPATION
+	//--- Infantry
+	EAST_SOLDIER = "rhs_msv_emr_rifleman";
+	EAST_SOLDIER_AA = "rhs_msv_emr_aa";
+	EAST_SOLDIER_AR = "rhs_msv_emr_arifleman";
+	EAST_SOLDIER_AT = "rhs_msv_emr_at";
+	EAST_SOLDIER_CREW = "rhs_msv_emr_combatcrew";
+	EAST_SOLDIER_LAT = "rhs_msv_emr_LAT";
+	EAST_SOLDIER_HAT = "rhs_msv_emr_at";
+	EAST_SOLDIER_ENGINEER = "rhs_msv_emr_engineer";
+	EAST_SOLDIER_EXP = "rhs_msv_emr_engineer";
+	EAST_SOLDIER_GL = "rhs_msv_emr_grenadier";
+	EAST_SOLDIER_MEDIC = "rhs_msv_emr_medic";
+	EAST_SOLDIER_MG = "rhs_msv_emr_arifleman";
+	EAST_SOLDIER_PILOT = "rhs_pilot";
+	EAST_SOLDIER_SNIPER = "rhs_msv_emr_marksman";
+	EAST_SOLDIER_TEAMLEADER = "rhs_msv_emr_sergeant";
+	EAST_SOLDIER_SQUADLEADER = "rhs_msv_emr_officer_armored";
+	//--- Naval Infantry
+	EAST_SOLDIER_NAVAL_INFANTRY = "O_diver_F";
+	EAST_SOLDIER_NAVAL_SQUADLEADER = "O_diver_TL_F";
+	//--- Light Vehicles
+	EAST_VEHICLE_LIGHT1 = ["rhs_tigr_m_msv"];
+	EAST_VEHICLE_LIGHT2 = ["rhs_tigr_sts_msv"];
+	EAST_VEHICLE_LIGHT3 = ["rhsgref_BRDM2_msv"];
+	EAST_VEHICLE_LIGHT4 = ["rhs_btr80_msv"];
+	EAST_VEHICLE_LIGHT5 = ["rhs_btr80_msv"];
+	EAST_VEHICLE_LIGHT6 = ["rhsgref_BRDM2_ATGM_msv"];
+	EAST_VEHICLE_LIGHT7 = ["rhs_btr80a_msv"];
+	//--- APCs
+	EAST_VEHICLE_APC1 = ["rhs_bmp1_msv"];
+	EAST_VEHICLE_APC2 = ["rhs_bmp2d_msv"];
+	EAST_VEHICLE_APC3 = ["rhs_bmp3mera_msv"];
+	//--- Tanks
+	EAST_VEHICLE_ARMORED1 = ["rhs_t72ba_tv"];	
+	EAST_VEHICLE_ARMORED2 = ["rhs_t80bv"];
+	EAST_VEHICLE_ARMORED3 = ["rhs_t90a_tv"];
+	//--- AA Vehicles
+	EAST_VEHICLE_AA1 = ["rhs_gaz66_zu23_msv"];
+	EAST_VEHICLE_AA2 = ["rhs_zsu234_aa"];
+	EAST_VEHICLE_AA3 = ["rhs_zsu234_aa"];
+	//--- Air
+	EAST_AIR_HELI1 = ["RHS_Mi8mt_vvsc"];
+	EAST_AIR_HELI2 = ["RHS_Mi8MTV3_FAB_vvsc"];
+	EAST_AIR_HELI_ATTACK = ["rhs_mi28n_vvsc"];
+	EAST_AIR_AA = ["RHS_T50_vvs_052"];
+	EAST_AIR_CAS = ["RHS_Su25SM_vvs"];
+	//--- Boats
+	EAST_NAVAL_ASSAULT_BOAT1 = ["O_Boat_Armed_01_hmg_F"];
+	EAST_NAVAL_ASSAULT_BOAT2 = ["O_Boat_Armed_01_hmg_F"];
+	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
+	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
+};
 //--- Town Teams Templates
 //--- Infantry Squads
 EAST_TOWNS_SQUAD_RIFLEMEN1 = [EAST_SOLDIER_SQUADLEADER, EAST_SOLDIER_AR, EAST_SOLDIER, EAST_SOLDIER, EAST_SOLDIER_MEDIC];

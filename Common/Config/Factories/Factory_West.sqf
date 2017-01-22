@@ -194,6 +194,52 @@ if (CTI_CUP_ADDON > 0) then {
 		]];
 	};
 } else {
+if (CTI_RHS_ADDON > 0) then {
+		//DEFUALT RHS SET
+		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
+			["rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy", [
+				["CUP_launch_M136", 5], 
+				["CUP_M136_M", 20],
+				["CUP_8Rnd_B_Beneli_74Slug", 20],
+				["CUP_8Rnd_B_Beneli_74Pellets", 20],
+				["CUP_sgun_M1014", 10],
+				["CUP_30Rnd_9x19_MP5", 20],
+				["acc_flashlight", 10],
+				["Toolkit", 1]
+			]],
+			["rhsusf_M1117_D", [
+				["CUP_launch_M136", 5], 
+				["CUP_M136_M", 20],
+				["CUP_8Rnd_B_Beneli_74Slug", 20],
+				["CUP_8Rnd_B_Beneli_74Pellets", 20],
+				["CUP_sgun_M1014", 10],
+				["CUP_30Rnd_9x19_MP5", 20],
+				["acc_flashlight", 10],
+				["Toolkit", 1]
+			]],
+			["rhsusf_rg33_usmc_d", [
+				["CUP_launch_M136", 5], 
+				["CUP_M136_M", 20],
+				["CUP_8Rnd_B_Beneli_74Slug", 20],
+				["CUP_8Rnd_B_Beneli_74Pellets", 20],
+				["CUP_sgun_M1014", 10],
+				["CUP_30Rnd_9x19_MP5", 20],
+				["acc_flashlight", 10],
+				["Toolkit", 1]
+			]],
+			["rhsusf_M1237_M2_usarmy_wd", [
+				["CUP_launch_M136", 5], 
+				["CUP_M136_M", 20],
+				["CUP_8Rnd_B_Beneli_74Slug", 20],
+				["CUP_8Rnd_B_Beneli_74Pellets", 20],
+				["CUP_sgun_M1014", 10],
+				["CUP_30Rnd_9x19_MP5", 20],
+				["acc_flashlight", 10],
+				["Toolkit", 1]
+			]]
+			//,	["B_Heli_Transport_01_F", []]
+		]];
+} else {
 missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
 	["B_Truck_01_medical_F", [
 		["arifle_mx_gl_f", 2], ["30Rnd_65x39_caseless_mag", 50],
@@ -215,6 +261,7 @@ missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 		["acc_flashlight", 10],
 		["NLAW_F", 20]]]
 ]];
+};
 };
 
 //--- Units - Barracks
@@ -401,6 +448,26 @@ if (CTI_OFPS_ADDON > 0) then {
 
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhsusf_army_ocp_rifleman';
+_u pushBack 'rhsusf_army_ocp_aa';
+_u pushBack 'rhsusf_army_ocp_autorifleman';
+_u pushBack 'rhsusf_army_ocp_riflemanat';
+_u pushBack 'rhsusf_army_ocp_combatcrewman';
+_u pushBack 'rhsusf_army_ocp_riflemanat';
+_u pushBack 'rhsusf_usmc_marpat_d_javelin';
+_u pushBack 'rhsusf_army_ocp_engineer';
+_u pushBack 'rhsusf_army_ocp_explosives';
+_u pushBack 'rhsusf_army_ocp_grenadier';
+_u pushBack 'rhsusf_army_ocp_medic';
+_u pushBack 'rhsusf_army_ocp_machinegunner';
+_u pushBack 'rhsusf_army_ocp_helipilot';
+_u pushBack 'rhsusf_army_ocp_sniper';
+_u pushBack 'rhsusf_army_ocp_teamleader';
+_u pushBack 'rhsusf_army_ocp_squadleader';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
 _u = [];
@@ -567,6 +634,34 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'Meaty_HunterGMG_Sn';
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_tigr_msv';
+_u pushBack 'rhs_tigr_m_msv';
+_u pushBack 'rhs_gaz66_msv';
+_u pushBack 'rhs_kamaz5350_msv';
+_u pushBack 'rhs_tigr_m_3camo_msv';
+_u pushBack 'rhs_tigr_3camo_msv';
+_u pushBack 'RHS_UAZ_MSV_01';
+_u pushBack 'rhs_uaz_open_MSV_01';
+_u pushBack 'rhsgref_BRDM2_HQ_msv';
+_u pushBack 'rhsgref_ins_uaz_dshkm';
+_u pushBack 'rhsgref_ins_uaz_ags';
+_u pushBack 'rhs_tigr_sts_msv';
+_u pushBack 'rhsgref_BRDM2_msv';
+_u pushBack 'rhs_gaz66_ap2_msv';
+_u pushBack 'rhs_tigr_sts_3camo_msv';
+_u pushBack 'rhs_btr60_msv';
+_u pushBack 'rhs_btr70_msv';
+_u pushBack 'rhs_btr80_msv';
+_u pushBack 'rhs_gaz66_zu23_msv';
+_u pushBack 'rhsgref_BRDM2_ATGM_msv';
+_u pushBack 'rhs_btr80a_msv';
+_u pushBack 'RHS_BM21_MSV_01';
+_u pushBack 'rhs_9k79';
+_u pushBack 'rhs_9k79_K';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
 _u = [];
@@ -731,6 +826,33 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'Meaty_Scorcher_Sn';   	
 		_u pushBack 'Meaty_Sandstorm_Sn';  	
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_bmp1_msv'; 
+_u pushBack 'rhs_bmd1'; 
+_u pushBack 'rhs_pts_vmf'; 
+_u pushBack 'rhs_prp3_msv'; 
+_u pushBack 'rhs_bmp1p_msv'; 
+_u pushBack 'rhs_bmd2'; 
+_u pushBack 'rhs_bmd1r'; 
+_u pushBack 'rhs_zsu234_aa'; 
+_u pushBack 'rh_bmp2e_msv'; 
+_u pushBack 'rhs_bmp2d_msv'; 
+_u pushBack 'rhs_Obj_681_2'; 
+_u pushBack 'rhs_t72ba_tv'; 
+_u pushBack 'rhs_sprut_vdv'; 
+_u pushBack 'rhs_bmp3_msv'; 
+_u pushBack 'rhs_bmd2m'; 
+_u pushBack 'rhs_brm1k_msv'; 
+_u pushBack 'rhs_t80bv'; 
+_u pushBack 'rhs_bmd4_vdv'; 
+_u pushBack 'rhs_t80um'; 
+_u pushBack 'rhs_bmp3m_msv'; 
+_u pushBack 'rhs_t90a_tv'; 
+_u pushBack 'rhs_bmp3mera_msv'; 
+_u pushBack 'rhs_bmd4ma_vdv'; 
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
@@ -904,6 +1026,32 @@ if (CTI_OFPS_ADDON > 0) then {
 		
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_Mi8AMT_vvsc';
+_u pushBack 'rhs_ka60_c';
+_u pushBack 'RHS_Mi8mt_vvsc';
+_u pushBack 'RHS_Mi8MTV3_vvsc';
+_u pushBack 'RHS_Mi8MTV3_FAB_vvsc';
+_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
+_u pushBack 'RHS_Su25SM_vvs';
+_u pushBack 'RHS_Su25SM_CAS_vvs';
+_u pushBack 'RHS_Mi24V_vvsc';
+_u pushBack 'RHS_Mi24V_FAB_vvsc';
+_u pushBack 'RHS_Mi24V_UPK23_vvsc';
+_u pushBack 'RHS_Mi24P_vvsc';
+_u pushBack 'RHS_Mi24P_CAS_vvsc';
+_u pushBack 'RHS_Mi24V_AT_vvsc';
+_u pushBack 'RHS_Mi24P_AT_vvsc';
+_u pushBack 'RHS_Ka52_vvsc';
+_u pushBack 'RHS_Ka52_UPK23_vvsc';
+_u pushBack 'RHS_Su25SM_KH29_vvs';
+_u pushBack 'RHS_T50_vvs_052';
+_u pushBack 'RHS_TU95MS_vvs_tambov';
+_u pushBack 'rhs_mi28n_vvsc';
+_u pushBack 'rhs_mi28n_s13_vvsc';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
@@ -983,6 +1131,12 @@ if (CTI_OFPS_ADDON > 0) then {
 		
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then {  
+//Universal RHS
+_u pushBack 'RHS_Ural_Fuel_MSV_01';
+_u pushBack 'rhs_kamaz5350_flatbed_msv';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
 _u = [];
@@ -1060,6 +1214,11 @@ if (CTI_OFPS_ADDON > 0) then {
 		//NATO Winter OFPS
 		
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_gaz66_ammo_msv';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
