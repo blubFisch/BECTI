@@ -36,6 +36,7 @@ _loaded = [];
 
 {
 	_item = _x;
+	_item = toUpper _item; // set to upper case.
 	if !(_item in _loaded) then {
 		_count = {_x == _item} count _gear;
 		_loaded pushBack _item;
