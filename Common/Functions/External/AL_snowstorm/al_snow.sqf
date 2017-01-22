@@ -88,6 +88,11 @@ sleep 0.1;
 };
 
 [] spawn {
+	//get params
+	_variance_time_setting = 3600;
+	if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
+	if (CTI_WEATHER_VARIANCE_TIME == 0) then {_variance_time_setting = 1};
+	if (CTI_WEATHER_VARIANCE_TIME > 0) then {_variance_time_setting = CTI_WEATHER_VARIANCE_TIME};
 	sleep 5;
 	_rotocol= "Land_HelipadEmpty_F" createVehicle [0,0,0];
 	_rotocol_1= "Land_HelipadEmpty_F" createVehicle [0,0,0];
@@ -103,6 +108,10 @@ sleep 0.1;
 			life_part_rot = 1+random 3;
 			publicVariable "life_part_rot";
 			fulg_p_drop	= 0.001;
+			fulg_p_particles = 16;
+			fulg_p_fog_radius = 100;
+			fulg_p_fog_scale_multiplier = 0.95;
+			fulg_p_fog_opacity_multiplier = 1;			
 			//ofps adjust param
 			if (CTI_WEATHER_SNOW == 1) then { 
 				fulg_p_drop	= 0.005;
@@ -225,14 +234,17 @@ sleep 0.1;
 		finishRotocol = false;
 		publicVariable "finishRotocol";
 // >> you can tweak sleep value if you want to have gusts more or less often		
-		sleep 60+random ambient_sounds_al;
+		//sleep 60+random ambient_sounds_al;
+		
+		//use variance time param instead
+		sleep _variance_time_setting;
 	};
 	deleteVehicle _rotocol;
 	deleteVehicle _rotocol_1;
 };
 
 [] spawn {
-	_ifog=0;
+	_ifog=al_foglevel;
 	while {_ifog <0.5} do {
 		_ifog=_ifog+0.001; 0 setFog _ifog; sleep 0.01;
 	};

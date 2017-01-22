@@ -24,7 +24,7 @@ publicVariable "al_thundlevel";
 publicVariable "al_windlevel";
 
 sleep 0.1;
-/*
+
 [_duration_monsoon] spawn {
 	x_duration_monsoon = _this select 0;
 	sleep x_duration_monsoon;
@@ -37,7 +37,7 @@ sleep 0.1;
 	60 setRain al_rainlevel;
 	60 setLightnings al_thundlevel;
 	setWind [al_windlevel select 0, al_windlevel select 1, true];
-};*/
+};
 
 [] spawn {
 	while {al_monsoon_om} do {
@@ -50,16 +50,20 @@ sleep 0.1;
 0 setLightnings 1;
 
 [] spawn {
-	_irain=0;
+	_irain=al_rainlevel;
 	while {_irain <1} do {
-		_irain=_irain+0.01;0 setrain _irain; sleep 0.1;
+		_irain=_irain+0.01;
+		0 setrain _irain; 
+		sleep 0.1;
 	};
-};
+}; 
 
 [] spawn {
-	_ifog=0;
+	_ifog=al_foglevel;
 	while {_ifog <0.5} do {
-		_ifog=_ifog+0.001; 0 setFog _ifog; sleep 0.01;
+		_ifog=_ifog+0.001; 
+		0 setFog _ifog; 
+		sleep 0.01;
 	};
 };
 

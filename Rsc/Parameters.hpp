@@ -389,10 +389,22 @@ class Params {
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
 		default = 0;
 	};
+	class CTI_WEATHER_RAIN_COEF {
+		title = "WEATHER: Rain Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = 0;
+	};
 	class CTI_WEATHER_SNOW {
 		title = "WEATHER: Snow Storms";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Clear","Light","Medium","High","Max"};
+		default = 0;
+	};
+	class CTI_WEATHER_SNOW_COEF {
+		title = "WEATHER: Snow Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
 		default = 0;
 	};
 	class CTI_WEATHER_DUST {
@@ -401,10 +413,22 @@ class Params {
 		texts[] = {"Clear","Light","Medium - Adds Wall of Dust","High - Adds Effect on Objects","Max - Adds Lethal Wall"};
 		default = 0;
 	};
+	class CTI_WEATHER_DUST_COEF {
+		title = "WEATHER: Dust Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = 0;
+	};
 	class CTI_WEATHER_MONSOON {
 		title = "WEATHER: Monsoon Storms";
 		values[] = {0,1,2};
 		texts[] = {"Clear","No Damage","Damage Objects"};
+		default = 0;
+	};
+	class CTI_WEATHER_MONSOON_COEF {
+		title = "WEATHER: Monsoon Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
 		default = 0;
 	};
 	class CTI_WEATHER_OVERCAST {
@@ -413,10 +437,46 @@ class Params {
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
 		default = -1;
 	};
+	class CTI_WEATHER_OVERCAST_COEF {
+		title = "WEATHER: Overcast Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = -1;
+	};
 	class CTI_WEATHER_FOG {
-		title = "WEATHER: Fog";
-		values[] = {-1,0,30,50,75,100};
-		texts[] = {"Random","Clear","Light","Medium","High","Max"};
+		title = "WEATHER: Fog value";
+		values[] = {-1,0,10,20,30,40,50,60,70,80,90,100};
+		texts[] = {"Random","Clear","10","20","30","40","50","60","70","80","90","MAX"};
+		default = -1;
+	};
+	class CTI_WEATHER_FOG_COEF {
+		title = "WEATHER: Fog Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = -1;
+	};
+	class CTI_WEATHER_FOG_DECAY {
+		title = "WEATHER: Fog decay level";
+		values[] = {-1,0,0.02,0.04,0.06,0.08,0.1,0.15,0.20,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","0.02","0.04","0.06","0.08","0.1","0.15","0.20","0.25","0.5","0.75","1"};
+		default = -1;
+	};
+	class CTI_WEATHER_FOG_DECAY_COEF {
+		title = "WEATHER: Fog decay Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = -1;
+	};
+	class CTI_WEATHER_FOG_ALT {
+		title = "WEATHER: Fog altitude";
+		values[] = {-1,0,1,5,25,50,100,200,300,400,500,600,700,800,900,1000};
+		texts[] = {"Random","0m","1m","5m","25m","50m","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
+		default = -1;
+	};
+	class CTI_WEATHER_FOG_ALT_COEF {
+		title = "WEATHER: Fog altitude Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
 		default = -1;
 	};
 	class CTI_WEATHER_WIND {
@@ -425,11 +485,35 @@ class Params {
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
 		default = -1;
 	};
+	class CTI_WEATHER_WIND_COEF {
+		title = "WEATHER: Wind Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = -1;
+	};
 	class CTI_WEATHER_WAVES {
 		title = "WEATHER: Waves";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
 		default = -1;
+	};
+	class CTI_WEATHER_WAVES_COEF {
+		title = "WEATHER: Waves Variance";
+		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
+		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
+		default = -1;
+	};
+	class CTI_WEATHER_VARIANCE_TIME {
+		title = "WEATHER: Frequency of weather changes (or between of storms)";
+		values[] = {-1,0,60,120,300,600,900,1800,2700,3600,5400,7200};
+		texts[] = {"Random","No Change","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min"};
+		default = 120;
+	};
+	class CTI_WEATHER_STORM_TIME {
+		title = "WEATHER: Duration of Storms (dust storms and monsoons)";
+		values[] = {-1,60,120,300,600,900,1800,2700,3600,5400,7200,14400};
+		texts[] = {"Random","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min","240min"};
+		default = 60;
 	};
   	class CTI_WEATHER_FAST {
 		title = "WEATHER: Day Duration";

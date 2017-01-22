@@ -29,7 +29,7 @@ publicVariable "al_overforecast";
 */
 sleep 0.1;
 
-/*[_duration_duststorm] spawn {
+[_duration_duststorm] spawn {
 	x_duration_storm = _this select 0;
 	sleep x_duration_storm;
 	
@@ -43,7 +43,7 @@ sleep 0.1;
 //	180 setOvercast al_overforecast;
 	setWind [al_windlevel select 0, al_windlevel select 1, true];
 	//forceWeatherChange;
-};*/
+};
 
 [] spawn {
 	while {al_duststorm_on} do {
@@ -59,11 +59,10 @@ sleep 0.1;
 	};
 };
 
-/*
 //60 setOvercast 0.75;
 //30 setrain 0;30 setLightnings 0;
 //[[60,0.75],"setOvercast",true,true] call BIS_fnc_MP;
-[] spawn {
+/*[] spawn {
 	if (al_overforecast < 0.75) then {
 		_inc_over = al_overforecast;
 		while {_inc_over <0.75} do {
@@ -74,10 +73,13 @@ sleep 0.1;
 		};
 		hint "end";
 	};
-};
-*/
+};*/
 
-//ofps adjust param
+
+fulg_p_dust_range = 150;
+fulg_p_dust_radius = 30;
+fulg_p_dust_opacity_multiplier = 0.5;
+
 if (CTI_WEATHER_DUST == 1) then { 
 	fulg_p_dust_range = 150;
 	fulg_p_dust_radius = 30;
@@ -101,6 +103,30 @@ if (CTI_WEATHER_DUST == 4) then {
 publicVariable "fulg_p_dust_range";
 publicVariable "fulg_p_dust_radius";
 publicVariable "fulg_p_dust_opacity_multiplier";
+
+[] spawn {
+	while {al_duststorm_on} do {
+		//APPLY VARIANCE
+		_variance_time_setting = 3600;
+		if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
+		if (CTI_WEATHER_VARIANCE_TIME == 0) then {_variance_time_setting = 1};
+		if (CTI_WEATHER_VARIANCE_TIME > 0) then {_variance_time_setting = CTI_WEATHER_VARIANCE_TIME};
+		//add variance to dust/fog
+		_dust_variance_coef_setting = 1;
+		if (CTI_WEATHER_DUST_COEF == -1) then {_dust_variance_coef_setting = random (0.99)};
+		if (CTI_WEATHER_DUST_COEF == 0) then {_dust_variance_coef_setting = 1};
+		if (CTI_WEATHER_DUST_COEF > 0) then {_dust_variance_coef_setting = CTI_WEATHER_DUST_COEF};	
+		_fulg_p_dust_range_set = fulg_p_dust_range;
+		_fulg_p_dust_radius_set = fulg_p_dust_radius;
+		_fulg_p_dust_opacity_multiplier_set = fulg_p_dust_opacity_multiplier;
+		_dust_variance_coef_setting_var = random (0.99) min _dust_variance_coef_setting;
+		if (random 1 < 0.5) then {fulg_p_dust_range = _fulg_p_dust_range_set + (_fulg_p_dust_range_set * _dust_variance_coef_setting_var)} else {fulg_p_dust_range = (_fulg_p_dust_range_set - (_fulg_p_dust_range_set * _dust_variance_coef_setting_var))};
+		if (random 1 < 0.5) then {fulg_p_dust_radius = _fulg_p_dust_radius_set + (_fulg_p_dust_radius_set * _dust_variance_coef_setting_var)} else {fulg_p_dust_radius = (_fulg_p_dust_radius_set - (_fulg_p_dust_radius_set * _dust_variance_coef_setting_var))};
+		if (random 1 < 0.5) then {fulg_p_dust_opacity_multiplier = _fulg_p_dust_opacity_multiplier_set + (_fulg_p_dust_opacity_multiplier_set * _dust_variance_coef_setting_var)} else {fulg_p_dust_opacity_multiplier = (_fulg_p_dust_opacity_multiplier_set - (_fulg_p_dust_opacity_multiplier_set * _dust_variance_coef_setting_var))};
+		//APPLY VARIANCE END
+		sleep (_variance_time_setting/4);
+	};
+};
 
 [[[],"Common\Functions\External\AL_dust_storm\alias_duststorm_effect.sqf"],"BIS_fnc_execVM",true,true] spawn BIS_fnc_MP;
 
