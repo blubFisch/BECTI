@@ -128,7 +128,10 @@ if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,
 // weight fix
 if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
 
-
+//--- Advanced Fuel Consumption
+if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
+	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
+};
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;

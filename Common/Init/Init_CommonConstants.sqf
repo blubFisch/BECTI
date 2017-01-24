@@ -568,6 +568,16 @@ CTI_VEHICLES_SALVAGE_RATE = 0.4; //--- This coefficient determine the value of a
 CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a Wreck and Salvage Truck
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
 
+//--- Vehicles: FUEL CONSUMPTION
+CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.0004; //---default consumption rate every 1s - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.0005; //---tanks consumption rate - 30min 
+CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.0008; //---heli consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.001; //---planes consumption rate - 15min
+CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.001; //---uav consumption rate - 15min
+CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0003; //---ships consumption rate - 50min
+CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.0005; //---mhq consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.00010; //---special units consumption rate
+
 //--- Vehicles: LVOSS and ERA SYSTEMS
 CTI_VEHICLES_APS_SCAN_DISTANCE = 6000; //--- Scan distance for LVOSS and ERA scripts, must be fired within this range to detect
 CTI_VEHICLES_LVOSS_COOLDOWN_TIME = 120; //--- Max cooldown time between LVOSS charges, upgrades remove 30s - 120/90
@@ -739,6 +749,7 @@ with missionNamespace do {
 	if (isNil 'CTI_PLAYERS_GROUPSIZE') then {CTI_PLAYERS_GROUPSIZE = 4}; //--Limit Player AI
 
 	if (isNil 'CTI_UNITS_FATIGUE') then {CTI_UNITS_FATIGUE = 0};
+	if (isNil 'CTI_UNITS_FUEL_CONSUMPTION') then {CTI_UNITS_FUEL_CONSUMPTION = 1};
 	if (isNil 'CTI_GAMEPLAY_3P') then {CTI_GAMEPLAY_3P = -1};
 	if (isNil 'CTI_WEAPON_SWAY') then {CTI_WEAPON_SWAY = 50};
 	if (isnil 'CTI_SM_NONV') then {CTI_SM_NONV = 1};
