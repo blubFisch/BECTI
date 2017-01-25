@@ -213,7 +213,7 @@ if (CTI_CUP_ADDON > 0) then {
 }else {
 //Default Vanilla
 missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-	[["Protector 9 mm",["","","optic_holosight_smg_blk_f",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],[]]],
+	[["smg_05_f",["","","optic_holosight_smg_blk_f",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],[]]],
 	[["u_b_combatuniform_mcam",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],
 	["v_platecarrier1_rgr",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","16rnd_9x21_mag","16rnd_9x21_mag","handgrenade","handgrenade","chemlight_green","chemlight_green"]],
 	["b_bergen_sgg",["","",""]]],
