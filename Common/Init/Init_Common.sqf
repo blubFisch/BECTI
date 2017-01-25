@@ -225,6 +225,6 @@ missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
 	["v_chestrig_khk",["30rnd_9x21_mag","30rnd_9x21_mag","9rnd_45acp_mag","9rnd_45acp_mag","handgrenade","handgrenade","chemlight_red","chemlight_red"]],
 	["b_fieldpack_cbr_lat",[]]],
 	["h_helmeto_ocamo",""],[["",""],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-
+};
 	
 	
