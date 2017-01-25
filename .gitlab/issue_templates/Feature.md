@@ -3,7 +3,7 @@
 
 **Implementation:**
 * [ ] We write it.
-* [ ] External Source.
+* [ ] External Source. - Add in URL
 
-**Source:**
-- Add in URL
+**Benefit:**
+- How will this benefit game play?
