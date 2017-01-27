@@ -67,6 +67,12 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 };
 //if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
 
+if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
+	
+	_vehicle addAction ["<t color='#FFBD4C'>LowGearOn</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>LowGearOff+</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
+};
+
 if (_vehicle isKindOf "Ship") then {
 	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
 	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
