@@ -34,7 +34,7 @@ while {(player==(driver _vehicle)) && (Local_HighClimbingModeOn) && (canMove _ve
 		if ((Local_KeyPressedForward) && (isEngineOn _vehicle)) then {
 			if (_speed > 0) then {			
 				if ([_vel,_vehicle] call _direction) then {
-					_vel=[(_vel select 0)*4,(_vel select 1)*4,(_vel select 2)*4];//1.3
+					_vel=[(_vel select 0)*1.3,(_vel select 1)*1.3,(_vel select 2)*1.3];
 					_vehicle setVelocity _vel;
 				};
 			};		
@@ -47,7 +47,7 @@ while {(player==(driver _vehicle)) && (Local_HighClimbingModeOn) && (canMove _ve
 			};
 		};
 	};
-	sleep 0.15;
+	sleep 0.1;
 };
 
 Local_HighClimbingModeOn=false;
