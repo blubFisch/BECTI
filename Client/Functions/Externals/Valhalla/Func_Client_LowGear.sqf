@@ -51,7 +51,7 @@ while {(player==(driver _vehicle)) && (Local_HighClimbingModeOn) && (canMove _ve
 			};
 		};
 	};
-	sleep 0.1;
+	sleep 0.15;
 };
 
 Local_HighClimbingModeOn=false;
