@@ -540,7 +540,7 @@ FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\External
 
 call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
 //low gear script
-call compile preprocessFile "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
+execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 player call CTI_CO_FNC_UnitCreated;
 
 ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];
