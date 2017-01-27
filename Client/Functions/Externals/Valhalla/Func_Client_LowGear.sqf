@@ -15,10 +15,6 @@ _direction = {
 
 	if (_vdir < 0) then {_vdir=_vdir+360};
 	_dir=getDir _veh;
-		if (isServer) then 
-	{
-	copyToClipboard str _dir;
-	};
 	if (_dir < 0) then {_dir=_dir+360};
 	
 	_vdir=_vdir-_dir;
