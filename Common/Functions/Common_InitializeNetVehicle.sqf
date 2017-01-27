@@ -69,8 +69,8 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 
 if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
 	
-	_vehicle addAction ["<t color='#FFBD4C'>LowGearOn</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>LowGearOff+</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>HillClimbOn</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>HillClimbOff</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
 };
 
 if (_vehicle isKindOf "Ship") then {
