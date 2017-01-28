@@ -578,14 +578,14 @@ CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a 
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
 
 //--- Vehicles: FUEL CONSUMPTION
-CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.0004; //---default consumption rate every 1s - 40min
-CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.0005; //---tanks consumption rate - 30min 
-CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.0008; //---heli consumption rate - 20min
-CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.001; //---planes consumption rate - 15min
-CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.001; //---uav consumption rate - 15min
-CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0003; //---ships consumption rate - 50min
-CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.0005; //---mhq consumption rate - 30min
-CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.00010; //---special units consumption rate
+CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00018; //---default consumption rate every 1s - 90min
+CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.00027; //---tanks consumption rate - 60min 
+CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.00055; //---heli consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.0008; //---planes consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.0008; //---uav consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0000925; //---ships consumption rate - 180min
+CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.00042; //---mhq consumption rate - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.0000001; //---special units consumption rate
 
 //--- Vehicles: LVOSS and ERA SYSTEMS
 CTI_VEHICLES_APS_SCAN_DISTANCE = 6000; //--- Scan distance for LVOSS and ERA scripts, must be fired within this range to detect
