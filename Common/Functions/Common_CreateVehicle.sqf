@@ -13,7 +13,7 @@
   # PARAMETERS #
     0	[String]: The type of vehicle to create
     1	[Array/Object]: The 2D/3D position where the vehicle should be created at
-    2	[Integer]: The Azimuth direction (0-360°) of the vehicle
+    2	[Integer]: The Azimuth direction (0-360Â°) of the vehicle
     3	[Side/Integer]: The Side or Side ID of the vehicle
     4	{Optionnal} [Boolean]: Determine if the vehicle should be created locked or not
     5	{Optionnal} [Boolean]: Determine if the vehicle should be "public" or not
@@ -193,7 +193,9 @@ if (_vehicle isKindOf "Tank") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
-
+// add vehicle engine stealth eventhandler
+if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then {_vehicle addeventhandler ['Engine',{_this execVM "Client\Functions\Externals\Engine_Stealth\Engine.sqf"}];
+};
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle
