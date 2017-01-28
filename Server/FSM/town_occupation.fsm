@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "G:\ArmA 2\FSM Editor Personal Edition\scriptedFSM.cfg, town_occupation.fsm">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, town_occupation.fsm">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Start_FSM",0,250,-100.000000,-400.000000,0.000000,-350.000000,0.000000,"Start FSM"};
@@ -60,8 +60,8 @@ link28[] = {23,24};
 link29[] = {24,15};
 link30[] = {25,1};
 link31[] = {26,25};
-globals[] = {25.000000,1,0,0,0,640,480,1,170,6316128,1,-463.360901,766.469299,475.049347,-543.260498,1064,881,1};
-window[] = {2,-1,-1,-1,-1,956,175,1430,175,3,1082};
+globals[] = {25.000000,1,0,0,0,640,480,1,170,6316128,1,-387.865601,690.971497,1283.612427,-481.202301,530,867,1};
+window[] = {0,-1,-1,-1,-1,1143,130,1455,130,1,548};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -388,6 +388,7 @@ class FSM
        "	if !(_delegated) then {" \n
        "		[_town, _side, _town_teams, _town_groups, _town_positions] spawn CTI_CO_FNC_CreateTownUnits;" \n
        "	};" \n
+       "	if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren"",300] call Common_Say3D;};" \n
        "};" \n
        "" \n
        "_town setVariable [""cti_town_occupation_activeTime"", time];" \n

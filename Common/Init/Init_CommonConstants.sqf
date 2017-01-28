@@ -29,9 +29,10 @@ CTI_RADAR_ART = "RadarArt";
 CTI_HQ_DEPLOY = "HQDeployed";
 CTI_HQ_MOBILIZE = "HQMobilized";
 CTI_SUPPLY_DEPOT = "SupplyDepot";
+CTI_SATELLITE = "Satellite";
 CTI_LARGE_FOB = "LargeFOB";
 
-CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL,CTI_RADAR,CTI_RADAR_ART,CTI_SUPPLY_DEPOT];
+CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL];
 
 CTI_WEST_COLOR = "ColorBlue";
 CTI_EAST_COLOR = "ColorRed";
@@ -359,6 +360,7 @@ CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an
 //--- Towns: Markers
 CTI_TOWNS_MARKERS_MAP_RANGE = 750; //--- Distance required to show the town SV on the map (from a player/player's unit)
 CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorYellow"; //--- The color used for peace-mode towns
+CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorOrange"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
@@ -420,6 +422,7 @@ with missionNamespace do {
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI') then {CTI_TOWNS_RESISTANCE_LIMIT_AI = 150}; //--- Determine the soft limit for overall resistance Town AI
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO') then {CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO = 40}; //--- Determine the AI queue ratio (Queued unit = Groups * ratio/100)
 	if (isNil 'CTI_TOWNS_TERRITORIAL') then {CTI_TOWNS_TERRITORIAL = 0}; //--- Enable or disable the Territorial mode (Neighbors Capture)
+	if (isNil 'CTI_TOWNS_CAPTURE_MODE') then {CTI_TOWNS_CAPTURE_MODE = 0}; //--- Require camps to capture town
 };
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -455,6 +458,12 @@ CTI_BASE_ARTRADAR_MARKER_TIMEOUT = 400; //--- Time needed for an artillery marke
 CTI_BASE_ARTRADAR_RANGES = [4000, 6000, 12000, 18000]; //--- Ranges used by the Artillery Radar (default + based on upgrade)
 CTI_BASE_ARTRADAR_REPORT_COOLDOWN = 300; //--- Time after which an artillery piece may be reported again
 CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY = 8; //--- Time after which a projectile is considered tracked (-1: Disabled)
+
+//--- Base: Satellite
+CTI_BASE_SATELLITE_RANGE_SATCAM = 15000; //--- Determine how far a player has to be from a factory to access the satellite
+CTI_BASE_SATELLITE_BASE_DETECTION_RANGE = 500; //--- Distance from base enemies are detected
+CTI_BASE_SATELLITE_BASE_DETECTION_TIME = 240;  //--- Detection cycle, time between scans
+CTI_BASE_SATELLITE_BASE_BASECAM_HEIGHT = 400;  //--- Height of base camera
 
 //--- Base: Area
 CTI_BASE_AREA_RANGE = 250;

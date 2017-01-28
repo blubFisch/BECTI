@@ -180,6 +180,14 @@ _placements pushBack 	[180, 15];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
+_headers pushBack 		[CTI_SATELLITE, "Satellite Uplink", "Satellite Uplink"];
+_classes pushBack 		["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"];
+_prices pushBack 		8000;
+_times pushBack 		30;
+_placements pushBack 	[180, 15];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+
 _headers pushBack 		[CTI_HQ_MOBILIZE, "Headquarters (Mobilize)", "HQ"];
 _classes pushBack		[missionNamespace getVariable format["CTI_%1_HQ", _side], ""];
 _prices pushBack 		500;

@@ -173,6 +173,12 @@ class Params {
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
 		default = 20;
 	};
+	class CTI_TOWNS_CAPTURE_MODE {
+		title = "TOWNS: CAPTURE MODE";
+		values[] = {0,1,2};
+		texts[] = {"Normal","Camp Cap Boost","All Camps Required (also boosts)"};
+		default = 2;
+	};
 	class CTI_TOWNS_TERRITORIAL {
 		title = "TOWNS: Territorial Mode";
 		values[] = {0,1};

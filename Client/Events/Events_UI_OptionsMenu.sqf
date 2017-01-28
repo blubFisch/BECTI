@@ -9,7 +9,7 @@ switch (_action) do {
 		
 		//--- Sat cam available?
 		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
-		_enable = if (CTI_Base_ControlCenterInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {true} else {false};
+		_enable = if (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {true} else {false};
 		((uiNamespace getVariable "cti_dialog_ui_optionsmenu") displayCtrl 130013) ctrlEnable _enable;
 		((uiNamespace getVariable "cti_dialog_ui_optionsmenu") displayCtrl 130013) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.21), SafeZoneY + (SafeZoneH * 0.845), SafeZoneW * 0.28, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_optionsmenu") displayCtrl 130013) ctrlCommit 0;
 		
@@ -63,9 +63,13 @@ switch (_action) do {
 	};
 	case "onSatCamPressed": {
 		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
-		if (CTI_Base_ControlCenterInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {
+		if (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {
 			closeDialog 0;
-			createDialog "CTI_RscSatelitteCamera";
+			if (_upgrades select CTI_UPGRADE_SATELLITE > 1) then {
+				createDialog "CTI_RscSatelitteCamera";
+			} else {
+				createDialog "CTI_RscBaseCamera";
+			};
 		};
 	};
 	case "onCommanderVotePressed": {

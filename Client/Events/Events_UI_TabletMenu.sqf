@@ -10,8 +10,8 @@ switch (_action) do {
 		//--- Build available?
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777103) ctrlEnable (if ((call CTI_CL_FNC_IsPlayerCommander && CTI_Base_HQInRange) || CTI_Base_RepairInRange_Mobile || CTI_Base_DefenseTruckInRange_Mobile) then {true} else {false});
 		//--- Halo available?
+		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 		if (time - CTI_HALO_LASTTIME >= CTI_HALO_COOLDOWN) then {
-			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			_upgrade_halo = _upgrades select CTI_UPGRADE_HALO;
 			_enable = if ((CTI_Base_AirInRange && _upgrade_halo > 0) || (CTI_Base_DepotInRange && _upgrade_halo > 1) || (CTI_Base_GearInRange_LARGE_FOB && _upgrade_halo > 1)) then {true} else {false};
 			((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777106) ctrlEnable _enable;
@@ -20,7 +20,8 @@ switch (_action) do {
 			((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777106) ctrlEnable false;
 			((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl (777106)) ctrlSetTooltip format ["HALO Jump (%1s)",floor((CTI_HALO_COOLDOWN-(time - CTI_HALO_LASTTIME)))];
 		};
-		
+		//--- Sat cam available?
+		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 779104) ctrlEnable (if (!CTI_P_PreBuilding && (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
 		//CommandingMenu
 		if !(CTI_Base_ControlCenterInRange) then {
 			{((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl _x) ctrlEnable false} forEach [780106,780102,780101,780108];
@@ -129,10 +130,14 @@ switch (_action) do {
 	};
 	case "onSatCamPressed": {
 		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
-		if (CTI_Base_ControlCenterInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {
+		if (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {
 			closeDialog 0;
 			CTI_P_LastRootMenu = "CTI_RscTabletOptions";
-			createDialog "CTI_RscSatelitteCamera";
+			if (_upgrades select CTI_UPGRADE_SATELLITE > 1) then {
+				createDialog "CTI_RscSatelitteCamera";
+			} else {
+				createDialog "CTI_RscBaseCamera";
+			};
 		};
 	};
 	case "onCommanderVotePressed": {
