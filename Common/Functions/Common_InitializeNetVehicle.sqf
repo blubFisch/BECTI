@@ -66,11 +66,13 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 	_marker_type = CTI_P_MarkerPrefix+"med";
 };
 //if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
-
+if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then { // adds in stealth addaction to tanks and apc. 
+_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth On</t>","Client\Functions\Externals\Engine_Stealth\Stop_Engine.sqf", [], 7,false, true,"","alive _target &&(isEngineOn _target)"];}; // any AI or player in any seat can turn on stealth.
+};
 if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
 	
-	_vehicle addAction ["<t color='#FFBD4C'>HillClimbOn</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>HillClimbOff</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 91, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
 };
 
 if (_vehicle isKindOf "Ship") then {
