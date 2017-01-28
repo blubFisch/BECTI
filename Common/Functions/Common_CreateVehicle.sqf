@@ -193,9 +193,8 @@ if (_vehicle isKindOf "Tank") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
-// add vehicle engine stealth
+// add vehicle engine stealth eventhandler
 if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then {_vehicle addeventhandler ['Engine',{_this execVM "Client\Functions\Externals\Engine_Stealth\Engine.sqf"}];
-_vehicle addAction ["<t color='"+"#00E4FF"+"'>STEALTH ON</t>","Client\Functions\Externals\Engine_Stealth\Stop_Engine.sqf", [], 7,false, true,"","alive _target &&(isEngineOn _target)"];};
 
 _vehicle call CTI_CO_FNC_UnitCreated;
 
