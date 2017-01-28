@@ -12,7 +12,7 @@ link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
 globals[] = {25.000000,1,0,0,0,640,480,1,133,6316128,1,-456.160217,360.531433,242.139771,-456.939575,703,846,1};
-window[] = {0,-1,-1,-32000,-32000,1397,640,2446,405,1,721};
+window[] = {0,-1,-1,-1,-1,1226,234,2040,234,1,721};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -109,8 +109,7 @@ class FSM
        "			if (_count_enemies > 0) then {" \n
        "				_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
        "				if (_last_alert < time ) then {" \n
-       "					if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren"",100] call Common_Say3D;};" \n
-       "					_marker setMarkerColorLocal ""ColorPink"";" \n
+       "					if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren_1"",100] call Common_Say3D;};" \n
        "					_last_alert = time + 120;" \n
        "				};" \n
        "			};" \n
