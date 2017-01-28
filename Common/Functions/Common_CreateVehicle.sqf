@@ -195,7 +195,7 @@ if (_vehicle isKindOf "Tank") then {
 };
 // add vehicle engine stealth eventhandler
 if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then {_vehicle addeventhandler ['Engine',{_this execVM "Client\Functions\Externals\Engine_Stealth\Engine.sqf"}];
-
+};
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle
