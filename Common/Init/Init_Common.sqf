@@ -216,19 +216,18 @@ if (CTI_CUP_ADDON > 0) then {
 }else {
 //Default Vanilla
 missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-	[["arifle_Mk20_ACO_pointer_F",["","acc_pointer_ir","optic_aco",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],[]]],
-	[["u_b_combatuniform_mcam",["firstaidkit","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag"]],
-	["v_platecarrier2_rgr",["30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16rnd_9x21_mag","16rnd_9x21_mag","smokeshell","smokeshellgreen","chemlight_green","chemlight_green"]],
-	["b_assaultpack_rgr_lat",["","",""]]],
-	["h_helmetb_sand",""],[["",""],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
+	[["smg_05_f",["","","optic_holosight_smg_blk_f",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],[]]],
+	[["u_b_combatuniform_mcam",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],
+	["v_platecarrier1_rgr",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","16rnd_9x21_mag","16rnd_9x21_mag","handgrenade","handgrenade","chemlight_green","chemlight_green"]],
+	["b_bergen_sgg",["","",""]]],
+	["h_helmetb",""],[["",""],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
 	
-missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-	[["arifle_TRG21_ACO_pointer_F",["","","optic_aco_grn"],["30Rnd_556x45_Stanag"]],["",["","",""],[""]],["hgun_rook40_f",["","",""],[]]],
-	[["u_o_combatuniform_ocamo",["firstaidkit","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag"]],
-	["v_tacvest_khk",["30Rnd_556x45_Stanag","30Rnd_556x45_Stanag","16rnd_9x21_mag","16rnd_9x21_mag","smokeshell","smokeshellred","chemlight_red","chemlight_red"]],
+	missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
+	[["hgun_pdw2000_f",["","","optic_aco"],["30rnd_9x21_mag"]],["",["","",""],[""]],["hgun_acpc2_f",["","",""],[]]],
+	[["u_o_combatuniform_ocamo",["firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],
+	["v_chestrig_khk",["30rnd_9x21_mag","30rnd_9x21_mag","9rnd_45acp_mag","9rnd_45acp_mag","handgrenade","handgrenade","chemlight_red","chemlight_red"]],
 	["b_fieldpack_cbr_lat",[]]],
 	["h_helmeto_ocamo",""],[["",""],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
 };
-
 	
 	
