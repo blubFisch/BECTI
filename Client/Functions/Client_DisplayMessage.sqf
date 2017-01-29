@@ -76,6 +76,9 @@ switch (_message_var) do {
 		_var = missionNamespace getVariable (_parameters select 0);
 		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select 0), mapGridPosition (_parameters select 1)];
 	};
+	case "fob-destroyed": {
+		CTI_P_ChatID commandChat format ["A %1 FOB has been destroyed at %2!", (_parameters select 0), mapGridPosition (_parameters select 1)];
+	};
 	case "hq-destroyed": {
 		CTI_P_ChatID commandChat "The HQ has been destroyed!";
 		playMusic "EventTrack02_F_Curator";
@@ -172,6 +175,6 @@ switch (_message_var) do {
 		////["dev-notification", [_anythinghere]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 		//CTI_P_ChatID commandChat format ["%1 ranked up to %2", _parameters select 0, _parameters select 1];
 		//player groupChat format ["Rank Up"];
-		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%1</t></t><br /><br /><t>3: <t color='#FCBE18'>%2</t></t><br /><br /><t>4: <t color='#FCBE18'>%3</t></t><br /><br /><t>5: <t color='#FCBE18'>%4</t></t><br /><br /><t>6: <t color='#FCBE18'>%5</t></t><br /><br /><t>7: <t color='#FCBE18'>%6</t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4, _parameters select 5, _parameters select 6];
+		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%2</t></t><br /><br /><t>3: <t color='#FCBE18'>%3</t></t><br /><br /><t>4: <t color='#FCBE18'>%4</t></t><br /><br /><t>5: <t color='#FCBE18'>%5</t></t><br /><br /><t>6: <t color='#FCBE18'>%6</t></t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4, _parameters select 5];
 	};
 };

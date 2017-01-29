@@ -68,6 +68,8 @@ CTI_SPECIAL_FUELTRUCK = 3;
 CTI_SPECIAL_GEAR = 4;
 CTI_SPECIAL_NUKETRUCK = 5;
 CTI_SPECIAL_DEFENSETRUCK = 6;
+CTI_SPECIAL_DEPLOYABLEFOB = 7;
+CTI_SPECIAL_DEPLOYABLEFOBLARGE = 8;
 
 CTI_AI_COMMANDER_BUYTO_INFANTRY = 20;
 CTI_AI_COMMANDER_BUYTO_LIGHT = 13;
@@ -410,7 +412,6 @@ CTI_TOWNS_FLAG_TEXTURE_PEACE = "\A3\Data_F\Flags\Flag_white_CO.paa"; //--- Deter
 
 //--- Towns: Parameters
 with missionNamespace do {
-    if (isNil 'CTI_TOWNS_CAPTURE_MODE') then {CTI_TOWNS_CAPTURE_MODE = 0}; //--- Set the town capture mode (0: Default, 1: All camps)
 	if (isNil 'CTI_TOWNS_OCCUPATION') then {CTI_TOWNS_OCCUPATION = 1}; //--- Determine whether occupation is enabled or not
 	if (isNil 'CTI_TOWNS_OCCUPATION_LIMIT_AI') then {CTI_TOWNS_OCCUPATION_LIMIT_AI = 150}; //--- Determine the soft limit for overall occupation Town AI
 	if (isNil 'CTI_TOWNS_OCCUPATION_LIMIT_AI_QUEUE_RATIO') then {CTI_TOWNS_OCCUPATION_LIMIT_AI_QUEUE_RATIO = 40}; //--- Determine the AI queue ratio (Queued unit = Groups * ratio/100)

@@ -553,11 +553,31 @@ _d pushBack 0;
 _c pushBack 'B_Truck_01_Repair_F';
 _p pushBack '';
 _n pushBack 'HEMTT Repair';
-_o pushBack 8000;
+_o pushBack 6000;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
+_d pushBack 0;
+
+_c pushBack 'B_Truck_01_mover_F';
+_p pushBack '';
+_n pushBack 'Deployable FOB';
+_o pushBack 20000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob";
+_d pushBack 0;
+
+_c pushBack 'B_Truck_01_box_F';
+_p pushBack '';
+_n pushBack 'Deployable Large FOB';
+_o pushBack 40000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob-large";
 _d pushBack 0;
 
 _c pushBack 'B_Slingload_01_Repair_F';  

@@ -107,12 +107,6 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
-	class CTI_TOWNS_CAPTURE_MODE {
-		title = "TOWNS: Capture Mode";
-		values[] = {0,1};
-		texts[] = {"Classic","All Camps"};
-		default = 0;
-	};
 	class CTI_TOWNS_OCCUPATION {
 		title = "TOWNS: Occupation";
 		values[] = {0,1};

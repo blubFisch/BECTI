@@ -911,6 +911,8 @@ _u = [];
 //Universal Vanilla
 	_u pushBack "B_G_Offroad_01_repair_F";
 	_u pushBack "B_Truck_01_Repair_F";
+	_u pushBack "B_Truck_01_mover_F";//FOB
+	_u pushBack "B_Truck_01_box_F";//FOB LARGE
 	_u pushBack "CTI_Salvager_West";
 	_u pushBack 'B_Slingload_01_Repair_F';
 	_u pushBack "B_Truck_01_fuel_F";
