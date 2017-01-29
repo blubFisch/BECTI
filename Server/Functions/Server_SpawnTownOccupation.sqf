@@ -287,9 +287,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC1", 2, 30]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 50]
 						]
 						];
 					};
@@ -316,9 +313,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20]
 						]
 						];
 					};
@@ -345,10 +339,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
@@ -375,10 +365,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
@@ -405,10 +391,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						[
 							["TOWNS_SQUAD_APC1", 2, 30],
 							["TOWNS_SQUAD_APC2", 3, 70]
-						],
-						[
-							["TOWNS_SQUAD_VEHICLE_AA1", 1, 20],
-							["TOWNS_SQUAD_VEHICLE_AA2", 2, 60]
 						]
 						];
 					};
@@ -639,7 +621,7 @@ _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
 } forEach _teams;
 
 //--- Update the town with the groups
-_town setVariable ["cti_town_occupation_groups", _groups];
+_town setVariable ["cti_town_occupation_groups", _groups, true];
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownOccupation.sqf", format["Composed [%1] Occupation Teams for town [%2] on side [%3] with the current SV [%4]", count _teams, _town getVariable "cti_town_name", _side, _value]] call CTI_CO_FNC_Log;

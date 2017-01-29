@@ -80,6 +80,8 @@ if (CTI_Log_Level >= CTI_Log_Information) then {
 };
 
 [_town, _newSideID, _currentSideID] remoteExec ["CTI_PVF_CLT_OnTownCaptured", CTI_PV_CLIENTS];
+//-- Announce Victory
+//if (typeOf _town == "FlagPole_F") then {[_town,"marchinhome",10] call Common_Say3D;};
 
 if (_newSide != resistance && (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" == 1)) then { //--- Award the AI
 	_award_teams = [];

@@ -27,7 +27,7 @@ _skill = skill _unit;
 //skill value - initial skill around .4 with max being .9 so 10 kills to get max 
 _skill_max = 0.9;
 _skill_reward = 0;
-if (_skill <= _skill_max) then {_skill_reward = 0.05;} else {_skill_reward = 0;};
+if (_skill <= _skill_max) then {_skill_reward = 0.1;} else {_skill_reward = 0;};
 
 //set new values
 /*_unit setSkill ["aimingAccuracy", (_aimingAccuracy + _skill_reward)];	// Affects how well the AI can lead a target---Affects how accurately the AI estimate range and calculates bullet drop---Affects how well the AI compensates for weapon dispersion---Affects how much the AI will know to compensate for recoil (Higher value = more controlled fire)---Affects how certain the AI must be about its aim on target before opening fire

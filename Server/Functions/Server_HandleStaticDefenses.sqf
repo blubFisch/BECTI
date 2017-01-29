@@ -135,7 +135,7 @@ while {alive _structure} do {
 						// TODO: deduplicate code (Init_Client_Headless.sqf)
 						
 						//--- Configure the weapon / gunner
-						if (typeOf(_x) find "POOK_ANMPQ53" == 0 || typeOf(_x) find "pook_SNR75_radar" == 0 || typeOf(_x) find "pook_MIM104_PAC2" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery" == 0) then {
+						if (typeOf(_x) find "POOK_ANMPQ53" == 0 || typeOf(_x) find "pook_SNR75_radar" == 0 || typeOf(_x) find "pook_SA20_static_INS" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery" == 0) then {
 							_ai disableAI "AUTOTARGET";
 							_ai disableAI "TARGET";
 						} else {

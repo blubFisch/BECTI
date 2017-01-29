@@ -2479,6 +2479,80 @@ class CTI_RscSatelitteCamera {
 	};
 };
 
+class CTI_RscBaseCamera {
+	movingEnable = 0;
+	idd = 177000;
+	onLoad = "uiNamespace setVariable ['cti_dialog_ui_basecam', _this select 0];['onLoad'] execVM 'Client\Events\Events_UI_BaseCamera.sqf'";
+	onUnload = "uiNamespace setVariable ['cti_dialog_ui_basecam', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BaseCamera.sqf'";
+	
+	class controlsBackground {
+		class CTI_MouseArea : RscText {
+			idc = 177001;
+			style = ST_MULTI;
+			
+			x = "safezoneX";
+			y = "safezoneY";
+			w = "safezoneW";
+			h = "safezoneH";
+			
+			text = "";
+		};
+	};
+	
+	class controls {
+		class CTI_Menu_Control_ToggleMap : RscButton_Opac {
+			idc = 177008;
+			
+			x = "SafeZoneX + (SafeZoneW * 0.8)";
+			y = "SafeZoneY + (SafeZoneH * 0.95)";
+			h = "SafeZoneH * 0.04";
+			w = "SafeZoneW * 0.19";
+			
+			text = "";
+			action = "['onToggleMap'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BaseCamera.sqf'";
+		};
+		class CTI_Background_Map : RscText { //--- Render out.
+			idc = 177009;
+			
+			x = "SafeZoneX + (SafeZoneW * 0.8)";
+			y = "SafeZoneY + (SafezoneH * 3.62)";
+			w = "SafeZoneW * 0.19";
+			h = "SafeZoneH * 0.32";
+			colorBackground[] = {0, 0, 0, 0.5};
+		};
+		class CTI_Menu_Map : RscMapControl { //--- Render out.
+			idc = 177010;
+			
+			x = "SafeZoneX + (SafeZoneW * 0.805)";
+			y = "SafeZoneY + (SafezoneH * 3.63)";
+			w = "SafeZoneW * 0.18";
+			h = "SafeZoneH * 0.30";
+			
+			showCountourInterval = 1;
+			onMouseButtonDown = "nullReturn = _this call CTI_UI_BaseCamera_MapClicked";
+		};
+		class CTI_Menu_Control_Exit : RscButton_Opac {
+			idc = 177012;
+			
+			x = "SafeZoneX + (SafeZoneW * 0.01)";
+			y = "SafeZoneY + (SafeZoneH * 0.95)";
+			h = "SafeZoneH * 0.04";
+			w = "SafeZoneW * 0.14";
+			
+			text = "Exit";
+			action = "closeDialog 0";
+		};
+		class CTI_Menu_Control_Mode : CTI_Menu_Control_Exit {
+			idc = 177013;
+			
+			x = "SafeZoneX + (SafeZoneW * 0.16)";
+			
+			text = "";
+			action = "['onViewModeChanged'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BaseCamera.sqf'";
+		};
+	};
+};
+
 class CTI_RscUnitsCamera {
 	movingEnable = 0;
 	idd = 180000;

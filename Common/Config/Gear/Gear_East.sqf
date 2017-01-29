@@ -374,7 +374,7 @@ _i pushBack "srifle_DMR_04_Tan_F";
 _u pushBack 4;
 _p pushBack 1000;
 
-_i pushBack "srifle_DMR_04_F";  //Cyrus 9.3 mm
+_i pushBack "srifle_DMR_05_blk_F";  //Cyrus 9.3 mm
 _u pushBack 3;
 _p pushBack 800;
 

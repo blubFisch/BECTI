@@ -16,9 +16,10 @@
 CTI_UI_Gear_DisplayInventoryVehicle = {
 	private ["_gear", "_list", "_u"];
 	_gear = _this;
-	
+
 	lnbClear 70109;
 	_list = [];
+
 	_u = 0;
 	
 	{
@@ -39,11 +40,9 @@ CTI_UI_Gear_DisplayInventoryVehicle = {
 
 CTI_UI_Gear_AddVehicleItem = {
 	private ["_gear", "_item"];
-	_gear = _this select 0;
-	_item = _this select 1;
-	
+	_gear = _this select 0;// gear current in the vehicle
+	_item = _this select 1;// item to add
 	_gear pushBack _item;
-	
 	//--- Update the vehicle's mass
 	[_item, "add"] call CTI_UI_Gear_UpdateVehicleLoad;
 	

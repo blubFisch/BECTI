@@ -29,9 +29,10 @@ CTI_RADAR_ART = "RadarArt";
 CTI_HQ_DEPLOY = "HQDeployed";
 CTI_HQ_MOBILIZE = "HQMobilized";
 CTI_SUPPLY_DEPOT = "SupplyDepot";
+CTI_SATELLITE = "Satellite";
 CTI_LARGE_FOB = "LargeFOB";
 
-CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL,CTI_RADAR,CTI_RADAR_ART,CTI_SUPPLY_DEPOT];
+CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL];
 
 CTI_WEST_COLOR = "ColorBlue";
 CTI_EAST_COLOR = "ColorRed";
@@ -359,6 +360,7 @@ CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an
 //--- Towns: Markers
 CTI_TOWNS_MARKERS_MAP_RANGE = 750; //--- Distance required to show the town SV on the map (from a player/player's unit)
 CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorYellow"; //--- The color used for peace-mode towns
+CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorOrange"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
@@ -421,6 +423,7 @@ with missionNamespace do {
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI') then {CTI_TOWNS_RESISTANCE_LIMIT_AI = 150}; //--- Determine the soft limit for overall resistance Town AI
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO') then {CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO = 40}; //--- Determine the AI queue ratio (Queued unit = Groups * ratio/100)
 	if (isNil 'CTI_TOWNS_TERRITORIAL') then {CTI_TOWNS_TERRITORIAL = 0}; //--- Enable or disable the Territorial mode (Neighbors Capture)
+	if (isNil 'CTI_TOWNS_CAPTURE_MODE') then {CTI_TOWNS_CAPTURE_MODE = 0}; //--- Require camps to capture town
 };
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -457,12 +460,18 @@ CTI_BASE_ARTRADAR_RANGES = [4000, 6000, 12000, 18000]; //--- Ranges used by the 
 CTI_BASE_ARTRADAR_REPORT_COOLDOWN = 300; //--- Time after which an artillery piece may be reported again
 CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY = 8; //--- Time after which a projectile is considered tracked (-1: Disabled)
 
+//--- Base: Satellite
+CTI_BASE_SATELLITE_RANGE_SATCAM = 15000; //--- Determine how far a player has to be from a factory to access the satellite
+CTI_BASE_SATELLITE_BASE_DETECTION_RANGE = 500; //--- Distance from base enemies are detected
+CTI_BASE_SATELLITE_BASE_DETECTION_TIME = 240;  //--- Detection cycle, time between scans
+CTI_BASE_SATELLITE_BASE_BASECAM_HEIGHT = 400;  //--- Height of base camera
+
 //--- Base: Area
 CTI_BASE_AREA_RANGE = 250;
 
 //--- Base: Construction
 CTI_BASE_CONSTRUCTION_BOUNTY = 3; //--- The bounty awarded upon a hostile structure destruction
-CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY = 1; //--- The bounty multiplier awarded upon a hostile defensive structure destruction
+CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY = 0.3; //--- The bounty multiplier awarded upon a hostile defensive structure destruction
 CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT = 500; //--- Decay starts after x seconds unattended.
 CTI_BASE_CONSTRUCTION_DECAY_DELAY = 10; //--- Decay each x seconds.
 CTI_BASE_CONSTRUCTION_DECAY_FROM = 10; //--- Decay of x / 100 each y seconds.
@@ -569,6 +578,16 @@ CTI_VEHICLES_SALVAGE_RATE = 0.4; //--- This coefficient determine the value of a
 CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a Wreck and Salvage Truck
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
 
+//--- Vehicles: FUEL CONSUMPTION
+CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00018; //---default consumption rate every 1s - 90min
+CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.00027; //---tanks consumption rate - 60min 
+CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.00055; //---heli consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.0008; //---planes consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.0008; //---uav consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0000925; //---ships consumption rate - 180min
+CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.00042; //---mhq consumption rate - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.0000001; //---special units consumption rate
+
 //--- Vehicles: LVOSS and ERA SYSTEMS
 CTI_VEHICLES_APS_SCAN_DISTANCE = 6000; //--- Scan distance for LVOSS and ERA scripts, must be fired within this range to detect
 CTI_VEHICLES_LVOSS_COOLDOWN_TIME = 120; //--- Max cooldown time between LVOSS charges, upgrades remove 30s - 120/90
@@ -613,7 +632,9 @@ CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied 
 CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2500; //--- Determine the range needed to respawn at a town's camps (from the town center)
 CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2500; //--- Determine the range needed to respawn at a town's camps (from a camp)
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable a camp's respawn if enemies are around it
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
+CTI_RESPAWN_MOBILE_SAFE_RANGE = 15; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_RANGE = 500;
 
 CTI_SATCAM_ZOOM_MIN = 50;
@@ -738,6 +759,7 @@ with missionNamespace do {
 	if (isNil 'CTI_PLAYERS_GROUPSIZE') then {CTI_PLAYERS_GROUPSIZE = 4}; //--Limit Player AI
 
 	if (isNil 'CTI_UNITS_FATIGUE') then {CTI_UNITS_FATIGUE = 0};
+	if (isNil 'CTI_UNITS_FUEL_CONSUMPTION') then {CTI_UNITS_FUEL_CONSUMPTION = 1};
 	if (isNil 'CTI_GAMEPLAY_3P') then {CTI_GAMEPLAY_3P = -1};
 	if (isNil 'CTI_WEAPON_SWAY') then {CTI_WEAPON_SWAY = 50};
 	if (isnil 'CTI_SM_NONV') then {CTI_SM_NONV = 1};
@@ -747,12 +769,27 @@ with missionNamespace do {
 	if (isNil 'CTI_WEATHER_FAST_NIGHT') then {CTI_WEATHER_FAST_NIGHT = 1};
 	if (isNil 'CTI_WEATHER_INITIAL') then {CTI_WEATHER_INITIAL = 10};
 	if (isNil 'CTI_WEATHER_RAIN') then {CTI_WEATHER_RAIN = -1};
+	if (isNil 'CTI_WEATHER_RAIN_COEF') then {CTI_WEATHER_RAIN_COEF = -1};
 	if (isNil 'CTI_WEATHER_SNOW') then {CTI_WEATHER_SNOW = 0};
-	if (isNil 'CTI_WEATHER_SAND') then {CTI_WEATHER_SAND = 0};
+	if (isNil 'CTI_WEATHER_SNOW_COEF') then {CTI_WEATHER_SNOW_COEF = -1};
+	if (isNil 'CTI_WEATHER_DUST') then {CTI_WEATHER_DUST = 0};
+	if (isNil 'CTI_WEATHER_DUST_COEF') then {CTI_WEATHER_DUST_COEF = -1};
+	if (isNil 'CTI_WEATHER_MONSOON') then {CTI_WEATHER_MONSOON = 0};
+	if (isNil 'CTI_WEATHER_MONSOON_COEF') then {CTI_WEATHER_MONSOON_COEF = -1};
 	if (isNil 'CTI_WEATHER_OVERCAST') then {CTI_WEATHER_OVERCAST = -1};
+	if (isNil 'CTI_WEATHER_OVERCAST_COEF') then {CTI_WEATHER_OVERCAST_COEF = -1};
 	if (isNil 'CTI_WEATHER_FOG') then {CTI_WEATHER_FOG = -1};
+	if (isNil 'CTI_WEATHER_FOG_COEF') then {CTI_WEATHER_FOG_COEF = -1};
+	if (isNil 'CTI_WEATHER_FOG_DECAY') then {CTI_WEATHER_FOG_DECAY = -1};
+	if (isNil 'CTI_WEATHER_FOG_DECAY_COEF') then {CTI_WEATHER_FOG_DECAY_COEF = -1};
+	if (isNil 'CTI_WEATHER_FOG_ALT') then {CTI_WEATHER_FOG_ALT = -1};
+	if (isNil 'CTI_WEATHER_FOG_ALT_COEF') then {CTI_WEATHER_FOG_ALT_COEF = -1};
 	if (isNil 'CTI_WEATHER_WIND') then {CTI_WEATHER_WIND = -1};
+	if (isNil 'CTI_WEATHER_WIND_COEF') then {CTI_WEATHER_WIND_COEF = -1};
 	if (isNil 'CTI_WEATHER_WAVES') then {CTI_WEATHER_WAVES = -1};
+	if (isNil 'CTI_WEATHER_WAVES_COEF') then {CTI_WEATHER_WAVES_COEF = -1};
+	if (isNil 'CTI_WEATHER_VARIANCE_TIME') then {CTI_WEATHER_VARIANCE_TIME = -1};
+	if (isNil 'CTI_WEATHER_STORM_TIME') then {CTI_WEATHER_STORM_TIME = -1};
 
 	if (isNil 'CTI_APEX_ADDON') then {CTI_APEX_ADDON = 1};
 	if (isNil 'CTI_CUP_ADDON') then {CTI_CUP_ADDON = 1};

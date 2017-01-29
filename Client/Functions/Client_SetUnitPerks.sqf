@@ -6,6 +6,7 @@ _info3 = 0;
 _info4 = 0;
 _info5 = 0;
 _info6 = 0;
+_info7 = 0;
 _playerai = 3;
 
 while {! CTI_GameOver} do {

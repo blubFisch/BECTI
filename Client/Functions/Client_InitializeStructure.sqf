@@ -62,3 +62,9 @@ if ((_var select 0) select 0 == CTI_RADAR_ART) then {
 		(_this) spawn CTI_CL_FNC_UpdateRadarMarkerArt;
 	};
 };
+// Base satellite marker and scan
+if ((_var select 0) select 0 == CTI_SATELLITE) then {
+	(_structure) spawn {
+		(_this) spawn CTI_CL_FNC_UpdateRadarSatellite;
+	};
+};

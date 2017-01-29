@@ -4,7 +4,7 @@ _action = _this select 0;
 switch (_action) do {
 	case "onLoad": {
 		_groups = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideGroups;
-		
+		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;	
 		_track = player;
 		showCinemaBorder false;
 		
@@ -20,7 +20,7 @@ switch (_action) do {
 		CTI_UnitsCamera camSetRelPos _pos;
 		CTI_UnitsCamera camCommit 0;
 		
-		if (difficultyEnabled "3rdPersonView") then {
+		if (difficultyOption "thirdPersonView" == 1) then {
 			uiNamespace setVariable ["cti_dialog_ui_unitscam_camview", "external"];
 			CTI_UnitsCamera cameraEffect ["Internal", "back"];
 			
@@ -97,9 +97,8 @@ switch (_action) do {
 		};
 		
 		//--- Sat cam available?
-		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
-		_enable = if (CTI_Base_ControlCenterInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0) then {true} else {false};
-		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlEnable _enable;
+		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlEnable (if (!CTI_P_PreBuilding && (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
+		_enable = if (!CTI_P_PreBuilding && (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false};
 		if (_enable) then {((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.31), SafeZoneY + (SafeZoneH * 0.95), SafeZoneW * 0.14, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlCommit 0};
 		
 		if (isNil {uiNamespace getVariable "cti_dialog_ui_unitscam_viewmode"}) then {uiNamespace setVariable ["cti_dialog_ui_unitscam_viewmode", 0]};
@@ -200,13 +199,19 @@ switch (_action) do {
 		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180013) ctrlSetText _mode;
 	};
 	case "onSatelliteCameraJump": {
+		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;		
 		_track = uiNamespace getVariable "cti_dialog_ui_unitscam_focus";
 		if !(isNil '_track') then {
 			if (alive _track) then {
 				titleCut["","BLACK IN",1];
-				uiNamespace setVariable ["cti_dialog_ui_satcam_origin", _track];
 				closeDialog 0;
-				createDialog "CTI_RscSatelitteCamera";
+				if (_upgrades select CTI_UPGRADE_SATELLITE > 1) then {
+					uiNamespace setVariable ["cti_dialog_ui_satcam_origin", _track];
+					createDialog "CTI_RscSatelitteCamera";
+				} else {
+					uiNamespace setVariable ["cti_dialog_ui_basecam_origin", _track];
+					createDialog "CTI_RscBaseCamera";
+				};
 			};
 		};
 	};
@@ -227,7 +232,7 @@ switch (_action) do {
 					uiNamespace setVariable ["cti_dialog_ui_unitscam_camview", "internal"];
 				};
 				case "external": {
-					if (difficultyEnabled "3rdPersonView") then {
+					if (difficultyOption "thirdPersonView" == 1) then {
 						vehicle player switchCamera (uiNamespace getVariable "cti_dialog_ui_unitscam_camview_in");
 						CTI_UnitsCamera cameraEffect ["Internal", "back"];
 						uiNamespace setVariable ["cti_dialog_ui_unitscam_camview", "external"];
