@@ -40,7 +40,7 @@ while {alive _vehicle} do {
 	_count_enemies = [_objects, CTI_P_SideJoined] call CTI_CO_FNC_GetAreaEnemiesCount;
 	if (_count_enemies > 0) then {
 		_marker setMarkerColorLocal "ColorOrange";
-		["base-hostilenear", [(_count_enemies / 2)]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", (CTI_P_SideJoined)];
+		["base-hostilenear", [_count_enemies]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", (CTI_P_SideJoined)];
 		[_vehicle,"purgesiren_2",200] call Common_Say3D;
 	};
 	sleep CTI_BASE_SATELLITE_BASE_DETECTION_TIME;
