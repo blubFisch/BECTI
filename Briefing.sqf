@@ -29,9 +29,9 @@ player createDiaryRecord ["menu1",
 - Overall malicious behaviour (such as harassing other players) will not be tolerated.<br/>
 - Exploit-No firing from Slingloaded units (ghetto Attack helis) All AI must be set HOLD FIRE(Dont try to circumvent).<br/>
 - No Kamikaze aircraft.<br/>
-- No hiding of base structures inside indestructible Map buildings &/or buildings that don't have room for the structure (if you don't know don't do it).<br/>
+- No hiding of base structures inside indestructible Map buildings or buildings that don't have room for the structure (if you don't know don't do it).<br/>
 - Commander is forbidden from retaliation selling/Ending the game before being voted out of command.<br/>
-- If it seems like cheating or unfair play ask BEFORE (if no admin is available DONT do it).<br/><br/>
+- If it seems like cheating or unfair play ask BEFORE (if no admin is available DONT do it).<br/>
 "]];
 
 player createDiarySubject ["menu2","Controls"];
@@ -108,13 +108,16 @@ arma.ofps.net:2320<br/><br/>
 player createDiarySubject ["menu9", "Credits"];
 player createDiaryRecord ["menu9",["Credits","<br/>
 <font color='#2ae916' size='14'>Credits</font><br/>
-- Benny - Main DEV<br/>
-- Liveandletdie - Editor / Manager<br/>
-- Omon XR - Tester / Manager<br/>
-- MagnetASS - Skin Director <br/>
-- Apollodeathstar - Editor<br/>
-- BlubFisch - Island integration<br/>
-- Schmeisser - Editor<br/>
+- Benny<br/>
+- Liveandletdie<br/>
+- SpanishSurfer<br/>
+- Omon XR<br/>
+- MagnetASS<br/>
+- Apollodeathstar<br/>
+- BlubFisch<br/>
+- Schmeisser<br/>
+- ProtossMaster<br/>
+
 <br/>
 -Big thanks to everyone who put time into this!<br/>
 "]];
@@ -122,7 +125,7 @@ player createDiaryRecord ["menu9",["Credits","<br/>
 player createDiarySubject ["menu10", "Change Log"];
 player createDiaryRecord ["menu10",["Change Log","<br/>
 
-<font color='#2ae916' size='14'>V1.01</font><br/>
+<font color='#2ae916' size='14'>V1.00</font><br/>
 Added: Fob removal via base managment for commander<br/>
 Added: Tire Protection script<br/>
 Tweaked patriot system building collison<br/>
@@ -138,7 +141,7 @@ Added: More Winter units<br/>
 Tweaked: Units and prices<br/>
 Tweaked: Terrain Grid<br/>
 
-<font color='#2ae916' size='14'>V1.00</font><br/>
+<font color='#2ae916' size='14'>V1.01</font><br/>
 Fixed: Empty res vehicles will not despawn when town is deactivated<br/>
 Fixed: Player AI running away on killed<br/>
 Fixed: Will not need heavy 4 for air 4 upgrade<br/>
@@ -212,5 +215,15 @@ Removed: SPG9_TKA from OPFOR as it was pulling Resistance prices <br/>
 Removed: Mastiff, Ridgeback, Wolfhound due to broken dmg states. <br/>
 Removed: Gear crates because they where spawning advance gear in them <br/>
 Removed: D30 from repair trucks<br/>
+
+<font color='#2ae916' size='14'>V1.04</font><br/>
+Added: Spawn on vehicle disabled when enemy nearby<br/>
+Added: Tank Low Gear / Hill climb<br/>
+Fixed: Persistent gear templates<br/>
+Fixed: Gear dup when adding weapons to cargo<br/>
+Fixed: Player starting cash would follow slot and not player<br/>
+Fixed: AI unit cam view<br/>
+Fixed: Patriot not firing on blufor<br/>
+Fixed: AI map labels<br/>
 
 "]];

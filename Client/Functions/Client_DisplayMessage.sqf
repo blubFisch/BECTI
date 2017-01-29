@@ -146,9 +146,15 @@ switch (_message_var) do {
 		player groupChat format ["$%1 awarded for the capture of %2", _parameters select 1, (_parameters select 0) getVariable "cti_town_name"];
 		playMusic "EventTrack03_F_Curator";
 	};
+	case "town-capture-blocked": {
+		hint parseText format ["<t align='center'><t size='1.2' color='#FCBE18'>%1</t></t><br /><t size='1.1'>Capture Blocked</t><br /><br /><t><t color='#FCBE18'>%2</t> hostile camp held by <t color='#FCBE18'>%3</t> forces detected.</t>", _parameters select 0, _parameters select 1, _parameters select 2];
+	};
 	case "town-hostilenear": {
 		CTI_P_ChatID commandChat format ["Hostile detected near %1", _parameters getVariable "cti_town_name"];
 		playsound "Alarm";
+	};
+	case "base-hostilenear": {
+		hint parseText format ["<t align='center'><t size='1.2' color='#FCBE18'>Base Alert</t></t><br /><br /><t><t color='#FCBE18'>%1</t> enemy forces detected near base.</t>", _parameters select 0];
 	};
 	case "upgrade-ended": {
 		CTI_P_ChatID commandChat format ["%1 has been upgraded to level %2", ((missionNamespace getVariable format["CTI_%1_UPGRADES_LABELS", CTI_P_SideJoined]) select (_parameters select 0)) select 0, (_parameters select 1)];
@@ -166,6 +172,6 @@ switch (_message_var) do {
 		////["dev-notification", [_anythinghere]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 		//CTI_P_ChatID commandChat format ["%1 ranked up to %2", _parameters select 0, _parameters select 1];
 		//player groupChat format ["Rank Up"];
-		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%1</t></t><br /><br /><t>3: <t color='#FCBE18'>%2</t></t><br /><br /><t>4: <t color='#FCBE18'>%3</t></t><br /><br /><t>5: <t color='#FCBE18'>%4</t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4];
+		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%1</t></t><br /><br /><t>3: <t color='#FCBE18'>%2</t></t><br /><br /><t>4: <t color='#FCBE18'>%3</t></t><br /><br /><t>5: <t color='#FCBE18'>%4</t></t><br /><br /><t>6: <t color='#FCBE18'>%5</t></t><br /><br /><t>7: <t color='#FCBE18'>%6</t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4, _parameters select 5, _parameters select 6];
 	};
 };

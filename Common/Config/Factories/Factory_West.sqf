@@ -508,10 +508,10 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_M1126_ICV_MK19_Desert';
 	_u pushBack 'CUP_B_BAF_Coyote_GMG_D';
 	_u pushBack 'CUP_B_BAF_Coyote_L2A1_D';
-	_u pushBack 'CUP_B_Mastiff_GMG_GB_D';
-	_u pushBack 'CUP_B_Mastiff_HMG_GB_D';
-	_u pushBack 'CUP_B_Ridgback_GMG_GB_D';
-	_u pushBack 'CUP_B_Ridgback_HMG_GB_D';
+	//_u pushBack 'CUP_B_Mastiff_GMG_GB_D';
+	//_u pushBack 'CUP_B_Mastiff_HMG_GB_D';
+	//_u pushBack 'CUP_B_Ridgback_GMG_GB_D';
+	//_u pushBack 'CUP_B_Ridgback_HMG_GB_D';
 	_u pushBack 'CUP_B_Jackal2_L2A1_GB_D';
 	_u pushBack 'CUP_B_Jackal2_GMG_GB_D';
 	_u pushBack 'CUP_RG31_Mk19';
@@ -522,8 +522,8 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 1) then {
 		//NATO Tropic CUP
-	_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
-	_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
+	//_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
+	//_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
 	_u pushBack 'CUP_B_Jackal2_L2A1_GB_W';
 	_u pushBack 'CUP_B_Jackal2_GMG_GB_W';
 	_u pushBack 'CUP_RG31_Mk19_OD';

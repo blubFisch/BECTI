@@ -740,7 +740,7 @@ _p pushBack '';
 _n pushBack 'Orca Armed';
 _o pushBack 18500;
 _t pushBack 20;
-_u pushBack 2;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;

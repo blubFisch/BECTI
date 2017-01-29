@@ -88,6 +88,11 @@ sleep 0.1;
 };
 
 [] spawn {
+	//get params
+	_variance_time_setting = 3600;
+	if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
+	if (CTI_WEATHER_VARIANCE_TIME == 0) then {_variance_time_setting = 1};
+	if (CTI_WEATHER_VARIANCE_TIME > 0) then {_variance_time_setting = CTI_WEATHER_VARIANCE_TIME};
 	sleep 5;
 	_rotocol= "Land_HelipadEmpty_F" createVehicle [0,0,0];
 	_rotocol_1= "Land_HelipadEmpty_F" createVehicle [0,0,0];
@@ -103,6 +108,10 @@ sleep 0.1;
 			life_part_rot = 1+random 3;
 			publicVariable "life_part_rot";
 			fulg_p_drop	= 0.001;
+			fulg_p_particles = 16;
+			fulg_p_fog_radius = 100;
+			fulg_p_fog_scale_multiplier = 0.95;
+			fulg_p_fog_opacity_multiplier = 1;			
 			//ofps adjust param
 			if (CTI_WEATHER_SNOW == 1) then { 
 				fulg_p_drop	= 0.005;
@@ -138,12 +147,45 @@ sleep 0.1;
 			publicVariable "fulg_p_fog_scale_multiplier";
 			publicVariable "fulg_p_fog_opacity_multiplier";			
 	} else {
-			fulg_p_drop	= 0.0001;
-			publicVariable "fulg_p_drop";		
+			fulg_p_drop	= 0.0001;		
 			life_part_rot = 5+random 5;
 			publicVariable "life_part_rot";	
 			drop_int_rot = 0.001;
-			publicVariable "drop_int_rot";			
+			publicVariable "drop_int_rot";	
+			//ofps adjust param
+			if (CTI_WEATHER_SNOW == 1) then { 
+				fulg_p_drop	= 0.005;
+				fulg_p_particles = 16;
+				fulg_p_fog_radius = 100;
+				fulg_p_fog_scale_multiplier = 0.95;
+				fulg_p_fog_opacity_multiplier = 1;
+			};
+			if (CTI_WEATHER_SNOW == 2) then { 
+				fulg_p_drop	= 0.001;
+				fulg_p_particles = 32;
+				fulg_p_fog_radius = 30;
+				fulg_p_fog_scale_multiplier = 1;
+				fulg_p_fog_opacity_multiplier = 5;
+			};
+			if (CTI_WEATHER_SNOW == 3) then { 
+				fulg_p_drop	= 0.0001;
+				fulg_p_particles = 64;
+				fulg_p_fog_radius = 15;
+				fulg_p_fog_scale_multiplier = 1.05;
+				fulg_p_fog_opacity_multiplier = 10;
+			};
+			if (CTI_WEATHER_SNOW == 4) then { 
+				fulg_p_drop	= 0.00005;
+				fulg_p_particles = 128;
+				fulg_p_fog_radius = 5;
+				fulg_p_fog_scale_multiplier = 1.1;
+				fulg_p_fog_opacity_multiplier = 15;
+			};
+			publicVariable "fulg_p_drop";
+			publicVariable "fulg_p_particles";
+			publicVariable "fulg_p_fog_radius";
+			publicVariable "fulg_p_fog_scale_multiplier";
+			publicVariable "fulg_p_fog_opacity_multiplier";				
 	};
 		
 		_fct = [1,-1] call BIS_fnc_selectRandom;
@@ -192,14 +234,17 @@ sleep 0.1;
 		finishRotocol = false;
 		publicVariable "finishRotocol";
 // >> you can tweak sleep value if you want to have gusts more or less often		
-		sleep 60+random ambient_sounds_al;
+		//sleep 60+random ambient_sounds_al;
+		
+		//use variance time param instead
+		sleep _variance_time_setting;
 	};
 	deleteVehicle _rotocol;
 	deleteVehicle _rotocol_1;
 };
 
 [] spawn {
-	_ifog=0;
+	_ifog=al_foglevel;
 	while {_ifog <0.5} do {
 		_ifog=_ifog+0.001; 0 setFog _ifog; sleep 0.01;
 	};

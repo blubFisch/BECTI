@@ -180,6 +180,14 @@ _placements pushBack 	[180, 15];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
+_headers pushBack 		[CTI_SATELLITE, "Satellite Uplink", "Satellite Uplink"];
+_classes pushBack 		["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"];
+_prices pushBack 		8000;
+_times pushBack 		30;
+_placements pushBack 	[180, 15];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
+
 _headers pushBack 		[CTI_HQ_MOBILIZE, "Headquarters (Mobilize)", "HQ"];
 _classes pushBack		[missionNamespace getVariable format["CTI_%1_HQ", _side], ""];
 _prices pushBack 		500;
@@ -639,6 +647,15 @@ _specials = [];
 
 
 //******************************BASE DEFENSE 2******************************
+	_headers pushBack 		["FOB",[["RuinOnDestroyed", "Land_Medevac_house_V1_ruins_F"], ["FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_fobs")}; (_cpt < CTI_BASE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
+	_classes pushBack 		"Land_Medevac_house_V1_F";
+	_prices pushBack 		15000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Fortification";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		2;	
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
 
 	_headers pushBack  		["Cargo Tower (big)",[["RuinOnDestroyed", "Land_Cargo_Tower_V1_ruins_F"], ["DMG_Reduce", 8]]];
 	_classes pushBack  		"Land_Cargo_Tower_V1_F";
@@ -809,15 +826,27 @@ _specials = [];
 
 //******************************BASE DEFENSE 3******************************
 
-	_headers pushBack 		["FOB",[["RuinOnDestroyed", "Land_Medevac_house_V1_ruins_F"], ["FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_fobs")}; (_cpt < CTI_BASE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
-	_classes pushBack 		"Land_Medevac_house_V1_F";
-	_prices pushBack 		15000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Fortification";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		3;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
+	if (CTI_CUP_ADDON > 0) then { 
+		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
+		_classes pushBack 		"WarfareBDepot";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]];
+	} else {
+		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
+		_classes pushBack 		"Land_Cargo_House_V3_F";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
+	};
 	
 	_headers pushBack 		"Mortar";
 	_classes pushBack 		"B_Mortar_01_F";
@@ -949,28 +978,6 @@ _specials = [];
 
 
 //******************************BASE DEFENSE 4******************************
-
-	if (CTI_CUP_ADDON > 0) then { 
-		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
-		_classes pushBack 		"WarfareBDepot";
-		_prices pushBack 		40000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Fortification";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]];
-	} else {
-		_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
-		_classes pushBack 		"Land_Cargo_House_V3_F";
-		_prices pushBack 		40000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Fortification";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
-	};
 
 	_headers pushBack 		"Dome (Small)";
 	_classes pushBack 		"Land_Dome_Small_F";

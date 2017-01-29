@@ -1,3 +1,8 @@
-Version 1.0.3+ (aka the one following 1.0.4)
-- 
-- 
+Next version
+- Disable respawn at mobile respawns if enemies are close, like camps
+
+Version 1.0.4
+Added: Teamstack system
+Fixed: Presistent cash, will follow player now
+Updated: Weather System
+Updated: View distance module

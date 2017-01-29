@@ -33,7 +33,7 @@ _units = _this select 0;
 _sideFriendly = _this select 1;
 _sideIgnored = if (count _this > 2) then {_this select 2} else {[]};
 
-_sides = [west, east, resistance, sideEnemy] - [_sideFriendly] - _sideIgnored;
+_sides = [west, east, resistance, independent, sideEnemy] - [_sideFriendly] - _sideIgnored;
 _count = 0;
 
 {_count = _count + (_x countSide _units)} forEach _sides;

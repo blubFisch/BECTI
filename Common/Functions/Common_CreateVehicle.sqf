@@ -13,7 +13,7 @@
   # PARAMETERS #
     0	[String]: The type of vehicle to create
     1	[Array/Object]: The 2D/3D position where the vehicle should be created at
-    2	[Integer]: The Azimuth direction (0-360°) of the vehicle
+    2	[Integer]: The Azimuth direction (0-360Â°) of the vehicle
     3	[Side/Integer]: The Side or Side ID of the vehicle
     4	{Optionnal} [Boolean]: Determine if the vehicle should be created locked or not
     5	{Optionnal} [Boolean]: Determine if the vehicle should be "public" or not
@@ -128,7 +128,10 @@ if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,
 // weight fix
 if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
 
-
+//--- Advanced Fuel Consumption
+if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
+	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
+};
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;
@@ -190,7 +193,9 @@ if (_vehicle isKindOf "Tank") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
-
+// add vehicle engine stealth eventhandler
+if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then {_vehicle addeventhandler ['Engine',{_this execVM "Client\Functions\Externals\Engine_Stealth\Engine.sqf"}];
+};
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle
