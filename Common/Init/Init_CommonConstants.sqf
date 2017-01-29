@@ -370,15 +370,15 @@ CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town "Max range of waypoin
 
 //CTI_TOWNS_OCCUPATION_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 240; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 24;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 15; //--- Determine the min occupation AI count to present in a town
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 250; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 50; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 190; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Resistance
 
@@ -390,9 +390,9 @@ CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 5; //--- When the town is not held by the side
 
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 24; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 15; //--- Determine the min resistance AI count to present in a town
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 250; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 50; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 190; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
@@ -607,8 +607,8 @@ with missionNamespace do {
 CTI_ARTILLERY_FILTER = 1; //--- Toggle artillery magazines like mines and AT mines (0: Disabled, 1: Enabled)
 CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 
-CTI_BOUNTY_COEF = 0.35; //--- Bounty coefficient multiplicator based on the unit original cost
-CTI_BOUNTY_COEF_PVP = 1.5; //--- Bounty coefficient multiplicator based on the killed unit score
+CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
+CTI_BOUNTY_COEF_PVP = 1.2; //--- Bounty coefficient multiplicator based on the killed unit score
 
 CTI_COIN_AREA_DEFAULT = [30, 10];
 CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
@@ -629,12 +629,12 @@ CTI_RESPAWN_AI_RANGE = 600;
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
-CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2500; //--- Determine the range needed to respawn at a town's camps (from the town center)
-CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2500; //--- Determine the range needed to respawn at a town's camps (from a camp)
+CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2000; //--- Determine the range needed to respawn at a town's camps (from the town center)
+CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to respawn at a town's camps (from a camp)
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
-CTI_RESPAWN_MOBILE_SAFE_RANGE = 15; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_MOBILE_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_RANGE = 500;
 
 CTI_SATCAM_ZOOM_MIN = 50;
