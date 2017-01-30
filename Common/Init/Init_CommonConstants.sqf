@@ -361,8 +361,8 @@ CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an
 
 //--- Towns: Markers
 CTI_TOWNS_MARKERS_MAP_RANGE = 750; //--- Distance required to show the town SV on the map (from a player/player's unit)
-CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorYellow"; //--- The color used for peace-mode towns
-CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorOrange"; //--- The color used for when enemy detected in towns
+CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorWhite"; //--- The color used for peace-mode towns
+CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorYellow"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
