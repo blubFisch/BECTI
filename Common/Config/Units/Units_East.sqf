@@ -611,10 +611,10 @@ _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack ["O_Truck_02_covered_F","salvager-independent"];
 _d pushBack 0;
 
-/*_c pushBack "Land_Pod_Heli_Transport_04_fuel_F";
+_c pushBack "Land_Pod_Heli_Transport_04_fuel_F";
 _p pushBack '';
 _n pushBack 'Fuel POD';
-_o pushBack 1000;
+_o pushBack 250;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
@@ -624,12 +624,12 @@ _d pushBack 0;
 _c pushBack 'O_Truck_02_fuel_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 200;
+_o pushBack 500;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-fueltruck";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack "Land_Pod_Heli_Transport_04_repair_F";
 _p pushBack '';

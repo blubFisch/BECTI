@@ -570,16 +570,26 @@ _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
 
-/*_c pushBack 'B_Slingload_01_Fuel_F';  
+_c pushBack 'B_Slingload_01_Fuel_F';  
 _p pushBack '';
 _n pushBack 'Fuel POD';
-_o pushBack 1000;
+_o pushBack 250;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-fueltruck";
 _d pushBack 0;
-*/
+
+_c pushBack 'B_Truck_01_fuel_F';
+_p pushBack '';
+_n pushBack 'HEMTT Fuel';
+_o pushBack 500;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'CTI_Salvager_West';
 _p pushBack '';
 _n pushBack 'HEMTT Salvager';
@@ -599,16 +609,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack ["B_Truck_01_box_F","salvager-independent"];
 _d pushBack 0;
-
-/*_c pushBack 'B_Truck_01_fuel_F';
-_p pushBack '';
-_n pushBack 'HEMTT Fuel';
-_o pushBack 500;
-_t pushBack 25;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "";
-_d pushBack 0;*/
 
 //--- Ammo Vehicles
 
