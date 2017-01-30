@@ -173,6 +173,12 @@ class Params {
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
 		default = 20;
 	};
+	class CTI_TOWNS_CAPTURE_MODE {
+		title = "TOWNS: CAPTURE MODE";
+		values[] = {0,1,2};
+		texts[] = {"Normal","Camp Cap Boost","All Camps Required (also boosts)"};
+		default = 2;
+	};
 	class CTI_TOWNS_TERRITORIAL {
 		title = "TOWNS: Territorial Mode";
 		values[] = {0,1};
@@ -210,7 +216,7 @@ class Params {
 		default = 1500;
 	};
 	class CTI_RESPAWN_LARGE_FOB_RANGE {
-		title = "RESPAWN: FOB Range";
+		title = "RESPAWN: Large FOB Range";
 		values[] = {500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000};
 		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM","2.25 KM","2.5 KM","2.75 KM","3 KM"};
 		default = 2500;
@@ -293,6 +299,12 @@ class Params {
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
 	};
+	class CTI_UNITS_FUEL_CONSUMPTION {
+		title = "UNITS: Increased Fuel Consumption";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
 		title = "UNITS: Vehicles Reycling Delay";
 		values[] = {60,120,180,240,300,600,1200,1800,2400,3000,3600};
@@ -336,10 +348,10 @@ class Params {
 		default = 0;
 	};
 	class CTI_GAMEPLAY_DARTER {
-	title = "GAMEPLAY: Darter Range limitation";
-	values[] = {0,500,1000,2000,4000,6000,8000};
-	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+		title = "GAMEPLAY: Darter Range limitation";
+		values[] = {0,500,1000,2000,4000,6000,8000};
+		texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
+		default = 2000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";
@@ -381,7 +393,7 @@ class Params {
 		title = "WEATHER: Inital Time";
 		values[] = {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		texts[] = {"12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Random"};
-		default = 9;
+		default = 12;
 	};
 	class CTI_WEATHER_RAIN {
 		title = "WEATHER: Rain (Rain Requires Overcast Greater High)";
@@ -507,7 +519,7 @@ class Params {
 		title = "WEATHER: Frequency of weather changes (or between of storms)";
 		values[] = {-1,0,60,120,300,600,900,1800,2700,3600,5400,7200};
 		texts[] = {"Random","No Change","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min"};
-		default = 3600;
+		default = 1800;
 	};
 	class CTI_WEATHER_STORM_TIME {
 		title = "WEATHER: Duration of Storms (dust storms and monsoons)";
