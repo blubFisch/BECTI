@@ -542,7 +542,6 @@ _d pushBack 0;
 //--- Repair Vehicles
 _c pushBack 'B_G_Offroad_01_repair_F';
 _p pushBack '';
-_n pushBack 'Defense Truck';
 _o pushBack 4000;
 _t pushBack 25;
 _u pushBack 0;
@@ -552,7 +551,7 @@ _d pushBack 0;
 
 _c pushBack 'B_Truck_01_Repair_F';
 _p pushBack '';
-_n pushBack 'HEMTT Repair';
+_n pushBack 'Hemtt Repair Truck';
 _o pushBack 8000;
 _t pushBack 25;
 _u pushBack 0;
@@ -582,7 +581,7 @@ _d pushBack 0;
 
 _c pushBack 'B_Truck_01_fuel_F';
 _p pushBack '';
-_n pushBack 'HEMTT Fuel';
+_n pushBack 'Hemtt Fuel Truck';
 _o pushBack 500;
 _t pushBack 25;
 _u pushBack 0;
@@ -592,7 +591,7 @@ _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_West';
 _p pushBack '';
-_n pushBack 'HEMTT Salvager';
+_n pushBack 'Hemtt Salvager';
 _o pushBack CTI_VEHICLES_SALVAGER_PRICE;
 _t pushBack 25;
 _u pushBack 0;
@@ -602,7 +601,7 @@ _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_Independent_West';
 _p pushBack '';
-_n pushBack 'HEMTT Salvager';
+_n pushBack 'Hemtt Salvager';
 _o pushBack CTI_VEHICLES_SALVAGER_PRICE;
 _t pushBack 25;
 _u pushBack 0;
@@ -614,7 +613,7 @@ _d pushBack 0;
 
 _c pushBack 'B_Truck_01_ammo_F';
 _p pushBack '';
-_n pushBack 'HEMTT Ammo';
+_n pushBack 'Hemtt Ammo';
 _o pushBack 6000;
 _t pushBack 25;
 _u pushBack 0;
@@ -624,7 +623,7 @@ _d pushBack 0;
 
 _c pushBack 'B_Slingload_01_Ammo_F';
 _p pushBack '';
-_n pushBack 'Vehicle Ammo POD';
+_n pushBack 'Ammo POD';
 _o pushBack 4000;
 _t pushBack 10;
 _u pushBack 0;

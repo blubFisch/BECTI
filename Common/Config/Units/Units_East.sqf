@@ -573,7 +573,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_G_Offroad_01_repair_F';
 _p pushBack '';
-_n pushBack 'Defense Truck';
+_n pushBack 'Tempest Defense Truck';
 _o pushBack 4000;
 _t pushBack 25;
 _u pushBack 0;
@@ -583,7 +583,7 @@ _d pushBack 0;
 
 _c pushBack 'O_Truck_03_repair_F';
 _p pushBack '';
-_n pushBack 'Repair Truck';
+_n pushBack 'Tempest Repair Truck';
 _o pushBack 8000;
 _t pushBack 25;
 _u pushBack 0;
@@ -593,7 +593,7 @@ _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_East';
 _p pushBack '';
-_n pushBack 'Salvage Truck';
+_n pushBack 'Tempest Salvage Truck';
 _o pushBack CTI_VEHICLES_SALVAGER_PRICE;
 _t pushBack 25;
 _u pushBack 0;
@@ -603,7 +603,7 @@ _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_Independent_East';
 _p pushBack '';
-_n pushBack 'Salvage Truck';
+_n pushBack 'Tempest Salvage Truck';
 _o pushBack CTI_VEHICLES_SALVAGER_PRICE;
 _t pushBack 25;
 _u pushBack 0;
@@ -623,7 +623,7 @@ _d pushBack 0;
 
 _c pushBack 'O_Truck_02_fuel_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'Tempest Fuel Truck';
 _o pushBack 500;
 _t pushBack 25;
 _u pushBack 0;
