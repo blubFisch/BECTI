@@ -675,7 +675,7 @@ _d pushBack 0;
 
 _c pushBack 'O_Truck_02_Ammo_F';
 _p pushBack '';
-_n pushBack 'Ammo Truck';
+_n pushBack 'Tempest Ammo Truck';
 _o pushBack 6000;
 _t pushBack 25;
 _u pushBack 0;

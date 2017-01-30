@@ -542,6 +542,7 @@ _d pushBack 0;
 //--- Repair Vehicles
 _c pushBack 'B_G_Offroad_01_repair_F';
 _p pushBack '';
+_n pushBack 'Offroad Defense Truck';
 _o pushBack 4000;
 _t pushBack 25;
 _u pushBack 0;

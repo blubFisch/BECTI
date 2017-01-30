@@ -424,6 +424,15 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
 
+_c pushBack 'rhs_kamaz5350_flatbed_msv';
+_p pushBack '';
+_n pushBack 'Kamaz Flatbed Truck';
+_o pushBack 300;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 10;
 
 //--- Heavy Vehicles
 
@@ -664,30 +673,19 @@ _d pushBack 10;
 //--- Repair Vehicles
 _c pushBack 'RHS_Ural_Fuel_MSV_01';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
+_n pushBack 'Ural Fuel Truck';
+_o pushBack 500;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
 
-_c pushBack 'rhs_kamaz5350_flatbed_msv';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "salvager";
-_d pushBack 10;
-
-
 //--- Ammo Vehicles
 _c pushBack 'rhs_gaz66_ammo_msv';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
+_n pushBack 'Gaz Ammo Truck';
+_o pushBack 6000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
