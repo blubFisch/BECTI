@@ -233,5 +233,7 @@ Fixed: Player starting cash would follow slot and not player<br/>
 Fixed: AI unit cam view<br/>
 Fixed: Patriot not firing on blufor<br/>
 Fixed: On teamswap player wont loose original gear<br/>
+Tweaked: Gear resell value now at 25%<br/>
+Tweaked: Incrased ammount of AI spawning in towns<br/>
 
 "]];
