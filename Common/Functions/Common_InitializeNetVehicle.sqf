@@ -72,8 +72,8 @@ if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then { // adds in stealth 
 };
 if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
 	
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target) && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target) && Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "driver _target == _this && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "driver _target == _this && Local_HighClimbingModeOn && canMove _target"];
 };
 
 if (_vehicle isKindOf "Ship") then {
