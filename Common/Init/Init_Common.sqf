@@ -58,6 +58,7 @@ CTI_CO_FNC_GetSideTowns = compileFinal preprocessFileLineNumbers "Common\Functio
 CTI_CO_FNC_GetSideUpgrades = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSideUpgrades.sqf";
 CTI_CO_FNC_GetTeamVehicles = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTeamVehicles.sqf";
 CTI_CO_FNC_GetTownCamps = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownCamps.sqf";
+CTI_CO_FNC_GetTownCampsHostileToSide = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownCampsHostileToSide.sqf";
 CTI_CO_FNC_GetTownCampsOnSide = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownCampsOnSide.sqf";
 CTI_CO_FNC_GetTownGroups = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroups.sqf";
 CTI_CO_FNC_GetTownGroupsAlive = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroupsAlive.sqf";
