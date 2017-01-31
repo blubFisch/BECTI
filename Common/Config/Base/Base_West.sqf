@@ -629,7 +629,7 @@ _specials = [];
 
 		_headers pushBack 		"ZU-23";
 		_classes pushBack 		"CUP_B_ZU23_CDF";
-		_prices pushBack 		4000;
+		_prices pushBack 		5000;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ"];
@@ -819,7 +819,19 @@ _specials = [];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
-};
+
+		//OPFOR ZU-23 to fill the gap
+		_headers pushBack 		"Zu-23-2";
+		_classes pushBack 		"RHS_ZU23_MSV";
+		_prices pushBack 		5000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+		
+	};
 
 //******************************BASE DEFENSE 3******************************
 
@@ -963,7 +975,7 @@ _specials = [];
 
 if (CTI_RHS_ADDON > 0) then { 
 
-	//OPFOR D-30 to fill the gap, experemental
+	//OPFOR D-30 to fill the gap
 	_headers pushBack 		"2A18M (D-30A) AT";
 	_classes pushBack 		"rhs_d30_at_msv";
 	_prices pushBack 		6000;
@@ -1031,6 +1043,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_coinblacklist pushBack [["Land_Shed_Big_F", 10], ["Land_TentHangar_V1_F", 10], ["Land_sfp_mil_shed", 10], ["Land_sfp_torebodahangar", 10], ["Land_sfp_torebodahangar_alt2", 10], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
+
 		};
 		
 	if (CTI_OFPS_ADDON > 0) then { 
@@ -1065,9 +1078,6 @@ if (CTI_RHS_ADDON > 0) then {
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	};	
-
-};
-
 
 
 //Disabled Assets Here
