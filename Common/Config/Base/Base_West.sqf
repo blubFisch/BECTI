@@ -469,6 +469,29 @@ _specials = [];
 
 	};
 
+	if (CTI_RHS_ADDON > 0) then {
+
+		_headers pushBack 		"Mk.19 (M3)";
+		_classes pushBack 		"RHS_MK19_TriPod_D";
+		_prices pushBack 		2500;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+
+		_headers pushBack 		"M2HB (M3)";
+		_classes pushBack 		"RHS_M2StaticMG_MiniTriPod_D";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+
+	};
 
 
 //******************************BASE DEFENSE 1******************************
@@ -641,19 +664,19 @@ _specials = [];
 	
 	if (CTI_OFPS_ADDON > 0) then { 
 
-		_headers pushBack 		"AN/MPQ-53 - AA Radar";
-		_classes pushBack 		"POOK_ANMPQ53_CDF";
-		_prices pushBack 		5000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		1;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
-
-
 	};
 
+	if (CTI_RHS_ADDON > 0) then { 
+		_headers pushBack 		"FIM-92F (DMS)";
+		_classes pushBack 		"RHS_Stinger_AA_pod_D";
+		_prices pushBack 		2900;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+	};
 
 
 //******************************BASE DEFENSE 2******************************
@@ -782,57 +805,21 @@ _specials = [];
 	
 	if (CTI_OFPS_ADDON > 0) then { 
 
-		_headers pushBack 		"RBS 70 (SHORAD MANPADS AA)";
-		_classes pushBack 		"sfp_rbs70";
-		_prices pushBack 		8000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
 
-		_headers pushBack 		"RBS 77 (Hawk)";
-		_classes pushBack 		"sfp_rbs77";
-		_prices pushBack 		20000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 97 (Swedish HAWK)";
-		_classes pushBack 		"sfp_rbs97";
-		_prices pushBack 		20000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 17 (Anti-Ship Missile)";
-		_classes pushBack 		"sfp_rbs17";
-		_prices pushBack 		6000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 17 Hellfire Ammobox";
-		_classes pushBack 		"sfp_rbs17_missile_container";
-		_prices pushBack 		300;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
 	};
 
+	if (CTI_RHS_ADDON > 0) then { 
+		
+		_headers pushBack 		"M41A4 TOW";
+		_classes pushBack 		"RHS_TOW_TriPod_D";
+		_prices pushBack 		4000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		2;	
+		_specials pushBack 		[];
+};
 
 //******************************BASE DEFENSE 3******************************
 
@@ -948,16 +935,6 @@ _specials = [];
 	
 	if (CTI_OFPS_ADDON > 0) then { 
 
-		_headers pushBack 		"Granatkastare m/84 Mortar";
-		_classes pushBack 		"sfp_grk84";
-		_prices pushBack 		5000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		3;	
-		_specials pushBack 		[];
-
 		/*
 		_headers pushBack 		"Field Howitzer 77 (150mm)";
 		_classes pushBack 		"sfp_fh77";
@@ -1063,71 +1040,22 @@ _specials = [];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+
+		_headers pushBack 		"AN/MPQ-53 - AA Radar";
+		_classes pushBack 		"POOK_ANMPQ53_CDF";
+		_prices pushBack 		5000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	};	
 
-
-if (CTI_RHS_ADDON > 0) then { 
-	_headers pushBack 		"M252";
-	_classes pushBack 		"RHS_M252_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"M41A4 TOW";
-	_classes pushBack 		"RHS_TOW_TriPod_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"FIM-92F (DMS)";
-	_classes pushBack 		"RHS_Stinger_AA_pod_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"M2HB (M3)";
-	_classes pushBack 		"RHS_M2StaticMG_MiniTriPod_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"M2HB (M3 AA)";
-	_classes pushBack 		"RHS_M2StaticMG_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"Mk.19 (M3)";
-	_classes pushBack 		"RHS_MK19_TriPod_D";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
 };
+
+
+
 //Disabled Assets Here
 /*
 _headers pushBack 		"Empty Crate";
