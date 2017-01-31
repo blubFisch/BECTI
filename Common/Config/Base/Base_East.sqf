@@ -412,7 +412,6 @@ _specials = [];
 	_specials pushBack 		[];
 	
 	
-	
 	if (CTI_CUP_ADDON > 0) then {
 
 		_headers pushBack 		"M2 Machine Gun";
@@ -521,6 +520,31 @@ _specials = [];
 
 	};
 
+
+
+	if (CTI_RHS_ADDON > 0) then {
+
+		_headers pushBack 		"KORD (6T7)";
+		_classes pushBack 		"rhs_KORD_MSV";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+
+		_headers pushBack 		"AGS-30 (6P17)";
+		_classes pushBack 		"rhs_AGS30_TriPod_MSV";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+
+	};
 
 
 //******************************BASE DEFENSE 1******************************
@@ -665,6 +689,16 @@ _specials = [];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
+
+		_headers pushBack 		"SPG-9M";
+		_classes pushBack 		"rhs_SPG9M_MSV";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
 	
 	};
 	
@@ -693,20 +727,42 @@ _specials = [];
 	
 	if (CTI_OFPS_ADDON > 0) then { 
 
-		_headers pushBack 		"SNR-75 - AA Radar";
-		_classes pushBack 		"pook_SNR75_radar";
-		_prices pushBack 		5000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		1;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
-
 
 	};
 
+	if (CTI_RHS_ADDON > 0) then { 
 
+		_headers pushBack 		"9K38 (Djigit)";
+		_classes pushBack 		"rhs_Igla_AA_pod_msv";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+
+		_headers pushBack 		"Zu-23-2";
+		_classes pushBack 		"RHS_ZU23_MSV";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+
+		_headers pushBack 		"KORD (6U16)";
+		_classes pushBack 		"rhs_KORD_high_MSV";
+		_prices pushBack 		1000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+
+	};
 
 //******************************BASE DEFENSE 2******************************
 
@@ -784,55 +840,6 @@ _specials = [];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
 		
-		_headers pushBack 		"RBS 70 (SHORAD MANPADS AA)";
-		_classes pushBack 		"sfp_rbs70";
-		_prices pushBack 		8000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 77 (Hawk)";
-		_classes pushBack 		"sfp_rbs77";
-		_prices pushBack 		20000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 97 (Swedish HAWK)";
-		_classes pushBack 		"sfp_rbs97";
-		_prices pushBack 		20000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 17 (Anti-Ship Missile)";
-		_classes pushBack 		"sfp_rbs17";
-		_prices pushBack 		6000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
-		_headers pushBack 		"RBS 17 Hellfire Ammobox";
-		_classes pushBack 		"sfp_rbs17_missile_container";
-		_prices pushBack 		300;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
 	};
 	
 	_headers pushBack 		"AT Defense";
@@ -999,28 +1006,6 @@ _specials = [];
 	
 	if (CTI_OFPS_ADDON > 0) then { 
 
-		_headers pushBack 		"Granatkastare m/84 Mortar";
-		_classes pushBack 		"sfp_grk84";
-		_prices pushBack 		5000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		3;	
-		_specials pushBack 		[];
-
-		/*
-		_headers pushBack 		"Field Howitzer 77 (150mm)";
-		_classes pushBack 		"sfp_fh77";
-		_prices pushBack 		160000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		3;	
-		_specials pushBack 		[];
-		*/
-
 		_headers pushBack 		"C-RAM Phalanx (Engages incoming rounds)";
 		_classes pushBack 		"C_at_phalanx_35AI";
 		_prices pushBack 		40000;
@@ -1046,111 +1031,21 @@ if (CTI_RHS_ADDON > 0) then {
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"9K115-2 Metis-M";
-	_classes pushBack 		"rhs_metis_9k115_2_msv";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"9M133-1 Kornet-M";
-	_classes pushBack 		"rhs_Kornet_9M133_2_msv";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"9K38 (Djigit)";
-	_classes pushBack 		"rhs_Igla_AA_pod_msv";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"AGS-30 (6P17)";
-	_classes pushBack 		"rhs_AGS30_TriPod_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"KORD (6T7)";
-	_classes pushBack 		"rhs_KORD_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"KORD (6U16)";
-	_classes pushBack 		"rhs_KORD_high_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"NSV (6T7)";
-	_classes pushBack 		"rhs_NSV_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"SPG-9M";
-	_classes pushBack 		"rhs_SPG9M_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
-	_specials pushBack 		[];
-	
-	_headers pushBack 		"Zu-23-2";
-	_classes pushBack 		"RHS_ZU23_MSV";
-	_prices pushBack 		1000;
-	_placements pushBack 	[180, 15];
-	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		3;	
 	_specials pushBack 		[];
 	
 	_headers pushBack 		"2A18M (D-30A) AT";
 	_classes pushBack 		"rhs_d30_at_msv";
-	_prices pushBack 		1000;
+	_prices pushBack 		6000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		3;	
 	_specials pushBack 		[];
 	
-	
 };
+
 //******************************BASE DEFENSE 4******************************
 
 	_headers pushBack 		"Dome (Small)";
@@ -1221,6 +1116,16 @@ if (CTI_RHS_ADDON > 0) then {
 		_headers pushBack 		"S-300 PMU - AA Launcher";
 		_classes pushBack 		"pook_SA20_static_INS";
 		_prices pushBack 		60000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		4;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+
+		_headers pushBack 		"SNR-75 - AA Radar";
+		_classes pushBack 		"pook_SNR75_radar";
+		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ"];

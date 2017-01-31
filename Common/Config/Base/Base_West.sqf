@@ -961,6 +961,20 @@ _specials = [];
 
 
 
+if (CTI_RHS_ADDON > 0) then { 
+
+	//OPFOR D-30 to fill the gap, experemental
+	_headers pushBack 		"2A18M (D-30A) AT";
+	_classes pushBack 		"rhs_d30_at_msv";
+	_prices pushBack 		6000;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];
+	
+};
 
 
 
@@ -1048,7 +1062,7 @@ _specials = [];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		1;	
+		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	};	
 
