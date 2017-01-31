@@ -365,6 +365,7 @@ CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorWhite"; //--- The color used for peace-mod
 CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorYellow"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
+CTI_TOWNS_PATROL_CAMPS_AI_DEFENSE_MAX = 1; //--- Determine how many Town AI groups may try to capture back one hostile camp
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
 CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town "Max range of waypoints"
 
