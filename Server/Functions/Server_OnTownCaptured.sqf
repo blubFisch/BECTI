@@ -50,23 +50,23 @@ if (missionNamespace getVariable "CTI_TOWNS_PEACE" > 0) then {
 	
 	//---- If no hostiles are present, the peace mode may be triggered
 	if (_hostiles < 1) then {
-    	_town setVariable ["cti_town_peace", time + (missionNamespace getVariable "CTI_TOWNS_PEACE"), true];
-    	_flagTexture = CTI_TOWNS_FLAG_TEXTURE_PEACE;
-    	
-    	//--- Thread spawn, Update the flag textures upon peace mode expiration if applicable
-    	if (typeOf _town == "FlagPole_F") then {
-    		[_town, _newSide] spawn {
-    			_town = _this select 0;
-    			_newSide = _this select 1;
-    			
-    			while {time < (_town getVariable "cti_town_peace")} do { sleep .5 };
-    			
-    			//--- Only update if the new side ID match the current side ID
-    			if ((_newSide call CTI_CO_FNC_GetSideID) == (_town getVariable "cti_town_sideID")) then {
-    				_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _newSide], CTI_TOWNS_FLAG_TEXTURE_PEACE]);
-    			};
-    		};
-    	};
+		_town setVariable ["cti_town_peace", time + (missionNamespace getVariable "CTI_TOWNS_PEACE"), true];
+		_flagTexture = CTI_TOWNS_FLAG_TEXTURE_PEACE;
+		
+		//--- Thread spawn, Update the flag textures upon peace mode expiration if applicable
+		if (typeOf _town == "FlagPole_F") then {
+			[_town, _newSide] spawn {
+				_town = _this select 0;
+				_newSide = _this select 1;
+				
+				while {time < (_town getVariable "cti_town_peace")} do { sleep .5 };
+				
+				//--- Only update if the new side ID match the current side ID
+				if ((_newSide call CTI_CO_FNC_GetSideID) == (_town getVariable "cti_town_sideID")) then {
+					_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _newSide], CTI_TOWNS_FLAG_TEXTURE_PEACE]);
+				};
+			};
+		};
 	};
 };
 
