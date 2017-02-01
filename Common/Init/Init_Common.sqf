@@ -140,6 +140,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_OFPS_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_OFPS_East.sqf";
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+	(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_RHS_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_RHS_East.sqf";
+};
 
 (west) call compile preprocessFileLineNumbers "Common\Config\Factories\Factory_West.sqf";
 (east) call compile preprocessFileLineNumbers "Common\Config\Factories\Factory_East.sqf";
