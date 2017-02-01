@@ -44,6 +44,7 @@ CTI_CL_FNC_Death = compileFinal preprocessFile "Client\Functions\Client_Death.sq
 CTI_CL_FNC_UpdateAirRadarMarker = compileFinal preprocessFile "Client\Functions\Client_UpdateAirRadarMarker.sqf";
 CTI_CL_FNC_UpdateRadarMarkerAir = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerAir.sqf";
 CTI_CL_FNC_UpdateRadarMarkerArt = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerArt.sqf";
+CTI_CL_FNC_UpdateRadarSatellite = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarSatellite.sqf";
 
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateClientAI.sqf";
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateOrders.sqf";
@@ -452,10 +453,10 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 };
 
 //--- Gear templates (persitent)
-if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined]}) then {call CTI_UI_Gear_InitializeProfileTemplates};
-// profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined], nil];
+if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {call CTI_UI_Gear_InitializeProfileTemplates};
+// profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined], nil];
 // saveProfileNamespace;
-if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
+if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
 
 //--- Graphics/video thread (persistent)
 /*0 spawn {
@@ -544,6 +545,10 @@ FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Extern
 FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
+//low gear script
+execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
+//Stealth script
+execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
 
 player call CTI_CO_FNC_UnitCreated;
 

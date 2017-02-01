@@ -97,8 +97,8 @@ with missionNamespace do {
 			//--- Update the gunner's properties every 60 seconds to fix them going into hold fire mode
 			_ai spawn {
 				while {alive _this} do {
-					_this setBehaviour "DANGER";
-					_this setCombatMode "YELLOW";
+					_this setBehaviour "AWARE";
+					_this setCombatMode "RED";
 					_this enableAttack true;
 					_this allowFleeing 0;
 					sleep 60;

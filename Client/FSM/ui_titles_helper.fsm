@@ -2,11 +2,11 @@
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init",0,250,50.000000,-225.000000,150.000000,-175.000000,0.000000,"Init"};
-item1[] = {"Refresh",2,4346,-100.000000,-125.000000,0.000000,-75.000000,0.000000,"Refresh"};
+item1[] = {"Refresh",2,250,-100.000000,-125.000000,0.000000,-75.000000,0.000000,"Refresh"};
 item2[] = {"End",1,250,-100.000000,-325.000000,0.000000,-275.000000,0.000000,"End"};
 item3[] = {"Loop",4,218,50.000000,-125.000000,150.000000,-75.000000,0.000000,"Loop"};
 item4[] = {"Gameover",8,218,-100.000000,-225.000000,0.000000,-175.000000,0.000000,"Gameover"};
-item5[] = {"Update_Capture",2,250,50.000000,-25.000000,150.000000,25.000000,0.000000,"Update Capture"};
+item5[] = {"Update_Capture",2,4346,50.000000,-25.000000,150.000000,25.000000,0.000000,"Update Capture"};
 item6[] = {"In_Range",4,218,-100.000000,-25.000000,0.000000,25.000000,1.000000,"In Range"};
 item7[] = {"Not_in_Range",4,218,-225.000000,25.000000,-125.000000,75.000000,2.000000,"Not in Range"};
 item8[] = {"Hide",2,250,200.000000,25.000000,300.000000,75.000000,0.000000,"Hide"};
@@ -20,8 +20,8 @@ link6[] = {5,3};
 link7[] = {6,5};
 link8[] = {7,8};
 link9[] = {8,3};
-globals[] = {25.000000,1,0,0,0,640,480,1,25,6316128,1,-260.176819,240.531586,696.536133,-366.411682,201,764,1};
-window[] = {0,-1,-1,-1,-1,1096,1141,2465,186,1,219};
+globals[] = {25.000000,1,0,0,0,640,480,1,25,6316128,1,-249.066147,229.420670,175.649551,-823.158997,366,764,1};
+window[] = {0,-1,-1,-32000,-32000,1019,138,1462,109,1,384};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -153,6 +153,15 @@ class FSM
        "_curSV = _nearest getVariable ""cti_town_sv"";" \n
        "_maxSV = _nearest getVariable ""cti_town_sv_max"";" \n
        "" \n
+       "_town_camps_total = count((_nearest) call CTI_CO_FNC_GetTownCamps);" \n
+       "_town_camps_side = count([_nearest, CTI_P_SideJoined] call CTI_CO_FNC_GetTownCampsOnSide);" \n
+       "" \n
+       "_town_groups_total =  count((_nearest) call CTI_CO_FNC_GetTownGroups);" \n
+       "_town_groups_alive = count((_nearest) call CTI_CO_FNC_GetTownGroupsAlive);" \n
+       "_town_units_alive = count((_nearest) call CTI_CO_FNC_GetTownGroupsUnitsAlive);" \n
+       "" \n
+       "_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;" \n
+       "" \n
        "_towns_near = [getPos player, CTI_Towns, CTI_UI_TOWNS_PROGRESSBAR_DISTANCE*3] call CTI_CO_FNC_GetEntitiesInRange;" \n
        "_camps = [];" \n
        "{_camps = _camps + (_x call CTI_CO_FNC_GetTownCamps)} forEach _towns_near;" \n
@@ -165,8 +174,13 @@ class FSM
        "	_txt = """";" \n
        "	_lastCheck = ""Camp"";" \n
        "} else {" \n
-       "	_txt = Format [""Town SV: %1/%2"",_curSV,_maxSV];" \n
-       "	_lastCheck = ""Town"";" \n
+       "	if (_upgrades select CTI_UPGRADE_SATELLITE > 0 && [CTI_P_SideJoined, CTI_SATELLITE] call CTI_CO_FNC_HasStructure) then {" \n
+       "		_txt = Format [""Town SV: %1/%2 | %3/%4 | Squads: %5 , Units: %6"",_curSV,_maxSV,_town_camps_side,_town_camps_total, _town_groups_alive, _town_units_alive];" \n
+       "		_lastCheck = ""Town"";	" \n
+       "	} else {" \n
+       "		_txt = Format [""Town SV: %1/%2 | %3/%4"",_curSV,_maxSV,_town_camps_side,_town_camps_total];" \n
+       "		_lastCheck = ""Town"";" \n
+       "	};" \n
        "};" \n
        "" \n
        "if (_sideID != _lastSID) then {_delay = 0};" \n

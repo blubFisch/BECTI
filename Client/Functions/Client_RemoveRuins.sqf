@@ -27,7 +27,6 @@ private ["_classnames", "_position", "_var", "_variable"];
 _position = _this select 0;
 _variable = _this select 1;
 _classnames = [];
-
 if (typeName _variable == "ARRAY") then {
 _var = missionNamespace getVariable _variable;
 _classnames = _var select 1;

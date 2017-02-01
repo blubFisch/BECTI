@@ -722,7 +722,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_2S6M_RU';	
 	_u pushBack 'CUP_B_T72_CZ';		
 	_u pushBack 'CUP_O_BM21_RU';
-	_u pushBack 'CUP_O_T90_RU';
+//	_u pushBack 'CUP_O_T90_RU';
 /* 
 	_u pushBack 'CUP_O_BMP1_CSAT';
 	_u pushBack 'CUP_O_BMP2_CSAT';
@@ -1036,6 +1036,8 @@ _u = [];
 
 //Universal Vanilla
 _u pushBack "O_G_Offroad_01_repair_F";
+_u pushBack "O_Truck_03_covered_F";//FOB
+_u pushBack "O_Truck_02_box_F";//FOB LARGE
 _u pushBack "Land_Pod_Heli_Transport_04_repair_F";
 _u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
 _u pushBack "O_Truck_03_fuel_F";
@@ -1043,7 +1045,6 @@ _u pushBack "CTI_Salvager_East";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
-	_u pushBack "O_Truck_02_box_F";
 	//_u pushBack "O_Truck_03_repair_F";
 	_u pushBack "O_Truck_02_fuel_F";
 

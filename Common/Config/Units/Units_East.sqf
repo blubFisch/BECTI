@@ -561,16 +561,6 @@ _d pushBack 0;
 
 //--- Repair Vehicles
 
-/*_c pushBack 'O_Truck_02_box_F';
-_p pushBack '';
-_n pushBack 'Repair Truck';
-_o pushBack 8000;
-_t pushBack 25;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "service-repairtruck";
-_d pushBack 0;*/
-
 _c pushBack 'O_G_Offroad_01_repair_F';
 _p pushBack '';
 _n pushBack 'Tempest Defense Truck';
@@ -583,12 +573,32 @@ _d pushBack 0;
 
 _c pushBack 'O_Truck_03_repair_F';
 _p pushBack '';
-_n pushBack 'Tempest Repair Truck';
-_o pushBack 8000;
+_n pushBack 'Repair Truck';
+_o pushBack 6000;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
+_d pushBack 0;
+
+_c pushBack 'O_Truck_03_covered_F';
+_p pushBack '';
+_n pushBack 'Deployable FOB';
+_o pushBack 20000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob";
+_d pushBack 0;
+
+_c pushBack 'O_Truck_02_box_F';
+_p pushBack '';
+_n pushBack 'Deployable Large FOB';
+_o pushBack 40000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob-large";
 _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_East';
@@ -740,7 +750,7 @@ _p pushBack '';
 _n pushBack 'Orca Armed';
 _o pushBack 18500;
 _t pushBack 20;
-_u pushBack 2;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
