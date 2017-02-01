@@ -687,7 +687,37 @@ _o pushBack 4000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "service-fueltruck";
+_d pushBack 10;
+
+_c pushBack 'rhs_gaz66_repair_msv';
+_p pushBack '';
+_n pushBack 'GAZ-66 Repair';
+_o pushBack 6000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
+_d pushBack 10;
+
+_c pushBack 'rhs_gaz66_r142_msv';
+_p pushBack '';
+_n pushBack 'GAZ-66 R-142 FOB Truck';
+_o pushBack 20000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob";
+_d pushBack 10;
+
+_c pushBack 'rhs_gaz66_r142_msv';
+_p pushBack '';
+_n pushBack 'KamaZ-63968 Large FOB Truck';
+_o pushBack 40000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "deployable-fob-large";
 _d pushBack 10;
 
 //--- Ammo Vehicles
