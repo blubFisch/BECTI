@@ -17,7 +17,7 @@ enableCamShake true;
 		_tremurici = ["tremurat_1","tremurat_2","NoSound","tremurat_3","tremurat_4","rafala_8"] call BIS_fnc_selectRandom;
 		playSound _tremurici;
 // >>>>  tweak the sleep value to increase or decrease time between player's shivering
-		sleep 60+random ambient_sounds_al;
+		sleep 240+random ambient_sounds_al;
 	};
 };
 
