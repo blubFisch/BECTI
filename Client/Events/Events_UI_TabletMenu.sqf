@@ -145,8 +145,10 @@ switch (_action) do {
 			//--- Request a new vote
 			[CTI_P_SideJoined, name player] remoteExec ["CTI_PVF_SRV_RequestCommanderVote", CTI_PV_SERVER];
 			
+			//--- Close this menu and let the server-to-client PVF open the Vote menu
+			closeDialog 0;
 			//--- Don't lock this script
-			0 spawn {
+			/*0 spawn {
 				(name player) remoteExec ["CTI_PVF_CLT_OnNewCommanderVote", CTI_P_SideJoined];
 				
 			
@@ -154,17 +156,11 @@ switch (_action) do {
 				
 				if (alive player && dialog) then {
 					closeDialog 0;
-					CTI_P_LastRootMenu = "CTI_RscTabletOptions";
-					if (CTI_DEV_MODE == 0) then {
-						hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Commander vote will start in 15 seconds.";
-						sleep 15;
-					};
 					createDialog "CTI_RscVoteMenu";
 				};
-			};
+			};*/
 		} else {
 			closeDialog 0;
-			CTI_P_LastRootMenu = "CTI_RscTabletOptions";
 			createDialog "CTI_RscVoteMenu";
 		};
 	};
