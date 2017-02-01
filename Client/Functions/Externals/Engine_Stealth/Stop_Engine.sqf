@@ -1,5 +1,5 @@
 private ["_fuel","_vehicle","_ID"];
-_vehicle = vehicle (_this select 0);
+_vehicle = _this;
 _vehicle EngineOn false;
 _vehicle setVariable ["Fuel",fuel _vehicle, true];
 _vehicle setFuel 0;
