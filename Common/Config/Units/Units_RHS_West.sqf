@@ -1296,7 +1296,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 1
+_d pushBack 10;
 
 //--- Repair Vehicles
 _c pushBack 'rhsusf_M977A4_usarmy_d';
