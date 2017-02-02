@@ -14,5 +14,5 @@ if (isNil{_vehicle getVariable "StealthOn"} ) then {//if off
 } else {// if on
 	_vehicle setVariable ["StealthOn", nil, true];
 //	(_this) spawn Stealth_FNC_Off;
-    (_vehicle) spawn Stealth_FNC_On;
+    (_vehicle) spawn Stealth_FNC_Off;
 };
