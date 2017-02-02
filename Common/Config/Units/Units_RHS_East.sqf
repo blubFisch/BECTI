@@ -753,7 +753,7 @@ _s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'RHS_Mi8mt_Cargo_vvsc';
-_p pushBack ''
+_p pushBack '';
 _n pushBack (format ["GMi-8MT Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 11000;
 _t pushBack 30;

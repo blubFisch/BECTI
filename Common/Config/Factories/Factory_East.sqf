@@ -1122,6 +1122,9 @@ if (CTI_RHS_ADDON > 0) then {
 //Universal RHS
 _u pushBack 'RHS_Ural_Fuel_MSV_01';
 _u pushBack 'rhs_kamaz5350_flatbed_msv';
+_u pushBack 'rhs_gaz66_repair_msv';
+_u pushBack 'rhs_gaz66_r142_msv';
+_u pushBack 'rhs_typhoon_vdv';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
