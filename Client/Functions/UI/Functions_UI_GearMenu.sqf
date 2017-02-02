@@ -323,6 +323,10 @@ CTI_UI_Gear_DisplayShoppingItems = {
 		_upgrade_gear = _upgrades select CTI_UPGRADE_TOWNS;
 	};
 	
+	if (!(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then { //checks if players is not near a structure/special unit that will allow purchasing of gear. If player isn't near a structure that allows purchasing of gear then player will have an empty equipment list. 
+		_upgrade_gear = -1;
+	};
+	
 	if (CTI_DEBUG) then {_upgrade_gear=10};
 	
 	if (_tab != CTI_GEAR_TAB_TEMPLATES) then { //--- Generic items

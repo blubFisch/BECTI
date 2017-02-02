@@ -13,7 +13,14 @@ switch (_action) do {
 		if (_dragging) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
 		// (findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "if (uiNamespace getVariable ['cti_dialog_ui_gear_dragging', false]) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Functions\UI\Function_UI_Gear_Events.sqf'}"];
 		(findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "_dragging = if (isNil{uiNamespace getVariable 'cti_dialog_ui_gear_dragging'}) then {false} else {uiNamespace getVariable 'cti_dialog_ui_gear_dragging'}; if (_dragging) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'}"];
+	if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot) && !CTI_P_PreBuilding) then {
+		ctrlEnable [70030, true];
+		ctrlEnable [70029, true];
+	} else { // disabled reload and clear options on gear menu
+		ctrlEnable [70030, false];
+		ctrlEnable [70029, false];
 	};
+    };
 	case "onShoppingTabClicked": { //--- A shopping tab was clicked upon
 		//--- New tab
 		_changedto = _this select 1;
