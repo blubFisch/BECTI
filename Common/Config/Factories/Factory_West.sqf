@@ -655,7 +655,7 @@ _u pushBack 'rhsusf_rg33_m2_usmc_wd';
 _u pushBack 'rhsusf_M1232_M2_usarmy_wd';
 _u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
 _u pushBack 'rhsusf_m998_d_2dr_fulltop';
-_u pushBack 'rhsusf_m1025_d_m2'
+_u pushBack 'rhsusf_m1025_d_m2';
 _u pushBack 'rhsusf_m1025_d_Mk19';
 _u pushBack 'rhsusf_m998_d_2dr_fulltop';
 _u pushBack 'rhsusf_m998_d_4dr_fulltop';
