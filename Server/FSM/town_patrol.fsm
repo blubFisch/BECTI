@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "D:\tools\BIS\FSM Editor Personal Edition\scriptedFSM.cfg, town_patrol.fsm">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, town_patrol.fsm">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init",0,250,-300.000000,-475.000000,-200.000000,-425.000000,0.000000,"Init"};
@@ -40,8 +40,8 @@ link17[] = {14,17};
 link18[] = {15,16};
 link19[] = {16,17};
 link20[] = {17,13};
-globals[] = {25.000000,1,0,0,0,640,480,1,56,6316128,1,-119.987610,503.362183,31.759491,-665.330200,852,911,1};
-window[] = {2,-1,-1,-1,-1,904,50,1510,50,3,870};
+globals[] = {25.000000,1,0,0,0,640,480,1,56,6316128,1,-228.605911,394.743958,287.086487,-653.919128,469,708,1};
+window[] = {0,-1,-1,-1,-1,915,955,2415,61,1,487};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -214,7 +214,7 @@ class FSM
        "	_capturable = true;" \n
        "	" \n
        "	//--- If we need all camps to capture the town, make sure that they belong to the team's before capturing the depot, skip naval towns" \n
-       "	if (_capture_mode in [1,2] && !_is_naval) then { " \n
+       "	if (_capture_mode in [2] && !_is_naval) then { " \n
        "		if (count(_town call CTI_CO_FNC_GetTownCamps) != count([_town, _sideID] call CTI_CO_FNC_GetTownCampsOnSide)) then {_capturable = false};" \n
        "	};" \n
        "	" \n
