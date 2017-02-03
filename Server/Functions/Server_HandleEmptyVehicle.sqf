@@ -28,7 +28,12 @@
 private ["_delay", "_timeout", "_vehicle"];
 
 _vehicle = _this select 0;
-_delay = if (count _this > 1) then {_this select 1} else {missionNamespace getVariable "CTI_VEHICLES_EMPTY_TIMEOUT"};
+_delay = 0;
+if !(isNil {_vehicle getVariable "cti_spec"}) then { //--- if special vehicle
+	_delay = if (count _this > 1) then {_this select 1} else {missionNamespace getVariable "CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT"};
+} else {
+	_delay = if (count _this > 1) then {_this select 1} else {missionNamespace getVariable "CTI_VEHICLES_EMPTY_TIMEOUT"};
+};
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_HandleEmptyVehicle.sqf", format["Handling emptiness expiration for vehicle [%1] with a delay of [%2]", _vehicle, _delay]] call CTI_CO_FNC_Log;
