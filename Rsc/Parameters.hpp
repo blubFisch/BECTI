@@ -369,7 +369,7 @@ class Params {
 		title = "TEAM: Team Stack protection";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Disabled","+1 Player","+2 Players","+3 Players","+4 Players","+5 Players"};
-		default = 2;
+		default = 1;
 	};
 	class SEPARATOR8 {
 		title = "======================== MAP SETTINGS =========================";
