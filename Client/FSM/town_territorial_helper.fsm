@@ -108,11 +108,11 @@ class FSM
        "			_count_enemies = [_objects, CTI_P_SideJoined] call CTI_CO_FNC_GetAreaEnemiesCount;" \n
        "			if (_count_enemies > 0) then {" \n
        "				_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
-       "				if (_last_alert < time ) then {" \n
-       "					if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren_1"",100] call Common_Say3D;};" \n
+       "				//if (_last_alert < time ) then {" \n
+       "					//if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren_1"",100] call Common_Say3D;};" \n
        "						//---only play every 15min					" \n
-       "						_last_alert = time + 900; " \n
-       "				};" \n
+       "					//	_last_alert = time + 900; " \n
+       "				//};" \n
        "			};" \n
        "			" \n
        "			_marker setMarkerAlphaLocal 0.3;" \n
