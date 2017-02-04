@@ -1762,6 +1762,15 @@ _u pushBack 3;
 _p pushBack 600;
 
 //Ammo
+
+_i pushBack "rhs_mag_9x19mm_7n31_44";
+_u pushBack 0;
+_p pushBack 50;
+
+_i pushBack "rhsgref_5Rnd_762x54_m38";
+_u pushBack 0;
+_p pushBack 50;
+
 _i pushBack "rhs_100Rnd_762x54mmR";
 _u pushBack 0;
 _p pushBack 50;
