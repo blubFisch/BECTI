@@ -26,3 +26,11 @@ if(ZAM_showNames_default_on) then {
 	sleep 5;
 	player call ZAM_fnc_showNames_Press;
 };
+
+//hide score on HUD
+disableSerialization;
+_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
+if ( !isNull _displayscorehud ) then {
+	_statusscorehud = _displayscorehud displayCtrl 15283;
+	_statusscorehud ctrlShow false;	
+};
