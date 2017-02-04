@@ -5,11 +5,7 @@ tablet_hotkeyDIKCodeNumberWin = 0xDB; //Left Windows
 _keybindtablet = ["OFPS", "toggle_tablet"] call cba_fnc_getKeybind;
 if (!(isNil "_keybindtablet")) then {
 	_actualkeytablet = ((_keybindtablet) select 5) select 0;
-	if (!(isNil "_actualkeytablet")) then {
-		tablet_hotkeyDIKCodeNumberWin = _actualkeytablet;
-	else {
-		tablet_hotkeyDIKCodeNumberWin = 210;
-	};
+	tablet_hotkeyDIKCodeNumberWin = _actualkeytablet;
 };
 publicVariable	"tablet_hotkeyDIKCodeNumberWin";
 
