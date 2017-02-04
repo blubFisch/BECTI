@@ -217,7 +217,11 @@ switch cmEarplugs_myHotkeyChoice do {
 _keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
 if (!(isNil "_keybindear")) then {
 	_actualkeyear = ((_keybindear) select 5) select 0;
-	cmEarplugs_hotkeyDIKCodeNumber = _actualkeyear;
+	if (!(isNil "_actualkeyear")) then {
+		cmEarplugs_hotkeyDIKCodeNumber = _actualkeyear;
+	} else {
+		cmEarplugs_hotkeyDIKCodeNumber = 210;
+	};
 };
 publicVariable	"cmEarplugs_hotkeyDIKCodeNumber";
 
