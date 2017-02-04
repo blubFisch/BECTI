@@ -525,7 +525,7 @@ class Params {
 		title = "WEATHER: Duration of Storms (dust storms and monsoons)";
 		values[] = {-1,60,120,300,600,900,1800,2700,3600,5400,7200,14400};
 		texts[] = {"Random","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min","240min"};
-		default = 900;
+		default = 300;
 	};
   	class CTI_WEATHER_FAST {
 		title = "WEATHER: Day Duration";
