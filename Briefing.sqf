@@ -217,23 +217,26 @@ Removed: Gear crates because they where spawning advance gear in them <br/>
 Removed: D30 from repair trucks<br/>
 
 <font color='#2ae916' size='14'>V1.04</font><br/>
-Added: Spawn on vehicle disabled when enemy closer than 50m<br/>
+Added: Spawn on vehicle disabled when enemy nearby<br/>
 Added: Tank Low Gear / Hill climb<br/>
 Added: Tank Stealth mode<br/>
-Added: Parameter to set all camps required to capture town<br/>
-Added: Base area enemy reporting satellite upgrade. <br/>
-Added: Fuel consumption system / Vehicles will consume more fuel. <br/>
-Added: New satellite base structure used to scan base area for enemy’s<br/>
-Added: Satellite level 1 base cam, level 2 full map cam. <br/>
-Added: FOBs will only be available via deployable vehicle<br/>
-Added: UI helper for towns<br/>
+Added: Paramter to set all camps required to capture town<br/>
+Added: All camps must be captured to capture town<br/>
+Added: Base area enemy reporting sattelite upgrade<br/>
+Added: New satellite base structure <br/>
+Added: Longer despawn timer for service vehicles<br/>
+Added: RHS Support<br/>
+Tweaked: UI Edits<br/>
+Tweaked: Weather no more crazy fog<br/>
+Tweaked: AI Patrols will now take the camps back<br/>
 Fixed: Persistent gear templates<br/>
 Fixed: Gear dup when adding weapons to cargo<br/>
 Fixed: Player starting cash would follow slot and not player<br/>
 Fixed: AI unit cam view<br/>
 Fixed: Patriot not firing on blufor<br/>
+Fixed: AI map labels<br/>
 Fixed: On teamswap player wont loose original gear<br/>
-Tweaked: Gear resell value now at 25%<br/>
-Tweaked: Incrased ammount of AI spawning in towns<br/>
+Fixed: Issue where players could access equipment menu outside base<br/>
+Fixed: Reload and clear buttons are disabled unless near gear source<br/>
 
 "]];
