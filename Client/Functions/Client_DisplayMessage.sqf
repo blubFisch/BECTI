@@ -71,7 +71,12 @@ switch (_message_var) do {
 			};
 		};
 	};
-	case "commander-vote-start": {CTI_P_ChatID commandChat format["%1 has initiated a commander vote!", _parameters]};//--- Todo, popup system with helper on/off
+	case "commander-vote-start": {
+		CTI_P_ChatID commandChat format["%1 has initiated a commander vote!", _parameters];
+		if (CTI_DEV_MODE == 0) then {
+			hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Commander vote will start in 15 seconds.";
+		};
+	};//--- Todo, popup system with helper on/off
 	case "defense-destroyed": {
 		_var = missionNamespace getVariable (_parameters select 0);
 		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select 0), mapGridPosition (_parameters select 1)];

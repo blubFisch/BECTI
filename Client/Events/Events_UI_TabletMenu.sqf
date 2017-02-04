@@ -149,17 +149,9 @@ switch (_action) do {
 			//--- Close this menu and let the server-to-client PVF open the Vote menu
 			closeDialog 0;
 			//--- Don't lock this script
-			/*0 spawn {
+			0 spawn {
 				(name player) remoteExec ["CTI_PVF_CLT_OnNewCommanderVote", CTI_P_SideJoined];
-				
-			
-				waitUntil{CTI_P_SideLogic getVariable "cti_votetime" > -1 || !alive player || !dialog};
-				
-				if (alive player && dialog) then {
-					closeDialog 0;
-					createDialog "CTI_RscVoteMenu";
-				};
-			};*/
+			};
 		} else {
 			closeDialog 0;
 			createDialog "CTI_RscVoteMenu";

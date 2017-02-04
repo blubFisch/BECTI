@@ -68,7 +68,9 @@ with missionNamespace do {
 				};
 				if (_vote_update) then {_x setVariable ["cti_vote", _team, true]};
 			} forEach (_logic getVariable "cti_teams");
-			
+			if (CTI_DEV_MODE == 0) then {
+				sleep 15;
+			};
 			//--- Call in for a vote
 			(_side) Spawn CTI_SE_FNC_VoteForCommander;
 		};

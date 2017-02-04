@@ -6,16 +6,16 @@ waituntil {!isnull (finddisplay 46)};
 
 //KEYBINDS Refresh
 _keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
-if (!(isNil "_keybindear")) then {
+if (!isNil "_keybindear") then {
 	_actualkeyear = ((_keybindear) select 5) select 0;
-	if (!(isNil "_actualkeyear")) then {
+	if (!isNil "_actualkeyear") then {
 		cmEarplugs_hotkeyDIKCodeNumber = _actualkeyear;
-	else {
-		cmEarplugs_hotkeyDIKCodeNumber = 210;
+	} else {
+		cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT;
 	};
 };
 _keybindtablet = ["OFPS", "toggle_tablet"] call cba_fnc_getKeybind;
-if (!(isNil "_keybindtablet")) then {
+if (!isNil "_keybindtablet") then {
 	_actualkeytablet = ((_keybindtablet) select 5) select 0;
 	tablet_hotkeyDIKCodeNumberWin = _actualkeytablet;
 };
