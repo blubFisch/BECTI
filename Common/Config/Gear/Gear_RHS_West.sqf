@@ -887,7 +887,7 @@ _p pushBack 100;
 
 _i pushBack "rhsusf_lwh_helmet_marpatwd";
 _u pushBack 0;
-_p pushBack 150
+_p pushBack 150;
 
 _i pushBack "rhsusf_lwh_helmet_marpatwd_blk_ess";
 _u pushBack 1;
