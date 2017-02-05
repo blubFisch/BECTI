@@ -219,7 +219,7 @@ if (CTI_CUP_ADDON > 0) then {
 		["CUP_H_RUS_6B27_NVG_olive",""],[["CUP_NVG_PVS7","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
 
 	};
-}else {
+} else {
     if (CTI_RHS_ADDON > 0) then { 
         if (CTI_FACTION_WEST == 0) then {
     	//Arid RHS
@@ -278,7 +278,7 @@ if (CTI_CUP_ADDON > 0) then {
 			[""v_bandollierb_ghex_f"",[""firstaidkit"",""rhs_mag_rgd5"",""rhs_mag_rgd5"",""rhs_mag_rgd5"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20""]],
 			[""rhs_medic_bag"",[""rhs_mag_rgd5"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20"",""rhs_mag_9x19mm_7n21_20""]]],[""rhs_6b26"",""""],[["""",""binocular""],
 			[""itemmap"","""",""itemradio"",""itemcompass"",""itemwatch""]]]
-    
+		};
 	} else {
         //Default Vanilla
         missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
