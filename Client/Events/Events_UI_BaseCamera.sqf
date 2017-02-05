@@ -4,7 +4,7 @@ _action = _this select 0;
 switch (_action) do {
 	case "onLoad": {
 		_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
-		_closestsatuplink = [CTI_BARRACKS, player, _structures] call CTI_CO_FNC_GetClosestStructure;
+		_closestsatuplink = [CTI_SATELLITE, player, _structures] call CTI_CO_FNC_GetClosestStructure;
 		if !(alive _closestsatuplink) exitWith {closeDialog 0};
 		
 		_pos = getPos _closestsatuplink;
@@ -48,7 +48,7 @@ switch (_action) do {
 		
 		if (isNil {uiNamespace getVariable "cti_dialog_ui_basecam_viewmode"}) then {uiNamespace setVariable ["cti_dialog_ui_basecam_viewmode", 0]};
 		_mode = "Normal";
-		switch (uiNamespace getVariable "cti_dialog_ui_basecam_viewmode") do { case 1: {_mode = "NVG"; camUseNVG true }; };
+		switch (uiNamespace getVariable "cti_dialog_ui_basecam_viewmode") do { case 1: {_mode = "NVG"; camUseNVG true }; case 2: {_mode = "Thermals"; true setCamUseTi 0}; };
 		((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177013) ctrlSetText _mode;
 		
 		if (ctrlText ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) == "") then { ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) ctrlSetText "Feed: No Target" };
@@ -71,11 +71,12 @@ switch (_action) do {
 	};
 	case "onViewModeChanged": {
 		_mode = (uiNamespace getVariable "cti_dialog_ui_basecam_viewmode") + 1;
-		if (_mode > 1) then { _mode = 0 };
+		if (_mode > 2) then { _mode = 0 };
 		uiNamespace setVariable ["cti_dialog_ui_basecam_viewmode", _mode];
 		switch (_mode) do { 
-			case 1: {_mode = "NVG"; camUseNVG true}; 
-			default {_mode = "Normal"; camUseNVG false};
+			case 1: {_mode = "NVG"; camUseNVG true; false setCamUseTi 0;}; 
+			case 2: {_mode = "Thermals"; true setCamUseTi 0; camUseNVG false;}; 
+			default {_mode = "Normal"; camUseNVG false; false setCamUseTi 0;};
 		};
 		((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177013) ctrlSetText _mode;
 	};
