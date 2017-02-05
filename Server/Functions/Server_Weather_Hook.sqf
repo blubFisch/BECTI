@@ -23,7 +23,7 @@ _monsoon_variance_coef_setting = 1;
 _variance_time_setting = 3600;
 _storm_time_setting = 120;
 //Collect Params
-if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random 1 };
+if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.25,0.5] };
 if (CTI_WEATHER_RAIN >= 0) then { _rain_setting = CTI_WEATHER_RAIN / 100 };
 if (CTI_WEATHER_RAIN_COEF == 0) then {_rain_variance_coef_setting = 1};
 if (CTI_WEATHER_RAIN_COEF > 0) then {_rain_variance_coef_setting = CTI_WEATHER_RAIN_COEF};
@@ -166,7 +166,7 @@ while {!CTI_GameOver} do {
 		while {true} do {
 			//apply variance
 			if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
-			if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random 1 };
+			if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.25,0.5] };
 			if (CTI_WEATHER_RAIN_COEF == -1) then {_rain_variance_coef_setting = random (0.99)};
 			if (CTI_WEATHER_OVERCAST == -1) then { _overcast_setting = random 1 };
 			if (CTI_WEATHER_OVERCAST_COEF == -1) then {_overcast_variance_coef_setting = random (0.99)};
