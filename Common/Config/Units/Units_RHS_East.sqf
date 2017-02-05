@@ -817,7 +817,7 @@ _d pushBack 10;
 _c pushBack 'RHS_Su25SM_CAS_vvs';
 _p pushBack '';
 _n pushBack 'Su-25 CAS';
-_o pushBack 250000;
+_o pushBack 25000;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
