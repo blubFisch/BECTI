@@ -424,7 +424,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		_u pushBack 'sfp_m90s_rifleman_ak5';
+		/*_u pushBack 'sfp_m90s_rifleman_ak5';
 		_u pushBack 'sfp_m90s_automaticrifleman_ksp90';
 		_u pushBack 'sfp_m90s_gr';
 		_u pushBack 'sfp_m90s_explosive_specialist';
@@ -434,7 +434,7 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'sfp_m90s_at_specialist_grg86';
 		_u pushBack 'sfp_m90s_crew';
 		_u pushBack 'sfp_m90s_pilot';
-		_u pushBack 'sfp_m90s_medic';
+		_u pushBack 'sfp_m90s_medic';*/
 
 		//Special Forces
 		_u pushBack 'Meaty_Soldier_B_Sn';
@@ -564,9 +564,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_HMMWV_TOW_USMC';
 	_u pushBack 'CUP_B_HMMWV_Transport_USA';
 	_u pushBack 'CUP_B_HMMWV_Terminal_USA';
-	_u pushBack 'sfp_dakota';
-        _u pushBack 'CUP_B_LAV25M240_USMC';
-	//_u pushBack 'sfp_mercedes';
+    _u pushBack 'CUP_B_LAV25M240_USMC';
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid CUP
@@ -610,8 +608,10 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-		_u pushBack 'dbo_CIV_new_bike';
-	//	_u pushBack 'dbo_CIV_ol_bike';
+	//_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
+	//_u pushBack 'dbo_CIV_new_bike';
+	//_u pushBack 'dbo_CIV_ol_bike';
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS
@@ -1478,10 +1478,10 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
-	_u pushBack 'sfp_mercedes';
-	_u pushBack 'usaf_police_car2';
-	_u pushBack 'usaf_police_offroad';
+	//_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
+	//_u pushBack 'usaf_police_car2';
+	//_u pushBack 'usaf_police_offroad';
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS
@@ -1493,8 +1493,8 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		_u pushBack 'sfp_m90s_rifleman_ak5';
-		_u pushBack 'sfp_m90s_crew';
+		//_u pushBack 'sfp_m90s_rifleman_ak5';
+		//_u pushBack 'sfp_m90s_crew';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';
@@ -1590,8 +1590,8 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		_u pushBack 'sfp_m90s_rifleman_ak5';
-		_u pushBack 'sfp_m90s_crew';
+		//_u pushBack 'sfp_m90s_rifleman_ak5';
+		//_u pushBack 'sfp_m90s_crew';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';

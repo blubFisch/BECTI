@@ -613,9 +613,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'OFPS_UAZ_METIS';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_SPG9';
-	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-//	_u pushBack 'dbo_CIV_ol_bike';
+	//_u pushBack 'dbo_CIV_ol_bike';
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -1385,13 +1385,13 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
-	_u pushBack 'sfp_mercedes';
+	//_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
 	_u pushBack 'OFPS_UAZ_AGS30';
-	_u pushBack 'usaf_police_car2';
-	_u pushBack 'usaf_police_offroad';
+	//_u pushBack 'usaf_police_car2';
+	//_u pushBack 'usaf_police_offroad';
 	
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -1485,7 +1485,7 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';

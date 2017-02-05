@@ -129,26 +129,26 @@ _p pushBack 2000;
 //--SFP Stuff
 
 //pistols
-_i pushBack "sfp_kpistm45";
+/*_i pushBack "sfp_kpistm45";
 _u pushBack 0;
 _p pushBack 300;
 
 _i pushBack "sfp_p88";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //sub machine guns
-_i pushBack "sfp_mp5";
+/*_i pushBack "sfp_mp5";
 _u pushBack 0;
 _p pushBack 300;
 
 _i pushBack "sfp_cjb_ms_aimpoint";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 
 //assault 
-_i pushBack "sfp_ak4";
+/*_i pushBack "sfp_ak4";
 _u pushBack 1;
 _p pushBack 300;
 
@@ -174,11 +174,11 @@ _p pushBack 300;
 
 _i pushBack "sfp_ak5c_m203";
 _u pushBack 1;
-_p pushBack 300;
+_p pushBack 300;*/
 
 
 //lmg
-_i pushBack "sfp_ksp90";
+/*_i pushBack "sfp_ksp90";
 _u pushBack 0;
 _p pushBack 300;
 
@@ -189,7 +189,7 @@ _p pushBack 300;
 //snipers
 _i pushBack "sfp_psg90";
 _u pushBack 2;
-_p pushBack 400;
+_p pushBack 400;*/
 
 
 //support
@@ -200,13 +200,13 @@ _i pushBack "20Rnd_762x51_Mag";
 _u pushBack 1;
 _p pushBack 30;
 
-_i pushBack "sfp_9Rnd_762x51_psg90";
-_u pushBack 2;
-_p pushBack 30;
-
 _i pushBack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
 _u pushBack 1;
 _p pushBack 50;
+
+/*_i pushBack "sfp_9Rnd_762x51_psg90";
+_u pushBack 2;
+_p pushBack 30;
 
 _i pushBack "sfp_36Rnd_9mm_kpistm45";
 _u pushBack 0;
@@ -258,10 +258,10 @@ _p pushBack 30;
 
 _i pushBack "sfp_12Gauge_8rd_Pellets";
 _u pushBack 0;
-_p pushBack 30;
+_p pushBack 30;*/
 
 //explosives
-_i pushBack "sfp_flashbang";
+/*_i pushBack "sfp_flashbang";
 _u pushBack 0;
 _p pushBack 50;
 
@@ -283,11 +283,11 @@ _p pushBack 50;
 
 _i pushBack "sfp_sprdeg46_mag";
 _u pushBack 0;
-_p pushBack 50;
+_p pushBack 50;*/
 
 
 //attachments
-_i pushBack "sfp_optic_aimpoint";
+/*_i pushBack "sfp_optic_aimpoint";
 _u pushBack 0;
 _p pushBack 50;
 
@@ -301,7 +301,7 @@ _p pushBack 50;
 
 _i pushBack "sfp_tlr2";
 _u pushBack 0;
-_p pushBack 50;
+_p pushBack 50;*/
 
 
 //backpacks
