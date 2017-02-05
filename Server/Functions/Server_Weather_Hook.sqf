@@ -23,7 +23,7 @@ _monsoon_variance_coef_setting = 1;
 _variance_time_setting = 3600;
 _storm_time_setting = 120;
 //Collect Params
-if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.25,0.5] };
+if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.2,0.5] };
 if (CTI_WEATHER_RAIN >= 0) then { _rain_setting = CTI_WEATHER_RAIN / 100 };
 if (CTI_WEATHER_RAIN_COEF == 0) then {_rain_variance_coef_setting = 1};
 if (CTI_WEATHER_RAIN_COEF > 0) then {_rain_variance_coef_setting = CTI_WEATHER_RAIN_COEF};
@@ -31,7 +31,7 @@ if (CTI_WEATHER_OVERCAST == -1) then { _overcast_setting = random 1 };
 if (CTI_WEATHER_OVERCAST >= 0) then { _overcast_setting = CTI_WEATHER_OVERCAST / 100 };
 if (CTI_WEATHER_OVERCAST_COEF == 0) then {_overcast_variance_coef_setting = 1};
 if (CTI_WEATHER_OVERCAST_COEF > 0) then {_overcast_variance_coef_setting = CTI_WEATHER_OVERCAST_COEF};
-if (CTI_WEATHER_FOG == -1) then { _fog_setting = random [0,0.1,0.5] };
+if (CTI_WEATHER_FOG == -1) then { _fog_setting = random [0,0.05,0.3] };
 if (CTI_WEATHER_FOG >= 0) then { _fog_setting = CTI_WEATHER_FOG / 100 };
 if (CTI_WEATHER_FOG_COEF == 0) then {_fog_variance_coef_setting = 1};
 if (CTI_WEATHER_FOG_COEF > 0) then {_fog_variance_coef_setting = CTI_WEATHER_FOG_COEF};
@@ -166,11 +166,11 @@ while {!CTI_GameOver} do {
 		while {true} do {
 			//apply variance
 			if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
-			if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.25,0.5] };
+			if (CTI_WEATHER_RAIN == -1) then { _rain_setting = random [0,0.2,0.5] };
 			if (CTI_WEATHER_RAIN_COEF == -1) then {_rain_variance_coef_setting = random (0.99)};
 			if (CTI_WEATHER_OVERCAST == -1) then { _overcast_setting = random 1 };
 			if (CTI_WEATHER_OVERCAST_COEF == -1) then {_overcast_variance_coef_setting = random (0.99)};
-			if (CTI_WEATHER_FOG == -1) then { _fog_setting = random [0,0.1,0.5]};
+			if (CTI_WEATHER_FOG == -1) then { _fog_setting = random [0,0.05,0.3] };
 			if (CTI_WEATHER_FOG_COEF == -1) then {_fog_variance_coef_setting = random (0.99)};
 			if (CTI_WEATHER_FOG_DECAY == -1) then { _fog_decay_setting = random 1 };
 			if (CTI_WEATHER_FOG_DECAY_COEF == -1) then {_fog_decay_variance_coef_setting = random (0.99)};

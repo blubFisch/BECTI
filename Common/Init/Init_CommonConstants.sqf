@@ -504,7 +504,7 @@ CTI_BASE_SUPPLY_DEPOT_VALUE = 5000; //--- Supply depot supply value
 //--- Base: Large FOB
 CTI_TOWNS_LARGE_FOB_BUILD_DIRECTION = 0; //--- Determine the direction a vehicle will use while being spawned from the Large FOB
 CTI_TOWNS_LARGE_FOB_BUILD_DISTANCE = 20; //--- Determine how far a unit/vehicle will spawn from the Large FOB
-CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_Cargo_House_V3_F", "WarfareBDepot"]; //--- The classname(s) used for town depots in editor
+CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_BagBunker_Large_F", "WarfareBDepot"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be from a Large FOB in order to use it
 
 //--- Base: Misc
