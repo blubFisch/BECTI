@@ -224,7 +224,7 @@ if (CTI_CUP_ADDON > 0) then {
          if (CTI_FACTION_WEST == 0) then {
     	//Arid RHS
 		missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base"]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
+		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["","",""]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
     	};
     	if (CTI_FACTION_EAST == 0) then {	
     	missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
@@ -234,7 +234,7 @@ if (CTI_CUP_ADDON > 0) then {
     	if (CTI_FACTION_WEST == 1) then {
     	// Tropic RHS
     	missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base"]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
+		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["","",""]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
     	};
     	if (CTI_FACTION_EAST == 1) then {	
     	missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
@@ -243,7 +243,7 @@ if (CTI_CUP_ADDON > 0) then {
     	if (CTI_FACTION_WEST == 2) then {
     	//Winter RHS
     	missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base","rhs_mag_m18_smoke_base"]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
+		[["smg_05_f",["","acc_flashlight","",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["rhs_uniform_cu_ocp",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["rhs_vest_commander",["","",""]],["rhs_medic_bag",["firstaidkit","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
     	};
     	if (CTI_FACTION_EAST == 2) then {	
     	missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [

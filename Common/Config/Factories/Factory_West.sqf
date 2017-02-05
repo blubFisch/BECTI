@@ -198,44 +198,40 @@ if (CTI_RHS_ADDON > 0) then {
 		//DEFUALT RHS SET
 		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 			["rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy", [
-				["CUP_launch_M136", 5], 
-				["CUP_M136_M", 20],
-				["CUP_8Rnd_B_Beneli_74Slug", 20],
-				["CUP_8Rnd_B_Beneli_74Pellets", 20],
-				["CUP_sgun_M1014", 10],
-				["CUP_30Rnd_9x19_MP5", 20],
+				["rhs_weap_m72a7", 10], 
+				["rhs_mag_m67", 20],
+				["rhs_weap_M590_8RD", 1],
+				["rhsusf_8Rnd_00Buck", 10],
+				["30rnd_9x21_mag_smg_02", 20],
 				["acc_flashlight", 10],
-				["Toolkit", 1]
+				["Toolkit", 3]
 			]],
 			["rhsusf_M1117_D", [
-				["CUP_launch_M136", 5], 
-				["CUP_M136_M", 20],
-				["CUP_8Rnd_B_Beneli_74Slug", 20],
-				["CUP_8Rnd_B_Beneli_74Pellets", 20],
-				["CUP_sgun_M1014", 10],
-				["CUP_30Rnd_9x19_MP5", 20],
+				["rhs_weap_m72a7", 10], 
+				["rhs_mag_m67", 20],
+				["rhs_weap_M590_8RD", 1],
+				["rhsusf_8Rnd_00Buck", 10],
+				["30rnd_9x21_mag_smg_02", 20],
 				["acc_flashlight", 10],
-				["Toolkit", 1]
+				["Toolkit", 3]
 			]],
 			["rhsusf_rg33_usmc_d", [
-				["CUP_launch_M136", 5], 
-				["CUP_M136_M", 20],
-				["CUP_8Rnd_B_Beneli_74Slug", 20],
-				["CUP_8Rnd_B_Beneli_74Pellets", 20],
-				["CUP_sgun_M1014", 10],
-				["CUP_30Rnd_9x19_MP5", 20],
+				["rhs_weap_m72a7", 10], 
+				["rhs_mag_m67", 20],
+				["rhs_weap_M590_8RD", 1],
+				["rhsusf_8Rnd_00Buck", 10],
+				["30rnd_9x21_mag_smg_02", 20],
 				["acc_flashlight", 10],
-				["Toolkit", 1]
+				["Toolkit", 3]
 			]],
 			["rhsusf_M1237_M2_usarmy_wd", [
-				["CUP_launch_M136", 5], 
-				["CUP_M136_M", 20],
-				["CUP_8Rnd_B_Beneli_74Slug", 20],
-				["CUP_8Rnd_B_Beneli_74Pellets", 20],
-				["CUP_sgun_M1014", 10],
-				["CUP_30Rnd_9x19_MP5", 20],
+				["rhs_weap_m72a7", 10], 
+				["rhs_mag_m67", 20],
+				["rhs_weap_M590_8RD", 1],
+				["rhsusf_8Rnd_00Buck", 10],
+				["30rnd_9x21_mag_smg_02", 20],
 				["acc_flashlight", 10],
-				["Toolkit", 1]
+				["Toolkit", 3]
 			]]
 			//,	["B_Heli_Transport_01_F", []]
 		]];

@@ -185,40 +185,44 @@ if (CTI_RHS_ADDON > 0) then {
 		//DEFAULT RHS SET
 		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 			["rhs_gaz66_ap2_msv", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 10],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
 				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
+				["30rnd_9x21_mag", 20]
 			]],
 			["RHS_UAZ_MSV_01", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
 				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
-				["30Rnd_9x21_Mag", 20]
+				["30rnd_9x21_mag", 20]
 			]],
 			["rhs_tigr_sts_msv", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
 				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
+				["30rnd_9x21_mag", 20]
 			]],
 			["rhs_btr60_msv", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
 				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
+				["30rnd_9x21_mag", 20]
 			]]
 			//,	["O_Heli_Light_02_unarmed_F", []]
 		]];
