@@ -607,7 +607,7 @@ _o pushBack 500;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "";
+_s pushBack "service-fueltruck";
 _d pushBack 0;
 
 _c pushBack 'CTI_Salvager_West';
