@@ -60,7 +60,11 @@ if (CTI_SPECIAL_AMMOTRUCK in _special) then { //--- Ammo truck.
 	_marker_type = CTI_P_MarkerPrefix+"support";
 	_vehicle setAmmoCargo 0;  // No free ammo
 };
-
+if (CTI_SPECIAL_FUELTRUCK in _special) then { //--- Fuel truck.
+	_marker_size = [0.75,0.75];
+	_marker_type = CTI_P_MarkerPrefix+"support";
+	_vehicle setAmmoCargo 0;  // No free ammo
+};
 if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"med";
