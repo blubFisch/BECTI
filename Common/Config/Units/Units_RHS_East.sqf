@@ -406,8 +406,8 @@ _d pushBack 10;
 
 _c pushBack 'rhs_9k79';
 _p pushBack '';
-_n pushBack '9P129-1M 9M79-1-F';
-_o pushBack 12000;
+_n pushBack '9P129-1M (HE Warhead)';
+_o pushBack 120000;
 _t pushBack 30;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -416,8 +416,8 @@ _d pushBack 10;
 
 _c pushBack 'rhs_9k79_K';
 _p pushBack '';
-_n pushBack '9P129-1M 9M79-1-K';
-_o pushBack 12000;
+_n pushBack '9P129-1M (Cluster Warhead)';
+_o pushBack 150000;
 _t pushBack 30;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -458,7 +458,7 @@ _d pushBack 10;
 
 _c pushBack 'rhs_pts_vmf';
 _p pushBack '';
-_n pushBack 'PTS-M carrier';
+_n pushBack 'PTS-M Carrier';
 _o pushBack 3000;
 _t pushBack 30;
 _u pushBack 0;
@@ -466,15 +466,17 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
+
 _c pushBack 'rhs_prp3_msv';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 10000;
+_o pushBack 1200;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+
 
 _c pushBack 'rhs_bmp1p_msv';
 _p pushBack '';
@@ -489,16 +491,16 @@ _d pushBack 10;
 _c pushBack 'rhs_bmd2';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 10000;
+_o pushBack 7000;
 _t pushBack 30;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'rhs_bmd1r';
 _p pushBack '';
-_n pushBack 'BMD-1R';
+_n pushBack 'BMD-1R (FFAR)';
 _o pushBack 5000;
 _t pushBack 30;
 _u pushBack 0;
@@ -509,7 +511,7 @@ _d pushBack 10;
 _c pushBack 'rhs_zsu234_aa';
 _p pushBack '';
 _n pushBack 'ZSU-23-4V';
-_o pushBack 10000;
+_o pushBack 7000;
 _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -550,9 +552,9 @@ _d pushBack 10;
 _c pushBack 'rhs_t72bb_tv';
 _p pushBack '';
 _n pushBack 'T-72B 1985g';
-_o pushBack 15000;
+_o pushBack 13000;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack ;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -570,9 +572,9 @@ _d pushBack 10;
 _c pushBack 'rhs_bmp3_msv';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 10000;
+_o pushBack 11000;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -590,7 +592,7 @@ _d pushBack 10;
 
 _c pushBack 'rhs_brm1k_msv';
 _p pushBack '';
-_n pushBack 'BRM-1K';
+_n pushBack 'BRM-1K (Ground Radar)';
 _o pushBack 6000;
 _t pushBack 30;
 _u pushBack 0;
@@ -598,12 +600,12 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rhs_t80bv';
+_c pushBack 'rhs_t80bvk';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 10000;
+_o pushBack 17000;
 _t pushBack 30;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -611,9 +613,9 @@ _d pushBack 10;
 _c pushBack 'rhs_bmd4_vdv';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 10000;
+_o pushBack 14000;
 _t pushBack 30;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -633,7 +635,7 @@ _p pushBack '';
 _n pushBack 'BMP-3 Vesna K';
 _o pushBack 14000;
 _t pushBack 30;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -644,7 +646,7 @@ _p pushBack '';
 _n pushBack 'T-90A 2006g';
 _o pushBack 21000;
 _t pushBack 30;
-_u pushBack 4;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
@@ -669,9 +671,9 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rhs_bmd4ma_vdv';
+_c pushBack 'rhs_2s3_tv';
 _p pushBack '';
-_n pushBack 'B2S3M1 Howitzer';
+_n pushBack '2S3M1 Howitzer';
 _o pushBack 150000;
 _t pushBack 30;
 _u pushBack 4;
@@ -803,7 +805,9 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
+// --- Radar Warning Receiver causes microstuttering for all Su-25 and Mi-24s
 
+/*
 _c pushBack 'RHS_Su25SM_vvs';
 _p pushBack '';
 _n pushBack 'Su-25';
@@ -813,7 +817,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Su25SM_CAS_vvs';
 _p pushBack '';
 _n pushBack 'Su-25 CAS';
@@ -823,7 +828,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24V_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24 (CAS)';
@@ -833,7 +839,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24V_FAB_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V FAB';
@@ -843,7 +850,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24V_UPK23_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V UPK';
@@ -853,7 +861,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24P_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24P FAB';
@@ -863,7 +872,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24P_CAS_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24P CAS';
@@ -873,8 +883,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
-
+*/
+/*
 _c pushBack 'RHS_Mi24V_AT_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V AT';
@@ -884,7 +894,8 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
+/*
 _c pushBack 'RHS_Mi24P_AT_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24P AT';
@@ -894,11 +905,11 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
 _c pushBack 'RHS_Ka52_vvsc';
 _p pushBack '';
 _n pushBack 'Ka-52';
-_o pushBack 40000;
+_o pushBack 65000;
 _t pushBack 30;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
@@ -908,13 +919,13 @@ _d pushBack 10;
 _c pushBack 'RHS_Ka52_UPK23_vvsc';
 _p pushBack '';
 _n pushBack 'Ka-52 UPK';
-_o pushBack 40000;
+_o pushBack 65000;
 _t pushBack 30;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+/*
 _c pushBack 'RHS_Su25SM_KH29_vvs';
 _p pushBack '';
 _n pushBack 'Su-25 KH29';
@@ -924,7 +935,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
 _c pushBack 'RHS_T50_vvs_052';
 _p pushBack '';
 _n pushBack 'Sukhoi T-50 2011';
@@ -939,7 +950,7 @@ _d pushBack 10;
 _c pushBack 'RHS_TU95MS_vvs_tambov';
 _p pushBack '';
 _n pushBack 'Tu-95MS6 Bear Tambov';
-_o pushBack 60000;
+_o pushBack 85000;
 _t pushBack 60;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
@@ -949,9 +960,9 @@ _d pushBack 10;
 _c pushBack 'rhs_mi28n_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-28N';
-_o pushBack 35000;
+_o pushBack 55000;
 _t pushBack 30;
-_u pushBack 4;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -959,9 +970,9 @@ _d pushBack 10;
 _c pushBack 'rhs_mi28n_s13_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-28N S-13';
-_o pushBack 37000;
+_o pushBack 55000;
 _t pushBack 30;
-_u pushBack 5;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
