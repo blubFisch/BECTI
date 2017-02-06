@@ -129,7 +129,7 @@ SHK_BuildingPosExec = {
 		};
 	};
 
-	// DisableMove
+	/*// DisableMove
 	private "_disableMove";
 	_disableMove = if (count _this > 5) then { _this select 5 } else { false };
 
@@ -158,5 +158,5 @@ SHK_BuildingPosExec = {
 				if _stance then { _x setunitpos "UP" };
 			};
 		};
-	} foreach _men;
+	} foreach _men;*/
 };
