@@ -68,7 +68,7 @@ switch (_upgrade_basehealth) do {
 /*if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
 };
-if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore") then {
+if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;//roughly 10 aps shells
 };
 if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
