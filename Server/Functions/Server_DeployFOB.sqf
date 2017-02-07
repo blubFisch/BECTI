@@ -48,11 +48,11 @@ switch (_fobtype) do {
 		if (CTI_CUP_ADDON > 0) then { 
 			_damagereduce = 6;
 			_structure setDir (_direction - 180);
-			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
+			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
 		} else {
 			_damagereduce = 6;
 			_structure setDir (_direction - 180);
-			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
+			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
 		};
 	};
 	case "large": {
@@ -65,11 +65,11 @@ switch (_fobtype) do {
 		if (CTI_CUP_ADDON > 0) then { 
 			_damagemult = 4;
 			_structure setDir _direction;
-			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
+			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
 		} else {
 			_damagereduce = 6;
 			_structure setDir _direction;
-			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
+			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6, %7, %8] call CTI_SE_FNC_OnFOBHandleVirtualDamage", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _damagereduce, _damagemult, [_fobclassruins], [_fobtype]]];
 		};
 	};
 };
