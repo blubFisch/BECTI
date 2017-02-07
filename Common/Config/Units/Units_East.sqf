@@ -669,7 +669,7 @@ _n pushBack 'Gear POD';
 _o pushBack 5800;
 _t pushBack 15;
 _u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
+_f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-gear";
 _d pushBack 0;
 
