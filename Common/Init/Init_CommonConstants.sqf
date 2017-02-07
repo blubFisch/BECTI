@@ -511,6 +511,13 @@ CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be fro
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 
+//--- Base: Damage modifiers
+CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1; //--- damage modifier for base structures - BulletCore, ShotgunCore
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 5; //--- damage modifier for base structures - ShellBase, ShellCore
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1; //--- damage modifier for base structures - RocketCore, MissileCore
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1; //--- damage modifier for base structures - BombCore, LaserBombCore
+CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5; //--- damage modifier for base structures - ArtilleryRocketCore
+
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
 CTI_BASE_GEAR_LARGE_FOB_RANGE = 30; //--- Determine how far a player has to be from a FOB to access the Gear Menu
@@ -710,9 +717,11 @@ if (CTI_DEV_MODE > 0) then {
 
 //--- SHK Specific
 CTI_SHK_BUILDING_ENABLED = true;
-CTI_SHK_BUILDING_SAFE_RANGE = 30; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
-CTI_SHK_BUILDING_SCAN_RANGE = 150; //--- The range used to search for building from the town's center
+CTI_SHK_BUILDING_PLACEMENT_CHANCE = 80; //--- An AI Group has x% of chance to be placed in a building
+CTI_SHK_BUILDING_SAFE_RANGE = 50; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
+CTI_SHK_BUILDING_SCAN_RANGE = 100; //--- The range used to search for building from the town's center
 CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)
+CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
 
 with missionNamespace do {
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
