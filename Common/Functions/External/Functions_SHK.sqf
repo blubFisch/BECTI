@@ -130,8 +130,8 @@ SHK_BuildingPosExec = {
 	};
 
 	// DisableMove
-	private "_disableMove";
-	_disableMove = if (count _this > 5) then { _this select 5 } else { false };
+	/*private "_disableMove";
+	_disableMove = if (count _this > 5) then { _this select 5 } else { false };*/
 
 	// Stance
 	private "_stance";
