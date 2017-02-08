@@ -37,6 +37,6 @@ _available = [];
 //		if (_type in _spec && getPos _x select 2 < 5 && CTI_P_SideJoined == side _x) then {_available pushBack _x};
 		if (_type in _spec && getPos _x select 2 < 5 && CTI_P_SideJoined == _initial_side) then {_available pushBack _x};
 	};
-} forEach (_unit nearEntities [["Car", "Ship", "Motorcycle", "Tank", "Air","Slingload_01_Base_F","Pod_Heli_Transport_04_base_F"], _range]);
-
+} forEach (_unit nearEntities [["Car", "Ship", "Motorcycle", "Tank", "Air","Slingload_01_Base_F","Pod_Heli_Transport_04_base_F","O_supplyCrate_F","B_supplyCrate_F"], _range]);
+// to do add base class for "O_supplyCrate_F","B_supplyCrate_F"
 _available
