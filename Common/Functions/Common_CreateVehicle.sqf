@@ -88,7 +88,7 @@ if (_handle) then {
 	_vehicle addEventHandler ["getIn", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; 
 	_vehicle addEventHandler ["getOut", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; 
 	_vehicle setVariable ["cti_occupant", _side];
-	_vehicle setVariable ["initial_side", _side];
+	_vehicle setVariable ["initial_side", _side, true];
 };
 
 //--- Tire protection (Client, HC, Server). TODO: Detect if the vehicle has wheels
