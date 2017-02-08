@@ -33,7 +33,7 @@ _available = [];
 	if !(isNil {_x getVariable "cti_spec"}) then {
 		_spec = _x getVariable "cti_spec";
 		_initial_side = _x getVariable "initial_side";
-		if (isnil {_x getVariable "initial_side"}) then {
+		if (isNil {_x getVariable "initial_side"}) then {
 			_initial_side = "UNKNOWN";
 		};
 		if (typeName _spec != "ARRAY") then {_spec = [_spec]};
