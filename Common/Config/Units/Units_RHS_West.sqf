@@ -12,7 +12,7 @@ _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 
 //--- Infantry USAF
-/*
+
 _c pushBack 'rhsusf_army_ocp_rifleman';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
@@ -172,7 +172,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 
 //--- Light Vehicles
 _c pushBack 'rhsusf_mrzr4_d';

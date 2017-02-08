@@ -13,7 +13,6 @@ _d = []; //--- Extra Distance (From Factory)
 
 //--- Infantry R
 
-/*
 _c pushBack 'rhs_msv_emr_rifleman';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
@@ -173,7 +172,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 
 //--- Light Vehicles
 _c pushBack 'rhsusf_mrzr4_d';
@@ -557,7 +556,7 @@ _p pushBack '';
 _n pushBack 'T-72B 1985g';
 _o pushBack 13000;
 _t pushBack 30;
-_u pushBack ;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
