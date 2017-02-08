@@ -56,8 +56,6 @@ CTI_UI_Respawn_GetMobileRespawn = {
 	_available = [];
 	
 	{
-	_debug = (_x getVariable ["cti_spec", -1]);
-	diag_log _debug;
 		if ((_x getVariable ["cti_spec", -1]) == CTI_SPECIAL_MEDICALVEHICLE && (_x getVariable ["cti_net", -1]) == CTI_P_SideID) then {
 			if (CTI_RESPAWN_MOBILE_SAFE > 0) then { //--- Safeguard? check for enemies around the respawn
 				_cti_entities = _x nearEntities[["Man","Car","Motorcycle","Tank","Air","Ship"], CTI_RESPAWN_MOBILE_SAFE_RANGE];
