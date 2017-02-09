@@ -27,7 +27,9 @@ CTI_SE_FNC_OnClientPurchaseCancelled = compileFinal preprocessFileLineNumbers "S
 CTI_SE_FNC_OnClientPurchaseComplete = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnClientPurchaseComplete.sqf";
 CTI_SE_FNC_OnOnDefenseHandleDamage = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseHandleDamage.sqf";
 CTI_SE_FNC_OnDefenseHandleVirtualDamage = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf";
+CTI_SE_FNC_OnFOBHandleVirtualDamage = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnFOBHandleVirtualDamage.sqf";
 CTI_SE_FNC_OnDefenseDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseDestroyed.sqf";
+CTI_SE_FNC_OnFOBDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnFOBDestroyed.sqf";
 CTI_SE_FNC_OnHQDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnHQDestroyed.sqf";
 CTI_SE_FNC_OnTownCaptured = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownCaptured.sqf";
 CTI_SE_FNC_RepairHQ = compileFinal preprocessFileLineNumbers "Server\Functions\Server_RepairHQ.sqf";
@@ -39,7 +41,7 @@ CTI_SE_FNC_ToggleHQ = compileFinal preprocessFileLineNumbers "Server\Functions\S
 CTI_SE_FNC_TrashObject = compileFinal preprocessFileLineNumbers "Server\Functions\Server_TrashObject.sqf";
 CTI_SE_FNC_UpdateBaseAreas = compileFinal preprocessFileLineNumbers "Server\Functions\Server_UpdateBaseAreas.sqf";
 CTI_SE_FNC_VoteForCommander = compileFinal preprocessFileLineNumbers "Server\Functions\Server_VoteForCommander.sqf";
-
+CTI_SE_FNC_DeployFOB = compileFinal preprocessFileLineNumbers "Server\Functions\Server_DeployFOB.sqf";
 funcCalcAlignPosDir = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\fCalcAlignPosDir.sqf";
 funcVectorAdd = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\fVectorAdd.sqf";
 funcVectorCross = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\fVectorCross.sqf";
@@ -103,6 +105,7 @@ if (_attempts >= 500) then {
 	_hq = [missionNamespace getVariable Format["CTI_%1_HQ", _side], _startPos, 0, _side, true, false] call CTI_CO_FNC_CreateVehicle;
 	_hq setVariable ["cti_gc_noremove", true]; //--- HQ wreck cannot be removed nor salvaged
 	_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
+	_hq setVariable ["cti_mhq_fuel", true]; //--- HQ fuel variable
 	_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
 	if (CTI_BASE_NOOBPROTECTION == 1) then {
 		_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
@@ -137,7 +140,7 @@ if (_attempts >= 500) then {
 	if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {
 		_defense_team = createGroup _side;
 		_defense_team setGroupID ["Defense Team"];
-		_defense_team setBehaviour "COMBAT";
+		_defense_team setBehaviour "AWARE";
 		_defense_team setCombatMode "RED";
 		_defense_team enableAttack true;
 		_logic setVariable ["cti_defensive_team", _defense_team, true];
@@ -264,6 +267,10 @@ if (CTI_ZOMBIE_MODE == 0) then {
 		};
 	};
 };
+
+//--- The server is initialized, notify everyone
+CTI_InitServer = true;
+publicVariable "CTI_InitServer";
 
 // Zeus admin for players
 if !( isNil "ADMIN_ZEUS") then {

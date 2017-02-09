@@ -60,12 +60,26 @@ if (CTI_SPECIAL_AMMOTRUCK in _special) then { //--- Ammo truck.
 	_marker_type = CTI_P_MarkerPrefix+"support";
 	_vehicle setAmmoCargo 0;  // No free ammo
 };
-
+if (CTI_SPECIAL_FUELTRUCK in _special) then { //--- Fuel truck.
+	_marker_size = [0.75,0.75];
+	_marker_type = CTI_P_MarkerPrefix+"support";
+	_vehicle setAmmoCargo 0;  // No free ammo
+};
 if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"med";
 };
 //if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
+if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then { // adds in stealth addaction to tanks and apc. 
+	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","alive _target"]; // any AI or player in any seat can turn on stealth.
+	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth On</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","alive _target &&(isEngineOn _target) && !Local_StealthOn"]; // any AI or player in any seat can turn on stealth.
+	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth Off</t>", "Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf",[],7,false, true,"","alive _target && Local_StealthOn" ];
+};
+if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
+	
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
+};
 
 if (_vehicle isKindOf "Ship") then {
 	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
@@ -111,6 +125,13 @@ if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 	_vehicle addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",4];
 	_vehicle addMagazineCargoGlobal ["APERSTripMine_Wire_Mag",4];
 	_vehicle addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",4];
+};
+
+if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["small"], 10, false, true, "", "(player==driver _target)"];
+};
+if (CTI_SPECIAL_DEPLOYABLEFOBLARGE in _special) then { //--- LARGE FOB vehicle.
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(player==driver _target)"];
 };
 
 //--- Get a proper icon

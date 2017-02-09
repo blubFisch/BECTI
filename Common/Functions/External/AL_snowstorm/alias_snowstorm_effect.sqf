@@ -17,13 +17,13 @@ enableCamShake true;
 		_tremurici = ["tremurat_1","tremurat_2","NoSound","tremurat_3","tremurat_4","rafala_8"] call BIS_fnc_selectRandom;
 		playSound _tremurici;
 // >>>>  tweak the sleep value to increase or decrease time between player's shivering
-		sleep 60+random ambient_sounds_al;
+		sleep 240+random ambient_sounds_al;
 	};
 };
 
 if (terrain_type_vanilla) then {
-// particule in aer
-while {al_snowstorm_om} do {
+	// particule in aer
+	while {al_snowstorm_om} do {
 	effect_screen = ppEffectCreate ["FilmGrain", 2000]; 
 	effect_screen ppEffectEnable true;
 	effect_screen ppEffectAdjust [0.1,0.1,0.5,0.1,0.1,true];
@@ -92,7 +92,7 @@ while {al_snowstorm_om} do {
 		if (vehicle player != player) then {_alias_local_fog attachto [vehicle player];} else {_alias_local_fog attachto [player];};
 		_alias_local_fog setParticleCircle [fulg_p_fog_radius, [3, 3, 0]];
 		_alias_local_fog setParticleRandom [10, [0.25, 0.25, 0], [1, 1, 0], 1, 1, [0, 0, 0, 0.1], 0, 0];
-		_alias_local_fog setParticleParams [["\A3\data_f\cl_basic", 1, 0, 1], "", "Billboard", 1, 12, [0, 0, 0], [-1, -1, 0], 100, 10.15, 7.9, 0.2, [(fulg_p_fog_scale_multiplier * 14), (fulg_p_fog_scale_multiplier * 14), (fulg_p_fog_scale_multiplier * 24)], [[1, 1, 1, (fulg_p_fog_opacity_multiplier * 0.01)], [1, 1, 1, (fulg_p_fog_opacity_multiplier * (0.1+random 0.2))], [1, 1, 1, 0]], [0.08], 1, 0, "", "", vehicle player];	
+		_alias_local_fog setParticleParams [["\A3\data_f\cl_basic", 1, 0, 1], "", "Billboard", 1, 12, [0, 0, 0], [-1, -1, 0], 100, 10.15, 7.9, 0.2, [(fulg_p_fog_scale_multiplier * 14), (fulg_p_fog_scale_multiplier * 14), (fulg_p_fog_scale_multiplier * 24)], [[1, 1, 1, (fulg_p_fog_opacity_multiplier * 0.01)], [1, 1, 1, (fulg_p_fog_opacity_multiplier * (0.05+random 0.15))], [1, 1, 1, 0]], [0.08], 1, 0, "", "", vehicle player];	
 		_alias_local_fog setDropInterval alias_drop_fog_factor;
 		
 		waitUntil {finishRotocol or !al_snowstorm_om};

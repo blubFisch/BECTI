@@ -478,9 +478,9 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 8) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["sfp_strb90_rws"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["sfp_strb90_rws"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then { 
+/*if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then { 
 //--- Swedish Forces TOWN OCCUPATION - WINTER - SAVING FOR USE LATER
-/*	//--- Infantry
+	//--- Infantry
 	GUER_SOLDIER = "sfp_m90s_rifleman_ak5";
 	GUER_SOLDIER_AA = "sfp_m90s_aa_specialist_rbs69";
 	GUER_SOLDIER_AR = "sfp_m90s_automaticrifleman_ksp90";
@@ -530,7 +530,60 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then {
 	GUER_NAVAL_ASSAULT_BOAT2 = ["sfp_strb90_rws"];
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["sfp_strb90_rws"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["sfp_strb90_rws"];
-	*/
+	
+};*/
+if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then { 
+//--- RHS GREF RESISTANCE
+	//--- Infantry
+	GUER_SOLDIER = "rhsgref_cdf_reg_rifleman";
+	GUER_SOLDIER_AA = "rhsgref_cdf_reg_specialist_aa";
+	GUER_SOLDIER_AR = "rhsgref_cdf_reg_machinegunner";
+	GUER_SOLDIER_AT = "rhsgref_cdf_reg_grenadier_rpg";
+	GUER_SOLDIER_CREW = "rhsgref_cdf_reg_crew";
+	GUER_SOLDIER_LAT = "rhsgref_cdf_reg_grenadier_rpg";
+	GUER_SOLDIER_HAT = "rhsgref_cdf_reg_grenadier_rpg";
+	GUER_SOLDIER_ENGINEER = "rhsgref_cdf_reg_engineer";
+	GUER_SOLDIER_EXP = "rhsgref_cdf_reg_engineer";
+	GUER_SOLDIER_GL = "rhsgref_cdf_reg_grenadier";
+	GUER_SOLDIER_MEDIC = "rhsgref_cdf_reg_medic";
+	GUER_SOLDIER_MG = "rhsgref_cdf_reg_machinegunner";
+	GUER_SOLDIER_PILOT = "rhsgref_cdf_air_pilot";
+	GUER_SOLDIER_SNIPER = "rhsgref_cdf_reg_marksman";
+	GUER_SOLDIER_TEAMLEADER = "rhsgref_cdf_reg_squadleader";
+	GUER_SOLDIER_SQUADLEADER = "rhsgref_cdf_reg_squadleader";
+	//--- Naval Infantry
+	GUER_SOLDIER_NAVAL_INFANTRY = "I_diver_F";
+	GUER_SOLDIER_NAVAL_SQUADLEADER = "I_diver_TL_F";
+	//--- Light Vehicles
+	GUER_VEHICLE_LIGHT1 = ["rhsgref_cdf_reg_uaz_dshkm"];
+	GUER_VEHICLE_LIGHT2 = ["rhsgref_cdf_reg_uaz_ags"];
+	GUER_VEHICLE_LIGHT3 = ["rhsgref_BRDM2"];
+	GUER_VEHICLE_LIGHT4 = ["rhsgref_cdf_btr70"];
+	GUER_VEHICLE_LIGHT5 = ["rhsgref_BRDM2_ATGM"];
+	GUER_VEHICLE_LIGHT6 = ["rhsgref_cdf_bmd1"];
+	GUER_VEHICLE_LIGHT7 = ["rhsgref_cdf_bmd2"];
+	//--- APCs
+	GUER_VEHICLE_APC1 = ["rhsgref_cdf_bmp1"];
+	GUER_VEHICLE_APC2 = ["rhsgref_cdf_bmp2e"];
+	GUER_VEHICLE_APC3 = ["rhsgref_cdf_bmp2d"];
+	//--- Tanks
+	GUER_VEHICLE_ARMORED1 = ["rhsgref_cdf_t72ba_tv"];	
+	GUER_VEHICLE_ARMORED2 = ["rhsgref_cdf_t72bb_tv"];
+	GUER_VEHICLE_ARMORED3 = ["rhsgref_cdf_t80bv_tv"];
+	//--- AA Vehicles
+	GUER_VEHICLE_AA1 = ["rhsgref_cdf_ural_Zu23"];
+	GUER_VEHICLE_AA2 = ["rhsgref_cdf_gaz66_zu23"];
+	GUER_VEHICLE_AA3 = ["rhsgref_cdf_zsu234"];
+	//--- Air
+	GUER_AIR_HELI1 = ["rhsgref_cdf_Mi24D"];
+	GUER_AIR_HELI2 = ["rhsgref_cdf_reg_Mi17Sh_UPK"];
+	GUER_AIR_AA = ["rhs_l159_CDF_CAP"];
+	GUER_AIR_CAS = ["rhsgref_cdf_su25"];
+	//--- Boats
+	GUER_NAVAL_ASSAULT_BOAT1 = ["I_Boat_Armed_01_minigun_F"];
+	GUER_NAVAL_ASSAULT_BOAT2 = ["I_Boat_Armed_01_minigun_F"];
+	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
+	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
 //--- Town Teams Templates
 //--- Infantry Squads

@@ -32,21 +32,22 @@
 	Server Function: CTI_SE_FNC_OnBuildingDestroyed
 	
   # EXAMPLE #
-    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
+    _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages"];
+private ["_completion_ratio", "_damage", "_ammo", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
 _shooter = _this select 2;
-_variable = _this select 3;
-_sideID = _this select 4;
-_position = _this select 5;
-_direction = _this select 6;
-_completion_ratio = _this select 7;
-_reduce_damages = _this select 8;
-_multiply_damages = _this select 9;
+_ammo = _this select 3;
+_variable = _this select 4;
+_sideID = _this select 5;
+_position = _this select 6;
+_direction = _this select 7;
+_completion_ratio = _this select 8;
+_reduce_damages = _this select 9;
+_multiply_damages = _this select 10;
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -56,13 +57,29 @@ if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWit
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
 _baseratio = 1;
-		switch (_upgrade_basehealth) do {
-			case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
-			case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
-			case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
-			case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
-			case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
-		};
+switch (_upgrade_basehealth) do {
+	case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
+	case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
+	case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
+	case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
+	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+};
+//Adjust damage for ammo types
+if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
+};
+if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;//roughly 10 aps shells
+};
+if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
+};
+if (_ammo isKindOf "BombCore" || _ammo isKindOf "LaserBombCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
+};
+if (_ammo isKindOf "ArtilleryRocketCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ART;
+};
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;

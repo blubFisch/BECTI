@@ -4,17 +4,17 @@
 
 if (!hasInterface) exitWith {};
 
-enableCamShake true;
+//enableCamShake true;
 
-[] spawn {
+/*[] spawn {
 	while {al_duststorm_on} do {
 		addCamShake [0.1,27,17];
-		sleep 15+random 120;
+		sleep 15+random 240;
 	};
-};
+};*/
 
 // increase
-[] spawn {
+/*[] spawn {
 	grain_sand = 0;
 	while {grain_sand<2} do {
 		effect_screen = ppEffectCreate ["FilmGrain", 2000]; 
@@ -24,9 +24,9 @@ enableCamShake true;
 		grain_sand = grain_sand + 0.1;
 		sleep 0.5;
 	};
-};
+};*/
 
-[] spawn {
+/*[] spawn {
 	sleep 5;
 	col_fct =1;
 	while {col_fct>0.86} do {
@@ -36,7 +36,7 @@ enableCamShake true;
 		col_fct = col_fct-0.001;
 		sleep 0.1;
 	};
-};
+};*/
 
 sleep 15;
 
@@ -74,7 +74,7 @@ while {al_duststorm_on} do {
 	deletevehicle _alias_local_fog;
 };
 //hint "desc";sleep 5;
-col_fct =0.86;
+/*col_fct =0.86;
 	while {col_fct<1} do {
 		"colorCorrections" ppEffectAdjust[col_fct, 1, 0.01, [1-col_fct, 0.17, 0.33, col_fct-1],[col_fct, -0.4, col_fct, col_fct],[0.299, 0.587, 0.114, 1-col_fct]];
 		//"colorCorrections" ppEffectAdjust[1, 1, 0, [0, 0, 0, 0],[1, 1, 1, 1],[0.299, 0.587, 0.114, 0]];
@@ -93,8 +93,8 @@ grain_sand = 0;
 		grain_sand = grain_sand - 0.1;
 		sleep 0.5;
 	};
-	
+	*/
 effect_screen ppEffectEnable false;
 "colorCorrections" ppEffectEnable false;
 ppEffectDestroy effect_screen;
-enableCamShake false;
+//enableCamShake false;

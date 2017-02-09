@@ -1051,16 +1051,6 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'sfp_ikv91';
-_p pushBack '';
-_n pushBack 'AP Tank';
-_o pushBack 10000;
-_t pushBack 20;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;*/
-
 _c pushBack 'CUP_O_2S6_RU';
 _p pushBack '';
 _n pushBack '2S6M Tunguska (3000/6000)';

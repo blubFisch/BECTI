@@ -19,7 +19,6 @@ CTI_CL_FNC_HasAIOrderChanged = compileFinal preprocessFile "Client\Functions\Cli
 CTI_CL_FNC_HookVehicle = compileFinal preprocessFile "Client\Functions\Client_HookVehicle.sqf";
 CTI_CL_FNC_IsPlayerCommander = compileFinal preprocessFile "Client\Functions\Client_IsPlayerCommander.sqf";
 CTI_CL_FNC_InitializeStructure = compileFinal preprocessFile "Client\Functions\Client_InitializeStructure.sqf";
-CTI_CL_FNC_JoinRequestAnswer = compileFinal preprocessFile "Client\Functions\Client_JoinRequestAnswer.sqf";
 CTI_CL_FNC_PlacingBuilding = compileFinal preprocessFile "Client\Functions\Client_PlacingBuilding.sqf";
 CTI_CL_FNC_PlacingDefense = compileFinal preprocessFile "Client\Functions\Client_PlacingDefense.sqf";
 CTI_CL_FNC_OnArtilleryFired = compileFinal preprocessFile "Client\Functions\Client_OnArtilleryFired.sqf";
@@ -45,6 +44,7 @@ CTI_CL_FNC_Death = compileFinal preprocessFile "Client\Functions\Client_Death.sq
 CTI_CL_FNC_UpdateAirRadarMarker = compileFinal preprocessFile "Client\Functions\Client_UpdateAirRadarMarker.sqf";
 CTI_CL_FNC_UpdateRadarMarkerAir = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerAir.sqf";
 CTI_CL_FNC_UpdateRadarMarkerArt = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerArt.sqf";
+CTI_CL_FNC_UpdateRadarSatellite = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarSatellite.sqf";
 
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateClientAI.sqf";
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateOrders.sqf";
@@ -92,22 +92,40 @@ if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngi
 
 if (isMultiplayer) then {
 	//--- Can I join?
-	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this spawn CTI_CL_FNC_JoinRequestAnswer}]; //--- Early PVF, do not spoil the game with the others.
+	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.
+	/* missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this spawn CTI_CL_FNC_JoinRequestAnswer}]; //--- Early PVF, do not spoil the game with the others.
 
 	//--- Enable the player again (sim + visu) in case of no-ai settings
-	/*if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" < 1) then {
+	if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" < 1) then {
 		player enableSimulationGlobal true;
 		player hideObjectGlobal false;
 	};*/
-
-	_last_req = -100;
+	
+	//--- Delay the client start for the server to complete it's part
+	//sleep 1;
+	
+	player setDammage 0;
+	
+	//--- Wait for the server to be initialized before requesting a Join ticket
+	waitUntil {sleep .5; !(isNil 'CTI_InitServer')};
+	
+	//--- Request a join ticket
+	[player, CTI_P_SideJoined] remoteExec ["CTI_PVF_SRV_RequestJoin", CTI_PV_SERVER];
+	
+	waitUntil {
+		sleep 1; 
+		if (CTI_Log_Level >= CTI_Log_Debug) then {["DEBUG", "FILE: Client\Init\Init_Client.sqf", "Awaiting for the Join ticket answer from the server..."] call CTI_CO_FNC_Log};
+		CTI_P_CanJoin
+	};
+	
+	/*_last_req = -100;
 	while {!CTI_P_CanJoin} do {
 		if (time - _last_req > 15) then { _last_req = time; [player, CTI_P_SideJoined] remoteExec ["CTI_PVF_SRV_RequestJoin", CTI_PV_SERVER]};
 		sleep 1;
-	};
-
-	12452 cutText ["", "BLACK IN", 30];
-
+	};*/
+	
+	12452 cutText ["Receiving mission intel...", "BLACK IN", 5];
+	
 	if (CTI_P_Jailed) then {
 		hintSilent "The ride never ends!";
 		0 spawn CTI_CL_FNC_OnJailed;
@@ -151,6 +169,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_OFPS_West.sqf"};
 	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_OFPS_East.sqf"};
 };
+//--- Load RHS Gear
+if (CTI_RHS_ADDON > 0) then {
+	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_RHS_West.sqf"};
+	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_RHS_East.sqf"};
+};
 
 CTI_InitClient = true;
 
@@ -158,13 +181,13 @@ CTI_InitClient = true;
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
 
 player addEventHandler ["killed", {_this spawn CTI_CL_FNC_OnPlayerKilled}];
-if !(CTI_IsServer) then { //--- Pure client execution
+/*if !(CTI_IsServer) then { //--- Pure client execution
 	[player, missionNamespace getVariable format ["CTI_AI_%1_DEFAULT_GEAR", CTI_P_SideJoined]] call CTI_CO_FNC_EquipUnit;
 
 	if (didJIP) then { //--- Attempt to retrieve the last known JIP gear if possible.
 		(player) remoteExec ["CTI_PVF_SRV_RequestJIPGear", CTI_PV_SERVER];
 	};
-};
+};*/
 
 if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileNamespace setVariable ["CTI_PERSISTENT_HINTS", true]; saveProfileNamespace };
 
@@ -430,10 +453,10 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 };
 
 //--- Gear templates (persitent)
-if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined]}) then {call CTI_UI_Gear_InitializeProfileTemplates};
-// profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined], nil];
+if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {call CTI_UI_Gear_InitializeProfileTemplates};
+// profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined], nil];
 // saveProfileNamespace;
-if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
+if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
 
 //--- Graphics/video thread (persistent)
 /*0 spawn {
@@ -522,6 +545,10 @@ FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Extern
 FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
+//low gear script
+execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
+//Stealth script
+execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
 
 player call CTI_CO_FNC_UnitCreated;
 

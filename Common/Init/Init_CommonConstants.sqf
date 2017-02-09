@@ -29,9 +29,10 @@ CTI_RADAR_ART = "RadarArt";
 CTI_HQ_DEPLOY = "HQDeployed";
 CTI_HQ_MOBILIZE = "HQMobilized";
 CTI_SUPPLY_DEPOT = "SupplyDepot";
+CTI_SATELLITE = "Satellite";
 CTI_LARGE_FOB = "LargeFOB";
 
-CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL,CTI_RADAR,CTI_RADAR_ART,CTI_SUPPLY_DEPOT];
+CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL];
 
 CTI_WEST_COLOR = "ColorBlue";
 CTI_EAST_COLOR = "ColorRed";
@@ -67,6 +68,8 @@ CTI_SPECIAL_FUELTRUCK = 3;
 CTI_SPECIAL_GEAR = 4;
 CTI_SPECIAL_NUKETRUCK = 5;
 CTI_SPECIAL_DEFENSETRUCK = 6;
+CTI_SPECIAL_DEPLOYABLEFOB = 7;
+CTI_SPECIAL_DEPLOYABLEFOBLARGE = 8;
 
 CTI_AI_COMMANDER_BUYTO_INFANTRY = 20;
 CTI_AI_COMMANDER_BUYTO_LIGHT = 13;
@@ -305,7 +308,7 @@ CTI_SUBTYPE_UNIFORM = 801;
 CTI_SUBTYPE_BACKPACK = 901;
 
 //--- Gear: Parameters
-CTI_GEAR_RESELL_TAX = 0.5; //--- Owned items are traded for: <item price> * <tax>
+CTI_GEAR_RESELL_TAX = 0.25; //--- Owned items are traded for: <item price> * <tax>
 CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respawn with his last known gear or not
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -330,6 +333,7 @@ CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respaw
 
 //--- Towns: Camps
 CTI_TOWNS_CAMPS_CAPTURE_RANGE = 10; //--- Range needed to capture/protect a camp
+CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 25; //--- Range needed to capture/protect a camp for town AIs
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to match CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE), proc all 5 seconds.
@@ -338,7 +342,8 @@ CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to mat
 CTI_TOWNS_CAPTURE_BOUNTY_COEF = 100; //--- Bounty coefficient upon capture, (max sv * coefficient)
 CTI_TOWNS_CAPTURE_BOUNTY_DELAY = 600; //--- Award the bounty depending if the last town capture happened longer than x seconds ago
 CTI_TOWNS_CAPTURE_DETECTION_MODE = 1; //--- Determine the towns detection mode (0: All, 1: Players, 2: Playable units)
-CTI_TOWNS_CAPTURE_FORCE_MAX = 1; //--- The force determine how many units may try to capture a town (caoture rate = SV - round((units force + camp rate) * town rate))
+CTI_TOWNS_CAPTURE_FORCE_MAX = 2; //--- The force determine how many units may try to capture a town (caoture rate = SV - round((units force + camp rate) * town rate))
+CTI_TOWNS_CAPTURE_PEACE_SCAN_RANGE = 150; //--- This range is used upon town capture to search for enemies around the depot, if none are found peace mode will be triggered
 CTI_TOWNS_CAPTURE_RANGE = 40; //--- The range which a unit/vehicle has to be from a town center to capture it
 CTI_TOWNS_CAPTURE_RATE = 0.5; //--- Determine how fast a town may be captured/protected
 CTI_TOWNS_CAPTURE_RATE_CAMPS = 3; //--- Determine how fast a town may be captured while holding it's camps
@@ -358,9 +363,11 @@ CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an
 
 //--- Towns: Markers
 CTI_TOWNS_MARKERS_MAP_RANGE = 750; //--- Distance required to show the town SV on the map (from a player/player's unit)
-CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorYellow"; //--- The color used for peace-mode towns
+CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorWhite"; //--- The color used for peace-mode towns
+CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorYellow"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
+CTI_TOWNS_PATROL_CAMPS_AI_DEFENSE_MAX = 3; //--- Determine how many Town AI groups may try to capture back one hostile camp
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
 CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town "Max range of waypoints"
 
@@ -368,15 +375,15 @@ CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town "Max range of waypoin
 
 //CTI_TOWNS_OCCUPATION_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 240; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 24;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
-CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 15; //--- Determine the min occupation AI count to present in a town
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 250; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 50; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 190; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 42;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 34; //--- Determine the min occupation AI count to present in a town
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Resistance
 
@@ -386,11 +393,11 @@ CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat
 CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 240; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 24; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
-CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 15; //--- Determine the min resistance AI count to present in a town
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 250; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 50; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 190; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 42; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 34; //--- Determine the min resistance AI count to present in a town
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
@@ -420,6 +427,7 @@ with missionNamespace do {
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI') then {CTI_TOWNS_RESISTANCE_LIMIT_AI = 150}; //--- Determine the soft limit for overall resistance Town AI
 	if (isNil 'CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO') then {CTI_TOWNS_RESISTANCE_LIMIT_AI_QUEUE_RATIO = 40}; //--- Determine the AI queue ratio (Queued unit = Groups * ratio/100)
 	if (isNil 'CTI_TOWNS_TERRITORIAL') then {CTI_TOWNS_TERRITORIAL = 0}; //--- Enable or disable the Territorial mode (Neighbors Capture)
+	if (isNil 'CTI_TOWNS_CAPTURE_MODE') then {CTI_TOWNS_CAPTURE_MODE = 0}; //--- Require camps to capture town
 };
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -456,12 +464,18 @@ CTI_BASE_ARTRADAR_RANGES = [4000, 6000, 12000, 18000]; //--- Ranges used by the 
 CTI_BASE_ARTRADAR_REPORT_COOLDOWN = 300; //--- Time after which an artillery piece may be reported again
 CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY = 8; //--- Time after which a projectile is considered tracked (-1: Disabled)
 
+//--- Base: Satellite
+CTI_BASE_SATELLITE_RANGE_SATCAM = 15000; //--- Determine how far a player has to be from a factory to access the satellite
+CTI_BASE_SATELLITE_BASE_DETECTION_RANGE = 500; //--- Distance from base enemies are detected
+CTI_BASE_SATELLITE_BASE_DETECTION_TIME = 240;  //--- Detection cycle, time between scans
+CTI_BASE_SATELLITE_BASE_BASECAM_HEIGHT = 400;  //--- Height of base camera
+
 //--- Base: Area
 CTI_BASE_AREA_RANGE = 250;
 
 //--- Base: Construction
 CTI_BASE_CONSTRUCTION_BOUNTY = 3; //--- The bounty awarded upon a hostile structure destruction
-CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY = 1; //--- The bounty multiplier awarded upon a hostile defensive structure destruction
+CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY = 0.3; //--- The bounty multiplier awarded upon a hostile defensive structure destruction
 CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT = 500; //--- Decay starts after x seconds unattended.
 CTI_BASE_CONSTRUCTION_DECAY_DELAY = 10; //--- Decay each x seconds.
 CTI_BASE_CONSTRUCTION_DECAY_FROM = 10; //--- Decay of x / 100 each y seconds.
@@ -490,12 +504,19 @@ CTI_BASE_SUPPLY_DEPOT_VALUE = 5000; //--- Supply depot supply value
 //--- Base: Large FOB
 CTI_TOWNS_LARGE_FOB_BUILD_DIRECTION = 0; //--- Determine the direction a vehicle will use while being spawned from the Large FOB
 CTI_TOWNS_LARGE_FOB_BUILD_DISTANCE = 20; //--- Determine how far a unit/vehicle will spawn from the Large FOB
-CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_Cargo_House_V3_F", "WarfareBDepot"]; //--- The classname(s) used for town depots in editor
+CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_BagBunker_Large_F", "WarfareBDepot"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be from a Large FOB in order to use it
 
 //--- Base: Misc
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
+
+//--- Base: Damage modifiers
+CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1; //--- damage modifier for base structures - BulletCore, ShotgunCore
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 5; //--- damage modifier for base structures - ShellBase, ShellCore
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1; //--- damage modifier for base structures - RocketCore, MissileCore
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1; //--- damage modifier for base structures - BombCore, LaserBombCore
+CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5; //--- damage modifier for base structures - ArtilleryRocketCore
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
@@ -568,6 +589,16 @@ CTI_VEHICLES_SALVAGE_RATE = 0.4; //--- This coefficient determine the value of a
 CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a Wreck and Salvage Truck
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
 
+//--- Vehicles: FUEL CONSUMPTION
+CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00018; //---default consumption rate every 1s - 90min
+CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.00027; //---tanks consumption rate - 60min 
+CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.00055; //---heli consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.0008; //---planes consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.0008; //---uav consumption rate - 20min
+CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0000925; //---ships consumption rate - 180min
+CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.00042; //---mhq consumption rate - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.0000001; //---special units consumption rate
+
 //--- Vehicles: LVOSS and ERA SYSTEMS
 CTI_VEHICLES_APS_SCAN_DISTANCE = 6000; //--- Scan distance for LVOSS and ERA scripts, must be fired within this range to detect
 CTI_VEHICLES_LVOSS_COOLDOWN_TIME = 120; //--- Max cooldown time between LVOSS charges, upgrades remove 30s - 120/90
@@ -580,15 +611,16 @@ with missionNamespace do {
 	if (isNil 'CTI_VEHICLES_AIR_AA') then {CTI_VEHICLES_AIR_AA = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_AT') then {CTI_VEHICLES_AIR_AT = 1}; //--- AT Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_CM') then {CTI_VEHICLES_AIR_CM = 1}; //--- Countermeasures availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
-	if (isNil 'CTI_VEHICLES_EMPTY_TIMEOUT') then {CTI_VEHICLES_EMPTY_TIMEOUT = 600};
+	if (isNil 'CTI_VEHICLES_EMPTY_TIMEOUT') then {CTI_VEHICLES_EMPTY_TIMEOUT = 900}; //--- set default vehicles timeout
+	if (isNil 'CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT') then {CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT = 3600}; //--- set special vehicles timeout
 };
 //-----------------------------------------------------------------------------------------------------------------------//
 
 CTI_ARTILLERY_FILTER = 1; //--- Toggle artillery magazines like mines and AT mines (0: Disabled, 1: Enabled)
 CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 
-CTI_BOUNTY_COEF = 0.35; //--- Bounty coefficient multiplicator based on the unit original cost
-CTI_BOUNTY_COEF_PVP = 1.5; //--- Bounty coefficient multiplicator based on the killed unit score
+CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
+CTI_BOUNTY_COEF_PVP = 1.2; //--- Bounty coefficient multiplicator based on the killed unit score
 
 CTI_COIN_AREA_DEFAULT = [30, 10];
 CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
@@ -609,10 +641,12 @@ CTI_RESPAWN_AI_RANGE = 600;
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
-CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2500; //--- Determine the range needed to respawn at a town's camps (from the town center)
-CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2500; //--- Determine the range needed to respawn at a town's camps (from a camp)
+CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2000; //--- Determine the range needed to respawn at a town's camps (from the town center)
+CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to respawn at a town's camps (from a camp)
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 15; //--- Disable a camp's respawn if enemies are around it
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
+CTI_RESPAWN_MOBILE_SAFE_RANGE = 50; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_RANGE = 500;
 
 CTI_SATCAM_ZOOM_MIN = 50;
@@ -642,12 +676,15 @@ CTI_SERVICE_AMMO_LARGE_FOB_TIME = 50;
 CTI_SERVICE_REPAIR_DEPOT_RANGE = 300;
 CTI_SERVICE_REPAIR_DEPOT_TIME = 30;
 CTI_SERVICE_REPAIR_TRUCK_RANGE = 10;
+CTI_SERVICE_FUEL_TRUCK_RANGE = 10;
+CTI_SERVICE_FUEL_TRUCK_TIME = 30;
 CTI_SERVICE_DEFENSE_TRUCK_RANGE = 10;
 CTI_SERVICE_REPAIR_TRUCK_TIME = 50;
 CTI_SERVICE_AMMO_BOX_RANGE = 10;
 CTI_SERVICE_AMMO_BOX_TIME = 120;
 CTI_SERVICE_REPAIR_TOWN_DEPOT_TIME = 50;
 CTI_SERVICE_REPAIR_LARGE_FOB_TIME = 50;
+CTI_SERVICE_GEAR_RANGE = 15;
 
 CTI_SCORE_BUILD_VALUE_PERPOINT = 1500; //--- Structure value / x
 CTI_SCORE_SALVAGE_VALUE_PERPOINT = 2000; //--- Unit value / x
@@ -665,7 +702,7 @@ CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 1;
+CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
 
 CTI_HALO_COOLDOWN = 60;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;
@@ -681,9 +718,11 @@ if (CTI_DEV_MODE > 0) then {
 
 //--- SHK Specific
 CTI_SHK_BUILDING_ENABLED = true;
-CTI_SHK_BUILDING_SAFE_RANGE = 30; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
-CTI_SHK_BUILDING_SCAN_RANGE = 150; //--- The range used to search for building from the town's center
+CTI_SHK_BUILDING_PLACEMENT_CHANCE = 80; //--- An AI Group has x% of chance to be placed in a building
+CTI_SHK_BUILDING_SAFE_RANGE = 80; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
+CTI_SHK_BUILDING_SCAN_RANGE = 120; //--- The range used to search for building from the town's center
 CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)
+CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
 
 with missionNamespace do {
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
@@ -737,6 +776,7 @@ with missionNamespace do {
 	if (isNil 'CTI_PLAYERS_GROUPSIZE') then {CTI_PLAYERS_GROUPSIZE = 4}; //--Limit Player AI
 
 	if (isNil 'CTI_UNITS_FATIGUE') then {CTI_UNITS_FATIGUE = 0};
+	if (isNil 'CTI_UNITS_FUEL_CONSUMPTION') then {CTI_UNITS_FUEL_CONSUMPTION = 1};
 	if (isNil 'CTI_GAMEPLAY_3P') then {CTI_GAMEPLAY_3P = -1};
 	if (isNil 'CTI_WEAPON_SWAY') then {CTI_WEAPON_SWAY = 50};
 	if (isnil 'CTI_SM_NONV') then {CTI_SM_NONV = 1};
@@ -746,18 +786,33 @@ with missionNamespace do {
 	if (isNil 'CTI_WEATHER_FAST_NIGHT') then {CTI_WEATHER_FAST_NIGHT = 1};
 	if (isNil 'CTI_WEATHER_INITIAL') then {CTI_WEATHER_INITIAL = 10};
 	if (isNil 'CTI_WEATHER_RAIN') then {CTI_WEATHER_RAIN = -1};
+	if (isNil 'CTI_WEATHER_RAIN_COEF') then {CTI_WEATHER_RAIN_COEF = -1};
 	if (isNil 'CTI_WEATHER_SNOW') then {CTI_WEATHER_SNOW = 0};
+	if (isNil 'CTI_WEATHER_SNOW_COEF') then {CTI_WEATHER_SNOW_COEF = -1};
 	if (isNil 'CTI_WEATHER_DUST') then {CTI_WEATHER_DUST = 0};
+	if (isNil 'CTI_WEATHER_DUST_COEF') then {CTI_WEATHER_DUST_COEF = -1};
 	if (isNil 'CTI_WEATHER_MONSOON') then {CTI_WEATHER_MONSOON = 0};
+	if (isNil 'CTI_WEATHER_MONSOON_COEF') then {CTI_WEATHER_MONSOON_COEF = -1};
 	if (isNil 'CTI_WEATHER_OVERCAST') then {CTI_WEATHER_OVERCAST = -1};
+	if (isNil 'CTI_WEATHER_OVERCAST_COEF') then {CTI_WEATHER_OVERCAST_COEF = -1};
 	if (isNil 'CTI_WEATHER_FOG') then {CTI_WEATHER_FOG = -1};
+	if (isNil 'CTI_WEATHER_FOG_COEF') then {CTI_WEATHER_FOG_COEF = -1};
+	if (isNil 'CTI_WEATHER_FOG_DECAY') then {CTI_WEATHER_FOG_DECAY = -1};
+	if (isNil 'CTI_WEATHER_FOG_DECAY_COEF') then {CTI_WEATHER_FOG_DECAY_COEF = -1};
+	if (isNil 'CTI_WEATHER_FOG_ALT') then {CTI_WEATHER_FOG_ALT = -1};
+	if (isNil 'CTI_WEATHER_FOG_ALT_COEF') then {CTI_WEATHER_FOG_ALT_COEF = -1};
 	if (isNil 'CTI_WEATHER_WIND') then {CTI_WEATHER_WIND = -1};
+	if (isNil 'CTI_WEATHER_WIND_COEF') then {CTI_WEATHER_WIND_COEF = -1};
 	if (isNil 'CTI_WEATHER_WAVES') then {CTI_WEATHER_WAVES = -1};
+	if (isNil 'CTI_WEATHER_WAVES_COEF') then {CTI_WEATHER_WAVES_COEF = -1};
+	if (isNil 'CTI_WEATHER_VARIANCE_TIME') then {CTI_WEATHER_VARIANCE_TIME = -1};
+	if (isNil 'CTI_WEATHER_STORM_TIME') then {CTI_WEATHER_STORM_TIME = -1};
 
 	if (isNil 'CTI_APEX_ADDON') then {CTI_APEX_ADDON = 1};
 	if (isNil 'CTI_CUP_ADDON') then {CTI_CUP_ADDON = 1};
 	if (isNil 'CTI_CUP_CORE_ADDON') then {CTI_CUP_CORE_ADDON = 0};
 	if (isNil 'CTI_OFPS_ADDON') then {CTI_OFPS_ADDON = 1};
+	if (isNil 'CTI_RHS_ADDON') then {CTI_RHS_ADDON = 0};
 
 	if (isNil 'CTI_DEV_MODE') then {CTI_DEV_MODE = 0};
 	if (isNil 'CTI_ZOMBIE_MODE') then {CTI_ZOMBIE_MODE = 0};

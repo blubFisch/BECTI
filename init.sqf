@@ -1,7 +1,3 @@
-//--- Initial View Distance and Object View Distance for both clients and server
-setViewDistance 1000;
-setObjectViewDistance 1000;
-
 //--- Early definition, will be override later on in the init files.
 CTI_P_SideJoined = civilian;
 
@@ -57,7 +53,7 @@ if (isMultiplayer && CTI_IsServer) then {
 	// onPlayerConnected {[_uid, _name, _id] spawn CTI_SE_FNC_OnPlayerConnected};
 	// onPlayerDisconnected {[_uid, _name, _id] call CTI_SE_FNC_OnPlayerDisconnected};
 	addMissionEventHandler ["HandleDisconnect",{_this spawn CTI_SE_FNC_OnPlayerDisconnected}];
-	["CTI_Join", "onPlayerConnected", {[_uid, _name, _id] spawn CTI_SE_FNC_OnPlayerConnected}] call BIS_fnc_addStackedEventHandler;
+	["CTI_Join", "onPlayerConnected", {[_uid, _name, _id, _jip, _owner] spawn CTI_SE_FNC_OnPlayerConnected}] call BIS_fnc_addStackedEventHandler;
 };
 
 //--- JIP Part is over
@@ -190,76 +186,15 @@ if ( !isNull _displayscorehud ) then {
 	_statusscorehud ctrlShow false;	
 };
 
-///Snow and Sand Weather
-/*
-null = [direction_storm,duration_storm,effect_on_objects,ambient_sounds_al,breath_vapors] execvm "AL_snowstorm\al_snow.sqf";
-direction_storm		- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_storm		- integer, life time of the SNOW STORM expressed in seconds//hardset to fulltime
-effect_on_objects	- boolean, if is true occasionally a random object will be thrown in the air
-ambient_sounds_al	- seconds/number, a random number will be generated based on your input value and used to set the frequency for played ambient sounds
-					- also determines interval at which snow gusts are generated
-					- i recommend a value of 120 or higher
-breath_vapors		- boolean, if true you will see breath vapors for all units, however if you have many units in your mission you should set this false to diminish the impact on frames
-*/
-if (CTI_WEATHER_SNOW > 0) then { 	
-	if (CTI_WEATHER_SNOW == 1) then { 
-		null = [80,0,false,450,false] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
-	};
-	if (CTI_WEATHER_SNOW == 2) then { 
-		null = [80,0,false,300,false] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
-	};
-	if (CTI_WEATHER_SNOW == 3) then { 
-		null = [80,0,true,150,true] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
-	};
-	if (CTI_WEATHER_SNOW == 4) then { 
-		null = [80,0,true,100,true] execvm "Common\Functions\External\AL_snowstorm\al_snow.sqf";
-	};
-};
-/*
-null = [direction_duststorm, duration_duststorm, effect_on_objects, wall_of_dust, lethal_wall] execvm "AL_dust_storm\al_duststorm.sqf";
-direction_duststorm	- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_duststorm	- integer, life time of the duststorm expressed in seconds
-effect_on_objects	- boolean, if is true occasionally a random object near playable units will be thrown in the air
-wall_of_dust		- boolean, if true a wall of dust is created, make it false if mission is too laggy with this option
-lethal_wall			- boolean, if true the wall of dust becomes destructive, it may generate severe frame drops so use it with care !!!
-*/
-if (CTI_WEATHER_DUST > 0) then { 
-	if (CTI_WEATHER_DUST == 1) then { 
-		null = [340,0,false,false,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
-	};
-	if (CTI_WEATHER_DUST == 2) then { 
-		null = [340,0,false,false,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
-	};
-	if (CTI_WEATHER_DUST == 3) then { 
-		null = [340,0,true,true,false] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
-	};
-	if (CTI_WEATHER_DUST == 4) then { 
-		null = [340,0,true,true,true] execvm "Common\Functions\External\AL_dust_storm\al_duststorm.sqf";
-	};
-};
-/*
-null = [direction_monsoon, duration_monsoon, effect_on_objects] execvm "AL_monsoon\al_monsoon.sqf";
-direction_monsoon	- integer, from 0 to 360, direction towards the wind blows expressed in compass degrees
-duration_monsoon	- integer, life time of the monsoon expressed in seconds
-effect_on_objects	- boolean, if is true occasionally a random object will be thrown in the air
-*/
-if (CTI_WEATHER_MONSOON > 0) then { 
-	if (CTI_WEATHER_MONSOON == 1) then { 
-		null = [100,0,false] execvm "Common\Functions\External\AL_monsoon\al_monsoon.sqf";
-	};
-	if (CTI_WEATHER_MONSOON == 2) then { 
-		null = [100,0,true] execvm "Common\Functions\External\AL_monsoon\al_monsoon.sqf";
-	};
-};
 //Radio
 Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
 if (isNil "Radio_Say3D") then {
-    Radio_Say3D = [objNull,0];
+    Radio_Say3D = [objNull,"nosound",0];
 };
 "Radio_Say3D" addPublicVariableEventHandler {
       private["_array"];
       _array = _this select 1;
-     (_array select 0) say3D (_array select 1);
+     (_array select 0) say3D [(_array select 1), (_array select 2)];
 };
 
 

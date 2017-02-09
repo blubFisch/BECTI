@@ -124,8 +124,9 @@ class CfgSounds {
 		titles[] = {};
 	};
 	//weather scripts
+	//now in ofps pack
 	//snow
-	class bcg_wind
+	/*class bcg_wind
 	{
 		name = "bcg_wind";
 		sound[] = {"Rsc\Sounds\bcg_wind.ogg", 0.3, 1};
@@ -329,5 +330,6 @@ class CfgSounds {
 		name = "sandstorm";
 		sound[] = {"Rsc\Sounds\sandstorm.ogg", db+10, 1};
 		titles[] = {1, ""};
-	};	
+	};*/	
 };
+

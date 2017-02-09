@@ -63,7 +63,7 @@ if !(isNull _killer) then {
 			_award = round((_var select 2) * CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY);
 				
 			[_label, _award] remoteExec ["CTI_PVF_CLT_OnBountyDefense", _killer];
-			["defense-destroyed", [name _killer, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
+			["award-bounty-defense", [_award, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _killer];
 		} else {
 			//--- AI Reward
 		};

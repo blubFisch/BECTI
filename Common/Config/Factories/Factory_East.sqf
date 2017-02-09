@@ -181,6 +181,52 @@ if (CTI_CUP_ADDON > 0) then {
 		]];
 	};
 } else {
+if (CTI_RHS_ADDON > 0) then {
+		//DEFAULT RHS SET
+		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
+			["rhs_gaz66_ap2_msv", [
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 10],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
+				["acc_flashlight", 10],
+				["30rnd_9x21_mag", 20]
+			]],
+			["RHS_UAZ_MSV_01", [
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
+				["acc_flashlight", 10],
+				["30rnd_9x21_mag", 20]
+			]],
+			["rhs_tigr_sts_msv", [
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
+				["acc_flashlight", 10],
+				["30rnd_9x21_mag", 20]
+			]],
+			["rhs_btr60_msv", [
+				["rhs_weap_rpg26", 10], 
+				["rhs_mag_rgd5", 20],
+				["rhs_weap_rshg2", 3],
+				["rhs_weap_m38", 1],
+				["rhsgref_5Rnd_762x54_m38", 20],
+				["Toolkit", 3],
+				["acc_flashlight", 10],
+				["30rnd_9x21_mag", 20]
+			]]
+			//,	["O_Heli_Light_02_unarmed_F", []]
+		]];
+} else {
 missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
 	["O_Truck_03_medical_F", [
 		["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
@@ -207,6 +253,7 @@ missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 		["acc_flashlight", 10],
 		["NLAW_F", 20]]]
 ]];
+};
 };
 
 //--- Units - Barracks
@@ -383,6 +430,26 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'IP_O_recon_TL_FST';
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+	_u pushBack 'rhs_msv_emr_rifleman';
+	_u pushBack 'rhs_msv_emr_aa';
+	_u pushBack 'rhs_msv_emr_arifleman';
+	_u pushBack 'rhs_msv_emr_at';
+	_u pushBack 'rhs_msv_emr_combatcrew';
+	_u pushBack 'rhs_msv_emr_LAT';
+	_u pushBack 'rhs_msv_emr_at';
+	_u pushBack 'rhs_msv_emr_engineer';
+	_u pushBack 'rhs_msv_emr_engineer';
+	_u pushBack 'rhs_msv_emr_grenadier';
+	_u pushBack 'rhs_msv_emr_medic';
+	_u pushBack 'rhs_msv_emr_arifleman';
+	_u pushBack 'rhs_pilot';
+	_u pushBack 'rhs_msv_emr_marksman';
+	_u pushBack 'rhs_msv_emr_sergeant';
+	_u pushBack 'rhs_msv_emr_officer_armored';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
 _u = [];
@@ -550,9 +617,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'OFPS_UAZ_METIS';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_SPG9';
-	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-//	_u pushBack 'dbo_CIV_ol_bike';
+	//_u pushBack 'dbo_CIV_ol_bike';
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -571,6 +638,34 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'AAF_D_MRAP_03_gmg_F';
 		_u pushBack 'AAF_D_Truck_02_medical_F';
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_tigr_msv';
+_u pushBack 'rhs_tigr_m_msv';
+_u pushBack 'rhs_gaz66_msv';
+_u pushBack 'rhs_kamaz5350_msv';
+_u pushBack 'rhs_tigr_m_3camo_msv';
+_u pushBack 'rhs_tigr_3camo_msv';
+_u pushBack 'RHS_UAZ_MSV_01';
+_u pushBack 'rhs_uaz_open_MSV_01';
+_u pushBack 'rhsgref_BRDM2_HQ_msv';
+_u pushBack 'rhsgref_ins_uaz_dshkm';
+_u pushBack 'rhsgref_ins_uaz_ags';
+_u pushBack 'rhs_tigr_sts_msv';
+_u pushBack 'rhsgref_BRDM2_msv';
+_u pushBack 'rhs_gaz66_ap2_msv';
+_u pushBack 'rhs_tigr_sts_3camo_msv';
+_u pushBack 'rhs_btr60_msv';
+_u pushBack 'rhs_btr70_msv';
+_u pushBack 'rhs_btr80_msv';
+_u pushBack 'rhs_gaz66_zu23_msv';
+_u pushBack 'rhsgref_BRDM2_ATGM_msv';
+_u pushBack 'rhs_btr80a_msv';
+_u pushBack 'RHS_BM21_MSV_01';
+_u pushBack 'rhs_9k79';
+_u pushBack 'rhs_9k79_K';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
@@ -631,7 +726,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_2S6M_RU';	
 	_u pushBack 'CUP_B_T72_CZ';		
 	_u pushBack 'CUP_O_BM21_RU';
-	_u pushBack 'CUP_O_T90_RU';
+//	_u pushBack 'CUP_O_T90_RU';
 /* 
 	_u pushBack 'CUP_O_BMP1_CSAT';
 	_u pushBack 'CUP_O_BMP2_CSAT';
@@ -710,13 +805,40 @@ if (CTI_OFPS_ADDON > 0) then {
 		
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_bmp1_msv'; 
+_u pushBack 'rhs_bmd1'; 
+_u pushBack 'rhs_pts_vmf'; 
+_u pushBack 'rhs_prp3_msv'; 
+_u pushBack 'rhs_bmp1p_msv'; 
+_u pushBack 'rhs_bmd2'; 
+_u pushBack 'rhs_bmd1r'; 
+_u pushBack 'rhs_zsu234_aa'; 
+_u pushBack 'rh_bmp2e_msv'; 
+_u pushBack 'rhs_bmp2d_msv'; 
+_u pushBack 'rhs_Obj_681_2'; 
+_u pushBack 'rhs_t72ba_tv'; 
+_u pushBack 'rhs_sprut_vdv'; 
+_u pushBack 'rhs_bmp3_msv'; 
+_u pushBack 'rhs_bmd2m'; 
+_u pushBack 'rhs_brm1k_msv'; 
+_u pushBack 'rhs_t80bv'; 
+_u pushBack 'rhs_bmd4_vdv'; 
+_u pushBack 'rhs_t80um'; 
+_u pushBack 'rhs_bmp3m_msv'; 
+_u pushBack 'rhs_t90a_tv'; 
+_u pushBack 'rhs_bmp3mera_msv'; 
+_u pushBack 'rhs_bmd4ma_vdv'; 
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
 _u = [];
 
 //Universal Vanilla
 	_u pushBack 'O_Heli_Transport_04_F'; 
-        _u pushBack 'O_Heli_Light_02_unarmed_F';
+    _u pushBack 'O_Heli_Light_02_unarmed_F';
 	_u pushBack "O_Heli_Transport_04_ammo_F";
 	_u pushBack "O_Heli_Transport_04_bench_F";
 	_u pushBack "O_Heli_Transport_04_covered_F";
@@ -886,12 +1008,40 @@ if (CTI_OFPS_ADDON > 0) then {
 		
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_Mi8AMT_vvsc';
+_u pushBack 'rhs_ka60_c';
+_u pushBack 'RHS_Mi8mt_vvsc';
+_u pushBack 'RHS_Mi8MTV3_vvsc';
+_u pushBack 'RHS_Mi8MTV3_FAB_vvsc';
+_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
+_u pushBack 'RHS_Su25SM_vvs';
+_u pushBack 'RHS_Su25SM_CAS_vvs';
+_u pushBack 'RHS_Mi24V_vvsc';
+_u pushBack 'RHS_Mi24V_FAB_vvsc';
+_u pushBack 'RHS_Mi24V_UPK23_vvsc';
+_u pushBack 'RHS_Mi24P_vvsc';
+_u pushBack 'RHS_Mi24P_CAS_vvsc';
+_u pushBack 'RHS_Mi24V_AT_vvsc';
+_u pushBack 'RHS_Mi24P_AT_vvsc';
+_u pushBack 'RHS_Ka52_vvsc';
+_u pushBack 'RHS_Ka52_UPK23_vvsc';
+_u pushBack 'RHS_Su25SM_KH29_vvs';
+_u pushBack 'RHS_T50_vvs_052';
+_u pushBack 'RHS_TU95MS_vvs_tambov';
+_u pushBack 'rhs_mi28n_vvsc';
+_u pushBack 'rhs_mi28n_s13_vvsc';
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
 
 //Universal Vanilla
 _u pushBack "O_G_Offroad_01_repair_F";
+_u pushBack "O_Truck_03_covered_F";//FOB
+_u pushBack "O_Truck_02_box_F";//FOB LARGE
 _u pushBack "Land_Pod_Heli_Transport_04_repair_F";
 _u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
 _u pushBack "O_Truck_03_fuel_F";
@@ -899,7 +1049,6 @@ _u pushBack "CTI_Salvager_East";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
-	_u pushBack "O_Truck_02_box_F";
 	//_u pushBack "O_Truck_03_repair_F";
 	_u pushBack "O_Truck_02_fuel_F";
 
@@ -971,6 +1120,15 @@ if (CTI_OFPS_ADDON > 0) then {
 			_u pushBack 'AAF_D_Truck_02_box_F';
 		
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then {  
+//Universal RHS
+_u pushBack 'RHS_Ural_Fuel_MSV_01';
+_u pushBack 'rhs_kamaz5350_flatbed_msv';
+_u pushBack 'rhs_gaz66_repair_msv';
+_u pushBack 'rhs_gaz66_r142_msv';
+_u pushBack 'rhs_typhoon_vdv';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
@@ -1052,6 +1210,11 @@ if (CTI_OFPS_ADDON > 0) then {
 					_u pushBack 'AAF_D_Truck_02_box_F';
 		
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+_u pushBack 'rhs_gaz66_ammo_msv';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
@@ -1226,13 +1389,13 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
-	_u pushBack 'sfp_mercedes';
+	//_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_mercedes';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
 	_u pushBack 'OFPS_UAZ_AGS30';
-	_u pushBack 'usaf_police_car2';
-	_u pushBack 'usaf_police_offroad';
+	//_u pushBack 'usaf_police_car2';
+	//_u pushBack 'usaf_police_offroad';
 	
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -1326,7 +1489,7 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
 	_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';

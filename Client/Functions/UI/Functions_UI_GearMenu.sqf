@@ -16,14 +16,16 @@
 CTI_UI_Gear_DisplayInventoryVehicle = {
 	private ["_gear", "_list", "_u"];
 	_gear = _this;
-	
+
 	lnbClear 70109;
 	_list = [];
+
 	_u = 0;
 	
 	{
 		_item = _x;
-		if !(_item in _list) then {
+		// if !(_item in _list) then {
+		if (({_x == _item} count _list) < 1) then {
 			_count = {_x == _item} count _gear;
 			_config = (_item) call CTI_UI_Gear_GetItemBaseConfig;
 			lnbAddRow [70109, [format ["x%1", _count], format ["%1", getText(configFile >> _config >> _item >> 'displayName')]]];
@@ -38,11 +40,9 @@ CTI_UI_Gear_DisplayInventoryVehicle = {
 
 CTI_UI_Gear_AddVehicleItem = {
 	private ["_gear", "_item"];
-	_gear = _this select 0;
-	_item = _this select 1;
-	
+	_gear = _this select 0;// gear current in the vehicle
+	_item = _this select 1;// item to add
 	_gear pushBack _item;
-	
 	//--- Update the vehicle's mass
 	[_item, "add"] call CTI_UI_Gear_UpdateVehicleLoad;
 	
@@ -323,6 +323,10 @@ CTI_UI_Gear_DisplayShoppingItems = {
 		_upgrade_gear = _upgrades select CTI_UPGRADE_TOWNS;
 	};
 	
+	if (!(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then { //checks if players is not near a structure/special unit that will allow purchasing of gear. If player isn't near a structure that allows purchasing of gear then player will have an empty equipment list. 
+		_upgrade_gear = -1;
+	};
+	
 	if (CTI_DEBUG) then {_upgrade_gear=10};
 	
 	if (_tab != CTI_GEAR_TAB_TEMPLATES) then { //--- Generic items
@@ -341,7 +345,8 @@ CTI_UI_Gear_DisplayShoppingItems = {
 			if ((_x select 4) <= _upgrade_gear) then { //--- Add the template if it's equal or below the upgrade level
 				_row = lnbAddRow [70108, [_x select 0, format ["$%1", _x select 2]]];
 				if (_x select 1 != "") then {lnbSetPicture [70108, [_row, 1], _x select 1]};
-				lnbSetValue [70108, [_row, 0], _x select 4];
+				_seed = if (count _x > 5) then {_x select 5} else {-1};
+				lnbSetValue [70108, [_row, 0], _seed];
 			};
 		} forEach _list;
 	};
@@ -1485,22 +1490,23 @@ CTI_UI_Gear_InitializeProfileTemplates = {
 		_x set [5, round(time + random 10000 - random 5000 + diag_frameno)];
 	} forEach _templates;
 	
-	profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined], _templates];
+	profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined], _templates];
 	saveProfileNamespace;
 };
 
 CTI_UI_Gear_RemoveProfileTemplate = {
+    private ["_index", "_seed", "_templates"];
 	_seed = _this;
 	
-	_templates = profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined];
+	_templates = profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined];
 	_index = -1;
 	{if ((_x select 5) == _seed) exitWith {_index = _forEachIndex}} forEach _templates;
 	
 	if (_index > -1) then {
-		// _templates set [_index, "!nil!"];
-		// _templates = _templates - ["!nil!"];
+		if (CTI_Log_Level >= CTI_Log_Debug) then {["DEBUG", "FUNCTION: CTI_UI_Gear_RemoveProfileTemplate", format["Removed the persistent gear template located at position [%1] in the persistent gear profile which had a seed value of [%2]", _index, _seed]] call CTI_CO_FNC_Log};
+		
 		_templates deleteAt _index;
-		profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV2_%1", CTI_P_SideJoined], _templates];
+		profileNamespace setVariable [format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined], _templates];
 		saveProfileNamespace;
 	};
 };

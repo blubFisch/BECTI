@@ -173,11 +173,11 @@ with missionNamespace do {
 	CTI_PVF_CLT_OnFriendlyStructureDestroyed = { _this spawn CTI_CL_FNC_OnFriendlyStructureDestroyed };
 	
 	//--- The client receives his Join in Progress gear
-	CTI_PVF_CLT_OnJIPGearReceived = { 
+	/*CTI_PVF_CLT_OnJIPGearReceived = { 
 		if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_CLT_OnJIPGearReceived", "The previous loadout has been received and will be equipped"] call CTI_CO_FNC_Log};
 		
 		[player, _this] call CTI_CO_FNC_EquipUnit 
-	};
+	};*/
 	
 	//--- The client receives a message
 	CTI_PVF_CLT_OnMessageReceived = { _this spawn CTI_CL_FNC_DisplayMessage };
@@ -195,10 +195,6 @@ with missionNamespace do {
 
 		if (alive player) then {
 			closeDialog 0;
-			if (CTI_DEV_MODE == 0) then {
-				hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Commander vote will start in 15 seconds.";
-				sleep 15;
-			};
 			createDialog "CTI_RscVoteMenu";
 		};
 	};
