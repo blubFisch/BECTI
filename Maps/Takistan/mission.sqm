@@ -110,8 +110,8 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Conquer the Island BECTI - OFPS.NET";
-		overviewText="Crafted by Benny and OFPS Team - V1.04";
+		briefingName="Conquer the Island BECTI - OFPS.NET - $VERSIONNAME$";
+		overviewText="Crafted by Benny and OFPS Team";
 		resistanceWest=0;
 		startWeather=0;
 		startWind=0;
