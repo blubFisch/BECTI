@@ -1,4 +1,4 @@
-Version 1.05
+To be released version
 Added: Spawn on vehicle disabled when enemy nearby 50M
 Added: Tank Low Gear / Hill climb
 Added: Tank Stealth mode
