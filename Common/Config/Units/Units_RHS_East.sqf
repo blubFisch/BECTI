@@ -485,7 +485,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rh_bmp2e_msv';
+_c pushBack 'rhs_bmp2e_msv';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 9000;
@@ -506,7 +506,7 @@ _s pushBack "";
 _d pushBack 10;
 
 
-_c pushBack 'rhs_Obj_681_2';
+_c pushBack 'rhs_Ob_681_2';
 _p pushBack '';
 _n pushBack 'Obyekt 681-2';
 _o pushBack 8000;

@@ -1555,7 +1555,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rhsusf_CH53E_USCM_D';
+_c pushBack 'rhsusf_CH53E_USMC_D';
 _p pushBack '';
 _n pushBack 'CH-53E Super Stallion';
 _o pushBack 7000;
