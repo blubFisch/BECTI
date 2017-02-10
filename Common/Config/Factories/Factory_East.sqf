@@ -460,6 +460,7 @@ _u pushBack 'O_G_Offroad_01_F';
 _u pushBack 'O_Truck_02_medical_F';
 _u pushBack 'O_Truck_03_medical_F';
 _u pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
+_u pushBack 'Land_Pod_Heli_Transport_04_medevquadac_F';
 _u pushBack 'O_Truck_03_device_F';
 _u pushBack 'O_Quadbike_01_F';
 _u pushBack "O_G_Offroad_01_armed_F";
