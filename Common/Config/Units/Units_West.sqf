@@ -344,7 +344,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;*/
 
-_c pushBack 'B_G_Offroad_01_';
+_c pushBack 'B_G_Offroad_01_F';
 _p pushBack '';
 _n pushBack 'Offroad (can load statics)';
 _o pushBack 950;

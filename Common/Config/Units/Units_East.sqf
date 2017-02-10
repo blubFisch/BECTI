@@ -467,7 +467,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack "Land_Pod_Heli_Transport_04_medevquadac_F";
+_c pushBack "Land_Pod_Heli_Transport_04_medevac_F";
 _p pushBack '';
 _n pushBack (format ["Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 15000;
