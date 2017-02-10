@@ -472,7 +472,6 @@ _u = [];
 _u pushBack 'B_G_Offroad_01_F';		
 _u pushBack 'C_Quadbike_01_F';			
 _u pushBack "B_Quadbike_01_F";
-_u pushBack "B_G_Offroad_01_F";
 _u pushBack "B_G_Offroad_01_armed_F";
 _u pushBack "C_Van_01_transport_F";
 _u pushBack "B_Truck_01_transport_F";
