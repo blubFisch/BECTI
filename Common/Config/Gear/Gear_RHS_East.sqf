@@ -47,6 +47,7 @@ _i pushBack "rhs_weap_pp2000";
 _u pushBack 0;
 _p pushBack 300;
 
+
 //Shotgun
 
 
@@ -1761,6 +1762,10 @@ _u pushBack 0;
 _p pushBack 50;
 
 _i pushBack "rhs_mag_9x18_8_57N181S";
+_u pushBack 0;
+_p pushBack 30;
+
+_i pushBack "rhs_mag_9x18_12_57N181S";
 _u pushBack 0;
 _p pushBack 30;
 
