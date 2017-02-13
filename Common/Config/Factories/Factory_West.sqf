@@ -908,6 +908,7 @@ _u pushBack 'RHSUSF_M1A2SEP1TUSKIID_USARMY';
 _u pushBack 'RHSUSF_M109D_USARMY';
 _u pushBack 'rhsusf_m1a2sep1tuskiiwd_usarmy';
 _u pushBack 'rhsusf_m109_usarmy';
+_u pushBack 'rhsusf_m1a1hc_wd';
 
 };
 

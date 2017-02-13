@@ -1737,21 +1737,13 @@ _p pushBack 50;
 
  
 //handgrenades
-_i pushBack "rhs_fgm148_magazine_AT";
-_u pushBack 0;
-_p pushBack 50;
-
 _i pushBack "rhs_fgm172a_magazine_AT";
-_u pushBack 0;
-_p pushBack 50;
-
-_i pushBack "rhs_fgm172b_magazine_MPV";
-_u pushBack 0;
-_p pushBack 50;
+_u pushBack 4;
+_p pushBack 2000;
 
 _i pushBack "rhs_fim92_mag";
-_u pushBack 0;
-_p pushBack 50;
+_u pushBack 2;
+_p pushBack 400;
 
 _i pushBack "rhs_mag_an_m14_th3";
 _u pushBack 0;
@@ -1810,15 +1802,59 @@ _u pushBack 0;
 _p pushBack 50;
 
 _i pushBack "rhs_mag_smaw_HEAA";
-_u pushBack 0;
-_p pushBack 50;
+_u pushBack 2;
+_p pushBack 300;
 
 _i pushBack "rhs_mag_smaw_HEDP";
-_u pushBack 0;
-_p pushBack 50;
+_u pushBack 2;
+_p pushBack 250;
 
 _i pushBack "rhs_mag_smaw_SR";
-_u pushBack 0;
+_u pushBack 2;
+_p pushBack 25;
+
+_i pushBack "rhs_mag_M441_HE";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhsusf_mag_6Rnd_M441_HE";
+_u pushBack 3;
+_p pushBack 300;
+
+_i pushBack "rhs_mag_M433_HEDP";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhsusf_mag_6Rnd_M433_HEDP";
+_u pushBack 3;
+_p pushBack 300;
+
+_i pushBack "rhs_mag_m714_White";
+_u pushBack 2;
+_p pushBack 30;
+
+_i pushBack "rhsusf_mag_6Rnd_M714_white";
+_u pushBack 3;
+_p pushBack 180;
+
+_i pushBack "rhs_mag_M585_white";
+_u pushBack 2;
+_p pushBack 30;
+
+_i pushBack "rhs_mag_m4009";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhs_mag_m576";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhsusf_mag_6Rnd_M576_Buckshot";
+_u pushBack 3;
+_p pushBack 300;
+
+_i pushBack "rhs_mag_M397_HE-T";
+_u pushBack 2;
 _p pushBack 50;
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf"; 

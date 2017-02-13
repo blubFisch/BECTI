@@ -9,9 +9,6 @@ _p = [];
 
 //************************RHS Stuff************************
 //Handguns
-_i pushBack "rhsusf_weap_m1911a1";
-_u pushBack 0;
-_p pushBack 100;
 
 _i pushBack "rhs_weap_makarov_pm";
 _u pushBack 0;
@@ -34,10 +31,6 @@ _u pushBack 0;
 _p pushBack 50;
 
 _i pushBack "rhs_weap_makarov_pmm";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_weap_pya";
 _u pushBack 0;
 _p pushBack 100;
 
@@ -1767,6 +1760,14 @@ _i pushBack "rhs_mag_9x19mm_7n31_44";
 _u pushBack 0;
 _p pushBack 50;
 
+_i pushBack "rhs_mag_9x18_8_57N181S";
+_u pushBack 0;
+_p pushBack 30;
+
+_i pushBack "rhs_mag_9x19_17";
+_u pushBack 0;
+_p pushBack 30;
+
 _i pushBack "rhsgref_5Rnd_762x54_m38";
 _u pushBack 0;
 _p pushBack 50;
@@ -1945,36 +1946,65 @@ _u pushBack 0;
 _p pushBack 50;
 
 _i pushBack "rhs_rpg7_OG7V_mag";
-_u pushBack 0;
-_p pushBack 50;
-
+_u pushBack 1;
+_p pushBack 200;
+/*
 _i pushBack "rhs_rpg7_PG7V_mag";
 _u pushBack 0;
 _p pushBack 50;
-
+*/
 _i pushBack "rhs_rpg7_PG7VL_mag";
-_u pushBack 0;
-_p pushBack 50;
-
+_u pushBack 1;
+_p pushBack 200;
+/*
 _i pushBack "rhs_rpg7_PG7VM_mag";
 _u pushBack 0;
 _p pushBack 50;
-
+*/
 _i pushBack "rhs_rpg7_PG7VR_mag";
-_u pushBack 0;
-_p pushBack 50;
-
+_u pushBack 2;
+_p pushBack 350;
+/*
 _i pushBack "rhs_rpg7_PG7VS_mag";
 _u pushBack 0;
 _p pushBack 50;
-
+*/
 _i pushBack "rhs_rpg7_TBG7V_mag";
-_u pushBack 0;
-_p pushBack 50;
+_u pushBack 2;
+_p pushBack 350;
 
 _i pushBack "rhs_rpg7_type69_airburst_mag";
-_u pushBack 0;
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_mag_9k38_rocket";
+_u pushBack 2;
+_p pushBack 400;
+
+_i pushBack "rhs_VOG25";
+_u pushBack 2;
 _p pushBack 50;
+
+_i pushBack "rhs_VOG25p";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhs_VG40TB";
+_u pushBack 2;
+_p pushBack 75;
+
+_i pushBack "rhs_VG40SZ";
+_u pushBack 2;
+_p pushBack 50;
+
+_i pushBack "rhs_GDM40";
+_u pushBack 2;
+_p pushBack 30;
+
+_i pushBack "rhs_VG40OP_white";
+_u pushBack 2;
+_p pushBack 30;
 
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf";
+
