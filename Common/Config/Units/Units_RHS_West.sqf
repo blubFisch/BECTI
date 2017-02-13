@@ -995,7 +995,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
-\\Duplicate
+//Duplicate
 /*_c pushBack 'rhsusf_M1117_O';
 _p pushBack '';
 _n pushBack '';
