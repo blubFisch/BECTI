@@ -1,4 +1,39 @@
 _side = _this;
+//--- CUP UNITS
+if (CTI_CUP_ADDON > 0) then { 
+	//Universal CUP
+
+	if (CTI_FACTION_EAST == 0) then {
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic CUP
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter CUP
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
+	};
+};
+
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+	//Universal RHS
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid RHS
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic RHS
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter RHS
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+	};
+};
+
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
@@ -108,7 +143,7 @@ _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side
 
 _headers pushBack 		[CTI_AIR, "Aircraft Factory", "Air"];
 _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
-_prices pushBack 		6000;
+_prices pushBack 		8000;
 _times pushBack 		140;
 _placements pushBack 	[180, 40];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 20000]]; 
@@ -124,7 +159,7 @@ _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side
 
 _headers pushBack 		[CTI_REPAIR, "Repair Depot", "Repair"];
 _classes pushBack 		["Land_Cargo_HQ_V3_F", "Land_Cargo_HQ_V3_ruins_F"];
-_prices pushBack 		2000;
+_prices pushBack 		4000;
 _times pushBack 		35;
 _placements pushBack 	[90, 25];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
@@ -132,7 +167,7 @@ _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side
 
 _headers pushBack 		[CTI_NAVAL, "Naval Yard", "Naval"];
 _classes pushBack 		["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"];
-_prices pushBack 		2000;
+_prices pushBack 		3000;
 _times pushBack 		35;
 _placements pushBack 	[180, 60];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -141,7 +176,7 @@ _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side
 if (CTI_RHS_ADDON > 0) then { 
 		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
 		_classes pushBack 		["rhs_p37", "Land_TTowerBig_1_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -149,7 +184,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
 		_classes pushBack 		["rhs_prv13", "Land_TTowerBig_2_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -158,7 +193,7 @@ if (CTI_RHS_ADDON > 0) then {
 	if (CTI_CUP_ADDON > 0) then { 
 		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
 		_classes pushBack 		["GUE_WarfareBAntiAirRadar", "Land_TTowerBig_1_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -166,7 +201,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
 		_classes pushBack 		["Gue_WarfareBArtilleryRadar", "Land_TTowerBig_2_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -174,7 +209,7 @@ if (CTI_RHS_ADDON > 0) then {
 	} else {
 		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
 		_classes pushBack 		["Land_TTowerBig_1_F", "Land_TTowerBig_1_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -182,7 +217,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
 		_classes pushBack 		["Land_TTowerBig_2_F", "Land_TTowerBig_2_ruins_F"];
-		_prices pushBack 		2000;
+		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
@@ -200,7 +235,7 @@ _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side
 
 _headers pushBack 		[CTI_SATELLITE, "Satellite Uplink", "Satellite Uplink"];
 _classes pushBack 		["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"];
-_prices pushBack 		8000;
+_prices pushBack 		4500;
 _times pushBack 		30;
 _placements pushBack 	[180, 15];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];

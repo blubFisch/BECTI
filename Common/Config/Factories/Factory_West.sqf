@@ -1,5 +1,76 @@
 private ["_side", "_u"];
 _side = _this;
+
+if (CTI_CUP_ADDON > 0) then { 
+	//Universal CUP
+
+	if (CTI_FACTION_WEST == 0) then {
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_B_USMC_Officer"];
+	missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_B_USMC_Crew"];
+	missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_B_USMC_Pilot"];
+	missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_B_USMC_SpecOps"];
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//CSAT Tropic CUP
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_B_USMC_Officer"];
+	missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_B_USMC_Crew"];
+	missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_B_USMC_Pilot"];
+	missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_B_USMC_SpecOps"];
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//CSAT Winter CUP
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_B_USMC_Officer"];
+	missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_B_USMC_Soldier"];
+	missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_B_USMC_Crew"];
+	missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_B_USMC_Pilot"];
+	missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_B_USMC_SpecOps"];
+	};
+};
+
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+	//Universal RHS
+
+	if (CTI_FACTION_WEST == 0) then {
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhsusf_army_ocp_squadleader"];
+  	missionNamespace setVariable [format["CTI%1_Worker", _side], "rhsusf_army_ocp_rifleman"];
+   	missionNamespace setVariable [format["CTI%1_Diver", _side], "B_diverf"];
+   	missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhsusf_army_ocp_rifleman"];
+    missionNamespace setVariable [format["CTI%1_Crew", _side], "rhsusf_army_ocp_combatcrewman"];
+    missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhsusf_army_ocp_helipilot"];
+    missionNamespace setVariable [format["CTI%1_Static", _side], "rhsusf_army_ocp_rifleman"];
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//CSAT Tropic RHS
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhsusf_army_ocp_squadleader"];
+    missionNamespace setVariable [format["CTI%1_Worker", _side], "rhsusf_army_ocp_rifleman"];
+    missionNamespace setVariable [format["CTI%1_Diver", _side], "B_diverf"];
+    missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhsusf_army_ocp_rifleman"];
+    missionNamespace setVariable [format["CTI%1_Crew", _side], "rhsusf_army_ocp_combatcrewman"];
+    missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhsusf_army_ocp_helipilot"];
+    missionNamespace setVariable [format["CTI%1_Static", _side], "rhsusf_army_ocp_rifleman"];
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//CSAT Winter RHS
+	missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhsusf_army_ocp_squadleader"];
+    missionNamespace setVariable [format["CTI%1_Worker", _side], "rhsusf_army_ocp_rifleman"];
+    missionNamespace setVariable [format["CTI%1_Diver", _side], "B_diverf"];
+    missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhsusf_army_ocp_rifleman"];
+    missionNamespace setVariable [format["CTI%1_Crew", _side], "rhsusf_army_ocp_combatcrewman"];
+    missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhsusf_army_ocp_helipilot"];
+    missionNamespace setVariable [format["CTI%1_Static", _side], "rhsusf_army_ocp_rifleman"];
+	};
+};
+
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
 	missionNamespace setVariable [format["CTI_%1_Commander", _side], "B_officer_F"];
