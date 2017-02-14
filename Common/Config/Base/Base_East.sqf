@@ -16,37 +16,37 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 } else {
 
-//--- RHS UNITS
-if (CTI_RHS_ADDON > 0) then { 
-	//Universal RHS
+	//--- RHS UNITS
+	if (CTI_RHS_ADDON > 0) then { 
+		//Universal RHS
 
+		if (CTI_FACTION_EAST == 0) then {
+			//CSAT Arid RHS
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		};
+		if (CTI_FACTION_EAST == 1) then {
+			//CSAT Tropic RHS
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		};
+		if (CTI_FACTION_EAST == 2) then {
+			//CSAT Winter RHS
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		};
+	};
+} else {
+	// add vanilla mhq stuff here
 	if (CTI_FACTION_EAST == 0) then {
-		//CSAT Arid RHS
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		//CSAT Arid Vanilla
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
 	};
 	if (CTI_FACTION_EAST == 1) then {
-		//CSAT Tropic RHS
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		//CSAT Tropic Vanilla
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];
 	};
 	if (CTI_FACTION_EAST == 2) then {
-		//CSAT Winter RHS
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
+		//CSAT Winter Vanilla
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];
 	};
-};
-} else {
-// add vanilla mhq stuff here
-if (CTI_FACTION_EAST == 0) then {
-	//CSAT Arid Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
-};
-if (CTI_FACTION_EAST == 1) then {
-	//CSAT Tropic Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];
-};
-if (CTI_FACTION_EAST == 2) then {
-	//CSAT Winter Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];
-};
 };
 
 missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air"]];
