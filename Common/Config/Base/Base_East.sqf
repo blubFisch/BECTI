@@ -35,7 +35,6 @@ if (CTI_RHS_ADDON > 0) then {
 };
 } else {
 // add vanilla mhq stuff here
-};
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
@@ -48,6 +47,8 @@ if (CTI_FACTION_EAST == 2) then {
 	//CSAT Winter Vanilla
 	missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];
 };
+};
+
 missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air"]];
 
 missionNamespace setVariable [format["CTI_%1_Base_Template", _side], [
