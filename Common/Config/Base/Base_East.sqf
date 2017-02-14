@@ -14,7 +14,7 @@ if (CTI_CUP_ADDON > 0) then {
 		//CSAT Winter CUP
 		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
 	};
-};
+} else {
 
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
@@ -33,7 +33,9 @@ if (CTI_RHS_ADDON > 0) then {
 		missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
 	};
 };
-
+} else {
+// add vanilla mhq stuff here
+};
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
