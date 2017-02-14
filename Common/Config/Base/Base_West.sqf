@@ -3,21 +3,22 @@ _side = _this;
 if (CTI_CUP_ADDON > 0) then { 
 	//Universal CUP
 
-	if (CTI_FACTION_WEST == 0) then {
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
-	};
-	if (CTI_FACTION_WEST == 1) then {
-		//CSAT Tropic CUP
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
-	};
-	if (CTI_FACTION_WEST == 2) then {
-		//CSAT Winter CUP
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
-	};
-} else {
+		if (CTI_FACTION_WEST == 0) then {
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
+		};
+		if (CTI_FACTION_WEST == 1) then {
+			//CSAT Tropic CUP
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
+		};
+		if (CTI_FACTION_WEST == 2) then {
+			//CSAT Winter CUP
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];
+		};
 
-	//--- RHS UNITS
-	if (CTI_RHS_ADDON > 0) then { 
+	} else {
+
+		//--- RHS UNITS
+		if (CTI_RHS_ADDON > 0) then { 
 		//Universal RHS
 
 		if (CTI_FACTION_WEST == 0) then {
@@ -32,20 +33,21 @@ if (CTI_CUP_ADDON > 0) then {
 			//CSAT Winter RHS
 			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];
 		};
-	};
-} else {
-	// add vanilla mhq stuff here
-	if (CTI_FACTION_WEST == 0) then {
-		//NATO Arid Vanilla
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];
-	};
-	if (CTI_FACTION_WEST == 1) then {
-		//NATO Tropic Vanilla
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];
-	};
-	if (CTI_FACTION_WEST == 2) then {
-		//NATO Winter Vanilla
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];
+
+	} else {
+		// add vanilla mhq stuff here
+		if (CTI_FACTION_WEST == 0) then {
+			//NATO Arid Vanilla
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];
+		};
+		if (CTI_FACTION_WEST == 1) then {
+			//NATO Tropic Vanilla
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];
+		};
+		if (CTI_FACTION_WEST == 2) then {
+			//NATO Winter Vanilla
+			missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];
+		};
 	};
 };
 
