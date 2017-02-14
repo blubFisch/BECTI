@@ -4,7 +4,7 @@ _side = _this;
 if (CTI_CUP_ADDON > 0) then { 
 	//Universal CUP
 
-		if (CTI_FACTION_WEST == 0) then {
+		if (CTI_FACTION_EAST == 0) then {
 		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
 		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
 		missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_O_RU_Soldier"];
@@ -13,7 +13,7 @@ if (CTI_CUP_ADDON > 0) then {
 		missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_O_RU_Pilot"];
 		missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
 		};
-		if (CTI_FACTION_WEST == 1) then {
+		if (CTI_FACTION_EAST == 1) then {
 			//CSAT Tropic CUP
 		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
 		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
@@ -23,7 +23,7 @@ if (CTI_CUP_ADDON > 0) then {
 		missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_O_RU_Pilot"];
 		missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
 		};
-		if (CTI_FACTION_WEST == 2) then {
+		if (CTI_FACTION_EAST == 2) then {
 			//CSAT Winter CUP
 		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
 		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
@@ -40,7 +40,7 @@ if (CTI_CUP_ADDON > 0) then {
 		if (CTI_RHS_ADDON > 0) then { 
 			//Universal RHS
 
-			if (CTI_FACTION_WEST == 0) then {
+			if (CTI_FACTION_EAST == 0) then {
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
 			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI%1_Diver", _side], "B_diverf"];
@@ -49,7 +49,7 @@ if (CTI_CUP_ADDON > 0) then {
 			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
 			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
 			};
-			if (CTI_FACTION_WEST == 1) then {
+			if (CTI_FACTION_EAST == 1) then {
 			//CSAT Tropic RHS
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
 			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
@@ -59,7 +59,7 @@ if (CTI_CUP_ADDON > 0) then {
 			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
 			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
 			};
-			if (CTI_FACTION_WEST == 2) then {
+			if (CTI_FACTION_EAST == 2) then {
 			//CSAT Winter RHS
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
 			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
@@ -107,7 +107,7 @@ if (CTI_CUP_ADDON > 0) then {
 
 if (CTI_CUP_ADDON > 0) then {
 	if (CTI_OFPS_ADDON > 0) then {
-		if (CTI_FACTION_WEST == 0) then {
+		if (CTI_FACTION_EAST == 0) then {
 			//ARID SET
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["CUP_O_GAZ_Vodnik_MedEvac_RU", [
@@ -149,7 +149,7 @@ if (CTI_CUP_ADDON > 0) then {
 				//,	["O_Heli_Light_02_unarmed_F", []]
 			]];
 		};
-		if (CTI_FACTION_WEST == 1) then {
+		if (CTI_FACTION_EAST == 1) then {
 			//JUNGLE SET
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["O_T_Truck_03_medical_ghex_F", [
@@ -181,7 +181,7 @@ if (CTI_CUP_ADDON > 0) then {
 				]]
 			]];
 		};
-		if (CTI_FACTION_WEST == 2) then {
+		if (CTI_FACTION_EAST == 2) then {
 			//WINTER SET
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["AAF_D_Truck_02_medical_F", [
@@ -440,12 +440,14 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_RU_Soldier_AA';
 	_u pushBack 'CUP_O_RU_Soldier_MG';
 	_u pushBack 'CUP_O_RU_Crew';
+	_u pushBack 'CUP_O_RU_Officer';
 	_u pushBack 'CUP_O_RU_Soldier_AT';
 	_u pushBack 'CUP_O_RU_Soldier_HAT';
 	_u pushBack 'CUP_O_RU_Engineer';
 	_u pushBack 'CUP_O_RU_Soldier_GL';
 	_u pushBack 'CUP_O_RU_Medic';
 	_u pushBack 'CUP_O_RU_Pilot';
+	_u pushBack 'CUP_O_RUS_SpecOps_Scout';
 	_u pushBack 'CUP_O_RU_Sniper_KSVK';
     _u pushBack 'CUP_O_RU_Spotter';
 	};
