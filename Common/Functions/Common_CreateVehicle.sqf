@@ -115,13 +115,14 @@ clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
 //set basic supplies to all
-_vehicle addItemCargoGlobal ["FirstAidKit",2];
+//removing due to UAV bug as well as some addons dont have room -omon
+/*_vehicle addItemCargoGlobal ["FirstAidKit",2];
 //Add basic chutes to air units
 if (_vehicle isKindOf "Air") then {
 	_vehicle addItemCargoGlobal ["ToolKit",1];
 	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",4];
 	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
-};
+};*/
 
 //slingload modification
 if (_type isKindOf 'Slingload_01_Base_F') then {_vehicle setmass [4000,0]};
