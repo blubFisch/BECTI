@@ -163,12 +163,12 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-	[[],[],[],[]], //--- Gear
+	[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
 	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
 	[[],[],[]], //--- Naval
-	[[],[],[],[],[]], //--- Air
+	[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
 	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
 	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
 	[[CTI_UPGRADE_AIR, 1]], //--- Air AT
