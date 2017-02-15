@@ -116,6 +116,7 @@ clearBackpackCargoGlobal _vehicle;
 
 //set basic supplies to all
 _vehicle addItemCargoGlobal ["FirstAidKit",2];
+//_vehicle addItemCargoGlobal ["ToolKit",1]; 
 //Add basic chutes to air units
 if (_vehicle isKindOf "Air") then {
 	_vehicle addItemCargoGlobal ["ToolKit",1];
@@ -132,6 +133,24 @@ if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Sl
 //--- Advanced Fuel Consumption
 if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
+};
+//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
+if({(_vehicle isKindOf _x)} count ["Tank","Wheeled_APC_F"] !=0) then { // adds in stealth addaction to tanks and apc. 
+	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
+	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth On</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","alive _target &&(isEngineOn _target) && !Local_StealthOn"]; // any AI or player in any seat can turn on stealth.
+	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth Off</t>", "Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf",[],7,false, true,"","alive _target && Local_StealthOn" ];
+};
+if (_vehicle isKindOf "Car") then { //--- Tanks and low gear
+	
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
+};
+
+if (_vehicle isKindOf "Ship") then {
+	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
+	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
 };
 //---APS system
 _upgrades = nil;
