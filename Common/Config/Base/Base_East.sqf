@@ -1,54 +1,30 @@
 _side = _this;
-//--- CUP UNITS
-if (CTI_CUP_ADDON > 0) then { 
-	//Universal CUP
-
-		if (CTI_FACTION_EAST == 0) then {
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
-		};
-		if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic CUP
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
-		};
-		if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter CUP
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];
-		};
-
-	} else {
-
-		//--- RHS UNITS
-		if (CTI_RHS_ADDON > 0) then { 
-		//Universal RHS
-
-		if (CTI_FACTION_EAST == 0) then {
-			//CSAT Arid RHS
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
-		};
-		if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic RHS
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
-		};
-		if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter RHS
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];
-		};
-
-	} else {
-		// add vanilla mhq stuff here
-		if (CTI_FACTION_EAST == 0) then {
-			//CSAT Arid Vanilla
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
-		};
-		if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic Vanilla
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];
-		};
-		if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter Vanilla
-			missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];
-		};
-	};
+if (CTI_FACTION_EAST == 0) then {
+	//CSAT Arid
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//RHS
+	}
+};
+if (CTI_FACTION_EAST == 1) then {
+	//CSAT Tropic
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//RHS
+	}
+};
+if (CTI_FACTION_EAST == 2) then {
+	//CSAT Winter
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//RHS
+	}
 };
 
 missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air"]];

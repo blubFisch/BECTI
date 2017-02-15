@@ -1,79 +1,9 @@
 private ["_side", "_u"];
 _side = _this;
-
-if (CTI_CUP_ADDON > 0) then { 
-	//Universal CUP
-
-		if (CTI_FACTION_EAST == 0) then {
-		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
-		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_O_RU_Crew"];
-		missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_O_RU_Pilot"];
-		missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
-		};
-		if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic CUP
-		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
-		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_O_RU_Crew"];
-		missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_O_RU_Pilot"];
-		missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
-		};
-		if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter CUP
-		missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
-		missionNamespace setVariable [format["CTI_%1_Worker", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Diver", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Soldier", _side], "CUP_O_RU_Soldier"];
-		missionNamespace setVariable [format["CTI_%1_Crew", _side], "CUP_O_RU_Crew"];
-		missionNamespace setVariable [format["CTI_%1_Pilot", _side], "CUP_O_RU_Pilot"];
-		missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
-		};
-
-	} else {
-
-		//--- RHS UNITS
-		if (CTI_RHS_ADDON > 0) then { 
-			//Universal RHS
-
-			if (CTI_FACTION_EAST == 0) then {
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
-			};
-			if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic RHS
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
-			};
-			if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter RHS
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
-		};
-
-	} else {
-
-		if (CTI_FACTION_EAST == 0) then {
-			//CSAT Arid Vanilla
+if (CTI_FACTION_EAST == 0) then {
+	//CSAT Arid
+	switch (CTI_FACTION_DEFAULT_TROOPS) do {
+		case 0: { //Vanilla
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
@@ -82,8 +12,39 @@ if (CTI_CUP_ADDON > 0) then {
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
 		};
-		if (CTI_FACTION_EAST == 1) then {
-			//CSAT Tropic Vanilla
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
+		};
+		case 2: { //CUP
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
+		};
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
+		};
+	}
+};
+if (CTI_FACTION_EAST == 1) then {
+	//CSAT Tropic
+	switch (CTI_FACTION_DEFAULT_TROOPS) do {
+		case 0: { //Vanilla
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
@@ -92,8 +53,39 @@ if (CTI_CUP_ADDON > 0) then {
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
 		};
-		if (CTI_FACTION_EAST == 2) then {
-			//CSAT Winter Vanilla
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+		};
+		case 2: { //CUP
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+		};
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+		};
+	}
+};
+if (CTI_FACTION_EAST == 2) then {
+	//CSAT Winter
+	switch (CTI_FACTION_DEFAULT_TROOPS) do {
+		case 0: { //Vanilla
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "IP_O_recon_TL_FST"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "IP_O_Soldier_FST"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
@@ -102,13 +94,99 @@ if (CTI_CUP_ADDON > 0) then {
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "IP_O_HeliCrew_FST"];
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "IP_O_Sharpshooter_FST"];
 		};
-	};
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "IP_O_recon_TL_FST"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "IP_O_crew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "IP_O_HeliCrew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "IP_O_Sharpshooter_FST"];
+		};
+		case 2: { //CUP
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "IP_O_recon_TL_FST"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "IP_O_crew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "IP_O_HeliCrew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "IP_O_Sharpshooter_FST"];
+		};
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "IP_O_recon_TL_FST"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "IP_O_Soldier_FST"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "IP_O_crew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "IP_O_HeliCrew_FST"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "IP_O_Sharpshooter_FST"];
+		};
+	}
 };
 
-if (CTI_CUP_ADDON > 0) then {
-	if (CTI_OFPS_ADDON > 0) then {
-		if (CTI_FACTION_EAST == 0) then {
-			//ARID SET
+//Set starting vehicles
+if (CTI_FACTION_EAST == 0) then {
+	//CSAT Arid
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: { //Vanilla
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["CUP_O_GAZ_Vodnik_MedEvac_RU", [
 					["CUP_launch_RPG18", 5], 
@@ -149,8 +227,111 @@ if (CTI_CUP_ADDON > 0) then {
 				//,	["O_Heli_Light_02_unarmed_F", []]
 			]];
 		};
-		if (CTI_FACTION_EAST == 1) then {
-			//JUNGLE SET
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
+				["rhs_gaz66_ap2_msv", [
+					["CUP_launch_RPG18", 5], 
+					["CUP_RPG18_M", 20],
+					["Toolkit", 1],
+					["acc_flashlight", 10],
+					["CUP_sgun_Saiga12K", 10],
+					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
+					["30Rnd_9x21_Mag", 20]
+				]],
+				["RHS_UAZ_MSV_01", [
+					["CUP_launch_RPG18", 5], 
+					["CUP_RPG18_M", 20],
+					["Toolkit", 1],
+					["acc_flashlight", 10],
+					["CUP_sgun_Saiga12K", 10],
+					["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
+					["30Rnd_9x21_Mag", 20]
+				]],
+				["rhs_tigr_sts_msv", [
+					["CUP_launch_RPG18", 5], 
+					["CUP_RPG18_M", 20],
+					["Toolkit", 1],
+					["acc_flashlight", 10],
+					["CUP_sgun_Saiga12K", 10],
+					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
+					["30Rnd_9x21_Mag", 20]
+				]],
+				["rhs_btr60_msv", [
+					["CUP_launch_RPG18", 5], 
+					["CUP_RPG18_M", 20],
+					["Toolkit", 1],
+					["acc_flashlight", 10],
+					["CUP_sgun_Saiga12K", 10],
+					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
+					["30Rnd_9x21_Mag", 20]
+				]]
+				//,	["O_Heli_Light_02_unarmed_F", []]
+			]];
+		};
+	}
+};
+if (CTI_FACTION_EAST == 1) then {
+	//CSAT Tropic
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: { //Vanilla
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["O_T_Truck_03_medical_ghex_F", [
 					["CUP_launch_RPG18", 5], 
@@ -181,154 +362,157 @@ if (CTI_CUP_ADDON > 0) then {
 				]]
 			]];
 		};
-		if (CTI_FACTION_EAST == 2) then {
-			//WINTER SET
-			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
-				["AAF_D_Truck_02_medical_F", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
-					["Toolkit", 1],
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-					["30Rnd_9x21_Mag", 20]
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
 				]],
-				["AAF_D_MRAP_03_hmg_F", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
-					["Toolkit", 1],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
-					["30Rnd_9x21_Mag", 20]
-				]],
-				["AAF_D_MRAP_03_gmg_F", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
-					["Toolkit", 1],
-					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-					["30Rnd_9x21_Mag", 20]
+					["NLAW_F", 20]
 				]]
 			]];
-		};		
-	} else {
-		//DEFAULT CUP SET
-		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
-			["CUP_O_GAZ_Vodnik_MedEvac_RU", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
-				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
-			]],
-			["CUP_B_UAZ_SPG9_CDF", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
-				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
-				["30Rnd_9x21_Mag", 20]
-			]],
-			["CUP_O_GAZ_Vodnik_AGS_RU", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
-				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
-			]],
-			["CUP_O_BTR60_CSAT", [
-				["CUP_launch_RPG18", 5], 
-				["CUP_RPG18_M", 20],
-				["Toolkit", 1],
-				["acc_flashlight", 10],
-				["CUP_sgun_Saiga12K", 10],
-				["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
-				["30Rnd_9x21_Mag", 20]
-			]]
-			//,	["O_Heli_Light_02_unarmed_F", []]
-		]];
-	};
-} else {
-if (CTI_RHS_ADDON > 0) then {
-		//DEFAULT RHS SET
-		missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
-			["rhs_gaz66_ap2_msv", [
-				["rhs_weap_rpg26", 10], 
-				["rhs_mag_rgd5", 20],
-				["rhs_weap_rshg2", 3],
-				["rhs_weap_m38", 10],
-				["rhsgref_5Rnd_762x54_m38", 20],
-				["Toolkit", 3],
-				["acc_flashlight", 10],
-				["30rnd_9x21_mag", 20]
-			]],
-			["RHS_UAZ_MSV_01", [
-				["rhs_weap_rpg26", 10], 
-				["rhs_mag_rgd5", 20],
-				["rhs_weap_rshg2", 3],
-				["rhs_weap_m38", 1],
-				["rhsgref_5Rnd_762x54_m38", 20],
-				["Toolkit", 3],
-				["acc_flashlight", 10],
-				["30rnd_9x21_mag", 20]
-			]],
-			["rhs_tigr_sts_msv", [
-				["rhs_weap_rpg26", 10], 
-				["rhs_mag_rgd5", 20],
-				["rhs_weap_rshg2", 3],
-				["rhs_weap_m38", 1],
-				["rhsgref_5Rnd_762x54_m38", 20],
-				["Toolkit", 3],
-				["acc_flashlight", 10],
-				["30rnd_9x21_mag", 20]
-			]],
-			["rhs_btr60_msv", [
-				["rhs_weap_rpg26", 10], 
-				["rhs_mag_rgd5", 20],
-				["rhs_weap_rshg2", 3],
-				["rhs_weap_m38", 1],
-				["rhsgref_5Rnd_762x54_m38", 20],
-				["Toolkit", 3],
-				["acc_flashlight", 10],
-				["30rnd_9x21_mag", 20]
-			]]
-			//,	["O_Heli_Light_02_unarmed_F", []]
-		]];
-} else {
-missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
-	["O_Truck_03_medical_F", [
-		["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
-		["launch_RPG32_F", 5], ["RPG32_F", 20],
-		["HandGrenade", 20],
-		["30Rnd_556x45_Stanag", 15],
-		["30Rnd_65x39_caseless_green_mag_Tracer", 6],
-		["1Rnd_HE_Grenade_shell", 24],
-		["UGL_FlareRed_F", 27],
-		["acc_flashlight", 10],
-		["optic_ACO_grn", 3],
-		["Toolkit", 1]	]],
-	    ["O_MRAP_02_F", [	
-		["Toolkit", 1],
-		["firstaidkit", 10],
-		["30Rnd_556x45_Stanag", 15],
-		["launch_RPG32_F", 5], 
-		["RPG32_F", 20]
-	]],
-	["O_MRAP_02_hmg_F", [
-		["Toolkit", 1],["firstaidkit", 10],
-		["30Rnd_556x45_Stanag", 15],
-		["launch_NLAW_F", 5], 
-		["acc_flashlight", 10],
-		["NLAW_F", 20]]]
-]];
+		};
+	}
 };
+if (CTI_FACTION_EAST == 2) then {
+	//CSAT Winter
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: { //Vanilla
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 1: { //Apex
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 2: { //CUP
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+		case 3: { //RHS
+			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
+				["O_Truck_03_medical_F", [
+					["arifle_Katiba_GL_F", 2], ["30rnd_65x39_caseless_green", 50],
+					["launch_RPG32_F", 5], ["RPG32_F", 20],
+					["HandGrenade", 20],
+					["30Rnd_556x45_Stanag", 15],
+					["30Rnd_65x39_caseless_green_mag_Tracer", 6],
+					["1Rnd_HE_Grenade_shell", 24],
+					["UGL_FlareRed_F", 27],
+					["acc_flashlight", 10],
+					["optic_ACO_grn", 3],
+					["Toolkit", 1]	]],
+					["O_MRAP_02_F", [	
+					["Toolkit", 1],
+					["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_RPG32_F", 5], 
+					["RPG32_F", 20]
+				]],
+				["O_MRAP_02_hmg_F", [
+					["Toolkit", 1],["firstaidkit", 10],
+					["30Rnd_556x45_Stanag", 15],
+					["launch_NLAW_F", 5], 
+					["acc_flashlight", 10],
+					["NLAW_F", 20]
+				]]
+			]];
+		};
+	}
 };
 
 //--- Units - Barracks
