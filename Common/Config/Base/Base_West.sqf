@@ -1,15 +1,30 @@
 _side = _this;
 if (CTI_FACTION_WEST == 0) then {
-	//NATO Arid Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];
+	//NATO Arid
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//RHS
+	}
 };
 if (CTI_FACTION_WEST == 1) then {
-	//NATO Tropic Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];
+	//NATO Tropic
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//RHS
+	}
 };
 if (CTI_FACTION_WEST == 2) then {
-	//NATO Winter Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];
+	//NATO Winter
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//RHS
+	}
 };
 missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air"]];
 

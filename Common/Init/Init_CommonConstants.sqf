@@ -690,6 +690,10 @@ CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max
 with missionNamespace do {
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
 	if (isNil 'CTI_FACTION_EAST') then {CTI_FACTION_EAST = 0};
+	
+	if (isNil 'CTI_FACTION_DEFAULT_VEHICLES') then {CTI_FACTION_DEFAULT_VEHICLES = 0};
+	if (isNil 'CTI_FACTION_DEFAULT_GEAR') then {CTI_FACTION_DEFAULT_GEAR = 0};
+	if (isNil 'CTI_FACTION_DEFAULT_TROOPS') then {CTI_FACTION_DEFAULT_TROOPS = 0};
 
 	if (isNil 'CTI_ARTILLERY_SETUP') then {CTI_ARTILLERY_SETUP = 0}; //--- Artillery status (-2: Disabled, -1: Artillery Computer, 0: Short, 1: Medium, 2: Long, 3: Far)
 

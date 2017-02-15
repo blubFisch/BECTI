@@ -1,15 +1,30 @@
 _side = _this;
 if (CTI_FACTION_EAST == 0) then {
-	//CSAT Arid Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];
+	//CSAT Arid
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//RHS
+	}
 };
 if (CTI_FACTION_EAST == 1) then {
-	//CSAT Tropic Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];
+	//CSAT Tropic
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//RHS
+	}
 };
 if (CTI_FACTION_EAST == 2) then {
-	//CSAT Winter Vanilla
-	missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];
+	//CSAT Winter
+	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "AAF_D_APC_Wheeled_03_cannon_F"];};//RHS
+	}
 };
 missionNamespace setVariable [format["CTI_%1_Factories", _side], ["Barracks","Light","Heavy","Air"]];
 
