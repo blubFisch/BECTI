@@ -24,6 +24,7 @@ _y_coord = _this select 8;
 _z_coord = _this select 9;
 _cameratext = _this select 10;
 _cameratextscore = _this select 11;
+_showscore = _this select 12;
 
 // to do exception management
 // if ((isNull _campos1)or(isNull _campos2)or(isNull _targetcam)) then exitWith {};
@@ -85,10 +86,18 @@ camUseNVG _nvgstate;
 sleep 3;
 _cameratext spawn BIS_fnc_typeText;
 titleText [_cameratextscore, "PLAIN DOWN", 15];
+
+//--- add keyhandler to Esc to force close scoreboard
+[] spawn {outroKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x01) then {showScoretable -1;};"];};
+
+if (_showscore) then {showScoretable 1;};
 sleep _camera_duration;
+showScoretable 0;
+(findDisplay 46) displayRemoveEventHandler ["KeyDown", outroKeyPress];
 
 _camera cameraeffect ["terminate", "back"];
 titleCut ["", "BLACK", 2];
 camDestroy _camera;
+
 };
 titleCut ["", "BLACK IN", 2];

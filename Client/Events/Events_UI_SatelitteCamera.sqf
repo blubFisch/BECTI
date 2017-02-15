@@ -72,7 +72,7 @@ switch (_action) do {
 		
 		if (isNil {uiNamespace getVariable "cti_dialog_ui_satcam_viewmode"}) then {uiNamespace setVariable ["cti_dialog_ui_satcam_viewmode", 0]};
 		_mode = "Normal";
-		switch (uiNamespace getVariable "cti_dialog_ui_satcam_viewmode") do { case 1: {_mode = "NVG"; camUseNVG true }; };
+		switch (uiNamespace getVariable "cti_dialog_ui_satcam_viewmode") do { case 1: {_mode = "NVG"; camUseNVG true }; case 2: {_mode = "Thermals"; true setCamUseTi 0}; };
 		((uiNamespace getVariable "cti_dialog_ui_satcam") displayCtrl 170013) ctrlSetText _mode;
 		
 		if (ctrlText ((uiNamespace getVariable "cti_dialog_ui_satcam") displayCtrl 170011) == "") then { ((uiNamespace getVariable "cti_dialog_ui_satcam") displayCtrl 170011) ctrlSetText "Feed: No Target" };
@@ -163,11 +163,12 @@ switch (_action) do {
 	};
 	case "onViewModeChanged": {
 		_mode = (uiNamespace getVariable "cti_dialog_ui_satcam_viewmode") + 1;
-		if (_mode > 1) then { _mode = 0 };
+		if (_mode > 2) then { _mode = 0 };
 		uiNamespace setVariable ["cti_dialog_ui_satcam_viewmode", _mode];
 		switch (_mode) do { 
-			case 1: {_mode = "NVG"; camUseNVG true}; 
-			default {_mode = "Normal"; camUseNVG false};
+			case 1: {_mode = "NVG"; camUseNVG true; false setCamUseTi 0;}; 
+			case 2: {_mode = "Thermals"; true setCamUseTi 0; camUseNVG false;}; 
+			default {_mode = "Normal"; camUseNVG false; false setCamUseTi 0;};
 		};
 		((uiNamespace getVariable "cti_dialog_ui_satcam") displayCtrl 170013) ctrlSetText _mode;
 	};

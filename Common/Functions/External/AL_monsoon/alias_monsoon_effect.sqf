@@ -5,14 +5,14 @@
 
 if (!hasInterface) exitWith {};
 
-enableCamShake true;
+//enableCamShake true;
 
-[] spawn {
+/*[] spawn {
 	while {al_monsoon_om} do {
 		addCamShake [0.3,27,17];
 		sleep 15+random 120;
 	};
-};
+};*/
 
 while {al_monsoon_om} do {
 	effect_screen = ppEffectCreate ["FilmGrain", 2000]; 
@@ -46,4 +46,4 @@ while {al_monsoon_om} do {
 
 effect_screen ppEffectEnable false;
 ppEffectDestroy effect_screen;
-enableCamShake false;
+//enableCamShake false;

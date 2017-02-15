@@ -1,8 +1,27 @@
-Next version
-- Disable respawn at mobile respawns if enemies are close, like camps
-
-Version 1.0.4
-Added: Teamstack system
-Fixed: Presistent cash, will follow player now
-Updated: Weather System
-Updated: View distance module
+To be released version
+Added: Spawn on vehicle disabled when enemy nearby 50M
+Added: Tank Low Gear / Hill climb
+Added: Tank Stealth mode
+Added: Parameter to set all camps required to capture town
+Added: All camps must be captured to capture town
+Added: Base area enemy reporting satellite upgrade
+Added: New satellite base structure 
+Added: Longer despawn timer for service vehicles and pods
+Added: RHS Support
+Added: New fuel consumption system
+Tweaked: UI Edits
+Tweaked: Weather no more crazy fog
+Tweaked: AI Patrols will now take the camps back
+Tweaked: Towns will spawn more AI
+Fixed: Persistent gear templates
+Fixed: Gear dup when adding weapons to cargo
+Fixed: Player starting cash would follow slot and not player
+Fixed: AI unit cam view
+Fixed: Patriot not firing on blufor
+Fixed: AI map labels
+Fixed: On teamswap player wont loose original gear
+Fixed: Issue where players could access equipment menu outside base
+Fixed: Reload and clear buttons are disabled unless near gear source
+Fixed: Respawn pods and ammo pods
+Fixed: Teamstack system would show incorrect message
+Fixed: Fuel truck now has service menu

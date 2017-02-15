@@ -215,9 +215,13 @@ switch cmEarplugs_myHotkeyChoice do {
 //// Key Handlers are added using CBA
 ["OFPS", "toggle_earplugs", ["Toggle earplugs", "Remove or Insert your earplugs."], "", "", [0xD2, [false, true, false]]] call cba_fnc_addKeybind;
 _keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
-if (!(isNil "_keybindear")) then {
+if (!isNil "_keybindear") then {
 	_actualkeyear = ((_keybindear) select 5) select 0;
-	cmEarplugs_hotkeyDIKCodeNumber = _actualkeyear;
+	if (!isNil "_actualkeyear") then {
+		cmEarplugs_hotkeyDIKCodeNumber = _actualkeyear;
+	} else {
+		cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT;
+	};
 };
 publicVariable	"cmEarplugs_hotkeyDIKCodeNumber";
 

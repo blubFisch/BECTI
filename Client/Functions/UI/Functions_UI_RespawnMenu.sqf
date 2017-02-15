@@ -49,14 +49,18 @@ CTI_UI_Respawn_GetAvailableLocations = {
 };
 
 CTI_UI_Respawn_GetMobileRespawn = {
-	private ["_available", "_center"];
+	private ["_available", "_center","_special_type"];
 	_center = _this;
 	_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) == 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 	_range=500+500*_up;
 	_available = [];
-	
+
 	{
-		if ((_x getVariable ["cti_spec", -1]) == CTI_SPECIAL_MEDICALVEHICLE && (_x getVariable ["cti_net", -1]) == CTI_P_SideID) then {
+    	_special_type = (_x getVariable ["cti_spec", -1]); //occasionally will grab an array value, this is a half ass fix - protossmaster
+    	if (typeName _special_type == "ARRAY") then {
+    	    _special_type = _special_type select 0;
+    	};
+		if (_special_type == CTI_SPECIAL_MEDICALVEHICLE && (_x getVariable ["cti_net", -1]) == CTI_P_SideID) then {
 			if (CTI_RESPAWN_MOBILE_SAFE > 0) then { //--- Safeguard? check for enemies around the respawn
 				_cti_entities = _x nearEntities[["Man","Car","Motorcycle","Tank","Air","Ship"], CTI_RESPAWN_MOBILE_SAFE_RANGE];
 				if ({_x countSide _cti_entities > 0} count ([west, east, resistance] - [CTI_P_SideJoined]) < 1) then {_available pushBack _x};

@@ -173,6 +173,12 @@ class Params {
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
 		default = 20;
 	};
+	class CTI_TOWNS_CAPTURE_MODE {
+		title = "TOWNS: CAPTURE MODE";
+		values[] = {0,1,2};
+		texts[] = {"Normal","Camp Cap Boost","All Camps Required (also boosts)"};
+		default = 2;
+	};
 	class CTI_TOWNS_TERRITORIAL {
 		title = "TOWNS: Territorial Mode";
 		values[] = {0,1};
@@ -210,7 +216,7 @@ class Params {
 		default = 1500;
 	};
 	class CTI_RESPAWN_LARGE_FOB_RANGE {
-		title = "RESPAWN: FOB Range";
+		title = "RESPAWN: Large FOB Range";
 		values[] = {500,750,1000,1250,1500,1750,2000,2250,2500,2750,3000};
 		texts[] = {"0.50 KM","0.75 KM","1 KM","1.25 KM","1.5 KM","1.75 KM","2 KM","2.25 KM","2.5 KM","2.75 KM","3 KM"};
 		default = 2500;
@@ -293,6 +299,12 @@ class Params {
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
 	};
+	class CTI_UNITS_FUEL_CONSUMPTION {
+		title = "UNITS: Increased Fuel Consumption";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
 		title = "UNITS: Vehicles Reycling Delay";
 		values[] = {60,120,180,240,300,600,1200,1800,2400,3000,3600};
@@ -336,10 +348,10 @@ class Params {
 		default = 0;
 	};
 	class CTI_GAMEPLAY_DARTER {
-	title = "GAMEPLAY: Darter Range limitation";
-	values[] = {0,500,1000,2000,4000,6000,8000};
-	texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
-	default = 2000;
+		title = "GAMEPLAY: Darter Range limitation";
+		values[] = {0,500,1000,2000,4000,6000,8000};
+		texts[] = {"None","Connection range 500m","Connection range 1000m","Connection range 2000m","Connection range 4000m","Connection range 6000m", "Connection range 8000m"};
+		default = 2000;
 	};
 	class SEPARATOR7 {
 		title = "========================== TEAMPLAY ===========================";
@@ -447,37 +459,37 @@ class Params {
 		title = "WEATHER: Fog value";
 		values[] = {-1,0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"Random","Clear","10","20","30","40","50","60","70","80","90","MAX"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_COEF {
 		title = "WEATHER: Fog Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_DECAY {
 		title = "WEATHER: Fog decay level";
 		values[] = {-1,0,0.02,0.04,0.06,0.08,0.1,0.15,0.20,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","0.02","0.04","0.06","0.08","0.1","0.15","0.20","0.25","0.5","0.75","1"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_DECAY_COEF {
 		title = "WEATHER: Fog decay Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_ALT {
 		title = "WEATHER: Fog altitude";
 		values[] = {-1,0,1,5,25,50,100,200,300,400,500,600,700,800,900,1000};
 		texts[] = {"Random","0m","1m","5m","25m","50m","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_ALT_COEF {
 		title = "WEATHER: Fog altitude Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_WIND {
 		title = "WEATHER: Wind";
@@ -507,7 +519,7 @@ class Params {
 		title = "WEATHER: Frequency of weather changes (or between of storms)";
 		values[] = {-1,0,60,120,300,600,900,1800,2700,3600,5400,7200};
 		texts[] = {"Random","No Change","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min"};
-		default = 3600;
+		default = 1800;
 	};
 	class CTI_WEATHER_STORM_TIME {
 		title = "WEATHER: Duration of Storms (dust storms and monsoons)";

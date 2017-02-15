@@ -68,7 +68,9 @@ with missionNamespace do {
 				};
 				if (_vote_update) then {_x setVariable ["cti_vote", _team, true]};
 			} forEach (_logic getVariable "cti_teams");
-			
+			if (CTI_DEV_MODE == 0) then {
+				sleep 15;
+			};
 			//--- Call in for a vote
 			(_side) Spawn CTI_SE_FNC_VoteForCommander;
 		};
@@ -124,6 +126,19 @@ with missionNamespace do {
 	
 	//--- The client request an HQ toggle (deployed/mobilized)
 	CTI_PVF_SRV_RequestHQToggle = { _this spawn CTI_SE_FNC_ToggleHQ };
+	
+	//--- The client request an FOB (deploy)
+	CTI_PVF_SRV_RequestFOBDeploy = {
+		private ["_vehicle","_side","_position","_direction","_fobtype","_fobclass","_fobclassruins"];
+		_vehicle = _this select 0;
+		_side = _this select 1;
+		_position = _this select 2;
+		_direction = _this select 3;
+		_fobtype = _this select 4;
+		_fobclass = _this select 5;
+		_fobclassruins = _this select 6;
+		[_vehicle, _side, _position, _direction, _fobtype, _fobclass, _fobclassruins] spawn CTI_SE_FNC_DeployFOB;
+	};	
 	
 	//--- The client request his Join in Progress gear if possible
 	/*CTI_PVF_SRV_RequestJIPGear = {
@@ -241,12 +256,12 @@ with missionNamespace do {
 
 			_side_origin = _get select 2; //--- Get the original side.
 			
-			if (_side_origin != _side) then { //--- Teamswapping, the joined side differs from the original one.
+			if (_side_origin != _side && (missionNamespace getVariable "CTI_TEAMSWAP") > 0) then { //--- Teamswapping, the joined side differs from the original one (make sure that teamswaping is prohibed)
 				_join = false;
 				["teamswap", _name] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] tried to teamswap from it's original side [%3] to side [%4]. The server explicitely answered that he should be sent back to the lobby.", _name, _uid, _side_origin, _side]] call CTI_CO_FNC_Log};
 			} else {
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] joined back it's original side [%3].", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] either joined back it's original side [%3] or teamswaping is disabled.", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
 				_original_side = true;
 			};
 			

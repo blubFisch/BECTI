@@ -43,20 +43,28 @@ _town setVariable ["cti_town_lastSideID", _currentSideID, true];
 //--- Set the town in a peace mode if needed for the specified amount of time
 _flagTexture = missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _newSide], CTI_TOWNS_FLAG_TEXTURE_PEACE];
 if (missionNamespace getVariable "CTI_TOWNS_PEACE" > 0) then {
-	_town setVariable ["cti_town_peace", time + (missionNamespace getVariable "CTI_TOWNS_PEACE"), true];
-	_flagTexture = CTI_TOWNS_FLAG_TEXTURE_PEACE;
+	//--- Check if we still have hostiles around the town before triggering the peace time
+	_entities = [];
+	{if (((ASLToAGL getPosASL _x) select 2) <= 30) then {_entities pushBack _x}} forEach (_town nearEntities ["AllVehicles", CTI_TOWNS_CAPTURE_PEACE_SCAN_RANGE]);
+	_hostiles = {_x countSide _entities > 0} count ([west, east, resistance] - [_newSide]);
 	
-	//--- Thread spawn, Update the flag textures upon peace mode expiration if applicable
-	if (typeOf _town == "FlagPole_F") then {
-		[_town, _newSide] spawn {
-			_town = _this select 0;
-			_newSide = _this select 1;
-			
-			while {time < (_town getVariable "cti_town_peace")} do { sleep .5 };
-			
-			//--- Only update if the new side ID match the current side ID
-			if ((_newSide call CTI_CO_FNC_GetSideID) == (_town getVariable "cti_town_sideID")) then {
-				_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _newSide], CTI_TOWNS_FLAG_TEXTURE_PEACE]);
+	//---- If no hostiles are present, the peace mode may be triggered
+	if (_hostiles < 1) then {
+		_town setVariable ["cti_town_peace", time + (missionNamespace getVariable "CTI_TOWNS_PEACE"), true];
+		_flagTexture = CTI_TOWNS_FLAG_TEXTURE_PEACE;
+		
+		//--- Thread spawn, Update the flag textures upon peace mode expiration if applicable
+		if (typeOf _town == "FlagPole_F") then {
+			[_town, _newSide] spawn {
+				_town = _this select 0;
+				_newSide = _this select 1;
+				
+				while {time < (_town getVariable "cti_town_peace")} do { sleep .5 };
+				
+				//--- Only update if the new side ID match the current side ID
+				if ((_newSide call CTI_CO_FNC_GetSideID) == (_town getVariable "cti_town_sideID")) then {
+					_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _newSide], CTI_TOWNS_FLAG_TEXTURE_PEACE]);
+				};
 			};
 		};
 	};
@@ -80,6 +88,8 @@ if (CTI_Log_Level >= CTI_Log_Information) then {
 };
 
 [_town, _newSideID, _currentSideID] remoteExec ["CTI_PVF_CLT_OnTownCaptured", CTI_PV_CLIENTS];
+//-- Announce Victory
+//if (typeOf _town == "FlagPole_F") then {[_town,"marchinhome",10] call Common_Say3D;};
 
 if (_newSide != resistance && (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" == 1)) then { //--- Award the AI
 	_award_teams = [];

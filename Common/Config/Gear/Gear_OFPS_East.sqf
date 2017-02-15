@@ -10,17 +10,17 @@ _p = [];
 //************************OFPS Stuff************************
 
 //launchers
-_i pushBack "sfp_pskott68";
+/*_i pushBack "sfp_pskott68";
 _u pushBack 1;
 _p pushBack 700;
 
 _i pushBack "sfp_grg86";
 _u pushBack 1;
-_p pushBack 900;
+_p pushBack 900;*/
 
 //Launcher ammo
 
-_i pushBack "sfp_pskott68_mag";
+/*_i pushBack "sfp_pskott68_mag";
 _u pushBack 1;
 _p pushBack 150;
 
@@ -38,7 +38,7 @@ _p pushBack 150;
 
 _i pushBack "sfp_grg_heat_62_mag";
 _u pushBack 1;
-_p pushBack 150;
+_p pushBack 150;*/
 
 //-- Magazines
 _i pushBack "hlc_500rnd_762x51_Belt";
@@ -218,7 +218,7 @@ _p pushBack 1000;
 
 //SFP PACK
 //-- Grenades
-_i pushBack "sfp_handgrenade_shgr07";
+/*_i pushBack "sfp_handgrenade_shgr07";
 _u pushBack 0;
 _p pushBack 50;
 
@@ -228,7 +228,7 @@ _p pushBack 50;
 
 _i pushBack "sfp_handgrenade_shgr2000";
 _u pushBack 0;
-_p pushBack 50;
+_p pushBack 50;*/
 
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf";
