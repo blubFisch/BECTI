@@ -32,12 +32,12 @@ if (CTI_FACTION_EAST == 0) then {
 		};
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "rhs_msv_emr_combatcrew"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "rhs_pilot"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "rhs_msv_emr_rifleman"];
 		};
 	}
 };
@@ -73,12 +73,12 @@ if (CTI_FACTION_EAST == 1) then {
 		};
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "rhs_msv_emr_combatcrew"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "rhs_pilot"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "rhs_msv_emr_rifleman"];
 		};
 	}
 };
@@ -114,12 +114,12 @@ if (CTI_FACTION_EAST == 2) then {
 		};
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
-			missionNamespace setVariable [format["CTI%1_Worker", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Diver", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Soldier", _side], "rhs_msv_emr_rifleman"];
-			missionNamespace setVariable [format["CTI%1_Crew", _side], "rhs_msv_emr_combatcrew"];
-			missionNamespace setVariable [format["CTI%1_Pilot", _side], "rhs_pilot"];
-			missionNamespace setVariable [format["CTI%1_Static", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "rhs_msv_emr_combatcrew"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "rhs_pilot"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "rhs_msv_emr_rifleman"];
 		};
 	}
 };
