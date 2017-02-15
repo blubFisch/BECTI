@@ -4,26 +4,26 @@ if (CTI_FACTION_WEST == 0) then {
 	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
-		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//RHS
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
 	}
 };
 if (CTI_FACTION_WEST == 1) then {
 	//NATO Tropic
 	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
-		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//Vanilla
-		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//Apex
-		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "OFPS_MARSHALL"];};//RHS
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
 	}
 };
 if (CTI_FACTION_WEST == 2) then {
 	//NATO Winter
 	switch (CTI_FACTION_DEFAULT_VEHICLES) do {
-		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//Vanilla
-		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//Apex
-		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "Meaty_Marshall_Sn"];};//RHS
+		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
+		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
+		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
 	}
 };
 
