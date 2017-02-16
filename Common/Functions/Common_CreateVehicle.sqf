@@ -135,7 +135,7 @@ if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
 };
 //if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
-//if({(_vehicle isKindOf _x)} count ["Tank","Wheeled_APC_F"] !=0) then { // adds in stealth addaction to tanks and apc. 
+// adds in stealth addaction to tanks and apc. 
 if (_vehicle isKindOf "Tank") then {
 	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target == _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
 	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
