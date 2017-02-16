@@ -5,9 +5,16 @@ scopeName "end";
 if (!(_repair_status)) exitWith{};
 if (_repair_status) then {
 _vehicle = [player, _vehicles] Call CTI_CO_FNC_GetClosestEntity;
+_actionTime = switch (true) do {
+	case (_vehicle isKindOf "Tank"): {CTI_TOOLKIT_REPAIR_TIME_TANK};// repair times for tracked vehicles
+	case (_vehicle isKindOf "Air"): {CTI_TOOLKIT_REPAIR_TIME_AIR};// repair times for air vehicles
+	case (_vehicle isKindOf "Car"): {CTI_TOOLKIT_REPAIR_TIME_CAR};// repair times for air vehicles
+	case (_vehicle isKindOf "Ship"): {CTI_TOOLKIT_REPAIR_TIME_SHIP};// repair times for air vehicles
+   default {CTI_TOOLKIT_REPAIR_TIME_UNKNOWN}
+ };
 _dammages = getDammage _vehicle;
+
 _startTime = time;// current time
-_actionTime = 30;// time for the repair
 _totalTime = time + _actionTime;
 _animation = "Acts_carFixingWheel";
 //--- Retrieve hitpoints for the given vehicle
@@ -45,18 +52,16 @@ if (time < _totalTime)  then {
 	breakTo "end";
 };
 
-
-player removeItem "ToolKit"; // removes toolkit
-	_dammages = _dammages - .15;
+	_dammages = _dammages - CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
  	if (_dammages < 0) then {
 		_dammages = 0
 	};
 	_vehicle setDammage _dammages;
 	
 	if (local _vehicle) then {
-		[_vehicle, _hitPoints, 1] call CTI_PVF_CLT_RequestVehicleHitPointsRepair;
+		[_vehicle, _hitPoints, CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT] call CTI_PVF_CLT_RequestVehicleHitPointsRepair;
 	} else {
-		[_vehicle, _hitPoints, 1] remoteExec ["CTI_PVF_SRV_RequestVehicleHitPointsRepair", CTI_PV_SERVER];
+		[_vehicle, _hitPoints, CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT] remoteExec ["CTI_PVF_SRV_RequestVehicleHitPointsRepair", CTI_PV_SERVER];
 	};
 	if (fuel _vehicle < .10) then {
 		if (local _vehicle) then {
