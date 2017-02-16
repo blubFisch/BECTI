@@ -244,7 +244,7 @@ _upgrade = [];
 _specials = [];
 
 //******************************BASE DEFENSE 0******************************
-
+	//MG Nest with roof
 	_headers pushBack 		"Bunker (Small)";
 	_classes pushBack 		"Land_BagBunker_Small_F";
 	_prices pushBack 		150;
@@ -254,17 +254,17 @@ _specials = [];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];	
-
+	//Tall Roof
 	_headers pushBack  		["Shed (Roof)",[["RuinOnDestroyed", "Land_Shed_Big_ruins_F"], ["DMG_Reduce", 8]]];
 	_classes pushBack  		"Land_Shed_Big_F";
 	_prices pushBack 		2000;
 	_placements pushBack 	[0, 15];
 	_categories pushBack 	"Fortification";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
-	_coinblacklist pushBack [["Land_Shed_Big_F", 10], ["Land_TentHangar_V1_F", 10], ["Land_sfp_mil_shed", 10], ["Land_sfp_torebodahangar", 10], ["Land_sfp_torebodahangar_alt2", 10], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
+	_coinblacklist pushBack [["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 15], ["Land_sfp_mil_shed", 15], ["Land_sfp_torebodahangar", 15], ["Land_sfp_torebodahangar_alt2", 15], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
-
+	//Short roof with one wall side
 	_headers pushBack 		["Shed (Land)",[["RuinOnDestroyed", "Land_Shed_Small_ruins_F"], ["DMG_Reduce", 5]]];
 	_classes pushBack 		"Land_Shed_Small_F";
 	_prices pushBack 		2000;
@@ -284,8 +284,8 @@ _specials = [];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[];
-
-	_headers pushBack 		"Lamp";
+	//Clutter
+/*	_headers pushBack 		"Lamp";
 	_classes pushBack 		"Land_LampHalogen_F";
 	_prices pushBack 		5;
 	_placements pushBack 	[90, 15];
@@ -413,7 +413,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 	
 	_headers pushBack 		"MG Defense";
 	_classes pushBack 		"O_HMG_01_High_F";
@@ -609,7 +609,7 @@ _specials = [];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 	};
 	
-	_headers pushBack 		["Fence",[["CanAutoAlign", 7.5, 0]]];
+/*	_headers pushBack 		["Fence",[["CanAutoAlign", 7.5, 0]]];
 	_classes pushBack 		"Land_Mil_WiredFence_F";
 	_prices pushBack 		25;
 	_placements pushBack 	[0, 7];
@@ -629,7 +629,7 @@ _specials = [];
 	_coinblacklist pushBack [];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		1;		
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		["High Wall (Mil)",[["CanAutoAlign", 3.8, 0]]];
 	_classes pushBack 		"Land_Mil_WallBig_4m_F";
@@ -681,7 +681,7 @@ _specials = [];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		1;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
-
+	//Small Lifted Camp
 	_headers pushBack 		"Tower";
 	_classes pushBack  		"Land_Cargo_Patrol_V1_F";
 	_prices pushBack  		150;
@@ -691,14 +691,14 @@ _specials = [];
 	_coinblacklist pushBack [];	
 	_upgrade pushBack		1;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
-	
+	//Big hangar
 	_headers pushBack 		["Tent Hangar",[["RuinOnDestroyed", "Land_TentHangar_V1_ruins_F"], ["DMG_Reduce", 5]]];
 	_classes pushBack 		"Land_TentHangar_V1_F";
 	_prices pushBack 		4000;
 	_placements pushBack 	[0, 20];
 	_categories pushBack 	"Structures_Military";
 	_coinmenus pushBack 	["HQ"];
-	_coinblacklist pushBack [["Land_Shed_Big_F", 10], ["Land_TentHangar_V1_F", 10], ["Land_sfp_mil_shed", 10], ["Land_sfp_torebodahangar", 10], ["Land_sfp_torebodahangar_alt2", 10], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
+	_coinblacklist pushBack [["Land_Shed_Big_F", 30], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 30], ["Land_Ss_hangar", 30], ["Land_Ss_hangard", 30]];
 	_upgrade pushBack		1;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	
@@ -1082,21 +1082,21 @@ if (CTI_RHS_ADDON > 0) then {
 
 	_headers pushBack 		"Dome (Small)";
 	_classes pushBack 		"Land_Dome_Small_F";
-	_prices pushBack 		8000;
+	_prices pushBack 		10000;
 	_placements pushBack 	[0, 30];
 	_categories pushBack 	"Fortification";
 	_coinmenus pushBack 	["HQ"];
-	_coinblacklist pushBack [["Land_Shed_Big_F", 10], ["Land_TentHangar_V1_F", 10], ["Land_sfp_mil_shed", 10], ["Land_sfp_torebodahangar", 10], ["Land_sfp_torebodahangar_alt2", 10], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
+	_coinblacklist pushBack [["Land_Shed_Big_F", 30], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 30], ["Land_Ss_hangard", 30]];
 	_upgrade pushBack		4;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 
 	_headers pushBack 		"Dome (Big)";
 	_classes pushBack 		"Land_Dome_Big_F";
-	_prices pushBack 		10000;
+	_prices pushBack 		15000;
 	_placements pushBack 	[0, 50];
 	_categories pushBack 	"Fortification";
 	_coinmenus pushBack 	["HQ"];
-	_coinblacklist pushBack [["Land_Shed_Big_F", 10], ["Land_TentHangar_V1_F", 10], ["Land_sfp_mil_shed", 10], ["Land_sfp_torebodahangar", 10], ["Land_sfp_torebodahangar_alt2", 10], ["Land_Dome_Small_F", 25], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 20], ["Land_Ss_hangard", 20]];
+	_coinblacklist pushBack [["Land_Shed_Big_F", 30], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 40], ["Land_Ss_hangar", 30], ["Land_Ss_hangard", 30]];
 	_upgrade pushBack		4;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	
