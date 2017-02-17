@@ -69,24 +69,14 @@ switch (_upgrade_basehealth) do {
 if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
 };
-//--- Vanilla - Added T100, Slammer, Slammer UP
-if (_ammo isKindOf "Sh_120mm_HE" || _ammo isKindOf "20Rnd_105mm_HEAT_MP" || _ammo isKindOf "12Rnd_125mm_HE" || _ammo isKindOf "12Rnd_125mm_HEAT") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_HE_SHELL;//roughly 6 aps shells to kill CC
+//--- Tanks - Added T100, Slammer, Slammer UP, T90A
+if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_HE" || _ammo isKindOf /*Slammer*/"20Rnd_105mm_HEAT_MP" || _ammo isKindOf /*T100*/"12Rnd_125mm_HE" || _ammo isKindOf /*T100*/"12Rnd_125mm_HEAT" || _ammo isKindOf /*t90A*/"rhs_ammo_3bk31" || _ammo isKindOf /*t90A*/"rhs_ammo_3of26") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_HE_SHELL;
 };
-//--- Vanilla - Added T100, Slammer, Slammer UP
-if (_ammo isKindOf "Sh_120mm_APFSDS" || _ammo isKindOf "40Rnd_105mm_APFSDS" || _ammo isKindOf "24Rnd_125mm_APFSDS" || _ammo isKindOf "24Rnd_125mm_APFSDS") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_AP_SHELL;//roughly 6 aps shells to kill CC
+//--- Tanks - Added T100, Slammer, Slammer UP, T90A
+if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_APFSDS" || _ammo isKindOf /*Slammer*/"40Rnd_105mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*t90A*/"rhs_ammo_3bm46") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_AP_SHELL;
 };
-
-//--- RHS - Added T90A
-if (_ammo isKindOf "rhs_mag_3bk31_3" || _ammo isKindOf "rhs_mag_3of26_7") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_RHS_HE_SHELL;//roughly 10 aps shells
-};
-//--- RHS - Added T90A
-if (_ammo isKindOf "rhs_mag_3bm46_8") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_RHS_AP_SHELL;//roughly 10 aps shells
-};
-
 if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };

@@ -514,12 +514,9 @@ CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgra
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1;
-//--- Vanilla
-CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_HE_SHELL = 10;
-CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_AP_SHELL = 5;
-//--- RHS
-CTI_BASE_DAMAGE_MULTIPLIER_RHS_HE_SHELL = 80;
-CTI_BASE_DAMAGE_MULTIPLIER_RHS_AP_SHELL = 85;
+//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_HE_SHELL = 5;
+CTI_BASE_DAMAGE_MULTIPLIER_AP_SHELL = 3;
 
 CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;
 CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;
