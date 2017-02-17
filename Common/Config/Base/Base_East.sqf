@@ -95,7 +95,7 @@ _classes pushBack 		["Land_Research_HQ_F", "Land_Research_HQ_ruins_F", ["Land_Re
 _prices pushBack 		4000;
 _times pushBack 		90;
 _placements pushBack 	[90, 25, false];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4.3]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4.0]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack		[CTI_BARRACKS, "Barracks", "Barracks"];
@@ -119,7 +119,7 @@ _classes pushBack 		["Land_Cargo_HQ_V1_F", "Land_Cargo_HQ_V1_ruins_F"];
 _prices pushBack 		6000;
 _times pushBack 		120;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]]; //8 HE rounds
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_AIR, "Aircraft Factory", "Air"];
@@ -253,9 +253,9 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];	
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 1]];	
 	//Tall Roof
-	_headers pushBack  		["Shed (Roof)",[["RuinOnDestroyed", "Land_Shed_Big_ruins_F"], ["DMG_Reduce", 8]]];
+	_headers pushBack  		"Shed (Roof)";
 	_classes pushBack  		"Land_Shed_Big_F";
 	_prices pushBack 		2000;
 	_placements pushBack 	[0, 15];
@@ -263,9 +263,9 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		1;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 5]]; // 3-4 HE shells
 	// Short roof with one wall side
-	_headers pushBack 		["Shed (Land)",[["RuinOnDestroyed", "Land_Shed_Small_ruins_F"], ["DMG_Reduce", 5]]];
+	_headers pushBack 		"Shed (Land)";
 	_classes pushBack 		"Land_Shed_Small_F";
 	_prices pushBack 		2000;
 	_placements pushBack 	[90, 15];
@@ -273,9 +273,9 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]]; // 3-4 HE shells
 	
-	_headers pushBack 		["Heli Pad", [["DMG_Reduce", 1]]];
+	_headers pushBack 		"Heli Pad";
 	_classes pushBack 		"Land_HelipadSquare_F";
 	_prices pushBack 		100;
 	_placements pushBack 	[0, 7];
@@ -640,7 +640,7 @@ _specials = [];
 	_coinblacklist pushBack [];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		1;		
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 10]]; //3 HE shells
 
 /*	_headers pushBack 		["High Wall Gate (Mil)",[["CanAutoAlign", 3.8, 0]]];
 	_classes pushBack 		"Land_Mil_WallBig_Gate_F";
@@ -736,7 +736,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		1;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]]; //4 HE rounds
 
 		_headers pushBack 		["H-Barrier5x",[["CanAutoAlign", 3.8, 0]]];
 		_classes pushBack 		"Base_WarfareBBarrier5x";
@@ -746,7 +746,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		1;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]]; //4 HE rounds
 	};
 	
 	if (CTI_OFPS_ADDON > 0) then { 
@@ -820,7 +820,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]]; //4-5 HE slammer rounds to go down
 
 		/*Cant use due to apex object
 		_headers pushBack 		"Air Tower";
@@ -899,7 +899,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]]; //3 HE runds from slammer took to kill
 
 	};
 	
@@ -1088,7 +1088,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		3;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 6]]; //5-6 HE rounds from Slammer took to kill
 
 	_headers pushBack 		"Dome (Big)";
 	_classes pushBack 		"Land_Dome_Big_F";
@@ -1098,7 +1098,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		4;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 6]]; //5-6 HE rounds from Slammer took to kill
 	
 	if (CTI_CUP_CORE_ADDON > 0) then {
 
@@ -1110,7 +1110,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]]; //5 HE rounds to kill
 
 		_headers pushBack 		"Large Hangar (Green)";
 		_classes pushBack 		"Land_Ss_hangar";
@@ -1120,7 +1120,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 50]]; //5 HE rounds from Smaller took to kill
 		//wont listen to coin blacklist
 /*		_headers pushBack 		"Large Hangar (Desert)";
 		_classes pushBack 		"Land_Ss_hangard";
