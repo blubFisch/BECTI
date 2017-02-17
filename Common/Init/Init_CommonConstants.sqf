@@ -511,12 +511,19 @@ CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be fro
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 
-//--- Base: Damage modifiers
-CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1; //--- damage modifier for base structures - BulletCore, ShotgunCore
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 5; //--- damage modifier for base structures - ShellBase, ShellCore
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1; //--- damage modifier for base structures - RocketCore, MissileCore
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1; //--- damage modifier for base structures - BombCore, LaserBombCore
-CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5; //--- damage modifier for base structures - ArtilleryRocketCore
+//--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
+//--- Bigger the numbers more damage that Ammo does!
+CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1;
+//--- Vanilla
+CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_HE_SHELL = 10;
+CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_AP_SHELL = 5;
+//--- RHS
+CTI_BASE_DAMAGE_MULTIPLIER_RHS_HE_SHELL = 80;
+CTI_BASE_DAMAGE_MULTIPLIER_RHS_AP_SHELL = 85;
+
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;
+CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5;
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu

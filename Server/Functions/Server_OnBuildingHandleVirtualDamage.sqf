@@ -53,7 +53,7 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
-//Base Health Upgrade
+//--- Base Health Upgrade
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
 _baseratio = 1;
@@ -64,13 +64,29 @@ switch (_upgrade_basehealth) do {
 	case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
 	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 };
-//Adjust damage for ammo types
+//--- Adjust damage for ammo types
+//--- This is active file that works with base damage 2/17/2017 -Omon
 if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
 };
-if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;//roughly 10 aps shells
+//--- Vanilla - Added T100, Slammer, Slammer UP
+if (_ammo isKindOf "Sh_120mm_HE" || _ammo isKindOf "20Rnd_105mm_HEAT_MP" || _ammo isKindOf "12Rnd_125mm_HE" || _ammo isKindOf "12Rnd_125mm_HEAT") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_HE_SHELL;//roughly 6 aps shells to kill CC
 };
+//--- Vanilla - Added T100, Slammer, Slammer UP
+if (_ammo isKindOf "Sh_120mm_APFSDS" || _ammo isKindOf "40Rnd_105mm_APFSDS" || _ammo isKindOf "24Rnd_125mm_APFSDS" || _ammo isKindOf "24Rnd_125mm_APFSDS") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_Vanilla_AP_SHELL;//roughly 6 aps shells to kill CC
+};
+
+//--- RHS - Added T90A
+if (_ammo isKindOf "rhs_mag_3bk31_3" || _ammo isKindOf "rhs_mag_3of26_7") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_RHS_HE_SHELL;//roughly 10 aps shells
+};
+//--- RHS - Added T90A
+if (_ammo isKindOf "rhs_mag_3bm46_8") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_RHS_AP_SHELL;//roughly 10 aps shells
+};
+
 if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };
