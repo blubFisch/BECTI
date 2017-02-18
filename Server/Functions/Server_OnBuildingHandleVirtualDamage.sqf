@@ -77,6 +77,14 @@ if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_HE" || _ammo isKindOf /*Slammer*/"20Rn
 if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_APFSDS" || _ammo isKindOf /*Slammer*/"40Rnd_105mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*t90A*/"rhs_ammo_3bm46") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_AP_SHELL;
 };
+//--- Satchels
+if (_ammo isKindOf "satchelcharge") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
+};
+//--- Fast HE Canons - Vanilla choppers and jets added
+if (_ammo isKindOf "B_30mm_HE" || _ammo isKindOf "Cannon_30mm_HE_Plane_CAS_02_F" || _ammo isKindof "Gatling_30mm_HE_Plane_CAS_01_F" || _ammo isKindOf "B_20mm" || _ammo isKindOf /*RHS KA50*/ "arhs_ammo_3uor6" || _ammo isKindOf /*RHS A10*/"rhs_ammo_PGU14B_API" || _ammo isKindOf /*RHS Apache */ "rhs_ammo_30x113mm_M789_HEDP") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_HE_CANON;
+};
 if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };
