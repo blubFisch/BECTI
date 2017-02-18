@@ -12,10 +12,11 @@ _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 
 //--- Infantry USAF
+
 _c pushBack 'rhsusf_army_ocp_rifleman';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 200;
+_o pushBack 75;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -25,9 +26,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_aa';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 1500;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -35,9 +36,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_autorifleman';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 300;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -45,9 +46,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_riflemanat';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 450;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -62,12 +63,22 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'rhsusf_army_ocp_riflemanat';
+_p pushBack '';
+_n pushBack ["%1 (RHS)"]; 
+_o pushBack 75;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'rhsusf_usmc_marpat_d_javelin';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 3500;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 3;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -75,9 +86,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_engineer';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 500;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -85,9 +96,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_explosives';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 500;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -95,9 +106,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_grenadier';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 300;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -105,9 +116,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_medic';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 450;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -115,9 +126,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_machinegunner';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 400;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -135,9 +146,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_sniper';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 400;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -145,9 +156,9 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_teamleader';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 300;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
@@ -155,12 +166,13 @@ _d pushBack 0;
 _c pushBack 'rhsusf_army_ocp_squadleader';
 _p pushBack '';
 _n pushBack ["%1 (RHS)"]; 
-_o pushBack 350;
+_o pushBack 75;
 _t pushBack 5;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+
 
 //--- Light Vehicles
 _c pushBack 'rhsusf_mrzr4_d';
@@ -226,7 +238,7 @@ _d pushBack 10;
 _c pushBack 'rhsusf_rg33_usmc_wd';
 _p pushBack '';
 _n pushBack 'RG-33 Woodland';
-_o pushBack 900;
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -995,8 +1007,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
-//Duplicate
-/*_c pushBack 'rhsusf_M1117_O';
+
+_c pushBack 'rhsusf_M1117_O';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1005,7 +1017,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M1117_D';
 _p pushBack '';
 _n pushBack 'M1117 ASV Desert';
@@ -1065,7 +1077,7 @@ _o pushBack 8000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
+_s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'rhsusf_m113_usarmy_medical';
@@ -1075,7 +1087,7 @@ _o pushBack 8000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "service-medic";
+_s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'RHS_M2A2_BUSKI';
@@ -1108,8 +1120,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-//---Duplicate
-/*_c pushBack 'rhsusf_M1A1FEP_D';
+_c pushBack 'rhsusf_M1A1FEP_D';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10000;
@@ -1118,10 +1129,20 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
-*/
-_c pushBack 'rhsusf_m1a1hc_wd';
+
+_c pushBack 'rhsusf_M1A1AIMD_USARMY';
 _p pushBack '';
-_n pushBack 'M1A1HC Woodland';
+_n pushBack 'M1A1SA Desert';
+_o pushBack 18000;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_m1a1aimwd_usarmy';
+_p pushBack '';
+_n pushBack 'M1A1SA Woodland';
 _o pushBack 18000;
 _t pushBack 30;
 _u pushBack 2;
@@ -1169,7 +1190,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-/*_c pushBack 'RHS_M2A3_BUSKI';
+_c pushBack 'RHS_M2A3_BUSKI';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10000;
@@ -1178,8 +1199,8 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
-*/
-_c pushBack 'rhsusf_m1a1aim_tuski_d';
+
+_c pushBack 'rhsusf_M1A1AIM_TUSKI_D';
 _p pushBack '';
 _n pushBack 'M1A1SA (TUSK I) Desert';
 _o pushBack 22000;
@@ -1199,8 +1220,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-//---Duplicate
-/*_c pushBack 'rhsusf_M1A2SEP1D_USARMY';
+_c pushBack 'rhsusf_M1A2SEP1D_USARMY';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10000;
@@ -1209,7 +1229,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
-*/ 
+
 _c pushBack 'RHS_M2A3_BUSKIII';
 _p pushBack '';
 _n pushBack 'M2A3 (BUSK III) Desert';
@@ -1230,8 +1250,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-//---Duplicate
-/*_c pushBack 'rhsusf_M1A2SEP1TUSKID_USARMY';
+_c pushBack 'rhsusf_M1A2SEP1TUSKID_USARMY';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 20000;
@@ -1240,7 +1259,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M1A2SEP1TUSKIID_USARMY';
 _p pushBack '';
 _n pushBack 'M1A2SEPv1 (TUSK II) Desert';
@@ -1285,14 +1304,14 @@ _d pushBack 10;
 _c pushBack 'rhsusf_M977A4_usarmy_d';
 _p pushBack '';
 _n pushBack 'M977A4 Salvage Desert';
-_o pushBack 550;
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "salvager";
 _d pushBack 10;
 
-/*_c pushBack 'rhsusf_M977A4_REPAIR_usarmy_d';
+_c pushBack 'rhsusf_M977A4_REPAIR_usarmy_d';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1301,8 +1320,8 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
-*/
-/*_c pushBack 'rhsusf_M977A4_BKIT_usarmy_d';
+
+_c pushBack 'rhsusf_M977A4_BKIT_usarmy_d';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1311,7 +1330,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_d';
 _p pushBack '';
 _n pushBack 'M977A4 Repair/M2 Desert';
@@ -1332,10 +1351,50 @@ _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
 
-_c pushBack 'rhsusf_M977A4_REPAIR_BKIT_usarmy_wd';
+_c pushBack 'rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd';
 _p pushBack '';
 _n pushBack 'M977A4 Repair Woodland';
-_o pushBack 6000;
+_o pushBack 8500;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "service-repairtruck";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_d';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "salvager";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_M977A4_usarmy_wd';
+_p pushBack '';
+_n pushBack 'M977A4 Salvage Woodland';
+_o pushBack 1000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "salvager";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_M977A4_REPAIR_usarmy_wd';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "service-repairtruck";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_M977A4_BKIT_usarmy_wd';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
@@ -1344,66 +1403,26 @@ _d pushBack 10;
 
 _c pushBack 'rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd';
 _p pushBack '';
-_n pushBack 'M977A4 Armed Repair Woodland';
-_o pushBack 6500;
+_n pushBack '';
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
 
-/*_c pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_d';
+_c pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_wd';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "salvager";
-_d pushBack 10;
-*/
-_c pushBack 'rhsusf_M977A4_usarmy_wd';
-_p pushBack '';
-_n pushBack 'M977A4 Salvage Woodland';
-_o pushBack 550;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "salvager";
 _d pushBack 10;
 
-/*_c pushBack 'rhsusf_M977A4_REPAIR_usarmy_wd';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "service-repairtruck";
-_d pushBack 10;
-*/
-/*_c pushBack 'rhsusf_M977A4_BKIT_usarmy_wd';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "service-repairtruck";
-_d pushBack 10;
-*/
-/*_c pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_wd';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 750;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "salvager";
-_d pushBack 10;
-*/
 //--- Ammo Vehicles
-/*_c pushBack 'rhsusf_M977A4_AMMO_usarmy_d';
+_c pushBack 'rhsusf_M977A4_AMMO_usarmy_d';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1412,7 +1431,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M977A4_AMMO_BKIT_usarmy_d';
 _p pushBack '';
 _n pushBack 'M977A4 Ammo Desert';
@@ -1426,13 +1445,13 @@ _d pushBack 10;
 _c pushBack 'rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 6500;
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 10;
-/*
+
 _c pushBack 'rhsusf_M978A4_BKIT_usarmy_d';
 _p pushBack '';
 _n pushBack '';
@@ -1442,7 +1461,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-fueltruck";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M977A4_AMMO_usarmy_wd';
 _p pushBack '';
 _n pushBack '';
@@ -1466,7 +1485,7 @@ _d pushBack 10;
 _c pushBack 'rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 6500;
+_o pushBack 1000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
@@ -1482,8 +1501,8 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-fueltruck";
 _d pushBack 10;
-//Duplicate
-/*_c pushBack 'rhsusf_M978A4_BKIT_usarmy_wd';
+
+_c pushBack 'rhsusf_M978A4_BKIT_usarmy_wd';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1492,15 +1511,15 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
 _d pushBack 10;
-*/
+
 _c pushBack 'rhsusf_M978A4_usarmy_wd';
 _p pushBack '';
 _n pushBack 'M978A4 Fuel Woodland';
-_o pushBack 4000;
+_o pushBack 3000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
-_s pushBack "service-fueltruck";
+_s pushBack "";
 _d pushBack 10;
 
 //--- Air Vehicles
@@ -1521,7 +1540,7 @@ _o pushBack 10000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
-_s pushBack "service-medic";
+_s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'RHS_MELB_MH6M';
@@ -1555,7 +1574,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rhsusf_CH53E_USMC_D';
+_c pushBack 'rhsusf_CH53E_USCM_D';
 _p pushBack '';
 _n pushBack 'CH-53E Super Stallion';
 _o pushBack 7000;
