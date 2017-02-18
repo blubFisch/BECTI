@@ -121,9 +121,14 @@ with missionNamespace do {
 	if (isNil 'CTI_AI_TEAMS_ENABLED') then {CTI_AI_TEAMS_ENABLED = 1}; //--- Determine whether AI Teams are enabled or not
 };
 //-----------------------------------------------------------------------------------------------------------------------//
-
-
-
+//----------------------------------------------------ToolKitRepairTimes-------------------------------------------------------------//
+CTI_TOOLKIT_REPAIR_TIME_TANK = 45; //repair time for tracked vehicles in seconds
+CTI_TOOLKIT_REPAIR_TIME_CAR = 20; // repair time for wheeled vehicles including apcs in seconds
+CTI_TOOLKIT_REPAIR_TIME_AIR = 45; // repair time for aircraft in seconds
+CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
+CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
+CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.5; // percentage of hipoints a vehicle is repaired
+//-------------------------------------------------------------------------------------------------------------------------//
 
 //----------------------------------------------------ORDERS-------------------------------------------------------------//
 /*

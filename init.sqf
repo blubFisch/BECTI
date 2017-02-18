@@ -15,6 +15,7 @@ CTI_Log_Level = CTI_Log_Debug;
 
 //--- We define the log function early so that we may use it
 CTI_CO_FNC_Log = compile preprocessFileLineNumbers "Common\Functions\Common_Log.sqf";
+CTI_CO_FNC_Log_Gear_Array = compile preprocessFileLineNumbers "Common\Functions\Common_Log_Gear.sqf";
 
 //--- Global gameplay variables
 CTI_GameOver = false;
