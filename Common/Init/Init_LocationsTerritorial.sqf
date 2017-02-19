@@ -510,8 +510,8 @@ switch (toLower(worldName)) do {
 		LakeEyre setVariable ["cti_town_neighbors",[AliceSprings,ProcessingPlant]];
 		PortLincoln setVariable ["cti_town_neighbors",[WindFarmBravo,GasDepot,Factory,SpencerPoint]];
 		SpencerPoint setVariable ["cti_town_neighbors",[PortLincoln,AdelaideAir]];
-		Factory setVariable ["cti_town_neighbors",[CooberPedy,PortLincoln,BrokenHill]];
-		AdelaideAir setVariable ["cti_town_neighbors",[SpencerPoint,Adelaide]];
+		Factory setVariable ["cti_town_neighbors",[CooberPedy,PortLincoln,BrokenHill,AdelaideAir]];
+		AdelaideAir setVariable ["cti_town_neighbors",[SpencerPoint,Adelaide,Factory]];
 		BrokenHill setVariable ["cti_town_neighbors",[Adelaide,Factory,SuperMax,CrossRoads]];
 		Adelaide setVariable ["cti_town_neighbors",[AdelaideAir,TailemBend,BrokenHill]];
 		TailemBend setVariable ["cti_town_neighbors",[Adelaide,Mildura,BassOutpost]];
