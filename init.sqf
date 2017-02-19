@@ -97,16 +97,7 @@ if (CTI_IsHeadless) then {
 	execVM "Client\Init\Init_Client_Headless.sqf";
 };
 
-//--- Set the group ID
-execVM "Common\Init\Init_GroupsID.sqf";
-
-//---Igiload script
-_igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
-
-//--Drag and drop
-attached = false;
-0 = execVM "Client\Functions\Externals\BDD\Greifer.sqf";
-
+//--- External Modules, before you add try and see if it runs from client init first!!!
 //--Advanced Towing
 execVM "Client\Functions\Externals\AdvancedTowing\fn_advancedTowingInit.sqf";
 
@@ -119,91 +110,8 @@ execVM "Client\Functions\Externals\AdvancedRappel\fn_advancedRappellingInit.sqf"
 //--Advanced Urban Rapel
 execVM "Client\Functions\Externals\AdvancedUrbanRapel\functions\fn_advancedUrbanRappellingInit.sqf";
 
-//cmEARPLUGS
-call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
+//--- Set the group ID
+execVM "Common\Init\Init_GroupsID.sqf";
 
-//Vehicle HUD
-0 execVM	 "Client\Functions\Externals\Veh_Hud\HUD_init.sqf";
-
-//-- Explosives on Vehicles Script
-waitUntil {time > 0};
-execVM "Client\Functions\Externals\Attach_Charge\Action_Attach_charge.sqf";
-waitUntil {!isNil "EtVInitialized"};
-
-//-- disable ambient life
-waitUntil {time > 0};
-enableEnvironment false;
-
-//--- No more weapon sway
-if (local player) then {
-	_swayamount = CTI_WEAPON_SWAY / 100;
-	player setCustomAimCoef _swayamount;
-	player addMPEventhandler ["MPRespawn", {player setCustomAimCoef _swayamount;}];
-};
-
-//Default Video Settings
-CHVD_allowNoGrass = false; // Set 'false' if you want to disable "None" option for terrain (default: true)
-CHVD_maxView = 3500; // Set maximum Foot view distance (default: 12000) 
-CHVD_maxViewVeh = 3500; // Set maximum Vehicle view distance (default: 12000)
-CHVD_maxViewAir = 3500; // Set maximum Air view distance (default: 12000)
-CHVD_maxObj = 3500; // Set maximimum object view distance (default: 12000)
-CHVD_maxTerrain = true; //hardsets terrain grid to max (default: 3.125)
-
-//Briefing Entries
+//--- Briefing Entries
 0 execVM "Briefing.sqf";
-
-//Keybinds
-/*
-keyspressed = compile preprocessFile "Client\Events\Events_UI_Keybinds.sqf";
-0 spawn {
-	while {!CTI_GameOver} do {
-		_display = findDisplay 46;
-		_display displaySetEventHandler ["KeyDown","_this call keyspressed"];
-		sleep 2;
-	};
-};
-player removeEventHandler ["RscDisplayMPScoreTable",0];
-
-(findDisplay 46) displayAddEventHandler
-[
-	"KeyDown",
-	{
-		_handled = false;
-		if ((_this select 1) in actionKeys "networkStats") then
-		{
-			_handled = true;
-		};
-		_handled;
-	}
-];
-*/
-//Disable Scoreboard
-showScoretable 0;
-//hide score on HUD
-disableSerialization;
-_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
-if ( !isNull _displayscorehud ) then {
-	_statusscorehud = _displayscorehud displayCtrl 15283;
-	_statusscorehud ctrlShow false;	
-};
-
-//Radio
-Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
-if (isNil "Radio_Say3D") then {
-    Radio_Say3D = [objNull,"nosound",0];
-};
-"Radio_Say3D" addPublicVariableEventHandler {
-      private["_array"];
-      _array = _this select 1;
-     (_array select 0) say3D [(_array select 1), (_array select 2)];
-};
-
-
-//UAV RANGE limit
-	UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
-	if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
-		["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
-	};
-
-// Burn script for later
-//BIS_Effects_Burn=compile preprocessFileLineNumbers "\ca\Data\ParticleEffects\SCRIPTS\destruction\burn.sqf";
