@@ -526,105 +526,38 @@ if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 if (CTI_BASE_NOOBPROTECTION == 1) then {player addEventHandler ["fired", {_this spawn CTI_CL_FNC_OnPlayerFired}]}; //--- Trust me, you want that
 if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") == 0) then {player enableFatigue false}; //--- Disable the unit's fatigue
 
-//--- Thermal / NV restriction
+// Thermal / NV restriction
 if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVariable 'CTI_ZOMBIE_MODE')==1 || (missionNamespace getVariable 'CTI_GUERILLA_MODE')==1) then {
 	0 execVM "Client\Functions\Client_NvThermR.sqf";
 };
 
-//--- 3P restrict
+// 3P restrict
 0 execVM "Client\Functions\Externals\Restrict_3dperson\Client_3pRestrict.sqf";
 
-//--- Set Perks and Traits and Player Ai if rank based
+// Set Perks and Traits and Player Ai if rank based
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
-//--- group size script
+//group size script
 //0 execVM "Client\Functions\Externals\Adaptive_playerAI\Client_AdaptGroup.sqf";
 
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
 FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
-//--- Sam altitude warning
 call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
-
-//--- Low gear script
+//low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
-
-//-- Stealth script
+//Stealth script
 execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
 
-//--- Zues Module
 player call CTI_CO_FNC_UnitCreated;
+
 ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];
 
-//--- Vehicle HUD
-0 execVM	 "Client\Functions\Externals\Veh_Hud\HUD_init.sqf";
-
-//-- Disable ambient life
-waitUntil {time > 0};
-enableEnvironment false;
-
-//--- No more weapon sway
-if (local player) then {
-	_swayamount = CTI_WEAPON_SWAY / 100;
-	player setCustomAimCoef _swayamount;
-	player addMPEventhandler ["MPRespawn", {player setCustomAimCoef _swayamount;}];
-};
-
-//--- Disable Scoreboard
-showScoretable 0;
-
-//--- Hide score on HUD
-disableSerialization;
-_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
-if ( !isNull _displayscorehud ) then {
-	_statusscorehud = _displayscorehud displayCtrl 15283;
-	_statusscorehud ctrlShow false;	
-};
-
-//--- Radio
-Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
-if (isNil "Radio_Say3D") then {
-    Radio_Say3D = [objNull,"nosound",0];
-};
-"Radio_Say3D" addPublicVariableEventHandler {
-      private["_array"];
-      _array = _this select 1;
-     (_array select 0) say3D [(_array select 1), (_array select 2)];
-};
-
-//--- UAV RANGE limit
-UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
-if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
-	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
-};
-
-//--- Default Video Settings
-CHVD_allowNoGrass = false; // Set 'false' if you want to disable "None" option for terrain (default: true)
-CHVD_maxView = 3500; // Set maximum Foot view distance (default: 12000) 
-CHVD_maxViewVeh = 3500; // Set maximum Vehicle view distance (default: 12000)
-CHVD_maxViewAir = 3500; // Set maximum Air view distance (default: 12000)
-CHVD_maxObj = 3500; // Set maximimum object view distance (default: 12000)
-CHVD_maxTerrain = true; //hardsets terrain grid to max (default: 3.125)
-
-//---Igiload script
-_igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
-
-//--Drag and drop
-attached = false;
-0 = execVM "Client\Functions\Externals\BDD\Greifer.sqf";
-
-//--- Explosives on Vehicles Script
-waitUntil {time > 0};
-execVM "Client\Functions\Externals\Attach_Charge\Action_Attach_charge.sqf";
-waitUntil {!isNil "EtVInitialized"};
-
-//--- cmEARPLUGS
-call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
-
-//--- Earplugs
+//Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
-//--- Spawn init calls tablet
+
+//Spawn init calls tablet
 0 spawn { call CTI_CL_FNC_Spawn; };
 
 if (CTI_DEBUG) then {
