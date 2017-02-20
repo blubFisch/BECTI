@@ -16,38 +16,37 @@ _u pushBack 0;
 _p pushBack 300;
 
 //(Bergen- very large)
-_i pushBack "B_Bergen_tna_F";
+/*_i pushBack "B_Bergen_tna_F";
 _u pushBack 3;
-_p pushBack 800;
+_p pushBack 800;*/
 
 
 //Vests
 //(Light Plate- small)
 _i pushBack "V_PlateCarrier1_tna_F";
-_u pushBack 1;
-_p pushBack 300;
+_u pushBack 0;
+_p pushBack 600;
 
-_i pushBack "V_PlateCarrier2_tna_F";
+/*_i pushBack "V_PlateCarrier2_tna_F";
 _u pushBack 1;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(Heavy Plate- large)
-_i pushBack "V_PlateCarrierSpec_tna_F";
+/*_i pushBack "V_PlateCarrierSpec_tna_F";
 _u pushBack 2;
 _p pushBack 500;
 
 _i pushBack "V_PlateCarrierGL_tna_F";
 _u pushBack 2;
-_p pushBack 500;
+_p pushBack 500;*/
 
 
 //Helmets:
 //(Boonie)
 
-_i pushBack "H_Booniehat_tna_F";
+/*_i pushBack "H_Booniehat_tna_F";
 _u pushBack 0;
-_p pushBack 5; 
-
+_p pushBack 300; */
 
 //(Kevlar)
 
@@ -72,15 +71,15 @@ _p pushBack 300;
 
 //(Officer)
 
-_i pushBack "H_MilCap_tna_F";
+/*_i pushBack "H_MilCap_tna_F";
 _u pushBack 0;
-_p pushBack 5; 
+_p pushBack 5; */
 
 
 //(Stealth Combat Helmet)
-_i pushBack "H_HelmetB_TI_tna_F";
+/*_i pushBack "H_HelmetB_TI_tna_F";
 _u pushBack 3;
-_p pushBack 800;
+_p pushBack 800;*/
 
 
 //Face
@@ -95,14 +94,14 @@ _p pushBack 5;
 //NATO
 //(Stealth Balaclava)
 
-_i pushBack "G_Balaclava_TI_blk_F";
+/*_i pushBack "G_Balaclava_TI_blk_F";
 _u pushBack 3;
 _p pushBack 300; 
 
 
 _i pushBack "G_Balaclava_TI_G_tna_F";
 _u pushBack 3;
-_p pushBack 300;
+_p pushBack 300;*/
 
 
 //NVG
@@ -174,81 +173,81 @@ _p pushBack 600;
 
 //(Half Ghillie)
 _i pushBack "U_B_T_Sniper_F";
-_u pushBack 1;
+_u pushBack 2;
 _p pushBack 300;
 
 //(Navy)
-_i pushBack "U_B_GEN_Commander_F";
+/*_i pushBack "U_B_GEN_Commander_F";
 _u pushBack 0;
 _p pushBack 300;
 
 _i pushBack "U_B_GEN_Soldier_F";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //Guns:
 //(M320LRR)
-_i pushBack "srifle_LRR_tna_F";
+/*_i pushBack "srifle_LRR_tna_F";
 _u pushBack 4;
-_p pushBack 1000;
+_p pushBack 1000;*/
 
 //(MX series)
 _i pushBack "arifle_MX_khk_F";
 _u pushBack 2;
-_p pushBack 400;
+_p pushBack 1050;
 
 _i pushBack "arifle_MX_GL_khk_F";
 _u pushBack 2;
-_p pushBack 500;
+_p pushBack 1350;
 
 _i pushBack "arifle_MX_SW_khk_F";
 _u pushBack 2;
-_p pushBack 500;
+_p pushBack 1050;
 
 _i pushBack "arifle_MXC_khk_F";
 _u pushBack 2;
-_p pushBack 400;
+_p pushBack 1050;
 
 _i pushBack "arifle_MXM_khk_F";
 _u pushBack 2;
-_p pushBack 450;
+_p pushBack 1050;
 
 //(SPAR-16)
 _i pushBack "arifle_SPAR_01_khk_F";
 _u pushBack 1;
-_p pushBack 300;
+_p pushBack 600;
 
 _i pushBack "arifle_SPAR_01_blk_F";
 _u pushBack 1;
-_p pushBack 300;
+_p pushBack 600;
 
 //(SPAR-16S)
-_i pushBack "arifle_SPAR_02_khk_F";
+/*_i pushBack "arifle_SPAR_02_khk_F";
 _u pushBack 1;
 _p pushBack 350;
 
 _i pushBack "arifle_SPAR_02_blk_F";
 _u pushBack 1;
-_p pushBack 350;
+_p pushBack 350;*/
 
 //(SPAR-17)
 _i pushBack "arifle_SPAR_03_khk_F";
 _u pushBack 3;
-_p pushBack 500;
+_p pushBack 1050;
 
 _i pushBack "arifle_SPAR_03_blk_F";
 _u pushBack 3;
-_p pushBack 500;
+_p pushBack 1050;
 
 //(Protector SMG)
-_i pushBack "SMG_05_F";
+/*_i pushBack "SMG_05_F";
 _u pushBack 0;
-_p pushBack 200;
+_p pushBack 200;*/
 
 //(LIM-85 LMG)
 _i pushBack "LMG_03_F";
-_u pushBack 1;
-_p pushBack 400;
+_u pushBack 2;
+_p pushBack 1800;
 
 
 //Ammo:
@@ -275,13 +274,13 @@ _u pushBack 0;
 _p pushBack 20;
 
 //(SPAR-16S)
-_i pushBack "150Rnd_556x45_Drum_Mag_F";
+/*_i pushBack "150Rnd_556x45_Drum_Mag_F";
 _u pushBack 1;
 _p pushBack 200;
 
 _i pushBack "150Rnd_556x45_Drum_Mag_Tracer_F";
 _u pushBack 1;
-_p pushBack 200;
+_p pushBack 200;*/
 
 //(SPAR-17)
 _i pushBack "20Rnd_762x51_Mag";
@@ -290,7 +289,7 @@ _p pushBack 100;
 
 //(LIM-85 LMG)
 _i pushBack "200Rnd_556x45_Box_F";
-_u pushBack 1;
+_u pushBack 2;
 _p pushBack 200;
 /* 
 _i pushBack "200Rnd_556x45_Box_Tracer_F";
@@ -298,30 +297,30 @@ _u pushBack 1;
 _p pushBack 200;
  */
 _i pushBack "200Rnd_556x45_Box_Tracer_Red_F";
-_u pushBack 1;
+_u pushBack 2;
 _p pushBack 200;
 
 //Supressors:
 //(Mk-I EMR)
-/*
-(MX Series)
+
+//(MX Series)
 _i pushBack "muzzle_snd";
-_u pushBack 1;
+_u pushBack 2;
 _p pushBack 650;
 
-(MX Series)
+//(MX Series)
 _i pushBack "muzzle_snds_H_khk_F";
-_u pushBack 1;
+_u pushBack 2;
 _p pushBack 650; 
-*/
+
 
 //(SPAR-17)
 _i pushBack "muzzle_snds_B_khk_F";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 800;
 
 _i pushBack "muzzle_snds_B_blk_F";
-_u pushBack 2;
+_u pushBack 3;
 _p pushBack 700;
 
 //Optics:
@@ -356,18 +355,18 @@ _p pushBack 400;
 //Bipod:
 
 _i pushBack "bipod_01_F_khk";
-_u pushBack 0;
+_u pushBack 1;
 _p pushBack 100; 
 
 
 //Launchers:
 _i pushBack "launch_B_Titan_tna_F";
-_u pushBack 3;
-_p pushBack 2000;
+_u pushBack 4;
+_p pushBack 8000;
 
 _i pushBack "launch_B_Titan_short_tna_F";
-_u pushBack 4;
-_p pushBack 2500;
+_u pushBack 3;
+_p pushBack 6000;
 
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf"; 

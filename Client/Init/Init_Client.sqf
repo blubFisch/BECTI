@@ -459,7 +459,7 @@ if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%
 if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
 
 //--- Graphics/video thread (persistent)
-/*0 spawn {
+0 spawn {
 	//--- View Distance
 	_distance = profileNamespace getVariable "CTI_PERSISTENT_VIEW_DISTANCE";
 	_distance_max = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
@@ -500,13 +500,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	if (_grid > _grid_max) then { _grid = _grid_max };
 	setTerrainGrid _grid;
 
-};*/
-
-// CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
-// player addAction ["<t color='#a5c4ff'>MENU debug: Factory</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 93, false, true, "", "_target == player"];
-// player addAction ["<t color='#a5c4ff'>MENU: Equipment</t>", "Client\Actions\Action_GearMenu.sqf", "HQ", 93, false, true, "", "true"];
-
-// onMapSingleClick "{(vehicle leader _x) setPos ([_pos, 8, 30] call CTI_CO_FNC_GetRandomPosition)} forEach (CTI_P_SideJoined call CTI_CO_FNC_GetSideGroups)";
+};
 
 if (CTI_DEV_MODE > 0) then {
 	onMapSingleClick "vehicle player setPos _pos"; //--- benny debug: teleport
@@ -564,13 +558,6 @@ ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_C
 waitUntil {time > 0};
 enableEnvironment false;
 
-//--- No more weapon sway
-if (local player) then {
-	_swayamount = CTI_WEAPON_SWAY / 100;
-	player setCustomAimCoef _swayamount;
-	player addMPEventhandler ["MPRespawn", {player setCustomAimCoef _swayamount;}];
-};
-
 //--- Disable Scoreboard
 showScoretable 0;
 
@@ -599,14 +586,6 @@ if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
 	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
 };
 
-//--- Default Video Settings
-CHVD_allowNoGrass = false; // Set 'false' if you want to disable "None" option for terrain (default: true)
-CHVD_maxView = 3500; // Set maximum Foot view distance (default: 12000) 
-CHVD_maxViewVeh = 3500; // Set maximum Vehicle view distance (default: 12000)
-CHVD_maxViewAir = 3500; // Set maximum Air view distance (default: 12000)
-CHVD_maxObj = 3500; // Set maximimum object view distance (default: 12000)
-CHVD_maxTerrain = true; //hardsets terrain grid to max (default: 3.125)
-
 //---Igiload script
 _igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
 
@@ -632,6 +611,11 @@ if (CTI_DEBUG) then {
 	// onMapSingleClick "vehicle player setPos _pos";
 	// onMapSingleClick "a2 setPos _pos";
 	//player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+	// CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
+	// player addAction ["<t color='#a5c4ff'>MENU debug: Factory</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 93, false, true, "", "_target == player"];
+	// player addAction ["<t color='#a5c4ff'>MENU: Equipment</t>", "Client\Actions\Action_GearMenu.sqf", "HQ", 93, false, true, "", "true"];
+	// onMapSingleClick "{(vehicle leader _x) setPos ([_pos, 8, 30] call CTI_CO_FNC_GetRandomPosition)} forEach (CTI_P_SideJoined call CTI_CO_FNC_GetSideGroups)";
+
 };
 
 CTI_Init_Client = true;

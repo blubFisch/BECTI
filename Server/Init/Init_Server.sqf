@@ -329,3 +329,16 @@ if !( isNil "ADMIN_ZEUS") then {
 		[west] spawn FNC_HandleCRAM;
 	};
 };
+
+//--- External Modules
+//--Advanced Towing
+execVM "Server\Functions\Externals\AdvancedTowing\fn_advancedTowingInit.sqf";
+
+//--Advanced Sling Loading
+execVM "Server\Functions\Externals\AdvancedSlingLoad\fn_advancedSlingLoadingInit.sqf";
+
+//--Advanced Rapel
+execVM "Server\Functions\Externals\AdvancedRappel\fn_advancedRappellingInit.sqf";
+
+//--Advanced Urban Rapel
+execVM "Server\Functions\Externals\AdvancedUrbanRapel\functions\fn_advancedUrbanRappellingInit.sqf";

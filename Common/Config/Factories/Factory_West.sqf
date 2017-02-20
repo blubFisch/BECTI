@@ -698,7 +698,7 @@ _u pushBack "B_G_Offroad_01_armed_F";
 _u pushBack "C_Van_01_transport_F";
 _u pushBack "B_Truck_01_transport_F";
 _u pushBack "B_Truck_01_medical_F";
-_u pushBack 'B_Slingload_01_Medevac_F';
+//_u pushBack 'B_Slingload_01_Medevac_F';
 _u pushBack 'O_Truck_03_device_F';
 _u pushBack "B_UGV_01_F";
 _u pushBack "B_UGV_01_rcws_F";
