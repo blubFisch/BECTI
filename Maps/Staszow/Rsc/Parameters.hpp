@@ -1,15 +1,33 @@
 class Params {
 	class CTI_FACTION_WEST {
 		title = "FACTION: West Forces";
-		values[] = {0,1,2,3};
-		texts[] = {"NATO Arid","NATO Tropic","NATO Winter","IF3 Germans"};
-		default = 3;
+		values[] = {0,1,2};
+		texts[] = {"NATO Arid","NATO Tropic","NATO Winter"};
+		default = 0;
 	};
 	class CTI_FACTION_EAST {
 		title = "FACTION: East Forces";
+		values[] = {0,1,2};
+		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_VEHICLES {
+		title = "FACTION: Starting vehicles and mhq";
 		values[] = {0,1,2,3};
-		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter","IF3 SOV/USA"};
-		default = 3;
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_GEAR {
+		title = "FACTION: Starting gear";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_TROOPS {
+		title = "FACTION: Default infantry";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
