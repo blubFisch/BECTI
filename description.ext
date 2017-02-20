@@ -11,9 +11,9 @@
 #include "Rsc\Sounds.hpp"
 #include "Rsc\Debriefing.hpp"
 #include "Rsc\Parameters.hpp"
-#include "Client\Functions\Externals\AdvancedUrbanRapel\Rapelactions.hpp"
 #include "Client\Functions\Externals\ATM_airdrop\ATM_airdrop.hpp"
-#include "Client\Functions\Externals\CHVD\dialog.hpp"
+
+//--- Player Name tag
 class CfgFunctions
 {
 	#include "Client\Functions\Externals\zam_shownames\zam_shownames.cpp"

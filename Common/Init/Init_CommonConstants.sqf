@@ -588,6 +588,9 @@ CTI_VEHICLES_HOOKERS = ["B_Heli_Transport_01_F", "O_Heli_Light_02_unarmed_F", "B
 CTI_VEHICLES_HOOKERS_EX = ["B_SDV_01_F", "O_SDV_01_F"]; //--- Vehicle which may lift things including wrecks
 CTI_VEHICLES_PROTECT_TIRES = 1; //--- Determine whether the damages applied to tires should be reduced or not
 
+//--- Advanced Air Lifting settings
+ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE = 2700;
+
 //--- Vehicles: Repair Trucks
 CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 2; //--- Repair trucks build speed multiplier (<coefficient> / (<structure build time> / 100)), higher is faster.
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR = 0.01; //--- Repair trucks repair iteration per action over a structure.
