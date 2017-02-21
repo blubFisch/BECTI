@@ -46,7 +46,7 @@ _direction = _this select 4;
 _isDestroyed = if (count _this > 5) then {_this select 5} else {false};
 
 //--- Dev Mode instant build
-if ((missionNamespace getVariable "CTI_DEV_MODE") > 0) then {
+if (CTI_DEV_MODE > 0) then {
 	_structure setVariable ["cti_completion", 100]
 };
 
