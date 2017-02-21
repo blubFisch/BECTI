@@ -1,9 +1,6 @@
 //--- Early definition, will be override later on in the init files.
 CTI_P_SideJoined = civilian;
 
-// CTI_DEBUG = true;
-CTI_DEBUG = false;
-
 //--- Log levels
 CTI_Log_Debug = 3;
 CTI_Log_Information = 2;
