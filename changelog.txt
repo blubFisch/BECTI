@@ -41,3 +41,4 @@ Tweaked: Changed price of AH6 At (little bird AT) from 14500 to 22500
 Tweaked: Changed price of AH-99 Blackfoot from 65000 to 55000
 Tweaked: Changed price of Mi-24P Hind from 20000 to 25000
 Tweaked: Changed price of KA-52 from 60000 to 50000
+Fixed: Ruins from base buildings (such as base defence domes) now despawn quicker. 
