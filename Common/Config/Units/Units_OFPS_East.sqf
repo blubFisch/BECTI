@@ -706,7 +706,7 @@ _d pushBack 0;
 _c pushBack 'OFPS_MI24P';
 _p pushBack '';
 _n pushBack 'Mi-24P Hind (Tropic)';
-_o pushBack 27500;
+_o pushBack 25000;
 _t pushBack 20;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
