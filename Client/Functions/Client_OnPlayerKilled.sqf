@@ -31,7 +31,7 @@ private ["_killed", "_killer"];
 
 _killed = _this select 0;
 _killer = _this select 1;
-
+_isvehicle_killed = if (_killed isKindOf "Man") then {false} else {true};
 CTI_DeathPosition = getPos _killed;
 
 if !(isNil "CTI_DeathCamera") then {
