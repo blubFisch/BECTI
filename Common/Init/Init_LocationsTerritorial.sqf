@@ -4,7 +4,7 @@ switch (toLower(worldName)) do {
 	case "altis": {
 		Selakano setVariable ["cti_town_neighbors",[Feres,ComPlatform]];
 		Pyrgos setVariable ["cti_town_neighbors",[SubPen,Faronaki,Ekali,Dorida]];
-		Dorida setVariable ["cti_town_neighbors",[Chalkeia,Pyrgos,Charkia]];
+		Dorida setVariable ["cti_town_neighbors",[Chalkeia,Pyrgos,Charkia,Limni]];
 		Charkia setVariable ["cti_town_neighbors",[Rodopoli,Dorida,Anthrakia]];
 		Kalochori setVariable ["cti_town_neighbors",[Paros,Limni]];
 		Rodopoli setVariable ["cti_town_neighbors",[Kalithea,Paros,Charkia]];
@@ -47,7 +47,7 @@ switch (toLower(worldName)) do {
 		Panochori setVariable ["cti_town_neighbors",[Kavala,Stadium,Zaros,OilRig]];
 		HotelComplex setVariable ["cti_town_neighbors",[MilitaryOutpost,Loannina,Nidasos]];
 		Stadium setVariable ["cti_town_neighbors",[Negades,Kavala,Panochori]];
-		Limni setVariable ["cti_town_neighbors",[Paros,Chalkeia,ResearchPlatform]];
+		Limni setVariable ["cti_town_neighbors",[Paros,Chalkeia,ResearchPlatform,Dorida]];
 		AgiosKonstantinos setVariable ["cti_town_neighbors",[TheDump,Negades,Oreokastro,WindFarm]];
 		Feres setVariable ["cti_town_neighbors",[Panagia,Selakano,ResearchPlatform]];
 		Thedump setVariable ["cti_town_neighbors",[Oreokastro,Syrta,AgiosKonstantinos]];
@@ -187,7 +187,7 @@ switch (toLower(worldName)) do {
 		PobedaDam setVariable ["cti_town_neighbors", [Gvozdno, Krasnostav]];
 		Airfield setVariable ["cti_town_neighbors", [Vybor, Lopatino, Kabanino, Petrovka, Grishino]];
 		Tulga setVariable ["cti_town_neighbors", [Solnichniy, Kamyshovo, Msta]];
-		Altar setVariable ["cti_town_neighbors", [NovySobor, Gorka, Gvozdno]];
+		Altar setVariable ["cti_town_neighbors", [NovySobor, Gorka, Gvozdno, Grishino]];
 		DevilsCastle setVariable ["cti_town_neighbors", [Grishino, Gvozdno, Petrovka]];
 		NovySobor setVariable ["cti_town_neighbors", [StarySobor, Guglovo, Gorka, Altar]];
 		WindFarm setVariable ["cti_town_neighbors", [Elektrozavodsk]];
@@ -237,7 +237,7 @@ switch (toLower(worldName)) do {
 		PobedaDam setVariable ["cti_town_neighbors", [Gvozdno, Krasnostav]];
 		Airfield setVariable ["cti_town_neighbors", [Vybor, Lopatino, Kabanino, Petrovka, Grishino]];
 		Tulga setVariable ["cti_town_neighbors", [Solnichniy, Kamyshovo, Msta]];
-		Altar setVariable ["cti_town_neighbors", [NovySobor, Gorka, Gvozdno]];
+		Altar setVariable ["cti_town_neighbors", [NovySobor, Gorka, Gvozdno, Grishino]];
 		DevilsCastle setVariable ["cti_town_neighbors", [Grishino, Gvozdno, Petrovka]];
 		NovySobor setVariable ["cti_town_neighbors", [StarySobor, Guglovo, Gorka, Altar]];
 	};
