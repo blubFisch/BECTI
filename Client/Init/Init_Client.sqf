@@ -544,7 +544,15 @@ if (CTI_DEV_MODE > 0) then {
 	// _q setDammage 1;
 	// {uiNamespace setVariable [_x, displayNull]} forEach ["cti_title_capture"];
 	// 600200 cutRsc["CTI_CaptureBar","PLAIN",0];
-};
+
+	//--- Generates a list in log what units belong to HC
+/*	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
+	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
+
+	//--- Generates chat message on building health
+/*	{player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");}
+	forEach nearestObjects [player, ["house"], 100];};
+	*/
 
 if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 	0 spawn {
