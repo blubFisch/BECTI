@@ -550,9 +550,11 @@ if (CTI_DEV_MODE > 0) then {
 	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
 
 	//--- Generates chat message on building health
-/*	{player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");}
-	forEach nearestObjects [player, ["house"], 100];};
+/*	
+	{player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");}
+	forEach nearestObjects [player, ["house"], 100]; sleep 2};
 	*/
+};
 
 if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 	0 spawn {

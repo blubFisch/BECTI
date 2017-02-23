@@ -519,18 +519,24 @@ CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgra
 
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
-CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1;
+//--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
+
 //--- Tanks
-CTI_BASE_DAMAGE_MULTIPLIER_HE_SHELL = 5; //6 AP rounds to kill fac
-CTI_BASE_DAMAGE_MULTIPLIER_AP_SHELL = 3; //6 HE rounds to kill fac
-// --- Satchels
-CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.1; //1-3 satchels to kill fac
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2;
+//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.01;
+//--- Satchels
+CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.05;
+//--- HE Cannons
+CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;
+//--- Missiles
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;
+//--- Explosions
+CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
 //--- Rockets
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 0.3; //12 AG rockets to kill fac
-//--- Fast Canon
-CTI_BASE_DAMAGE_MULTIPLIER_HE_CANON = 0.3;
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.3;
-CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5;
+CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.1;
+//--- Bombs
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.5;
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
