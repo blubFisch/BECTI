@@ -26,7 +26,8 @@ disableChannels[] = { {0,false,true}, {2,true,true}, {6,true,true} };
 0=global, 1=side, 2=command, 3=group, 4=vehicle, 5=direct, 6=system 
 
 */
-
+wreckManagerMode = 0; // disables corpse manager. 2 is default , 0 = None - None of the units are managed by the manager
+corpseManagerMode = 0;// disables wreck manager. 2 is default , 0 = None - None of the vehicles are managed by the manager
 // ^HS^ for Headless Client
 joinUnassigned = 0;
 
