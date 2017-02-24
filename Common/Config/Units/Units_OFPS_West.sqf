@@ -446,6 +446,16 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'Meaty_slammer_Sn';
+_p pushBack '';
+_n pushBack 'M2A1 Slammer (Snow)';
+_o pushBack 24000;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'Meaty_Scorcher_Sn';
 _p pushBack '';
 _n pushBack 'M4 Scorcher (Snow)';
