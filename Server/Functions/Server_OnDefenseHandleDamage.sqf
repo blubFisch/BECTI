@@ -89,10 +89,19 @@ if (_reduce_damages > 0 ) then {
 	};
 };
 
-_logic = (_side) call CTI_CO_FNC_GetSideLogic;
+//_logic = (_side) call CTI_CO_FNC_GetSideLogic;// line isnt needed? - protossmaster
 
+
+if (CTI_BASE_DISPLAY_HINT == 1) then{
+	_health = (1 - _damage);
+	_health = (_health*100);
+	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter]; // displays a hint for player shooting the structure
+	};
+};
+//--- Display a message to the team
 if (!alive _damaged) then {
 	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
-
 _damage
