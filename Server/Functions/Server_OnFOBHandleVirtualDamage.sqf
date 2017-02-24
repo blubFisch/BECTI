@@ -1,8 +1,8 @@
 /*
   # HEADER #
-	Script: 		Server\Functions\Server_OnFOBHandleVirtualDamage.sqf
-	Alias:			CTI_SE_FNC_OnFOBHandleVirtualDamage
-	Description:	Triggered by the handleDamage EH whenever a FOB get hit
+	Script: 		Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf
+	Alias:			CTI_SE_FNC_OnDefenseHandleVirtualDamage
+	Description:	Triggered by the handleDamage EH whenever a Defense get hit
 					Note this function shall only be called by an Event Handler (EH).
 					The damages are virtual so we return 0 all the time.
 	Author: 		Benny
@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_fobtype"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -48,8 +48,7 @@ _position = _this select 6;
 _direction = _this select 7;
 _reduce_damages = _this select 8;
 _multiply_damages = _this select 9;
-_ruins = _this select 10 select 0;
-_fobtype = _this select 11 select 0;
+
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
@@ -66,7 +65,7 @@ switch (_upgrade_basehealth) do {
 	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 };
 //Adjust damage for ammo types
-if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
+/*if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
 };
 if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
@@ -80,7 +79,7 @@ if (_ammo isKindOf "BombCore" || _ammo isKindOf "LaserBombCore") then {
 };
 if (_ammo isKindOf "ArtilleryRocketCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ART;
-};
+};*/
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;
@@ -104,15 +103,24 @@ _damaged setVariable ["cti_altdmg", _virtual_damages];
 if (_virtual_damages >= 1 || !alive _damaged) then {
 	_damaged removeAllEventHandlers "handleDamage";
 	_damaged setDammage 1;
-	if (CTI_Log_Level >= CTI_Log_Information) then {
-		["INFORMATION", "FILE: Server\Functions\Server_OnFOBHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select 0, _side, _shooter]] call CTI_CO_FNC_Log;
-	};
-	[_damaged, _shooter, _sideID, _ruins, _variable, _fobtype] spawn CTI_SE_FNC_OnFOBDestroyed;
+	
+	_var = missionNamespace getVariable _variable;
+		if (CTI_Log_Level >= CTI_Log_Information) then {
+			["INFORMATION", "FILE: Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select 0, _side, _shooter]] call CTI_CO_FNC_Log;
+		};
+		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
+		_ruins = "";
+		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
+		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
-
+_health = (1 - _virtual_damages);
+_health = (_health*100);
+if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+	["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter]; // displays a hint for player shooting the structure
+};
 //--- Display a message to the team
 if (!alive _damaged) then {
-	["fob-destroyed", [_fobtype, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
 
 0
