@@ -31,8 +31,8 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-private ["_damage", "_damaged", "_ammo", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
-
+private ["_damage", "_damaged", "_ammo", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio","_overall_damage","_health"];
+diag_log str _this;
 _damaged = _this select 0;
 _damage = _this select 1;
 _shooter = _this select 2;
@@ -89,10 +89,18 @@ if (_reduce_damages > 0 ) then {
 };
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
-
-if (time - (_logic getVariable "cti_structures_lasthit") > 30 && _damage >= 0.02 && alive _damaged) then {
-	_logic setVariable ["cti_structures_lasthit", time];
-	["structure-attacked", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+_overall_damage = getDammage _damaged;
+_health = (1 - _overall_damage);
+_health = (_health*100);
+if (alive _damaged) then {
+	["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
 };
+
+if (time - (_logic getVariable "cti_structures_lasthit") > 15 && _damage >= 0.02 && alive _damaged) then {
+	_logic setVariable ["cti_structures_lasthit", time];
+	["structure-attacked",[_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	["building-attacked",[_damaged, _health, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+};
+
 
 _damage
