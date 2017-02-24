@@ -89,18 +89,21 @@ if (_reduce_damages > 0 ) then {
 };
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
-_overall_damage = getDammage _damaged;
-_health = (1 - _overall_damage);
-_health = (_health*100);
-if (alive _damaged) then {
-	["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
-};
+if (CTI_BASE_DISPLAY_HINT == 1) then{
 
-if (time - (_logic getVariable "cti_structures_lasthit") > 15 && _damage >= 0.02 && alive _damaged) then {
+	_health = (1 - _damage);
+	_health = (_health*100);
+	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
+	};
+};
+if (time - (_logic getVariable "cti_structures_lasthit") > 15 && alive _damaged) then {
 	_logic setVariable ["cti_structures_lasthit", time];
-	["structure-attacked",[_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
-	["building-attacked",[_damaged, _health, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	["structure-attacked",[_variable, _position]] remoteExec ["CTI_CL_FNC_DisplayMessage", _side];
+	if (CTI_BASE_DISPLAY_HINT == 1) then{
+		["building-attacked",[_variable, _position, _health]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	};
 };
-
 
 _damage
