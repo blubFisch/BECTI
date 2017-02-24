@@ -98,7 +98,7 @@ if (CTI_BASE_DISPLAY_HINT == 1) then{
 		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
 	};
 };
-if (time - (_logic getVariable "cti_structures_lasthit") > 15 && alive _damaged) then {
+if (time - (_logic getVariable "cti_structures_lasthit") > 15 && _damage >= 0.02 && alive _damaged) then {
 	_logic setVariable ["cti_structures_lasthit", time];
 	["structure-attacked",[_variable, _position]] remoteExec ["CTI_CL_FNC_DisplayMessage", _side];
 	if (CTI_BASE_DISPLAY_HINT == 1) then{
