@@ -1,3 +1,8 @@
+## Staged for next version ##
+Fixed: No SAM warning for players without vehicles or in parachute
+Tweaked: SAM engagement minimum alt 200m
+Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
+
 1.05
 Added: Spawn on vehicle disabled when enemy nearby 50M
 Added: Tank Low Gear / Hill climb

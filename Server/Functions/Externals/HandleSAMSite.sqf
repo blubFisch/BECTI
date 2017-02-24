@@ -11,10 +11,10 @@
 	[SIDE] spawn HandleSAMSite
 */
 
-private ["_detectionMinAlt", "_engagementDistanceMax", "_radarNames", "_launcherNames", "_reloadTime", "_missileLockTime", "_targetEngagementInterval", "_logFctn", "_side", "_sideNum","_detectedPossibleTargets","_availableLaunchers","_availableRadars", "_detectedAirVehicles","_engageTargets", "_launcherTarget","_useLauncherIndx","_sh", "_useLauncher","_launcherTarget","_targetSphere"];
+private ["_engageMinAlt", "_engagementDistanceMax", "_radarNames", "_launcherNames", "_reloadTime", "_missileLockTime", "_targetEngagementInterval", "_logFctn", "_side", "_sideNum","_detectedPossibleTargets","_availableLaunchers","_availableRadars", "_detectedAirVehicles","_engageTargets", "_launcherTarget","_useLauncherIndx","_sh", "_useLauncher","_launcherTarget","_targetSphere"];
 
 // --- Configuration ---
-_detectionMinAlt = 500;	// !!!! Should also be same as in HandleSAMSitel_ClientWarn.sqf
+_engageMinAlt = 200;	// !!!! Should also be same as in HandleSAMSitel_ClientWarn.sqf
 _radarNames = ["pook_SNR75_radar", "POOK_ANMPQ53_CDF"];	// east, west
 _launcherNames = ["pook_SA20_static_INS", "pook_MIM104_PAC2Battery"];	// east, west
 _reloadTime = 90;	// Launcher reload time. This is the minimum interval in which a single launcher will be fired
@@ -68,7 +68,7 @@ while {true} do {
 
 		// Filter for targets - hostile, above minAlt, alive
 		{	// TODO: better way to detect hostiles?
-			if (((_side) getFriend (side _x)) < 0.6 && {typeOf(_x) find "UAV_01_F" != 2} && {(getPos _x select 2) > _detectionMinAlt} && {!terrainIntersectASL [eyePos _radarVehicle, getPosASL _x]} && {alive _x} ) then {
+			if (((_side) getFriend (side _x)) < 0.6 && {typeOf(_x) find "UAV_01_F" != 2} && {(getPos _x select 2) > _engageMinAlt} && {!(typeOf(_x) isKindOf "ParachuteBase")} && {!terrainIntersectASL [eyePos _radarVehicle, getPosASL _x]} && {alive _x} ) then {
 				_detectedPossibleTargets pushbackUnique _x;
 			};
 		} forEach _detectedAirVehicles;
