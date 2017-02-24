@@ -55,30 +55,31 @@ switch (_message_var) do {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
 		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];
 	};
-	case "building-hit": {
-//		hint parseText format ["<t align='center'>Enemy Structure Damaged</t><br />Current Enemy Structure Health: %1%2<br /><t align='center'>Enemy base health upgrade level: %3</t>", _parameters select 1, "%", _parameters select 2];
+	case "building-hit": { // see CTI_BASE_DISPLAY_HINT to disable hint.
+	// commented line below has support to display a hint to the shooter the enemy structure's base health upgrade
+//		hint parseText format ["<t align='center'>Enemy Structure Damaged</t><br />Current Enemy Structure Health: %1%2<br /><t align='center'>Enemy base health upgrade level: %3</t>", _parameters select 0, "%", _parameters select 2];
 		hint parseText format ["<t align='center'>Enemy Structure Damaged</t><br /><t align='center'>Current Enemy Structure Health: %1%2</t>", _parameters select 0, "%"];
 		sleep 2;
-		hint "";
+		hint "";//clears the hint off player screen
 	};
-	case "building-attacked": {
+	case "building-attacked": { // see CTI_BASE_DISPLAY_HINT to disable hint.
 		_var = missionNamespace getVariable (_parameters select 0);
 		_damage_value = _parameters select 2;
-		if (_damage_value >= 70) then {
-		//_damage_color = 0ECF0E; // green
+		if (_damage_value >= 70) then { // displays damage as green text
+
 				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#0ECF0E'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1,mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
-		if (_damage_value < 70 && _damage_value >= 30 ) then {
-		//_damage_color = FF7E00; // orange
+		if (_damage_value < 70 && _damage_value >= 30 ) then { // displays damage as orange text
+
 				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#FF7E00'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
-		if (_damage_value < 30) then {
-		//_damage_color = CF0606; // red
+		if (_damage_value < 30) then {// displays damage as red text
+
 		hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#ff0000'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
-//		hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='%5'><t align='center'>Current Health: %3%4</t></t>", _parameters select 0, _parameters select 1, _damage_value, "%",_damage_color];
+
 		sleep 10;
-		hint "";
+		hint "";//clears the hint off player screen
 	};
 	case "commander-disconnected": {CTI_P_ChatID sideChat "The current commander has left the game"};
 	case "commander-vote-end": {
@@ -115,6 +116,14 @@ switch (_message_var) do {
 	};
 	case "hq-repair": {
 		CTI_P_ChatID commandChat "The HQ has been repaired";
+		playsound "bobcat_engine_start";
+	};
+	case "hq-deployed": {
+		CTI_P_ChatID commandChat "The HQ has been deployed";
+//		playsound "Acts_carFixingWheel"; if sound is recommended, find a better sound
+	};
+	case "hq-mobilized": {
+		CTI_P_ChatID commandChat "The HQ has been mobilized";
 		playsound "bobcat_engine_start";
 	};
 	case "fob-sold": {CTI_P_ChatID commandChat format ["A FOB has been sold at Grid %1", _parameters]};
