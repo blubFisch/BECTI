@@ -45,13 +45,13 @@ _ammo = _this select 3;
 _variable = _this select 4;
 _sideID = _this select 5;
 _position = _this select 6;
-_direction = _this select 7;
+//_direction = _this select 7; // this line isn't needed? - ProtossMaaster
 _reduce_damages = _this select 8;
 _multiply_damages = _this select 9;
 _ruins = _this select 10 select 0;
 _fobtype = _this select 11 select 0;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
-_logic = (_side) call CTI_CO_FNC_GetSideLogic;
+//_logic = (_side) call CTI_CO_FNC_GetSideLogic; // this line isn't needed? - ProtossMaaster
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
@@ -110,15 +110,16 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	[_damaged, _shooter, _sideID, _ruins, _variable, _fobtype] spawn CTI_SE_FNC_OnFOBDestroyed;
 };
 //gives shooter notification on how much damage per shot
-_health = (1 - _virtual_damages);
-_health = (_health*100);
-if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
-	["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
+if (CTI_BASE_DISPLAY_HINT == 1) then {
+	_health = (1 - _virtual_damages);
+	_health = (_health*100);
+	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
+	};
 };
-
 //--- Display a message to the team
 if (!alive _damaged) then {
 	["fob-destroyed", [_fobtype, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
-
 0
