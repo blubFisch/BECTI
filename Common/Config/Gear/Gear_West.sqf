@@ -604,7 +604,7 @@ _u pushBack 3;
 _p pushBack 2000;
 
 _i pushBack "launch_B_Titan_short_F";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 2500;
 
 _i pushBack "hgun_P07_F";
