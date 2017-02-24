@@ -515,6 +515,7 @@ CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be fro
 //--- Base: Misc
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
+CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for player shooting enemy structure showing current building health. Also displays hint to the structure's friendly team showing base health, position, and name of structure
 
 //--- Base: Damage modifiers
 CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1; //--- damage modifier for base structures - BulletCore, ShotgunCore
