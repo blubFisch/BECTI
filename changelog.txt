@@ -19,6 +19,9 @@ Tweaked: Player and AI bodies now despawn immediatly after death
 Fixed: No SAM warning for players without vehicles or in parachute
 Tweaked: SAM engagement minimum alt 200m
 Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
+Fixed: Slammer up not purchasable on non-snow maps
+Fixed: Slammer not purchasable on snow maps
+Fixed: Titan AT launcher not accessible in gear 3 for blufor
 
 1.05
 Added: Spawn on vehicle disabled when enemy nearby 50M
