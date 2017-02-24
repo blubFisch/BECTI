@@ -23,6 +23,9 @@ Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 Added: indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
 Added: Hint for players if a friendly structure is attacked. displays health after damage
 Added: friendly team notifications for when HQ is mobilized and deployed
+Fixed: No SAM warning for players without vehicles or in parachute
+Tweaked: SAM engagement minimum alt 200m
+Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 
 
 1.05
@@ -52,3 +55,4 @@ Fixed: Reload and clear buttons are disabled unless near gear source
 Fixed: Respawn pods and ammo pods
 Fixed: Teamstack system would show incorrect message
 Fixed: Fuel truck now has service menu
+
