@@ -670,19 +670,25 @@ if (CTI_OFPS_ADDON > 0) then {
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
 _u pushBack 'rhsusf_army_ocp_rifleman';
+_u pushBack 'rhsusf_army_ocp_rifleman_m16';
+_u pushBack 'rhsusf_army_ocp_rifleman_m4';
 _u pushBack 'rhsusf_army_ocp_aa';
 _u pushBack 'rhsusf_army_ocp_autorifleman';
 _u pushBack 'rhsusf_army_ocp_riflemanat';
 _u pushBack 'rhsusf_army_ocp_combatcrewman';
 _u pushBack 'rhsusf_army_ocp_riflemanat';
-_u pushBack 'rhsusf_usmc_marpat_d_javelin';
+/*_u pushBack 'rhsusf_usmc_marpat_d_javelin';*/
+_u pushBack 'rhsusf_army_ocp_javelin';
 _u pushBack 'rhsusf_army_ocp_engineer';
 _u pushBack 'rhsusf_army_ocp_explosives';
 _u pushBack 'rhsusf_army_ocp_grenadier';
 _u pushBack 'rhsusf_army_ocp_medic';
 _u pushBack 'rhsusf_army_ocp_machinegunner';
 _u pushBack 'rhsusf_army_ocp_helipilot';
-_u pushBack 'rhsusf_army_ocp_sniper';
+/*_u pushBack 'rhsusf_army_ocp_sniper';*/
+_u pushBack 'rhsusf_army_ocp_sniper_m24sws';
+_u pushBack 'rhsusf_army_ocp_sniper_m107';
+_u pushBack 'rhsusf_army_ocp_marksman';
 _u pushBack 'rhsusf_army_ocp_teamleader';
 _u pushBack 'rhsusf_army_ocp_squadleader';
 };
@@ -698,7 +704,7 @@ _u pushBack "B_G_Offroad_01_armed_F";
 _u pushBack "C_Van_01_transport_F";
 _u pushBack "B_Truck_01_transport_F";
 _u pushBack "B_Truck_01_medical_F";
-//_u pushBack 'B_Slingload_01_Medevac_F';
+_u pushBack 'B_Slingload_01_Medevac_F';
 _u pushBack 'O_Truck_03_device_F';
 _u pushBack "B_UGV_01_F";
 _u pushBack "B_UGV_01_rcws_F";

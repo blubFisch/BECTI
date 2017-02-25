@@ -214,8 +214,8 @@ _d pushBack 0;*/
 
 _c pushBack 'B_spotter_F';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 1500;
+_n pushBack '3-Spotter (Ghillie)';
+_o pushBack 1250;
 _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -479,7 +479,7 @@ _d pushBack 0;
 _c pushBack 'B_APC_Tracked_01_rcws_F'; //Panther
 _p pushBack '';
 _n pushBack '';
-_o pushBack 5500;
+_o pushBack 6325;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -490,7 +490,7 @@ _d pushBack 0;
 _c pushBack 'B_MBT_01_TUSK_F';  
 _p pushBack '';
 _n pushBack '';
-_o pushBack 24000;
+_o pushBack 30000;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -508,10 +508,11 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;*/
 
+//IFV-6a Cheetah
 _c pushBack 'B_APC_Tracked_01_AA_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 7500;
+_o pushBack 9000;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -699,7 +700,7 @@ _d pushBack 0;
 _c pushBack 'B_Heli_Light_01_F'; //Hummingbird
 _p pushBack '';
 _n pushBack '';
-_o pushBack 12000;
+_o pushBack 10200;
 _t pushBack 35;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
@@ -709,7 +710,7 @@ _d pushBack 0;
 _c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
 _p pushBack '';
 _n pushBack '';
-_o pushBack 3500;
+_o pushBack 29750;
 _t pushBack 40;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -719,7 +720,7 @@ _d pushBack 0;
 _c pushBack 'B_Heli_Transport_03_F'; 
 _p pushBack '';
 _n pushBack (format ["HURON Heavy Airlift (DLC ONLY)"]);
-_o pushBack 15000;
+_o pushBack 12750;
 _t pushBack 40;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
@@ -729,7 +730,7 @@ _d pushBack 0;
 _c pushBack 'B_Heli_Light_01_armed_F';
 _p pushBack '';
 _n pushBack 'AH6 Pawnee';
-_o pushBack 25000;
+_o pushBack 20000;
 _t pushBack 50;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;

@@ -851,7 +851,7 @@ _u pushBack 0;
 _p pushBack 2;
  */
 //--- Helms
-_i pushBack "H_HelmetB";
+/*_i pushBack "H_HelmetB";
 _u pushBack 0;
 _p pushBack 5;
 
@@ -873,7 +873,7 @@ _p pushBack 5;
 
 _i pushBack "H_HelmetB_light_snakeskin";
 _u pushBack 1;
-_p pushBack 5;
+_p pushBack 5;*/
 
 /*_i pushBack "H_PilotHelmetFighter_B";
 _u pushBack 1;

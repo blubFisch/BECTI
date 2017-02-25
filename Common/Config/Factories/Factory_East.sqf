@@ -709,7 +709,8 @@ if (CTI_RHS_ADDON > 0) then {
 	_u pushBack 'rhs_pilot';
 	_u pushBack 'rhs_msv_emr_marksman';
 	_u pushBack 'rhs_msv_emr_sergeant';
-	_u pushBack 'rhs_msv_emr_officer_armored';
+	_u pushBack 'rhs_msv_emr_jumior_sergeant';
+	_u pushBack 'rhs_msv_emr_officer';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
@@ -911,7 +912,7 @@ _u pushBack 'rhs_tigr_m_3camo_msv';
 _u pushBack 'rhs_tigr_3camo_msv';
 _u pushBack 'RHS_UAZ_MSV_01';
 _u pushBack 'rhs_uaz_open_MSV_01';
-_u pushBack 'rhsgref_BRDM2_HQ_msv';
+_u pushBack 'rhsgref_BRDM2UM_msv';
 _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';

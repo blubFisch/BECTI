@@ -435,7 +435,7 @@ _u pushBack 1;
 _p pushBack 450;
 
 //--- Uniforms
-_i pushBack "U_O_CombatUniform_ocamo";
+/*_i pushBack "U_O_CombatUniform_ocamo";
 _u pushBack 0;
 _p pushBack 150;
 
@@ -445,13 +445,13 @@ _p pushBack 150;
 
 _i pushBack "U_O_GhillieSuit";
 _u pushBack 2;
-_p pushBack 600;
+_p pushBack 600;*/
 
 /*_i pushBack "U_O_PilotCoveralls";
 _u pushBack 1;
 _p pushBack 100;*/
 
-_i pushBack "U_O_CombatUniform_oucamo";
+/*_i pushBack "U_O_CombatUniform_oucamo";
 _u pushBack 0;
 _p pushBack 150;
 
@@ -462,12 +462,12 @@ _p pushBack 300;
 _i pushBack "U_O_SpecopsUniform_blk";
 _u pushBack 1;
 _p pushBack 300;
-
+*/
 /*_i pushBack "U_O_Wetsuit";
 _u pushBack 4;
 _p pushBack 400;*/
 
-_i pushBack "U_O_FullGhillie_lsh";
+/*_i pushBack "U_O_FullGhillie_lsh";
 _u pushBack 2;
 _p pushBack 600;
 
@@ -477,7 +477,7 @@ _p pushBack 600;
 
 _i pushBack "U_O_FullGhillie_ard";
 _u pushBack 2;
-_p pushBack 600;
+_p pushBack 600;*/
 
 /*_i pushBack "U_OG_Guerilla1_1";
 _u pushBack 1;
@@ -747,7 +747,7 @@ _u pushBack 0;
 _p pushBack 5;*/
 
 //--- Helms
-_i pushBack "H_HelmetO_ocamo";
+/*_i pushBack "H_HelmetO_ocamo";
 _u pushBack 0;
 _p pushBack 150;
 
@@ -769,7 +769,7 @@ _p pushBack 150;
 
 _i pushBack "H_HelmetLeaderO_oucamo";
 _u pushBack 3;
-_p pushBack 150;
+_p pushBack 150;*/
 
 
 /*_i pushBack "H_PilotHelmetHeli_O";
