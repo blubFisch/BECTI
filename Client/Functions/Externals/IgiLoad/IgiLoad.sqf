@@ -119,11 +119,11 @@ if (isnil "IL_Variables") then
 	// Supported vehicles
 	IL_Supported_Vehicles_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_mas_mar_Offroad_01_F"];
 	IL_Supported_Vehicles_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_Vehicles_HEMTT = ["B_Truck_01_Repair_F", "B_Truck_01_medical_F", "B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG"];
-	IL_Supported_Vehicles_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
+	IL_Supported_Vehicles_HEMTT = ["B_Truck_01_Repair_F", "B_Truck_01_medical_F", "B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG","rhsusf_M1078A1P2_B_wd_fmtv_usarmy"];
+	IL_Supported_Vehicles_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered", "rhs_kamaz5350_msv"];
 	IL_Supported_Vehicles_TEMPEST = ["O_Truck_03_medical_F","O_Truck_03_repair_F", "O_Truck_03_transport_F", "O_Truck_03_covered_F"];
-	IL_Supported_Vehicles_MOHAWK = ["I_Heli_Transport_02_F", "CH49_Mohawk_FG", "Marinir_CH49_Mohawk_FG", "CUP_B_MH60S_USMC", "CUP_B_CH53E_USMC", "Mi-17 ama", "Mi-8AMT medevac", "Mi-8MT", "Mi-8MTV3"];
-	IL_Supported_Vehicles_CHINOOK = ["CH_147F", "CH_47F", "kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base", "CUP_B_MI6A_CDF", "CUP_B_MI6T_CDF"];
+	IL_Supported_Vehicles_MOHAWK = ["I_Heli_Transport_02_F", "CH49_Mohawk_FG", "Marinir_CH49_Mohawk_FG", "CUP_B_MH60S_USMC", "CUP_B_CH53E_USMC", "Mi-17 ama"];
+	IL_Supported_Vehicles_CHINOOK = ["CH_147F", "CH_47F", "kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base", "CUP_B_MI6A_CDF", "CUP_B_MI6T_CDF" , "RHS_CH_47F_10" , "rhsusf_CH53E_USMC_D"];
 	IL_Supported_Vehicles_MH9 = ["B_Heli_Light_01_F", "B_mas_mar_Heli_Light_01_F"];
 	IL_Supported_Vehicles_C130J = ["C130J_Cargo", "C130J", "CUP_B_C130J_USMC", "CUP_B_C130J_Cargo_USMC", "CUP_O_C130J_TKA", "CUP_O_C130J_Cargo_TKA", "CUP_B_MV22_USMC"];
 	IL_Supported_Vehicles_C17 = ["globemaster_c17_altus", "globemaster_c17_701", "globemaster_c17_703", "globemaster_c17_704", "globemaster_c17_705", "globemaster_c17_dover", "globemaster_c17_edwards", "globemaster_c17_Elmendorf", "globemaster_c17", "globemaster_c17_hickam", "globemaster_c17_IAF", "globemaster_c17_March", "globemaster_c17_mcchord", "globemaster_c17_McGuire", "globemaster_c17_Mississipi", "globemaster_c17_NATO", "globemaster_c17_natoPAPA", "globemaster_c17_Qatar", "globemaster_c17_RAAF", "globemaster_c17_ZZ172_RAF", "globemaster_c17_RCAF", "globemaster_c17_Stewart", "globemaster_c17_therock", "globemaster_c17_travis", "globemaster_c17_UAE", "globemaster_c17_wright_patt"];
@@ -134,18 +134,18 @@ if (isnil "IL_Variables") then
 	IL_Para_Drop_Vehicles = IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_C130J + IL_Supported_Vehicles_C17 + IL_Supported_Vehicles_CHINOOK;
 
 	//Supported cargo
-	IL_Supported_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F", "B_Truck_01_mover_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F", "B_Truck_01_Repair_F"];
-	IL_Supported_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
+	IL_Supported_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F", "B_Truck_01_mover_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F", "B_Truck_01_Repair_F", "rhsusf_M1078A1P2_B_wd_fmtv_usarmy"];
+	IL_Supported_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered","rhs_kamaz5350_msv"];
 	IL_Supported_TEMPEST = ["O_Truck_03_transport_F", "O_Truck_03_covered_F"];
 	IL_Supported_Strider = ["I_MRAP_03_F", "I_MRAP_03_gmg_F", "I_MRAP_03_hmg_F", "CAF_TAPV_ar", "caf_tapv_gl_ar", "caf_tapv_50_ar", "CAF_TAPV_tw", "caf_tapv_gl_tw", "caf_tapv_50_tw", "Night_B_MRAP_03_F", "Night_B_MRAP_03_gmg_F", "Night_B_MRAP_03_hmg_F"];
-	IL_Supported_Hunter = ["B_MRAP_01_F", "B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F", "Marinir_B_MRAP_01_FG" , "Marinir_MRAP_01_gmg_FG", "Marinir_MRAP_01_hmg_FG", "B_mas_mar_MRAP_01_med_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_gmg_F", "B_mas_mar_MRAP_01_hmg_F"];
-	IL_Supported_Ifrit = ["O_MRAP_02_F", "O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F"];
+	IL_Supported_Hunter = ["B_MRAP_01_F", "B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F", "Marinir_B_MRAP_01_FG" , "Marinir_MRAP_01_gmg_FG", "Marinir_MRAP_01_hmg_FG", "B_mas_mar_MRAP_01_med_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_gmg_F", "B_mas_mar_MRAP_01_hmg_F","rhs_btr80a_msv","rhsgref_BRDM2_ATGM_msv"];
+	IL_Supported_Ifrit = ["O_MRAP_02_F", "O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F" , "rhsusf_rg33_usmc_d" , "rhsusf_rg33_usmc_wd"];
 	IL_Supported_UGV = ["B_UGV_01_rcws_F", "B_UGV_01_F", "O_UGV_01_rcws_F", "O_UGV_01_F", "I_UGV_01_rcws_F", "I_UGV_01_F"];
 	IL_Supported_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
 	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "JTF2_Offroad_armed_01", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F"];
-	IL_Supported_SUV = ["C_SUV_01_F"];
+	IL_Supported_SUV = ["C_SUV_01_F","RHS_UAZ_MSV_01"];
 	IL_Supported_Hatchback = ["C_Hatchback_01_F", "C_Hatchback_01_sport_F"];
-	IL_Supported_Hummvee = ["rc_hmmwv", "HMMWV2", "HMMWV_M1035", "M1114_AGS_ACR", "HMMWV_M1151_M2", "HMMWV2_M2", "HMMWV2_MK19", "HMMWV2_TOW", "HMMWV", "HMMWV_M2", "HMMWV_MK19", "HMMWV_TOW", "CUP_B_HMMWV_Unarmed_USMC", "CUP_B_HMMWV_Ambulance_USMC", "CUP_B_HMMWV_Crows_M2_USA", "CUP_B_HMMWV_Crows_MK19_USA", "CUP_B_HMMWV_AGS_GPK_ACR", "CUP_B_HMMWV_DSHKM_GPK_ACR", "CUP_B_HMMWV_M2_GPK_USA", "CUP_B_HMMWV_M2_USMC", "CUP_B_HMMWV_M1114_USMC", "CUP_B_HMMWV_MK19_USMC", "CUP_B_HMMWV_SOV_USA", "CUP_B_HMMWV_TOW_USMC", "CUP_B_HMMWV_Transport_USA", "CUP_B_HMMWV_Terminal_USA", "CUP_C_LR_Transport_CTK", "CUP_B_UAZ_Unarmed_CDF", "CUP_O_UAZ_AMB_RU", "CUP_O_UAZ_Open_CSAT", "CUP_O_Ural_RU", "CUP_O_Ural_Empty_RU"];
+	IL_Supported_Hummvee = ["rc_hmmwv", "HMMWV2", "HMMWV_M1035", "M1114_AGS_ACR", "HMMWV_M1151_M2", "HMMWV2_M2", "HMMWV2_MK19", "HMMWV2_TOW", "HMMWV", "HMMWV_M2", "HMMWV_MK19", "HMMWV_TOW", "CUP_B_HMMWV_Unarmed_USMC", "CUP_B_HMMWV_Ambulance_USMC", "CUP_B_HMMWV_Crows_M2_USA", "CUP_B_HMMWV_Crows_MK19_USA", "CUP_B_HMMWV_AGS_GPK_ACR", "CUP_B_HMMWV_DSHKM_GPK_ACR", "CUP_B_HMMWV_M2_GPK_USA", "CUP_B_HMMWV_M2_USMC", "CUP_B_HMMWV_M1114_USMC", "CUP_B_HMMWV_MK19_USMC", "CUP_B_HMMWV_SOV_USA", "CUP_B_HMMWV_TOW_USMC", "CUP_B_HMMWV_Transport_USA", "CUP_B_HMMWV_Terminal_USA", "CUP_C_LR_Transport_CTK", "CUP_B_UAZ_Unarmed_CDF", "CUP_O_UAZ_AMB_RU", "CUP_O_UAZ_Open_CSAT", "CUP_O_Ural_RU", "CUP_O_Ural_Empty_RU", "rhsusf_m1025_d", "rhsusf_m1025_w_m2","rhsusf_m1025_w_mk19","rhsusf_m1025_d_m2"];
 	IL_Supported_Quadbike = ["I_Quadbike_01_F", "C_Quadbike_01_F", "O_Quadbike_01_F", "B_G_Quadbike_01_F", "B_Quadbike_01_F", "CAF_Quadbike_OD", "CAF_Quadbike_AR", "Marinir_Quadbike_01_FG", "B_mas_mar_Quadbike_01_F"];
 	IL_Supported_Supply_Crate = ["B_supplyCrate_F", "IG_supplyCrate_F", "O_supplyCrate_F", "I_supplyCrate_F", "C_supplyCrate_F"];
 	IL_Supported_Veh_Ammo = ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F", "Land_CargoBox_V1_F", "ASC_B_box"];
