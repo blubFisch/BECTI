@@ -1,4 +1,4 @@
-private ["_player","_player_side","_playerai", "_rank", "_score", "_info1", "_info2", "_info3", "_info4", "_info5", "_info6"];
+private ["_player","_player_side","_playerai", "_rank", "_score", "_info1", "_info2", "_info3", "_info4", "_info5", "_info6", "_upgrade_barracks_ai", "_upgrades", "_upgrade_barracks"];
 
 _info1 = 0;
 _info2 = 0;
@@ -8,19 +8,33 @@ _info5 = 0;
 _info6 = 0;
 _info7 = 0;
 _playerai = 3;
+_upgrade_barracks_ai = 3;
 
 while {! CTI_GameOver} do {
+	//Check units rank
 	_rank = (player) call CTI_CO_FNC_GetUnitsRank;
+	//Check Barrack Upgrade
+	_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
+	_upgrade_barracks = _upgrades select CTI_UPGRADE_BARRACKS;
+	switch (_upgrade_barracks) do {
+		case 0: {_upgrade_barracks_ai = 3;};
+		case 1: {_upgrade_barracks_ai = 4;};
+		case 2: {_upgrade_barracks_ai = 5;};
+		case 3: {_upgrade_barracks_ai = 6;};
+		case 4: {_upgrade_barracks_ai = 7;};
+	};
 	switch (true) do {
 		case (_rank == "PRIVATE") : { 
-			_playerai = 4;
+			_playerai = 3;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			if (_info1 == 0) then {
 				["rank-up", [name player ,_rank, "virtually no good", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info1 = 1;
 			};	
 		};
 		case (_rank == "CORPORAL") : { 
-			_playerai = 5;
+			_playerai = 4;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["Medic",true];
 			if (_info2 == 0) then {
 				["rank-up", [name player ,_rank, "Medic", _playerai]] call CTI_CL_FNC_DisplayMessage;
@@ -28,7 +42,8 @@ while {! CTI_GameOver} do {
 			};
 		};
 		case (_rank == "SERGEANT") : { 
-			_playerai = 6;
+			_playerai = 5;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["explosiveSpecialist",true];
 			if (_info3 == 0) then {
 				["rank-up", [name player ,_rank, "Explosive Specialist", _playerai]] call CTI_CL_FNC_DisplayMessage;
@@ -36,7 +51,8 @@ while {! CTI_GameOver} do {
 			};
 		};
 		case (_rank == "LIEUTENANT") : { 
-			_playerai = 7;
+			_playerai = 6;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["Engineer",true];
 			if (_info4 == 0) then {
 				["rank-up", [name player ,_rank, "Engineer", _playerai]] call CTI_CL_FNC_DisplayMessage;
@@ -44,7 +60,8 @@ while {! CTI_GameOver} do {
 			};
 		};
 		case (_rank == "CAPTAIN") : { 
-			_playerai = 8;
+			_playerai = 7;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["UAVHacker",true];
 			if (_info5 == 0) then {
 				["rank-up", [name player ,_rank, "UAVHacker", _playerai]] call CTI_CL_FNC_DisplayMessage;
@@ -52,7 +69,8 @@ while {! CTI_GameOver} do {
 			};
 		};
 		case (_rank == "MAJOR") : { 
-			_playerai = 9;
+			_playerai = 8;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["loadCoef",0.9];
 			if (_info6 == 0) then {
 				["rank-up", [name player ,_rank, "increased stamina", _playerai]] call CTI_CL_FNC_DisplayMessage;
@@ -60,7 +78,8 @@ while {! CTI_GameOver} do {
 			};
 		};
 		case (_rank == "COLONEL") : { 
-			_playerai = 10;
+			_playerai = 9;
+			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
 			player setUnitTrait ["camouflageCoef",0.9];
 			player setUnitTrait ["audibleCoef",0.9];
 			if (_info7 == 0) then {

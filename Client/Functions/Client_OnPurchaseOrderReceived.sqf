@@ -34,7 +34,7 @@
 	[_seed, _classname, group player, _veh_infos, _factory] spawn CTI_CL_FNC_OnPurchaseOrderReceived
 */
 
-private ["_cost", "_factory", "_funds", "_index", "_model", "_net", "_req_buyer", "_req_classname", "_req_seed", "_req_time", "_req_time_out", "_script", "_var", "_var_classname", "_vehicle", "_veh_infos"];
+private ["_cost", "_factory", "_funds", "_index", "_model", "_net", "_req_buyer", "_req_classname", "_req_seed", "_req_time", "_req_time_out", "_script", "_var", "_var_classname", "_vehicle", "_veh_infos", "_unit_skill"];
 
 _req_seed = _this select 0;
 _req_classname = _this select 1;
@@ -138,6 +138,7 @@ _position = _factory modelToWorld [(sin _direction * _distance), (cos _direction
 _position set [2, .5];
 _net = if ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") == 1) then { true } else { false };
 _vehicle = objNull;
+_unit = objNull;
 _units = [];
 
 if (_model isKindOf "Man") then {
@@ -145,7 +146,7 @@ if (_model isKindOf "Man") then {
 	_units pushBack _vehicle;
 	if (_model == missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, "Crew"] || 
 		_model == missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, "Pilot"]) then {
-		_vehicle call FNC_AdjustPlayerCrewSkill;
+		//_vehicle call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
 	};
 } else {
 	_vehicle = [_model, _position, _direction + getDir _factory, CTI_P_SideID, (_veh_infos select 4), true, true] call CTI_CO_FNC_CreateVehicle;
@@ -161,7 +162,7 @@ if (_model isKindOf "Man") then {
 		
 		if (_veh_infos select 0) then {
 			_unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit;
-			_unit call FNC_AdjustPlayerCrewSkill;
+			//_unit call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
 			_unit moveInDriver _vehicle;
 			_units pushBack _unit;
 		};
@@ -169,15 +170,15 @@ if (_model isKindOf "Man") then {
 		{
 			if (count _x == 1 && _veh_infos select 3) then {
 				_unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit;
-				_unit call FNC_AdjustPlayerCrewSkill;
+				//_unit call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
 				_unit moveInTurret [_vehicle, (_x select 0)];
 				_units pushBack _unit;
 			}; //--- Turret
 			
 			if (count _x == 2) then {
 				switch (_x select 1) do {
-					case "Gunner": { if (_veh_infos select 1) then { _unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit; _unit call FNC_AdjustPlayerCrewSkill; _unit moveInTurret [_vehicle, (_x select 0)]; _units pushBack _unit; }};
-					case "Commander": { if (_veh_infos select 2) then { _unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit; _unit call FNC_AdjustPlayerCrewSkill; _unit moveInTurret [_vehicle, (_x select 0)]; _units pushBack _unit; }};
+					case "Gunner": { if (_veh_infos select 1) then { _unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit; _unit moveInTurret [_vehicle, (_x select 0)]; _units pushBack _unit; }};
+					case "Commander": { if (_veh_infos select 2) then { _unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit; _unit moveInTurret [_vehicle, (_x select 0)]; _units pushBack _unit; }};
 				};
 			};
 		} forEach (_var_classname select CTI_UNIT_TURRETS);
@@ -210,7 +211,9 @@ if (_script != "" && alive _vehicle) then {
 
 //--- Notify the current client
 _picture = if ((_var_classname select CTI_UNIT_PICTURE) != "") then {format["<img image='%1' size='2.5'/><br /><br />", _var_classname select CTI_UNIT_PICTURE]} else {""};
-hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br />%4<t>Your <t color='#ccffaf'>%1</t> has arrived from the <t color='#fcffaf'>%2</t> at grid <t color='#beafff'>%3</t></t>", _var_classname select CTI_UNIT_LABEL, _factory_label, mapGridPosition _position, _picture];
+_logic = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideLogic;
+_unit_skill = (_logic getVariable "cti_player_ai_skill");
+hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t>Your <t color='#ccffaf'>%1</t> with a skill of <t color='#fcffaf'>%2</t> has arrived from the <t color='#fcffaf'>%3</t> at grid <t color='#beafff'>%4</t></t>", _var_classname select CTI_UNIT_LABEL, _unit_skill, _factory_label, mapGridPosition _position, _picture];
 
 //--- send a notice to the server that our order is now complete
 [_req_seed, _req_classname, _req_buyer, _factory] remoteExec ["CTI_PVF_SRV_AnswerPurchase", CTI_PV_SERVER];
