@@ -18,7 +18,9 @@ class CfgFunctions
 {
 	#include "Client\Functions\Externals\zam_shownames\zam_shownames.cpp"
     #include "Client\Functions\Externals\CHVD\CfgFunctions.hpp"
+	#include "Common\Functions\External\LARs\LARs_spawnComp.cpp"
 };
+#include "Common\Config\Compositions\compositions.cfg"
 
 disableChannels[] = { {0,false,true}, {2,true,true}, {6,true,true} };   
 /*  disableChannels[] = {{channelID<number>, disableChat<bool>, disableVoice<bool>},{channelID<number>, disableChat<bool>, disableVoice<bool>},...}; 

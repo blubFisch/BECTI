@@ -258,6 +258,7 @@ CTI_UPGRADE_BASE_DEFENSES = 22;
 
 //--- Supply
 CTI_UPGRADE_CST_SUPPLY_COEF = [1, 2, 3, 4]; //--- Supply coefficient (Default * upgrade)
+CTI_UPGRADE_BARRACKS_SKILL = [40, 55, 70, 85, 100]; //--- Factory health upgrade damage reduce multipliers
 
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -342,6 +343,8 @@ CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 25; //--- Range needed to capture/protec
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to match CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE), proc all 5 seconds.
+CTI_TOWNS_CAMPS_CAPTURE_BOUNTY = 500; //--- Bounty value
+CTI_TOWNS_CAMPS_CAPTURE_BOUNTY_DELAY = 300; //--- Award the bounty depending if the last camp capture happened longer than x seconds ago
 
 //--- Towns: Capture
 CTI_TOWNS_CAPTURE_BOUNTY_COEF = 100; //--- Bounty coefficient upon capture, (max sv * coefficient)
@@ -423,6 +426,7 @@ with missionNamespace do {
 	if (isNil 'CTI_TOWNS_OCCUPATION') then {CTI_TOWNS_OCCUPATION = 1}; //--- Determine whether occupation is enabled or not
 	if (isNil 'CTI_TOWNS_OCCUPATION_LIMIT_AI') then {CTI_TOWNS_OCCUPATION_LIMIT_AI = 150}; //--- Determine the soft limit for overall occupation Town AI
 	if (isNil 'CTI_TOWNS_OCCUPATION_LIMIT_AI_QUEUE_RATIO') then {CTI_TOWNS_OCCUPATION_LIMIT_AI_QUEUE_RATIO = 40}; //--- Determine the AI queue ratio (Queued unit = Groups * ratio/100)
+	if (isNil 'CTI_TOWNS_OCCUPATION_SKILL') then {CTI_TOWNS_OCCUPATION_SKILL = 50}; //--- Set Town Occupation Skill
 	if (isNil 'CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE') then {CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE = 10}; //--Set town occ max group for resistance
 	if (isNil 'CTI_TOWNS_OCCUPATION_LEVEL') then {CTI_TOWNS_OCCUPATION_LEVEL = 8}; //-- Set Town occ max group
 	if (isNil 'CTI_TOWNS_OCCUPATION_RESISTANCE') then {CTI_TOWNS_OCCUPATION_RESISTANCE = 0}; //--- Set Town Occupation Forces
@@ -491,7 +495,7 @@ CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (str
 
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
-CTI_BASE_DEFENSES_AUTO_LIMIT = 25; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
 CTI_BASE_DEFENSES_AUTO_RANGE = 250; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 250; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 350; //--- Delay after which an empty defense is considered empty
@@ -694,6 +698,7 @@ CTI_SERVICE_GEAR_RANGE = 15;
 CTI_SCORE_BUILD_VALUE_PERPOINT = 1500; //--- Structure value / x
 CTI_SCORE_SALVAGE_VALUE_PERPOINT = 2000; //--- Unit value / x
 CTI_SCORE_TOWN_VALUE_PERPOINT = 100; //--- Town value / x
+CTI_SCORE_CAMP_VALUE_PERPOINT = 50; //--- Camp value / x
 
 CTI_UI_TOWNS_PROGRESSBAR_DISTANCE = 320;
 

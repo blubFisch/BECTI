@@ -134,7 +134,7 @@ _headers pushBack 		[CTI_NAVAL, "Naval Yard", "Naval"];
 _classes pushBack 		["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"];
 _prices pushBack 		2000;
 _times pushBack 		35;
-_placements pushBack 	[180, 60];
+_placements pushBack 	[180, 100];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
@@ -792,7 +792,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		2;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];	
 	
 	if (CTI_APEX_ADDON > 0) then {
 

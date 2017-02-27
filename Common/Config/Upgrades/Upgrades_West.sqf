@@ -30,7 +30,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
     [1000,2000,3500,5000], //--- Gear
-	[500,1000,1500], //--- Barracks
+	[2000,2000,2000,2000], //--- Barracks
 	[1500,3500,4500,4000,6000], //--- Light
 	[2000], //--- Heavy
 	[1500,2000], //--- Naval
@@ -56,7 +56,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
     [1000,2000,3500,5000], //--- Gear
-	[500,1000,1500], //--- Barracks
+	[2000,2000,2000,2000], //--- Barracks
 	[1500,3500,4500,4000,6000], //--- Light
 	[2000,4000,6000,15000], //--- Heavy
 	[1500,2000,4000], //--- Naval
@@ -110,7 +110,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	4, //--- Gear
-	3, //--- Barracks
+	4, //--- Barracks
 	5, //--- Light
 	4, //--- Heavy
 	3, //--- Naval
@@ -138,7 +138,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3]], //--- Barracks
+	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4]], //--- Heavy
 	[[],[],[]], //--- Naval
@@ -164,7 +164,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3]], //--- Barracks
+	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4]], //--- Heavy
 	[[],[],[]], //--- Naval
@@ -192,7 +192,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 if (CTI_DEV_MODE > 0) then { 
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 		[1, 1, 1, 1], //--- Gear
-		[1, 1, 1], //--- Barracks
+		[1, 1, 1, 1], //--- Barracks
 		[1, 1, 1, 1, 1], //--- Light
 		[1, 1, 1, 1], //--- Heavy
 		[1, 1, 1], //--- Naval
@@ -219,7 +219,7 @@ if (CTI_DEV_MODE > 0) then {
 	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 			[60,120,360,480], //--- Gear
-			[60,120,180], //--- Barracks
+			[60,120,180,240], //--- Barracks
 			[120,360,480,600,720], //--- Light
 			[240], //--- Heavy
 			[60,120], //--- Naval
@@ -245,7 +245,7 @@ if (CTI_DEV_MODE > 0) then {
 	} else {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 			[60,120,360,480], //--- Gear
-			[60,120,180], //--- Barracks
+			[60,120,180,240], //--- Barracks
 			[120,360,480,600,720], //--- Light
 			[240,480,600,720], //--- Heavy
 			[60,120,320], //--- Naval
@@ -304,7 +304,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 if (CTI_IsClient) then {
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
 		["Gear", "<t>Unlock better gear"], //--- Gear
-		["Barracks", "<t>Unlock better infantry units</t>"], //--- Barracks
+		["Barracks", "<t>Unlock better infantry units, unlock more default player AI and improve AI skill<br /><t color='#ffff00'>LVL 0</t> - Base AI limit 3, AI Skill 40%<br /><t color='#ffff00'>LVL 1</t> - Base AI limit 4, AI Skill 55%<br /><t color='#ffff00'>LVL 2</t> - Base AI limit 5, AI Skill 70%<br /><t color='#ffff00'>LVL 3</t> - Base AI limit 6, AI Skill 85%<br /><t color='#ffff00'>LVL 4</t> - Base AI limit 7, AI Skill 100%</t>"], //--- Barracks
 		["Light Factory", "<t>Unlock better motorized units</t>"], //--- Light
 		["Heavy Factory", "<t>Unlock better armored units</t>"], //--- Heavy
 		["Naval Factory", "<t>Unlock better naval units<br /><t color='#ffff00'>LVL 1</t> - Attack Boats<br /><t color='#ffff00'>LVL 2</t> - Missile Boats<br /><t color='#ffff00'>LVL 3</t> - Frigates</t>"], //--- Naval

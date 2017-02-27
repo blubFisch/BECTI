@@ -150,6 +150,9 @@ switch (_message_var) do {
 	};
 	case "teamkill": {CTI_P_ChatID sideChat "Watch your fire! you're shooting on friendly!"};
 	case "teamswap": {CTI_P_ChatID commandChat format ["Player %1 has been sent back to the lobby after teamswaping", _parameters]};
+	case "camp-capture": {
+		player groupChat format ["$%1 awarded for the capture of a camp in %2", _parameters select 1, (_parameters select 0) getVariable "cti_town_name"];
+	};
 	case "town-capture": {
 		player groupChat format ["$%1 awarded for the capture of %2", _parameters select 1, (_parameters select 0) getVariable "cti_town_name"];
 		playMusic "EventTrack03_F_Curator";
