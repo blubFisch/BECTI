@@ -1020,6 +1020,16 @@ _specials = [];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
+
+		_headers pushBack 		"SNR-75 - AA Radar";
+		_classes pushBack 		"pook_SNR75_radar";
+		_prices pushBack 		5000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		2;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 		
 	};
 	
@@ -1294,16 +1304,6 @@ if (CTI_RHS_ADDON > 0) then {
 		_headers pushBack 		"S-300 PMU - AA Launcher";
 		_classes pushBack 		"pook_SA20_static_INS";
 		_prices pushBack 		60000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
-
-		_headers pushBack 		"SNR-75 - AA Radar";
-		_classes pushBack 		"pook_SNR75_radar";
-		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ"];

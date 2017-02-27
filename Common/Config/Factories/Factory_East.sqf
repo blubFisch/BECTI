@@ -515,7 +515,8 @@ if (CTI_FACTION_EAST == 2) then {
 	}
 };
 
-//--- Units - Barracks
+//--- Below is classnames for Units and AI avaiable to puchase from Barracks Factory.
+
 _u = [];
 
 //Universal Vanilla
@@ -716,6 +717,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Light Factory.
 
 //Universal Vanilla
 _u pushBack 'I_C_Offroad_02_unarmed_F';		
@@ -934,8 +937,9 @@ _u pushBack 'rhs_9k79_K';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
 _u = [];
 
-//Universal Vanilla
+//--- Below is classnames for Units and AI avaiable to puchase from Heavy Factory.
 
+//Universal Vanilla
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
@@ -1100,6 +1104,8 @@ _u pushBack 'rhs_2s3_tv';
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Air Factory.
 
 //Universal Vanilla
 	_u pushBack 'O_Heli_Transport_04_F'; 
@@ -1303,6 +1309,8 @@ _u pushBack 'rhs_mi28n_s13_vvsc';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Reapir Factory.
+
 //Universal Vanilla
 _u pushBack "O_G_Offroad_01_repair_F";
 _u pushBack "O_Truck_03_covered_F";//FOB
@@ -1485,6 +1493,8 @@ _u pushBack 'rhs_gaz66_ammo_msv';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Factory.
+
 //Universal Vanilla
 _u pushBack 'C_Boat_Civil_01_F';
 _u pushBack 'O_Boat_Transport_01_F';
@@ -1579,6 +1589,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Depots.
 
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
@@ -1707,6 +1719,8 @@ if (CTI_RHS_ADDON > 0) then {
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Large FOB.
+
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
 _u pushBack "O_G_Offroad_01_F";
@@ -1811,6 +1825,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Towns.
 
 //Universal Vanilla
 _u pushBack 'C_Boat_Civil_01_F';

@@ -582,7 +582,7 @@ _s pushBack "deployable-fob-large";
 _d pushBack 0;
 
 _c pushBack 'B_Slingload_01_Repair_F';  
-_p pushBack '';
+_p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Repair_F.jpg';
 _n pushBack 'Repair POD';
 _o pushBack 4000;
 _t pushBack 25;
@@ -653,7 +653,7 @@ _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
 
-_c pushBack "Box_NATO_Wps_F";
+/*_c pushBack "Box_NATO_Wps_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Wps_F.jpg';
 _n pushBack 'Empty Crate';
 _o pushBack 50;
@@ -661,7 +661,7 @@ _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack "B_supplyCrate_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_supplyCrate_F.jpg';

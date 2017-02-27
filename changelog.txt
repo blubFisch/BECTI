@@ -1,7 +1,7 @@
 ## Staged for next version ##
 Tweaked: Moved l39 from air factory 1 to air factory 2
 Tweaked: Moved BRDM ATGM from light factory 0 to light factory 2
-Tweaked: Moved kajman from airfactory 3 to airfactory 4
+Tweaked: Moved kajman from air factory 3 to air factory 4
 Tweaked: Changed price of orca armed from 18500 to 22500
 Tweaked: Changed price of kajman from 45000 to 50000
 Tweaked: Changed price of apache (empty) from 15000 to 17500
@@ -14,18 +14,23 @@ Tweaked: Changed price of AH6 At (little bird AT) from 14500 to 22500
 Tweaked: Changed price of AH-99 Blackfoot from 65000 to 55000
 Tweaked: Changed price of Mi-24P Hind from 20000 to 25000
 Tweaked: Changed price of KA-52 from 60000 to 50000
-Fixed: Ruins from base buildings (such as base defence domes) now despawn quicker. 
-Tweaked: Player and AI bodies now despawn immediatly after death
+Tweaked: Player and AI bodies now despawn immediately after death
 Tweaked: Ai bodies now despawn after disband
-Fixed: No SAM warning for players without vehicles or in parachute
 Tweaked: SAM engagement minimum alt 200m
-Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
-Added: indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
+Fixed: Ruins from base buildings (such as base defense domes) now despawn quicker. 
+Fixed: No SAM warning for players without vehicles or in parachute
+Fixed: No SAM warning for players without vehicles or in parachute
+Fixed: Camps relocated inside town circle for some towns.
+Fixed: Town circle will disappear in some towns.
+Fixed: When player teamkills chat will display players name
+Added: Indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
 Added: Hint for players if a friendly structure is attacked. displays health after damage
-Added: friendly team notifications for when HQ is mobilized and deployed
-Fixed: No SAM warning for players without vehicles or in parachute
-Tweaked: SAM engagement minimum alt 200m
+Added: Friendly team notifications for when HQ is mobilized and deployed
+Added: Base defense compositions
+Added: Barracks upgrade level will increase player AI slots and skill
+Added: Camp award bounty
 Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
+
 
 
 1.05

@@ -653,7 +653,7 @@ _d pushBack 0;
 
 //--- Ammo Vehicles
 
-_c pushBack "Box_East_Wps_F";
+/*_c pushBack "Box_East_Wps_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_East_Wps_F.jpg';
 _n pushBack 'Empty Crate';
 _o pushBack 50;
@@ -661,7 +661,7 @@ _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack "O_supplyCrate_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\O_supplyCrate_F.jpg';
