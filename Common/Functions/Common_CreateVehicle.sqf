@@ -108,36 +108,19 @@ if (getNumber(configFile >> "CfgVehicles" >> _type >> "artilleryScanner") > 0 &&
 };
 
 if (getAmmoCargo _vehicle > 0) then {_vehicle setAmmoCargo  0};
-//Clear out the cargo of the vehicle
+
+//--- Clear out the cargo of the vehicle
 clearItemCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
-//set basic supplies to all
-//removing due to UAV bug as well as some addons dont have room -omon
-/*_vehicle addItemCargoGlobal ["FirstAidKit",2];
-_vehicle addItemCargoGlobal ["FirstAidKit",2];
-_vehicle addItemCargoGlobal ["ToolKit",1]; 
-//Add basic chutes to air units
-if (_vehicle isKindOf "Air") then {
-	_vehicle addItemCargoGlobal ["ToolKit",1];
-	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",4];
-	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
-};*/
-
-//slingload modification
-if (_type isKindOf 'Slingload_01_Base_F') then {_vehicle setmass [4000,0]};
-if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,0]};
-// weight fix
-if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
-
 //--- Advanced Fuel Consumption
 if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
 };
-//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
-// adds in stealth add action to tanks 
+
+//--- Adds in stealth add action to tanks 
 if (_vehicle isKindOf "Tank") then {
 	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target == _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
 	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
@@ -151,6 +134,7 @@ if (_vehicle isKindOf "Ship") then {
 	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
 	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
 };
+
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;
@@ -183,6 +167,7 @@ if (_vehicle isKindOf "Car") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
+
 //---Add ERA system
 if (_vehicle isKindOf "Tank") then {
 	if (_upgrade_era > 0) then {

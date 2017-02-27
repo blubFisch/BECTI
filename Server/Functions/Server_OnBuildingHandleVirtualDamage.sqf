@@ -66,34 +66,40 @@ switch (_upgrade_basehealth) do {
 };
 //--- Adjust damage for ammo types
 //--- This is active file that works with base damage 2/17/2017 -Omon
-if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
+
+//--- Tanks
+if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
 };
-//--- Tanks - Added T100, Slammer, Slammer UP, T90A
-if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_HE" || _ammo isKindOf /*Slammer*/"20Rnd_105mm_HEAT_MP" || _ammo isKindOf /*T100*/"12Rnd_125mm_HE" || _ammo isKindOf /*T100*/"12Rnd_125mm_HEAT" || _ammo isKindOf /*t90A*/"rhs_ammo_3bk31" || _ammo isKindOf /*t90A*/"rhs_ammo_3of26") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_HE_SHELL;
-};
-//--- Tanks - Added T100, Slammer, Slammer UP, T90A
-if (_ammo isKindOf /*SlammerUP*/"Sh_120mm_APFSDS" || _ammo isKindOf /*Slammer*/"40Rnd_105mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*T100*/"24Rnd_125mm_APFSDS" || _ammo isKindOf /*t90A*/"rhs_ammo_3bm46") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_AP_SHELL;
+//--- Arty (Has to be Spesific as tanks use same basecore)
+if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo isKindOf "R_230mm_fly") || (_ammo isKindOf "Mo_cluster_AP") || (_ammo isKindof "ArtilleryRocketCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
 };
 //--- Satchels
-if (_ammo isKindOf "satchelcharge") then {
+if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
 };
-//--- Fast HE Canons - Vanilla choppers and jets added
-if (_ammo isKindOf "B_30mm_HE" || _ammo isKindOf "Cannon_30mm_HE_Plane_CAS_02_F" || _ammo isKindof "Gatling_30mm_HE_Plane_CAS_01_F" || _ammo isKindOf "B_20mm" || _ammo isKindOf /*RHS KA50*/ "arhs_ammo_3uor6" || _ammo isKindOf /*RHS A10*/"rhs_ammo_PGU14B_API" || _ammo isKindOf /*RHS Apache */ "rhs_ammo_30x113mm_M789_HEDP") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_HE_CANON;
+//--- HE Cannons
+if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
 };
-if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
+//--- Missiles
+if ((_ammo isKindOf "MissileCore") || (_ammo isKindOf "MissileBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };
-if (_ammo isKindOf "BombCore" || _ammo isKindOf "LaserBombCore") then {
+//--- Explosions
+if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (_ammo isKindOf "HelicopterExploSmall") || (_ammo isKindOf "HelicopterExploBig")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
+};
+//--- Rockets
+if (_ammo isKindOf "RocketCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
+};
+//--- Bombs
+if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo isKindOf "MineCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
 };
-if (_ammo isKindOf "ArtilleryRocketCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ART;
-};
+
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;

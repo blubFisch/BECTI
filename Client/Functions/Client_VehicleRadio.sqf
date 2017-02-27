@@ -28,7 +28,7 @@ _radio =  "Land_HelipadEmpty_F" createVehicle position _vehicle; //Land_HelipadE
 		//_radio say3D ["valkyries",300,1];
 		//[_radio, "valkyries"] remoteExec ["say3D"];
 		//playSound3D ["ofps_sound\sounds\valkyries.ogg", _radio, true,getPos _radio, 10, 1, 300];
-		nul = [_radio,"valkyries",300] call Common_Say3D;
+		nul = [_radio,"valkyries",50] call Common_Say3D;
 		_radio setDamage 0;
 		_track = time + 240;//240fulllength
 		while {true} do {

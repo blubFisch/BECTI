@@ -45,9 +45,13 @@ _position = _this select 3;
 _direction = _this select 4;
 _isDestroyed = if (count _this > 5) then {_this select 5} else {false};
 
+//--- Dev Mode instant build
+if (CTI_DEV_MODE > 0) then {
+	_structure setVariable ["cti_completion", 100]
+};
 
-if (CTI_DEBUG) then {_structure setVariable ["cti_completion", 100]};
 waitUntil {!isNil {_structure getVariable "cti_completion"}};
+
 _completion = _structure getVariable "cti_completion";
 _completion_ratio = _structure getVariable "cti_completion_ratio";
 _completion_last = _completion;
@@ -57,9 +61,8 @@ _time_build = _var select 3;
 
 switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 	case 0: { //--- Timed Based
-		if(!CTI_DEBUG) then {
-			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
-		};
+	
+		sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //--- This timer determines how long it takes for the structure to pop up.
 		
 		//--- Upon destruction, a structure is no longer valid in a timed-based situation
 		_completion = if (_isDestroyed) then {0} else {100};
