@@ -77,7 +77,7 @@ switch (typeName (_var select 5)) do {
 _iscomposition = false;
 {if (_x select 0 == "Composition") exitWith {_iscomposition = true}} forEach (_var select 5);
 if (_iscomposition) then {
-	_composition = [ (((_var select 5) select 0) select 1), _position, [0,0,0], _direction, (((_var select 5) select 0) select 2), false ] call LARs_fnc_spawnComp;
+	_composition = [ (((_var select 5) select 0) select 1), _position, [0,0,0], _direction, (((_var select 5) select 0) select 2), false, false ] call LARs_fnc_spawnComp;
 	_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
 	{	
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense

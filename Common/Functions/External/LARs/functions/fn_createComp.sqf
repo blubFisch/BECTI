@@ -20,7 +20,7 @@
 #define DEBUG getNumber( missionConfigFile >> "LARs_spawnComp_debug" ) isEqualTo 1 || DEBUG_DEV
 #define DEBUG_MSG( COND, MSG ) if ( COND ) then { diag_log MSG }
 
-private [ "_groupCfgs", "_itemCfgs", "_deferedIDs", "_deferedItems", "_deferedGrps", "_deferedTrgs", "_crewLinks", "_objects", "_priority", "_ids", "_inits", "_nul" ];
+private [ "_groupCfgs", "_itemCfgs", "_deferedIDs", "_deferedItems", "_deferedGrps", "_deferedTrgs", "_crewLinks", "_objects", "_priority", "_ids", "_inits", "_nul", "_previewmode" ];
 
 params[
 	"_compName",

@@ -188,7 +188,7 @@ with missionNamespace do {
 					if (time - _last_composition_update > 1) then {
 						_last_composition_update = time;
 						if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[ CTI_COIN_PREVIEW_COMP ] call LARs_fnc_deleteComp;};
-						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), true] call LARs_fnc_spawnComp;
+						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
 					};	
 					_composition = CTI_COIN_PREVIEW_COMP;
 					_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
