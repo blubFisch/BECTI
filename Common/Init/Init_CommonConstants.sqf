@@ -712,7 +712,7 @@ CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
+CTI_GC_CLEANUP_MAN = 1; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
 
 CTI_HALO_COOLDOWN = 60;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;

@@ -344,7 +344,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;*/
 
-_c pushBack 'B_G_Offroad_01_';
+_c pushBack 'B_G_Offroad_01_F';
 _p pushBack '';
 _n pushBack 'Offroad (can load statics)';
 _o pushBack 950;
@@ -739,7 +739,7 @@ _d pushBack 0;
 _c pushBack 'B_Heli_Attack_01_F';
 _p pushBack '';
 _n pushBack 'AH-99 Blackfoot';
-_o pushBack 65000;
+_o pushBack 55000;
 _t pushBack 50;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;

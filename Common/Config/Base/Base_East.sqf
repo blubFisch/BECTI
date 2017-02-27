@@ -1119,16 +1119,6 @@ if (CTI_RHS_ADDON > 0) then {
 		};
 		
 	if (CTI_OFPS_ADDON > 0) then { 
-
-		_headers pushBack 		"C-RAM Phalanx Missile";
-		_classes pushBack 		"C_at_phalanx_missile_35AI";
-		_prices pushBack 		35000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		
 		_headers pushBack 		"S-300 PMU - AA Launcher";
 		_classes pushBack 		"pook_SA20_static_INS";

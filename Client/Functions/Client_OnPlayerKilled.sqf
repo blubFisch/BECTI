@@ -31,7 +31,7 @@ private ["_killed", "_killer"];
 
 _killed = _this select 0;
 _killer = _this select 1;
-
+_isvehicle_killed = if (_killed isKindOf "Man") then {false} else {true};
 CTI_DeathPosition = getPos _killed;
 
 if !(isNil "CTI_DeathCamera") then {
@@ -96,3 +96,11 @@ call CTI_CL_FNC_EarPlugsDeath;
 
 //Call Tablet on death
 call CTI_CL_FNC_Death;
+
+//--- Remove "men" instantly on death if enabled
+if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
+	_killed spawn {
+		sleep 2;
+		deleteVehicle _this;
+	};
+};
