@@ -699,18 +699,18 @@ _p pushBack 100;*/
 
 //--- Vests
 
-_i pushBack "V_Rangemaster_belt";
+/*_i pushBack "V_Rangemaster_belt";
 _u pushBack 0;
 _p pushBack 100;
 
 _i pushBack "V_BandollierB_rgr";
 _u pushBack 0;
-_p pushBack 150;
+_p pushBack 150;*/
 
-_i pushBack "V_PlateCarrier1_rgr";
+/*_i pushBack "V_PlateCarrier1_rgr";
 _u pushBack 2;
 _p pushBack 900;
- 
+ */
 /*_i pushBack "V_PlateCarrier2_rgr";
 _u pushBack 0;
 _p pushBack 25;*/
@@ -727,26 +727,82 @@ _i pushBack "V_PlateCarrierSpec_rgr";
 _u pushBack 0;
 _p pushBack 30;*/
 
-_i pushBack "V_ChestrigB_rgr";
+/*_i pushBack "V_ChestrigB_rgr";
 _u pushBack 0;
 _p pushBack 300;
 
 _i pushBack "V_TacVest_oli";
 _u pushBack 1;
-_p pushBack 600;
+_p pushBack 600;*/
 
 /*_i pushBack "V_RebreatherB";
 _u pushBack 1;
 _p pushBack 400;*/
 
 //--- Backpacks
+_i pushBack "B_AssaultPack_blk";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_cbr";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_dgtl";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_rgr";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_ocamo";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_khk";
+_u pushBack 0;
+_p pushBack 300;
+
 _i pushBack "B_AssaultPack_mcamo";
 _u pushBack 0;
-_p pushBack 200;
+_p pushBack 300;
 
-_i pushBack "B_FieldPack_blk";
+_i pushBack "B_AssaultPack_sgg";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_tna_f";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_Kerry";
+_u pushBack 0;
+_p pushBack 300;
+
+/*_i pushBack "B_FieldPack_blk";
 _u pushBack 1;
-_p pushBack 400;
+_p pushBack 400;*/
+
+_i pushBack "B_TacticalPack_blk";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_rgr";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_ocamo";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_mcamo";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_oli";
+_u pushBack 2;
+_p pushBack 600;
 
 /*_i pushBack "B_Kitbag_mcamo";
 _u pushBack 0;
@@ -757,32 +813,36 @@ _u pushBack 0;
 _p pushBack 25;*/
 
 _i pushBack "B_Carryall_ocamo";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_mcamo";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_cbr";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_khk";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_oli";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_oucamo";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
+
+_i pushBack "B_Carryall_ghex_F";
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Parachute";
 _u pushBack 0;
-_p pushBack 10;
+_p pushBack 100;
 
 _i pushBack "B_UAV_01_backpack_F";
 _u pushBack 3;
@@ -832,7 +892,7 @@ _p pushBack 15000;*/
 //--- Glasses
 _i pushBack "G_Combat";
 _u pushBack 0;
-_p pushBack 5;
+_p pushBack 50;
 
 /*_i pushBack "G_Diving";
 _u pushBack 0;
@@ -840,7 +900,7 @@ _p pushBack 300;*/
 
 /* _i pushBack "G_Shades_Black";
 _u pushBack 0;
-_p pushBack 2;
+_p pushBack 50;
 
 _i pushBack "G_Tactical_Clear";
 _u pushBack 0;

@@ -581,15 +581,15 @@ _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "deployable-fob-large";
 _d pushBack 0;
 
-/*_c pushBack 'B_Slingload_01_Repair_F';  
+_c pushBack 'B_Slingload_01_Repair_F';  
 _p pushBack '';
 _n pushBack 'Repair POD';
-_o pushBack 6000;
+_o pushBack 4000;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'B_Slingload_01_Fuel_F';  
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Fuel_F.jpg';
@@ -646,7 +646,7 @@ _d pushBack 0;
 _c pushBack 'B_Slingload_01_Ammo_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Ammo_F.jpg';
 _n pushBack 'Ammo POD';
-_o pushBack 4000;
+_o pushBack 2500;
 _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
@@ -656,7 +656,7 @@ _d pushBack 0;
 _c pushBack "Box_NATO_Wps_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Wps_F.jpg';
 _n pushBack 'Empty Crate';
-_o pushBack 5;
+_o pushBack 50;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
@@ -666,7 +666,7 @@ _d pushBack 0;
 _c pushBack "B_supplyCrate_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_supplyCrate_F.jpg';
 _n pushBack 'Gear POD';
-_o pushBack 5800;
+_o pushBack 2500;
 _t pushBack 15;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -695,7 +695,6 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-
 
 _c pushBack 'B_Heli_Light_01_F'; //Hummingbird
 _p pushBack '';

@@ -58,7 +58,7 @@ _p pushBack 200;*/
 
 _i pushBack "rhs_weap_M590_8RD";
 _u pushBack 0;
-_p pushBack 450;
+_p pushBack 550;
 
 
 //Rifles
@@ -68,7 +68,7 @@ _p pushBack 400;*/
 
 _i pushBack "rhs_weap_m4a1";
 _u pushBack 1;
-_p pushBack 400;
+_p pushBack 500;
 
 _i pushBack "rhs_weap_m4a1_carryhandle";
 _u pushBack 1;
@@ -80,7 +80,7 @@ _p pushBack 500;*/
 
 _i pushBack "rhs_weap_m4a1_blockII";
 _u pushBack 1;
-_p pushBack 450;
+_p pushBack 550;
 
 _i pushBack "rhs_weap_m4a1_blockII_KAC";
 _u pushBack 1;
@@ -100,11 +100,11 @@ _p pushBack 500;
 
 _i pushBack "rhs_weap_m16a4_carryhandle";
 _u pushBack 1;
-_p pushBack 500;
+_p pushBack 600;
 
 _i pushBack "rhs_weap_m16a4_carryhandle_pmag";
 _u pushBack 1;
-_p pushBack 500;
+_p pushBack 700;
 
 /*_i pushBack "rhs_weap_hk416d10";
 _u pushBack 1;
@@ -393,20 +393,20 @@ _p pushBack 3000;
 //Launchers
 _i pushBack "rhs_weap_m72a7";
 _u pushBack 0;
-_p pushBack 1000;
+_p pushBack 650;
 
 
 _i pushBack "rhs_weap_M136_hp";
 _u pushBack 1;
-_p pushBack 2000;
+_p pushBack 1050;
 
 _i pushBack "rhs_weap_M136_hedp";
 _u pushBack 1;
-_p pushBack 2000;
+_p pushBack 2050;
 
 _i pushBack "rhs_weap_M136";
 _u pushBack 1;
-_p pushBack 2000;
+_p pushBack 1050;
 
 /*_i pushBack "rhs_weap_m32";
 _u pushBack 3;
@@ -425,7 +425,6 @@ _i pushBack "rhs_weap_fim92";
 _u pushBack 3;
 _p pushBack 4000;
 
-
 _i pushBack "rhs_weap_fgm148";
 _u pushBack 4;
 _p pushBack 8000;
@@ -441,24 +440,32 @@ _u pushBack 0;
 _p pushBack 250;
 
 _i pushBack "rhs_uniform_g3_blk";
-_u pushBack 0;
-_p pushBack 250;
+_u pushBack 2;
+_p pushBack 500;
 
 _i pushBack "rhs_uniform_g3_m81";
-_u pushBack 0;
-_p pushBack 250;
+_u pushBack 2;
+_p pushBack 500;
 
 _i pushBack "rhs_uniform_g3_mc";
-_u pushBack 0;
-_p pushBack 250;
+_u pushBack 2;
+_p pushBack 500;
 
 _i pushBack "rhs_uniform_g3_rgr";
-_u pushBack 0;
-_p pushBack 250;
+_u pushBack 2;
+_p pushBack 500;
 
 _i pushBack "rhs_uniform_g3_tan";
-_u pushBack 0;
-_p pushBack 250;
+_u pushBack 2;
+_p pushBack 500;
+
+_i pushBack "rhs_uniform_FROG01_wd";
+_u pushBack 4;
+_p pushBack 900;
+
+_i pushBack "rhs_uniform_FROG01_d";
+_u pushBack 4;
+_p pushBack 900;
 
 
 /*_i pushBack "rhs_uniform_cu_ocp_101st";
@@ -499,7 +506,7 @@ _p pushBack 300;*/
 /*_i pushBack "rhs_vest_commander";
 _u pushBack 0;
 _p pushBack 150;
-
+*/
 _i pushBack "rhs_vydra_3m";
 _u pushBack 0;
 _p pushBack 175;
@@ -519,7 +526,6 @@ _p pushBack 450;
 _i pushBack "rhsusf_spc_crewman";
 _u pushBack 3;
 _p pushBack 500;
-
 
 _i pushBack "rhsusf_iotv_ocp_Grenadier";
 _u pushBack 1;
@@ -541,17 +547,17 @@ _i pushBack "rhsusf_iotv_ocp_Repair";
 _u pushBack 1;
 _p pushBack 350;
 
-_i pushBack "rhsusf_iotv_ocp_Repair";
+/*_i pushBack "rhsusf_iotv_ocp_Repair";
 _u pushBack 1;
-_p pushBack 200;
+_p pushBack 200;*/
 
 _i pushBack "rhsusf_iotv_ucp_Repair";
 _u pushBack 1;
 _p pushBack 350;
 
-_i pushBack "rhsusf_iotv_ocp_Repair";
+/*_i pushBack "rhsusf_iotv_ocp_Repair";
 _u pushBack 1;
-_p pushBack 350;
+_p pushBack 350;*/
 
 _i pushBack "rhsusf_iotv_ocp_Rifleman";
 _u pushBack 1;
@@ -565,13 +571,13 @@ _i pushBack "rhsusf_iotv_ucp_SAW";
 _u pushBack 1;
 _p pushBack 200;
 
-_i pushBack "rhsusf_iotv_ocp_Squadleader";
-_u pushBack 1;
-_p pushBack 200;
-
 _i pushBack "rhsusf_iotv_ocp_SAW";
 _u pushBack 2;
 _p pushBack 450;
+
+_i pushBack "rhsusf_iotv_ocp_Squadleader";
+_u pushBack 1;
+_p pushBack 200;
 
 _i pushBack "rhsusf_iotv_ucp_Squadleader";
 _u pushBack 2;
@@ -613,10 +619,9 @@ _i pushBack "rhsusf_spc_squadleader";
 _u pushBack 4;
 _p pushBack 600;
 
-
 _i pushBack "rhsusf_spc_teamleader";
 _u pushBack 4;
-_p pushBack 600;*/
+_p pushBack 600;
 
 
 //Backpacks
@@ -640,7 +645,6 @@ _p pushBack 200;
 _i pushBack "rhsusf_assault_eagleaiii_ucp";
 _u pushBack 0;
 _p pushBack 200;
-
 
 _i pushBack "B_rhsusf_B_BACKPACK";
 _u pushBack 4;
@@ -684,7 +688,7 @@ _p pushBack 500;*/
 
 
 //Helmets
-/*_i pushBack "rhs_Booniehat_m81";
+_i pushBack "rhs_Booniehat_m81";
 _u pushBack 0;
 _p pushBack 25;
 
@@ -718,18 +722,18 @@ _p pushBack 25;
 
 _i pushBack "rhsusf_patrolcap_ucp";
 _u pushBack 0;
-_p pushBack 25;*/
+_p pushBack 25;
 
-/*_i pushBack "rhs_8point_marpatd";
+_i pushBack "rhs_8point_marpatd";
 _u pushBack 0;
 _p pushBack 100;
 
 _i pushBack "rhs_8point_marpatwd";
 _u pushBack 0;
 _p pushBack 100;
-*/
 
-/*_i pushBack "rhsusf_ach_bare"; //no faggotry
+
+_i pushBack "rhsusf_ach_bare"; //no faggotry
 _u pushBack 0;
 _p pushBack 150;
 
@@ -1023,7 +1027,7 @@ _p pushBack 100;
 
 _i pushBack "rhsusf_mich_bare_tan_headset";
 _u pushBack 1;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_mich_helmet_marpatd";
 _u pushBack 0;
@@ -1033,13 +1037,13 @@ _i pushBack "rhsusf_mich_helmet_marpatd_alt";
 _u pushBack 1;
 _p pushBack 100;
 
-/*_i pushBack "rhsusf_mich_helmet_marpatd_alt_headset";
+_i pushBack "rhsusf_mich_helmet_marpatd_alt_headset";
 _u pushBack 1;
 _p pushBack 100;
 
 _i pushBack "rhsusf_mich_helmet_marpatd_headset";
 _u pushBack 1;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_mich_helmet_marpatd_norotos";
 _u pushBack 1;
@@ -1049,17 +1053,17 @@ _i pushBack "rhsusf_mich_helmet_marpatd_norotos_arc";
 _u pushBack 1;
 _p pushBack 100;
 
-/*_i pushBack "rhsusf_mich_helmet_marpatd_norotos_arc_headset";
+_i pushBack "rhsusf_mich_helmet_marpatd_norotos_arc_headset";
 _u pushBack 1;
-_p pushBack 100;*/
+_p pushBack 100;
 
-/*_i pushBack "rhsusf_hgu56p_mask";
+_i pushBack "rhsusf_hgu56p_mask";
 _u pushBack 0;
 _p pushBack 150;
 
 _i pushBack "rhsusf_mich_helmet_marpatd_norotos_headset";
 _u pushBack 1;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_cvc_helmet";
 _u pushBack 0;
@@ -1085,14 +1089,14 @@ _i pushBack "rhsusf_mich_helmet_marpatwd_alt";
 _u pushBack 1;
 _p pushBack 100;
 
-/*_i pushBack "rhsusf_mich_helmet_marpatwd_alt_headset";
+_i pushBack "rhsusf_mich_helmet_marpatwd_alt_headset";
 _u pushBack 1;
 _p pushBack 100;
 
 _i pushBack "rhsusf_mich_helmet_marpatwd_headset";
 _u pushBack 1;
 _p pushBack 100;
-*/
+
 _i pushBack "rhsusf_mich_helmet_marpatwd_norotos";
 _u pushBack 1;
 _p pushBack 100;
@@ -1101,13 +1105,13 @@ _i pushBack "rhsusf_mich_helmet_marpatwd_norotos_arc";
 _u pushBack 1;
 _p pushBack 100;
 
-/*_i pushBack "rhsusf_mich_helmet_marpatwd_norotos_arc_headset";
+_i pushBack "rhsusf_mich_helmet_marpatwd_norotos_arc_headset";
 _u pushBack 1;
 _p pushBack 100;
 
 _i pushBack "rhsusf_mich_helmet_marpatwd_norotos_headset";
 _u pushBack 1;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_protech_helmet";
 _u pushBack 0;
@@ -1129,9 +1133,9 @@ _p pushBack 100;
 //Facemask
 
 //Gun Accessories
-/*_i pushBack "rhsusf_acc_anpas13gv1";
+_i pushBack "rhsusf_acc_anpas13gv1";
 _u pushBack 4;
-_p pushBack 900;*/
+_p pushBack 900;
 
 _i pushBack "rhsusf_acc_anpeq15";
 _u pushBack 1;
@@ -1209,15 +1213,15 @@ _i pushBack "rhsusf_acc_anpeq15side_bk";
 _u pushBack 0;
 _p pushBack 100;
 
-/*_i pushBack "rhsusf_acc_anpvs27";
+_i pushBack "rhsusf_acc_anpvs27";
 _u pushBack 2;
-_p pushBack 250;*/
+_p pushBack 250;
 
 _i pushBack "rhsusf_acc_compm4";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_ELCAN";
+_i pushBack "rhsusf_acc_ELCAN";
 _u pushBack 3;
 _p pushBack 350;
 
@@ -1231,7 +1235,7 @@ _p pushBack 100;
 
 _i pushBack "rhsusf_acc_ELCAN_pip";
 _u pushBack 0;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_acc_EOTECH";
 _u pushBack 1;
@@ -1249,7 +1253,7 @@ _i pushBack "rhsusf_acc_eotech_xps3";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_grip1";
+_i pushBack "rhsusf_acc_grip1";
 _u pushBack 1;
 _p pushBack 100;
 
@@ -1271,7 +1275,7 @@ _p pushBack 100;
 
 _i pushBack "rhsusf_acc_grip4";
 _u pushBack 0;
-_p pushBack 100;*/
+_p pushBack 100;
 
 _i pushBack "rhsusf_acc_harris_bipod";
 _u pushBack 1;
@@ -1289,7 +1293,7 @@ _i pushBack "rhsusf_acc_ACOG";
 _u pushBack 2;
 _p pushBack 350;
 
-/*_i pushBack "rhsusf_acc_ACOG2";
+_i pushBack "rhsusf_acc_ACOG2";
 _u pushBack 1;
 _p pushBack 200;
 
@@ -1319,7 +1323,7 @@ _p pushBack 200;
 
 _i pushBack "rhsusf_acc_ACOG3_USMC_pip";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_ACOG_anpvs27";
 _u pushBack 3;
@@ -1373,45 +1377,45 @@ _i pushBack "rhsusf_acc_ACOG_wd_pip";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_M2A1";
+_i pushBack "rhsusf_acc_M2A1";
 _u pushBack 1;
 _p pushBack 200;
-*/
-/*_i pushBack "rhsusf_acc_nt4_black";
+
+_i pushBack "rhsusf_acc_nt4_black";
 _u pushBack 2;
 _p pushBack 400;
 
 _i pushBack "rhsusf_acc_nt4_tan";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_omega9k";
 _u pushBack 1;
 _p pushBack 250;
 
-/*_i pushBack "rhsusf_acc_rotex_mp7";
+_i pushBack "rhsusf_acc_rotex_mp7";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_premier";
 _u pushBack 3;
 _p pushBack 400;
 
-/*_i pushBack "rhsusf_acc_premier_anpvs27";
+_i pushBack "rhsusf_acc_premier_anpvs27";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_premier_low";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_SF3P556";
+_i pushBack "rhsusf_acc_SF3P556";
 _u pushBack 1;
 _p pushBack 50;
 
 _i pushBack "rhsusf_acc_SFMB556";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_SpecterDR";
 _u pushBack 1;
@@ -1433,17 +1437,17 @@ _i pushBack "rhsusf_acc_SpecterDR_pvs27";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_SR25S";
+_i pushBack "rhsusf_acc_SR25S";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 _i pushBack "rhsusf_acc_wmx";
 _u pushBack 1;
 _p pushBack 200;
 
-/*_i pushBack "rhsusf_acc_M952V";
+_i pushBack "rhsusf_acc_M952V";
 _u pushBack 1;
-_p pushBack 200;*/
+_p pushBack 200;
 
 
 _i pushBack "rhsusf_acc_M8541";
@@ -1458,24 +1462,17 @@ _i pushBack "rhsusf_acc_M8541_low_d";
 _u pushBack 2;
 _p pushBack 300;
 
-_i pushBack "rhsusf_acc_M8541_low_wd";
+_i pushBack "rhsusf_acc_M8541_low_wd"; //missing several deleted entries below this
 _u pushBack 2;
 _p pushBack 300;
-
-/*_i pushBack "rhsusf_acc_LEUPOLDMK4_2";*/ //missing 2x entries below this by mistake
-
-/*_i pushBack "rhsusf_acc_LEUPOLDMK4";
-_u pushBack 3;
-_p pushBack 400;*/
 
 _i pushBack "rhsusf_acc_M2010S";
 _u pushBack 2;
 _p pushBack 300;
 
-
-/*_i pushBack "rhsusf_acc_anpas13gv1";
+_i pushBack "rhsusf_acc_anpas13gv1";
 _u pushBack 3;
-_p pushBack 500;*/
+_p pushBack 500;
 
 
 //Equipment

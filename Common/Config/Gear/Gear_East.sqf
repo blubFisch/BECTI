@@ -519,7 +519,7 @@ _u pushBack 0;
 _p pushBack 200; */
 
 
-_i pushBack "V_Chestrig_khk";
+/*_i pushBack "V_Chestrig_khk";
 _u pushBack 0;
 _p pushBack 300;
 
@@ -530,7 +530,7 @@ _p pushBack 900;
 _i pushBack "V_TacVest_brn";
 _u pushBack 1;
 _p pushBack 600;
-
+*/
 /*_i pushBack "V_HarnessO_brn";
 _u pushBack 1;
 _p pushBack 450;
@@ -561,57 +561,109 @@ _p pushBack 400;*/
 
 
 //--- Backpacks
-_i pushBack "B_AssaultPack_khk";
+_i pushBack "B_AssaultPack_blk";
 _u pushBack 0;
-_p pushBack 200;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_cbr";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_dgtl";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_rgr";
+_u pushBack 0;
+_p pushBack 300;
 
 _i pushBack "B_AssaultPack_ocamo";
 _u pushBack 0;
-_p pushBack 200;
+_p pushBack 300;
 
-/*_i pushBack "B_TacticalPack_ocamo";
-_u pushBack 1;
-_p pushBack 200;*/
+_i pushBack "B_AssaultPack_khk";
+_u pushBack 0;
+_p pushBack 300;
 
-_i pushBack "B_FieldPack_ocamo";
+_i pushBack "B_AssaultPack_mcamo";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_sgg";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_tna_F";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_AssaultPack_Kerry";
+_u pushBack 0;
+_p pushBack 300;
+
+_i pushBack "B_TacticalPack_blk";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_rgr";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_ocamo";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_mcamo";
+_u pushBack 2;
+_p pushBack 600;
+
+_i pushBack "B_TacticalPack_oli";
+_u pushBack 2;
+_p pushBack 600;
+
+/*_i pushBack "B_FieldPack_ocamo";
 _u pushBack 2;
 _p pushBack 400;
 
 _i pushBack "B_FieldPack_oucamo";
 _u pushBack 2;
-_p pushBack 400;
+_p pushBack 400;*/
 
 /*_i pushBack "B_Kitbag_cbr";
 _u pushBack 1;
 _p pushBack 500;*/
 
 _i pushBack "B_Carryall_ocamo";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
+
+_i pushBack "B_Carryall_ghex_F";
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_mcamo";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_cbr";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_khk";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_oli";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Carryall_oucamo";
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 900;
 
 _i pushBack "B_Parachute";
 _u pushBack 1;
-_p pushBack 5;
+_p pushBack 100;
 
 _i pushBack "O_UAV_01_backpack_F";
 _u pushBack 3;

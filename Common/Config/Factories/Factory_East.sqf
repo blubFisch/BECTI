@@ -10,7 +10,7 @@ if (CTI_FACTION_EAST == 0) then {
 			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
 			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_Recon_TL_F"];
 		};
 		case 1: { //Apex
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
@@ -19,7 +19,7 @@ if (CTI_FACTION_EAST == 0) then {
 			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
 			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_Recon_TL_F"];
 		};
 		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
@@ -553,7 +553,7 @@ _u pushBack 'O_Recon_LAT_F';
 _u pushBack 'O_Recon_TL_F';
 _u pushBack 'O_Sniper_F';
 _u pushBack 'O_ghillie_tna_F';
-_u pushBack 'O_Spotter_F';
+/*_u pushBack 'O_Spotter_F';*/
 };
 if (CTI_FACTION_EAST == 1) then {
 	//CSAT Tropic Vanilla
@@ -700,9 +700,10 @@ if (CTI_RHS_ADDON > 0) then {
 	_u pushBack 'rhs_msv_emr_at';
 	_u pushBack 'rhs_msv_emr_combatcrew';
 	_u pushBack 'rhs_msv_emr_LAT';
+	_u pushBack 'rhs_msv_emr_RShG2';
 	_u pushBack 'rhs_msv_emr_at';
 	_u pushBack 'rhs_msv_emr_engineer';
-	_u pushBack 'rhs_msv_emr_engineer';
+/*	_u pushBack 'rhs_msv_emr_engineer';*/
 	_u pushBack 'rhs_msv_emr_grenadier';
 	_u pushBack 'rhs_msv_emr_medic';
 	_u pushBack 'rhs_msv_emr_arifleman';
@@ -1677,6 +1678,24 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'AAF_D_MRAP_03_F';
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+	//Universal RHS
+	_u pushBack 'rhs_msv_emr_rifleman';
+	_u pushBack 'rhs_msv_emr_combatcrew';
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter OFPS
 	};
 };
 

@@ -676,7 +676,7 @@ _u pushBack 'rhsusf_army_ocp_aa';
 _u pushBack 'rhsusf_army_ocp_autorifleman';
 _u pushBack 'rhsusf_army_ocp_riflemanat';
 _u pushBack 'rhsusf_army_ocp_combatcrewman';
-_u pushBack 'rhsusf_army_ocp_riflemanat';
+/*_u pushBack 'rhsusf_army_ocp_riflemanat';*/
 /*_u pushBack 'rhsusf_usmc_marpat_d_javelin';*/
 _u pushBack 'rhsusf_army_ocp_javelin';
 _u pushBack 'rhsusf_army_ocp_engineer';
@@ -1722,6 +1722,24 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';
+	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+	//Universal RHS
+	_u pushBack 'rhsusf_army_ocp_rifleman_m16';
+	_u pushBack 'rhsusf_army_ocp_combatcrewman';
+
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 2) then {
+		//NATO Winter OFPS
 	};
 };
 

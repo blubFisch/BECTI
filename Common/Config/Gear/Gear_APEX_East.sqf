@@ -11,14 +11,14 @@ _p = [];
 
 //Backpacks
 //(Default Pack- medium)
-_i pushBack "B_FieldPack_ghex_F";
+/*_i pushBack "B_FieldPack_ghex_F";
 _u pushBack 1;
-_p pushBack 400;
+_p pushBack 400;*/
 
 //(Carryall- large)
-_i pushBack "B_Carryall_ghex_F";
+/*_i pushBack "B_Carryall_ghex_F";
 _u pushBack 2;
-_p pushBack 800;
+_p pushBack 800;*/
 
 //(SF Harness- very large)
 /*_i pushBack "B_ViperHarness_ghex_F";
@@ -73,14 +73,14 @@ _u pushBack 0;
 _p pushBack 300;
 */
 //(Defender)
-_i pushBack "H_HelmetLeaderO_ghex_F";
+/*_i pushBack "H_HelmetLeaderO_ghex_F";
 _u pushBack 2;
 _p pushBack 500;
 
 //(Protector)
 _i pushBack "H_HelmetO_ghex_F";
 _u pushBack 1;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(Officer)
 /*_i pushBack "H_MilCap_ghex_F";
@@ -134,7 +134,7 @@ _p pushBack 1000;
 
 //Uniforms:
 //CSAT
-_i pushBack "U_O_T_Soldier_F";
+/*_i pushBack "U_O_T_Soldier_F";
 _u pushBack 0;
 _p pushBack 300;
 
@@ -151,7 +151,7 @@ _p pushBack 300;
 //(Officer)
 _i pushBack "U_O_T_Officer_F";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(Ninja)
 /*_i pushBack "U_O_V_Soldier_Viper_F";

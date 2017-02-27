@@ -23,9 +23,9 @@ _p pushBack 800;*/
 
 //Vests
 //(Light Plate- small)
-_i pushBack "V_PlateCarrier1_tna_F";
+/*_i pushBack "V_PlateCarrier1_tna_F";
 _u pushBack 0;
-_p pushBack 600;
+_p pushBack 600;*/
 
 /*_i pushBack "V_PlateCarrier2_tna_F";
 _u pushBack 1;
@@ -50,7 +50,7 @@ _p pushBack 300; */
 
 //(Kevlar)
 
-_i pushBack "H_HelmetB_tna_F";
+/*_i pushBack "H_HelmetB_tna_F";
 _u pushBack 0;
 _p pushBack 300; 
 
@@ -66,7 +66,7 @@ _p pushBack 300;
 
 _i pushBack "H_HelmetB_Light_tna_F";
 _u pushBack 1;
-_p pushBack 300; 
+_p pushBack 300; */
 
 
 //(Officer)
@@ -133,16 +133,16 @@ _p pushBack 1000;
 
 
 //Uniforms
-_i pushBack "U_B_T_Soldier_AR_F";
+/*_i pushBack "U_B_T_Soldier_AR_F";
 _u pushBack 0;
 _p pushBack 300;
 
 _i pushBack "U_B_T_Soldier_F";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(CRTG)
-_i pushBack "U_B_CTRG_Soldier_F";
+/*_i pushBack "U_B_CTRG_Soldier_F";
 _u pushBack 3;
 _p pushBack 800;
 
@@ -164,17 +164,17 @@ _p pushBack 300;
 
 _i pushBack "U_B_CTRG_Soldier_urb_3_F";
 _u pushBack 2;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(Full Ghillie)
-_i pushBack "U_B_T_FullGhillie_tna_F";
+/*_i pushBack "U_B_T_FullGhillie_tna_F";
 _u pushBack 3;
-_p pushBack 600;
+_p pushBack 600;*/
 
 //(Half Ghillie)
-_i pushBack "U_B_T_Sniper_F";
+/*_i pushBack "U_B_T_Sniper_F";
 _u pushBack 2;
-_p pushBack 300;
+_p pushBack 300;*/
 
 //(Navy)
 /*_i pushBack "U_B_GEN_Commander_F";

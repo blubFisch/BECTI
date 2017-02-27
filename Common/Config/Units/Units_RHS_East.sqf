@@ -15,7 +15,7 @@ _d = []; //--- Extra Distance (From Factory)
 
 _c pushBack 'rhs_msv_emr_rifleman';
 _p pushBack '';
-_n pushBack "0-Rifleman (AK74M)"; 
+_n pushBack "0- Rifleman (AK74M)"; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 0;
@@ -25,7 +25,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_aa';
 _p pushBack '';
-_n pushBack "3-AA Specialist (9K38 Igla)"; 
+_n pushBack "3- AA Specialist (9K38 Igla)"; 
 _o pushBack 4000;
 _t pushBack 5;
 _u pushBack 3;
@@ -35,7 +35,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_arifleman';
 _p pushBack '';
-_n pushBack "2-Machine Gunner (PKP)"; 
+_n pushBack "2- Machine Gunner (PKP)"; 
 _o pushBack 1200;
 _t pushBack 5;
 _u pushBack 2;
@@ -45,7 +45,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_at';
 _p pushBack '';
-_n pushBack "2-AT Specialist (RPG-7V2)"; 
+_n pushBack "2- AT Specialist (RPG-7V2)"; 
 _o pushBack 2000;
 _t pushBack 5;
 _u pushBack 2;
@@ -55,7 +55,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_combatcrew';
 _p pushBack '';
-_n pushBack "0-Crew (Combat)"; 
+_n pushBack "0- Crew (Combat)"; 
 _o pushBack 200;
 _t pushBack 5;
 _u pushBack 0;
@@ -65,7 +65,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_LAT';
 _p pushBack '';
-_n pushBack "0-Rifleman (RPG-26)"; 
+_n pushBack "0- Rifleman (RPG-26)"; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 0;
@@ -73,9 +73,19 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'rhs_msv_emr_RShG2';
+_p pushBack '';
+_n pushBack "0- Rifleman (RShG-2)"; 
+_o pushBack 1250;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'rhs_msv_emr_engineer';
 _p pushBack '';
-_n pushBack "2-Engineer (Toolkit)"; 
+_n pushBack "2- Engineer (Toolkit)"; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 2;
@@ -85,7 +95,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_grenadier';
 _p pushBack '';
-_n pushBack "1-Grenadier"; 
+_n pushBack "1- Grenadier"; 
 _o pushBack 800;
 _t pushBack 5;
 _u pushBack 1;
@@ -95,7 +105,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_medic';
 _p pushBack '';
-_n pushBack "1-Medic"; 
+_n pushBack "1- Medic"; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 1;
@@ -105,7 +115,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_pilot';
 _p pushBack '';
-_n pushBack "2-Pilot"; 
+_n pushBack "2- Pilot"; 
 _o pushBack 500;
 _t pushBack 5;
 _u pushBack 2;
@@ -115,7 +125,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_marksman';
 _p pushBack '';
-_n pushBack "1-Marksman (SVDM)"; 
+_n pushBack "1- Marksman (SVDM)"; 
 _o pushBack 1250;
 _t pushBack 5;
 _u pushBack 1;
@@ -125,7 +135,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_junior_sergeant';
 _p pushBack '';
-_n pushBack "1-Junior Sergeant"; 
+_n pushBack "1- Junior Sergeant"; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 1;
@@ -135,7 +145,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_sergeant';
 _p pushBack '';
-_n pushBack "2-Sergeant"; 
+_n pushBack "2- Sergeant"; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 2;
@@ -145,7 +155,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_officer';
 _p pushBack '';
-_n pushBack "3-Officer"; 
+_n pushBack "3- Officer"; 
 _o pushBack 500;
 _t pushBack 5;
 _u pushBack 3;
@@ -326,7 +336,6 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
-
 
 /*_c pushBack 'rhs_btr80_msv';
 _p pushBack '';

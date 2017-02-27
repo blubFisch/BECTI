@@ -14,7 +14,7 @@ _d = []; //--- Extra Distance (From Factory)
 //--- Infantry USAF
 _c pushBack 'rhsusf_army_ocp_rifleman_m16';
 _p pushBack '';
-_n pushBack "0-Rifleman (M16)"; 
+_n pushBack "0- Rifleman (M16)"; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 0;
@@ -24,7 +24,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_rifleman_m4';
 _p pushBack '';
-_n pushBack "1-Rifleman (M4)"; 
+_n pushBack "1- Rifleman (M4)"; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 1;
@@ -34,7 +34,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_aa';
 _p pushBack '';
-_n pushBack "3-AA Rifleman (FIM-92F)"; 
+_n pushBack "3- AA Rifleman (FIM-92F)"; 
 _o pushBack 4000;
 _t pushBack 5;
 _u pushBack 3;
@@ -44,7 +44,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_autorifleman';
 _p pushBack '';
-_n pushBack "1-Autorifleman (M249)"; 
+_n pushBack "1- Autorifleman (M249)"; 
 _o pushBack 800;
 _t pushBack 5;
 _u pushBack 1;
@@ -54,8 +54,8 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_riflemanat';
 _p pushBack '';
-_n pushBack "2-AT Rifleman (M136)"; 
-_o pushBack 2000;
+_n pushBack "2- AT Rifleman (M136)"; 
+_o pushBack 1250;
 _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -64,7 +64,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_combatcrewman';
 _p pushBack '';
-_n pushBack "0-Crewman (Combat)"; 
+_n pushBack "0- Crewman (Combat)"; 
 _o pushBack 200;
 _t pushBack 5;
 _u pushBack 0;
@@ -74,7 +74,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_javelin';
 _p pushBack '';
-_n pushBack "3-AT Specialist (Javelin)"; 
+_n pushBack "3- AT Specialist (Javelin)"; 
 _o pushBack 8000;
 _t pushBack 5;
 _u pushBack 3;
@@ -84,7 +84,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_engineer';
 _p pushBack '';
-_n pushBack "2-Engineer (Toolkit)"; 
+_n pushBack "2- Engineer (Toolkit)"; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 2;
@@ -94,7 +94,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_explosives';
 _p pushBack '';
-_n pushBack "3-Explosives Expert (M112 Charge"; 
+_n pushBack "3- Explosives Expert (M112 Charge"; 
 _o pushBack 1000;
 _t pushBack 5;
 _u pushBack 3;
@@ -104,7 +104,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_grenadier';
 _p pushBack '';
-_n pushBack "1-Grenadier"; 
+_n pushBack "1- Grenadier"; 
 _o pushBack 800;
 _t pushBack 5;
 _u pushBack 1;
@@ -114,7 +114,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_medic';
 _p pushBack '';
-_n pushBack "1-Combat Medic"; 
+_n pushBack "1- Combat Medic"; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 1;
@@ -124,7 +124,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_machinegunner';
 _p pushBack '';
-_n pushBack "2-Machinegunner (M240)"; 
+_n pushBack "2- Machinegunner (M240)"; 
 _o pushBack 1200;
 _t pushBack 5;
 _u pushBack 2;
@@ -134,7 +134,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_helipilot';
 _p pushBack '';
-_n pushBack "2-Helicopter Pilot"; 
+_n pushBack "2- Helicopter Pilot"; 
 _o pushBack 600;
 _t pushBack 5;
 _u pushBack 2;
@@ -144,7 +144,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_marksman';
 _p pushBack '';
-_n pushBack "1-Marksman (M14 EBR-RI"; 
+_n pushBack "1- Marksman (M14 EBR-RI"; 
 _o pushBack 1250;
 _t pushBack 5;
 _u pushBack 1;
@@ -154,7 +154,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_sniper_m24sws';
 _p pushBack '';
-_n pushBack "2-Sniper (M24 SWS)"; 
+_n pushBack "2- Sniper (M24 SWS)"; 
 _o pushBack 2500;
 _t pushBack 5;
 _u pushBack 2;
@@ -164,7 +164,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_sniper_m107';
 _p pushBack '';
-_n pushBack "3-Sniper (M107)"; 
+_n pushBack "3- Sniper (M107)"; 
 _o pushBack 5000;
 _t pushBack 5;
 _u pushBack 3;
@@ -174,7 +174,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_teamleader';
 _p pushBack '';
-_n pushBack "1-Team Leader"; 
+_n pushBack "1- Team Leader"; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 1;
@@ -184,7 +184,7 @@ _d pushBack 0;
 
 _c pushBack 'rhsusf_army_ocp_squadleader';
 _p pushBack '';
-_n pushBack "2-Squad Leader"; 
+_n pushBack "2- Squad Leader"; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 2;
@@ -235,7 +235,7 @@ _d pushBack 10;
 
 _c pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 _p pushBack '';
-_n pushBack 'M1078A1P2-B Woodland';
+_n pushBack 'M1078A1P2-B Truck Woodland';
 _o pushBack 1000;
 _t pushBack 30;
 _u pushBack 1;
@@ -245,7 +245,7 @@ _d pushBack 10;
 
 _c pushBack 'rhsusf_rg33_usmc_d';
 _p pushBack '';
-_n pushBack 'RG-33 Desert';
+_n pushBack 'RG-33 Desert (Unarmed)';
 _o pushBack 1250;
 _t pushBack 30;
 _u pushBack 1;
@@ -255,7 +255,7 @@ _d pushBack 10;
 
 _c pushBack 'rhsusf_rg33_usmc_wd';
 _p pushBack '';
-_n pushBack 'RG-33 Woodland';
+_n pushBack 'RG-33 Woodland (Unarmed)';
 _o pushBack 1250;
 _t pushBack 30;
 _u pushBack 1;
@@ -272,7 +272,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
-
 
 _c pushBack 'rhsusf_m1025_w_m2';
 _p pushBack '';
@@ -1016,7 +1015,7 @@ _d pushBack 10;*/
 
 _c pushBack 'rhsusf_M1117_W';
 _p pushBack '';
-_n pushBack 'M1117 ASV Woodland';
+_n pushBack 'M1117 ASV (GMG/HMG) Woodland';
 _o pushBack 2750;
 _t pushBack 30;
 _u pushBack 3;
@@ -1037,7 +1036,7 @@ _d pushBack 10;
 */
 _c pushBack 'rhsusf_M1117_D';
 _p pushBack '';
-_n pushBack 'M1117 ASV Desert';
+_n pushBack 'M1117 ASV (GMG/HMG) Desert';
 _o pushBack 2750;
 _t pushBack 30;
 _u pushBack 3;
@@ -1208,6 +1207,27 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 */
+
+_c pushBack 'rhsusf_m1a1aimd_usarmy';
+_p pushBack '';
+_n pushBack 'M1A1SA Desert';
+_o pushBack 12350;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'rhsusf_m1a1aimwd_usarmy';
+_p pushBack '';
+_n pushBack 'M1A1SA Woodland';
+_o pushBack 12350;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
 _c pushBack 'rhsusf_m1a1aim_tuski_d';
 _p pushBack '';
 _n pushBack 'M1A1SA (TUSK I) Desert';
@@ -1474,7 +1494,7 @@ _d pushBack 10;
 */
 _c pushBack 'rhsusf_M977A4_AMMO_usarmy_wd';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'M977A4 Ammo Desert';
 _o pushBack 5000;
 _t pushBack 30;
 _u pushBack 0;
@@ -1562,7 +1582,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
 
 _c pushBack 'RHS_UH60M_d';
 _p pushBack '';
