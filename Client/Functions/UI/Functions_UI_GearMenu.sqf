@@ -327,7 +327,8 @@ CTI_UI_Gear_DisplayShoppingItems = {
 		_upgrade_gear = -1;
 	};
 	
-	if (CTI_DEBUG) then {_upgrade_gear=10};
+	// --- Dev mode full ugear upgrade
+	if (CTI_DEV_MODE > 0) then { _upgrade_gear=10};
 	
 	if (_tab != CTI_GEAR_TAB_TEMPLATES) then { //--- Generic items
 		{

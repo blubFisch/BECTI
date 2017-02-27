@@ -108,9 +108,6 @@ if (!isNil '_var') then {
 				
 				if (count _award_groups > 1) then { _bounty = round(_bounty / (count _award_groups))};
 				
-				//--- AI Skill Reward
-				//if (!CTI_IsHeadless && !isNil '_killer' && isPlayer leader _group_killer) then {_killer call FNC_RewardPlayerAISkill;};
-
 				//--- Award
 				{
 					if (_x call CTI_CO_FNC_IsGroupPlayable) then {

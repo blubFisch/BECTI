@@ -366,7 +366,7 @@ CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_gree
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
 //--- Towns: Economy
-CTI_TOWNS_INCOME_RATIO = 10.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio)
+CTI_TOWNS_INCOME_RATIO = 8.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio)
 CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an unoccupied town bring to the side.
 
 //--- Towns: Markers
@@ -375,16 +375,16 @@ CTI_TOWNS_MARKERS_PEACE_COLOR = "ColorWhite"; //--- The color used for peace-mod
 CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorYellow"; //--- The color used for when enemy detected in towns
 
 //--- Towns: Patrol
-CTI_TOWNS_PATROL_CAMPS_AI_DEFENSE_MAX = 3; //--- Determine how many Town AI groups may try to capture back one hostile camp
+CTI_TOWNS_PATROL_CAMPS_AI_DEFENSE_MAX = 2; //--- Determine how many Town AI groups may try to capture back one hostile camp
 CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
-CTI_TOWNS_PATROL_RANGE = 200; //--- Patrol range in a town "Max range of waypoints"
+CTI_TOWNS_PATROL_RANGE = 400; //--- Patrol range in a town "Max range of waypoints"
 
 //--- Towns: Occupation
 
 //CTI_TOWNS_OCCUPATION_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
-CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 240; //--- Determine how long a town may remain active when triggered
+CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 120; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 42;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
@@ -409,11 +409,11 @@ CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range fo
 
 //--- Towns: Spawn System
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
-CTI_TOWNS_SPAWN_SV_MIN = 50; //--- Determine the min SV used for a town as a reference for AI units spawning (min max scaling)
+CTI_TOWNS_SPAWN_SV_MIN = 20; //--- Determine the min SV used for a town as a reference for AI units spawning (min max scaling)
 
 //--- Towns: Supply
 CTI_TOWNS_SUPPLY_MODE = 1; //--- Supply Mode: (0: Default, 1: Timed)
-CTI_TOWNS_SUPPLY_TIME_INTERVAL = 100; //--- Determine the interval between each town SV increment with time
+CTI_TOWNS_SUPPLY_TIME_INTERVAL = 85; //--- Determine the interval between each town SV increment with time
 CTI_TOWNS_SUPPLY_TIME_INCREASE = 1; //--- Determine the town SV increment when the interval's reached (Potential upgrade?)
 
 //--- Towns: Territorial
@@ -492,6 +492,7 @@ CTI_BASE_CONSTRUCTION_RANGE = 250; //--- Determine how far the commander may be 
 CTI_BASE_CONSTRUCTION_RATIO_INIT = 1; //--- The initial construction ratio
 CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multiplied by this coefficient to make repairs less effective at each factory's destruction.
 CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (structure cost * x)
+CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
@@ -520,18 +521,24 @@ CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be fro
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 
-//--- Base: Damage modifiers
-CTI_BASE_DAMAGE_MULTIPLIER_BULLET = 1; //--- damage modifier for base structures - BulletCore, ShotgunCore
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 5; //--- damage modifier for base structures - ShellBase, ShellCore
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1; //--- damage modifier for base structures - RocketCore, MissileCore
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1; //--- damage modifier for base structures - BombCore, LaserBombCore
-CTI_BASE_DAMAGE_MULTIPLIER_ART = 0.5; //--- damage modifier for base structures - ArtilleryRocketCore
+//--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
+//--- Bigger the numbers more damage that Ammo does!
+//--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.01;//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.025;//--- Satchels
+CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;//--- HE Cannons
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;//--- Missiles
+//--- Explosions
+CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
+CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.1;//--- Rockets
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.5;//--- Bombs
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
-CTI_BASE_GEAR_LARGE_FOB_RANGE = 30; //--- Determine how far a player has to be from a FOB to access the Gear Menu
-CTI_BASE_GEAR_RANGE = 300; //--- Determine how far a player has to be from a Barracks to access the Gear Menu
-CTI_BASE_PURCHASE_UNITS_RANGE = 150; //--- Determine how far a player has to be from a factory to access the Factory Menu without CC
+CTI_BASE_GEAR_LARGE_FOB_RANGE = 20; //--- Determine how far a player has to be from a FOB to access the Gear Menu
+CTI_BASE_GEAR_RANGE = 250; //--- Determine how far a player has to be from a Barracks to access the Gear Menu
+CTI_BASE_PURCHASE_UNITS_RANGE = 250; //--- Determine how far a player has to be from a factory to access the Factory Menu without CC
 CTI_BASE_PURCHASE_UNITS_RANGE_CC = 15000; //--- Determine how far a player has to be from a factory to access the Factory Menu with CC
 
 //--- Base: Workers
@@ -580,9 +587,10 @@ with missionNamespace do {
 //--- Vehicles: Misc
 CTI_VEHICLES_EMPTY_SCAN_PERIOD = 15; //--- Scan for a crew member in a vehicle each x seconds
 CTI_VEHICLES_HANDLER_EMPTY = 0; //--- Determine how an empty vehicle is handled by the engine (0: Typical delay, 1: delay AND the unit cannot move/fire)
-CTI_VEHICLES_HOOKERS = ["B_Heli_Transport_01_F", "O_Heli_Light_02_unarmed_F", "B_Boat_Armed_01_minigun_F", "O_Boat_Armed_01_hmg_F"]; //--- Vehicle which may lift things (not actual hookers btw)
-CTI_VEHICLES_HOOKERS_EX = ["B_SDV_01_F", "O_SDV_01_F"]; //--- Vehicle which may lift things including wrecks
 CTI_VEHICLES_PROTECT_TIRES = 1; //--- Determine whether the damages applied to tires should be reduced or not
+
+//--- Advanced Air Lifting settings
+ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE = 2700;
 
 //--- Vehicles: Repair Trucks
 CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 2; //--- Repair trucks build speed multiplier (<coefficient> / (<structure build time> / 100)), higher is faster.
@@ -632,7 +640,7 @@ CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit
 CTI_BOUNTY_COEF_PVP = 1.2; //--- Bounty coefficient multiplicator based on the killed unit score
 
 CTI_COIN_AREA_DEFAULT = [30, 10];
-CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
+CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 60];
 CTI_COIN_AREA_HQ_MOBILIZED = [20, 10];
 CTI_COIN_AREA_REPAIR = [45, 10];
 CTI_COIN_AREA_DEFENSE = [30, 6];
@@ -723,7 +731,7 @@ CTI_HALO_COST = 1000;
 if (isNil 'CTI_DEV_MODE') then {CTI_DEV_MODE = 1};
 CTI_VOTE_TIME = 60; //--- Commander Vote time
 if (CTI_DEV_MODE > 0) then {
-	CTI_VOTE_TIME = 15;
+	CTI_VOTE_TIME = 8;
 };
 
 //--- SHK Specific
@@ -737,6 +745,10 @@ CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
 with missionNamespace do {
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
 	if (isNil 'CTI_FACTION_EAST') then {CTI_FACTION_EAST = 0};
+	
+	if (isNil 'CTI_FACTION_DEFAULT_VEHICLES') then {CTI_FACTION_DEFAULT_VEHICLES = 0};
+	if (isNil 'CTI_FACTION_DEFAULT_GEAR') then {CTI_FACTION_DEFAULT_GEAR = 0};
+	if (isNil 'CTI_FACTION_DEFAULT_TROOPS') then {CTI_FACTION_DEFAULT_TROOPS = 0};
 
 	if (isNil 'CTI_ARTILLERY_SETUP') then {CTI_ARTILLERY_SETUP = 0}; //--- Artillery status (-2: Disabled, -1: Artillery Computer, 0: Short, 1: Medium, 2: Long, 3: Far)
 
