@@ -1569,6 +1569,11 @@ if (CTI_OFPS_ADDON > 0) then {
 		
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];
 _u = [];
@@ -1678,6 +1683,11 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
@@ -1778,6 +1788,11 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';
 	};
 };
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+
+};
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
 _u = [];
@@ -1860,6 +1875,11 @@ if (CTI_OFPS_ADDON > 0) then {
 		//CSAT Winter OFPS
 		
 	};
+};
+//--- RHS UNITS
+if (CTI_RHS_ADDON > 0) then { 
+//Universal RHS
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT_NAVAL], _u];
