@@ -1687,10 +1687,6 @@ if (CTI_OFPS_ADDON > 0) then {
 };
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
-<<<<<<< HEAD
-//Universal RHS
-
-=======
 	//Universal RHS
 	_u pushBack 'rhs_msv_emr_rifleman';
 	_u pushBack 'rhs_msv_emr_combatcrew';
@@ -1706,7 +1702,6 @@ if (CTI_RHS_ADDON > 0) then {
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
 	};
->>>>>>> 3ff90e57226df1a7b4d0c34d26bc4e4123f1ed56
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];

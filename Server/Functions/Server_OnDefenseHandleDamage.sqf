@@ -59,20 +59,37 @@ switch (_upgrade_basehealth) do {
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Adjust damage for ammo types
-/*if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
+//--- Tanks
+/*if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
 };
-if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;//roughly 10 aps shells
+//--- Arty (Has to be Spesific as tanks use same basecore)
+if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo isKindOf "R_230mm_fly") || (_ammo isKindOf "Mo_cluster_AP") || (_ammo isKindof "ArtilleryRocketCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
 };
-if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
+//--- Satchels
+if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
+};
+//--- HE Cannons
+if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
+};
+//--- Missiles
+if ((_ammo isKindOf "MissileCore") || (_ammo isKindOf "MissileBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };
-if (_ammo isKindOf "BombCore" || _ammo isKindOf "LaserBombCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
+//--- Explosions
+if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (_ammo isKindOf "HelicopterExploSmall") || (_ammo isKindOf "HelicopterExploBig")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
 };
-if (_ammo isKindOf "ArtilleryRocketCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ART;
+//--- Rockets
+if (_ammo isKindOf "RocketCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
+};
+//--- Bombs
+if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo isKindOf "MineCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
 };*/
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;
