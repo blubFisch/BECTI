@@ -1235,15 +1235,6 @@ if (CTI_RHS_ADDON > 0) then {
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 
-		_headers pushBack 		"AN/MPQ-53 - AA Radar";
-		_classes pushBack 		"POOK_ANMPQ53_CDF";
-		_prices pushBack 		5000;
-		_placements pushBack 	[180, 15];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 	};	
 
 
