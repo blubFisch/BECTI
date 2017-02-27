@@ -227,16 +227,15 @@ _coinblacklist = [];
 _upgrade = [];
 _specials = [];
 
-//******************************BASE DEFENSE 0******************************
 //Compositions - setup compositions in Common/Config/Compositions/
 	_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		100;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		1;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Mil Wall x5", [["Composition","mil_wall_5",false]]];
@@ -246,27 +245,27 @@ _specials = [];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		1;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Shed Walled", [["Composition","shed_walled",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		2500;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Fort", [["Composition","fort_box",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		1000;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Bunker MG", [["Composition","bunker_mg",true]]];
@@ -291,62 +290,62 @@ _specials = [];
 
 	_headers pushBack 		["Tower MG x2", [["Composition","tower_mg",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		3500;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		1;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Tower GL x2", [["Composition","tower_gl",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		4000;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Tower AT", [["Composition","tower_at",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		4000;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Tower Tall MG x2", [["Composition","tower_tall_mg",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		4000;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Tower Tall GL x2", [["Composition","tower_tall_gl",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		4500;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		["Cargo Tower AA x3", [["Composition","cargo_tower_aa",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
-	_prices pushBack 		150;
+	_prices pushBack 		8000;
 	_placements pushBack 	[0, 5];
 	_categories pushBack 	"Composition";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		0;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 	
 	
@@ -382,6 +381,7 @@ _specials = [];
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];	
 */	
 //end custom objects
+//******************************BASE DEFENSE 0******************************
 	
 	_headers pushBack 		"Bunker (Small)";
 	_classes pushBack 		"Land_BagBunker_Small_F";
