@@ -35,8 +35,8 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_ammo", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages"];
-
+private ["_completion_ratio", "_damage", "_ammo", "_damaged", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_overall_damage","_health"];
+diag_log str _this;
 _damaged = _this select 0;
 _damage = _this select 1;
 _shooter = _this select 2;
@@ -137,11 +137,22 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 			[_damaged, _shooter, _variable, _sideID, _position, _direction, _completion_ratio] spawn CTI_SE_FNC_OnBuildingDestroyed;
 		};
 };
-
-//--- Display a message to the team
-if (time - (_logic getVariable "cti_structures_lasthit") > 30 && _damage >= 0.02 && alive _damaged) then {
-	_logic setVariable ["cti_structures_lasthit", time];
-	["structure-attacked", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+_logic = (_side) call CTI_CO_FNC_GetSideLogic;
+if (CTI_BASE_DISPLAY_HINT == 1) then{
+	_health = (1 - _virtual_damages);
+	_health = (_health*100);
+	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
+	};
 };
+if (time - (_logic getVariable "cti_structures_lasthit") > 15 && _damage >= 0.02 && alive _damaged) then {
+	_logic setVariable ["cti_structures_lasthit", time];
+	["structure-attacked",[_variable, _position]] remoteExec ["CTI_CL_FNC_DisplayMessage", _side];
+	if (CTI_BASE_DISPLAY_HINT == 1) then{
+		["building-attacked",[_variable, _position, _health]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+	};
+};
+
 
 0
