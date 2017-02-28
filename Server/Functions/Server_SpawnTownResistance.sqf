@@ -44,9 +44,9 @@ _value = _town getVariable "cti_town_sv_max";
 //--- Calculate the Group size by scaling the SV and randomizing the input, min max scaling
 _max_squad = CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE;
 _max_squad_random = 4;
-_max_sv = 120;
+_max_sv = CTI_TOWNS_SPAWN_SV_MAX;
 
-//--- If the dynamic mode is enabled, the server FPS are then used to determine the amount of spawning groups
+/*//--- If the dynamic mode is enabled, the server FPS are then used to determine the amount of spawning groups
 if (CTI_TOWNS_RESISTANCE_LEVEL_DYNAMIC > 0) then {
 	_fps = diag_fps;
 	
@@ -64,7 +64,7 @@ if (CTI_TOWNS_RESISTANCE_LEVEL_DYNAMIC > 0) then {
 		_max_squad = ceil(_max_squad * _coef);
 		_max_squad_random = ceil(_max_squad_random * _coef);
 	};
-};
+};*/
 
 _randomGroups = (_value / _max_sv) * _max_squad_random;
 _fixedGroups = (_value / _max_sv) * _max_squad;
