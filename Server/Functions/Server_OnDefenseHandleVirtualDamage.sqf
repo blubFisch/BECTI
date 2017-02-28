@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -130,7 +130,11 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
 		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
-
+_health = (1 - _virtual_damages);
+_health = (_health*100);
+if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
+	["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter]; // displays a hint for player shooting the structure
+};
 //--- Display a message to the team
 if (!alive _damaged) then {
 	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
