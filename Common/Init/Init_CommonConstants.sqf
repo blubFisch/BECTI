@@ -385,6 +385,7 @@ CTI_TOWNS_PATROL_RANGE = 400; //--- Patrol range in a town "Max range of waypoin
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 120; //--- Determine how long a town may remain active when triggered
+CTI_TOWNS_OCCUPATION_LEVEL_DYNAMIC = 0; //--- Determine whether the host FPS should be used to define the amount of units spawning in towns (0: Disabled, 1: Use Server FPS)
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 42;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
@@ -399,6 +400,7 @@ CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range fo
 CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
 CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 240; //--- Determine how long a town may remain active when triggered
+CTI_TOWNS_RESISTANCE_LEVEL_DYNAMIC = 0; //--- Determine whether the host FPS should be used to define the amount of units spawning in towns (0: Disabled, 1: Use Server FPS)
 CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 42; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
