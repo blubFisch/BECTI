@@ -57,7 +57,7 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 		(_value) call CTI_CL_FNC_ChangePlayerFunds; //--- Award some money
 		["camp-capture", [_town, _value]] call CTI_CL_FNC_DisplayMessage;
 	};
-	_camp setVariable ["cti_town_lastcap", time];
+	_camp setVariable ["cti_camp_lastcap", time];
 	
 	
 } else {
