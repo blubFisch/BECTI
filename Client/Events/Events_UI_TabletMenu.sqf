@@ -93,8 +93,7 @@ switch (_action) do {
 	case "onVideoSettingsPressed": {
 		closeDialog 0;
 		CTI_P_LastRootMenu = "CTI_RscTabletOptions";
-		//createDialog "CTI_RscVideoSettingsMenu"; OLD MENU
-		[] call CHVD_fnc_openDialog;
+		createDialog "CTI_RscVideoSettingsMenu";
 	};
 	case "onOnlineHelpPressed": {
 		closeDialog 0;

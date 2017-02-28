@@ -16,12 +16,20 @@ Tweaked: Changed price of Mi-24P Hind from 20000 to 25000
 Tweaked: Changed price of KA-52 from 60000 to 50000
 Fixed: Ruins from base buildings (such as base defence domes) now despawn quicker. 
 Tweaked: Player and AI bodies now despawn immediatly after death
+Tweaked: Ai bodies now despawn after disband
 Fixed: No SAM warning for players without vehicles or in parachute
 Tweaked: SAM engagement minimum alt 200m
 Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 Fixed: Slammer up not purchasable on non-snow maps
 Fixed: Slammer not purchasable on snow maps
 Fixed: Titan AT launcher not accessible in gear 3 for blufor
+Added: indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
+Added: Hint for players if a friendly structure is attacked. displays health after damage
+Added: friendly team notifications for when HQ is mobilized and deployed
+Fixed: No SAM warning for players without vehicles or in parachute
+Tweaked: SAM engagement minimum alt 200m
+Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
+
 
 1.05
 Added: Spawn on vehicle disabled when enemy nearby 50M

@@ -11,6 +11,24 @@ class Params {
 		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
 		default = 2;
 	};
+	class CTI_FACTION_DEFAULT_VEHICLES {
+		title = "FACTION: Starting vehicles and mhq";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_GEAR {
+		title = "FACTION: Starting gear";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_TROOPS {
+		title = "FACTION: Default infantry";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
 		values[] = {1};
@@ -112,6 +130,12 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
+	};
+	class CTI_TOWNS_OCCUPATION_SKILL {
+		title = "TOWNS: Occupation Skill level";
+		values[] = {20,30,40,50,60,70,80,90,100};
+		texts[] = {"20","30","40","50","60","70","80","90","100"};
+		default = 80;
 	};
 	class CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Squad Count";

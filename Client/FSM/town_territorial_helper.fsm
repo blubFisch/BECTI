@@ -12,7 +12,7 @@ link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
 globals[] = {25.000000,1,0,0,0,640,480,1,133,6316128,1,-456.160217,360.531433,242.139771,-456.939575,703,846,1};
-window[] = {0,-1,-1,-1,-1,1122,130,1936,130,1,721};
+window[] = {0,-1,-1,-1,-1,1200,208,2014,208,1,721};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -113,6 +113,8 @@ class FSM
        "						//---only play every 15min					" \n
        "					//	_last_alert = time + 900; " \n
        "				//};" \n
+       "			} else { //--- Standard mode" \n
+       "				_marker setMarkerColorLocal (markerColor format[""cti_town_marker_%1"", _x]);" \n
        "			};" \n
        "			" \n
        "			_marker setMarkerAlphaLocal 0.3;" \n

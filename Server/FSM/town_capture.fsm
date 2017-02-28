@@ -39,7 +39,7 @@ link17[] = {14,16};
 link18[] = {15,7};
 link19[] = {16,15};
 globals[] = {25.000000,1,0,0,0,640,480,1,176,6316128,1,-464.053314,393.860565,496.429810,-834.710449,562,872,1};
-window[] = {0,-1,-1,-32000,-32000,1122,104,1829,104,1,580};
+window[] = {0,-1,-1,-1,-1,1122,104,1829,104,1,580};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -209,6 +209,7 @@ class FSM
        "	} else { //--- Capture" \n
        "		//--- In case of territorial mode, check that the town can be captured!" \n
        "		_capturable = true;" \n
+       "		_capturable_camps = true;" \n
        "		if ((missionNamespace getVariable ""CTI_TOWNS_TERRITORIAL"") > 0) then {" \n
        "			_capturable = [_town, _force] Call CTI_SE_FNC_CanCaptureTerritorialTown;" \n
        "		};" \n
@@ -217,14 +218,14 @@ class FSM
        "			_camps_count = count(_town Call CTI_CO_FNC_GetTownCamps);" \n
        "			_camps_owned = count([_town, _force] Call CTI_CO_FNC_GetTownCampsOnSide);" \n
        "			_camps_hostile = _camps_count - _camps_owned;" \n
-       "			if (_camps_count == _camps_owned ) then {_capturable = true} else {" \n
+       "			if (_camps_count == _camps_owned) then {_capturable_camps = true} else {" \n
        "				{" \n
        "					[""town-capture-blocked"", [_town, _camps_hostile, _side]] remoteExec [""CTI_PVF_CLT_OnMessageReceived"", _x];" \n
        "				} forEach _objects;" \n
-       "				_capturable = false;" \n
+       "				_capturable_camps = false;" \n
        "			};" \n
        "		};" \n
-       "		if (_capturable) then {" \n
+       "		if (_capturable && _capturable_camps) then {" \n
        "			_rate = CTI_TOWNS_CAPTURE_RATE;" \n
        "			if ((missionNamespace getVariable ""CTI_TOWNS_CAPTURE_MODE"") > 0) then {" \n
        "				//--- Retrieve the current held camps" \n

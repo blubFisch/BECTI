@@ -57,6 +57,7 @@ with missionNamespace do {
 	CTI_COIN_PARAM = nil;
 	CTI_COIN_PARAM_KIND = nil;
 	CTI_COIN_PREVIEW = nil;
+	CTI_COIN_PREVIEW_COMP = nil;
 	CTI_COIN_LASTFUNDS = [0,0];
 	
 	//--- Define the source parameters
@@ -102,6 +103,7 @@ _categories = _source call CTI_Coin_CreateRootMenu;
 
 showCommandingMenu "#USER:CTI_COIN_Categories_0";
 _last_collision_update = -100;
+_last_composition_update = -100;
 _last_menu = "";
 _last_wallalign = false;
 _last_autodefense = false;
@@ -144,6 +146,10 @@ with missionNamespace do {
 					if !(isNil 'CTI_COIN_LASTDIR') then {_preview_item setDir CTI_COIN_LASTDIR};
 					CTI_COIN_DIR = getDir _preview_item;
 					
+					//---Composition
+					if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {
+						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), true] call LARs_fnc_spawnComp;
+					};
 					//--- Update the overlay description
 					(_preview_item) call CTI_Coin_UpdatePreview;
 					
@@ -154,6 +160,7 @@ with missionNamespace do {
 					
 					//--- Remove collision again
 					_last_collision_update = -1;
+					_last_composition_update = -1;
 				} else { //--- The HQ is mobilized
 					call CTI_Coin_OnHQMobilized;
 				};
@@ -162,7 +169,7 @@ with missionNamespace do {
 				CTI_COIN_PREVIEW setDir CTI_COIN_DIR;
 				CTI_COIN_PREVIEW setVectorUp [0,0,0];
 				if (time - _last_collision_update > 2) then {_last_collision_update = time;{CTI_COIN_PREVIEW disableCollisionWith _x} forEach (CTI_COIN_PREVIEW nearEntities 150)};
-				
+		
 				//--- Update the coloration if needed
 				(CTI_COIN_PREVIEW) call CTI_Coin_UpdatePreview;
 				
@@ -174,6 +181,21 @@ with missionNamespace do {
 					_helper_pos set [2, 0];
 					CTI_COIN_HELPER setPos _helper_pos;
 					CTI_COIN_HELPER setDir direction CTI_COIN_PREVIEW;
+				};
+				//---Composition
+				if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {				
+					//due to amount of objects in compositions, only update once per second (remove old and place new)
+					if (time - _last_composition_update > 1) then {
+						_last_composition_update = time;
+						if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[ CTI_COIN_PREVIEW_COMP ] call LARs_fnc_deleteComp;};
+						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
+					};	
+					_composition = CTI_COIN_PREVIEW_COMP;
+					_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
+					{	
+						_y = _x;
+						{_y disableCollisionWith _x} forEach ((position _y) nearEntities 200);
+					}forEach _compositionobjects;	
 				};
 			};
 		} else { //--- The player's commanding menu is gone
@@ -293,7 +315,7 @@ with missionNamespace do {
 with missionNamespace do {
 	//--- Cleanup the preview if needed
 	if !(isNil 'CTI_COIN_PREVIEW') then {deleteVehicle CTI_COIN_PREVIEW};
-	
+	if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[CTI_COIN_PREVIEW_COMP] call LARs_fnc_deleteComp;};
 	//--- Remove the Construction Overlay
 	112200 cutText ["", "plain"];
 	
