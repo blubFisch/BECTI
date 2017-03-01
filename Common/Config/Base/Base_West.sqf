@@ -985,7 +985,7 @@ _specials = [];
 		_prices pushBack 		500;
 		_placements pushBack 	[90, 7];
 		_categories pushBack 	"Walls";
-		_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
