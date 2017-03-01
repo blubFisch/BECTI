@@ -47,7 +47,7 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 	{if (_x distance _camp < CTI_TOWNS_CAMPS_CAPTURE_RANGE) exitWith {_in_range = true}} forEach ((units player) call CTI_CO_FNC_GetLiveUnits);
 	
 	if (_in_range) then { //--- The player or one of his unit was in range of the camp.
-		_last_capture = _camp getVariable format["cti_camp_lastcap_%1", _newSide];
+		_last_capture = _camp getVariable format["cti_camp_lastcap_%1", _side_new];
 		_value = CTI_TOWNS_CAMPS_CAPTURE_BOUNTY;
 		if !(isNil '_last_capture') then {
 			if (time - _last_capture <= CTI_TOWNS_CAMPS_CAPTURE_BOUNTY_DELAY) then { _value = round(_value / 2) };
@@ -58,7 +58,6 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 		["camp-capture", [_town, _value]] call CTI_CL_FNC_DisplayMessage;
 	};
 	_camp setVariable ["cti_camp_lastcap", time];
-	
 	
 } else {
 	CTI_P_ChatID commandChat format["A camp has been lost in %1!", _town getVariable "cti_town_name"];
