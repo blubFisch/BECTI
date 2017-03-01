@@ -30,7 +30,7 @@ if (_ratio < 1) then {_ratio = 1};
 //--- Ones server get filled we decrease the ammount.
 
 if (CTI_TOWNS_OCCUPATION_LEVEL_DYNAMIC > 0) then {
-	_fps = diag_fps;
+	_fps = diag_fpsMin;
 	
 	//--- Only proc if the overall FPS are below 55
 	if (_fps <= 48) then {
