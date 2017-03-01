@@ -697,7 +697,7 @@ if (CTI_RHS_ADDON > 0) then {
 //Universal RHS
 	_u pushBack 'rhs_msv_emr_rifleman';
 	_u pushBack 'rhs_msv_emr_aa';
-	_u pushBack 'rhs_msv_emr_arifleman';
+/*	_u pushBack 'rhs_msv_emr_arifleman';*/
 	_u pushBack 'rhs_msv_emr_at';
 	_u pushBack 'rhs_msv_emr_combatcrew';
 	_u pushBack 'rhs_msv_emr_LAT';
@@ -929,9 +929,9 @@ _u pushBack 'rhs_btr80_msv';
 _u pushBack 'rhs_gaz66_zu23_msv';
 _u pushBack 'rhsgref_BRDM2_ATGM_msv';
 _u pushBack 'rhs_btr80a_msv';
-_u pushBack 'RHS_BM21_MSV_01';
+/*_u pushBack 'RHS_BM21_MSV_01';
 _u pushBack 'rhs_9k79';
-_u pushBack 'rhs_9k79_K';
+_u pushBack 'rhs_9k79_K';*/
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
@@ -1100,6 +1100,9 @@ _u pushBack 'rhs_t90a_tv';
 _u pushBack 'rhs_bmp3mera_msv'; 
 _u pushBack 'rhs_bmd4ma_vdv'; 
 _u pushBack 'rhs_2s3_tv';
+_u pushBack 'RHS_BM21_MSV_01';
+_u pushBack 'rhs_9k79';
+_u pushBack 'rhs_9k79_K';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
@@ -1121,6 +1124,7 @@ _u = [];
 	_u pushBack 'O_UAV_02_CAS_F';
 	_u pushBack 'O_UAV_02_F';
 	_u pushBack 'O_Plane_CAS_02_F';
+	_u pushBack 'C_Plane_Civil_01_F';
 
 
 if (CTI_FACTION_EAST == 0) then {
@@ -1702,6 +1706,10 @@ if (CTI_RHS_ADDON > 0) then {
 	//Universal RHS
 	_u pushBack 'rhs_msv_emr_rifleman';
 	_u pushBack 'rhs_msv_emr_combatcrew';
+	_u pushBack 'rhsgref_ins_uaz_dshkm';
+	_u pushBack 'RHS_UAZ_MSV_01';
+	_u pushBack 'rhs_tigr_m_3camo_msv';
+
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -1820,7 +1828,43 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
+	_u pushBack 'rhs_msv_emr_rifleman';
+	_u pushBack 'rhs_msv_emr_arifleman';
+	_u pushBack 'rhs_msv_emr_at';
+	_u pushBack 'rhs_msv_emr_combatcrew';
+	_u pushBack 'rhs_msv_emr_LAT';
+	_u pushBack 'rhs_msv_emr_RShG2';
+	_u pushBack 'rhs_msv_emr_engineer';
+	_u pushBack 'rhs_msv_emr_grenadier';
+	_u pushBack 'rhs_msv_emr_medic';
+	_u pushBack 'rhs_msv_emr_marksman';
+	_u pushBack 'rhs_msv_emr_junior_sergeant';
+	_u pushBack 'rhs_msv_emr_sergeant';
+	_u pushBack 'rhs_kamaz5350_msv';
+	_u pushBack 'rhs_tigr_m_3camo_msv';
+	_u pushBack 'RHS_UAZ_MSV_01';
+	_u pushBack 'rhsgref_BRDM2UM_msv';
+	_u pushBack 'rhsgref_ins_uaz_dshkm';
+	_u pushBack 'rhsgref_ins_uaz_ags';
+	_u pushBack 'rhs_btr70_msv';
 
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter OFPS
+		_u pushBack 'IP_O_Soldier_FST';
+		_u pushBack 'IP_O_crew_FST';
+		_u pushBack 'sfp_bv206_winter';
+		_u pushBack 'AAF_D_MRAP_03_F';
+		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+	};
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];

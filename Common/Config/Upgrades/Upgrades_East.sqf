@@ -57,8 +57,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
     [1500,2000,2500,3000], //--- Gear
 	[1000,2000,3000,4000], //--- Barracks
-	[2000,3000,4000,6000,24000], //--- Light
-	[3000,4000,6000,8000], //--- Heavy
+	[2000,2500,3500,5000,24000], //--- Light
+	[3500,5000,6500,8000], //--- Heavy
 	[1500,2000,3000], //--- Naval
 	[4000,6000,8000,10000,12000], //--- Air
 	[1500], //--- Air FFAR
@@ -166,7 +166,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
 	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
+	[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
 	[[],[],[]], //--- Naval
 	[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
 	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR

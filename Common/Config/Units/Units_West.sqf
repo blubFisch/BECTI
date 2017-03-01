@@ -336,7 +336,7 @@ _d pushBack 0;*/
 
 _c pushBack 'B_Quadbike_01_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack '0- Quadbike';
 _o pushBack 250;
 _t pushBack 10;
 _u pushBack 0;
@@ -346,7 +346,7 @@ _d pushBack 0;
 
 _c pushBack 'B_G_Offroad_01_F';
 _p pushBack '';
-_n pushBack 'Offroad (can load statics)';
+_n pushBack '0- Offroad (can load statics)';
 _o pushBack 500;
 _t pushBack 10;
 _u pushBack 0;
@@ -386,7 +386,7 @@ _d pushBack 0;
 */
 _c pushBack 'B_MRAP_01_F'; //Hunter
 _p pushBack '';
-_n pushBack '';
+_n pushBack '1- Hunter (Unarmed)';
 _o pushBack 1250;
 _t pushBack 15;
 _u pushBack 1;
@@ -396,7 +396,7 @@ _d pushBack 0;
 
 _c pushBack 'B_MRAP_01_hmg_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack '1- Hunter (HMG)';
 _o pushBack 1750;
 _t pushBack 20;
 _u pushBack 1;
@@ -406,7 +406,7 @@ _d pushBack 0;
 
 _c pushBack 'B_MRAP_01_gmg_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack '2- Hunter GMG';
 _o pushBack 2000;
 _t pushBack 20;
 _u pushBack 2;
@@ -426,7 +426,7 @@ _d pushBack 0;
 
 _c pushBack 'B_Slingload_01_Medevac_F';   
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Medevac_F.jpg';
-_n pushBack (format ["Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_n pushBack (format ["0- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6800;
 _t pushBack 20;
 _u pushBack 0;
@@ -456,7 +456,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_Truck_03_device_F'; //Nuke Truck
 _p pushBack '';
-_n pushBack 'Nuke Truck';
+_n pushBack '5- Nuke Truck';
 _o pushBack 80000;
 _t pushBack 25;
 _u pushBack 5;
@@ -466,7 +466,7 @@ _d pushBack 0;
 
 _c pushBack 'B_APC_Wheeled_01_cannon_F'; //Marshall
 _p pushBack '';
-_n pushBack '';
+_n pushBack '4- AMV-7 Marshall';
 _o pushBack 6000;
 _t pushBack 30;
 _u pushBack 4;
@@ -479,7 +479,7 @@ _d pushBack 0;
 _c pushBack 'B_APC_Tracked_01_rcws_F'; //Panther
 _p pushBack '';
 _n pushBack '';
-_o pushBack 6325;
+_o pushBack 6500;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -512,14 +512,14 @@ _d pushBack 0;*/
 _c pushBack 'B_APC_Tracked_01_AA_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 9000;
+_o pushBack 9500;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'B_MBT_01_arty_F';
+/*_c pushBack 'B_MBT_01_arty_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 140000;
@@ -527,12 +527,12 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'B_MBT_01_mlrs_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 180000;
+_o pushBack 225000;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;

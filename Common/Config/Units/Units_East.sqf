@@ -348,7 +348,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_Quadbike_01_F';
 _p pushBack '';
-_n pushBack 'Quad';
+_n pushBack '0- Quadbike';
 _o pushBack 250;
 _t pushBack 30;
 _u pushBack 0;
@@ -358,7 +358,7 @@ _d pushBack 0;
 
 _c pushBack 'O_G_Offroad_01_F';
 _p pushBack '';
-_n pushBack 'Offroad (can load statics)';
+_n pushBack '0- Offroad (can load statics)';
 _o pushBack 500;
 _t pushBack 10;
 _u pushBack 0;
@@ -398,7 +398,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_Truck_02_transport_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack '0- ZAMAK Transport';
 _o pushBack 1000;
 _t pushBack 15;
 _u pushBack 1;
@@ -419,7 +419,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_MRAP_02_F'; //Ifrit
 _p pushBack '';
-_n pushBack '';
+_n pushBack '1- Ifrit (Unarmed)';
 _o pushBack 1250;
 _t pushBack 15;
 _u pushBack 1;
@@ -429,7 +429,7 @@ _d pushBack 0;
 
 _c pushBack 'O_MRAP_02_hmg_F';
 _p pushBack '';
-_n pushBack 'Ifrit HMG';
+_n pushBack '1- Ifrit (HMG)';
 _o pushBack 2625;
 _t pushBack 30;
 _u pushBack 1;
@@ -439,7 +439,7 @@ _d pushBack 0;
 
 _c pushBack 'O_MRAP_02_gmg_F';
 _p pushBack '';
-_n pushBack 'Ifrit GMG';
+_n pushBack '2- Ifrit (GMG)';
 _o pushBack 2000;
 _t pushBack 30;
 _u pushBack 2;
@@ -469,7 +469,7 @@ _d pushBack 0;
 */
 _c pushBack "Land_Pod_Heli_Transport_04_medevac_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg';
-_n pushBack (format ["Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_n pushBack (format ["3- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 7500;
 _t pushBack 25;
 _u pushBack 3;
@@ -489,7 +489,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_Truck_03_medical_F';
 _p pushBack '';
-_n pushBack (format ["Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_n pushBack (format ["0- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 4500;
 _t pushBack 20;
 _u pushBack 0;
@@ -499,7 +499,7 @@ _d pushBack 0;
 
 _c pushBack 'O_APC_Wheeled_02_rcws_F'; //Marid
 _p pushBack '';
-_n pushBack '';
+_n pushBack '3- MSE3 Marid';
 _o pushBack 2250;
 _t pushBack 30;
 _u pushBack 3;
@@ -509,7 +509,7 @@ _d pushBack 0;
 
 _c pushBack 'O_Truck_03_device_F';
 _p pushBack '';
-_n pushBack 'Nuke Truck';
+_n pushBack '5- Nuke Truck';
 _o pushBack 80000;
 _t pushBack 25;
 _u pushBack 5;
@@ -532,14 +532,14 @@ _d pushBack 0;
 _c pushBack 'O_APC_Tracked_02_AA_F';
 _p pushBack '';
 _n pushBack 'ZSU-39 Tigris';
-_o pushBack 9000;
+_o pushBack 9500;
 _t pushBack 20;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_MBT_02_arty_F';
+/*_c pushBack 'O_MBT_02_arty_F';
 _p pushBack '';
 _n pushBack '2S9 Sochor';
 _o pushBack 140000;
@@ -547,12 +547,12 @@ _t pushBack 20;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_APC_Tracked_02_cannon_F';
 _p pushBack '';
 _n pushBack 'BTR-K Kamysh';
-_o pushBack 12360;
+_o pushBack 12250;
 _t pushBack 20;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;

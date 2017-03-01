@@ -670,7 +670,7 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhsusf_army_ocp_rifleman';
+/*_u pushBack 'rhsusf_army_ocp_rifleman';*/
 _u pushBack 'rhsusf_army_ocp_rifleman_m16';
 _u pushBack 'rhsusf_army_ocp_rifleman_m4';
 _u pushBack 'rhsusf_army_ocp_aa';
@@ -692,6 +692,8 @@ _u pushBack 'rhsusf_army_ocp_sniper_m107';
 _u pushBack 'rhsusf_army_ocp_marksman';
 _u pushBack 'rhsusf_army_ocp_teamleader';
 _u pushBack 'rhsusf_army_ocp_squadleader';
+_u pushBack 'rhsusf_army_ocp_officer';
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
@@ -1348,6 +1350,8 @@ _u pushBack 'RHS_A10_AT';
 _u pushBack 'RHS_AH64DGrey';
 _u pushBack 'RHS_AH64D';
 _u pushBack 'RHS_AH64D_AA';
+_u pushBack 'C_Plane_Civil_01_racing_F';
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
@@ -1749,6 +1753,11 @@ if (CTI_RHS_ADDON > 0) then {
 	//Universal RHS
 	_u pushBack 'rhsusf_army_ocp_rifleman_m16';
 	_u pushBack 'rhsusf_army_ocp_combatcrewman';
+	_u pushBack 'rhsusf_mrzr4_d';
+	_u pushBack 'rhsusf_m1025_w';
+	_u pushBack 'rhsusf_m1025_d';
+	_u pushBack 'rhsusf_m1025_w_m2';
+	_u pushBack 'rhsusf_m1025_d_m2';
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS
@@ -1863,8 +1872,45 @@ if (CTI_OFPS_ADDON > 0) then {
 };
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
-//Universal RHS
+	//Universal RHS
+	_u pushBack 'rhsusf_army_ocp_rifleman_m16';
+	_u pushBack 'rhsusf_army_ocp_combatcrewman';
+	_u pushBack 'rhsusf_army_ocp_autorifleman';
+	_u pushBack 'rhsusf_army_ocp_riflemanat';
+	_u pushBack 'rhsusf_army_ocp_engineer';
+	_u pushBack 'rhsusf_army_ocp_explosives';
+    _u pushBack 'rhsusf_army_ocp_grenadier';
+    _u pushBack 'rhsusf_army_ocp_medic';
+    _u pushBack 'rhsusf_army_ocp_machinegunner';
+    _u pushBack 'rhsusf_army_ocp_marksman';
+    _u pushBack 'rhsusf_army_ocp_sniper_m24sws';
+    _u pushBack 'rhsusf_army_ocp_teamleader';
+    _u pushBack 'rhsusf_army_ocp_squadleader';
+    _u pushBack 'rhsusf_m1025_w';
+    _u pushBack 'rhsusf_mrzr4_d';
+    _u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
+    _u pushBack 'rhsusf_rg33_usmc_d';
+    _u pushBack 'rhsusf_rg33_usmc_wd';
+    _u pushBack 'rhsusf_m1025_d';
+    _u pushBack 'rhsusf_m1025_w_m2';
+    _u pushBack 'rhsusf_m1025_w_mk19';
+    _u pushBack 'rhsusf_m1025_d_m2';
+    _u pushBack 'rhsusf_m1025_d_Mk19';
+    _u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
+    _u pushBack 'rhsusf_M1237_M2_usarmy_d';
+    _u pushBack 'rhsusf_M1237_M2_usarmy_wd';
 
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 2) then { 
+    
+    };
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
