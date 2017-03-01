@@ -88,7 +88,7 @@ _classes pushBack		["Land_Research_house_V1_F", "Land_Research_house_V1_ruins_F"
 _prices pushBack 		500;
 _times pushBack			0;
 _placements pushBack 	[180, 15, false];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 20.5]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 9]];
 _conditions pushBack 	(compile format["!(%1 call CTI_CO_FNC_IsHQDeployed)", _side]);
 
 _headers pushBack 		[CTI_CONTROLCENTER, "Control Center", "CC"];
@@ -96,15 +96,15 @@ _classes pushBack 		["Land_Research_HQ_F", "Land_Research_HQ_ruins_F", ["Land_Re
 _prices pushBack 		4000;
 _times pushBack 		90;
 _placements pushBack 	[90, 25, false];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 10]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4.3]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack		[CTI_BARRACKS, "Barracks", "Barracks"];
 _classes pushBack		["Land_Cargo_House_V1_F", "Land_Cargo_House_V1_ruins_F"];
 _prices pushBack		2000;
-_times pushBack			60;
+_times pushBack			30;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 21]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 9]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack		[CTI_LIGHT, "Light Vehicle Factory", "Light"];
@@ -112,7 +112,7 @@ _classes pushBack		["Land_Medevac_HQ_V1_F", "Land_Medevac_HQ_V1_ruins_F"];
 _prices pushBack 		4000;
 _times pushBack 		80;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.1]]; 
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_HEAVY, "Heavy Vehicle Factory", "Heavy"];
@@ -120,7 +120,7 @@ _classes pushBack 		["Land_Cargo_HQ_V1_F", "Land_Cargo_HQ_V1_ruins_F"];
 _prices pushBack 		6000;
 _times pushBack 		120;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.1]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_AIR, "Aircraft Factory", "Air"];
@@ -128,31 +128,31 @@ _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
 _prices pushBack 		8000;
 _times pushBack 		140;
 _placements pushBack 	[180, 40];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 950]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 20000]]; 
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_AMMO, "Ammo Depot", "Ammo"];
 _classes pushBack 		["Land_Cargo_HQ_V2_F", "Land_Cargo_HQ_V2_ruins_F"];
 _prices pushBack 		2000;
-_times pushBack 		40;
+_times pushBack 		90;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.011]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_REPAIR, "Repair Depot", "Repair"];
 _classes pushBack 		["Land_Cargo_HQ_V3_F", "Land_Cargo_HQ_V3_ruins_F"];
 _prices pushBack 		4000;
-_times pushBack 		35;
+_times pushBack 		90;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.1]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_NAVAL, "Naval Yard", "Naval"];
 _classes pushBack 		["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"];
 _prices pushBack 		3000;
-_times pushBack 		35;
+_times pushBack 		80;
 _placements pushBack 	[180, 60];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 8.95]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 if (CTI_RHS_ADDON > 0) then { 
@@ -161,7 +161,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 1.05]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
@@ -169,7 +169,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 1]]; //--- Not working correctly 
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 } else {
 	if (CTI_CUP_ADDON > 0) then { 
@@ -178,7 +178,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 		_headers pushBack 		[CTI_RADAR_ART, "Artillery Radar", "Artillery Radar"];
@@ -186,7 +186,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 	} else {
 		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];
@@ -202,7 +202,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 	};
 };
@@ -210,23 +210,23 @@ if (CTI_RHS_ADDON > 0) then {
 _headers pushBack 		[CTI_SUPPLY_DEPOT, "Supply Depot", "Supply Depot"];
 _classes pushBack 		["Land_dp_smallTank_F", "Land_dp_smallTank_ruins_F"];
 _prices pushBack 		2500;
-_times pushBack 		30;
+_times pushBack 		60;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 35]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_SATELLITE, "Satellite Uplink", "Satellite Uplink"];
 _classes pushBack 		["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"];
 _prices pushBack 		4500;
-_times pushBack 		30;
+_times pushBack 		60;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 22]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 
 _headers pushBack 		[CTI_HQ_MOBILIZE, "Headquarters (Mobilize)", "HQ"];
 _classes pushBack		[missionNamespace getVariable format["CTI_%1_HQ", _side], ""];
 _prices pushBack 		500;
-_times pushBack			0;
+_times pushBack			10;
 _placements pushBack 	[0, 15, false];
 _specials pushBack 		[];
 _conditions pushBack 	(compile format["%1 call CTI_CO_FNC_IsHQDeployed", _side]);
@@ -408,7 +408,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 1]];	
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 	//Tall Roof
 	_headers pushBack  		"Shed (Roof)";
 	_classes pushBack  		"Land_Shed_Big_F";
@@ -418,7 +418,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		1;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 5]]; // 3-4 HE shells
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 3]];
 	// Short roof with one wall side
 	_headers pushBack 		"Shed (Land)";
 	_classes pushBack 		"Land_Shed_Small_F";
@@ -428,7 +428,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]]; // 3-4 HE shells
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 3]];
 	
 	_headers pushBack 		"Heli Pad";
 	_classes pushBack 		"Land_HelipadSquare_F";
@@ -1253,7 +1253,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		3;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 6]]; //5-6 HE rounds from Slammer took to kill
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]];
 
 	_headers pushBack 		"Dome (Big)";
 	_classes pushBack 		"Land_Dome_Big_F";
@@ -1263,7 +1263,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 	_upgrade pushBack		4;	
-	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 6]]; //5-6 HE rounds from Slammer took to kill
+	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 4]];
 	
 	if (CTI_CUP_CORE_ADDON > 0) then {
 

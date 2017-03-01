@@ -29,26 +29,28 @@ if (_ratio < 1) then {_ratio = 1};
 //--- If server running at full speed due to small population we spawn more AI per wave.
 //--- Ones server get filled we decrease the ammount.
 
-if (CTI_TOWNS_OCCUPATION_LEVEL_DYNAMIC > 0) then {
+if (CTI_TOWNS_DYNAMIC_FPS_MODE > 0) then {
 	_fps = diag_fpsMin;
 	
-	//--- Only proc if the overall FPS are below 55
-	if (_fps <= 48) then {
+	//--- Only proc if the overall FPS are below 48
+	//--- Formula (((35- 25) * (120sv - 20)) / (120 - 20)) + 20 / _coef
+	if (_fps < 50) then {
 		_coef = switch (true) do {
-			case (_fps > 48): {0.5};
-			case (_fps > 45): {0.8};
-			case (_fps > 42): {1};
-			case (_fps > 35): {1.2};
-			case (_fps > 30): {1.3};
-			case (_fps > 25): {1.4};
-			case (_fps > 20): {1.6};
-			case (_fps > 15): {1.7};
-			case (_fps > 10): {2};
-			case (_fps > 5): {4};
-
+			case (_fps > 50): {2};		//--- 50
+			case (_fps > 46): {1.5};	//--- 40
+			case (_fps > 44): {1.2};	//--- 34
+			case (_fps > 43): {1};		//--- 30
+			case (_fps > 36): {.80};	//--- 26
+			case (_fps > 32): {.50};	//--- 20
+			case (_fps > 26): {.40};	//--- 40
+			case (_fps > 22): {.30};	//--- 16
+			case (_fps > 16): {.25};	//--- 15
+			case (_fps > 12): {.20};	//--- 14
+			case (_fps > 6): {.15};	//--- 13
+			default {.15};
 		};
 		
-		_active_units =ceil(_active_units / _coef);
+		_active_units =ceil(_active_units * _coef);
 	};	
 };
 
