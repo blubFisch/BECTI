@@ -129,6 +129,7 @@ if (_attempts >= 500) then {
 	_logic setVariable ["cti_spotted_units", []];
 	_logic setVariable ["cti_spotted_structures", []];
 	_logic setVariable ["cti_supply", missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_SUPPLY_%1", _side], true];
+	_logic setVariable ["cti_player_ai_skill", 40, true];
 	
 	_upgrades = [];
 	for '_i' from 1 to count(missionNamespace getVariable format["CTI_%1_UPGRADES_LEVELS", _side]) do { _upgrades pushBack 0 };

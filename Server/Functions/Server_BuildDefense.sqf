@@ -83,6 +83,7 @@ if (_iscomposition) then {
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense
 			if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_x setVariable ["cti_aman_enabled", true]};
 		};
+		_x setVariable ["cti_managed", true];
 		_x call CTI_CO_FNC_UnitCreated;
 	}forEach _compositionobjects;	
 	_defense = "";
