@@ -608,6 +608,7 @@ CTI_VEHICLES_SALVAGE_RANGE = 300; //--- This is the distance required between a 
 CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage trucks
 
 //--- Vehicles: FUEL CONSUMPTION
+//--- Formula: 1 / (60*Minutes) = EXAMPLE for 60min runtime -- 1/(60*60) = 0.00027
 CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00018; //---default consumption rate every 1s - 90min
 CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.00027; //---tanks consumption rate - 60min 
 CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.00055; //---heli consumption rate - 30min
