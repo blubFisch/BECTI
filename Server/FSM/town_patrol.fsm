@@ -215,7 +215,7 @@ class FSM
        "	" \n
        "	//--- If we need all camps to capture the town, make sure that they belong to the team's before capturing the depot, skip naval towns" \n
        "	if (_capture_mode in [2] && !_is_naval) then { " \n
-       "		if (count(_town call CTI_CO_FNC_GetTownCamps) != count([_town, _sideID] call CTI_CO_FNC_GetTownCampsOnSide)) then {_capturable = false};" \n
+       "		if !([_town, _sideID] call CTI_CO_FNC_HasAllCamps) then {_capturable = false};" \n
        "	};" \n
        "	" \n
        "	//--- Make sure that the depot can be captured before proceeding there, if not, the team will either patrol or defend camps" \n
