@@ -458,11 +458,11 @@ _p pushBack 150;
 _i pushBack "U_O_SpecopsUniform_ocamo";
 _u pushBack 1;
 _p pushBack 300;
-
-_i pushBack "U_O_SpecopsUniform_blk";
-_u pushBack 1;
-_p pushBack 300;
 */
+_i pushBack "U_O_SpecopsUniform_blk";
+_u pushBack 0;
+_p pushBack 300;
+
 /*_i pushBack "U_O_Wetsuit";
 _u pushBack 4;
 _p pushBack 400;*/
