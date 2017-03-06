@@ -339,7 +339,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = -1;
+		default = 1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
@@ -357,7 +357,7 @@ class Params {
 		title = "GAMEPLAY: Weapon Sway Level";
 		values[] = {0,25,50,75,100};
 		texts[] = {"None","Little","Normal","Allot","Full"};
-		default = 0;
+		default = 25;
 	};
 	class CTI_SM_NONV {
 		title = "GAMEPLAY: Disable NVs, Thermal on Players";
@@ -405,13 +405,13 @@ class Params {
 		title = "VISUAL: Terrain Grid";
 		values[] = {10,20,30,40,50};
 		texts[] = {"Far","Medium","Short","Shorter","Free"};
-		default = 50;
+		default = 10;
 	};
 	class CTI_GRAPHICS_VD_MAX {
 		title = "VISUAL: View Distance";
 		values[] = {1000,1500,2000,2500,3000,3500,4000};
 		texts[] = {"1 KM","1.5 KM","2 KM","2.5 KM","3 KM","3.5 KM","4 KM"};
-		default = 4000;
+		default = 3500;
 	};
 	class CTI_WEATHER_INITIAL {
 		title = "WEATHER: Inital Time";

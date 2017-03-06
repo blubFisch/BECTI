@@ -1022,7 +1022,7 @@ _specials = [];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
 
 		_headers pushBack 		"SNR-75 - AA Radar";
-		_classes pushBack 		"pook_SNR75_radar";
+		_classes pushBack 		"pook_SNR75_radar_base_O";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
@@ -1302,7 +1302,7 @@ if (CTI_RHS_ADDON > 0) then {
 	if (CTI_OFPS_ADDON > 0) then { 
 		
 		_headers pushBack 		"S-300 PMU - AA Launcher";
-		_classes pushBack 		"pook_SA20_static_INS";
+		_classes pushBack 		"pook_SA20_static_base_O";
 		_prices pushBack 		60000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
