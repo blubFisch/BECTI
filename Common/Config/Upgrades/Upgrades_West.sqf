@@ -50,8 +50,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[1500,5000], //--- Satellite
 	[40000], //--- Nuke
 	[1000, 2000, 4000], //--- Supply Rate
-	[2000, 4000, 8000, 10000], //--- Base Health
-	[1500, 2000, 3000, 4000] //--- Base Defense
+	[4000, 5000, 6000, 7000], //--- Base Health
+	[500, 1000, 1500, 2000] //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -76,8 +76,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[4000,20000], //--- Satellite
 	[40000], //--- Nuke
 	[4000, 8000, 12000], //--- Supply Rate
-	[4000, 8000, 12000, 16000], //--- Base Health
-	[1500, 2500, 4000, 6000] //--- Base Defense
+	[4000, 5000, 6000, 7000], //--- Base Health
+	[500, 1000, 1500, 2000] //--- Base Defense
 ]];
 };
 
