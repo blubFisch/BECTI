@@ -1326,6 +1326,7 @@ if (CTI_RHS_ADDON > 0) then {
 _u pushBack 'RHS_UH1Y_UNARMED_d';
 _u pushBack 'RHS_UH60M_MEV2_d';
 _u pushBack 'RHS_MELB_MH6M';
+_u pushBack 'RHS_MELB_H6M';
 _u pushBack 'RHS_UH60M_d';
 _u pushBack 'RHS_CH_47F_10';
 _u pushBack 'rhsusf_CH53E_USMC_D';

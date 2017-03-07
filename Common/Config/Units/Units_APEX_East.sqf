@@ -531,7 +531,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
+/*_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 28000;
@@ -539,7 +539,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
 _p pushBack '';
@@ -617,7 +617,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;*/
 
-_c pushBack 'O_T_VTOL_02_infantry_F';
+/*_c pushBack 'O_T_VTOL_02_infantry_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 40000;
@@ -636,7 +636,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
 /*_c pushBack 'O_T_VTOL_02_infantry_hex_F';
 _p pushBack '';
 _n pushBack '';

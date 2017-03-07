@@ -1320,7 +1320,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-_c pushBack 'rhsusf_M109D_USARMY';
+/*_c pushBack 'rhsusf_M109D_USARMY';
 _p pushBack '';
 _n pushBack 'M109A6 Desert';
 _o pushBack 150000;
@@ -1338,7 +1338,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 //--- Repair Vehicles
 _c pushBack 'rhsusf_M977A4_usarmy_d';
@@ -1502,6 +1502,7 @@ _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-fueltruck";
 _d pushBack 10;
 */
+
 _c pushBack 'rhsusf_M977A4_AMMO_usarmy_wd';
 _p pushBack '';
 _n pushBack 'M977A4 Ammo Desert';
@@ -1563,15 +1564,16 @@ _s pushBack "service-fueltruck";
 _d pushBack 10;
 
 //--- Air Vehicles
-/*_c pushBack 'RHS_UH1Y_UNARMED_d';
+
+_c pushBack 'RHS_UH1Y_UNARMED_d';
 _p pushBack '';
-_n pushBack 'UH-1Y Unarmed';
-_o pushBack 4500;
+_n pushBack 'UH-1Y (Unarmed)';
+_o pushBack 11000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;*/
+_d pushBack 10;
 
 _c pushBack 'RHS_UH60M_MEV2_d';
 _p pushBack '';
@@ -1586,7 +1588,17 @@ _d pushBack 10;
 _c pushBack 'RHS_MELB_MH6M';
 _p pushBack '';
 _n pushBack 'MH-6M Littlebird (Unarmed)';
-_o pushBack 6800;
+_o pushBack 8500;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'RHS_MELB_H6M';
+_p pushBack '';
+_n pushBack 'OH-6M (Unarmed)';
+_o pushBack 6000;
 _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
@@ -1596,7 +1608,7 @@ _d pushBack 10;
 _c pushBack 'RHS_UH60M_d';
 _p pushBack '';
 _n pushBack 'UH-60M Blackhawk';
-_o pushBack 20000;
+_o pushBack 17500;
 _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
@@ -1606,9 +1618,9 @@ _d pushBack 10;
 _c pushBack 'RHS_CH_47F_10';
 _p pushBack '';
 _n pushBack 'CH-47F Chinook';
-_o pushBack 17000;
+_o pushBack 15000;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -1616,9 +1628,9 @@ _d pushBack 10;
 _c pushBack 'rhsusf_CH53E_USMC_D';
 _p pushBack '';
 _n pushBack 'CH-53E Super Stallion';
-_o pushBack 15300;
+_o pushBack 20000;
 _t pushBack 30;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -1644,17 +1656,17 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;*/
 
-/*_c pushBack 'RHS_UH1Y_d_GS';
+_c pushBack 'RHS_UH1Y_d_GS';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 18000;
+_n pushBack 'UH-1Y (2x Doorgun/2x FFAR)';
+_o pushBack 23000;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;*/
+_d pushBack 10;
 
-_c pushBack 'RHS_AH1Z_GS';
+/*_c pushBack 'RHS_AH1Z_GS';
 _p pushBack '';
 _n pushBack 'AH-1Z (FFAR)';
 _o pushBack 35000;
@@ -1662,29 +1674,29 @@ _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 _c pushBack 'RHS_C130J';
 _p pushBack '';
 _n pushBack 'C-130J';
-_o pushBack 30000;
+_o pushBack 45000;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-/*_c pushBack 'RHS_MELB_AH6M_L';
+_c pushBack 'RHS_MELB_AH6M_L';
 _p pushBack '';
-_n pushBack 'AH-6M-L (M134/FFAR)';
-_o pushBack 12000;
+_n pushBack 'AH-6M-L (2x Minigun/2x FFAR)';
+_o pushBack 20000;
 _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;*/
+_d pushBack 10;
 
-_c pushBack 'RHS_UH1Y_d';
+/*_c pushBack 'RHS_UH1Y_d';
 _p pushBack '';
 _n pushBack 'UH-1Y (FFAR/MG)';
 _o pushBack 15000;
@@ -1692,14 +1704,14 @@ _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 _c pushBack 'RHS_A10';
 _p pushBack '';
 _n pushBack 'A-10A (CAS)';
-_o pushBack 85000;
+_o pushBack 100000;
 _t pushBack 30;
-_u pushBack 4;
+_u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -1736,10 +1748,10 @@ _d pushBack 10;*/
 
 _c pushBack 'RHS_AH64D_GS';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 50000;
+_n pushBack 'AH-64D GS (1x Cannon/4x FFAR)';
+_o pushBack 26000;
 _t pushBack 30;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -1749,7 +1761,7 @@ _p pushBack '';
 _n pushBack 'F-22A';
 _o pushBack 100000;
 _t pushBack 30;
-_u pushBack 4;
+_u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
@@ -1764,7 +1776,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;*/
 
-_c pushBack 'RHS_AH1Z_CS';
+/*_c pushBack 'RHS_AH1Z_CS';
 _p pushBack '';
 _n pushBack 'AH-1Z  Hellfire';
 _o pushBack 45000;
@@ -1772,7 +1784,7 @@ _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 /*_c pushBack 'RHS_AH64D_noradar';
 _p pushBack '';
@@ -1784,7 +1796,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;*/
 
-_c pushBack 'RHS_MELB_AH6M_H';
+/*_c pushBack 'RHS_MELB_AH6M_H';
 _p pushBack '';
 _n pushBack 'AH-6M-H DAGR';
 _o pushBack 45000;
@@ -1792,11 +1804,21 @@ _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 _c pushBack 'RHS_AH64D_CS';
 _p pushBack '';
-_n pushBack 'AH-64D';
+_n pushBack 'AH-64D CS (1x Cannon/16x ATGM)';
+_o pushBack 55000;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'RHS_A10_AT';
+_p pushBack '';
+_n pushBack 'A-10A (AT)';
 _o pushBack 75000;
 _t pushBack 30;
 _u pushBack 4;
@@ -1804,17 +1826,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-/*_c pushBack 'RHS_A10_AT';
-_p pushBack '';
-_n pushBack 'A-10A (AT)';
-_o pushBack 75000;
-_t pushBack 30;
-_u pushBack 5;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 10;*/
-
-_c pushBack 'RHS_AH64DGrey';
+/*_c pushBack 'RHS_AH64DGrey';
 _p pushBack '';
 _n pushBack 'AH-64D';
 _o pushBack 95000;
@@ -1822,11 +1834,11 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 10;*/
 
 _c pushBack 'RHS_AH64D';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'AH-64D MultiRole (8x ATGM/2x FFAR)';
 _o pushBack 55000;
 _t pushBack 30;
 _u pushBack 3;
@@ -1834,16 +1846,15 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-/*_c pushBack 'RHS_AH64D_AA';
+_c pushBack 'RHS_AH64D_AA';
 _p pushBack '';
-_n pushBack '';
-_o pushBack 60000;
+_n pushBack 'AH-64D AA (2x AA/8x ATGM/2x FFAR)';
+_o pushBack 40000;
 _t pushBack 30;
-_u pushBack 5;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;*/
-
+_d pushBack 10;
 
 //--- Naval Vehicles
 

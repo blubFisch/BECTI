@@ -554,11 +554,11 @@ _u pushBack 0;
 _p pushBack 250;
 
 _i pushBack "rhs_uniform_gorka_r_g";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 900;
 
 _i pushBack "rhs_uniform_gorka_r_y";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 900;
 
 _i pushBack "rhs_uniform_m88_patchless";

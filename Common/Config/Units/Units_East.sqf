@@ -519,7 +519,7 @@ _d pushBack 0;
 
 //--- Heavy Vehicles
 
-_c pushBack 'O_MBT_02_cannon_F';
+/*_c pushBack 'O_MBT_02_cannon_F';
 _p pushBack '';
 _n pushBack 'T-100 Varsuk';
 _o pushBack 35000;
@@ -527,7 +527,7 @@ _t pushBack 20;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_APC_Tracked_02_AA_F';
 _p pushBack '';
@@ -707,7 +707,7 @@ _d pushBack 0;
 
 _c pushBack 'O_T_UAV_04_CAS_F';
 _p pushBack '';
-_n pushBack 'KH-3A Fenghuang AGM';
+_n pushBack 'KH-3A Fenghuang ATGM';
 _o pushBack 45000;
 _t pushBack 35;
 _u pushBack 3;
@@ -715,7 +715,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_Heli_Light_02_unarmed_F';
+/*_c pushBack 'O_Heli_Light_02_unarmed_F';
 _p pushBack '';
 _n pushBack 'Orca Unarmed';
 _o pushBack 12750;
@@ -723,7 +723,7 @@ _t pushBack 35;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_Heli_Transport_04_medevac_F';
 _p pushBack '';
@@ -735,17 +735,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-medic";
 _d pushBack 0;
 
-_c pushBack 'O_Heli_Transport_04_F';
-_p pushBack '';
-_n pushBack 'Taru Lift';
-_o pushBack 12750;
-_t pushBack 20;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 0;
-
-_c pushBack 'O_Heli_Light_02_F';
+/*_c pushBack 'O_Heli_Light_02_F';
 _p pushBack '';
 _n pushBack 'Orca Armed';
 _o pushBack 22500;
@@ -783,29 +773,29 @@ _t pushBack 50;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
-/*_c pushBack 'O_Heli_Transport_04_F'; 
+_c pushBack 'O_Heli_Transport_04_F'; 
 _p pushBack '';
 _n pushBack 'Taru Lift';
-_o pushBack 5000;
+_o pushBack 12000;
 _t pushBack 40;
-_u pushBack 0;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'O_Heli_Transport_04_ammo_F'; 
+_c pushBack 'O_Heli_Transport_04_ammo_F'; 
 _p pushBack '';
 _n pushBack 'Taru Ammo';
-_o pushBack 6000;
+_o pushBack 35000;
 _t pushBack 40;
-_u pushBack 2;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-ammotruck";
-_d pushBack 0;*/
+_d pushBack 0;
 
-_c pushBack 'O_Heli_Transport_04_bench_F'; 
+/*_c pushBack 'O_Heli_Transport_04_bench_F'; 
 _p pushBack '';
 _n pushBack 'Taru Unit Transport';
 _o pushBack 12750;
@@ -823,7 +813,7 @@ _t pushBack 40;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_Heli_Transport_04_medevac_F'; 
 _p pushBack '';

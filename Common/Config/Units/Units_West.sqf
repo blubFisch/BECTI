@@ -529,7 +529,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;*/
 
-_c pushBack 'B_MBT_01_mlrs_F';
+/*_c pushBack 'B_MBT_01_mlrs_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 225000;
@@ -537,7 +537,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 
 //--- Repair Vehicles
@@ -678,7 +678,7 @@ _d pushBack 0;
 
 _c pushBack 'B_UAV_02_CAS_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack 'MQ-4A Greyhawk CAS';
 _o pushBack 25000;
 _t pushBack 35;
 _u pushBack 2;
@@ -688,7 +688,7 @@ _d pushBack 0;
 
 _c pushBack 'B_UAV_02_F';
 _p pushBack '';
-_n pushBack 'MQ-4A Greyhawk AGM';
+_n pushBack 'MQ-4A Greyhawk ATGM';
 _o pushBack 45000;
 _t pushBack 35;
 _u pushBack 3;
@@ -696,7 +696,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'B_Heli_Light_01_F'; //Hummingbird
+/*_c pushBack 'B_Heli_Light_01_F'; //Hummingbird
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10200;
@@ -704,9 +704,9 @@ _t pushBack 35;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
-_c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
+/*_c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
 _p pushBack '';
 _n pushBack '';
 _o pushBack 29750;
@@ -754,7 +754,7 @@ _t pushBack 50;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 30;
+_d pushBack 30;*/
 
 //--- Naval Vehicles
 
