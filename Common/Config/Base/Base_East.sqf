@@ -1021,8 +1021,8 @@ _specials = [];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
 
-		_headers pushBack 		"SNR-75 - AA Radar";
-		_classes pushBack 		"pook_SNR75_radar_base_O";
+		_headers pushBack 		"SAM - AA Radar";
+		_classes pushBack 		"POOK_ANMPQ53_O";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
@@ -1198,7 +1198,7 @@ _specials = [];
 	if (CTI_OFPS_ADDON > 0) then { 
 
 		_headers pushBack 		"C-RAM Phalanx (Engages incoming rounds)";
-		_classes pushBack 		"C_at_phalanx_35AI";
+		_classes pushBack 		"O_at_phalanx_35AI";
 		_prices pushBack 		40000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
@@ -1301,8 +1301,8 @@ if (CTI_RHS_ADDON > 0) then {
 		
 	if (CTI_OFPS_ADDON > 0) then { 
 		
-		_headers pushBack 		"S-300 PMU - AA Launcher";
-		_classes pushBack 		"pook_SA20_static_base_O";
+		_headers pushBack 		"SAM - AA Launcher";
+		_classes pushBack 		"pook_MIM104_PAC2Battery_O";
 		_prices pushBack 		60000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";

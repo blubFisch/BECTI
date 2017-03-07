@@ -1137,7 +1137,7 @@ _specials = [];
 	if (CTI_OFPS_ADDON > 0) then { 
 
 		_headers pushBack 		"C-RAM Phalanx (Engages incoming rounds)";
-		_classes pushBack 		"C_at_phalanx_35AI";
+		_classes pushBack 		"B_at_phalanx_35AI";
 		_prices pushBack 		40000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";

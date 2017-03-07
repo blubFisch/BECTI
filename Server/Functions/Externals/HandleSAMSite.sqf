@@ -14,10 +14,10 @@
 private ["_engageMinAlt", "_engagementDistanceMax", "_radarNames", "_launcherNames", "_reloadTime", "_missileLockTime", "_targetEngagementInterval", "_logFctn", "_side", "_sideNum","_detectedPossibleTargets","_availableLaunchers","_availableRadars", "_detectedAirVehicles","_engageTargets", "_launcherTarget","_useLauncherIndx","_sh", "_useLauncher","_launcherTarget","_targetSphere"];
 
 // --- Configuration ---
-_engageMinAlt = 100;	// !!!! Should also be same as in HandleSAMSitel_ClientWarn.sqf
-_radarNames = ["pook_SNR75_radar_base_O", "POOK_ANMPQ53_B"];	// east, west
-_launcherNames = ["pook_SA20_static_base_O", "pook_MIM104_PAC2Battery_B"];	// east, west
-_reloadTime = 90;	// Launcher reload time. This is the minimum interval in which a single launcher will be fired
+_engageMinAlt = 50;	// !!!! Should also be same as in HandleSAMSitel_ClientWarn.sqf
+_radarNames = ["POOK_ANMPQ53_O", "POOK_ANMPQ53_B"];	// east, west
+_launcherNames = ["pook_MIM104_PAC2Battery_O", "pook_MIM104_PAC2Battery_B"];	// east, west
+_reloadTime = 10;	// Launcher reload time. This is the minimum interval in which a single launcher will be fired
 _missileLockTime = 5;	// Minimum missile lock time
 _targetEngagementInterval = 5;		// Minimum time between engagements of a single target
 // ---------------------

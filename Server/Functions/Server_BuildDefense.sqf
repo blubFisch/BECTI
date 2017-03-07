@@ -224,7 +224,7 @@ if (_iscomposition) then {
 			(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 		};
 		
-		if (typeOf(_defense) find "POOK_ANMPQ53_B" == 0 || typeOf(_defense) find "pook_SNR75_radar_base_O" == 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery_B" == 0 || typeOf(_defense) find "pook_SA20_static_base_O" == 0) then {
+		if (typeOf(_defense) find "POOK_ANMPQ53_B" == 0 || typeOf(_defense) find "POOK_ANMPQ53_O" == 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery_B" == 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery_O" == 0) then {
 			_defense setVehicleLock "LOCKED";
 		}
 	};

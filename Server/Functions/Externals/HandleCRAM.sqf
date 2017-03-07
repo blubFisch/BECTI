@@ -25,10 +25,10 @@ _proximityForAmmoDestruction = 10;	// When a CRAM shell gets closer than this, i
 _trackingRange = 2500;				// Turrets will aim, but not fire within this range and _openFireRange
 _openFireRange = 1200;
 _CRAMClassnames = [
-	"C_at_phalanx_35AI",
+	"O_at_phalanx_35AI",
 	"B_at_phalanx_35AI"];
 _cramAmmoSpeedMuzzle = 1440;
-_targetClasses = ["RocketCore", "ShellCore", "BombCore", "MissileCore", "Air"];	// If adding clases here, it might need adjustment for hostility detection in the main loop
+_targetClasses = ["RocketCore", "ShellCore", "ShellBase", "BombCore", "MissileCore", "Air"];	// If adding clases here, it might need adjustment for hostility detection in the main loop
 _scanInterval = 0.2;
 // ---------------------
 
