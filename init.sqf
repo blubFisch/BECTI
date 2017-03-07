@@ -94,6 +94,13 @@ if (CTI_IsHeadless) then {
 	execVM "Client\Init\Init_Client_Headless.sqf";
 };
 
+//---  CBA Check
+CBA_Loaded = false;
+if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then
+{
+	CBA_Loaded = true;
+};
+
 //--- Set the group ID
 execVM "Common\Init\Init_GroupsID.sqf";
 
