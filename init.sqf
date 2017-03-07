@@ -101,6 +101,14 @@ if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then
 	CBA_Loaded = true;
 };
 
+//---  OFPS Core Pack Check
+//--- Checking if sound classname is present as there is no central config.
+OFPS_Core_Loaded = false;
+if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then
+{
+	OFPS_Core_Loaded = true;
+};
+
 //--- Set the group ID
 execVM "Common\Init\Init_GroupsID.sqf";
 

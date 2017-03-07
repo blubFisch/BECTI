@@ -11,13 +11,16 @@ sleep 5;
 
 enableCamShake true;
 
-[] spawn {
-	while {al_snowstorm_om} do {
-		addCamShake [0.3,14,19];
-		_tremurici = ["tremurat_1","tremurat_2","NoSound","tremurat_3","tremurat_4","rafala_8"] call BIS_fnc_selectRandom;
-		playSound _tremurici;
-// >>>>  tweak the sleep value to increase or decrease time between player's shivering
-		sleep 240+random ambient_sounds_al;
+//--- OFPS Core pack check if loaded
+if (OFPS_Core_Loaded) then {
+	[] spawn {
+		while {al_snowstorm_om} do {
+			addCamShake [0.3,14,19];
+			_tremurici = ["tremurat_1","tremurat_2","NoSound","tremurat_3","tremurat_4","rafala_8"] call BIS_fnc_selectRandom;
+			playSound _tremurici;
+	// >>>>  tweak the sleep value to increase or decrease time between player's shivering
+			sleep 240+random ambient_sounds_al;
+		};
 	};
 };
 

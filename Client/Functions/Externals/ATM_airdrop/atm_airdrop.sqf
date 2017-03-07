@@ -121,11 +121,17 @@ Cut_Rope = (FindDisplay 46) displayAddEventHandler ["keydown","_this call dokeyD
 
 _height = getPos _target select 2;
 
-while {(getPos _target select 2) > 2} do {
-	playSound "Vent";
-	playSound "Vent2";
-	sleep 5;
-};
+
+
+	while {(getPos _target select 2) > 2} do {
+		
+		//--- Check if OFPS Core pack loaded
+		if (OFPS_Core_Loaded) then {
+			playSound "Vent";
+			playSound "Vent2";
+			sleep 5;
+		};
+	};
 
 hint Localize "STR_ATM_hintload";
 _target removeAction RedOn;

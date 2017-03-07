@@ -25,9 +25,6 @@ _radio =  "Land_HelipadEmpty_F" createVehicle position _vehicle; //Land_HelipadE
 		_action = _vehicle addaction ["Radio off","Client\Functions\Client_VehicleRadio.sqf",0,0,false,true,"","driver _target == player"];
 		_radio attachTo [_vehicle, [0,-1,1]];
 		sleep 1;
-		//_radio say3D ["valkyries",300,1];
-		//[_radio, "valkyries"] remoteExec ["say3D"];
-		//playSound3D ["ofps_sound\sounds\valkyries.ogg", _radio, true,getPos _radio, 10, 1, 300];
 		nul = [_radio,"valkyries",50] call Common_Say3D;
 		_radio setDamage 0;
 		_track = time + 240;//240fulllength
