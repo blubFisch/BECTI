@@ -36,6 +36,7 @@ Fixed: Town circle will disappear in some towns.
 Fixed: When player teamkills chat will display players name
 Fixed: When using toolkit to repair you could skip it to get instant repair.
 Fixed: Low gear and stealth for resistance units.
+Fixed: Defense object collision.
 Added: Indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
 Added: Hint for players if a friendly structure is attacked. displays health after damage
 Added: Friendly team notifications for when HQ is mobilized and deployed
@@ -47,6 +48,8 @@ Added: Low grass mod to core pack.
 Added: RHS Trucks to be able to load cargo such as ammo creates 
 Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 Removed: Some fortifications from defense truck menu.
+Removed: Items from defence truck and repair truck old action menus.
+Removed: Actions menus from halo drop.
 
 
 
