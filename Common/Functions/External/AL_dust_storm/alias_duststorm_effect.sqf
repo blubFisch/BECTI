@@ -46,9 +46,9 @@ while {al_duststorm_on} do {
 	effect_screen ppEffectAdjust [0.1,0.1,2,0.1,0.1,true];
 	effect_screen ppEffectCommit 0;
 	
-	"colorCorrections" ppEffectAdjust[ 0.86, 1, 0.01, [-0.14, 0.17, 0.33, -0.14],[0.86, -0.4, 0.86, 0.86],[-0.57, 0.86, -1.2, 0.86]];
+/*	"colorCorrections" ppEffectAdjust[ 0.86, 1, 0.01, [-0.14, 0.17, 0.33, -0.14],[0.86, -0.4, 0.86, 0.86],[-0.57, 0.86, -1.2, 0.86]];
 	"colorCorrections" ppEffectCommit 0;
-	"colorCorrections" ppEffectEnable true;
+	"colorCorrections" ppEffectEnable true;*/
 
 	// particule in aer
 	_leaves_p  = "#particlesource" createVehicleLocal (getpos player);
