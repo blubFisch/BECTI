@@ -554,7 +554,7 @@ if (CTI_DEV_MODE > 0) then {
 	while {true} do { 
 			{  
 			   player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");  
-			} forEach nearestObjects [player, ["house"], 20]; 
+			} forEach nearestObjects [player, [], 20]; 
 		 
 		 sleep 2;}
 		}

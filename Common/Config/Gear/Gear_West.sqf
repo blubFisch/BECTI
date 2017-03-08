@@ -513,11 +513,10 @@ _i pushBack ["arifle_Mk20_GL_ACO_F"];
 _u pushBack 1;
 _p pushBack 400;*/
 
-/* 
 _i pushBack "SMG_01_F"; //Vermin
 _u pushBack 0;
 _p pushBack 200;
-
+/* 
 _i pushBack ["SMG_01_Holo_F"];
 _u pushBack 0;
 _p pushBack 200;
@@ -643,12 +642,12 @@ _p pushBack 2500;
 _i pushBack "MMG_02_sand_F";
 _u pushBack 4;
 _p pushBack 2500;
-
+*/
 //--- Uniforms
 _i pushBack "U_B_CombatUniform_mcam";
 _u pushBack 0;
 _p pushBack 150;
-
+/*
 _i pushBack "U_B_CombatUniform_mcam_tshirt";
 _u pushBack 0;
 _p pushBack 150;

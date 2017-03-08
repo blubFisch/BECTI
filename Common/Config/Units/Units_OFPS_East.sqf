@@ -815,16 +815,6 @@ _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'rhsusf_mkvsoc';
-_p pushBack '';
-_n pushBack 'Sppedboat - GMG, HMG, GAU';
-_o pushBack 3900;
-_t pushBack 25;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 5;
-
 _c pushBack 'sfp_rbb_norrkoping';
 _p pushBack '';
 _n pushBack 'Norrkoping - Aegis Cruiser';

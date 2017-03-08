@@ -50,16 +50,16 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[1500,5000], //--- Satellite
 	[40000], //--- Nuke
 	[1000, 2000, 4000], //--- Supply Rate
-	[2000, 4000, 8000, 10000], //--- Base Health
-	[1500, 2000, 3000, 4000] //--- Base Defense
+	[4000, 5000, 6000, 7000], //--- Base Health
+	[500, 1000, 1500, 2000] //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
     [1500,2000,2500,3000], //--- Gear
 	[1000,2000,3000,4000], //--- Barracks
-	[2000,3000,4000,6000,24000], //--- Light
-	[3000,4000,6000,8000], //--- Heavy
-	[1500,2000,3000], //--- Naval
+	[2000,2500,3500,5000,24000], //--- Light
+	[3500,5000,6500,8000], //--- Heavy
+	[1500,2000], //--- Naval
 	[4000,6000,8000,10000,12000], //--- Air
 	[1500], //--- Air FFAR
 	[2500], //--- Air DAR
@@ -76,8 +76,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[4000,20000], //--- Satellite
 	[40000], //--- Nuke
 	[4000, 8000, 12000], //--- Supply Rate
-	[4000, 8000, 12000, 16000], //--- Base Health
-	[1500, 2500, 4000, 6000] //--- Base Defense
+	[4000, 5000, 6000, 7000], //--- Base Health
+	[500, 1000, 1500, 2000] //--- Base Defense
 ]];
 };
 
@@ -113,7 +113,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	4, //--- Barracks
 	5, //--- Light
 	4, //--- Heavy
-	3, //--- Naval
+	2, //--- Naval
 	5, //--- Air
 	1, //--- Air FFAR
 	1, //--- Air DAR
@@ -141,7 +141,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
-	[[],[],[]], //--- Naval
+	[[],[]], //--- Naval
 	[[],[],[],[],[]], //--- Air
 	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
 	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
@@ -166,8 +166,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
 	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
-	[[],[],[]], //--- Naval
+	[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
+	[[],[]], //--- Naval
 	[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
 	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
 	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
@@ -181,7 +181,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[]], //--- Respawn Range
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
 	[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
-	[[CTI_UPGRADE_AIR, 1], []], //--- Satellite
+	[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 3]], //--- Satellite
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 	[[],[],[]], //--- Supply Rate
 	[[],[],[],[]], //--- Base Health
@@ -195,7 +195,7 @@ if (CTI_DEV_MODE > 0) then {
 		[1, 1, 1, 1], //--- Barracks
 		[1, 1, 1, 1, 1], //--- Light
 		[1, 1, 1, 1], //--- Heavy
-		[1, 1, 1], //--- Naval
+		[1, 1], //--- Naval
 		[1, 1, 1, 1, 1], //--- Air
 		[1], //--- Air FFAR
 		[1], //--- Air DAR
@@ -248,7 +248,7 @@ if (CTI_DEV_MODE > 0) then {
 			[60,120,180,240], //--- Barracks
 			[60,120,180,240,300], //--- Light
 			[60,120,180,240], //--- Heavy
-			[60,120,180], //--- Naval
+			[60,120], //--- Naval
 			[60,120,180,240,300], //--- Air
 			[60], //--- Air FFAR
 			[60], //--- Air DAR
@@ -307,7 +307,7 @@ if (CTI_IsClient) then {
 		["Barracks", "<t>Unlock better infantry units, unlock more default player AI and improve AI skill<br /><t color='#ffff00'>LVL 0</t> - Base AI limit 3, AI Skill 40%<br /><t color='#ffff00'>LVL 1</t> - Base AI limit 4, AI Skill 55%<br /><t color='#ffff00'>LVL 2</t> - Base AI limit 5, AI Skill 70%<br /><t color='#ffff00'>LVL 3</t> - Base AI limit 6, AI Skill 85%<br /><t color='#ffff00'>LVL 4</t> - Base AI limit 7, AI Skill 100%</t>"], //--- Barracks
 		["Light Factory", "<t>Unlock better motorized units</t>"], //--- Light
 		["Heavy Factory", "<t>Unlock better armored units</t>"], //--- Heavy
-		["Naval Factory", "<t>Unlock better naval units<br /><t color='#ffff00'>LVL 1</t> - Attack Boats<br /><t color='#ffff00'>LVL 2</t> - Missile Boats<br /><t color='#ffff00'>LVL 3</t> - Frigates</t>"], //--- Naval
+		["Naval Factory", "<t>Unlock better naval units</t>"], //--- Naval
 		["Aircraft Factory", "<t>Unlock better aircraft units</t>"], //--- Air
 		["Aircraft FFAR", "<t>Unlocks the FFAR Rockets for Aircrafts</t>"], //--- Air FFAR
 		["Aircraft DAR", "<t>Unlocks the DAR Rockets for Aircrafts</t>"], //--- Air DAR

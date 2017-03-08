@@ -21,7 +21,11 @@ while {_radius > 1} do
     _count = _radiation * 10;
     for "_x" from 0 to _count do
     {
-      playsound "nuclear_geiger";
+
+      //--- OFPS Core pack check if loaded
+      if (OFPS_Core_Loaded) then {
+        playsound "nuclear_geiger";
+      };
       _random = (4 * random 1) / 10;
       _sleep = _sleep - _random;
       sleep _random;

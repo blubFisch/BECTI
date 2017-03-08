@@ -482,7 +482,8 @@ if (CTI_FACTION_WEST == 2) then {
 	}
 };
 
-//--- Units - Barracks
+//--- Below is classnames for Units and AI avaiable to puchase from Barracks Factory.
+
 _u = [];
 
 //Universal Vanilla
@@ -669,7 +670,7 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhsusf_army_ocp_rifleman';
+/*_u pushBack 'rhsusf_army_ocp_rifleman';*/
 _u pushBack 'rhsusf_army_ocp_rifleman_m16';
 _u pushBack 'rhsusf_army_ocp_rifleman_m4';
 _u pushBack 'rhsusf_army_ocp_aa';
@@ -691,10 +692,14 @@ _u pushBack 'rhsusf_army_ocp_sniper_m107';
 _u pushBack 'rhsusf_army_ocp_marksman';
 _u pushBack 'rhsusf_army_ocp_teamleader';
 _u pushBack 'rhsusf_army_ocp_squadleader';
+_u pushBack 'rhsusf_army_ocp_officer';
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Light Factory.
 
 //Universal Vanilla
 _u pushBack 'B_G_Offroad_01_F';		
@@ -945,6 +950,8 @@ _u pushBack 'rhsusf_M1237_MK19_usarmy_d';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Heavy Factory.
+
 //Universal Vanilla
 
 if (CTI_FACTION_WEST == 0) then {
@@ -1145,6 +1152,8 @@ _u pushBack 'rhsusf_m1a1hc_wd';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Air Factory.
+
 //Universal Vanilla
 _u pushBack "B_Heli_Light_01_F";
 _u pushBack "B_Heli_Transport_01_F";
@@ -1319,6 +1328,7 @@ if (CTI_RHS_ADDON > 0) then {
 _u pushBack 'RHS_UH1Y_UNARMED_d';
 _u pushBack 'RHS_UH60M_MEV2_d';
 _u pushBack 'RHS_MELB_MH6M';
+_u pushBack 'RHS_MELB_H6M';
 _u pushBack 'RHS_UH60M_d';
 _u pushBack 'RHS_CH_47F_10';
 _u pushBack 'rhsusf_CH53E_USMC_D';
@@ -1343,10 +1353,14 @@ _u pushBack 'RHS_A10_AT';
 _u pushBack 'RHS_AH64DGrey';
 _u pushBack 'RHS_AH64D';
 _u pushBack 'RHS_AH64D_AA';
+_u pushBack 'C_Plane_Civil_01_racing_F';
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Reapir Factory.
 
 //Universal Vanilla
 	_u pushBack "B_G_Offroad_01_repair_F";
@@ -1445,6 +1459,8 @@ _u pushBack 'rhsusf_M977A4_BKIT_M2_usarmy_wd';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Ammo Factory.
+
 //Universal Vanilla
 _u pushBack "B_Truck_01_ammo_F";
 _u pushBack 'B_Slingload_01_Ammo_F';
@@ -1537,6 +1553,8 @@ _u pushBack 'rhsusf_M978A4_usarmy_wd';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Factory.
+
 //Universal Vanilla
 _u pushBack "C_Boat_Civil_01_F";
 _u pushBack "B_Boat_Transport_01_F";
@@ -1605,7 +1623,6 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
-	_u pushBack "rhsusf_mkvsoc";
 	_u pushBack "sfp_rbb_norrkoping";
 	_u pushBack "OFPS_Frigate_Blu";
 
@@ -1625,11 +1642,13 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-
+_u pushBack "rhsusf_mkvsoc";
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Town Depot.
 
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
@@ -1736,6 +1755,11 @@ if (CTI_RHS_ADDON > 0) then {
 	//Universal RHS
 	_u pushBack 'rhsusf_army_ocp_rifleman_m16';
 	_u pushBack 'rhsusf_army_ocp_combatcrewman';
+	_u pushBack 'rhsusf_mrzr4_d';
+	_u pushBack 'rhsusf_m1025_w';
+	_u pushBack 'rhsusf_m1025_d';
+	_u pushBack 'rhsusf_m1025_w_m2';
+	_u pushBack 'rhsusf_m1025_d_m2';
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS
@@ -1752,6 +1776,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Large Fob.
 
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
@@ -1848,12 +1874,51 @@ if (CTI_OFPS_ADDON > 0) then {
 };
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
-//Universal RHS
+	//Universal RHS
+	_u pushBack 'rhsusf_army_ocp_rifleman_m16';
+	_u pushBack 'rhsusf_army_ocp_combatcrewman';
+	_u pushBack 'rhsusf_army_ocp_autorifleman';
+	_u pushBack 'rhsusf_army_ocp_riflemanat';
+	_u pushBack 'rhsusf_army_ocp_engineer';
+	_u pushBack 'rhsusf_army_ocp_explosives';
+    _u pushBack 'rhsusf_army_ocp_grenadier';
+    _u pushBack 'rhsusf_army_ocp_medic';
+    _u pushBack 'rhsusf_army_ocp_machinegunner';
+    _u pushBack 'rhsusf_army_ocp_marksman';
+    _u pushBack 'rhsusf_army_ocp_sniper_m24sws';
+    _u pushBack 'rhsusf_army_ocp_teamleader';
+    _u pushBack 'rhsusf_army_ocp_squadleader';
+    _u pushBack 'rhsusf_m1025_w';
+    _u pushBack 'rhsusf_mrzr4_d';
+    _u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
+    _u pushBack 'rhsusf_rg33_usmc_d';
+    _u pushBack 'rhsusf_rg33_usmc_wd';
+    _u pushBack 'rhsusf_m1025_d';
+    _u pushBack 'rhsusf_m1025_w_m2';
+    _u pushBack 'rhsusf_m1025_w_mk19';
+    _u pushBack 'rhsusf_m1025_d_m2';
+    _u pushBack 'rhsusf_m1025_d_Mk19';
+    _u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
+    _u pushBack 'rhsusf_M1237_M2_usarmy_d';
+    _u pushBack 'rhsusf_M1237_M2_usarmy_wd';
 
+	if (CTI_FACTION_WEST == 0) then {
+		//NATO Arid OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 1) then {
+		//NATO Tropic OFPS
+		
+	};
+	if (CTI_FACTION_WEST == 2) then { 
+    
+    };
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Depot.
 
 //Universal Vanilla
 _u pushBack "C_Boat_Civil_01_F";

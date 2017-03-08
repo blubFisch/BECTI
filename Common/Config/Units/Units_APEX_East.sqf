@@ -451,7 +451,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_T_MRAP_02_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
+_n pushBack ["1- Ifrit Pacific (Unarmed)"]; 
 _o pushBack 1250;
 _t pushBack 15;
 _u pushBack 1;
@@ -461,7 +461,7 @@ _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_hmg_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
+_n pushBack ["1- Hunter  Pacific (LMG)"]; 
 _o pushBack 2625;
 _t pushBack 20;
 _u pushBack 1;
@@ -471,7 +471,7 @@ _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_gmg_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
+_n pushBack ["2- Ifrit  Pacific (GMG)"]; 
 _o pushBack 2000;
 _t pushBack 20;
 _u pushBack 2;
@@ -501,7 +501,7 @@ _d pushBack 0;*/
 
 _c pushBack 'O_T_Truck_03_medical_ghex_F';
 _p pushBack '';
-_n pushBack (format ["Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_n pushBack (format ["1- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 4000;
 _t pushBack 20;
 _u pushBack 1;
@@ -511,7 +511,7 @@ _d pushBack 0;
 
 _c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F'; //Marid
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
+_n pushBack ["3- MSE-3 Marid (Pacific)"]; 
 _o pushBack 2250;
 _t pushBack 30;
 _u pushBack 3;
@@ -524,14 +524,14 @@ _d pushBack 0;
 _c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F'; //Kamysh
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 10750;
+_o pushBack 13475;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
+/*_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 28000;
@@ -539,19 +539,19 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 _c pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 7500;
+_o pushBack 10925;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_T_MBT_02_arty_ghex_F';
+/*c pushBack 'O_T_MBT_02_arty_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 140000;
@@ -559,7 +559,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;
+_d pushBack 0;*/
 
 //--- Repair Vehicles
 
@@ -602,7 +602,7 @@ _p pushBack '';
 _n pushBack 'Scout Plane'; 
 _o pushBack 10000;
 _t pushBack 20;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
@@ -617,7 +617,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;*/
 
-_c pushBack 'O_T_VTOL_02_infantry_F';
+/*_c pushBack 'O_T_VTOL_02_infantry_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 40000;
@@ -636,7 +636,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
+*/
 /*_c pushBack 'O_T_VTOL_02_infantry_hex_F';
 _p pushBack '';
 _n pushBack '';

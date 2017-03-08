@@ -5,7 +5,7 @@
 */
 
 // --- Configuration ---
-HandleSAMSite_ClientWarn_engageMinAlt = 200;	// !!!! Should also be same as in HandleSAMSite.sqf
+HandleSAMSite_ClientWarn_engageMinAlt = 100;	// !!!! Should also be same as in HandleSAMSite.sqf
 // ---------------------
 
 [] spawn {

@@ -182,25 +182,26 @@ if !(hasInterface) exitWith {/*diag_log "showNames_init.sqf - Finished (!hasInte
 	zam_shownames_var_bigFont = "TahomaB";
 
 	//// Key Handlers are added using CBA
-
-	// Toggle for group names, handled with a different variable to allow for default off
-	ZAM_showNames_group_names_toggle = false;
-	if (ZAM_showNames_group_names) then {
-		["ZAM", "Toggle group names", ["Toggle Group Names", "Show the person's Group ID next to their name."], {ZAM_showNames_group_names_toggle = !(call compile "ZAM_showNames_group_names_toggle"); true}, "", [0x15, [false, true, false]]] call cba_fnc_addKeybind;
-	};
-	ZAM_showNames_on = false;
-	// Key press and release. No release code if toggle mode is on.
-	if !(zam_showNames_toggle) then {
-		["ZAM", "showNames", ["Show Names", "To actually show the names"], {_this call ZAM_fnc_showNames_Press}, {_this call ZAM_fnc_showNames_Release}, [0x15, [false, false, false]]] call cba_fnc_addKeybind;
-	} else {
-		["ZAM", "showNames", ["Show Names", "To actually show the names"], {_this call ZAM_fnc_showNames_Press}, "", [0x15, [false, false, false]]] call cba_fnc_addKeybind;
-	};
-	
-	//If default On Mode
-	/*if(ZAM_showNames_default_on) then {
+	//--- Check if CBA is loaded.
+	if (CBA_Loaded) then {
+		// Toggle for group names, handled with a different variable to allow for default off
+		ZAM_showNames_group_names_toggle = false;
+		if (ZAM_showNames_group_names) then {
+			["ZAM", "Toggle group names", ["Toggle Group Names", "Show the person's Group ID next to their name."], {ZAM_showNames_group_names_toggle = !(call compile "ZAM_showNames_group_names_toggle"); true}, "", [0x15, [false, true, false]]] call cba_fnc_addKeybind;
+		};
 		ZAM_showNames_on = false;
-		sleep 10;
-		_this call ZAM_fnc_showNames_Press;
-	};*/
-
+		// Key press and release. No release code if toggle mode is on.
+		if !(zam_showNames_toggle) then {
+			["ZAM", "showNames", ["Show Names", "To actually show the names"], {_this call ZAM_fnc_showNames_Press}, {_this call ZAM_fnc_showNames_Release}, [0x15, [false, false, false]]] call cba_fnc_addKeybind;
+		} else {
+			["ZAM", "showNames", ["Show Names", "To actually show the names"], {_this call ZAM_fnc_showNames_Press}, "", [0x15, [false, false, false]]] call cba_fnc_addKeybind;
+		};
+	
+		//If default On Mode
+		/*if(ZAM_showNames_default_on) then {
+			ZAM_showNames_on = false;
+			sleep 10;
+			_this call ZAM_fnc_showNames_Press;
+		};*/
+	};
 };

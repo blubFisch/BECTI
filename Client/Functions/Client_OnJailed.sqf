@@ -40,7 +40,11 @@ removeAllContainers player;
 while {true} do {
 	if (time > _over) exitWith {};
 	
-	if (time - _last_loop > _song_loop) then {_last_loop = time;playSound "prison"};
+	if (time - _last_loop > _song_loop) then 
+		//--- OFPS Core pack check
+		if (OFPS_Core_Loaded) then {
+			{_last_loop = time;playSound "prison"};
+	};
 	hintSilent format ["Time Left in jail: %1!", round(_over - time)];
 	
 	sleep .1;

@@ -515,7 +515,8 @@ if (CTI_FACTION_EAST == 2) then {
 	}
 };
 
-//--- Units - Barracks
+//--- Below is classnames for Units and AI avaiable to puchase from Barracks Factory.
+
 _u = [];
 
 //Universal Vanilla
@@ -696,7 +697,7 @@ if (CTI_RHS_ADDON > 0) then {
 //Universal RHS
 	_u pushBack 'rhs_msv_emr_rifleman';
 	_u pushBack 'rhs_msv_emr_aa';
-	_u pushBack 'rhs_msv_emr_arifleman';
+/*	_u pushBack 'rhs_msv_emr_arifleman';*/
 	_u pushBack 'rhs_msv_emr_at';
 	_u pushBack 'rhs_msv_emr_combatcrew';
 	_u pushBack 'rhs_msv_emr_LAT';
@@ -716,6 +717,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_BARRACKS], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Light Factory.
 
 //Universal Vanilla
 _u pushBack 'I_C_Offroad_02_unarmed_F';		
@@ -926,16 +929,17 @@ _u pushBack 'rhs_btr80_msv';
 _u pushBack 'rhs_gaz66_zu23_msv';
 _u pushBack 'rhsgref_BRDM2_ATGM_msv';
 _u pushBack 'rhs_btr80a_msv';
-_u pushBack 'RHS_BM21_MSV_01';
+/*_u pushBack 'RHS_BM21_MSV_01';
 _u pushBack 'rhs_9k79';
-_u pushBack 'rhs_9k79_K';
+_u pushBack 'rhs_9k79_K';*/
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LIGHT], _u];
 _u = [];
 
-//Universal Vanilla
+//--- Below is classnames for Units and AI avaiable to puchase from Heavy Factory.
 
+//Universal Vanilla
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
@@ -1096,10 +1100,15 @@ _u pushBack 'rhs_t90a_tv';
 _u pushBack 'rhs_bmp3mera_msv'; 
 _u pushBack 'rhs_bmd4ma_vdv'; 
 _u pushBack 'rhs_2s3_tv';
+_u pushBack 'RHS_BM21_MSV_01';
+_u pushBack 'rhs_9k79';
+_u pushBack 'rhs_9k79_K';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Air Factory.
 
 //Universal Vanilla
 	_u pushBack 'O_Heli_Transport_04_F'; 
@@ -1115,6 +1124,7 @@ _u = [];
 	_u pushBack 'O_UAV_02_CAS_F';
 	_u pushBack 'O_UAV_02_F';
 	_u pushBack 'O_Plane_CAS_02_F';
+	_u pushBack 'C_Plane_Civil_01_F';
 
 
 if (CTI_FACTION_EAST == 0) then {
@@ -1279,9 +1289,12 @@ if (CTI_RHS_ADDON > 0) then {
 _u pushBack 'rhs_Mi8AMT_vvsc';
 _u pushBack 'rhs_ka60_c';
 _u pushBack 'RHS_Mi8mt_vvsc';
+_u pushBack 'RHS_Mi8mt_cargo_vdv';
 _u pushBack 'RHS_Mi8MTV3_vvsc';
 _u pushBack 'RHS_Mi8MTV3_FAB_vvsc';
 _u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
+_u pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
+_u pushBack 'RHS_Mi8AMTSh_vvsc';
 _u pushBack 'RHS_Su25SM_vvs';
 _u pushBack 'RHS_Su25SM_CAS_vvs';
 _u pushBack 'RHS_Mi24V_vvsc';
@@ -1294,14 +1307,17 @@ _u pushBack 'RHS_Mi24P_AT_vvsc';
 _u pushBack 'RHS_Ka52_vvsc';
 _u pushBack 'RHS_Ka52_UPK23_vvsc';
 _u pushBack 'RHS_Su25SM_KH29_vvs';
-_u pushBack 'RHS_T50_vvs_052';
+_u pushBack 'RHS_T50_vvs_055';
 _u pushBack 'RHS_TU95MS_vvs_tambov';
+_u pushBack 'RHS_TU95MS_vvs_old';
 _u pushBack 'rhs_mi28n_vvsc';
 _u pushBack 'rhs_mi28n_s13_vvsc';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Reapir Factory.
 
 //Universal Vanilla
 _u pushBack "O_G_Offroad_01_repair_F";
@@ -1485,6 +1501,8 @@ _u pushBack 'rhs_gaz66_ammo_msv';
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AMMO], _u];
 _u = [];
 
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Factory.
+
 //Universal Vanilla
 _u pushBack 'C_Boat_Civil_01_F';
 _u pushBack 'O_Boat_Transport_01_F';
@@ -1554,7 +1572,6 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
-	_u pushBack "rhsusf_mkvsoc";
 	_u pushBack "sfp_rbb_norrkoping";
 	_u pushBack "OFPS_Frigate_CSAT";
 
@@ -1574,11 +1591,15 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
+//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
+_u pushBack "rhsusf_mkvsoc";
 
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Depots.
 
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
@@ -1690,6 +1711,10 @@ if (CTI_RHS_ADDON > 0) then {
 	//Universal RHS
 	_u pushBack 'rhs_msv_emr_rifleman';
 	_u pushBack 'rhs_msv_emr_combatcrew';
+	_u pushBack 'rhsgref_ins_uaz_dshkm';
+	_u pushBack 'RHS_UAZ_MSV_01';
+	_u pushBack 'rhs_tigr_m_3camo_msv';
+
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -1706,6 +1731,8 @@ if (CTI_RHS_ADDON > 0) then {
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_DEPOT], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Large FOB.
 
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
@@ -1806,11 +1833,49 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
+	_u pushBack 'rhs_msv_emr_rifleman';
+	_u pushBack 'rhs_msv_emr_arifleman';
+	_u pushBack 'rhs_msv_emr_at';
+	_u pushBack 'rhs_msv_emr_combatcrew';
+	_u pushBack 'rhs_msv_emr_LAT';
+	_u pushBack 'rhs_msv_emr_RShG2';
+	_u pushBack 'rhs_msv_emr_engineer';
+	_u pushBack 'rhs_msv_emr_grenadier';
+	_u pushBack 'rhs_msv_emr_medic';
+	_u pushBack 'rhs_msv_emr_marksman';
+	_u pushBack 'rhs_msv_emr_junior_sergeant';
+	_u pushBack 'rhs_msv_emr_sergeant';
+	_u pushBack 'rhs_kamaz5350_msv';
+	_u pushBack 'rhs_tigr_m_3camo_msv';
+	_u pushBack 'RHS_UAZ_MSV_01';
+	_u pushBack 'rhsgref_BRDM2UM_msv';
+	_u pushBack 'rhsgref_ins_uaz_dshkm';
+	_u pushBack 'rhsgref_ins_uaz_ags';
+	_u pushBack 'rhs_btr70_msv';
 
+
+	if (CTI_FACTION_EAST == 0) then {
+		//CSAT Arid OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 1) then {
+		//CSAT Tropic OFPS
+		
+	};
+	if (CTI_FACTION_EAST == 2) then {
+		//CSAT Winter OFPS
+		_u pushBack 'IP_O_Soldier_FST';
+		_u pushBack 'IP_O_crew_FST';
+		_u pushBack 'sfp_bv206_winter';
+		_u pushBack 'AAF_D_MRAP_03_F';
+		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+	};
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_LARGE_FOB], _u];
 _u = [];
+
+//--- Below is classnames for Units and AI avaiable to puchase from Naval Towns.
 
 //Universal Vanilla
 _u pushBack 'C_Boat_Civil_01_F';

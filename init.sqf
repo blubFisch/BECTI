@@ -94,6 +94,21 @@ if (CTI_IsHeadless) then {
 	execVM "Client\Init\Init_Client_Headless.sqf";
 };
 
+//---  CBA Check
+CBA_Loaded = false;
+if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then
+{
+	CBA_Loaded = true;
+};
+
+//---  OFPS Core Pack Check
+//--- Checking if sound classname is present as there is no central config.
+OFPS_Core_Loaded = false;
+if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then
+{
+	OFPS_Core_Loaded = true;
+};
+
 //--- Set the group ID
 execVM "Common\Init\Init_GroupsID.sqf";
 
