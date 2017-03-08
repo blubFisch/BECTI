@@ -54,30 +54,19 @@ class FSM
        "" \n
        "//--- Commander checks" \n
        "_commander = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideCommanderTeam;" \n
-       "if (isNull _commander && !isNull _commander_last) then {_commander_update = true};" \n
-       "if (!isNull _commander && isNull _commander_last) then {_commander_update = true};" \n
-       "if (!isNull _commander && !isNull _commander_last) then {" \n
-       "	if (_commander != _commander_last) then {_commander_update = true};" \n
-       "};" \n
-       "" \n
-       "if (_commander_update) then {" \n
-       "	_commander_update = false;" \n
+       "if !(_commander isEqualTo _commander_last) then {" \n
        "	_commander_last = _commander;" \n
-       "	//--- AI/Null Com or different commander" \n
-       "	if (isNull _commander || _commander != group player) then {" \n
+       "	//--- If the player is not the commander, we remove the hq actions if necessary (otherwise we add it)" \n
+       "	if !(_commander isEqualTo group player) then {" \n
        "		if (alive _hq) then {" \n
        "			for '_i' from 0 to 3 do {_hq removeAction _i};" \n
        "		};" \n
        "		if !(isNil ""CTI_HQ_BuildAction"") then {player removeAction CTI_HQ_BuildAction};" \n
-       "	};" \n
-       "	if (!isNull _commander) then {" \n
-       "		if (_commander == group player) then {" \n
-       "			//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target == player && CTI_Base_HQInRange""];" \n
-       "			(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
-       "		};" \n
+       "	} else {" \n
+       "		//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target == player && CTI_Base_HQInRange""];" \n
+       "		(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
        "	};" \n
        "};" \n
-       "" \n
        "" \n
        "//--- Generic base checks" \n
        "_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;" \n
