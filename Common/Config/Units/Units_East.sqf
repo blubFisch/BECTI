@@ -532,7 +532,7 @@ _d pushBack 0;*/
 _c pushBack 'O_APC_Tracked_02_AA_F';
 _p pushBack '';
 _n pushBack 'ZSU-39 Tigris';
-_o pushBack 9500;
+_o pushBack 10925;
 _t pushBack 20;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -552,7 +552,7 @@ _d pushBack 0;*/
 _c pushBack 'O_APC_Tracked_02_cannon_F';
 _p pushBack '';
 _n pushBack 'BTR-K Kamysh';
-_o pushBack 12250;
+_o pushBack 13475;
 _t pushBack 20;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;

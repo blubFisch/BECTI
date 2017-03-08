@@ -524,7 +524,7 @@ _d pushBack 0;
 _c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F'; //Kamysh
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 12250;
+_o pushBack 13475;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -544,7 +544,7 @@ _d pushBack 0;*/
 _c pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 9500;
+_o pushBack 10925;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -602,7 +602,7 @@ _p pushBack '';
 _n pushBack 'Scout Plane'; 
 _o pushBack 10000;
 _t pushBack 20;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;

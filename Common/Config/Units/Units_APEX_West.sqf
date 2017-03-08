@@ -420,7 +420,7 @@ _p pushBack '';
 _n pushBack 'Scout Plane';
 _o pushBack 10000;
 _t pushBack 50;
-_u pushBack 1;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;

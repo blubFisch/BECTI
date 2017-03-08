@@ -983,19 +983,19 @@ _p pushBack 200;
 
 _i pushBack "rhs_medic_bag";
 _u pushBack 0;
-_p pushBack 250;
+_p pushBack 250;*/
 
 _i pushBack "RHS_SPG9_Gun_Bag";
-_u pushBack 2;
-_p pushBack 1200;
+_u pushBack 3;
+_p pushBack 1500;
 
 _i pushBack "RHS_SPG9_Tripod_Bag";
-_u pushBack 2;
-_p pushBack 300;
+_u pushBack 3;
+_p pushBack 500;
 
 _i pushBack "RHS_Podnos_Bipod_Bag";
 _u pushBack 4;
-_p pushBack 5000;
+_p pushBack 2500;
 
 _i pushBack "RHS_Podnos_Gun_Bag";
 _u pushBack 4;
@@ -1019,40 +1019,40 @@ _p pushBack 500;
 
 _i pushBack "RHS_AGS30_Tripod_Bag";
 _u pushBack 2;
-_p pushBack 200;
+_p pushBack 500;
 
 _i pushBack "RHS_AGS30_Gun_Bag";
 _u pushBack 2;
 _p pushBack 1000;
 
 _i pushBack "RHS_DShkM_Gun_Bag";
-_u pushBack 4;
-_p pushBack 500;
+_u pushBack 2;
+_p pushBack 1000;
 
 _i pushBack "RHS_DShkM_TripodHigh_Bag";
-_u pushBack 4;
+_u pushBack 2;
 _p pushBack 500;
 
 _i pushBack "RHS_DShkM_TripodLow_Bag";
-_u pushBack 4;
+_u pushBack 2;
 _p pushBack 500;
 
 _i pushBack "RHS_Kord_Tripod_Bag";
 _u pushBack 2;
-_p pushBack 200;
+_p pushBack 500;
 
 _i pushBack "RHS_Kord_Gun_Bag";
-_u pushBack 2;
-_p pushBack 800;
+_u pushBack 3;
+_p pushBack 120;
 
 _i pushBack "RHS_NSV_Tripod_Bag";
-_u pushBack 4;
-_p pushBack 500;
+_u pushBack 3;
+_p pushBack 1500;
 
 _i pushBack "RHS_NSV_Gun_Bag";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 500;
-*/
+
 
 //Helmets
 

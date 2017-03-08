@@ -479,14 +479,14 @@ _d pushBack 0;
 _c pushBack 'B_APC_Tracked_01_rcws_F'; //Panther
 _p pushBack '';
 _n pushBack '';
-_o pushBack 6500;
+_o pushBack 7150;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-//Slammer UP
+/*//Slammer UP
 _c pushBack 'B_MBT_01_TUSK_F';  
 _p pushBack '';
 _n pushBack '';
@@ -496,7 +496,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-
+*/
 //slammer120
 /*_c pushBack 'B_MBT_01_cannon_F';
 _p pushBack '';
@@ -512,7 +512,7 @@ _d pushBack 0;*/
 _c pushBack 'B_APC_Tracked_01_AA_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 9500;
+_o pushBack 10900;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
