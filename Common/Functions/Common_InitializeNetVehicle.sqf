@@ -97,11 +97,12 @@ if (_sideID != CTI_P_SideID) exitWith {};
 
 if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
 	_vehicle addItemCargoGlobal ["ToolKit",1];
-	if (CTI_BASE_FOB_MAX > 0) then {
+//--- Removed old Actions.
+/*	if (CTI_BASE_FOB_MAX > 0) then {
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Dismantle Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB_DISMANTLE, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB_Dismantle < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Dismantle Nearest FOB</t>", "Client\Actions\Action_DismantleFOB.sqf", "", 92, false, true, "", "_this == player && (CTI_P_TeamsRequests_FOB_Dismantle > 0 || call CTI_CL_FNC_IsPlayerCommander)"];
-	};
+	};*/
 };
 
 //Defense Truck Cargo
@@ -109,12 +110,6 @@ if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"maint"; //type is ok? b_support ?
 	_vehicle addItemCargoGlobal ["ToolKit",1];
-	_vehicle addMagazineCargoGlobal ["ATMine_Range_Mag",8];
-	_vehicle addMagazineCargoGlobal ["APERSMine_Range_Mag",4];
-	_vehicle addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag",4];
-	_vehicle addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",4];
-	_vehicle addMagazineCargoGlobal ["APERSTripMine_Wire_Mag",4];
-	_vehicle addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",4];
 };
 
 if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
