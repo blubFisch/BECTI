@@ -953,6 +953,7 @@ if (CTI_FACTION_WEST == 0) then {
 	_u pushBack "B_APC_Tracked_01_rcws_F";
 	_u pushBack "B_APC_Tracked_01_AA_F";
 	_u pushBack "B_MBT_01_cannon_F";
+	_u pushBack "B_MBT_01_TUSK_F";
 	_u pushBack "B_MBT_01_arty_F";
 	_u pushBack "B_MBT_01_mlrs_F";	
 };
@@ -1090,6 +1091,7 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack "OFPS_PANTHER";
 		_u pushBack "OFPS_CHEETAH";
 		_u pushBack "OFPS_SLAMMER";
+		_u pushback "OFPS_SLAMMER_TUSK";
 		_u pushBack "OFPS_SCORCHER";
 		_u pushBack "OFPS_SANDSTORM";
 		_u pushBack "OFPS_BOBCAT";
