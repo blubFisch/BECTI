@@ -120,21 +120,6 @@ if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
 };
 
-//--- Adds in stealth add action to tanks 
-if (_vehicle isKindOf "Tank") then {
-	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target == _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
-};
-if (_vehicle isKindOf "Car") then { //--- Low gear added to apc/cars
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
-};
-if (_vehicle isKindOf "Ship") then {
-	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
-	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
-};
-
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;
