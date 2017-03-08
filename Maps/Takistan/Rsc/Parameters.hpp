@@ -21,13 +21,13 @@ class Params {
 		title = "FACTION: Starting gear";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class CTI_FACTION_DEFAULT_TROOPS {
 		title = "FACTION: Default infantry";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
@@ -63,7 +63,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 10000;
+		default = 8000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -75,7 +75,7 @@ class Params {
 		title = "INCOME: Delay";
 		values[] = {30,35,40,45,50,55,60,65,70,75,80};
 		texts[] = {"30 Seconds","35 Seconds","40 Seconds","45 Seconds","50 Seconds","55 Seconds","01:00 Minutes","01:05 Minutes","01:10 Minutes","01:15 Minutes"};
-		default = 55;
+		default = 60;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST_COMMANDER {
 		title = "INCOME: Starting Funds (East Commander)";
@@ -153,19 +153,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8,9};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter","RHS GREF"};
-		default = 5;
+		default = 9;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 1;
+		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 1;
+		default = 5;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -357,7 +357,7 @@ class Params {
 		title = "GAMEPLAY: Weapon Sway Level";
 		values[] = {0,25,50,75,100};
 		texts[] = {"None","Little","Normal","Allot","Full"};
-		default = 0;
+		default = 25;
 	};
 	class CTI_SM_NONV {
 		title = "GAMEPLAY: Disable NVs, Thermal on Players";
@@ -393,7 +393,7 @@ class Params {
 		title = "TEAM: Team Stack protection";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Disabled","+1 Player","+2 Players","+3 Players","+4 Players","+5 Players"};
-		default = 2;
+		default = 1;
 	};
 	class SEPARATOR8 {
 		title = "======================== MAP SETTINGS =========================";
@@ -405,19 +405,19 @@ class Params {
 		title = "VISUAL: Terrain Grid";
 		values[] = {10,20,30,40,50};
 		texts[] = {"Far","Medium","Short","Shorter","Free"};
-		default = 50;
+		default = 10;
 	};
 	class CTI_GRAPHICS_VD_MAX {
 		title = "VISUAL: View Distance";
 		values[] = {1000,1500,2000,2500,3000,3500,4000};
 		texts[] = {"1 KM","1.5 KM","2 KM","2.5 KM","3 KM","3.5 KM","4 KM"};
-		default = 4000;
+		default = 3500;
 	};
 	class CTI_WEATHER_INITIAL {
 		title = "WEATHER: Inital Time";
 		values[] = {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		texts[] = {"12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Random"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_RAIN {
 		title = "WEATHER: Rain (Rain Requires Overcast Greater High)";
@@ -447,13 +447,13 @@ class Params {
 		title = "WEATHER: Dust Storms";
 		values[] = {0,1,2,3,4};
 		texts[] = {"Clear","Light","Medium - Adds Wall of Dust","High - Adds Effect on Objects","Max - Adds Lethal Wall"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_WEATHER_DUST_COEF {
 		title = "WEATHER: Dust Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0.5;
+		default = 0;
 	};
 	class CTI_WEATHER_MONSOON {
 		title = "WEATHER: Monsoon Storms";
@@ -471,49 +471,49 @@ class Params {
 		title = "WEATHER: Overcast";
 		values[] = {-1,0,30,50,75,100};
 		texts[] = {"Random","Clear","Light","Medium","High","Max"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_OVERCAST_COEF {
 		title = "WEATHER: Overcast Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0.1;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG {
 		title = "WEATHER: Fog value";
 		values[] = {-1,0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"Random","Clear","10","20","30","40","50","60","70","80","90","MAX"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG_COEF {
 		title = "WEATHER: Fog Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0;
+		default = 0.1;
 	};
 	class CTI_WEATHER_FOG_DECAY {
 		title = "WEATHER: Fog decay level";
 		values[] = {-1,0,0.02,0.04,0.06,0.08,0.1,0.15,0.20,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","0.02","0.04","0.06","0.08","0.1","0.15","0.20","0.25","0.5","0.75","1"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG_DECAY_COEF {
 		title = "WEATHER: Fog decay Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG_ALT {
 		title = "WEATHER: Fog altitude";
 		values[] = {-1,0,1,5,25,50,100,200,300,400,500,600,700,800,900,1000};
 		texts[] = {"Random","0m","1m","5m","25m","50m","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG_ALT_COEF {
 		title = "WEATHER: Fog altitude Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_WIND {
 		title = "WEATHER: Wind";
@@ -549,7 +549,7 @@ class Params {
 		title = "WEATHER: Duration of Storms (dust storms and monsoons)";
 		values[] = {-1,60,120,300,600,900,1800,2700,3600,5400,7200,14400};
 		texts[] = {"Random","1min","2min","5min","10min","15min","30min","45min","60min","90min","120min","240min"};
-		default = 300;
+		default = 900;
 	};
   	class CTI_WEATHER_FAST {
 		title = "WEATHER: Day Duration";
@@ -579,7 +579,7 @@ class Params {
 		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_CUP_CORE_ADDON {
 		title = "ADDON: CUP CORE and CUP Terrains";
@@ -597,7 +597,7 @@ class Params {
 		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class SEPARATOR10 {
 		title = "========================= GAMEMODES ===========================";
