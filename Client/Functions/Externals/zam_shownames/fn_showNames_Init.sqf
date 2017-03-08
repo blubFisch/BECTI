@@ -183,7 +183,7 @@ if !(hasInterface) exitWith {/*diag_log "showNames_init.sqf - Finished (!hasInte
 
 	//// Key Handlers are added using CBA
 	//--- Check if CBA is loaded.
-	if (CBA_Loaded) then {
+	if (missionNamespace getVariable "CBA_Loaded") then {
 		// Toggle for group names, handled with a different variable to allow for default off
 		ZAM_showNames_group_names_toggle = false;
 		if (ZAM_showNames_group_names) then {

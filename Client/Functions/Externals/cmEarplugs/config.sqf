@@ -214,7 +214,7 @@ switch cmEarplugs_myHotkeyChoice do {
 };
 //// Key Handlers are added using CBA
 //-- Check if CBA Loaded
-if (CBA_Loaded) then {
+if (missionNamespace getVariable "CBA_Loaded") then {
 	["OFPS", "toggle_earplugs", ["Toggle earplugs", "Remove or Insert your earplugs."], "", "", [0xD2, [false, true, false]]] call cba_fnc_addKeybind;
 	_keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
 	if (!isNil "_keybindear") then {
