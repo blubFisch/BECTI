@@ -245,7 +245,7 @@ _upgrade = [];
 _specials = [];
 
 //Compositions - setup compositions in Common/Config/Compositions/
-	_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",false]]];
+/*	_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",false]]];
 	_classes pushBack 		"Sign_Arrow_Direction_Green_F";
 	_prices pushBack 		100;
 	_placements pushBack 	[0, 5];
@@ -363,7 +363,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		2;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 	
 	
 //--- Compositions Manual Mode - must set statics manually in Server_BuildDefense.sqf line 123
@@ -903,7 +903,7 @@ _specials = [];
 	};
 	
 	if (CTI_OFPS_ADDON > 0) then {
-		_headers pushBack 		"Mil Shed";
+		/*_headers pushBack 		"Mil Shed";
 		_classes pushBack 		"Land_sfp_mil_shed";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 20];
@@ -931,7 +931,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];*/
 
 		_headers pushBack 		"AN/MPQ-53 - AA Radar";
 		_classes pushBack 		"POOK_ANMPQ53_B";

@@ -656,14 +656,14 @@ if (CTI_OFPS_ADDON > 0) then {
 		_u pushBack 'sfp_m90s_medic';*/
 
 		//Special Forces
-		_u pushBack 'Meaty_Soldier_B_Sn';
+		/*_u pushBack 'Meaty_Soldier_B_Sn';
 		_u pushBack 'Meaty_teamlead_B_Sn';
 		_u pushBack 'Meaty_SoldierGL_B_Sn';
 		_u pushBack 'Meaty_SoldierAA_B_Sn';
 		_u pushBack 'Meaty_AT_NLAW_B_Sn';
 		_u pushBack 'Meaty_Medic_B_Sn';
 		_u pushBack 'Meaty_SoldierMK_B_Sn';
-		_u pushBack 'Meaty_AR_B_Sn';
+		_u pushBack 'Meaty_AR_B_Sn';*/
 
 	};
 };
@@ -827,9 +827,9 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter CUP
-	_u pushBack 'OFPS_S_M1126_HMG';
+	/*_u pushBack 'OFPS_S_M1126_HMG';
 	_u pushBack 'OFPS_S_M1126_GMG';
-	_u pushBack 'OFPS_S_M1133_MEV';
+	_u pushBack 'OFPS_S_M1133_MEV';*/
 		
 	};
 };
@@ -856,10 +856,10 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		_u pushBack 'sfp_bv206_winter';
+		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';	
-		_u pushBack 'Meaty_HunterGMG_Sn';
+		_u pushBack 'Meaty_HunterGMG_Sn';*/
 	};
 };
 //--- RHS UNITS
@@ -1064,7 +1064,7 @@ if (CTI_CUP_ADDON > 0) then {
 		};
 		if (CTI_FACTION_WEST == 2) then {
 			//NATO Winter CUP
-	        _u pushBack 'OFPS_S_M2';
+	        /*_u pushBack 'OFPS_S_M2';
 	        _u pushBack 'OFPS_S_M1A1'; 
 	        _u pushBack 'OFPS_S_M1129_SPG';	
 		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
@@ -1078,7 +1078,7 @@ if (CTI_CUP_ADDON > 0) then {
 		_u pushBack 'CUP_B_FV510_GB_W';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army'; 
 	 	_u pushBack 'CUP_B_Challenger2_Snow_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CS_BAF';
+		_u pushBack 'CUP_B_Challenger2_2CS_BAF';*/
 			
 		};
 };
@@ -1106,13 +1106,13 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		_u pushBack 'Meaty_Marshall_Sn';		
+		/*_u pushBack 'Meaty_Marshall_Sn';		
 		_u pushBack 'Meaty_cheetah_Sn';	
 		_u pushBack 'Meaty_Bobcat_Sn';	
 		_u pushBack 'Meaty_Panther_Sn';  
 		_u pushBack 'Meaty_slammer_Sn'; 
 		_u pushBack 'Meaty_Scorcher_Sn';   	
-		_u pushBack 'Meaty_Sandstorm_Sn';  	
+		_u pushBack 'Meaty_Sandstorm_Sn'; */ 	
 	};
 };
 //--- RHS UNITS
@@ -1276,14 +1276,14 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'O_UAV_02_F';		
 	_u pushBack 'B_UCSV_01';
 	_u pushBack 'B_UCSV_02';
-	_u pushBack 'bwi_a3_t6a';
+	/*_u pushBack 'bwi_a3_t6a';
 	_u pushBack 'bwi_a3_t6c';
 	_u pushBack 'bwi_a3_at6b';
 	_u pushBack 'bwi_a3_at6b_3';
 	_u pushBack 'sab_alphajet';
-	_u pushBack 'sab_alphajet2';
+	_u pushBack 'sab_alphajet2';*/
 	_u pushBack 'OFPS_BUZZA_B';
-	_u pushBack 'pook_tu953M80_CDF';
+	/*_u pushBack 'pook_tu953M80_CDF';
 	_u pushBack 'pook_tu95ms_CDF';
 	_u pushBack 'pook_tu95ms16_CDF';
 	_u pushBack 'pook_tu95MSM_CDF';
@@ -1298,12 +1298,12 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'USAF_MC130';
 	_u pushBack 'LDL_C130J';
 	_u pushBack 'USAF_AC130U';
-	//_u pushBack 'USAF_C17';
+	_u pushBack 'USAF_C17';
 	_u pushBack 'usaf_c5';
 	_u pushBack 'USAF_MQ9';
 	_u pushBack 'USAF_RQ4A';
 	_u pushBack 'USAF_A10';
-	_u pushBack 'usaf_b1b';	
+	_u pushBack 'usaf_b1b';	*/
 
 
 	if (CTI_FACTION_WEST == 0) then {
@@ -1316,9 +1316,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-	_u pushBack "AAF_D_Heli_Transport_02_F";
+	/*_u pushBack "AAF_D_Heli_Transport_02_F";
 	_u pushBack "AAF_D_Heli_light_03_F";
-	_u pushBack "AAF_D_Heli_light_03_unarmed_F";
+	_u pushBack "AAF_D_Heli_light_03_unarmed_F";*/
 		
 	};
 };
@@ -1619,12 +1619,12 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack "Burnes_LCAC_1";
+	/*_u pushBack "Burnes_LCAC_1";
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
 	_u pushBack "sfp_rbb_norrkoping";
-	_u pushBack "OFPS_Frigate_Blu";
+	_u pushBack "OFPS_Frigate_Blu";*/
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS
@@ -1743,11 +1743,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		//_u pushBack 'sfp_m90s_rifleman_ak5';
-		//_u pushBack 'sfp_m90s_crew';
+		/*_u pushBack 'sfp_m90s_rifleman_ak5';
+		_u pushBack 'sfp_m90s_crew';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
-		_u pushBack 'Meaty_HunterHMG_Sn';
+		_u pushBack 'Meaty_HunterHMG_Sn';*/
 	};
 };
 //--- RHS UNITS
@@ -1850,7 +1850,7 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'sfp_dakota';
+	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
 	//_u pushBack 'usaf_police_car2';
 	//_u pushBack 'usaf_police_offroad';
@@ -1865,11 +1865,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 2) then {
 		//NATO Winter OFPS
-		//_u pushBack 'sfp_m90s_rifleman_ak5';
-		//_u pushBack 'sfp_m90s_crew';
+		/*_u pushBack 'sfp_m90s_rifleman_ak5';
+		_u pushBack 'sfp_m90s_crew';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
-		_u pushBack 'Meaty_HunterHMG_Sn';
+		_u pushBack 'Meaty_HunterHMG_Sn';*/
 	};
 };
 //--- RHS UNITS
@@ -1981,9 +1981,9 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack "sfp_svavare2000";
+	/*_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
-	_u pushBack "sfp_gruppbat";
+	_u pushBack "sfp_gruppbat";*/
 
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid OFPS

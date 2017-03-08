@@ -667,7 +667,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-	_u pushBack 'IP_O_Soldier_FST';
+	/*_u pushBack 'IP_O_Soldier_FST';
 	_u pushBack 'IP_O_Soldier_LAT_FST';
 	_u pushBack 'IP_O_HeavyGunner_FST';
 	_u pushBack 'IP_O_Sharpshooter_FST';
@@ -689,7 +689,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'IP_O_pathfinder_FST';
 	_u pushBack 'IP_O_recon_FST';
 	_u pushBack 'IP_O_recon_LAT_FST';
-	_u pushBack 'IP_O_recon_TL_FST';
+	_u pushBack 'IP_O_recon_TL_FST';*/
 	};
 };
 //--- RHS UNITS
@@ -855,7 +855,7 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-	_u pushBack 'OFPS_S_BRDM2_T';
+	/*_u pushBack 'OFPS_S_BRDM2_T';
 	_u pushBack 'OFPS_S_BRDM2ATGM_T';
 	_u pushBack 'OFPS_S_BRDM2HQ_T';
 	_u pushBack 'OFPS_S_BTR60';
@@ -867,13 +867,13 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'OFPS_S_LR_MG';
 	_u pushBack 'OFPS_S_LR_S';
 	_u pushBack 'OFPS_S_LR_SPG9';
-	_u pushBack 'OFPS_S_LR_SX';
+	_u pushBack 'OFPS_S_LR_SX';*/
 	};
 };
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'dbo_CIV_new_bike';
+	/*_u pushBack 'dbo_CIV_new_bike';
 	_u pushBack 'OFPS_BRDM2';
 	_u pushBack 'OFPS_BRDM2ATGM';
 	_u pushBack 'OFPS_BRDM2HQ';
@@ -882,7 +882,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'OFPS_UAZ_MG';
 	_u pushBack 'OFPS_UAZ_METIS';
 	_u pushBack 'OFPS_UAZ';
-	_u pushBack 'OFPS_UAZ_SPG9';
+	_u pushBack 'OFPS_UAZ_SPG9';*/
 	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
 	//_u pushBack 'dbo_CIV_ol_bike';
@@ -897,12 +897,12 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-		_u pushBack 'sfp_bv206_winter';
+		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'AAF_D_Truck_02_covered_F';
 		_u pushBack 'AAF_D_MRAP_03_F';
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';
 		_u pushBack 'AAF_D_MRAP_03_gmg_F';
-		_u pushBack 'AAF_D_Truck_02_medical_F';
+		_u pushBack 'AAF_D_Truck_02_medical_F';*/
 	};
 };
 //--- RHS UNITS
@@ -1033,7 +1033,7 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-	_u pushBack 'OFPS_S_BMP1';
+	/*_u pushBack 'OFPS_S_BMP1';
 	_u pushBack 'OFPS_S_BMP1P';
 	_u pushBack 'OFPS_S_BMP2';
 	_u pushBack 'OFPS_S_BMP2_HQ';
@@ -1041,7 +1041,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'OFPS_S_ZSU23';
 	_u pushBack 'OFPS_T55_S';
 	_u pushBack 'OFPS_T72_S';
-	_u pushBack 'OFPS_S_BMP3';
+	_u pushBack 'OFPS_S_BMP3';*/
 	
 	};
 };
@@ -1066,9 +1066,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-	_u pushBack "AAF_D_APC_tracked_03_cannon_F";
+	/*_u pushBack "AAF_D_APC_tracked_03_cannon_F";
 	_u pushBack "AAF_D_MBT_03_cannon_F";
-	_u pushBack "AAF_D_APC_Wheeled_03_cannon_F";
+	_u pushBack "AAF_D_APC_Wheeled_03_cannon_F";*/
 		
 	};
 };
@@ -1226,7 +1226,7 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter CUP
-	_u pushBack 'OFPS_MI6S';			
+	/*_u pushBack 'OFPS_MI6S';			
 	_u pushBack 'CUP_B_Mi24_D_MEV_CDF';		
 	_u pushBack 'CUP_O_Mi24_P_RU';		
 	_u pushBack 'CUP_O_Mi24_V_RU';
@@ -1235,19 +1235,19 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';
 	_u pushBack 'OFPS_S_SU25';
 	_u pushBack 'OFPS_S_SU34_AGM';
-	_u pushBack 'OFPS_S_SU34_LGB';
+	_u pushBack 'OFPS_S_SU34_LGB';*/
 	};
 };
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'O_T_UAV_04_CAS_F';			
+	/*_u pushBack 'O_T_UAV_04_CAS_F';*/			
     _u pushBack 'O_UCSV_01';
-	_u pushBack 'sfp_bo105_unarmed';
-	_u pushBack 'sfp_bo105';
+	/*_u pushBack 'sfp_bo105_unarmed';
+	_u pushBack 'sfp_bo105';*/
 	_u pushBack 'O_UCSV_01';
 	//_u pushBack 'USAF_C17';
-	_u pushBack 'usaf_c5';
+	/*_u pushBack 'usaf_c5';
 	_u pushBack 'LDL_C130J';
 	_u pushBack 'bwi_a3_t6a_5';
 	_u pushBack 'bwi_a3_at6b_2';
@@ -1255,15 +1255,15 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'sab_alphajet8';
 	_u pushBack 'sfp_j12';
 	_u pushBack 'sfp_j12_rb15';
-	_u pushBack 'sfp_j12_cap';
+	_u pushBack 'sfp_j12_cap';*/
 	_u pushBack 'OFPS_BUZAA_O';
-	_u pushBack 'usaf_b1b';
+	/*_u pushBack 'usaf_b1b';
 	_u pushBack 'pook_tu953M80';
 	_u pushBack 'pook_tu95ms';
 	_u pushBack 'pook_tu95ms16';
 	_u pushBack 'pook_tu95MSM';
 	_u pushBack 'JS_JC_SU35';
-	_u pushBack "sab_l19_sea_1";
+	_u pushBack "sab_l19_sea_1";*/
 
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -1276,10 +1276,10 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-	_u pushBack "IP_O_Plane_CAS_02_FSnowHex";
+	/*_u pushBack "IP_O_Plane_CAS_02_FSnowHex";
 	_u pushBack 'IP_O_Heli_Attack_02_SnowHex_FST';
 	_u pushBack 'IP_O_Heli_Light_02_FST';
-	_u pushBack 'IP_O_Heli_Light_02_unarmed_FST';
+	_u pushBack 'IP_O_Heli_Light_02_unarmed_FST';*/
 		
 	};
 };
@@ -1398,7 +1398,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-			_u pushBack 'AAF_D_Truck_02_box_F';
+		//_u pushBack 'AAF_D_Truck_02_box_F';
 		
 	};
 };
@@ -1446,7 +1446,7 @@ if (CTI_APEX_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 1) then {
 		//CSAT Tropic APEX
-			_u pushBack 'O_T_Truck_03_ammo_ghex_F';
+		_u pushBack 'O_T_Truck_03_ammo_ghex_F';
 
 		
 	};
@@ -1488,7 +1488,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-					_u pushBack 'AAF_D_Truck_02_box_F';
+		//_u pushBack 'AAF_D_Truck_02_box_F';
 		
 	};
 };
@@ -1568,12 +1568,12 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack "Burnes_LCAC_1";
+	/*_u pushBack "Burnes_LCAC_1";
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
 	_u pushBack "sfp_rbb_norrkoping";
-	_u pushBack "OFPS_Frigate_CSAT";
+	_u pushBack "OFPS_Frigate_CSAT";*/
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -1699,11 +1699,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-		_u pushBack 'IP_O_Soldier_FST';
+		/*_u pushBack 'IP_O_Soldier_FST';
 		_u pushBack 'IP_O_crew_FST';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'AAF_D_MRAP_03_F';
-		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+		_u pushBack 'AAF_D_MRAP_03_hmg_F';*/
 	};
 };
 //--- RHS UNITS
@@ -1823,11 +1823,11 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter OFPS
-		_u pushBack 'IP_O_Soldier_FST';
+		/*_u pushBack 'IP_O_Soldier_FST';
 		_u pushBack 'IP_O_crew_FST';
 		_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'AAF_D_MRAP_03_F';
-		_u pushBack 'AAF_D_MRAP_03_hmg_F';
+		_u pushBack 'AAF_D_MRAP_03_hmg_F';*/
 	};
 };
 //--- RHS UNITS
@@ -1939,9 +1939,9 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack "sfp_svavare2000";
+	/*_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
-	_u pushBack "sfp_gruppbat";
+	_u pushBack "sfp_gruppbat";*/
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
