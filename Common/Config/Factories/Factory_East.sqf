@@ -1572,7 +1572,6 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
-	_u pushBack "rhsusf_mkvsoc";
 	_u pushBack "sfp_rbb_norrkoping";
 	_u pushBack "OFPS_Frigate_CSAT";
 
@@ -1592,6 +1591,8 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
+//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
+_u pushBack "rhsusf_mkvsoc";
 
 };
 

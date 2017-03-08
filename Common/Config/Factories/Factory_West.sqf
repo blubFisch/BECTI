@@ -1621,7 +1621,6 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack "sfp_svavare2000";
 	_u pushBack "sfp_svavare2000_transport";
 	_u pushBack "sfp_gruppbat";
-	_u pushBack "rhsusf_mkvsoc";
 	_u pushBack "sfp_rbb_norrkoping";
 	_u pushBack "OFPS_Frigate_Blu";
 
@@ -1641,7 +1640,7 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-
+_u pushBack "rhsusf_mkvsoc";
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_NAVAL], _u];

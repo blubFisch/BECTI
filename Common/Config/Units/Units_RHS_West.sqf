@@ -1858,5 +1858,14 @@ _d pushBack 10;
 
 //--- Naval Vehicles
 
+_c pushBack 'rhsusf_mkvsoc';
+_p pushBack '';
+_n pushBack 'Speedboat GMG, HMG, GAU';
+_o pushBack 5000;
+_t pushBack 25;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_NAVAL;
+_s pushBack "";
+_d pushBack 5;
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Units\Set_Units.sqf";

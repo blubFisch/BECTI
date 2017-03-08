@@ -783,7 +783,7 @@ _p pushBack '';
 _n pushBack 'Speedboat GMG, GAU';
 _o pushBack 4400;
 _t pushBack 25;
-_u pushBack 2;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
