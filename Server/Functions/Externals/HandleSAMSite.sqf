@@ -17,9 +17,9 @@ private ["_engageMinAlt", "_engagementDistanceMax", "_radarNames", "_launcherNam
 _engageMinAlt = 50;	// !!!! Should also be same as in HandleSAMSitel_ClientWarn.sqf
 _radarNames = ["POOK_ANMPQ53_O", "POOK_ANMPQ53_B"];	// east, west
 _launcherNames = ["pook_MIM104_PAC2Battery_O", "pook_MIM104_PAC2Battery_B"];	// east, west
-_reloadTime = 10;	// Launcher reload time. This is the minimum interval in which a single launcher will be fired
-_missileLockTime = 5;	// Minimum missile lock time
-_targetEngagementInterval = 5;		// Minimum time between engagements of a single target
+_reloadTime = 5;	// Launcher reload time. This is the minimum interval in which a single launcher will be fired
+_missileLockTime = 2;	// Minimum missile lock time
+_targetEngagementInterval = 2;		// Minimum time between engagements of a single target
 // ---------------------
 
 sleep 1;
