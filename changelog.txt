@@ -35,7 +35,6 @@ Fixed: Camps relocated inside town circle for some towns.
 Fixed: Town circle will disappear in some towns.
 Fixed: When player teamkills chat will display players name
 Fixed: When using toolkit to repair you could skip it to get instant repair.
-Fixed: Low gear and stealth for resistance units.
 Fixed: Defense object collision.
 Added: Indicator hint for player shooting an enemy structure that contains the current health of the structure after shot
 Added: Hint for players if a friendly structure is attacked. displays health after damage
@@ -50,7 +49,7 @@ Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 Removed: Some fortifications from defense truck menu.
 Removed: Items from defence truck and repair truck old action menus.
 Removed: Actions menus from halo drop.
-
+Tweaked: Halo jump cooldown now changed from 1 minute to 5 minutes.
 
 
 1.05
