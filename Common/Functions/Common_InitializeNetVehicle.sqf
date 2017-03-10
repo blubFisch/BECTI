@@ -93,7 +93,6 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {_vehicle 
 if (_sideID != CTI_P_SideID) exitWith {};
 
 if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
-	_vehicle addItemCargoGlobal ["ToolKit",1];
 //--- Removed old Actions.
 /*	if (CTI_BASE_FOB_MAX > 0) then {
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
@@ -106,7 +105,6 @@ if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
 if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"maint"; //type is ok? b_support ?
-	_vehicle addItemCargoGlobal ["ToolKit",1];
 };
 
 if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
