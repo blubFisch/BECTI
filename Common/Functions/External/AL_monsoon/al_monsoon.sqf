@@ -39,15 +39,13 @@ sleep 0.1;
 	setWind [al_windlevel select 0, al_windlevel select 1, true];
 };
 
-//--- OFPS Core pack check if loaded
-if (OFPS_Core_Loaded) then {
-	[] spawn {
-		while {al_monsoon_om} do {
-			["bcg_wind","playSound"] call BIS_fnc_MP;
-			sleep 60;
-		};
+[] spawn {
+	while {al_monsoon_om} do {
+		[CTI_SOUND_bcg_wind,"playSound"] call BIS_fnc_MP;
+		sleep 60;
 	};
 };
+
 
 // seteaza conditii vreme
 0 setLightnings 1;
@@ -137,14 +135,13 @@ if (_effect_on_objects) then {
 
 		//durata_rafala = 1+random 5;	sleep 30+random 120;
 		sleep 1;
-		//--- OFPS Core pack check if loaded
-		if (OFPS_Core_Loaded) then {
-			[] spawn {
-				_rafale = ["rafala_1","rafala_2","rafala_4_dr","rafala_5_st","rafala_6","rafala_7","rafala_8","rafala_9"] call BIS_fnc_selectRandom;
-				[_rafale,"playSound"] call BIS_fnc_MP;
-				//hint str _rafale;
-			};
+
+		[] spawn {
+			_rafale = [CTI_SOUND_rafala_1,CTI_SOUND_rafala_2,CTI_SOUND_rafala_4_dr,CTI_SOUND_rafala_5_st,CTI_SOUND_rafala_6,CTI_SOUND_rafala_7,CTI_SOUND_rafala_8,CTI_SOUND_rafala_9] call BIS_fnc_selectRandom;
+			[_rafale,"playSound"] call BIS_fnc_MP;
+			//hint str _rafale;
 		};
+
 		
 		if (!isNull _blowobj) then {
 			_xblow	= 0.1+random 5;

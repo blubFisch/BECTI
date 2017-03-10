@@ -8,14 +8,13 @@ _bomb setvelocity [0, 0, -100];
 _object setdammage 1;
 
 sleep 3;
-//--- Check if OFPS Core pack is laoded
-if (OFPS_Core_Loaded) then {
-	_bomb = "Land_HelipadEmpty_F" createvehicle _pos;
-	_bomb allowdammage false;
-	_bomb say ["nuclear_boom", radiation_radius * 2.9];
 
-	playsound "nuclear_boom";
-};
+_bomb = "Land_HelipadEmpty_F" createvehicle _pos;
+_bomb allowdammage false;
+_bomb say [CTI_SOUND_nuclear_boom, radiation_radius * 2.9];
+
+playsound CTI_SOUND_nuclear_boom;
+
 
 enableCamShake true;
 addCamShake [5, 20, 10];

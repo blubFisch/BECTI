@@ -85,6 +85,13 @@ CTI_AI_COMMANDER_FUNDS_AIR = 1000;
 
 CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY = 360;
 
+//---  CBA Check 
+CBA_Loaded = false;
+if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then {CBA_Loaded = true;};
+//---  OFPS Core Pack Check
+OFPS_Core_Loaded = false;
+if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then {OFPS_Core_Loaded = true;};
+
 //---------------------------------------------------AI TEAMS------------------------------------------------------------//
 /*
  * The AI Teams are lead by playable leaders which perform different tasks by themselves depending on the commander's orders.
@@ -745,7 +752,136 @@ CTI_SHK_BUILDING_SCAN_RANGE = 120; //--- The range used to search for building f
 CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)
 CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
 
+//---  OFPS Core Pack Check --- SET ALL EXTERNAL SOUND FILE CLASSNAMES HERE----------------------------------------------------------
+if (OFPS_Core_Loaded) then {
+	CTI_SOUND_nosound = "nosound";//Silent Mod No Sound External Class
+	CTI_SOUND_prison = "prison";
+	CTI_SOUND_nuke = "nuke";
+	CTI_SOUND_nuclear_boom = "nuclear_boom";
+	CTI_SOUND_nuclear_heartbeat = "nuclear_heartbeat";
+	CTI_SOUND_uclear_geiger = "nuclear_geiger";
+	CTI_SOUND_geiger_1 = "geiger_1";
+	CTI_SOUND_geiger_2 = "geiger_2";
+	CTI_SOUND_geiger_3 = "geiger_3";
+	CTI_SOUND_akbar = "akbar";
+	CTI_SOUND_choppa = "choppa";
+	CTI_SOUND_incoming = "incoming";
+	CTI_SOUND_Vent = "Vent";
+	CTI_SOUND_Vent2 = "Vent2";
+	CTI_SOUND_Para = "Para";
+	CTI_SOUND_valkyries = "valkyries";
+	CTI_SOUND_valkyries_loud = "valkyries_loud";
+	CTI_SOUND_joytotheworld = "joytotheworld";
+	CTI_SOUND_jinglebellrocks = "jinglebellrocks";
+	CTI_SOUND_herecomessantaclaus = "herecomessantaclaus";
+	CTI_SOUND_rockinaroundthechristmastree = "rockinaroundthechristmastree";
+	CTI_SOUND_purgesiren = "purgesiren";
+	CTI_SOUND_purgesiren_1 = "purgesiren_1";
+	CTI_SOUND_purgesiren_2 = "purgesiren_2";
+	CTI_SOUND_purgesiren_3 = "purgesiren_3";
+	CTI_SOUND_marchinhome = "marchinhome";
+	//weather effects
+	CTI_SOUND_MKY_Blizzard = "MKY_Blizzard";
+	CTI_SOUND_MKY_Snowfall = "MKY_Snowfall";
+	CTI_SOUND_bcg_wind = "bcg_wind";
+	CTI_SOUND_rafala_1 = "rafala_1";
+	CTI_SOUND_rafala_2 = "rafala_2";
+	CTI_SOUND_rafala_6 = "rafala_6";
+	CTI_SOUND_rafala_7 = "rafala_7";
+	CTI_SOUND_rafala_8 = "rafala_8";
+	CTI_SOUND_rafala_9 = "rafala_9";
+	CTI_SOUND_tree_crack_1 = "tree_crack_1";
+	CTI_SOUND_tree_crack_2 = "tree_crack_2";
+	CTI_SOUND_tree_crack_3 = "tree_crack_3";
+	CTI_SOUND_tree_crack_4 = "tree_crack_4";
+	CTI_SOUND_tree_crack_5 = "tree_crack_5";
+	CTI_SOUND_tree_crack_6 = "tree_crack_6";
+	CTI_SOUND_tree_crack_7 = "tree_crack_7";
+	CTI_SOUND_tree_crack_8 = "tree_crack_8";
+	CTI_SOUND_tree_crack_9 = "tree_crack_9";
+	CTI_SOUND_lup_01 = "lup_01";
+	CTI_SOUND_lup_02 = "lup_02";
+	CTI_SOUND_lup_03 = "lup_03";
+	CTI_SOUND_tremurat_1 = "tremurat_1";
+	CTI_SOUND_tremurat_2 = "tremurat_2";
+	CTI_SOUND_tremurat_4 = "tremurat_3";
+	CTI_SOUND_tremurat_5 = "tremurat_4";
+	CTI_SOUND_tuse_1 = "tuse_1";
+	CTI_SOUND_tuse_2 = "tuse_2";
+	CTI_SOUND_tuse_3 = "tuse_3";
+	CTI_SOUND_tuse_4 = "tuse_4";
+	CTI_SOUND_tuse_5 = "tuse_5";
+	CTI_SOUND_tuse_6 = "tuse_6";
+	CTI_SOUND_uragan_1 = "uragan_1";
+	CTI_SOUND_rafala_4_dr = "rafala_4_dr";
+	CTI_SOUND_rafala_5_st = "rafala_5_st";
+	CTI_SOUND_sandstorm = "sandstorm";
+} else {
+	CTI_SOUND_nosound = "nomodsound";//nomodsound -- BACKUP SILENT LOCAL SOUNDCLASS
+	CTI_SOUND_prison = "nomodsound";
+	CTI_SOUND_nuke = "nomodsound";
+	CTI_SOUND_nuclear_boom = "nomodsound";
+	CTI_SOUND_nuclear_heartbeat = "nomodsound";
+	CTI_SOUND_uclear_geiger = "nomodsound";
+	CTI_SOUND_geiger_1 = "nomodsound";
+	CTI_SOUND_geiger_2 = "nomodsound";
+	CTI_SOUND_geiger_3 = "nomodsound";
+	CTI_SOUND_akbar = "nomodsound";
+	CTI_SOUND_choppa = "nomodsound";
+	CTI_SOUND_incoming = "nomodsound";
+	CTI_SOUND_Vent = "nomodsound";
+	CTI_SOUND_Vent2 = "nomodsound";
+	CTI_SOUND_Para = "nomodsound";
+	CTI_SOUND_valkyries = "nomodsound";
+	CTI_SOUND_valkyries_loud = "nomodsound";
+	CTI_SOUND_joytotheworld = "nomodsound";
+	CTI_SOUND_jinglebellrocks = "nomodsound";
+	CTI_SOUND_herecomessantaclaus = "nomodsound";
+	CTI_SOUND_rockinaroundthechristmastree = "nomodsound";
+	CTI_SOUND_purgesiren = "nomodsound";
+	CTI_SOUND_purgesiren_1 = "nomodsound";
+	CTI_SOUND_purgesiren_2 = "nomodsound";
+	CTI_SOUND_purgesiren_3 = "nomodsound";
+	CTI_SOUND_marchinhome = "nomodsound";
+	CTI_SOUND_MKY_Blizzard = "nomodsound";
+	CTI_SOUND_MKY_Snowfall = "nomodsound";
+	CTI_SOUND_bcg_wind = "nomodsound";
+	CTI_SOUND_rafala_1 = "nomodsound";
+	CTI_SOUND_rafala_2 = "nomodsound";
+	CTI_SOUND_rafala_6 = "nomodsound";
+	CTI_SOUND_rafala_7 = "nomodsound";
+	CTI_SOUND_rafala_8 = "nomodsound";
+	CTI_SOUND_rafala_9 = "nomodsound";
+	CTI_SOUND_tree_crack_1 = "nomodsound";
+	CTI_SOUND_tree_crack_2 = "nomodsound";
+	CTI_SOUND_tree_crack_3 = "nomodsound";
+	CTI_SOUND_tree_crack_4 = "nomodsound";
+	CTI_SOUND_tree_crack_5 = "nomodsound";
+	CTI_SOUND_tree_crack_6 = "nomodsound";
+	CTI_SOUND_tree_crack_7 = "nomodsound";
+	CTI_SOUND_tree_crack_8 = "nomodsound";
+	CTI_SOUND_tree_crack_9 = "nomodsound";
+	CTI_SOUND_lup_01 = "nomodsound";
+	CTI_SOUND_lup_02 = "nomodsound";
+	CTI_SOUND_lup_03 = "nomodsound";
+	CTI_SOUND_tremurat_1 = "nomodsound";
+	CTI_SOUND_tremurat_2 = "nomodsound";
+	CTI_SOUND_tremurat_4 = "nomodsound";
+	CTI_SOUND_tremurat_5 = "nomodsound";
+	CTI_SOUND_tuse_1 = "nomodsound";
+	CTI_SOUND_tuse_2 = "nomodsound";
+	CTI_SOUND_tuse_3 = "nomodsound";
+	CTI_SOUND_tuse_4 = "nomodsound";
+	CTI_SOUND_tuse_5 = "nomodsound";
+	CTI_SOUND_tuse_6 = "nomodsound";
+	CTI_SOUND_uragan_1 = "nomodsound";
+	CTI_SOUND_rafala_4_dr = "nomodsound";
+	CTI_SOUND_rafala_5_st = "nomodsound";
+	CTI_SOUND_sandstorm = "nomodsound";
+};	
+
 with missionNamespace do {
+
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
 	if (isNil 'CTI_FACTION_EAST') then {CTI_FACTION_EAST = 0};
 	

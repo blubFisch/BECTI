@@ -124,13 +124,9 @@ _height = getPos _target select 2;
 
 
 	while {(getPos _target select 2) > 2} do {
-		
-		//--- Check if OFPS Core pack loaded
-		if (OFPS_Core_Loaded) then {
-			playSound "Vent";
-			playSound "Vent2";
+			playSound CTI_SOUND_Vent;
+			playSound CTI_SOUND_Vent2;
 			sleep 5;
-		};
 	};
 
 hint Localize "STR_ATM_hintload";

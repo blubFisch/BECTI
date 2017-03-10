@@ -6,20 +6,17 @@ _rad1 = _radius;
 _rad2 = _radius / 2;
 _rad3 = _radius / 4;
 
-//--- OFPS Core pack check if loaded
-if (OFPS_Core_Loaded) then {
-    while { alive _object } do
-    {
-      waituntil { player distance _object < _rad1 || ! alive _object };
-      if ( player distance _object < _rad1 ) then
-      {
-        if ( player distance _object < _rad2 ) then
-        {
-          if ( player distance _object < _rad3 )
-            then {playsound "geiger_3"}
-            else {playsound "geiger_2"};
-        } else {playsound "geiger_1"};
-      };
-      sleep random 2;
-    };
+while { alive _object } do
+{
+  waituntil { player distance _object < _rad1 || ! alive _object };
+  if ( player distance _object < _rad1 ) then
+  {
+	if ( player distance _object < _rad2 ) then
+	{
+	  if ( player distance _object < _rad3 )
+		then {playsound CTI_SOUND_geiger_3}
+		else {playsound CTI_SOUND_geiger_2};
+	} else {playsound CTI_SOUND_geiger_1};
+  };
+  sleep random 2;
 };

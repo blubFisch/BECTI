@@ -230,10 +230,7 @@ while { true } do
 				
 				if ((typeof _tgt) isKindOf ["Default", configFile >> "CfgAmmo"]) then {
 					//str _side + " C-RAM turrets are engaging an enemy projectile at our base!" remoteExec ["systemChat"];
-					//--- Check if OFPS Core is loaded.
-					if (OFPS_Core_Loaded) then {
-						[_bestCRAM,"incoming",60] call Common_Say3D;
-					};
+					[_bestCRAM,CTI_SOUND_incoming,60] call Common_Say3D;
 				} else {
 					//str _side + " C-RAM turrets are engaging an enemy air object at our base!" remoteExec ["systemChat"];
 				};

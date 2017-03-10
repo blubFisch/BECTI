@@ -82,11 +82,8 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 };
 
 //--- Radio - only helis
-//--- OFPS Core pack Check
-if (OFPS_Core_Loaded) then {
-	if (_vehicle isKindOf "Helicopter") then {
-		_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
-	};
+if (_vehicle isKindOf "Helicopter") then {
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
 };
 
 //--- Taxi Reverse
