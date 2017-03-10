@@ -351,7 +351,7 @@ class Params {
 		title = "GAMEPLAY: 3P view";
 		values[] = {-1,0,1,2};
 		texts[] = {"All","No group view","Vehicle","None"};
-		default = 1;
+		default = -1;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";
@@ -573,25 +573,25 @@ class Params {
 		title = "ADDON: APEX DLC Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_CUP_ADDON {
 		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_CUP_CORE_ADDON {
 		title = "ADDON: CUP CORE and CUP Terrains";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_OFPS_ADDON {
 		title = "ADDON: OFPS MOD Pack Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_RHS_ADDON {
 		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
@@ -627,6 +627,6 @@ class Params {
 		title = "DEV: Dev Mode";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 };

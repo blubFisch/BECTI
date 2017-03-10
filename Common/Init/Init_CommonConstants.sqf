@@ -732,7 +732,7 @@ CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolde
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
 CTI_GC_CLEANUP_MAN = 1; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
 
-CTI_HALO_COOLDOWN = 60;
+CTI_HALO_COOLDOWN = 300;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;
 CTI_HALO_ALTITUDE = 1200;
 CTI_HALO_RATIO = 1;
