@@ -15,7 +15,7 @@ class Params {
 		title = "FACTION: Starting vehicles and mhq";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class CTI_FACTION_DEFAULT_GEAR {
 		title = "FACTION: Starting gear";
@@ -81,25 +81,25 @@ class Params {
 		title = "INCOME: Starting Funds (East Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 50000;
+		default = 45000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST {
 		title = "INCOME: Starting Funds (East Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 10000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST_COMMANDER {
 		title = "INCOME: Starting Funds (West Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 50000;
+		default = 45000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST {
 		title = "INCOME: Starting Funds (West Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 10000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_TOWNS_OCCUPATION {
 		title = "INCOME: Towns Occupation";
@@ -111,13 +111,13 @@ class Params {
 		title = "SUPPLY: Starting Supply (East Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 25000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_STARTUP_SUPPLY_WEST {
 		title = "SUPPLY: Starting Supply (West Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 25000;
+		default = 15000;
 	};
 	class SEPARATOR2 {
 		title = "========================== TOWNS ============================";
