@@ -817,6 +817,7 @@ if (OFPS_Core_Loaded) then {
 	CTI_SOUND_rafala_5_st = "rafala_5_st";
 	CTI_SOUND_sandstorm = "sandstorm";
 } else {
+	//SETUP ALL VANILLA BACKUP SOUNDS HERE --- IF NOT BACKUP SOUND USE NOMODSOUND FOR EMPTY
 	CTI_SOUND_nosound = "nomodsound";//nomodsound -- BACKUP SILENT LOCAL SOUNDCLASS
 	CTI_SOUND_prison = "nomodsound";
 	CTI_SOUND_nuke = "nomodsound";
