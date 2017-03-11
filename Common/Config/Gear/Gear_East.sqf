@@ -110,15 +110,15 @@ _u pushBack 2;
 _p pushBack 250;*/
 
 _i pushBack "Titan_AA";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 2000;
 
 _i pushBack "Titan_AP";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 1000;
 
 _i pushBack "Titan_AT";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 2000;
 
 _i pushBack "16Rnd_9x21_Mag";  //Rook 40
@@ -413,12 +413,12 @@ _u pushBack 2;
 _p pushBack 600;*/
 
 
-_i pushBack "launch_O_Titan_F";
-_u pushBack 4;
+_i pushBack "launch_O_Titan_F"; //AA
+_u pushBack 3;
 _p pushBack 8000;
 
-_i pushBack "launch_O_Titan_short_F";
-_u pushBack 3;
+_i pushBack "launch_O_Titan_short_F"; //Takes AT and AP rounds only
+_u pushBack 4;
 _p pushBack 6000;
 
 _i pushBack "hgun_Rook40_F";

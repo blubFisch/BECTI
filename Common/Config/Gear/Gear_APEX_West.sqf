@@ -360,12 +360,12 @@ _p pushBack 100;
 
 
 //Launchers:
-_i pushBack "launch_B_Titan_tna_F";
-_u pushBack 4;
+_i pushBack "launch_B_Titan_tna_F"; /AA
+_u pushBack 3;
 _p pushBack 8000;
 
-_i pushBack "launch_B_Titan_short_tna_F";
-_u pushBack 3;
+_i pushBack "launch_B_Titan_short_tna_F"; //Takes AT and AP rounds only
+_u pushBack 4;
 _p pushBack 6000;
 
 

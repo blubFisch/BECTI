@@ -380,12 +380,12 @@ _p pushBack 100;
 _u pushBack 2;
 _p pushBack 600;*/
 
-_i pushBack "launch_O_Titan_ghex_F";
-_u pushBack 4;
+_i pushBack "launch_O_Titan_ghex_F"; // AA
+_u pushBack 3;
 _p pushBack 8000;
 
-_i pushBack "launch_O_Titan_short_ghex_F";
-_u pushBack 3;
+_i pushBack "launch_O_Titan_short_ghex_F"; //Takes AT and AP rounds only
+_u pushBack 4;
 _p pushBack 6000;
 
 

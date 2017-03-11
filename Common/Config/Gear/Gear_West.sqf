@@ -575,12 +575,12 @@ _i pushBack "launch_NLAW_F"; //PCML
 _u pushBack 1;
 _p pushBack 2000;
 
-_i pushBack "launch_B_Titan_F";
-_u pushBack 4;
+_i pushBack "launch_B_Titan_F"; //AA
+_u pushBack 3;
 _p pushBack 6000;
 
-_i pushBack "launch_B_Titan_short_F";
-_u pushBack 3;
+_i pushBack "launch_B_Titan_short_F"; //Takes AT and AP rounds only
+_u pushBack 4;
 _p pushBack 6000;
 
 _i pushBack "hgun_P07_F";
