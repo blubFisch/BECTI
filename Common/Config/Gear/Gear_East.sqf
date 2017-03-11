@@ -384,13 +384,13 @@ _i pushBack "srifle_DMR_05_tan_f";
 _u pushBack 3;
 _p pushBack 800;*/
 
-_i pushBack "MMG_01_hex_F";  //Navid 9.3 mm
+/*_i pushBack "MMG_01_hex_F";  //Navid 9.3 mm
 _u pushBack 4;
 _p pushBack 2500;
 
 _i pushBack "MMG_01_tan_F"; 
 _u pushBack 4;
-_p pushBack 2500;
+_p pushBack 2500;*/
 
 _i pushBack "srifle_GM6_F";
 _u pushBack 4;
@@ -415,12 +415,11 @@ _p pushBack 600;*/
 
 _i pushBack "launch_O_Titan_F";
 _u pushBack 4;
-_p pushBack 6000;
+_p pushBack 8000;
 
 _i pushBack "launch_O_Titan_short_F";
 _u pushBack 3;
 _p pushBack 6000;
-
 
 _i pushBack "hgun_Rook40_F";
 _u pushBack 0;
@@ -459,9 +458,9 @@ _i pushBack "U_O_SpecopsUniform_ocamo";
 _u pushBack 1;
 _p pushBack 300;
 */
-_i pushBack "U_O_SpecopsUniform_blk";
+/*_i pushBack "U_O_SpecopsUniform_blk";
 _u pushBack 0;
-_p pushBack 300;
+_p pushBack 300;*/
 
 /*_i pushBack "U_O_Wetsuit";
 _u pushBack 4;

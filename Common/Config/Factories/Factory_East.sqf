@@ -524,7 +524,7 @@ _u = [];
 	
 if (CTI_FACTION_EAST == 0) then {
 //CSAT Arid Vanilla
-_u pushBack 'O_soldier_AR_F';
+/*_u pushBack 'O_soldier_AR_F';
 _u pushBack 'O_Soldier_A_F';
 _u pushBack 'O_soldier_exp_F';
 _u pushBack 'O_Soldier_GL_F';
@@ -537,9 +537,9 @@ _u pushBack 'O_sniper_F';
 _u pushBack 'O_soldier_repair_F';
 _u pushBack 'O_soldier_LAT_F';
 _u pushBack 'O_soldier_AA_F';
-_u pushBack 'O_soldier_AT_F';
+_u pushBack 'O_soldier_AT_F';*/
 _u pushBack 'O_spotter_F';
-_u pushBack 'O_soldier_UAV_F';
+/*_u pushBack 'O_soldier_UAV_F';
 _u pushBack 'O_Helipilot_F';
 _u pushBack 'O_crew_F';
 _u pushBack 'O_Soldier_TL_F';
@@ -553,7 +553,7 @@ _u pushBack 'O_Recon_F';
 _u pushBack 'O_Recon_LAT_F';
 _u pushBack 'O_Recon_TL_F';
 _u pushBack 'O_Sniper_F';
-_u pushBack 'O_ghillie_tna_F';
+_u pushBack 'O_ghillie_tna_F';*/
 /*_u pushBack 'O_Spotter_F';*/
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -721,27 +721,28 @@ _u = [];
 //--- Below is classnames for Units and AI avaiable to puchase from Light Factory.
 
 //Universal Vanilla
-_u pushBack 'I_C_Offroad_02_unarmed_F';		
+/*_u pushBack 'I_C_Offroad_02_unarmed_F';	*/	
 _u pushBack 'O_G_Offroad_01_F';	
-_u pushBack 'O_Truck_02_medical_F';
+/*_u pushBack 'O_Truck_02_medical_F';*/
 _u pushBack 'O_Truck_03_medical_F';
 _u pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
 _u pushBack 'O_Truck_03_device_F';
 _u pushBack 'O_Quadbike_01_F';
-_u pushBack "O_G_Offroad_01_armed_F";
-_u pushBack 'C_Van_01_transport_F';
+/*_u pushBack "O_G_Offroad_01_armed_F";
+_u pushBack 'C_Van_01_transport_F';*/
+_u pushBack "O_APC_Wheeled_02_rcws_F";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	_u pushBack 'O_MRAP_02_gmg_F';	
 	_u pushBack 'O_MRAP_02_hmg_F';			
 	_u pushBack 'O_Truck_02_transport_F';
-	_u pushBack 'O_Truck_03_transport_F';
+/*	_u pushBack 'O_Truck_03_transport_F';*/
 	_u pushBack 'O_MRAP_02_F';
-	_u pushBack 'O_MRAP_02_hmg_F';
-	_u pushBack 'O_MRAP_02_gmg_F';
-	_u pushBack 'O_UGV_01_F';
-	_u pushBack 'O_UGV_01_rcws_F';
+/*	_u pushBack 'O_MRAP_02_hmg_F';
+	_u pushBack 'O_MRAP_02_gmg_F';*/
+/*	_u pushBack 'O_UGV_01_F';
+	_u pushBack 'O_UGV_01_rcws_F';*/
 
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -755,7 +756,11 @@ if (CTI_FACTION_EAST == 2) then {
 //--- APEX UNITS
 if (CTI_APEX_ADDON > 0) then { 
 	//Universal APEX
-
+    _u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
+    _u pushBack 'O_T_Truck_03_medical_ghex_F';
+    _u pushBack 'O_T_MRAP_02_gmg_ghex_F';
+    _u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+    _u pushBack 'O_T_MRAP_02_ghex_F';
 
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -908,24 +913,24 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_tigr_msv';
+/*_u pushBack 'rhs_tigr_msv';
 _u pushBack 'rhs_tigr_m_msv';
-_u pushBack 'rhs_gaz66_msv';
+_u pushBack 'rhs_gaz66_msv';*/
 _u pushBack 'rhs_kamaz5350_msv';
 _u pushBack 'rhs_tigr_m_3camo_msv';
-_u pushBack 'rhs_tigr_3camo_msv';
+/*_u pushBack 'rhs_tigr_3camo_msv';*/
 _u pushBack 'RHS_UAZ_MSV_01';
-_u pushBack 'rhs_uaz_open_MSV_01';
+/*_u pushBack 'rhs_uaz_open_MSV_01';*/
 _u pushBack 'rhsgref_BRDM2UM_msv';
 _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';
-_u pushBack 'rhsgref_BRDM2_msv';
+/*_u pushBack 'rhsgref_BRDM2_msv';*/
 _u pushBack 'rhs_gaz66_ap2_msv';
 _u pushBack 'rhs_tigr_sts_3camo_msv';
-_u pushBack 'rhs_btr60_msv';
+/*_u pushBack 'rhs_btr60_msv';*/
 _u pushBack 'rhs_btr70_msv';
-_u pushBack 'rhs_btr80_msv';
+/*_u pushBack 'rhs_btr80_msv';*/
 _u pushBack 'rhs_gaz66_zu23_msv';
 _u pushBack 'rhsgref_BRDM2_ATGM_msv';
 _u pushBack 'rhs_btr80a_msv';
@@ -943,11 +948,11 @@ _u = [];
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
-	_u pushBack "O_APC_Wheeled_02_rcws_F";
+
 	_u pushBack "O_APC_Tracked_02_cannon_F";
-	_u pushBack "O_MBT_02_cannon_F";
+/*	_u pushBack "O_MBT_02_cannon_F";*/
 	_u pushBack "O_APC_Tracked_02_AA_F";
-	_u pushBack "O_MBT_02_arty_F";
+	/*_u pushBack "O_MBT_02_arty_F";*/
 
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -971,9 +976,9 @@ if (CTI_APEX_ADDON > 0) then {
 		//CSAT Tropic APEX
 	_u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
 	_u pushBack 'O_T_APC_Tracked_02_cannon_ghex_F';
-	_u pushBack 'O_T_MBT_02_cannon_ghex_F';
+/*	_u pushBack 'O_T_MBT_02_cannon_ghex_F';*/
 	_u pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
-	_u pushBack 'O_T_MBT_02_arty_ghex_F';
+/*	_u pushBack 'O_T_MBT_02_arty_ghex_F';*/
 		
 	};
 	if (CTI_FACTION_EAST == 2) then {
@@ -1076,33 +1081,33 @@ if (CTI_OFPS_ADDON > 0) then {
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
 _u pushBack 'rhs_bmp1_msv'; 
-_u pushBack 'rhs_bmd1'; 
+/*_u pushBack 'rhs_bmd1'; 
 _u pushBack 'rhs_pts_vmf'; 
 _u pushBack 'rhs_prp3_msv'; 
 _u pushBack 'rhs_bmp1p_msv'; 
 _u pushBack 'rhs_bmd2'; 
-_u pushBack 'rhs_bmd1r'; 
+_u pushBack 'rhs_bmd1r'; */
 _u pushBack 'rhs_zsu234_aa'; 
-_u pushBack 'rhs_bmp2e_msv'; 
+/*_u pushBack 'rhs_bmp2e_msv'; */
 _u pushBack 'rhs_bmp2d_msv'; 
 _u pushBack 'rhs_Ob_681_2'; 
-_u pushBack 'rhs_t72ba_tv';
+/*_u pushBack 'rhs_t72ba_tv';*/
 _u pushBack 'rhs_t72bb_tv';  
 _u pushBack 'rhs_sprut_vdv'; 
-_u pushBack 'rhs_bmp3_msv'; 
+/*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
 _u pushBack 'rhs_t80bvk'; 
-_u pushBack 'rhs_bmd4_vdv'; 
+_u pushBack 'rhs_bmd4_vdv'; */
 _u pushBack 'rhs_t80um'; 
 _u pushBack 'rhs_bmp3m_msv'; 
 _u pushBack 'rhs_t90a_tv'; 
-_u pushBack 'rhs_bmp3mera_msv'; 
+/*_u pushBack 'rhs_bmp3mera_msv'; 
 _u pushBack 'rhs_bmd4ma_vdv'; 
 _u pushBack 'rhs_2s3_tv';
 _u pushBack 'RHS_BM21_MSV_01';
 _u pushBack 'rhs_9k79';
-_u pushBack 'rhs_9k79_K';
+_u pushBack 'rhs_9k79_K';*/
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
@@ -1112,19 +1117,19 @@ _u = [];
 
 //Universal Vanilla
 	_u pushBack 'O_Heli_Transport_04_F'; 
-    _u pushBack 'O_Heli_Light_02_unarmed_F';
+   /* _u pushBack 'O_Heli_Light_02_unarmed_F';*/
 	_u pushBack "O_Heli_Transport_04_ammo_F";
-	_u pushBack "O_Heli_Transport_04_bench_F";
-	_u pushBack "O_Heli_Transport_04_covered_F";
+/*	_u pushBack "O_Heli_Transport_04_bench_F";*/
+/*	_u pushBack "O_Heli_Transport_04_covered_F";*/
 	_u pushBack "O_Heli_Transport_04_medevac_F";
 	_u pushBack "O_Heli_Transport_04_repair_F";
-	_u pushBack 'O_Heli_Light_02_F';
+/*	_u pushBack 'O_Heli_Light_02_F';
 	_u pushBack 'O_Heli_Attack_02_F';
 	_u pushBack 'O_Heli_Attack_02_black_F';
-	_u pushBack 'O_UAV_02_CAS_F';
+	_u pushBack 'O_UAV_02_CAS_F';*/
 	_u pushBack 'O_UAV_02_F';
-	_u pushBack 'O_Plane_CAS_02_F';
-	_u pushBack 'C_Plane_Civil_01_F';
+	/*_u pushBack 'O_Plane_CAS_02_F';*/
+	_u pushBack "O_UAV_02_CAS_F";
 
 
 if (CTI_FACTION_EAST == 0) then {
@@ -1145,24 +1150,25 @@ if (CTI_FACTION_EAST == 2) then {
 //--- APEX UNITS
 if (CTI_APEX_ADDON > 0) then { 
 	//Universal APEX
-	_u pushBack "O_T_UAV_04_CAS_F";
+/*	_u pushBack 'C_Plane_Civil_01_F';
+	_u pushBack "O_T_UAV_04_CAS_F";*/
 	
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid APEX
-	_u pushBack "O_T_VTOL_02_infantry_hex_F";
-	_u pushBack "O_T_VTOL_02_vehicle_hex_F";
+/*	_u pushBack "O_T_VTOL_02_infantry_hex_F";
+	_u pushBack "O_T_VTOL_02_vehicle_hex_F";*/
 		
 	};
 	if (CTI_FACTION_EAST == 1) then {
 		//CSAT Tropic APEX
-	_u pushBack "O_T_VTOL_02_infantry_F";
-	_u pushBack "O_T_VTOL_02_vehicle_F";
+/*	_u pushBack "O_T_VTOL_02_infantry_F";
+	_u pushBack "O_T_VTOL_02_vehicle_F";*/
 
 	};
 	if (CTI_FACTION_EAST == 2) then {
 		//CSAT Winter APEX
-	_u pushBack "O_T_VTOL_02_infantry_grey_F";
-	_u pushBack "O_T_VTOL_02_vehicle_grey_F";
+/*	_u pushBack "O_T_VTOL_02_infantry_grey_F";
+	_u pushBack "O_T_VTOL_02_vehicle_grey_F";*/
 		
 	};
 };
@@ -1286,32 +1292,33 @@ if (CTI_OFPS_ADDON > 0) then {
 //--- RHS UNITS
 if (CTI_RHS_ADDON > 0) then { 
 //Universal RHS
-_u pushBack 'rhs_Mi8AMT_vvsc';
+/*_u pushBack 'rhs_Mi8AMT_vvsc';*/
 _u pushBack 'rhs_ka60_c';
 _u pushBack 'RHS_Mi8mt_vvsc';
 _u pushBack 'RHS_Mi8mt_cargo_vdv';
-_u pushBack 'RHS_Mi8MTV3_vvsc';
-_u pushBack 'RHS_Mi8MTV3_FAB_vvsc';
+/*_u pushBack 'RHS_Mi8MTV3_vvsc';
+_u pushBack 'RHS_Mi8MTV3_FAB_vvsc';*/
 _u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_vvsc';
 _u pushBack 'RHS_Su25SM_vvs';
-_u pushBack 'RHS_Su25SM_CAS_vvs';
+/*_u pushBack 'RHS_Su25SM_CAS_vvs';*/
 _u pushBack 'RHS_Mi24V_vvsc';
 _u pushBack 'RHS_Mi24V_FAB_vvsc';
-_u pushBack 'RHS_Mi24V_UPK23_vvsc';
-_u pushBack 'RHS_Mi24P_vvsc';
+/*_u pushBack 'RHS_Mi24V_UPK23_vvsc';*/
+/*_u pushBack 'RHS_Mi24P_vvsc';
 _u pushBack 'RHS_Mi24P_CAS_vvsc';
-_u pushBack 'RHS_Mi24V_AT_vvsc';
+_u pushBack 'RHS_Mi24V_AT_vvsc';*/
 _u pushBack 'RHS_Mi24P_AT_vvsc';
-_u pushBack 'RHS_Ka52_vvsc';
-_u pushBack 'RHS_Ka52_UPK23_vvsc';
+/*_u pushBack 'RHS_Ka52_vvsc';
+_u pushBack 'RHS_Ka52_UPK23_vvsc';*/
 _u pushBack 'RHS_Su25SM_KH29_vvs';
 _u pushBack 'RHS_T50_vvs_055';
-_u pushBack 'RHS_TU95MS_vvs_tambov';
-_u pushBack 'RHS_TU95MS_vvs_old';
-_u pushBack 'rhs_mi28n_vvsc';
-_u pushBack 'rhs_mi28n_s13_vvsc';
+/*_u pushBack 'RHS_TU95MS_vvs_tambov';*/
+/*_u pushBack 'RHS_TU95MS_vvs_old';*/
+/*_u pushBack 'rhs_mi28n_vvsc';
+_u pushBack 'rhs_mi28n_s13_vvsc';*/
+_u pushBack 'rhs_an2';
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
@@ -1321,18 +1328,19 @@ _u = [];
 
 //Universal Vanilla
 _u pushBack "O_G_Offroad_01_repair_F";
+/*_u pushBack 'O_Truck_03_repair_F';
 _u pushBack "O_Truck_03_covered_F";//FOB
-_u pushBack "O_Truck_02_box_F";//FOB LARGE
+_u pushBack "O_Truck_02_box_F";//FOB LARGE*/
 _u pushBack "Land_Pod_Heli_Transport_04_repair_F";
 _u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
-_u pushBack "O_Truck_03_fuel_F";
+/*_u pushBack "O_Truck_03_fuel_F";*/
 _u pushBack "CTI_Salvager_East";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
-	//_u pushBack "O_Truck_03_repair_F";
-	_u pushBack "O_Truck_02_fuel_F";
-
+/*	_u pushBack "O_Truck_03_repair_ghex_F";
+	_u pushBack "O_Truck_02_fuel_ghex_F";
+*/
 	
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -1416,7 +1424,7 @@ missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_REPAIR], _u];
 _u = [];
 
 //Universal Vanilla
-_u pushBack "Box_East_Wps_F";
+/*_u pushBack "Box_East_Wps_F";*/
 _u pushBack "O_supplyCrate_F";
 _u pushBack "Land_Pod_Heli_Transport_04_ammo_F";
 

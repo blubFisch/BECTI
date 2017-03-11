@@ -12,7 +12,7 @@ _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 
 //--- Infantry Pacific
-/*_c pushBack 'B_T_Soldier_A_F';
+_c pushBack 'B_T_Soldier_A_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"];
 _o pushBack 375;
@@ -121,8 +121,8 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
-/*_c pushBack 'B_T_Officer_F';
+
+_c pushBack 'B_T_Officer_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 100;
@@ -140,9 +140,9 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_T_Soldier_SL_F';
+_c pushBack 'B_T_Soldier_SL_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 500;
@@ -190,9 +190,9 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_T_soldier_UAV_F';
+_c pushBack 'B_T_soldier_UAV_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 250;
@@ -200,11 +200,11 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Infantry Special Forces
 
-/*_c pushBack 'B_T_Diver_F';
+_c pushBack 'B_T_Diver_F';
 _p pushBack '';
 _n pushBack ["%1 (Special Forces)"]; 
 _o pushBack 550;
@@ -272,9 +272,9 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_T_Recon_TL_F';
+_c pushBack 'B_T_Recon_TL_F';
 _p pushBack '';
 _n pushBack ["%1 (Special Forces)"]; 
 _o pushBack 750;
@@ -282,9 +282,9 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_T_Sniper_F';
+_c pushBack 'B_T_Sniper_F';
 _p pushBack '';
 _n pushBack ["%1 (Special Forces)"]; 
 _o pushBack 1000;
@@ -312,10 +312,10 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Infantry CTRG Special
-/*_c pushBack 'B_CTRG_Soldier_AR_tna_F';
+_c pushBack 'B_CTRG_Soldier_AR_tna_F';
 _p pushBack '';
 _n pushBack ["%1 (CTRG Thermal Masking)"]; 
 _o pushBack 2500;
@@ -394,10 +394,10 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 //--- Light Vehicles
 
-/*_c pushBack 'I_C_Offroad_02_unarmed_F';
+_c pushBack 'I_C_Offroad_02_unarmed_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;
@@ -405,7 +405,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Heavy Vehicles
 
@@ -425,7 +425,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_T_UAV_03_F';
+_c pushBack 'B_T_UAV_03_F';
 _p pushBack '';
 _n pushBack 'MQ-12 Falcon';
 _o pushBack 43100;
@@ -433,9 +433,9 @@ _t pushBack 50;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_T_VTOL_01_infantry_F';
+_c pushBack 'B_T_VTOL_01_infantry_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 40000;
@@ -463,7 +463,7 @@ _t pushBack 50;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 10;*/
+_d pushBack 10;
 
 //--- Naval Vehicles
 
@@ -477,7 +477,7 @@ _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'I_C_Boat_Transport_02_F';
+_c pushBack 'I_C_Boat_Transport_02_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;
@@ -486,5 +486,5 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Units\Set_Units.sqf";

@@ -12,7 +12,7 @@ _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 
 //--- Infantry
-/*_c pushBack 'B_Soldier_A_F';
+_c pushBack 'B_Soldier_A_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;
@@ -82,7 +82,7 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_soldier_exp_F';
+_c pushBack 'B_soldier_exp_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 510;
@@ -90,9 +90,9 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_Soldier_GL_F';
+_c pushBack 'B_Soldier_GL_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 550;
@@ -130,9 +130,9 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_officer_F';
+_c pushBack 'B_officer_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 100;
@@ -150,9 +150,9 @@ _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_Soldier_SL_F';
+_c pushBack 'B_Soldier_SL_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
@@ -180,7 +180,7 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //_c pushBack 'B_Soldier_lite_F';
 //_p pushBack '';
@@ -192,7 +192,7 @@ _d pushBack 0;*/
 //_s pushBack "";
 //_d pushBack 0;
 
-/*_c pushBack 'B_soldier_repair_F';
+_c pushBack 'B_soldier_repair_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 650;
@@ -210,7 +210,7 @@ _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'B_spotter_F';
 _p pushBack '';
@@ -222,7 +222,7 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_soldier_LAT_F';
+_c pushBack 'B_soldier_LAT_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 550;
@@ -230,9 +230,9 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_soldier_UAV_F';
+_c pushBack 'B_soldier_UAV_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 250;
@@ -240,9 +240,9 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_diver_TL_F';
+_c pushBack 'B_diver_TL_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 250;
@@ -261,8 +261,8 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
-/*_c pushBack 'B_Recon_Exp_F';
+
+_c pushBack 'B_Recon_Exp_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 750;
@@ -330,7 +330,7 @@ _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Light Vehicles
 
@@ -354,7 +354,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_G_Offroad_01_armed_F';
+_c pushBack 'B_G_Offroad_01_armed_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
@@ -372,9 +372,9 @@ _t pushBack 15;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_Truck_01_transport_F';
+_c pushBack 'B_Truck_01_transport_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;
@@ -383,7 +383,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 _c pushBack 'B_MRAP_01_F'; //Hunter
 _p pushBack '';
 _n pushBack '1- Hunter (Unarmed)';
@@ -430,11 +430,11 @@ _n pushBack (format ["0- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANG
 _o pushBack 6800;
 _t pushBack 20;
 _u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
+_f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
 
-/*_c pushBack 'B_UGV_01_F';
+_c pushBack 'B_UGV_01_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 800;
@@ -452,7 +452,7 @@ _t pushBack 20;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'O_Truck_03_device_F'; //Nuke Truck
 _p pushBack '';
@@ -486,7 +486,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-/*//Slammer UP
+//Slammer UP
 _c pushBack 'B_MBT_01_TUSK_F';  
 _p pushBack '';
 _n pushBack '';
@@ -496,9 +496,9 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 //slammer120
-/*_c pushBack 'B_MBT_01_cannon_F';
+_c pushBack 'B_MBT_01_cannon_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 25000;
@@ -506,7 +506,7 @@ _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //IFV-6a Cheetah
 _c pushBack 'B_APC_Tracked_01_AA_F';
@@ -519,17 +519,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_MBT_01_arty_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 140000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;*/
-
-/*_c pushBack 'B_MBT_01_mlrs_F';
+_c pushBack 'B_MBT_01_mlrs_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 225000;
@@ -537,7 +527,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 
 //--- Repair Vehicles
@@ -653,7 +643,7 @@ _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
 
-/*_c pushBack "Box_NATO_Wps_F";
+_c pushBack "Box_NATO_Wps_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Wps_F.jpg';
 _n pushBack 'Empty Crate';
 _o pushBack 50;
@@ -661,7 +651,7 @@ _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack "B_supplyCrate_F";
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_supplyCrate_F.jpg';
@@ -696,7 +686,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'B_Heli_Light_01_F'; //Hummingbird
+_c pushBack 'B_Heli_Light_01_F'; //Hummingbird
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10200;
@@ -704,9 +694,9 @@ _t pushBack 35;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
+_c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
 _p pushBack '';
 _n pushBack '';
 _o pushBack 29750;
@@ -754,11 +744,11 @@ _t pushBack 50;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 30;*/
+_d pushBack 30;
 
 //--- Naval Vehicles
 
-/*_c pushBack 'C_Boat_Civil_01_F';
+_c pushBack 'C_Boat_Civil_01_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -776,7 +766,7 @@ _t pushBack 15;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'B_Boat_Armed_01_minigun_F';
 _p pushBack '';
