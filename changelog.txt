@@ -1,4 +1,4 @@
-## Staged for next version ##
+1.06
 Tweaked: Moved l39 from air factory 1 to air factory 2
 Tweaked: Moved BRDM ATGM from light factory 0 to light factory 2
 Tweaked: Moved kajman from air factory 3 to air factory 4
@@ -25,7 +25,11 @@ Tweaked: Gear on player reconnect wasn’t saving some times.
 Tweaked: Cash flow decreased and supply rate increased by 15%
 Tweaked: Adjusted air lift for all mid-size choppers to lift tanks.
 Tweaked: Restructured base defense build menu. 
-Fixed: Adjusted defence factions for Cram and all Sam units.
+Tweaked: Fuel consumption decrease to about 15-20%
+Tweaked: Base under attack hints will display more frequent. 
+Tweaked: Removed town circles from friendly towns to declutter the map a bit.
+Fixed: Peace time marker will not show.
+Fixed: Adjusted defense factions for Cram and all Sam units.
 Fixed: No SAM warning for players without vehicles or in parachute
 Fixed: Slammer up not purchasable on non-snow maps
 Fixed: Slammer not purchasable on snow maps
@@ -42,15 +46,13 @@ Added: Friendly team notifications for when HQ is mobilized and deployed
 Added: Barracks upgrade level will increase player AI slots and skill
 Added: Camp award bounty
 Added: Depot purchase menu disabled if camp is lost to other side.
-Added: Compositions with static guns to build menus
 Added: Low grass mod to core pack.
 Added: RHS Trucks to be able to load cargo such as ammo creates 
 Changed: Removed C-RAM2 (Missiles) as it is inferior to the normal C-RAM
 Removed: Some fortifications from defense truck menu.
-Removed: Items from defence truck and repair truck old action menus.
+Removed: Items from defense truck and repair truck old action menus.
 Removed: Actions menus from halo drop.
 Tweaked: Halo jump cooldown now changed from 1 minute to 5 minutes.
-
 
 1.05
 Added: Spawn on vehicle disabled when enemy nearby 50M
@@ -79,4 +81,3 @@ Fixed: Reload and clear buttons are disabled unless near gear source
 Fixed: Respawn pods and ammo pods
 Fixed: Teamstack system would show incorrect message
 Fixed: Fuel truck now has service menu
-
