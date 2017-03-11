@@ -30,12 +30,12 @@ _u pushBack 2;
 _p pushBack 600;
 
 _i pushBack "SatchelCharge_Remote_Mag";
+_u pushBack 3;
+_p pushBack 900;
+
+_i pushBack "DemoCharge_Remote_Mag";
 _u pushBack 2;
 _p pushBack 600;
-
-/*_i pushBack "DemoCharge_Remote_Mag";
-_u pushBack 2;
-_p pushBack 350;*/
 
 _i pushBack "ClaymoreDirectionalMine_Remote_Mag";
 _u pushBack 1;

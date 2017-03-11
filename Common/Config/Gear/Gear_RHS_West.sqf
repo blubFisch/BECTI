@@ -1761,8 +1761,8 @@ _u pushBack 0;
 _p pushBack 100;
 
 _i pushBack "rhsusf_m112_mag";
-_u pushBack 0;
-_p pushBack 200;
+_u pushBack 2;
+_p pushBack 400;
 
 _i pushBack "rhs_mag_m69";
 _u pushBack 0;
