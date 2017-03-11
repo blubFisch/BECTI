@@ -617,13 +617,13 @@ CTI_VEHICLES_SALVAGER_PRICE = 550; //--- Determine the cost of the salvage truck
 
 //--- Vehicles: FUEL CONSUMPTION
 //--- Formula: 1 / (60*Minutes) = EXAMPLE for 60min runtime -- 1/(60*60) = 0.00027
-CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00018; //---default consumption rate every 1s - 90min
-CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.00027; //---tanks consumption rate - 60min 
-CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.00055; //---heli consumption rate - 30min
-CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.0008; //---planes consumption rate - 20min
-CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.0008; //---uav consumption rate - 20min
-CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0000925; //---ships consumption rate - 180min
-CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.00042; //---mhq consumption rate - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_ALL = 0.00014; //---default consumption rate every 1s - 120min
+CTI_VEHICLES_FUEL_CONSUMPTION_TANKS = 0.000208; //---tanks consumption rate - 80min 
+CTI_VEHICLES_FUEL_CONSUMPTION_HELIS = 0.000416; //---heli consumption rate - 40min
+CTI_VEHICLES_FUEL_CONSUMPTION_PLANES = 0.00055; //---planes consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_UAV = 0.00055; //---uav consumption rate - 30min
+CTI_VEHICLES_FUEL_CONSUMPTION_SHIPS = 0.0000694; //---ships consumption rate - 240min - 4hrs
+CTI_VEHICLES_FUEL_CONSUMPTION_MHQ = 0.000277; //---mhq consumption rate - 60min
 CTI_VEHICLES_FUEL_CONSUMPTION_SPECIAL = 0.0000001; //---special units consumption rate
 
 //--- Vehicles: LVOSS and ERA SYSTEMS
