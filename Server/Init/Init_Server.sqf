@@ -107,6 +107,7 @@ if (_attempts >= 500) then {
 	_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 	_hq setVariable ["cti_mhq_fuel", true]; //--- HQ fuel variable
 	_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
+	_hq addItemCargoGlobal ["ToolKit",1];
 	if (CTI_BASE_NOOBPROTECTION == 1) then {
 		_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 	};
@@ -128,6 +129,7 @@ if (_attempts >= 500) then {
 	_logic setVariable ["cti_spotted_units", []];
 	_logic setVariable ["cti_spotted_structures", []];
 	_logic setVariable ["cti_supply", missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_SUPPLY_%1", _side], true];
+	_logic setVariable ["cti_player_ai_skill", 40, true];
 	
 	_upgrades = [];
 	for '_i' from 1 to count(missionNamespace getVariable format["CTI_%1_UPGRADES_LEVELS", _side]) do { _upgrades pushBack 0 };

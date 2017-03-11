@@ -86,11 +86,11 @@ ATM_Jump_mapclick = if(true) then{
 };
 
 _target = player;
-RedOn = _target addAction["<t color='#B40404'>Chemlight Red On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["Chemlight_red"],6,false,false,"","_target == ( player)"];
+/*RedOn = _target addAction["<t color='#B40404'>Chemlight Red On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["Chemlight_red"],6,false,false,"","_target == ( player)"];
 BlueOn = _target addAction["<t color='#68ccf6'>Chemlight Blue On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["Chemlight_blue"],6,false,false,"","_target == ( player)"];
 YellowOn = _target addAction["<t color='#fcf018'>Chemlight Yellow On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["Chemlight_yellow"],6,false,false,"","_target == ( player)"];
 GreenOn = _target addAction["<t color='#30fd07'>Chemlight Green On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["Chemlight_green"],6,false,false,"","_target == ( player)"];
-Iron = _target addAction["<t color='#FF00CC'>Strobe IR On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["NVG_TargetC"],6,false,false,"","_target == ( player)"];
+Iron = _target addAction["<t color='#FF00CC'>Strobe IR On</t>", "Client\Functions\Externals\ATM_airdrop\atm_chem_on.sqf",["NVG_TargetC"],6,false,false,"","_target == ( player)"];*/
 
 _loadout=[_target] call Getloadout;
 
@@ -121,18 +121,20 @@ Cut_Rope = (FindDisplay 46) displayAddEventHandler ["keydown","_this call dokeyD
 
 _height = getPos _target select 2;
 
-while {(getPos _target select 2) > 2} do {
-	playSound "Vent";
-	playSound "Vent2";
-	sleep 5;
-};
+
+
+	while {(getPos _target select 2) > 2} do {
+			playSound CTI_SOUND_Vent;
+			playSound CTI_SOUND_Vent2;
+			sleep 5;
+	};
 
 hint Localize "STR_ATM_hintload";
-_target removeAction RedOn;
+/*_target removeAction RedOn;
 _target removeAction BlueOn;
 _target removeAction YellowOn;
 _target removeAction GreenOn;
-_target removeaction Iron;
+_target removeaction Iron;*/
 deletevehicle (_target getvariable "frontpack"); _target setvariable ["frontpack",nil,true];
 deletevehicle (_target getvariable "lgtarray"); _target setvariable ["lgtarray",nil,true];
 if (!IsCutRope) Then {

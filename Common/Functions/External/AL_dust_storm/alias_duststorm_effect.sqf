@@ -41,14 +41,14 @@ if (!hasInterface) exitWith {};
 sleep 15;
 
 while {al_duststorm_on} do {
-	effect_screen = ppEffectCreate ["FilmGrain", 2000]; 
+	/*effect_screen = ppEffectCreate ["FilmGrain", 2000]; 
 	effect_screen ppEffectEnable true;
 	effect_screen ppEffectAdjust [0.1,0.1,2,0.1,0.1,true];
-	effect_screen ppEffectCommit 0;
+	effect_screen ppEffectCommit 0;*/
 	
-	"colorCorrections" ppEffectAdjust[ 0.86, 1, 0.01, [-0.14, 0.17, 0.33, -0.14],[0.86, -0.4, 0.86, 0.86],[-0.57, 0.86, -1.2, 0.86]];
+/*	"colorCorrections" ppEffectAdjust[ 0.86, 1, 0.01, [-0.14, 0.17, 0.33, -0.14],[0.86, -0.4, 0.86, 0.86],[-0.57, 0.86, -1.2, 0.86]];
 	"colorCorrections" ppEffectCommit 0;
-	"colorCorrections" ppEffectEnable true;
+	"colorCorrections" ppEffectEnable true;*/
 
 	// particule in aer
 	_leaves_p  = "#particlesource" createVehicleLocal (getpos player);
@@ -94,7 +94,7 @@ grain_sand = 0;
 		sleep 0.5;
 	};
 	*/
-effect_screen ppEffectEnable false;
+/*effect_screen ppEffectEnable false;
 "colorCorrections" ppEffectEnable false;
-ppEffectDestroy effect_screen;
+ppEffectDestroy effect_screen;*/
 //enableCamShake false;

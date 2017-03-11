@@ -196,7 +196,7 @@ dokeyDown={
    if (player getvariable["key",true] and (_this select 1)  == Keys) exitwith {player setvariable["key",false]; [_key_delay] spawn {sleep (_this select 0);player setvariable["key",true]; }; _r};
      if ((_this select 1)  == Keys) then {
        if  (player != vehicle player and player getvariable ["cutaway",true]) then  {
-		playSound "Para";
+       	playSound CTI_SOUND_Para;
 		_cut = nearestObjects [player, ["Steerable_Parachute_F"], 5];
 	   {
 			deletevehicle _x;

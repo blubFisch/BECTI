@@ -25,6 +25,42 @@ _index = 0;
 _ratio = round(count _groups * (_ratio/100));
 if (_ratio < 1) then {_ratio = 1};
 
+//--- If the dynamic mode is enabled, the server FPS are then used to determine the amount of active units and ratio.
+//--- If server running at full speed due to small population we spawn more AI per wave and less waves.
+//--- Ones server get filled we decrease the ammount.
+
+if (CTI_TOWNS_DYNAMIC_FPS_MODE > 0) then {
+	_fps = diag_fpsMin;
+	
+	//--- Only proc if the overall FPS are below 48
+	if (_fps < 48) then {
+		_coef = switch (true) do {
+			case (_fps >= 46): {4};
+			case (_fps >= 44): {3};
+			case (_fps >= 42): {2};
+			case (_fps >= 40): {1};
+			case (_fps >= 38): {.95};
+			case (_fps >= 36): {.90};
+			case (_fps >= 34): {.85};
+			case (_fps >= 32): {.80};
+			case (_fps >= 30): {.75};
+			case (_fps >= 28): {.70};
+			case (_fps >= 26): {.65};
+			case (_fps >= 24): {.60};
+			case (_fps >= 21): {.55};
+			case (_fps >= 19): {.50};
+			case (_fps >= 17): {.45};
+			case (_fps >= 15): {.40};
+			case (_fps >= 13): {.35};
+			case (_fps >= 11): {.30};
+			default {1};
+		};
+		
+		_active_units =ceil(_active_units * _coef);
+		_ratio = ceil(_ratio * _coef);
+	};	
+};
+
 //--- HC Specific: Sleep for a random second to delay the threads (if there is more than one HC, information such as remote units count will sync better)
 if (CTI_IsHeadless) then {sleep (random 1)};
 

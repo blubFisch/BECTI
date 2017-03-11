@@ -5,7 +5,8 @@ _xpos = getpos _object select 0;
 _ypos = getpos _object select 1;
 
 //Annoucement
-playsound "nuke";
+playsound CTI_SOUND_nuke;
+
 //Nuke Settings
 call compile preprocessfile "Common\Functions\External\nuclear\config.sqf";
 //Object Variables

@@ -33,7 +33,7 @@
 	  -> Display a parameterized message for all client via the "CTI_PVF_CLT_OnMessageReceived" PVF
 */
 
-private ["_message_var", "_parameters"];
+private ["_message_var", "_parameters","_damage_color","_damage_value"];
 
 _message_var = _this select 0;
 _parameters = if (count _this > 1) then {_this select 1} else {[]};
@@ -54,6 +54,32 @@ switch (_message_var) do {
 	case "build-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
 		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];
+	};
+	case "building-hit": { // see CTI_BASE_DISPLAY_HINT to disable hint.
+	// commented line below has support to display a hint to the shooter the enemy structure's base health upgrade
+//		hint parseText format ["<t align='center'>Enemy Structure Damaged</t><br />Current Enemy Structure Health: %1%2<br /><t align='center'>Enemy base health upgrade level: %3</t>", _parameters select 0, "%", _parameters select 2];
+		hint parseText format ["<t align='center'>Enemy Structure Damaged</t><br /><t align='center'>Current Enemy Structure Health: %1%2</t>", _parameters select 0, "%"];
+		sleep 2;
+		hint "";//clears the hint off player screen
+	};
+	case "building-attacked": { // see CTI_BASE_DISPLAY_HINT to disable hint.
+		_var = missionNamespace getVariable (_parameters select 0);
+		_damage_value = _parameters select 2;
+		if (_damage_value >= 70) then { // displays damage as green text
+
+				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#0ECF0E'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1,mapGridPosition (_parameters select 1), _damage_value, "%"];
+		};
+		if (_damage_value < 70 && _damage_value >= 30 ) then { // displays damage as orange text
+
+				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#FF7E00'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
+		};
+		if (_damage_value < 30) then {// displays damage as red text
+
+		hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#ff0000'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
+		};
+
+		sleep 10;
+		hint "";//clears the hint off player screen
 	};
 	case "commander-disconnected": {CTI_P_ChatID sideChat "The current commander has left the game"};
 	case "commander-vote-end": {
@@ -92,6 +118,14 @@ switch (_message_var) do {
 		CTI_P_ChatID commandChat "The HQ has been repaired";
 		playsound "bobcat_engine_start";
 	};
+	case "hq-deployed": {
+		CTI_P_ChatID commandChat "The HQ has been deployed";
+//		playsound "Acts_carFixingWheel"; if sound is recommended, find a better sound
+	};
+	case "hq-mobilized": {
+		CTI_P_ChatID commandChat "The HQ has been mobilized";
+		playsound "bobcat_engine_start";
+	};
 	case "fob-sold": {CTI_P_ChatID commandChat format ["A FOB has been sold at Grid %1", _parameters]};
 	case "fob-large-sold": {CTI_P_ChatID commandChat format ["A Large FOB has been sold at Grid %1", _parameters]};
 	case "funds-transfer": {
@@ -110,7 +144,8 @@ switch (_message_var) do {
 	case "order-getoutc": {_parameters sideChat "Acknowledged.  Disembarking from any transport(s)"};
 	case "penalty": {
 		_var = missionNamespace getVariable (_parameters select 0);
-		CTI_P_ChatID sideChat format ["A friendly %1 was killed by the %2 group! %2 was fined $%3", _var select CTI_UNIT_LABEL, (_parameters select 1) getVariable ["cti_alias",CTI_PLAYER_DEFAULT_ALIAS], _parameters select 2];
+//		CTI_P_ChatID sideChat format ["A friendly %1 was killed by the %2 group! %2 was fined $%3", _var select CTI_UNIT_LABEL, (_parameters select 1) getVariable ["cti_alias",CTI_PLAYER_DEFAULT_ALIAS], _parameters select 2];
+		CTI_P_ChatID sideChat format ["A friendly %1 was killed by  %2! %2 was fined $%3", _var select CTI_UNIT_LABEL, name (_parameters select 1), _parameters select 2];
 	};
 	case "repair-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
@@ -150,6 +185,9 @@ switch (_message_var) do {
 	};
 	case "teamkill": {CTI_P_ChatID sideChat "Watch your fire! you're shooting on friendly!"};
 	case "teamswap": {CTI_P_ChatID commandChat format ["Player %1 has been sent back to the lobby after teamswaping", _parameters]};
+	case "camp-capture": {
+		player groupChat format ["$%1 awarded for the capture of a camp in %2", _parameters select 1, (_parameters select 0) getVariable "cti_town_name"];
+	};
 	case "town-capture": {
 		player groupChat format ["$%1 awarded for the capture of %2", _parameters select 1, (_parameters select 0) getVariable "cti_town_name"];
 		playMusic "EventTrack03_F_Curator";
@@ -182,4 +220,6 @@ switch (_message_var) do {
 		//player groupChat format ["Rank Up"];
 		hint parseText format ["<t align='center'>DEV NOTIFICATION</t><br /><br /><t>1: <t color='#FCBE18'>%1</t></t><br /><br /><t>2: <t color='#FCBE18'>%2</t></t><br /><br /><t>3: <t color='#FCBE18'>%3</t></t><br /><br /><t>4: <t color='#FCBE18'>%4</t></t><br /><br /><t>5: <t color='#FCBE18'>%5</t></t><br /><br /><t>6: <t color='#FCBE18'>%6</t></t></t>", _parameters select 0, _parameters select 1, _parameters select 2, _parameters select 3, _parameters select 4, _parameters select 5];
 	};
+
+	
 };

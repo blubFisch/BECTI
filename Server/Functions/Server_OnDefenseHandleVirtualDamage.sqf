@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -65,20 +65,37 @@ switch (_upgrade_basehealth) do {
 	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 };
 //Adjust damage for ammo types
-/*if (_ammo isKindOf "BulletCore" || _ammo isKindOf "ShotgunCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BULLET;
+//--- Tanks
+/*if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
 };
-if (_ammo isKindOf "ShellBase" || _ammo isKindOf "ShellCore" || _ammo isKindOf "CannonCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;//roughly 10 aps shells
+//--- Arty (Has to be Spesific as tanks use same basecore)
+if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo isKindOf "R_230mm_fly") || (_ammo isKindOf "Mo_cluster_AP") || (_ammo isKindof "ArtilleryRocketCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
 };
-if (_ammo isKindOf "RocketCore" || _ammo isKindOf "MissileCore") then {
+//--- Satchels
+if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
+};
+//--- HE Cannons
+if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
+};
+//--- Missiles
+if ((_ammo isKindOf "MissileCore") || (_ammo isKindOf "MissileBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
 };
-if (_ammo isKindOf "BombCore" || _ammo isKindOf "LaserBombCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
+//--- Explosions
+if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (_ammo isKindOf "HelicopterExploSmall") || (_ammo isKindOf "HelicopterExploBig")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
 };
-if (_ammo isKindOf "ArtilleryRocketCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ART;
+//--- Rockets
+if (_ammo isKindOf "RocketCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
+};
+//--- Bombs
+if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo isKindOf "MineCore")) then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
 };*/
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
@@ -113,7 +130,14 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
 		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
-
+if (CTI_BASE_DISPLAY_HINT == 1) then {
+	_health = (1 - _virtual_damages);
+	_health = (_health*100);
+	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	if (alive _damaged && (side _shooter != _side)) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage", _shooter];
+	};
+};
 //--- Display a message to the team
 if (!alive _damaged) then {
 	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];

@@ -327,7 +327,8 @@ CTI_UI_Gear_DisplayShoppingItems = {
 		_upgrade_gear = -1;
 	};
 	
-	if (CTI_DEBUG) then {_upgrade_gear=10};
+	// --- Dev mode full ugear upgrade
+	//if (CTI_DEV_MODE > 0) then { _upgrade_gear=10};
 	
 	if (_tab != CTI_GEAR_TAB_TEMPLATES) then { //--- Generic items
 		{
@@ -1296,9 +1297,10 @@ CTI_UI_Gear_ChangeCurrentMagazine = {
 };
 
 CTI_UI_Gear_UpdateLinkedItems = {
-	private ["_config_type", "_get", "_item", "_magazines"];
+	private ["_config_type", "_get", "_item", "_magazines","_upgrade_gear", "_upgrades"];
 	_item = _this;
-	
+	_upgrades = (CTI_P_SideJoined) Call CTI_CO_FNC_GetSideUpgrades;
+	_upgrade_gear = _upgrades select CTI_UPGRADE_GEAR;
 	_config_type = (_item) call CTI_UI_Gear_GetItemBaseConfig;
 	
 	if ((lnbSize 70601) select 0 > 0) then {lnbClear 70601};
@@ -1310,7 +1312,7 @@ CTI_UI_Gear_UpdateLinkedItems = {
 			if (_x == "this") then {
 				_magazines = _magazines + getArray(configFile >> 'CfgWeapons' >> _item >> 'magazines');
 			} else {
-				_magazines = _magazines + getArray(configfile >> 'CfgWeapons' >> _item >> _x >> 'magazines')
+				_magazines = _magazines + getArray(configfile >> 'CfgWeapons' >> _item >> _x >> 'magazines');
 			};
 		} forEach (getArray(configFile >> 'CfgWeapons' >> _item >> 'muzzles'));
 		
@@ -1329,7 +1331,7 @@ CTI_UI_Gear_UpdateLinkedItems = {
 		{
 			_get = missionNamespace getVariable format["cti_%1", _x];
 			
-			if !(isNil "_get") then {
+			if (!(isNil "_get") &&((_get select 0) select 0) <= _upgrade_gear) then {
 				_row = lnbAddRow [70601, [getText(configFile >> _get select 2 >> _x >> 'displayName'), format ["$%1", (_get select 0) select 1]]];
 				lnbSetPicture [70601, [_row, 1], getText(configFile >> _get select 2 >> _x >> 'picture')];
 				lnbSetData [70601, [_row, 0], toLower(_x)];

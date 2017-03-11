@@ -123,7 +123,7 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'O_T_Officer_F';
+_c pushBack 'O_T_Officer_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 100;
@@ -141,7 +141,7 @@ _t pushBack 5;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'O_T_Soldier_SL_F';
 _p pushBack '';
@@ -193,7 +193,7 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'O_T_soldier_UAV_F';
+_c pushBack 'O_T_soldier_UAV_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 250;
@@ -201,7 +201,7 @@ _t pushBack 5;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Infantry Special Forces
 
@@ -419,7 +419,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'O_T_Quadbike_01_ghex_F';
+_c pushBack 'O_T_Quadbike_01_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
 _o pushBack 75;
@@ -427,7 +427,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'O_T_Truck_03_transport_ghex_F';
 _p pushBack '';
@@ -451,8 +451,8 @@ _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
-_o pushBack 325;
+_n pushBack ["1- Ifrit Pacific (Unarmed)"]; 
+_o pushBack 1250;
 _t pushBack 15;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -461,20 +461,20 @@ _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_hmg_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
-_o pushBack 2350;
+_n pushBack ["1- Hunter  Pacific (LMG)"]; 
+_o pushBack 2625;
 _t pushBack 20;
-_u pushBack 3;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_gmg_ghex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
-_o pushBack 3050;
+_n pushBack ["2- Ifrit  Pacific (GMG)"]; 
+_o pushBack 2000;
 _t pushBack 20;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
@@ -501,18 +501,18 @@ _d pushBack 0;
 
 _c pushBack 'O_T_Truck_03_medical_ghex_F';
 _p pushBack '';
-_n pushBack (format ["Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 4500;
+_n pushBack (format ["1- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 4000;
 _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
 
-_c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
+_c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F'; //Marid
 _p pushBack '';
-_n pushBack ["%1 (Pacific)"]; 
-_o pushBack 6500;
+_n pushBack ["3- MSE-3 Marid (Pacific)"]; 
+_o pushBack 2250;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -521,22 +521,22 @@ _d pushBack 0;
 
 //--- Heavy Vehicles
 
-_c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F';
+_c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F'; //Kamysh
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 14000;
+_o pushBack 13475;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_c pushBack 'O_T_MBT_02_cannon_ghex_F';
+_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 30400;
+_o pushBack 28000;
 _t pushBack 30;
-_u pushBack 3;
+_u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -544,9 +544,9 @@ _d pushBack 0;
 _c pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 15600;
+_o pushBack 10925;
 _t pushBack 30;
-_u pushBack 2;
+_u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -576,7 +576,7 @@ _d pushBack 0;
 _c pushBack 'O_T_Truck_03_fuel_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 200;
+_o pushBack 2500;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
@@ -588,7 +588,7 @@ _d pushBack 0;
 _c pushBack 'O_T_Truck_03_ammo_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 
-_o pushBack 6000;
+_o pushBack 5000;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
@@ -600,9 +600,9 @@ _d pushBack 0;
 _c pushBack 'C_Plane_Civil_01_F';
 _p pushBack '';
 _n pushBack 'Scout Plane'; 
-_o pushBack 2550;
+_o pushBack 10000;
 _t pushBack 20;
-_u pushBack 0;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
@@ -610,9 +610,9 @@ _d pushBack 0;
 _c pushBack 'O_T_UAV_04_CAS_F';
 _p pushBack '';
 _n pushBack 'UAV AGM'; 
-_o pushBack 28000;
+_o pushBack 25000;
 _t pushBack 50;
-_u pushBack 3;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
@@ -620,7 +620,7 @@ _d pushBack 0;
 _c pushBack 'O_T_VTOL_02_infantry_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 54400;
+_o pushBack 40000;
 _t pushBack 50;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -630,7 +630,7 @@ _d pushBack 10;
 _c pushBack 'O_T_VTOL_02_vehicle_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 54400;
+_o pushBack 40000;
 _t pushBack 50;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -640,7 +640,7 @@ _d pushBack 10;
 _c pushBack 'O_T_VTOL_02_infantry_hex_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 54400;
+_o pushBack 40000;
 _t pushBack 50;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -650,7 +650,7 @@ _d pushBack 10;
 _c pushBack 'O_T_VTOL_02_vehicle_hex_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 54400;
+_o pushBack 40000;
 _t pushBack 50;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -682,14 +682,14 @@ _d pushBack 10;
 _c pushBack 'C_Scooter_Transport_01_F';
 _p pushBack '';
 _n pushBack 'Scooter';
-_o pushBack 200;
+_o pushBack 300;
 _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'I_C_Boat_Transport_02_F';
+_c pushBack 'I_C_Boat_Transport_02_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;
@@ -708,7 +708,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 _c pushBack 'O_T_Boat_Armed_01_hmg_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"]; 

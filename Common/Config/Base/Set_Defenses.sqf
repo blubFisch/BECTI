@@ -1,4 +1,4 @@
-private ["_categories", "_classes", "_defenses", "_defenses_cname", "_headers", "_index", "_placements", "_prices", "_side", "_sub_categories", "_sub_categories_index","_upgrade","_specials"];
+private ["_categories", "_classes", "_defenses", "_defenses_cname", "_headers", "_index", "_placements", "_prices", "_side", "_sub_categories", "_sub_categories_index","_upgrade","_specials","_classname_variant"];
 
 _side = _this select 0;
 _headers = _this select 1;
@@ -21,8 +21,20 @@ _index = 0;
 for '_i' from 0 to (count _headers) -1 do {
 	_header = _headers select _i;
 	_classname = _classes select _i;
-	
-	if (isNil {missionNamespace getVariable format["CTI_%1_%2",_side,_classname]}) then {
+	//check if armed version
+	_classname_variant = "d";
+	switch (typeName _header) do {
+		case "STRING": { _classname_variant = "d"; };
+		case "ARRAY": {
+			if ("Armed" in ((_header select 1) select 0)) then {
+				_classname_variant = ((_header select 1) select 0) select 1;
+			};
+			if ("Composition" in ((_header select 1) select 0)) then {
+				_classname_variant = ((_header select 1) select 0) select 1;
+			};
+		};
+	};
+	if (isNil {missionNamespace getVariable format["CTI_%1_%2_%3",_side,_classname,_classname_variant]}) then {
 		_label = "";
 		_special = [];
 		switch (typeName _header) do {
@@ -53,14 +65,14 @@ for '_i' from 0 to (count _headers) -1 do {
 		};
 		
 		_find = _sub_categories find (_categories select _i);
-		missionNamespace setVariable [format["CTI_COIN_%1_DEFENSE_CATEGORY_%2", _side, _find], (missionNamespace getVariable [format["CTI_COIN_%1_DEFENSE_CATEGORY_%2", _side, _find], []]) + [format["CTI_%1_%2",_side,_classname]]];
+		missionNamespace setVariable [format["CTI_COIN_%1_DEFENSE_CATEGORY_%2", _side, _find], (missionNamespace getVariable [format["CTI_COIN_%1_DEFENSE_CATEGORY_%2", _side, _find], []]) + [format["CTI_%1_%2_%3",_side,_classname,_classname_variant]]];
 		
-		missionNamespace setVariable [format["CTI_%1_%2",_side,_classname], _stored];
-		_defenses pushBack format["CTI_%1_%2",_side,_classname];
+		missionNamespace setVariable [format["CTI_%1_%2_%3",_side,_classname,_classname_variant], _stored];
+		_defenses pushBack format["CTI_%1_%2_%3",_side,_classname,_classname_variant];
 		_defenses_cname pushBack _classname;
 	} else {
 		if (CTI_Log_Level >= CTI_Log_Information) then { 
-			["TRIVIAL", "FILE: Common\Config\Base\Set_Defenses.sqf", format ["[%1] Defense [%2] was previously defined. Skipping this one.", _side, _classname]] call CTI_CO_FNC_Log
+			["TRIVIAL", "FILE: Common\Config\Base\Set_Defenses.sqf", format ["[%1] Defense [%2][%3] was previously defined. Skipping this one.", _side, _classname,_classname_variant]] call CTI_CO_FNC_Log
 		};
 	};
 };

@@ -69,23 +69,6 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"med";
 };
-//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
-if({(_vehicle isKindOf _x)} count ["Tank","APC"] !=0) then { // adds in stealth addaction to tanks and apc. 
-	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","alive _target"]; // any AI or player in any seat can turn on stealth.
-	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth On</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","alive _target &&(isEngineOn _target) && !Local_StealthOn"]; // any AI or player in any seat can turn on stealth.
-	//_vehicle addAction ["<t color='"+"#00E4FF"+"'>Stealth Off</t>", "Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf",[],7,false, true,"","alive _target && Local_StealthOn" ];
-};
-if (_vehicle isKindOf "Tank") then { //--- Tanks and low gear
-	
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
-	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
-};
-
-if (_vehicle isKindOf "Ship") then {
-	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
-	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
-};
-if (_vehicle isKindOf "Plane") then {_vehicle addAction ["<t color='#86F078'>Taxi Reverse</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 4 && speed _target > -4 && getPos _target select 2 < 4']};
 
 if (CTI_SPECIAL_NUKETRUCK in _special) then { //--- Nuke vehicle.
 	_vehicle call {[_this, 30] execvm "Common\Functions\External\nuclear\geiger.sqf"};
@@ -99,32 +82,29 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 };
 
 //--- Radio - only helis
-if (_vehicle isKindOf "Helicopter" || _vehicle isKindOf "CUP_B_UH1D_GER_KSK") then {
+if (_vehicle isKindOf "Helicopter") then {
 	_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
 };
+
+//--- Taxi Reverse
+if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {_vehicle addAction ["<t color='#86F078'>Taxi Reverse</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 4 && speed _target > -4 && getPos _target select 2 < 4']};
+
 //--- Perform side-speficic operations
 if (_sideID != CTI_P_SideID) exitWith {};
 
 if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
-	_vehicle addItemCargoGlobal ["ToolKit",1];
-	if (CTI_BASE_FOB_MAX > 0) then {
+//--- Removed old Actions.
+/*	if (CTI_BASE_FOB_MAX > 0) then {
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Dismantle Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB_DISMANTLE, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB_Dismantle < 1"];
 		_vehicle addAction ["<t color='#eac6ff'>ACTION: Dismantle Nearest FOB</t>", "Client\Actions\Action_DismantleFOB.sqf", "", 92, false, true, "", "_this == player && (CTI_P_TeamsRequests_FOB_Dismantle > 0 || call CTI_CL_FNC_IsPlayerCommander)"];
-	};
+	};*/
 };
 
 //Defense Truck Cargo
 if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"maint"; //type is ok? b_support ?
-	_vehicle addItemCargoGlobal ["ToolKit",1];
-	_vehicle addMagazineCargoGlobal ["ATMine_Range_Mag",8];
-	_vehicle addMagazineCargoGlobal ["APERSMine_Range_Mag",4];
-	_vehicle addMagazineCargoGlobal ["APERSBoundingMine_Range_Mag",4];
-	_vehicle addMagazineCargoGlobal ["SLAMDirectionalMine_Wire_Mag",4];
-	_vehicle addMagazineCargoGlobal ["APERSTripMine_Wire_Mag",4];
-	_vehicle addMagazineCargoGlobal ["ClaymoreDirectionalMine_Remote_Mag",4];
 };
 
 if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
@@ -148,7 +128,23 @@ if (_marker_type == "") then {
 		default { _marker_type = CTI_P_MarkerPrefix+"unknown" };
 	};
 };
+//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
+// adds in stealth add action to tanks 
+if (_vehicle isKindOf "Tank") then {
+	_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target == _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
+};
+if (_vehicle isKindOf "Car") then { //--- Low gear added to apc/cars
+	
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
+	_vehicle addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
+};
 
+if (_vehicle isKindOf "Ship") then {
+	_vehicle addAction ["<t color='#86F078'>Push</t>","Client\Actions\Action_Push.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10'];
+	_vehicle addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 10 && speed _target > -4'];
+};
 //--- Marker initialization
 _marker_label = "";
 _marker_name = format["cti_vehicle_%1", CTI_P_MarkerIterator];

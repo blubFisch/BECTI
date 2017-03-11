@@ -30,7 +30,9 @@ for '_i' from 0 to (count _c)-1 do {
 			
 			_picture = _p select _i;
 			if (_picture == "") then { 
-				_picture = if (_classname isKindOf "Man") then { getText(configFile >> "CfgVehicles" >> _classname >> "portrait") } else { getText(configFile >> "CfgVehicles" >> _classname >> "picture") }
+				//--- Repalced portrait with editorPreview, seems like portriat is outdated. Also removed picture part.
+				//--- _picture = if (_classname isKindOf "Man") then { getText(configFile >> "CfgVehicles" >> _classname >> "portrait") } else { getText(configFile >> "CfgVehicles" >> _classname >> "picture") }
+				_picture = getText(configFile >> "CfgVehicles" >> _classname >> "editorPreview")
 			};
 			_label = switch (typeName (_n select _i)) do {
 				case "ARRAY": {format[_ifinarray select 0, getText(configFile >> "CfgVehicles" >> _classname >> "displayName")]};

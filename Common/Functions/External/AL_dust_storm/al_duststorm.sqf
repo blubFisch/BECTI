@@ -47,10 +47,12 @@ sleep 0.1;
 
 [] spawn {
 	while {al_duststorm_on} do {
-		["bcg_wind","playSound"] call BIS_fnc_MP;
+
+		[CTI_SOUND_bcg_wind,"playSound"] call BIS_fnc_MP;
 		sleep 67;
 	};
 };
+
 
 [] spawn {
 	_ifog=0;
@@ -214,14 +216,16 @@ if (_dust_wall) then {
 	
 	sleep 0.1;
 	
-	[_stormsource] spawn {
-		_stormsource_s = _this select 0;
-		while {al_duststorm_on} do {
-			[[_stormsource_s, "uragan_1"], "say3d"] call BIS_fnc_MP;
-			sleep 60;
-		};
+
+[_stormsource] spawn {
+	_stormsource_s = _this select 0;
+	while {al_duststorm_on} do {
+		[[_stormsource_s, CTI_SOUND_uragan_1], "say3d"] call BIS_fnc_MP;
+		sleep 60;
 	};
-	
+};
+
+
 // >> wall of dust distrugator
 	if (_lethal_wall) then {
 		[_stormsource,_stormsource_1,_stormsource_2,_stormsource_3,_stormsource_4,_stormsource_5,_stormsource_6] spawn {
@@ -327,12 +331,15 @@ if (_effect_on_objects) then {
 
 		//durata_rafala = 1+random 5;	sleep 30+random 120;
 		sleep 1;
+		
+
 		[] spawn {
-			_rafale = ["rafala_1","sandstorm","rafala_4_dr","rafala_5_st"] call BIS_fnc_selectRandom;
+			_rafale = [CTI_SOUND_rafala_1,CTI_SOUND_sandstorm,CTI_SOUND_rafala_4_dr,CTI_SOUND_rafala_5_st] call BIS_fnc_selectRandom;
 			[_rafale,"playSound"] call BIS_fnc_MP;
 			//hint str _rafale;
 		};
-		
+
+
 		if (!isNull _blowobj) then {
 			_xblow	= 0.1+random 5;
 			_yblow	= 0.1+random 5;
@@ -353,9 +360,10 @@ if (_effect_on_objects) then {
 };
 
 while {al_duststorm_on} do {
-	_rafale = ["rafala_1","sandstorm","rafala_4_dr","rafala_5_st"] call BIS_fnc_selectRandom;
+	_rafale = [CTI_SOUND_rafala_1,CTI_SOUND_sandstorm,CTI_SOUND_rafala_4_dr,CTI_SOUND_rafala_5_st] call BIS_fnc_selectRandom;
 	[_rafale,"playSound"] call BIS_fnc_MP;
 	sleep 60+random 120;
 };
+
 
 //deleteVehicle _stormsource;deleteVehicle _stormsource_1;deleteVehicle _stormsource_2;deleteVehicle _stormsource_3;deleteVehicle _stormsource_4;deleteVehicle _stormsource_5;deleteVehicle _stormsource_6;

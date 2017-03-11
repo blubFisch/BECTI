@@ -187,7 +187,6 @@ CTI_Coin_UpdatePreview = {
 		(_color) call CTI_Coin_UpdateItemLabel;
 	};
 };
-
 CTI_Coin_PreviewSurfaceIsValid = {
 	private ["_isValid", "_preview"];
 	
@@ -330,6 +329,7 @@ CTI_Coin_OnPreviewPlacement = {
 		
 		if (CTI_COIN_PREVIEW call CTI_Coin_PreviewSurfaceIsValid && _defense_pos_valid && CTI_COIN_PREVIEW distance CTI_COIN_ORIGIN <= CTI_COIN_RANGE) then { //--- Last check to make sure that the position is valid
 			deleteVehicle CTI_COIN_PREVIEW;
+			if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[CTI_COIN_PREVIEW_COMP] call LARs_fnc_deleteComp;};
 			
 			//--- Remove the description overlay content
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText "");
@@ -364,7 +364,23 @@ CTI_Coin_OnPreviewPlacement = {
 					_price = (CTI_COIN_PARAM select 2);
 					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((CTI_COIN_PARAM select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)};
 					if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((CTI_COIN_PARAM select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)};
-					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, CTI_COIN_PARAM select 1];
+					//check if armed version
+					_header = CTI_COIN_PARAM select 5;
+					_classname = CTI_COIN_PARAM select 1;
+					//check if armed version
+					_classname_variant = "d";
+					switch (typeName _header) do {
+						case "STRING": { _classname_variant = "d"; };
+						case "ARRAY": {
+							if ("Armed" in (_header select 0)) then {
+								_classname_variant = ((_header select 0) select 1);
+							};
+							if ("Composition" in (_header select 0)) then {
+								_classname_variant = ((_header select 0) select 1);
+							};
+						};
+					};
+					_variable = format ["CTI_%1_%2_%3", CTI_P_SideJoined, _classname, _classname_variant];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
 					[_variable, CTI_P_SideJoined, _position, _direction, player, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
@@ -374,6 +390,7 @@ CTI_Coin_OnPreviewPlacement = {
 			
 			CTI_COIN_PARAM = nil;
 			CTI_COIN_PREVIEW = nil;
+			CTI_COIN_PREVIEW_COMP = nil;
 			CTI_COIN_LASTDIR = _direction;
 			
 			//--- Show the last known menu or the root menu again if no expression is requiered
@@ -440,8 +457,10 @@ CTI_Coin_OnPreviewCanceled = {
 		if !(isNull CTI_COIN_HELPER) then {deleteVehicle CTI_COIN_HELPER};
 		
 		deleteVehicle CTI_COIN_PREVIEW;
+		if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[CTI_COIN_PREVIEW_COMP] call LARs_fnc_deleteComp;};
 		CTI_COIN_PARAM = nil;
 		CTI_COIN_PREVIEW = nil;
+		CTI_COIN_PREVIEW_COMP = nil;
 		
 		//--- Remove the description overlay content
 		((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText "");

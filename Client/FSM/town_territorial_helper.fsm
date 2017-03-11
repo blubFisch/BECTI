@@ -11,8 +11,8 @@ link1[] = {1,2};
 link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
-globals[] = {25.000000,1,0,0,0,640,480,1,133,6316128,1,-456.160217,360.531433,242.139771,-456.939575,703,846,1};
-window[] = {0,-1,-1,-1,-1,1122,130,1936,130,1,721};
+globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-456.160217,360.531433,242.139771,-456.939575,703,846,1};
+window[] = {0,-1,-1,-32000,-32000,1092,586,2392,100,1,721};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -92,31 +92,44 @@ class FSM
        "			_marker setMarkerAlphaLocal 0;" \n
        "			_marker_cap setMarkerAlphaLocal 0;" \n
        "		} else {" \n
-       "			//--- Unsafe, our friendly town may be captured" \n
-       "			if (missionNamespace getVariable ""CTI_TOWNS_PEACE"" > 0) then { //--- Peace mode" \n
-       "				if (time < (_x getVariable ""cti_town_peace"")) then { //--- Peace mode is enabled" \n
-       "					_marker setMarkerColorLocal CTI_TOWNS_MARKERS_PEACE_COLOR;" \n
-       "				} else {" \n
-       "					_marker setMarkerColorLocal (markerColor format[""cti_town_marker_%1"", _x]);" \n
-       "				};" \n
-       "			} else { //--- Standard mode" \n
-       "				_marker setMarkerColorLocal (markerColor format[""cti_town_marker_%1"", _x]);" \n
-       "			};" \n
-       "			//---check for enemies" \n
        "			_town = _x;" \n
        "			_objects = _town nearEntities 320;" \n
        "			_count_enemies = [_objects, CTI_P_SideJoined] call CTI_CO_FNC_GetAreaEnemiesCount;" \n
-       "			if (_count_enemies > 0) then {" \n
-       "				_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
-       "				//if (_last_alert < time ) then {" \n
-       "					//if (typeOf _town == ""FlagPole_F"") then {[_town,""purgesiren_1"",100] call Common_Say3D;};" \n
-       "						//---only play every 15min					" \n
-       "					//	_last_alert = time + 900; " \n
-       "				//};" \n
+       "" \n
+       "			//--- Unsafe, our friendly town may be captured" \n
+       "			if (missionNamespace getVariable ""CTI_TOWNS_PEACE"" > 0) then { //--- Peace mode" \n
+       "				if (time < (_x getVariable ""cti_town_peace"")) then { //--- Peace mode is enabled" \n
+       "					if (_count_enemies > 0) then {" \n
+       "						_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
+       "						_marker setMarkerAlphaLocal 0.3;" \n
+       "						_marker_cap setMarkerAlphaLocal 0.2;" \n
+       "					} else {" \n
+       "						_marker setMarkerColorLocal CTI_TOWNS_MARKERS_PEACE_COLOR;" \n
+       "						_marker setMarkerAlphaLocal 0.2;" \n
+       "						_marker_cap setMarkerAlphaLocal 0.1;" \n
+       "					};" \n
+       "				} else {" \n
+       "					if (_count_enemies > 0) then {" \n
+       "						_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
+       "						_marker setMarkerAlphaLocal 0.3;" \n
+       "						_marker_cap setMarkerAlphaLocal 0.2;" \n
+       "					} else {" \n
+       "						_marker setMarkerColorLocal (markerColor format[""cti_town_marker_%1"", _x]);" \n
+       "						_marker setMarkerAlphaLocal 0;" \n
+       "						_marker_cap setMarkerAlphaLocal 0;" \n
+       "					};" \n
+       "				};" \n
+       "			} else { //--- Standard mode" \n
+       "				if (_count_enemies > 0) then {" \n
+       "					_marker setMarkerColorLocal CTI_TOWNS_MARKERS_ALERT_COLOR;" \n
+       "					_marker setMarkerAlphaLocal 0.3;" \n
+       "					_marker_cap setMarkerAlphaLocal 0.2;" \n
+       "				} else {" \n
+       "					_marker setMarkerColorLocal (markerColor format[""cti_town_marker_%1"", _x]);" \n
+       "					_marker setMarkerAlphaLocal 0;" \n
+       "					_marker_cap setMarkerAlphaLocal 0;" \n
+       "				};" \n
        "			};" \n
-       "			" \n
-       "			_marker setMarkerAlphaLocal 0.3;" \n
-       "			_marker_cap setMarkerAlphaLocal 0.2;" \n
        "		};" \n
        "	} else {" \n
        "		//--- Hostile held, can we capture it?" \n

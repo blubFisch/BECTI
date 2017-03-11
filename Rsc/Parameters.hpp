@@ -11,6 +11,24 @@ class Params {
 		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
 		default = 0;
 	};
+	class CTI_FACTION_DEFAULT_VEHICLES {
+		title = "FACTION: Starting vehicles and mhq";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_GEAR {
+		title = "FACTION: Starting gear";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_TROOPS {
+		title = "FACTION: Default infantry";
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Apex","CUP","RHS"};
+		default = 0;
+	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
 		values[] = {1};
@@ -112,6 +130,12 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
+	};
+	class CTI_TOWNS_OCCUPATION_SKILL {
+		title = "TOWNS: Occupation Skill level";
+		values[] = {20,30,40,50,60,70,80,90,100};
+		texts[] = {"20","30","40","50","60","70","80","90","100"};
+		default = 80;
 	};
 	class CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Squad Count";
@@ -315,7 +339,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = -1;
+		default = 1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
@@ -327,13 +351,13 @@ class Params {
 		title = "GAMEPLAY: 3P view";
 		values[] = {-1,0,1,2};
 		texts[] = {"All","No group view","Vehicle","None"};
-		default = 1;
+		default = -1;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";
 		values[] = {0,25,50,75,100};
 		texts[] = {"None","Little","Normal","Allot","Full"};
-		default = 0;
+		default = 25;
 	};
 	class CTI_SM_NONV {
 		title = "GAMEPLAY: Disable NVs, Thermal on Players";
@@ -381,13 +405,13 @@ class Params {
 		title = "VISUAL: Terrain Grid";
 		values[] = {10,20,30,40,50};
 		texts[] = {"Far","Medium","Short","Shorter","Free"};
-		default = 50;
+		default = 10;
 	};
 	class CTI_GRAPHICS_VD_MAX {
 		title = "VISUAL: View Distance";
 		values[] = {1000,1500,2000,2500,3000,3500,4000};
 		texts[] = {"1 KM","1.5 KM","2 KM","2.5 KM","3 KM","3.5 KM","4 KM"};
-		default = 4000;
+		default = 3500;
 	};
 	class CTI_WEATHER_INITIAL {
 		title = "WEATHER: Inital Time";
@@ -549,25 +573,25 @@ class Params {
 		title = "ADDON: APEX DLC Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_CUP_ADDON {
 		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_CUP_CORE_ADDON {
 		title = "ADDON: CUP CORE and CUP Terrains";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_OFPS_ADDON {
 		title = "ADDON: OFPS MOD Pack Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_RHS_ADDON {
 		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
@@ -603,6 +627,6 @@ class Params {
 		title = "DEV: Dev Mode";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 };

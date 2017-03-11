@@ -55,6 +55,7 @@ if (_isvehicle_killed) then {
 _side_killer = side _killer;
 _group_killed = group _killed;
 _group_killer = group _killer;
+_group_leader = leader _killer;
 _type_killed = typeOf _killed;
 _type_killer = typeOf _killer;
 _isplayable_killed = (_group_killed) call CTI_CO_FNC_IsGroupPlayable;
@@ -107,9 +108,6 @@ if (!isNil '_var') then {
 				
 				if (count _award_groups > 1) then { _bounty = round(_bounty / (count _award_groups))};
 				
-				//--- AI Skill Reward
-				if (!CTI_IsHeadless && !isNil '_killer' && isPlayer leader _group_killer) then {_killer call FNC_RewardPlayerAISkill;};
-
 				//--- Award
 				{
 					if (_x call CTI_CO_FNC_IsGroupPlayable) then {
@@ -148,7 +146,7 @@ if (!isNil '_var') then {
 						if (_isplayable_killer) then { //--- If the killer unit belong to a playable group, then we penalize that group.
 							[_group_killer, -_penalty] call CTI_CO_FNC_ChangeFunds;
 							_show_local = if (CTI_IsHostedServer || CTI_IsClient) then {true} else {false};
-							["penalty", [_var_name, _group_killer, _penalty]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side_killed];
+							["penalty", [_var_name, _group_leader, _penalty]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side_killed];
 							remoteExec ["CTI_PVF_CLT_OnTeamkill", _killer];
 						};
 					};

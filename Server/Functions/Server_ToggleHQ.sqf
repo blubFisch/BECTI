@@ -48,7 +48,7 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_structure setPos _position;
 		_structure setDir _direction;
 		_structure setVectorUp [0,0,0];
-		
+		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
 		_alternative_damages = false;
 		_reduce_damages = 0;
@@ -84,11 +84,12 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_hq setVariable ["cti_gc_noremove", true]; //--- HQ wreck cannot be removed nor salvaged
 		_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 		_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
+
 		if (CTI_BASE_NOOBPROTECTION == 1) then {
 			_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 			(_hq) remoteExec ["CTI_PVF_CLT_AddHQDamagerHandler", _side];
 		};
-		
+		_hq addItemCargoGlobal ["ToolKit",1];
 		_logic setVariable ["cti_hq", _hq, true];
 		deleteVehicle _current_hq;
 		
@@ -105,5 +106,6 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		
 		//--- Update base areas
 		(_side) call CTI_SE_FNC_UpdateBaseAreas;
+		["hq-mobilized"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];// -- notification HQ is mobilized + sound
 	};
 };

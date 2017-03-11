@@ -12,10 +12,8 @@
 _proximityForAmmoDestruction = 30;	// When a CRAM shell gets closer than this, incoming ammo will be destroyed
 
 _CRAMClassnames = [
-	"C_at_phalanx_35AI",
-	"C_at_phalanx_missile_35AI",
-	"B_at_phalanx_35AI",
-	"B_at_phalanx_missile_35AI"];
+	"O_at_phalanx_35AI",
+	"B_at_phalanx_35AI"];
 	
 // ---------------------
 

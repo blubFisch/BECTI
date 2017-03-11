@@ -108,31 +108,18 @@ if (getNumber(configFile >> "CfgVehicles" >> _type >> "artilleryScanner") > 0 &&
 };
 
 if (getAmmoCargo _vehicle > 0) then {_vehicle setAmmoCargo  0};
-//Clear out the cargo of the vehicle
+
+//--- Clear out the cargo of the vehicle
 clearItemCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
-//set basic supplies to all
-_vehicle addItemCargoGlobal ["FirstAidKit",2];
-//Add basic chutes to air units
-if (_vehicle isKindOf "Air") then {
-	_vehicle addItemCargoGlobal ["ToolKit",1];
-	_vehicle addBackpackCargoGlobal ["NonSteerable_Parachute_F",4];
-	//_vehicle addBackpackCargo ["Steerable_Parachute_F",2];
-};
-
-//slingload modification
-if (_type isKindOf 'Slingload_01_Base_F') then {_vehicle setmass [4000,0]};
-if (_type isKindOf "Pod_Heli_Transport_04_base_F") then {_vehicle setmass [2000,0]};
-// weight fix
-if ((_vehicle isKindOf "Pod_Heli_Transport_04_base_F") || (_vehicle isKindOf "Slingload_01_Base_F")  ) then { _vehicle setmass [2000,0];};
-
 //--- Advanced Fuel Consumption
 if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
 };
+
 //---APS system
 _upgrades = nil;
 _upgrade_lvoss = 0;
@@ -165,6 +152,7 @@ if (_vehicle isKindOf "Car") then {
 		_vehicle setVariable ["reloading_right", 0, true];
 	};
 };
+
 //---Add ERA system
 if (_vehicle isKindOf "Tank") then {
 	if (_upgrade_era > 0) then {

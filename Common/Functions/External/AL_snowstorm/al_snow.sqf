@@ -55,9 +55,11 @@ sleep 0.1;
 	setWind [al_windlevel select 0, al_windlevel select 1, true];
 };*/
 
+
+
 [] spawn {
 	while {al_snowstorm_om} do {
-		["bcg_wind","playSound"] call BIS_fnc_MP;
+		[CTI_SOUND_bcg_wind,"playSound"] call BIS_fnc_MP;
 		sleep 42;
 	};
 };
@@ -65,7 +67,7 @@ sleep 0.1;
 [] spawn {
 	sleep 10;
 	while {true /*al_snowstorm_om*/} do {
-	_tuse = ["tuse_1","tuse_2","tuse_3","tuse_4","tuse_5","tuse_6"] call BIS_fnc_selectRandom;
+	_tuse = [CTI_SOUND_tuse_1,CTI_SOUND_tuse_2,CTI_SOUND_tuse_3,CTI_SOUND_tuse_4,CTI_SOUND_tuse_5,CTI_SOUND_tuse_6] call BIS_fnc_selectRandom;
 	[[hunt_alias, _tuse], "say3d", true] call BIS_fnc_MP;
 // >> you can tweak sleep value if you want to hear playable units coughing more or less often	
 	sleep 60+ random ambient_sounds_al;//60+random 180;
@@ -77,7 +79,7 @@ sleep 0.1;
 	sleep 20;
 	treecrack= "Land_HelipadEmpty_F" createVehicle [0,0,0];
 	while {al_snowstorm_om} do {	
-		_treesu = ["tree_crack_1","tree_crack_2","tree_crack_3","tree_crack_4","tree_crack_5","tree_crack_6","tree_crack_7","tree_crack_8","tree_crack_9"] call BIS_fnc_selectRandom;
+		_treesu = [CTI_SOUND_tree_crack_1,CTI_SOUND_tree_crack_2,CTI_SOUND_tree_crack_3,CTI_SOUND_tree_crack_4,CTI_SOUND_tree_crack_5,CTI_SOUND_tree_crack_6,CTI_SOUND_tree_crack_7,CTI_SOUND_tree_crack_8,CTI_SOUND_tree_crack_9] call BIS_fnc_selectRandom;
 		pos_tree = [hunt_alias,3+random 10, random 360] call BIS_fnc_relPos;
 		treecrack setpos [pos_tree select 0,pos_tree select 1,3 + random 20];
 		[[treecrack, _treesu], "say3d", true] call BIS_fnc_MP;
@@ -86,6 +88,7 @@ sleep 0.1;
 	};
 	
 };
+
 
 [] spawn {
 	//get params
@@ -195,9 +198,9 @@ sleep 0.1;
 		publicVariable "vity";		
 		
 		//hint "agitat";		
-		_rafale = ["rafala_1","rafala_2","rafala_6","rafala_7","rafala_9"] call BIS_fnc_selectRandom;
+		_rafale = [CTI_SOUND_rafala_1,CTI_SOUND_rafala_2,CTI_SOUND_rafala_6,CTI_SOUND_rafala_7,CTI_SOUND_rafala_9] call BIS_fnc_selectRandom;
 		[_rafale,"playSound"] call BIS_fnc_MP;
-		
+
 		size_rotocol=1+random 9;
 		publicVariable "size_rotocol";
 	

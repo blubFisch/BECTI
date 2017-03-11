@@ -16,7 +16,6 @@ CTI_CL_FNC_GetPlayerFunds = compileFinal preprocessFile "Client\Functions\Client
 CTI_CL_FNC_GetPlayerIncome = compileFinal preprocessFile "Client\Functions\Client_GetPlayerIncome.sqf";
 CTI_CL_FNC_GetMissionTime = compileFinal preprocessFile "Client\Functions\Client_GetMissionTime.sqf";
 CTI_CL_FNC_HasAIOrderChanged = compileFinal preprocessFile "Client\Functions\Client_HasAIOrderChanged.sqf";
-CTI_CL_FNC_HookVehicle = compileFinal preprocessFile "Client\Functions\Client_HookVehicle.sqf";
 CTI_CL_FNC_IsPlayerCommander = compileFinal preprocessFile "Client\Functions\Client_IsPlayerCommander.sqf";
 CTI_CL_FNC_InitializeStructure = compileFinal preprocessFile "Client\Functions\Client_InitializeStructure.sqf";
 CTI_CL_FNC_PlacingBuilding = compileFinal preprocessFile "Client\Functions\Client_PlacingBuilding.sqf";
@@ -67,7 +66,6 @@ CTI_P_CanJoin = false;
 CTI_P_Jailed = false;
 CTI_P_LastTeamkill = time;
 CTI_P_LastFireMission = -1200;
-CTI_P_HookVehicle = objNull;
 CTI_P_LastRootMenu = "";
 CTI_P_LastRepairTime = -600;
 CTI_P_WallsAutoAlign = true;
@@ -459,7 +457,7 @@ if (isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%
 if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_%1", CTI_P_SideJoined]}) then {execVM "Client\Init\Init_Persistent_Gear.sqf"};
 
 //--- Graphics/video thread (persistent)
-/*0 spawn {
+0 spawn {
 	//--- View Distance
 	_distance = profileNamespace getVariable "CTI_PERSISTENT_VIEW_DISTANCE";
 	_distance_max = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
@@ -500,20 +498,67 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	if (_grid > _grid_max) then { _grid = _grid_max };
 	setTerrainGrid _grid;
 
-};*/
-
-// CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
-// player addAction ["<t color='#a5c4ff'>MENU debug: Factory</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 93, false, true, "", "_target == player"];
-// player addAction ["<t color='#a5c4ff'>MENU: Equipment</t>", "Client\Actions\Action_GearMenu.sqf", "HQ", 93, false, true, "", "true"];
-
-// onMapSingleClick "{(vehicle leader _x) setPos ([_pos, 8, 30] call CTI_CO_FNC_GetRandomPosition)} forEach (CTI_P_SideJoined call CTI_CO_FNC_GetSideGroups)";
+};
 
 if (CTI_DEV_MODE > 0) then {
+	hint "DEBUG MODE IS ENABLED! DON'T FORGET TO TURN IT OFF!";
 	onMapSingleClick "vehicle player setPos _pos"; //--- benny debug: teleport
 	player addEventHandler ["HandleDamage", {if (player != (_this select 3)) then {(_this select 3) setDammage 1}; false}]; //--- God-Slayer mode.
-	//player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+	// player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
 	// player addAction ["<t color='#a5c4ff'>MENU: Construction (HQ)</t>", "Client\Actions\Action_BuildMenu.sqf"];//debug
-};
+	// player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+	// CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
+	// player addAction ["<t color='#a5c4ff'>MENU debug: Factory</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 93, false, true, "", "_target == player"];
+	// player addAction ["<t color='#a5c4ff'>MENU: Equipment</t>", "Client\Actions\Action_GearMenu.sqf", "HQ", 93, false, true, "", "true"];
+	// onMapSingleClick "{(vehicle leader _x) setPos ([_pos, 8, 30] call CTI_CO_FNC_GetRandomPosition)} forEach (CTI_P_SideJoined call CTI_CO_FNC_GetSideGroups)";
+	// call CTI_CL_FNC_PurchaseUnit;
+	// {diag_log format ["%1 ", typeOf _x];} forEach (player nearObjects 10);
+	// diag_log CTI_P_PurchaseRequests;
+	// player sidechat format ["%1 %2",count CTI_P_PurchaseRequests, CTI_P_PurchaseRequests];
+	// (west) execFSM "Server\FSM\update_commander.fsm";
+	// [player, objNull] spawn CTI_CL_FNC_OnPlayerKilled;
+	// (CTI_P_SideJoined) spawn CTI_CL_FNC_OnMissionEnding;
+	// createDialog "CTI_RscUnitsCamera";
+	// createDialog "CTI_RscUpgradeMenu";
+	// createDialog "CTI_RscBuildMenu";
+	// createDialog "CTI_RscCommandMenu";
+	// createDialog "CTI_RscAIMicromanagementMenu";
+	// createDialog "CTI_RscSatelitteCamera";
+	// createDialog "CTI_RscDefenseMenu";
+	// createDialog "CTI_RscPurchaseMenu";
+	// createDialog "CTI_RscOptionsMenu";
+	// createDialog "CTI_RscGearMenu";
+	// createDialog "CTI_RscWorkersMenu";
+	// createDialog "CTI_RscTransferResourcesMenu";
+	// createDialog "CTI_RscRequestMenu";
+	// createDialog "CTI_RscArtilleryMenu";
+	// [vehicle player, side player] call CTI_CO_FNC_RearmVehicle;
+	// CTI_P_TeamsRequests_FOB = 1;
+	// player sidechat format ["%1",player ammo primaryWeapon player];
+	// execvm "Client\GUI\GUI_CoinMenu.sqf";
+	// player addAction ["<t color='#a5c4ff'>MENU: Construction (HQ)</t>", "Client\Actions\Action_CoinBuild.sqf", "HQ", 93, false, true, "", "_target == player && CTI_Base_HQInRange"];
+	// _structures = (side player) call CTI_CO_FNC_GetSideStructures;
+	// _structure = [player, _structures] call CTI_CO_FNC_GetClosestEntity;
+	// _structure setDammage 1;
+	// _q = (side player) call CTI_CO_FNC_GetSideHQ;
+	// _q setDammage 1;
+	// {uiNamespace setVariable [_x, displayNull]} forEach ["cti_title_capture"];
+	// 600200 cutRsc["CTI_CaptureBar","PLAIN",0];
+
+	//--- Generates a list in log what units belong to HC
+/*	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
+	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
+
+	//--- Generates chat message on building health
+	[] spawn { 
+	while {true} do { 
+			{  
+			   player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");  
+			} forEach nearestObjects [player, [], 20]; 
+		 
+		 sleep 2;}
+		}
+	};
 
 if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 	0 spawn {
@@ -526,45 +571,87 @@ if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 if (CTI_BASE_NOOBPROTECTION == 1) then {player addEventHandler ["fired", {_this spawn CTI_CL_FNC_OnPlayerFired}]}; //--- Trust me, you want that
 if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") == 0) then {player enableFatigue false}; //--- Disable the unit's fatigue
 
-// Thermal / NV restriction
+//--- Thermal / NV restriction
 if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVariable 'CTI_ZOMBIE_MODE')==1 || (missionNamespace getVariable 'CTI_GUERILLA_MODE')==1) then {
 	0 execVM "Client\Functions\Client_NvThermR.sqf";
 };
 
-// 3P restrict
+//--- 3P restrict
 0 execVM "Client\Functions\Externals\Restrict_3dperson\Client_3pRestrict.sqf";
 
-// Set Perks and Traits and Player Ai if rank based
+//--- Set Perks and Traits and Player Ai if rank based
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
-//group size script
-//0 execVM "Client\Functions\Externals\Adaptive_playerAI\Client_AdaptGroup.sqf";
-
-
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
+//Disabled to move to barracs upgrade
+//FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
+//--- Sam altitude warning
 call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
-//low gear script
+
+//--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
-//Stealth script
+
+//-- Stealth script
 execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
 
+//--- Zues Module
 player call CTI_CO_FNC_UnitCreated;
-
 ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];
 
-//Earplugs
-0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
+//--- Vehicle HUD
+0 execVM	 "Client\Functions\Externals\Veh_Hud\HUD_init.sqf";
 
-//Spawn init calls tablet
-0 spawn { call CTI_CL_FNC_Spawn; };
+//-- Disable ambient life
+waitUntil {time > 0};
+enableEnvironment false;
 
-if (CTI_DEBUG) then {
-	// hint "DEBUG MODE IS ENABLED! DON'T FORGET TO TURN IT OFF!";
-	// onMapSingleClick "vehicle player setPos _pos";
-	// onMapSingleClick "a2 setPos _pos";
-	//player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+//--- Disable Scoreboard
+showScoretable 0;
+
+//--- Hide score on HUD
+disableSerialization;
+_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
+if ( !isNull _displayscorehud ) then {
+	_statusscorehud = _displayscorehud displayCtrl 15283;
+	_statusscorehud ctrlShow false;	
 };
+
+//--- Radio
+Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
+if (isNil "Radio_Say3D") then {
+    Radio_Say3D = [objNull,"nosound",0];
+};
+"Radio_Say3D" addPublicVariableEventHandler {
+      private["_array"];
+      _array = _this select 1;
+     (_array select 0) say3D [(_array select 1), (_array select 2)];
+};
+
+//--- UAV RANGE limit
+UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
+if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
+	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
+};
+
+//--- Igiload script
+_igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
+
+//--- Drag and drop
+attached = false;
+0 = execVM "Client\Functions\Externals\BDD\Greifer.sqf";
+
+//--- Explosives on Vehicles Script
+waitUntil {time > 0};
+execVM "Client\Functions\Externals\Attach_Charge\Action_Attach_charge.sqf";
+waitUntil {!isNil "EtVInitialized"};
+
+//--- cmEARPLUGS
+call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
+
+//--- Earplugs
+0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
+//--- Spawn init calls tablet
+0 spawn { call CTI_CL_FNC_Spawn; };
 
 CTI_Init_Client = true;
