@@ -131,8 +131,8 @@ if (CTI_BASE_DISPLAY_HINT == 1) then {
 	_health = (1 - _virtual_damages);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
-	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
-		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter];
+	if (alive _damaged && (side _shooter != _side)) then {
+		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage", _shooter];
 	};
 };
 //--- Display a message to the team
