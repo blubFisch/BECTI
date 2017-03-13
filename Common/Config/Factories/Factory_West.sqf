@@ -1276,15 +1276,15 @@ if (CTI_CUP_ADDON > 0) then {
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
 	_u pushBack 'O_UAV_02_F';		
-	_u pushBack 'B_UCSV_01';
-	_u pushBack 'B_UCSV_02';
+	/*_u pushBack 'B_UCSV_01';
+	_u pushBack 'B_UCSV_02';*/
 	/*_u pushBack 'bwi_a3_t6a';
 	_u pushBack 'bwi_a3_t6c';
 	_u pushBack 'bwi_a3_at6b';
 	_u pushBack 'bwi_a3_at6b_3';
 	_u pushBack 'sab_alphajet';
 	_u pushBack 'sab_alphajet2';*/
-	_u pushBack 'OFPS_BUZZA_B';
+	/*_u pushBack 'OFPS_BUZZA_B';*/
 	/*_u pushBack 'pook_tu953M80_CDF';
 	_u pushBack 'pook_tu95ms_CDF';
 	_u pushBack 'pook_tu95ms16_CDF';
@@ -1655,7 +1655,7 @@ _u = [];
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
 _u pushBack "B_G_Offroad_01_F";
-_u pushBack "B_G_Offroad_01_armed_F";
+/*_u pushBack "B_G_Offroad_01_armed_F";*/
 _u pushBack "C_Van_01_transport_F";
 _u pushBack "B_Truck_01_transport_F";
 _u pushBack "C_Boat_Civil_01_F";

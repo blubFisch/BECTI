@@ -461,7 +461,7 @@ _d pushBack 0;
 
 _c pushBack 'O_T_MRAP_02_hmg_ghex_F';
 _p pushBack '';
-_n pushBack ["1- Hunter  Pacific (LMG)"]; 
+_n pushBack ["1- Ifrit Pacific (HMG)"]; 
 _o pushBack 2625;
 _t pushBack 20;
 _u pushBack 1;

@@ -702,7 +702,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_u pushBack 'rhs_msv_emr_combatcrew';
 	_u pushBack 'rhs_msv_emr_LAT';
 	_u pushBack 'rhs_msv_emr_RShG2';
-	_u pushBack 'rhs_msv_emr_at';
+	/*_u pushBack 'rhs_msv_emr_at';*/
 	_u pushBack 'rhs_msv_emr_engineer';
 /*	_u pushBack 'rhs_msv_emr_engineer';*/
 	_u pushBack 'rhs_msv_emr_grenadier';
@@ -1251,7 +1251,7 @@ if (CTI_OFPS_ADDON > 0) then {
     _u pushBack 'O_UCSV_01';
 	/*_u pushBack 'sfp_bo105_unarmed';
 	_u pushBack 'sfp_bo105';*/
-	_u pushBack 'O_UCSV_01';
+	/*_u pushBack 'O_UCSV_01';*/
 	//_u pushBack 'USAF_C17';
 	/*_u pushBack 'usaf_c5';
 	_u pushBack 'LDL_C130J';
@@ -1262,7 +1262,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'sfp_j12';
 	_u pushBack 'sfp_j12_rb15';
 	_u pushBack 'sfp_j12_cap';*/
-	_u pushBack 'OFPS_BUZAA_O';
+	/*_u pushBack 'OFPS_BUZAA_O';*/
 	/*_u pushBack 'usaf_b1b';
 	_u pushBack 'pook_tu953M80';
 	_u pushBack 'pook_tu95ms';
@@ -1612,7 +1612,7 @@ _u = [];
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
 _u pushBack "O_G_Offroad_01_F";
-_u pushBack "O_G_Offroad_01_armed_F";
+/*_u pushBack "O_G_Offroad_01_armed_F";*/
 _u pushBack 'C_Van_01_transport_F';
 _u pushBack 'O_Truck_02_transport_F';
 _u pushBack 'C_Boat_Civil_01_F';
