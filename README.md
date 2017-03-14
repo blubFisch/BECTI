@@ -3,6 +3,8 @@
 <br>
 Main repo, for Stratis only and also used for DEV testing.
 
+Mission if fully vanilla compatible turn off addons in parameters!
+
 ## Please read following rules before doing any work here.
 
 ## - [Repo Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/repo-workflow)
