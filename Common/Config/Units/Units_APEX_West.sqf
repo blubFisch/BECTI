@@ -407,6 +407,26 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'O_T_LSV_02_unarmed_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'O_T_LSV_02_armed_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1450;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
 //--- Heavy Vehicles
 
 //--- Repair Vehicles
@@ -418,7 +438,7 @@ _d pushBack 0;
 _c pushBack 'C_Plane_Civil_01_racing_F';
 _p pushBack '';
 _n pushBack 'Scout Plane';
-_o pushBack 10000;
+_o pushBack 14000;
 _t pushBack 50;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
