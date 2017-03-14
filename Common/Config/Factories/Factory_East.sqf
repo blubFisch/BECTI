@@ -702,7 +702,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_u pushBack 'rhs_msv_emr_combatcrew';
 	_u pushBack 'rhs_msv_emr_LAT';
 	_u pushBack 'rhs_msv_emr_RShG2';
-	_u pushBack 'rhs_msv_emr_at';
+	/*_u pushBack 'rhs_msv_emr_at';*/
 	_u pushBack 'rhs_msv_emr_engineer';
 /*	_u pushBack 'rhs_msv_emr_engineer';*/
 	_u pushBack 'rhs_msv_emr_grenadier';
@@ -950,7 +950,7 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 
 	_u pushBack "O_APC_Tracked_02_cannon_F";
-/*	_u pushBack "O_MBT_02_cannon_F";*/
+	/*_u pushBack "O_MBT_02_cannon_F";*/
 	_u pushBack "O_APC_Tracked_02_AA_F";
 	/*_u pushBack "O_MBT_02_arty_F";*/
 
@@ -1092,16 +1092,18 @@ _u pushBack 'rhs_zsu234_aa';
 _u pushBack 'rhs_bmp2d_msv'; 
 _u pushBack 'rhs_Ob_681_2'; 
 /*_u pushBack 'rhs_t72ba_tv';*/
-_u pushBack 'rhs_t72bb_tv';  
+/*_u pushBack 'rhs_t72bb_tv'; */ 
+_u pushBack 'rhs_t72bd_tv'; 
 _u pushBack 'rhs_sprut_vdv'; 
 /*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
-_u pushBack 'rhs_t80bvk'; 
-_u pushBack 'rhs_bmd4_vdv'; */
-_u pushBack 'rhs_t80um'; 
+_u pushBack 'rhs_bmd4vdv'; */
+/*_u pushBack 'rhs_t80';*/ 
+_u pushBack 'rhs_t80ue1'; 
 _u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t90a_tv'; 
+_u pushBack 'rhs_t80bvk';
+/*_u pushBack 'rhs_t90a_tv'; */
 /*_u pushBack 'rhs_bmp3mera_msv'; 
 _u pushBack 'rhs_bmd4ma_vdv'; 
 _u pushBack 'rhs_2s3_tv';
@@ -1251,7 +1253,7 @@ if (CTI_OFPS_ADDON > 0) then {
     _u pushBack 'O_UCSV_01';
 	/*_u pushBack 'sfp_bo105_unarmed';
 	_u pushBack 'sfp_bo105';*/
-	_u pushBack 'O_UCSV_01';
+	/*_u pushBack 'O_UCSV_01';*/
 	//_u pushBack 'USAF_C17';
 	/*_u pushBack 'usaf_c5';
 	_u pushBack 'LDL_C130J';
@@ -1262,7 +1264,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'sfp_j12';
 	_u pushBack 'sfp_j12_rb15';
 	_u pushBack 'sfp_j12_cap';*/
-	_u pushBack 'OFPS_BUZAA_O';
+	/*_u pushBack 'OFPS_BUZAA_O';*/
 	/*_u pushBack 'usaf_b1b';
 	_u pushBack 'pook_tu953M80';
 	_u pushBack 'pook_tu95ms';
@@ -1612,7 +1614,7 @@ _u = [];
 //Universal Vanilla
 _u pushBack "B_Quadbike_01_F";
 _u pushBack "O_G_Offroad_01_F";
-_u pushBack "O_G_Offroad_01_armed_F";
+/*_u pushBack "O_G_Offroad_01_armed_F";*/
 _u pushBack 'C_Van_01_transport_F';
 _u pushBack 'O_Truck_02_transport_F';
 _u pushBack 'C_Boat_Civil_01_F';
