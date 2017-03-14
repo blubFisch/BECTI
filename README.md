@@ -3,6 +3,8 @@
 <br>
 Main repo, for Stratis only and also used for DEV testing.
 
+## Please read following rules before doing any work here.
+
 ## - [Repo Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/repo-workflow)
 
 ## - [Mission Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/mission-workflow)
