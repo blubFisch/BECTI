@@ -610,7 +610,7 @@ _d pushBack 0;
 _c pushBack 'O_T_UAV_04_CAS_F';
 _p pushBack '';
 _n pushBack 'UAV AGM'; 
-_o pushBack 25000;
+_o pushBack 20000;
 _t pushBack 50;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;

@@ -950,7 +950,7 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 
 	_u pushBack "O_APC_Tracked_02_cannon_F";
-/*	_u pushBack "O_MBT_02_cannon_F";*/
+	/*_u pushBack "O_MBT_02_cannon_F";*/
 	_u pushBack "O_APC_Tracked_02_AA_F";
 	/*_u pushBack "O_MBT_02_arty_F";*/
 
@@ -1092,16 +1092,18 @@ _u pushBack 'rhs_zsu234_aa';
 _u pushBack 'rhs_bmp2d_msv'; 
 _u pushBack 'rhs_Ob_681_2'; 
 /*_u pushBack 'rhs_t72ba_tv';*/
-_u pushBack 'rhs_t72bb_tv';  
+/*_u pushBack 'rhs_t72bb_tv'; */ 
+_u pushBack 'rhs_t72bd_tv'; 
 _u pushBack 'rhs_sprut_vdv'; 
 /*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
-_u pushBack 'rhs_t80bvk'; 
-_u pushBack 'rhs_bmd4_vdv'; */
-_u pushBack 'rhs_t80um'; 
+_u pushBack 'rhs_bmd4vdv'; */
+/*_u pushBack 'rhs_t80';*/ 
+_u pushBack 'rhs_t80ue1'; 
 _u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t90a_tv'; 
+_u pushBack 'rhs_t80bvk';
+/*_u pushBack 'rhs_t90a_tv'; */
 /*_u pushBack 'rhs_bmp3mera_msv'; 
 _u pushBack 'rhs_bmd4ma_vdv'; 
 _u pushBack 'rhs_2s3_tv';
