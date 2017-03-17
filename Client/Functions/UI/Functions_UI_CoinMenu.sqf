@@ -530,7 +530,7 @@ CTI_Coin_OnKeyDown = {
 			case (_key in actionKeys "Diary"): {profileNamespace setVariable ["CTI_COIN_WALLALIGN", !(profileNamespace getVariable ["CTI_COIN_WALLALIGN", true])]};
 			case (_key in actionKeys "Gear"): {profileNamespace setVariable ["CTI_COIN_AUTODEFENSE", !(profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true])]};
 			case (_key in actionKeys "NightVision"): {if !(isNil 'CTI_COIN_CAMCONSTRUCT') then {camUseNVG !CTI_COIN_CAMUSENVG; CTI_COIN_CAMUSENVG = !CTI_COIN_CAMUSENVG}};
-			case (_key in actionKeys "Watch"): {call CTI_Coin_OnBuildingSold}};
+			case (_key in actionKeys "Watch"): {call CTI_Coin_OnBuildingSold};
 		};
 	};
 	
