@@ -110,16 +110,16 @@ _u pushBack 2;
 _p pushBack 250;*/
 
 _i pushBack "Titan_AA";
-_u pushBack 3;
-_p pushBack 2000;
+_u pushBack 4;
+_p pushBack 1500;
 
 _i pushBack "Titan_AP";
-_u pushBack 4;
-_p pushBack 1000;
+_u pushBack 3;
+_p pushBack 800;
 
 _i pushBack "Titan_AT";
-_u pushBack 4;
-_p pushBack 2000;
+_u pushBack 3;
+_p pushBack 2500;
 
 _i pushBack "16Rnd_9x21_Mag";  //Rook 40
 _u pushBack 0;
@@ -149,7 +149,7 @@ _i pushBack "SmokeShellRed";
 _u pushBack 0;
 _p pushBack 20;
 
-/*_i pushBack "SmokeShellGreen";
+_i pushBack "SmokeShellGreen";
 _u pushBack 0;
 _p pushBack 20;
 
@@ -163,7 +163,7 @@ _p pushBack 10;
 
 _i pushBack "SmokeShellOrange";
 _u pushBack 0;
-_p pushBack 10;*/
+_p pushBack 10;
 
 _i pushBack "Chemlight_green";
 _u pushBack 0;
@@ -245,10 +245,10 @@ _i pushBack "UGL_FlareYellow_F";
 _u pushBack 0;
 _p pushBack 10;*/
  
-_i pushBack "UGL_FlareCIR_F";
+/*_i pushBack "UGL_FlareCIR_F";
 _u pushBack 0;
 _p pushBack 20;
-/* 
+ 
 _i pushBack "3Rnd_HE_Grenade_shell";
 _u pushBack 2;
 _p pushBack 150;
@@ -299,8 +299,8 @@ _p pushBack 15;
 
 _i pushBack "3Rnd_UGL_FlareCIR_F";
 _u pushBack 2;
-_p pushBack 120;
- */
+_p pushBack 120;*/
+ 
  
 /*_i pushBack "10Rnd_127x54_Mag";
 _u pushBack 3;
@@ -370,19 +370,19 @@ _p pushBack 1000;
 
 _i pushBack "srifle_DMR_04_Tan_F";  
 _u pushBack 4;
-_p pushBack 1000;
+_p pushBack 1000;*/
 
 _i pushBack "srifle_DMR_05_blk_F";  //Cyrus 9.3 mm
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 5000;
 
 _i pushBack "srifle_DMR_05_hex_F";  
-_u pushBack 3;
-_p pushBack 800;
+_u pushBack 4;
+_p pushBack 5000;
 
 _i pushBack "srifle_DMR_05_tan_f";  
-_u pushBack 3;
-_p pushBack 800;*/
+_u pushBack 4;
+_p pushBack 5000;
 
 /*_i pushBack "MMG_01_hex_F";  //Navid 9.3 mm
 _u pushBack 4;
@@ -414,11 +414,11 @@ _p pushBack 600;*/
 
 
 _i pushBack "launch_O_Titan_F"; //AA
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 8000;
 
 _i pushBack "launch_O_Titan_short_F"; //Takes AT and AP rounds only
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 6000;
 
 _i pushBack "hgun_Rook40_F";
@@ -1193,11 +1193,9 @@ _i pushBack "Binocular";
 _u pushBack 0;
 _p pushBack 100;
 
-
 _i pushBack "Rangefinder";
 _u pushBack 1;
 _p pushBack 500;
-
 
 _i pushBack "Laserdesignator_02";
 _u pushBack 3;
