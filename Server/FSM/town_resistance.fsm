@@ -419,7 +419,7 @@ class FSM
        "};" \n
        "" \n
        "if (typeOf _town == ""FlagPole_F"") then {" \n
-       "	[_town,CTI_SOUND_purgesiren_3,50] call Common_Say3D;" \n
+       "	/*[_town,CTI_SOUND_purgesiren_3,50] call Common_Say3D; removed see Issue #337*/" \n
        "};" \n
        "" \n
        "_town setVariable [""cti_town_resistance_activeTime"", time];" \n
