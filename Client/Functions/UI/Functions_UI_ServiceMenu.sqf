@@ -118,12 +118,12 @@ CTI_UI_Service_ProcessRearm = {
 	};
 	hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br />Rearming a <t color='#ccffaf'>%1</t>... Please stand by...", _label];
 	// not all air vehicles are rearmed properly if ammo is set to 0 before rearm. see Issue #352
-	if (_unit isKindOf "Air" || ) then { //add any classname types that have problems rearming all ammo.
+	if (_unit isKindOf "Air") then { //add any classname types that have problems rearming all ammo.
 	// do nothing
 	} else {
 			_unit setVehicleAmmoDef 0;
 	};
-	// not all air vehicles are rearmed properly if ammo is set to 0 before rearm. see Issue #352
+	// end of not all air vehicles are rearmed properly if ammo is set to 0 before rearm. see Issue #352
 	_start_at = time;
 	
 	_rearm = false;
