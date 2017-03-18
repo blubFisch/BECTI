@@ -36,7 +36,7 @@ _level = _this select 2;
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
-_upgrade_barracks = _upgrades select CTI_UPGRADE_BARRACKS;
+
 
 _upgrade_time = ((missionNamespace getVariable Format["CTI_%1_UPGRADES_TIMES", _side]) select _upgrade) select _level;
 
@@ -51,7 +51,7 @@ while {(_logic getVariable "cti_upgrade_lt") >0 } do{
 _logic setVariable ["cti_upgrade_lt",-1, true];
 
 _upgrades set [_upgrade, (_upgrades select _upgrade) + 1];
-
+_upgrade_barracks = _upgrades select CTI_UPGRADE_BARRACKS;
 if (_upgrade == CTI_UPGRADE_BARRACKS) then {
 	switch (_upgrade_barracks) do {
 		case 0: {_logic setVariable ["cti_player_ai_skill", (CTI_UPGRADE_BARRACKS_SKILL select 0), true];};
