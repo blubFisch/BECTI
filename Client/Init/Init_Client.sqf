@@ -82,6 +82,9 @@ CTI_P_ActionLockPickNextUse = -1;
 CTI_P_ActionRepair = false;
 CTI_P_ActionRepairDelay = 30;
 CTI_P_ActionRepairNextUse = -1;
+//-- Actions (vehicles)
+CTI_P_ActionLowGear = false;
+CTI_P_ActionPush = false;
 
 CTI_P_Coloration_Money = "#BAFF81";
 
@@ -593,8 +596,9 @@ call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWar
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 
 //-- Stealth script
+if (CTI_ENABLE_VEHICLE_STEALTH == 1) then {
 execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
-
+};
 //--- Zues Module
 player call CTI_CO_FNC_UnitCreated;
 ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];
