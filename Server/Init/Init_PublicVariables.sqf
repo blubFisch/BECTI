@@ -386,34 +386,35 @@ with missionNamespace do {
 			[_vehicle, _locked] remoteExec ["CTI_PVF_CLT_RequestVehicleLock", owner _vehicle];
 		};
 	};
-	
+
 	//--- The client requests a vehicle part(s) repair
 	CTI_PVF_SRV_RequestVehicleHitPointsRepair = {
 		private ["_damages", "_locked", "_repair", "_vehicle"];
 		_vehicle = _this select 0;
-		_hitPoints = _this select 1;
-		_repair = _this select 2;
-		
+		_hitPoints_repair = _this select 1;
+		_repair_ammount = CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
+		_repair_ammount_component = 1 - CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
 		if (local _vehicle) then {
-			if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestVehicleHitPointsRepair", format["Performing a part repair operation on [%1] (%2) with a repair value of [%3]", _vehicle, typeOf _vehicle, _repair]] call CTI_CO_FNC_Log;
-			};
+		if (CTI_Log_Level >= CTI_Log_Information) then {
+			["INFORMATION", "FUNCTION: CTI_PVF_CLT_RequestVehicleHitPointsRepair", format["Performing a part repair operation on [%1] (%2) with a repair value of [%3]", _vehicle, typeOf _vehicle, _repair_ammount_component]] call CTI_CO_FNC_Log;
+		};
 		
-			{
-				_damages = _vehicle getHit _x;
-				
-				if !(isNil '_damages') then {
-					if (_damages > 0) then {
-						_repair = if (_damages - _repair < 0) then {0} else {_damages - _repair};
-						_vehicle setHit [_x, _repair];
-					};
-				};
-			} forEach _hitPoints;
-		} else {
-			[_vehicle, _hitPoints, _repair] remoteExec ["CTI_PVF_CLT_RequestVehicleHitPointsRepair", owner _vehicle];
+		{
+			_damages = _vehicle getHitPointDamage _x;
+			if (_damages > _repair_ammount_component) then {
+			
+				_vehicle setHitPointDamage [_x, _repair_ammount_component];// 0 is perfect 1 is dead
+			};
+		} forEach _hitPoints_repair;
+		_dammages = getDammage _vehicle;
+		if (_dammages > _repair_ammount_component) then {
+			_vehicle setVehicleArmor _repair_ammount;// 0 is dead, 1 is perfect
+		};
+			} else {
+			[_vehicle, _hitPoints_repair] remoteExec ["CTI_PVF_CLT_RequestVehicleHitPointsRepair", owner _vehicle];
 		};
 	};
-	
+
 	//--- The client request a worker creation
 	CTI_PVF_SRV_RequestWorker = { _this spawn CTI_SE_FNC_CreateWorker };
 };
