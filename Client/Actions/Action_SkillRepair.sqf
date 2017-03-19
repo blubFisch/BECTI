@@ -12,9 +12,6 @@ _actionTime = switch (true) do {
 	case (_vehicle isKindOf "Ship"): {CTI_TOOLKIT_REPAIR_TIME_SHIP};// repair times for air vehicles
    default {CTI_TOOLKIT_REPAIR_TIME_UNKNOWN}
  };
-_dammages = getDammage _vehicle;
-_repair_ammount = CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
-_repair_ammount_component = 1 - CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
 _startTime = time;// current time
 _totalTime = time + _actionTime;
 _animation = "Acts_carFixingWheel";
@@ -59,15 +56,10 @@ if (time < _totalTime)  then {
 	_repair_status = false;
 	breakTo "end";
 };
-	{
-		_damages = _vehicle getHitPointDamage _x;
-		if (_damages > _repair_ammount_component) then {
-			_vehicle setHitPointDamage [_x, _repair_ammount_component];// 0 is perfect 1 is dead
-		};
-	} forEach _hitPoints_repair;
-	_dammages = getDammage _vehicle;
-	if (_dammages > _repair_ammount_component) then {
-		_vehicle setVehicleArmor _repair_ammount;// 0 is dead, 1 is perfect
+if (local _vehicle) then {
+		[_vehicle, _hitPoints_repair] call CTI_PVF_CLT_RequestVehicleHitPointsRepair;
+	} else {
+		[_vehicle, _hitPoints_repair] remoteExec ["CTI_PVF_SRV_RequestVehicleHitPointsRepair", CTI_PV_SERVER];
 	};
 	if (fuel _vehicle < .10) then {
 		if (local _vehicle) then {
@@ -75,7 +67,8 @@ if (time < _totalTime)  then {
 		} else {
 			[_vehicle, .10] remoteExec ["CTI_PVF_SRV_RequestVehicleRefuel", CTI_PV_SERVER];
 		};
-	};
+	
+};
 hint "The vehicle recieved a field repair";
 player switchMove "Stand";
 };
