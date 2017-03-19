@@ -57,9 +57,9 @@ with missionNamespace do {
 			// diag_log format ["[CTI_PVF_HC_OnDefenseDelegationReceived - benny DEBUG - AFTER unassignVehicle] - Defense->%1, is local?->%2 | assignedGunner->%3, is local?->%4 | gunner ->%5 is local?->%6", _static, local _static, assignedGunner _static, local(assignedGunner _static), gunner _static, local gunner _static];
 			_static deleteVehicleCrew _gunner;
 			// diag_log format ["[CTI_PVF_HC_OnDefenseDelegationReceived - benny DEBUG - AFTER deleteVehicleCrew] - Defense->%1, is local?->%2 | assignedGunner->%3, is local?->%4 | gunner ->%5 is local?->%6", _static, local _static, assignedGunner _static, local(assignedGunner _static), gunner _static, local gunner _static];
-			deleteVehicle _gunner;
+			//deleteVehicle _gunner;
 			// diag_log format ["[CTI_PVF_HC_OnDefenseDelegationReceived - benny DEBUG - AFTER deleteVehicle] - Defense->%1, is local?->%2 | assignedGunner->%3, is local?->%4 | gunner ->%5 is local?->%6", _static, local _static, assignedGunner _static, local(assignedGunner _static), gunner _static, local gunner _static];
-			deleteVehicle (gunner _static);
+			//deleteVehicle (gunner _static);
 		};
 		
 		//--- Create the unit
@@ -268,23 +268,24 @@ with missionNamespace do {
 	CTI_PVF_CLT_RequestVehicleHitPointsRepair = {
 		private ["_damages", "_locked", "_repair", "_vehicle"];
 		_vehicle = _this select 0;
-		_hitPoints = _this select 1;
-		_repair = _this select 2;
-		
+		_hitPoints_repair = _this select 1;
+		_repair_ammount = CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
+		_repair_ammount_component = 1 - CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
 		if (CTI_Log_Level >= CTI_Log_Information) then {
-			["INFORMATION", "FUNCTION: CTI_PVF_CLT_RequestVehicleHitPointsRepair", format["Performing a part repair operation on [%1] (%2) with a repair value of [%3]", _vehicle, typeOf _vehicle, _repair]] call CTI_CO_FNC_Log;
+			["INFORMATION", "FUNCTION: CTI_PVF_CLT_RequestVehicleHitPointsRepair", format["Performing a part repair operation on [%1] (%2) with a repair value of [%3]", _vehicle, typeOf _vehicle, _repair_ammount_component]] call CTI_CO_FNC_Log;
 		};
 		
 		{
-			_damages = _vehicle getHit _x;
+			_damages = _vehicle getHitPointDamage _x;
+			if (_damages > _repair_ammount_component) then {
 			
-			if !(isNil '_damages') then {
-				if (_damages > 0) then {
-					_repair = if (_damages - _repair < 0) then {0} else {_damages - _repair};
-					_vehicle setHit [_x, _repair];
-				};
+				_vehicle setHitPointDamage [_x, _repair_ammount_component];// 0 is perfect 1 is dead
 			};
-		} forEach _hitPoints;
+		} forEach _hitPoints_repair;
+		_dammages = getDammage _vehicle;
+		if (_dammages > _repair_ammount_component) then {
+			_vehicle setVehicleArmor _repair_ammount;// 0 is dead, 1 is perfect
+		};
 	};
 	
 	//--- The Headless client receives a vehicle rearm request
