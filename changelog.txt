@@ -7,6 +7,13 @@ Tweaked: rearming an aicraft doesn't remove all of this ammo during rearm.
 Fixed: tool kit repair not always fixing tires on a vehicle
 Tweaked: tool kit repair no longer repairs reactive armor on rhs tanks
 Tweaked: Tool Kit repair repairs damaged components to a maxium of 75% operational strength
+Tweaked: Rollup mbt prices +5%/+10%/+15%
+Replace: obyekt-681with bmd-4m (a) at opfor hf3
+Tweaked: Cyrus 9.3mm to opfor instead of navid
+Added: Remaining smoke grenades
+Tweaked: Correctly tier titan at(g3) and aa(g4)
+Tweaked: Unified blufor/opfor titan ammo cost (ap800/aa1500/at2500)
+Tweaked: Balance blufor/opfor lack of thermals
 
 
 1.06
