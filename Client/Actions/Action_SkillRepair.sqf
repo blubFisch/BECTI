@@ -12,15 +12,20 @@ _actionTime = switch (true) do {
 	case (_vehicle isKindOf "Ship"): {CTI_TOOLKIT_REPAIR_TIME_SHIP};// repair times for air vehicles
    default {CTI_TOOLKIT_REPAIR_TIME_UNKNOWN}
  };
-_dammages = getDammage _vehicle;
-
 _startTime = time;// current time
 _totalTime = time + _actionTime;
 _animation = "Acts_carFixingWheel";
 //--- Retrieve hitpoints for the given vehicle
 _hitPoints = [];
+//-- add any hitpoint to this "_exclude_hitPoints" array to prevent the repairing of these hitpoints.
+_exclude_hitPoints = ["HitDuke1","HitDuke2","era_1_hitpoint","era_2_hitpoint","era_3_hitpoint","era_4_hitpoint","era_5_hitpoint","era_6_hitpoint","era_7_hitpoint","era_8_hitpoint","era_9_hitpoint","era_10_hitpoint","era_11_hitpoint","era_12_hitpoint","era_13_hitpoint","era_14_hitpoint","era_15_hitpoint","era_16_hitpoint","era_17_hitpoint","era_18_hitpoint","era_19_hitpoint","era_20_hitpoint","era_21_hitpoint","era_22_hitpoint","era_23_hitpoint","era_24_hitpoint","era_25_hitpoint","era_26_hitpoint","era_27_hitpoint","era_28_hitpoint","era_29_hitpoint","era_30_hitpoint","era_31_hitpoint","era_32_hitpoint","era_33_hitpoint","era_34_hitpoint","era_35_hitpoint","era_36_hitpoint","era_37_hitpoint","era_38_hitpoint","era_39_hitpoint","era_40_hitpoint","era_41_hitpoint","era_42_hitpoint","era_43_hitpoint","era_44_hitpoint","era_45_hitpoint","era_46_hitpoint","era_47_hitpoint","era_48_hitpoint","era_49_hitpoint","era_50_hitpoint","era_51_hitpoint","duke1","duke2","e1","e2","e3","e4","e5","e6","e7","e8","e9","e10","e11","e12","e13","e14","e15","e16","e17","e18","e19","e20","e21","e22","e23","e24","e25","e26","e27","e28","e29","e30","e31","e32","e33","e34","e35","e36","e37","e38","e39","e40","e41","e42","e43","e44","e45","e46","e47","e48","e49","e50","e51"];
 configProperties [configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints", "_hitPoints pushBack configName _x; true", true]; 
-
+_hitPoints_repair =[];
+_hitPoints_repair = _hitPoints - _exclude_hitPoints;
+	if (isServer) then 
+	{
+	copyToClipboard str _hitPoints_repair;
+	};
 CTI_P_ActionRepairNextUse = time + CTI_P_ActionRepairDelay;
 
 waitUntil {
@@ -51,17 +56,10 @@ if (time < _totalTime)  then {
 	_repair_status = false;
 	breakTo "end";
 };
-
-	_dammages = _dammages - CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT;
- 	if (_dammages < 0) then {
-		_dammages = 0
-	};
-	_vehicle setDammage _dammages;
-	
-	if (local _vehicle) then {
-		[_vehicle, _hitPoints, CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT] call CTI_PVF_CLT_RequestVehicleHitPointsRepair;
+if (local _vehicle) then {
+		[_vehicle, _hitPoints_repair] call CTI_PVF_CLT_RequestVehicleHitPointsRepair;
 	} else {
-		[_vehicle, _hitPoints, CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT] remoteExec ["CTI_PVF_SRV_RequestVehicleHitPointsRepair", CTI_PV_SERVER];
+		[_vehicle, _hitPoints_repair] remoteExec ["CTI_PVF_SRV_RequestVehicleHitPointsRepair", CTI_PV_SERVER];
 	};
 	if (fuel _vehicle < .10) then {
 		if (local _vehicle) then {
@@ -69,7 +67,8 @@ if (time < _totalTime)  then {
 		} else {
 			[_vehicle, .10] remoteExec ["CTI_PVF_SRV_RequestVehicleRefuel", CTI_PV_SERVER];
 		};
-	};
-hint "The vehicle has been partially repaired";
+	
+};
+hint "The vehicle recieved a field repair";
 player switchMove "Stand";
 };

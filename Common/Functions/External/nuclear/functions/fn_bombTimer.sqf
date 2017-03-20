@@ -16,16 +16,16 @@ while {alive _object && _time > 0 && !isNull _object} do {
 	hintSilent format["Nuclear Detonation: \n %1", [((_time_difference)/60)+.01,"HH:MM"] call BIS_fnc_timetostring];
 
 	if (_time_difference < 30 && _time_difference > 29) then {
-		playsound CTI_SOUND_air_raid;
+		//playsound CTI_SOUND_air_raid; --> missing sound see Issue #338 
 	};
 	if (_time_difference < 20 && _time_difference > 19) then {
-		playsound CTI_SOUND_air_raid;
+		//playsound CTI_SOUND_air_raid; --> missing sound see Issue #338 
 	};
 	if (_time_difference < 10 && _time_difference > 9) then {
-		playsound CTI_SOUND_air_raid;
+		//playsound CTI_SOUND_air_raid; --> missing sound see Issue #338 
 	};
 	if (_time_difference < 8 && _time_difference > 7) then {
-		playsound CTI_SOUND_choppa;
+		//playsound CTI_SOUND_choppa; --> missing sound see Issue #338 
 	};
 
 
