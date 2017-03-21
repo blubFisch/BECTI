@@ -345,6 +345,7 @@ if (CTI_FACTION_WEST == 1) then {
 					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
+				]]
 			]];
 		};
 	}
@@ -445,6 +446,7 @@ if (CTI_FACTION_WEST == 2) then {
 					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
+				]]
 			]];
 		};
 	}
