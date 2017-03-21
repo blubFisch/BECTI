@@ -107,6 +107,7 @@ switch (_message_var) do {
 		_var = missionNamespace getVariable (_parameters select 0);
 		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select 0), mapGridPosition (_parameters select 1)];
 	};
+    case "defense-sold": {CTI_P_ChatID commandChat format ["A %1 defense has been sold for $%2", _parameters select 0, _parameters select 1]};
 	case "fob-destroyed": {
 		CTI_P_ChatID commandChat format ["A %1 FOB has been destroyed at %2!", (_parameters select 0), mapGridPosition (_parameters select 1)];
 	};
