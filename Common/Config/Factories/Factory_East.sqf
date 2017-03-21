@@ -227,42 +227,31 @@ if (CTI_FACTION_EAST == 0) then {
 				//,	["O_Heli_Light_02_unarmed_F", []]
 			]];
 		};
-		case 3: { //RHS
+		case 3: { //RHS 
+		           // replace O_Truck_03_medical_F with rhs_gaz66_ap2_msv when Issue #346 is resolved
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
-				["rhs_gaz66_ap2_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+				["O_Truck_03_medical_F", [
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["RHS_UAZ_MSV_01", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["rhs_tigr_sts_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["rhs_btr60_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]]
 				//,	["O_Heli_Light_02_unarmed_F", []]
