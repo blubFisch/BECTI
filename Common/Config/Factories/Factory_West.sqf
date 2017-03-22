@@ -221,42 +221,26 @@ if (CTI_FACTION_WEST == 0) then {
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
 				["rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy", [
-					["CUP_launch_M136", 5], 
-					["CUP_M136_M", 20],
-					["CUP_8Rnd_B_Beneli_74Slug", 20],
-					["CUP_8Rnd_B_Beneli_74Pellets", 20],
-					["CUP_sgun_M1014", 10],
-					["CUP_30Rnd_9x19_MP5", 20],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]],
 				["rhsusf_M1117_D", [
-					["CUP_launch_M136", 5], 
-					["CUP_M136_M", 20],
-					["CUP_8Rnd_B_Beneli_74Slug", 20],
-					["CUP_8Rnd_B_Beneli_74Pellets", 20],
-					["CUP_sgun_M1014", 10],
-					["CUP_30Rnd_9x19_MP5", 20],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]],
 				["rhsusf_rg33_usmc_d", [
-					["CUP_launch_M136", 5], 
-					["CUP_M136_M", 20],
-					["CUP_8Rnd_B_Beneli_74Slug", 20],
-					["CUP_8Rnd_B_Beneli_74Pellets", 20],
-					["CUP_sgun_M1014", 10],
-					["CUP_30Rnd_9x19_MP5", 20],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]],
 				["rhsusf_M1237_M2_usarmy_wd", [
-					["CUP_launch_M136", 5], 
-					["CUP_M136_M", 20],
-					["CUP_8Rnd_B_Beneli_74Slug", 20],
-					["CUP_8Rnd_B_Beneli_74Pellets", 20],
-					["CUP_sgun_M1014", 10],
-					["CUP_30Rnd_9x19_MP5", 20],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]]
@@ -351,24 +335,17 @@ if (CTI_FACTION_WEST == 1) then {
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
 				["B_Truck_01_medical_F", [
-					["arifle_mx_gl_f", 2], ["30Rnd_65x39_caseless_mag", 50],
-					["arifle_MXM_F", 1],
-					["launch_NLAW_F", 5], ["NLAW_F", 20],
-					["HandGrenade", 20],
-					["30Rnd_556x45_Stanag", 15],
-					["30Rnd_65x39_caseless_mag_Tracer", 6],
-					["3rnd_he_grenade_shell", 8],
-					["firstaidkit", 20],
-					["optic_ACO_grn", 3],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]],
 				["B_MRAP_01_hmg_F", [
-					["Toolkit", 1],["firstaidkit", 10],
-					["30Rnd_556x45_Stanag", 15],
-					["launch_NLAW_F", 5], 
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
-					["NLAW_F", 20]]]
+					["Toolkit", 1]
+				]]
 			]];
 		};
 	}
@@ -459,24 +436,17 @@ if (CTI_FACTION_WEST == 2) then {
 		case 3: { //RHS
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [ 
 				["B_Truck_01_medical_F", [
-					["arifle_mx_gl_f", 2], ["30Rnd_65x39_caseless_mag", 50],
-					["arifle_MXM_F", 1],
-					["launch_NLAW_F", 5], ["NLAW_F", 20],
-					["HandGrenade", 20],
-					["30Rnd_556x45_Stanag", 15],
-					["30Rnd_65x39_caseless_mag_Tracer", 6],
-					["3rnd_he_grenade_shell", 8],
-					["firstaidkit", 20],
-					["optic_ACO_grn", 3],
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
 					["Toolkit", 1]
 				]],
 				["B_MRAP_01_hmg_F", [
-					["Toolkit", 1],["firstaidkit", 10],
-					["30Rnd_556x45_Stanag", 15],
-					["launch_NLAW_F", 5], 
+					["rhs_weap_m72a7", 10], 
+					["30rnd_9x21_mag_smg_02", 20],
 					["acc_flashlight", 10],
-					["NLAW_F", 20]]]
+					["Toolkit", 1]
+				]]
 			]];
 		};
 	}
