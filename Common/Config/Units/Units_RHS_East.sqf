@@ -297,15 +297,15 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
 
-//_c pushBack 'rhs_gaz66_ap2_msv';// see  Issue #346, this vehicle is most effected by this problem
-//_p pushBack '';
-//_n pushBack (format ["0- GAZ-66-AP-2 Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-//_o pushBack 8000;
-//_t pushBack 30;
-//_u pushBack 0;
-//_f pushBack CTI_FACTORY_LIGHT;
-//_s pushBack "service-medic";
-//_d pushBack 10;
+_c pushBack 'rhs_gaz66_ap2_msv';
+_p pushBack '';
+_n pushBack (format ["0- GAZ-66-AP-2 Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 8000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 10;
 
 _c pushBack 'rhs_tigr_sts_3camo_msv';
 _p pushBack '';
