@@ -11,8 +11,8 @@ link1[] = {1,2};
 link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-134.567780,99.396637,-46.330200,-722.227295,306,884,1};
-window[] = {2,-1,-1,-32000,-32000,869,266,1521,88,3,324};
+globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-169.174210,197.969833,422.452942,-638.185547,306,884,1};
+window[] = {2,-1,-1,-1,-1,1015,234,1489,234,3,324};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -147,12 +147,12 @@ class FSM
                          "	if (CTI_P_ActionRepair) then {CTI_P_ActionRepair = false};" \n
                          "};" \n
                          "_vehicle = vehicle player;// ---get the vehicle the player is currently inside?" \n
-                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"") then {//--- Low gear added to tanks/apc/cars" \n
+                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"" && (player==driver _vehicle)) then {//--- Low gear added to tanks/apc/cars" \n
                          "CTI_P_ActionLowGear = true;" \n
                          "} else {" \n
                          "CTI_P_ActionLowGear = false;" \n
                          "};" \n
-                         "if (_vehicle isKindOf ""Ship"") then { //--- Push added to boats" \n
+                         "if (_vehicle isKindOf ""Ship"" && (player==driver _vehicle)) then { //--- Push added to boats" \n
                          "CTI_P_ActionPush = true;" \n
                          "} else {" \n
                          "CTI_P_ActionPush = false;" \n
