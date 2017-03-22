@@ -71,6 +71,9 @@ for '_i' from 0 to (count _headers) -1 do {
 		missionNamespace setVariable [format["CTI_%1_%2",_side,_classname], _stored];
 		_defenses pushBack format["CTI_%1_%2",_side,_classname];
 		_defenses_cname pushBack _classname;
+
+		if (CTI_Log_Level >= CTI_Log_Debug) then { ["DEBUG", "FILE: Common\Config\Base\Set_Defenses.sqf", format ["[%1] Set Defense [%2] using variable name [%3]", _side, _classname, format["CTI_%1_%2", _side, _classname]]] call CTI_CO_FNC_Log };
+
 	} else {
 		if (CTI_Log_Level >= CTI_Log_Information) then { 
 			["TRIVIAL", "FILE: Common\Config\Base\Set_Defenses.sqf", format ["[%1] Defense [%2] was previously defined. Skipping this one.", _side, _classname]] call CTI_CO_FNC_Log
