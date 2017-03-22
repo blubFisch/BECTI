@@ -368,19 +368,20 @@ CTI_Coin_OnPreviewPlacement = {
 					_header = CTI_COIN_PARAM select 5;
 					_classname = CTI_COIN_PARAM select 1;
 					//check if armed version
-					_classname_variant = "d";
 					switch (typeName _header) do {
-						case "STRING": { _classname_variant = "d"; };
+						case "STRING": { _classname = _classname; };
 						case "ARRAY": {
 							if ("Armed" in (_header select 0)) then {
 								_classname_variant = ((_header select 0) select 1);
+								_classname = format["%1_%2",_classname,_classname_variant];
 							};
 							if ("Composition" in (_header select 0)) then {
 								_classname_variant = ((_header select 0) select 1);
+								_classname = format["%1_%2",_classname,_classname_variant];
 							};
 						};
 					};
-					_variable = format ["CTI_%1_%2_%3", CTI_P_SideJoined, _classname, _classname_variant];
+					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, _classname];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
 					[_variable, CTI_P_SideJoined, _position, _direction, player, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
