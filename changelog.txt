@@ -1,5 +1,7 @@
 Upcoming release
 Fixed: Hill climb, push, and taxi reverse not applying to town occupation vehicles
+Removed: Opfor gaz66 medical vehicle
+Added: 10 AT disposable launchers to each starting vehicles
 
 1.06++
 Fixed: Rearm on some aircraft giving incorrect loadouts
