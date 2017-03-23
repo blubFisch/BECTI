@@ -3,7 +3,7 @@ Fixed: Hill climb, push, and taxi reverse not applying to town occupation vehicl
 Removed: Opfor gaz66 medical vehicle
 Added: 10 AT disposable launchers to each starting vehicles
 Fixed: floating Camp in takistan
-
+fixed: some defence structure ruins not disappearing on death
 1.06++
 Fixed: Rearm on some aircraft giving incorrect loadouts
 Tweaked: rearming an aicraft doesn't remove all of this ammo during rearm. 
