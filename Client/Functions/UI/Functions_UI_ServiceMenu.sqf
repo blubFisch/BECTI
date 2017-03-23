@@ -133,6 +133,9 @@ CTI_UI_Service_ProcessRearm = {
 		
 		_operative_index = _ranged select 2;
 		_service_time = _times select _operative_index;
+		if (isNil "_service_time") then { //-- Rare bug where _service_time isnt defined when rearming a vehicle. if this occurs, we just instantly rearm vehicle. 
+		    _service_time = time;
+		};
 		
 		if (time - _start_at > _service_time) exitWith {_rearm = true};
 		
