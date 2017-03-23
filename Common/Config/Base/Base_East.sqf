@@ -1277,7 +1277,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]]; //5 HE rounds to kill
 
-		_headers pushBack 		"Large Hangar (Green)";
+		_headers pushBack ["Large Hangar (Green)",[["RuinOnDestroyed", "Land_ss_hangard_ruins"]]];
 		_classes pushBack 		"Land_Ss_hangar";
 		_prices pushBack 		10000;
 		_placements pushBack 	[90, 7];
