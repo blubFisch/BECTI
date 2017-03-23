@@ -37,8 +37,11 @@ _level = _this select 2;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 
-
 _upgrade_time = ((missionNamespace getVariable Format["CTI_%1_UPGRADES_TIMES", _side]) select _upgrade) select _level;
+
+if (CTI_Log_Level >= CTI_Log_Information) then {
+	["INFORMATION", "FILE: Server\Functions\Server_StartUpgrade.sqf", format["The [%1] side [%2] upgrade is being researched to level [%3] and will last [%4] seconds", _side, (missionNamespace getVariable Format["CTI_%1_UPGRADES_LABELS", _side]) select _upgrade, _level+1, _upgrade_time]] call CTI_CO_FNC_Log;
+};
 
 if ((_logic getVariable ["cti_upgrade_lt",-1]) <0) then {_logic setVariable ["cti_upgrade_lt",_upgrade_time,true];};
 _logic  setVariable ["cti_upgrade", _upgrade,true];
@@ -63,5 +66,9 @@ if (_upgrade == CTI_UPGRADE_BARRACKS) then {
 };
 _logic setVariable ["cti_upgrades", _upgrades, true];
 _logic setVariable ["cti_upgrade", -1, true];
+
+if (CTI_Log_Level >= CTI_Log_Information) then {
+	["INFORMATION", "FILE: Server\Functions\Server_StartUpgrade.sqf", format["The [%1] side [%2] upgrade is now complete at level [%3]", _side, (missionNamespace getVariable Format["CTI_%1_UPGRADES_LABELS", _side]) select _upgrade]] call CTI_CO_FNC_Log;
+};
 
 ["upgrade-ended", [_upgrade, _level+1]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
