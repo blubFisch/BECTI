@@ -301,33 +301,31 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 	[CTI_UPGRADE_NUKE, 1]
 ]];
 
-if (CTI_IsClient) then {
-	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
-		["Gear", "<t>Unlock better gear"], //--- Gear
-		["Barracks", "<t>Unlock better infantry units, unlock more default player AI and improve AI skill<br /><t color='#ffff00'>LVL 0</t> - Base AI limit 3, AI Skill 40%<br /><t color='#ffff00'>LVL 1</t> - Base AI limit 4, AI Skill 55%<br /><t color='#ffff00'>LVL 2</t> - Base AI limit 5, AI Skill 70%<br /><t color='#ffff00'>LVL 3</t> - Base AI limit 6, AI Skill 85%<br /><t color='#ffff00'>LVL 4</t> - Base AI limit 7, AI Skill 100%</t>"], //--- Barracks
-		["Light Factory", "<t>Unlock better motorized units</t>"], //--- Light
-		["Heavy Factory", "<t>Unlock better armored units</t>"], //--- Heavy
-		["Naval Factory", "<t>Unlock better naval units</t>"], //--- Naval
-		["Aircraft Factory", "<t>Unlock better aircraft units</t>"], //--- Air
-		["Aircraft FFAR", "<t>Unlocks the FFAR Rockets for Aircrafts</t>"], //--- Air FFAR
-		["Aircraft DAR", "<t>Unlocks the DAR Rockets for Aircrafts</t>"], //--- Air DAR
-		["Aircraft AT", "<t>Unlocks the Anti Tank Missiles for Aircrafts</t>"], //--- Air AT
-		["Aircraft AA", "<t>Unlocks the Anti Air Missiles for Aircrafts</t>"], //--- Air AA
-		["Aircraft Countermeasures", "<t>Allows Aircraft to deploy countermeasures</t>"], //--- Air CM
-		["Forward Logistics", "<t>Improves Gear and Vehicles available at Depots and Large FOBs<br /><t color='#ffff00'>LVL 1</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 2</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 3</t> - Additional Vehicles and Adds Service To Depots</t>"], //--- Towns Depot
-		["Halo", "<t>Enable HALO Jumping from the Air factory and Depots<br /><t color='#ffff00'>LVL 1</t> - Halo to Towns and Bases<br /><t color='#ffff00'>LVL 2</t> - Halo to FOBs</t>"], //--- Halo
-		["Air Radar", "<t>Increase Range of Air Radar<br /><t color='#ffff00'>LVL 1</t> - 4000m<br /><t color='#ffff00'>LVL 2</t> - 6000m<br /><t color='#ffff00'>LVL 3</t> - 12000m<br /><t color='#ffff00'>LVL 4</t> - 18000m</t>"], //--- Air Radar
-		["Artillery Radar", "<t>Increase Range of Artillery Radar<br /><t color='#ffff00'>LVL 1</t> - 4000m<br /><t color='#ffff00'>LVL 2</t> - 6000m<br /><t color='#ffff00'>LVL 3</t> - 12000m<br /><t color='#ffff00'>LVL 4</t> - 18000m</t>"], //--- Art Radar
-		["Respawn Range", "<t>Increase the max range of the respawn trucks, town camps and FOBS.<br /><t color='#ffff00'>LVL 1</t> - 500m<br /><t color='#ffff00'>LVL 2</t> - 1000m<br /><t color='#ffff00'>LVL 3</t> - 1500m</t>"], //--- Respawn Range
-		["LVOSS System", "<t>Enables Light Vehicle Obscuration Smoke System (LVOSS), Full 360 degree coverage.<br /><t color='#ffff00'>LVL 1</t> - Ammo 1 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 2</t> - Ammo 2 per side, Cooldown 90s </t>"], //--- LVOSS System
-		["ERA System", "<t>Enable Explosive Reactive Armor system (ERA) or Arena System for Heavy Vehicles, Tanks still vulnerable from the rear.<br /><t color='#ffff00'>LVL 1</t> - ERA Mode Ammo 1 per side, Cooldown 150s<br /><t color='#ffff00'>LVL 2</t> - ERA Mode Ammo 2 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 3</t> - ARENA Mode Ammo 3 per side, Cooldown 90s<br /><t color='#ffff00'>LVL 4</t> - ARENA Mode Ammo 4 per side, Cooldown 60s</t>"], //--- ERA System
-		["Satellite Uplink", "<t>Allows the use of the satellite camera and access to advanced intel reports. <br /><t color='#ffff00'>LVL 0</t> - Satellite Uplink building enables enemy detection near base.<br /><t color='#ffff00'>LVL 1</t> - Unlocks Base Satellite Cam and town intel.<br /><t color='#ffff00'>LVL 2</t> - Unlocks Full Satellite Cam </t>"], //--- Satellite
-		["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br /><t color='#ffff00'>Unlocks Light 5 Upgrade which unlocks the Nuke Truck.</t></t>"], //--- Nuke
-		["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 2 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 3 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 4 SV per Interval</t>"], //--- Supply Rate
-		["Base Health", "<t>Improves base structures health<br /><t color='#ffff00'>LVL 1</t> - 25% Boost </t><br /><t color='#ffff00'>LVL 2</t> - 50% Boost<br /><t color='#ffff00'>LVL 3</t> - 75% Boost <br /><t color='#ffff00'>LVL 4</t> - 100% Boost </t>"], //--- Base Health
-		["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more.<br /><t color='#ffff00'>LVL 4</t> - Unlocks SAM/PATRIOT and more.   </t>"] //--- Base defense
-	]];
-};
+missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
+	["Gear", "<t>Unlock better gear"], //--- Gear
+	["Barracks", "<t>Unlock better infantry units, unlock more default player AI and improve AI skill<br /><t color='#ffff00'>LVL 0</t> - Base AI limit 3, AI Skill 40%<br /><t color='#ffff00'>LVL 1</t> - Base AI limit 4, AI Skill 55%<br /><t color='#ffff00'>LVL 2</t> - Base AI limit 5, AI Skill 70%<br /><t color='#ffff00'>LVL 3</t> - Base AI limit 6, AI Skill 85%<br /><t color='#ffff00'>LVL 4</t> - Base AI limit 7, AI Skill 100%</t>"], //--- Barracks
+	["Light Factory", "<t>Unlock better motorized units</t>"], //--- Light
+	["Heavy Factory", "<t>Unlock better armored units</t>"], //--- Heavy
+	["Naval Factory", "<t>Unlock better naval units</t>"], //--- Naval
+	["Aircraft Factory", "<t>Unlock better aircraft units</t>"], //--- Air
+	["Aircraft FFAR", "<t>Unlocks the FFAR Rockets for Aircrafts</t>"], //--- Air FFAR
+	["Aircraft DAR", "<t>Unlocks the DAR Rockets for Aircrafts</t>"], //--- Air DAR
+	["Aircraft AT", "<t>Unlocks the Anti Tank Missiles for Aircrafts</t>"], //--- Air AT
+	["Aircraft AA", "<t>Unlocks the Anti Air Missiles for Aircrafts</t>"], //--- Air AA
+	["Aircraft Countermeasures", "<t>Allows Aircraft to deploy countermeasures</t>"], //--- Air CM
+	["Forward Logistics", "<t>Improves Gear and Vehicles available at Depots and Large FOBs<br /><t color='#ffff00'>LVL 1</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 2</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 3</t> - Additional Vehicles and Adds Service To Depots</t>"], //--- Towns Depot
+	["Halo", "<t>Enable HALO Jumping from the Air factory and Depots<br /><t color='#ffff00'>LVL 1</t> - Halo to Towns and Bases<br /><t color='#ffff00'>LVL 2</t> - Halo to FOBs</t>"], //--- Halo
+	["Air Radar", "<t>Increase Range of Air Radar<br /><t color='#ffff00'>LVL 1</t> - 4000m<br /><t color='#ffff00'>LVL 2</t> - 6000m<br /><t color='#ffff00'>LVL 3</t> - 12000m<br /><t color='#ffff00'>LVL 4</t> - 18000m</t>"], //--- Air Radar
+	["Artillery Radar", "<t>Increase Range of Artillery Radar<br /><t color='#ffff00'>LVL 1</t> - 4000m<br /><t color='#ffff00'>LVL 2</t> - 6000m<br /><t color='#ffff00'>LVL 3</t> - 12000m<br /><t color='#ffff00'>LVL 4</t> - 18000m</t>"], //--- Art Radar
+	["Respawn Range", "<t>Increase the max range of the respawn trucks, town camps and FOBS.<br /><t color='#ffff00'>LVL 1</t> - 500m<br /><t color='#ffff00'>LVL 2</t> - 1000m<br /><t color='#ffff00'>LVL 3</t> - 1500m</t>"], //--- Respawn Range
+	["LVOSS System", "<t>Enables Light Vehicle Obscuration Smoke System (LVOSS), Full 360 degree coverage.<br /><t color='#ffff00'>LVL 1</t> - Ammo 1 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 2</t> - Ammo 2 per side, Cooldown 90s </t>"], //--- LVOSS System
+	["ERA System", "<t>Enable Explosive Reactive Armor system (ERA) or Arena System for Heavy Vehicles, Tanks still vulnerable from the rear.<br /><t color='#ffff00'>LVL 1</t> - ERA Mode Ammo 1 per side, Cooldown 150s<br /><t color='#ffff00'>LVL 2</t> - ERA Mode Ammo 2 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 3</t> - ARENA Mode Ammo 3 per side, Cooldown 90s<br /><t color='#ffff00'>LVL 4</t> - ARENA Mode Ammo 4 per side, Cooldown 60s</t>"], //--- ERA System
+	["Satellite Uplink", "<t>Allows the use of the satellite camera and access to advanced intel reports. <br /><t color='#ffff00'>LVL 0</t> - Satellite Uplink building enables enemy detection near base.<br /><t color='#ffff00'>LVL 1</t> - Unlocks Base Satellite Cam and town intel.<br /><t color='#ffff00'>LVL 2</t> - Unlocks Full Satellite Cam </t>"], //--- Satellite
+	["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br /><t color='#ffff00'>Unlocks Light 5 Upgrade which unlocks the Nuke Truck.</t></t>"], //--- Nuke
+	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 2 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 3 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 4 SV per Interval</t>"], //--- Supply Rate
+	["Base Health", "<t>Improves base structures health<br /><t color='#ffff00'>LVL 1</t> - 25% Boost </t><br /><t color='#ffff00'>LVL 2</t> - 50% Boost<br /><t color='#ffff00'>LVL 3</t> - 75% Boost <br /><t color='#ffff00'>LVL 4</t> - 100% Boost </t>"], //--- Base Health
+	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more.<br /><t color='#ffff00'>LVL 4</t> - Unlocks SAM/PATRIOT and more.   </t>"] //--- Base defense
+]];
 
 //--- Check potential missing definition.
 (_side) Call Compile preprocessFileLineNumbers "Common\Config\Upgrades\Check_Upgrades.sqf";
