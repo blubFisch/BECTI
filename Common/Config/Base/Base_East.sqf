@@ -480,7 +480,7 @@ _specials = [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[];
 
-	_headers pushBack 		"Camp Chair";
+/*	_headers pushBack 		"Camp Chair";
 	_classes pushBack 		"Land_CampingChair_V1_F";
 	_prices pushBack 		50;
 	_placements pushBack 	[90, 7];
@@ -508,7 +508,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"Tent";
 	_classes pushBack 		"Land_TentDome_F";
@@ -530,7 +530,7 @@ _specials = [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[];
 
-	_headers pushBack 		"Map";
+/*	_headers pushBack 		"Map";
 	_classes pushBack 		"MapBoard_altis_F";
 	_prices pushBack 		1;
 	_placements pushBack 	[180, 10];
@@ -538,7 +538,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"Runway Light (Blue)";
 	_classes pushBack 		"Land_runway_edgelight_blue_F";
