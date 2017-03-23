@@ -37,6 +37,7 @@ _sideID = _this select 2;
 _ruins = _this select 3;
 _varname = _this select 4;
 _position = getPos _killed;
+_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _var = missionNamespace getVariable _varname;
 _fob = false;
@@ -44,9 +45,12 @@ _fob = false;
 _large_fob = false;
 {if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
 
-_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 if (_fob) then { //--- Erase this FOB upon destruction
+	if (CTI_Log_Level >= CTI_Log_Information) then {
+		["INFORMATION", "FILE: Server\Functions\Server_OnDefenseDestroyed.sqf", format["FOB [%1 (%2)] is destroyed and will be removed from side [%3]", _killed, _var select 1, _side]] call CTI_CO_FNC_Log;
+	};
+
 	_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") - [objNull, _killed], true];
 };
 if (_large_fob) then { //--- Erase this Large FOB upon destruction
