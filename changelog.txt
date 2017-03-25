@@ -1,10 +1,10 @@
-Upcoming release
+﻿Upcoming release
 Fixed: Hill climb, push, and taxi reverse not applying to town occupation vehicles
 Removed: Opfor gaz66 medical vehicle
 Added: 10 AT disposable launchers to each starting vehicles
 Added: Base defense sell option for commander, use O key
 Fixed: floating Camp in takistan
-Fixed: some defence structure ruins not disappearing on death
+Fixed: Some defence structure ruins not disappearing on death
 
 
 1.06++
