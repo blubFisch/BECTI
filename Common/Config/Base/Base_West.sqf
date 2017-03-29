@@ -1068,7 +1068,7 @@ _specials = [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		"M252 81mm mortar";
+/*		_headers pushBack 		"M252 81mm mortar";
 		_classes pushBack 		"CUP_B_M252_USMC";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 5];
@@ -1077,7 +1077,7 @@ _specials = [];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[];
-
+*/
 		/*
 		_headers pushBack 		"RAM Launcher";
 		_classes pushBack 		"CUP_WV_B_RAM_Launcher";

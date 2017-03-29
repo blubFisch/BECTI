@@ -5,9 +5,19 @@ Added: 10 AT disposable launchers to each starting vehicles
 Added: Base defense sell option for commander, use O key
 Fixed: floating Camp in takistan
 Fixed: Some defence structure ruins not disappearing on death
+Fixed: Town occupation not spawning
 
 
-1.06++
+1.06.3
+Tweaked: Blufor titan ammo at correct tiers
+Added: Wipeout added to blufor AF4 to replace A-10
+Tweaked: Artys added in behind LF5 upgrade tier
+Added: Cyrus ammo
+Removed: cti-cup-addon mortars
+Tweaked: Equalized defense menu mortars
+Tweaked: Change starting mhq vehicles to Marshall/Marid
+
+1.06.2
 Fixed: Rearm on some aircraft giving incorrect loadouts
 Tweaked: rearming an aicraft doesn't remove all of this ammo during rearm. 
 Fixed: tool kit repair not always fixing tires on a vehicle
@@ -21,7 +31,7 @@ Tweaked: Correctly tier titan at(g3) and aa(g4)
 Tweaked: Unified blufor/opfor titan ammo cost (ap800/aa1500/at2500)
 Tweaked: Balance blufor/opfor lack of thermals
 
-1.06+
+1.06.1
 Fixed: Depot available when camps are lost
 Replaced: Opfor mbt's with t72d/t80bkv/t80ue-1
 Tweaked: Reduced all AF prices (AF4-5%/AF3-10%/AF2-15%/AF1-20%/AF0-25%)

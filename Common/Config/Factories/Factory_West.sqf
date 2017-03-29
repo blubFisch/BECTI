@@ -685,6 +685,7 @@ _u pushBack 'O_Truck_03_device_F';*/
 _u pushBack "B_UGV_01_rcws_F";
 _u pushback 'I_C_Offroad_02_unarmed_F';*/
 _u pushBack "B_APC_Wheeled_01_cannon_F";
+_u pushBack "B_MBT_01_arty_F";
 
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
@@ -1133,7 +1134,7 @@ _u pushBack "B_Heli_Light_01_armed_F";
 _u pushBack "B_Heli_Attack_01_F";*/
 _u pushBack "B_UAV_02_CAS_F";
 _u pushBack "B_UAV_02_F";
-/*_u pushBack "B_Plane_CAS_01_F";*/
+_u pushBack "B_Plane_CAS_01_F";
 
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla

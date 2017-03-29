@@ -1139,7 +1139,7 @@ _specials = [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[];
 		*/
-		_headers pushBack 		"Podnos 2B14";
+/*		_headers pushBack 		"Podnos 2B14";
 		_classes pushBack 		"CUP_B_2b14_82mm_CDF";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 5];
@@ -1147,7 +1147,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		3;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 		
 		
 	};
@@ -1214,7 +1214,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		1000;
+	_prices pushBack 		5000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
