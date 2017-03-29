@@ -1,12 +1,4 @@
 ﻿Upcoming release
-Fixed: Hill climb, push, and taxi reverse not applying to town occupation vehicles
-Removed: Opfor gaz66 medical vehicle
-Added: 10 AT disposable launchers to each starting vehicles
-Added: Base defense sell option for commander, use O key
-Fixed: floating Camp in takistan
-Fixed: Some defence structure ruins not disappearing on death
-Fixed: Town occupation not spawning
-
 
 1.06.3
 Tweaked: Blufor titan ammo at correct tiers
@@ -16,6 +8,14 @@ Added: Cyrus ammo
 Removed: cti-cup-addon mortars
 Tweaked: Equalized defense menu mortars
 Tweaked: Change starting mhq vehicles to Marshall/Marid
+Fixed: Hill climb, push, and taxi reverse not applying to town occupation vehicles
+Removed: Opfor gaz66 medical vehicle
+Added: 10 AT disposable launchers to each starting vehicles
+Added: Base defense sell option for commander, use O key
+Fixed: floating Camp in takistan
+Fixed: Some defence structure ruins not disappearing on death
+Fixed: Town occupation not spawning
+Disabled: Air CM/Rocket upgrades
 
 1.06.2
 Fixed: Rearm on some aircraft giving incorrect loadouts
