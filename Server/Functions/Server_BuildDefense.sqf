@@ -31,7 +31,7 @@
     _defense = [_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir, CTI_P_WallsAutoAlign, CTI_P_DefensesAutoManning] call CTI_SE_FNC_BuildDefense;
 */
 
-private ["_autoalign", "_defense", "_direction", "_direction_structure", "_fob","_large_fob", "_limit","_limit_large", "_logic", "_manned", "_origin", "_position", "_ruins", "_side", "_sideID", "_stronger", "_var", "_varname", "_isarmed", "_static1", "_static2", "_static3", "_composition", "_iscomposition", "_compositionobjects"];
+private ["_autoalign", "_defense", "_direction", "_direction_structure", "_fob","_large_fob", "_limit","_limit_large", "_logic", "_manned", "_origin", "_position", "_ruins", "_seed", "_side", "_sideID", "_stronger", "_var", "_varname", "_isarmed", "_static1", "_static2", "_static3", "_composition", "_iscomposition", "_compositionobjects"];
 
 _varname = _this select 0;
 _var = missionNamespace getVariable _varname;
@@ -41,12 +41,13 @@ _direction = _this select 3;
 _origin = _this select 4;
 _autoalign = _this select 5;
 _manned = if (count _this > 6) then {_this select 6} else {false};
+_seed = time + random 10000 - random 500 + diag_frameno;
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
-	["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["Received a Defense build request from side [%1] for a [%2] structure at position [%3], manned? [%4]", _side, _var select 1, _position, _manned]] call CTI_CO_FNC_Log;
+	["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["Received Defense build request [%1] from side [%2] for a [%3] structure at position [%4], manned? [%5]", _seed, _side, _var select 1, _position, _manned]] call CTI_CO_FNC_Log;
 };
 
 //--- Is it a fob?
@@ -83,7 +84,7 @@ if (_iscomposition) then {
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense
 			if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_x setVariable ["cti_aman_enabled", true]};
 		};
-		_x setVariable ["cti_managed", true];
+		_x setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 		_x call CTI_CO_FNC_UnitCreated;
 	}forEach _compositionobjects;	
 	_defense = "";
@@ -91,7 +92,7 @@ if (_iscomposition) then {
 	_position set [2, 0];
 
 	_defense = (_var select 1) createVehicle _position;
-	_defense setVariable ["cti_managed", true];
+	_defense setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 
 	_direction_structure = (_var select 4) select 0;
 
@@ -112,6 +113,10 @@ if (_iscomposition) then {
 	};
 
 	if (_fob) then {
+    	if (CTI_Log_Level >= CTI_Log_Information) then {
+    		["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["A FOB [%1] has been added to side [%2] following defense request [%3]", _var select 1, _side, _seed]] call CTI_CO_FNC_Log;
+    	};
+
 		(_defense) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
 		_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") + [_defense], true];
 	};

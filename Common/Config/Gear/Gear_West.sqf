@@ -154,15 +154,15 @@ _u pushBack 1;
 _p pushBack 675;
 
 _i pushBack "Titan_AA";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 1500;
 
 _i pushBack "Titan_AP";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 800;
 
 _i pushBack "Titan_AT";
-_u pushBack 4;
+_u pushBack 3;
 _p pushBack 2500;
 
 _i pushBack "HandGrenade";
@@ -228,6 +228,9 @@ _i pushBack "1Rnd_SmokeRed_Grenade_shell";
 _u pushBack 0;
 _p pushBack 20;
 
+_i pushBack "1Rnd_SmokeBlue_Grenade_shell";
+_u pushBack 0;
+_p pushBack 20;
 
 /*_i pushBack "1Rnd_SmokeGreen_Grenade_shell";
 _u pushBack 0;

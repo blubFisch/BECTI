@@ -105,7 +105,8 @@ if (_completion >= 100) then {
 		_structure setVariable ["cti_altdmg", 0];
 		_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages, _multiply_damages]];
 	} else {
-		_structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]];
+//		_structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]];
+        _structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]]; 
 		if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
 			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position, _multiply_damages]];
 		} else {
@@ -150,7 +151,7 @@ if (_completion >= 100) then {
 		//--- Wipe the defense/structures upon area expiration
 		{
 			{
-				if !(isNil {_x getVariable "cti_managed"}) then {deleteVehicle _x};
+				if !(isNil {_x getVariable "cti_defense_sideID"}) then {deleteVehicle _x};
 			} forEach (nearestObjects [_x, missionNamespace getVariable format ["CTI_%1_DEFENSES_NAMES", _side], CTI_BASE_AREA_RANGE]);
 		} forEach _delete_pos;
 	};

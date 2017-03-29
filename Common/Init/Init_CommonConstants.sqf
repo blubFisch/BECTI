@@ -136,7 +136,10 @@ CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
 CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
 CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.75; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
 //-------------------------------------------------------------------------------------------------------------------------//
-
+//-------------------------------------------------------------------------------------------------------------------------//
+//-- vehicle stealth
+CTI_ENABLE_VEHICLE_STEALTH = 0; //0 to disable, 1 to enable
+//-------------------------------------------------------------------------------------------------------------------------//
 //----------------------------------------------------ORDERS-------------------------------------------------------------//
 /*
  * The orders determine the actions that AI Team Leaders will perform, they are executed in a different thread in order
@@ -356,6 +359,7 @@ CTI_TOWNS_CAMPS_CAPTURE_BOUNTY_DELAY = 300; //--- Award the bounty depending if 
 //--- Towns: Capture
 CTI_TOWNS_CAPTURE_BOUNTY_COEF = 100; //--- Bounty coefficient upon capture, (max sv * coefficient)
 CTI_TOWNS_CAPTURE_BOUNTY_DELAY = 600; //--- Award the bounty depending if the last town capture happened longer than x seconds ago
+CTI_TOWNS_CAPTURE_DELETE_FORCES = 1; //--- Determine whether the resistance or occupation forces should be removed upon town capture or not (0: Disabled, 1: West & East, 2: All)
 CTI_TOWNS_CAPTURE_DETECTION_MODE = 1; //--- Determine the towns detection mode (0: All, 1: Players, 2: Playable units)
 CTI_TOWNS_CAPTURE_FORCE_MAX = 2; //--- The force determine how many units may try to capture a town (caoture rate = SV - round((units force + camp rate) * town rate))
 CTI_TOWNS_CAPTURE_PEACE_SCAN_RANGE = 150; //--- This range is used upon town capture to search for enemies around the depot, if none are found peace mode will be triggered
@@ -509,6 +513,7 @@ CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may m
 CTI_BASE_DEFENSES_AUTO_RANGE = 250; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 250; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 350; //--- Delay after which an empty defense is considered empty
+CTI_BASE_DEFENSES_SOLD_COEF = 0.25; //--- The player will get a fund return based on the defense price * coef when a defense is sold
 
 //--- Base: HQ
 CTI_BASE_HQ_BOUNTY = 2.50; //--- The bounty awarded upon HQ destruction

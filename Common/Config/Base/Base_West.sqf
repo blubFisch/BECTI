@@ -410,7 +410,7 @@ _specials = [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 	//Tall Roof
-	_headers pushBack  		"Shed (Roof)";
+	_headers pushBack ["Shed (Roof)",[["RuinOnDestroyed", "Land_shed_big_ruins_f"]]];
 	_classes pushBack  		"Land_Shed_Big_F";
 	_prices pushBack 		2000;
 	_placements pushBack 	[0, 15];
@@ -420,7 +420,7 @@ _specials = [];
 	_upgrade pushBack		1;	
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Multiplier", 3]];
 	// Short roof with one wall side
-	_headers pushBack 		"Shed (Land)";
+	_headers pushBack ["Shed (Land)",[["RuinOnDestroyed", "Land_shed_small_ruins_f"]]];
 	_classes pushBack 		"Land_Shed_Small_F";
 	_prices pushBack 		2000;
 	_placements pushBack 	[90, 15];
@@ -480,7 +480,7 @@ _specials = [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[];
 
-	_headers pushBack 		"Camp Chair";
+/*	_headers pushBack 		"Camp Chair";
 	_classes pushBack 		"Land_CampingChair_V1_F";
 	_prices pushBack 		50;
 	_placements pushBack 	[90, 7];
@@ -508,7 +508,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"Tent";
 	_classes pushBack 		"Land_TentDome_F";
@@ -530,7 +530,7 @@ _specials = [];
 	_upgrade pushBack		0;	
 	_specials pushBack 		[];
 
-	_headers pushBack 		"Map";
+/*	_headers pushBack 		"Map";
 	_classes pushBack 		"MapBoard_altis_F";
 	_prices pushBack 		1;
 	_placements pushBack 	[180, 10];
@@ -538,7 +538,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		0;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"Runway Light (Blue)";
 	_classes pushBack 		"Land_runway_edgelight_blue_F";
@@ -880,7 +880,7 @@ _specials = [];
 	_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 */	
 	if (CTI_APEX_ADDON > 0) then {
-		_headers pushBack 		"Cargo Tower (big) Jungle";
+		_headers pushBack ["Cargo Tower (big) Jungle",[["RuinOnDestroyed", "Land_cargo_tower_v4_ruins_f"]]];
 		_classes pushBack 		"Land_Cargo_Tower_V4_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 30];
@@ -1068,7 +1068,7 @@ _specials = [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		"M252 81mm mortar";
+/*		_headers pushBack 		"M252 81mm mortar";
 		_classes pushBack 		"CUP_B_M252_USMC";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 5];
@@ -1077,7 +1077,7 @@ _specials = [];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[];
-
+*/
 		/*
 		_headers pushBack 		"RAM Launcher";
 		_classes pushBack 		"CUP_WV_B_RAM_Launcher";
@@ -1201,7 +1201,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_upgrade pushBack		4;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 
-		_headers pushBack 		"Large Hangar (Green)";
+		_headers pushBack ["Large Hangar (Green)",[["RuinOnDestroyed", "Land_ss_hangard_ruins"]]];
 		_classes pushBack 		"Land_Ss_hangar";
 		_prices pushBack 		10000;
 		_placements pushBack 	[90, 7];

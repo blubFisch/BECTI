@@ -517,6 +517,16 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "nuke-truck";
 _d pushBack 0;
 
+_c pushBack 'O_MBT_02_arty_F';
+_p pushBack '';
+_n pushBack '2S9 Sochor';
+_o pushBack 175000;
+_t pushBack 20;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
 //--- Heavy Vehicles
 
 _c pushBack 'O_MBT_02_cannon_F';

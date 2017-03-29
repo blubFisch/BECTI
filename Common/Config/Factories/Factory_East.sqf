@@ -4,22 +4,22 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid
 	switch (CTI_FACTION_DEFAULT_TROOPS) do {
 		case 0: { //Vanilla
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
-			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_Recon_TL_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
 		};
 		case 1: { //Apex
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_crew_F"];
-			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_Recon_TL_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_T_Diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_Crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_Spotter_F"];
 		};
 		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
@@ -31,7 +31,7 @@ if (CTI_FACTION_EAST == 0) then {
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
 		};
 		case 3: { //RHS
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
@@ -45,22 +45,22 @@ if (CTI_FACTION_EAST == 1) then {
 	//CSAT Tropic
 	switch (CTI_FACTION_DEFAULT_TROOPS) do {
 		case 0: { //Vanilla
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
-			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
 		};
 		case 1: { //Apex
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_T_Diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_Crew_F"];
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_Spotter_F"];
 		};
 		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
@@ -72,7 +72,7 @@ if (CTI_FACTION_EAST == 1) then {
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
 		};
 		case 3: { //RHS
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
@@ -86,22 +86,22 @@ if (CTI_FACTION_EAST == 2) then {
 	//CSAT Winter
 	switch (CTI_FACTION_DEFAULT_TROOPS) do {
 		case 0: { //Vanilla
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
-			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_spotter_F"];
 		};
 		case 1: { //Apex
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_officer_F"];
-			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_lite_F"];
-			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_diver_F"];
-			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_F"];
-			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_crew_F"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Worker", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Diver", _side], "O_T_Diver_F"];
+			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "O_T_Soldier_A_F"];
+			missionNamespace setVariable [format["CTI_%1_Crew", _side], "O_T_Crew_F"];
 			missionNamespace setVariable [format["CTI_%1_Pilot", _side], "O_T_Helipilot_F"];
-			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_spotter_F"];
+			missionNamespace setVariable [format["CTI_%1_Static", _side], "O_T_Spotter_F"];
 		};
 		case 2: { //CUP
 			missionNamespace setVariable [format["CTI_%1_Commander", _side], "CUP_O_RU_Officer"];
@@ -113,7 +113,7 @@ if (CTI_FACTION_EAST == 2) then {
 			missionNamespace setVariable [format["CTI_%1_Static", _side], "CUP_O_RUS_SpecOps_Scout"];
 		};
 		case 3: { //RHS
-			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer_armored"];
+			missionNamespace setVariable [format["CTI_%1_Commander", _side], "rhs_msv_emr_officer"];
 			missionNamespace setVariable [format["CTI_%1_Worker", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Diver", _side], "rhs_msv_emr_rifleman"];
 			missionNamespace setVariable [format["CTI_%1_Soldier", _side], "rhs_msv_emr_rifleman"];
@@ -227,42 +227,31 @@ if (CTI_FACTION_EAST == 0) then {
 				//,	["O_Heli_Light_02_unarmed_F", []]
 			]];
 		};
-		case 3: { //RHS
+		case 3: { //RHS 
+		           // replace O_Truck_03_medical_F with rhs_gaz66_ap2_msv when Issue #346 is resolved
 			missionNamespace setVariable [format["CTI_%1_Vehicles_Startup", _side], [
-				["rhs_gaz66_ap2_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+				["O_Truck_03_medical_F", [
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["RHS_UAZ_MSV_01", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 10],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["rhs_tigr_sts_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]],
 				["rhs_btr60_msv", [
-					["CUP_launch_RPG18", 5], 
-					["CUP_RPG18_M", 20],
+					["rhs_weap_rpg26", 10], 
 					["Toolkit", 1],
 					["acc_flashlight", 10],
-					["CUP_sgun_Saiga12K", 10],
-					["CUP_8Rnd_B_Saiga12_74Slug_M", 20],
 					["30Rnd_9x21_Mag", 20]
 				]]
 				//,	["O_Heli_Light_02_unarmed_F", []]
@@ -638,7 +627,7 @@ if (CTI_CUP_ADDON > 0) then {
 	};
 	if (CTI_FACTION_EAST == 1) then {
 		//CSAT Tropic CUP
-			_u pushBack 'CUP_O_RU_Soldier_VDV_EMR';
+	_u pushBack 'CUP_O_RU_Soldier_VDV_EMR';
 	_u pushBack 'CUP_O_RU_Soldier_AA_VDV_EMR';
 	_u pushBack 'CUP_O_RU_Soldier_MG_VDV_EMR';
 	_u pushBack 'CUP_O_RU_Crew_VDV_EMR';
@@ -743,6 +732,7 @@ if (CTI_FACTION_EAST == 0) then {
 	_u pushBack 'O_MRAP_02_gmg_F';*/
 /*	_u pushBack 'O_UGV_01_F';
 	_u pushBack 'O_UGV_01_rcws_F';*/
+    _u pushBack "O_MBT_02_arty_F";
 
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -926,7 +916,7 @@ _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';
 /*_u pushBack 'rhsgref_BRDM2_msv';*/
-_u pushBack 'rhs_gaz66_ap2_msv';
+//_u pushBack 'rhs_gaz66_ap2_msv';
 _u pushBack 'rhs_tigr_sts_3camo_msv';
 /*_u pushBack 'rhs_btr60_msv';*/
 _u pushBack 'rhs_btr70_msv';
@@ -1059,7 +1049,13 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'CUP_O_BMP3_RU';		
 	_u pushBack 'OFPS_T55';		
 	_u pushBack 'OFPS_BMP2_M';			
-	_u pushBack 'CUP_O_2S6M_RU';				
+	_u pushBack 'CUP_O_2S6M_RU';	
+	_u pushBack 'ofps_rhs_t72bd_tv';	
+/*	_u pushBack 'ofps_rhs_t80um';*/
+	_u pushBack 'ofps_rhs_t80ue1';		
+	_u pushBack 'ofps_rhs_t80bvk';
+/*	_u pushBack 'ofps_rhs_t90_tv';
+	_u pushBack 'ofps_rhs_t90a_tv';*/
 
 	if (CTI_FACTION_EAST == 0) then {
 		//CSAT Arid OFPS
@@ -1093,16 +1089,16 @@ _u pushBack 'rhs_bmp2d_msv';
 /*_u pushBack 'rhs_Ob_681_2'; */
 /*_u pushBack 'rhs_t72ba_tv';*/
 /*_u pushBack 'rhs_t72bb_tv'; */ 
-_u pushBack 'rhs_t72bd_tv'; 
+/*_u pushBack 'rhs_t72bd_tv'; */
 _u pushBack 'rhs_sprut_vdv'; 
 /*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
 _u pushBack 'rhs_bmd4vdv'; */
 /*_u pushBack 'rhs_t80';*/ 
-_u pushBack 'rhs_t80ue1'; 
+/*_u pushBack 'rhs_t80ue1'; */
 _u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t80bvk';
+/*_u pushBack 'rhs_t80bvk';*/
 /*_u pushBack 'rhs_t90a_tv'; */
 /*_u pushBack 'rhs_bmp3mera_msv'; */
 _u pushBack 'rhs_bmd4ma_vdv'; 

@@ -368,19 +368,20 @@ CTI_Coin_OnPreviewPlacement = {
 					_header = CTI_COIN_PARAM select 5;
 					_classname = CTI_COIN_PARAM select 1;
 					//check if armed version
-					_classname_variant = "d";
 					switch (typeName _header) do {
-						case "STRING": { _classname_variant = "d"; };
+						case "STRING": { _classname = _classname; };
 						case "ARRAY": {
 							if ("Armed" in (_header select 0)) then {
 								_classname_variant = ((_header select 0) select 1);
+								_classname = format["%1_%2",_classname,_classname_variant];
 							};
 							if ("Composition" in (_header select 0)) then {
 								_classname_variant = ((_header select 0) select 1);
+								_classname = format["%1_%2",_classname,_classname_variant];
 							};
 						};
 					};
-					_variable = format ["CTI_%1_%2_%3", CTI_P_SideJoined, _classname, _classname_variant];
+					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, _classname];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
 					[_variable, CTI_P_SideJoined, _position, _direction, player, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
@@ -475,6 +476,33 @@ CTI_Coin_OnPreviewCanceled = {
 	};
 };
 
+//--- Called whenever building (structure or defense) is about to be sold
+CTI_Coin_OnBuildingSold = {
+	if (call CTI_CL_FNC_IsPlayerCommander) then {
+		_list = [];
+		_position = screenToWorld [0.5,0.5];
+		{if ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo CTI_P_SideID) then {_list pushBack _x}} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 15]);
+		
+		if (count _list > 0) then {
+			_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
+			
+			if (isNil {_nearest getVariable "cti_building_sold"}) then {
+				_nearest setVariable ["cti_building_sold", true];
+
+				_var = missionNamespace getVariable [format["CTI_%1_%2", CTI_P_SideJoined, typeOf _nearest], []];
+				if !(_var isEqualTo []) then {
+					_refund = round((_var select 2) * CTI_BASE_DEFENSES_SOLD_COEF);
+					(_refund) call CTI_CL_FNC_ChangePlayerFunds;
+					["defense-sold", [_var select 0, _refund]] call CTI_CL_FNC_DisplayMessage
+				};
+				
+				//--- TODO: if !local, delete where the owner matches
+				deleteVehicle _nearest;
+			};
+		};
+	};
+};
+
 //--- Display EH: KeyDown, a key has been pressed (and is still being pressed)
 CTI_Coin_OnKeyDown = {
 	_key = _this select 1;
@@ -503,6 +531,7 @@ CTI_Coin_OnKeyDown = {
 			case (_key in actionKeys "Diary"): {profileNamespace setVariable ["CTI_COIN_WALLALIGN", !(profileNamespace getVariable ["CTI_COIN_WALLALIGN", true])]};
 			case (_key in actionKeys "Gear"): {profileNamespace setVariable ["CTI_COIN_AUTODEFENSE", !(profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true])]};
 			case (_key in actionKeys "NightVision"): {if !(isNil 'CTI_COIN_CAMCONSTRUCT') then {camUseNVG !CTI_COIN_CAMUSENVG; CTI_COIN_CAMUSENVG = !CTI_COIN_CAMUSENVG}};
+			case (_key in actionKeys "Watch"): {call CTI_Coin_OnBuildingSold};
 		};
 	};
 	
