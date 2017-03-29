@@ -474,6 +474,16 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'B_MBT_01_arty_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 175000;
+_t pushBack 30;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
 //--- Heavy Vehicles
 
 _c pushBack 'B_APC_Tracked_01_rcws_F'; //Panther
@@ -739,9 +749,9 @@ _d pushBack 0;
 _c pushBack 'B_Plane_CAS_01_F'; //A-10 Wipeout
 _p pushBack '';
 _n pushBack '';
-_o pushBack 100000;
+_o pushBack 67500;
 _t pushBack 50;
-_u pushBack 5;
+_u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;

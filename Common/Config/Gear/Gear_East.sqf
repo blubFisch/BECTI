@@ -301,18 +301,17 @@ _i pushBack "3Rnd_UGL_FlareCIR_F";
 _u pushBack 2;
 _p pushBack 120;*/
  
- 
-/*_i pushBack "10Rnd_127x54_Mag";
+_i pushBack "10Rnd_127x54_Mag";
 _u pushBack 3;
-_p pushBack 225;*/
+_p pushBack 225;
 
-/*_i pushBack "10Rnd_93x64_DMR_05_Mag";
+_i pushBack "10Rnd_93x64_DMR_05_Mag";
 _u pushBack 3;
-_p pushBack 120;*/
+_p pushBack 120;
 
-_i pushBack "150Rnd_93x64_Mag";
+/*_i pushBack "150Rnd_93x64_Mag";
 _u pushBack 3;
-_p pushBack 220;
+_p pushBack 220;*/
 
 
 //--- Weapons (Nested array elements are defined but skiped in the gear menu)
