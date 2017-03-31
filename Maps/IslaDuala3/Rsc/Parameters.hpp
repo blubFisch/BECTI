@@ -15,19 +15,19 @@ class Params {
 		title = "FACTION: Starting vehicles and mhq";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class CTI_FACTION_DEFAULT_GEAR {
 		title = "FACTION: Starting gear";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class CTI_FACTION_DEFAULT_TROOPS {
 		title = "FACTION: Default infantry";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
@@ -63,7 +63,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 10000;
+		default = 6000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -75,31 +75,31 @@ class Params {
 		title = "INCOME: Delay";
 		values[] = {30,35,40,45,50,55,60,65,70,75,80};
 		texts[] = {"30 Seconds","35 Seconds","40 Seconds","45 Seconds","50 Seconds","55 Seconds","01:00 Minutes","01:05 Minutes","01:10 Minutes","01:15 Minutes"};
-		default = 55;
+		default = 60;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST_COMMANDER {
 		title = "INCOME: Starting Funds (East Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 50000;
+		default = 45000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST {
 		title = "INCOME: Starting Funds (East Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 10000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST_COMMANDER {
 		title = "INCOME: Starting Funds (West Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 50000;
+		default = 45000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST {
 		title = "INCOME: Starting Funds (West Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 10000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_TOWNS_OCCUPATION {
 		title = "INCOME: Towns Occupation";
@@ -111,13 +111,13 @@ class Params {
 		title = "SUPPLY: Starting Supply (East Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 25000;
+		default = 15000;
 	};
 	class CTI_ECONOMY_STARTUP_SUPPLY_WEST {
 		title = "SUPPLY: Starting Supply (West Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 25000;
+		default = 15000;
 	};
 	class SEPARATOR2 {
 		title = "========================== TOWNS ============================";
@@ -153,19 +153,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8,9};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter","RHS GREF"};
-		default = 6;
+		default = 9;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 2;
+		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 2;
+		default = 5;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -183,7 +183,7 @@ class Params {
 		title = "TOWNS: Occupation Squad Queue Ratio";
 		values[] = {0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
-		default = 40;
+		default = 20;
 	};
 	class CTI_TOWNS_RESISTANCE_LIMIT_AI {
 		title = "TOWNS: Resistance Soft max AI Limit";
@@ -195,7 +195,7 @@ class Params {
 		title = "TOWNS: Resistance Squad Queue Ratio";
 		values[] = {0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
-		default = 40;
+		default = 20;
 	};
 	class CTI_TOWNS_CAPTURE_MODE {
 		title = "TOWNS: CAPTURE MODE";
@@ -285,31 +285,31 @@ class Params {
 		title = "UNITS: Aircraft FFAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_DAR {
 		title = "UNITS: Aircraft DAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_AA {
 		title = "UNITS: Aircraft AA Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_AT {
 		title = "UNITS: Aircraft AT Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_CM {
 		title = "UNITS: Aircraft Countermeasures";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_MARKERS_INFANTRY {
 		title = "UNITS: Show Map Infantry";
@@ -339,7 +339,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = 1;
+		default = -1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
@@ -351,7 +351,7 @@ class Params {
 		title = "GAMEPLAY: 3P view";
 		values[] = {-1,0,1,2};
 		texts[] = {"All","No group view","Vehicle","None"};
-		default = -1;
+		default = 1;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";
@@ -417,7 +417,7 @@ class Params {
 		title = "WEATHER: Inital Time";
 		values[] = {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		texts[] = {"12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Random"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_RAIN {
 		title = "WEATHER: Rain (Rain Requires Overcast Greater High)";
@@ -489,7 +489,7 @@ class Params {
 		title = "WEATHER: Fog Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0.1;
 	};
 	class CTI_WEATHER_FOG_DECAY {
 		title = "WEATHER: Fog decay level";
@@ -573,7 +573,7 @@ class Params {
 		title = "ADDON: APEX DLC Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_CUP_ADDON {
 		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
@@ -585,19 +585,19 @@ class Params {
 		title = "ADDON: CUP CORE and CUP Terrains";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_OFPS_ADDON {
 		title = "ADDON: OFPS MOD Pack Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_RHS_ADDON {
 		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class SEPARATOR10 {
 		title = "========================= GAMEMODES ===========================";
@@ -627,6 +627,6 @@ class Params {
 		title = "DEV: Dev Mode";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 };
