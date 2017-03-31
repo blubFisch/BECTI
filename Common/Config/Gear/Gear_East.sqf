@@ -709,15 +709,15 @@ _p pushBack 100;
 
 _i pushBack "O_GMG_01_support_F";
 _u pushBack 2;
-_p pushBack 100;
+_p pushBack 100;*/
 
-_i pushBack "O_Mortar_01_support_F";
-_u pushBack 5;
-_p pushBack 50;
+/*_i pushBack "O_Mortar_01_support_F";
+_u pushBack 3;
+_p pushBack 2500;
 
 _i pushBack "O_Mortar_01_weapon_F";
-_u pushBack 5;
-_p pushBack 15000;*/
+_u pushBack 3;
+_p pushBack 7500;*/
 
 //--- Glasses
 _i pushBack "G_Combat";

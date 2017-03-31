@@ -135,7 +135,7 @@ class Params {
 		title = "TOWNS: Occupation Skill level";
 		values[] = {20,30,40,50,60,70,80,90,100};
 		texts[] = {"20","30","40","50","60","70","80","90","100"};
-		default = 80;
+		default = 60;
 	};
 	class CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Squad Count";

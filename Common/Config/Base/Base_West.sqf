@@ -5,7 +5,7 @@ if (CTI_FACTION_WEST == 0) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//RHS
 	}
 };
 if (CTI_FACTION_WEST == 1) then {
@@ -14,7 +14,7 @@ if (CTI_FACTION_WEST == 1) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//RHS
 	}
 };
 if (CTI_FACTION_WEST == 2) then {
@@ -23,7 +23,7 @@ if (CTI_FACTION_WEST == 2) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_B_M1126_ICV_M2_Woodland_Slat"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhsusf_M1117_W"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];};//RHS
 	}
 };
 
@@ -1046,7 +1046,7 @@ _specials = [];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
 	};*/
 	
-	_headers pushBack 		"Mortar";
+	/*_headers pushBack 		"Mortar";
 	_classes pushBack 		"B_Mortar_01_F";
 	_prices pushBack 		5000;
 	_placements pushBack 	[180, 5];
@@ -1054,7 +1054,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		3;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 	
 	if (CTI_CUP_ADDON > 0) then {
 
@@ -1152,7 +1152,7 @@ _specials = [];
 
 if (CTI_RHS_ADDON > 0) then { 
 
-	//OPFOR D-30 to fill the gap
+	//OPFOR D-30&Podnos to fill the gap
 	_headers pushBack 		"2A18M (D-30A) AT";
 	_classes pushBack 		"rhs_d30_at_msv";
 	_prices pushBack 		6000;
@@ -1162,6 +1162,16 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinblacklist pushBack ["*"];
 	_upgrade pushBack		3;	
 	_specials pushBack 		[];
+
+	_headers pushBack 		"2B14-1 Podnos";
+	_classes pushBack 		"rhs_2b14_82mm_msv";
+	_prices pushBack 		7500;
+	_placements pushBack 	[180, 15];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack ["*"];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[]
 	
 };
 
