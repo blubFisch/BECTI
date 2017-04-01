@@ -545,10 +545,10 @@ if (CTI_DEV_MODE > 0) then {
 	_q = (side player) call CTI_CO_FNC_GetSideHQ;
 	_q setDammage 1;
 	{uiNamespace setVariable [_x, displayNull]} forEach ["cti_title_capture"];
-	600200 cutRsc["CTI_CaptureBar","PLAIN",0];*/
+	600200 cutRsc["CTI_CaptureBar","PLAIN",0];
 
 	//--- Generates a list in log what units belong to HC
-/*	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
+	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
 	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
 
 	//--- Copy to clipboard building positions with in 20m
@@ -557,18 +557,37 @@ if (CTI_DEV_MODE > 0) then {
 	    _posX append (_x buildingPos -1);
 	} forEach nearestObjects [player, ["House"], 20];
 
-	copyToClipboard str(_posX);*/
+	copyToClipboard str(_posX);
 
 	//--- Generates chat message on building health
-/*	[] spawn { 
+	[] spawn { 
 	while {true} do { 
 			{  
 			   player sideChat typeof _x + " : " + str (_x getVariable "cti_altdmg");  
 			} forEach nearestObjects [player, [], 20]; 
 		 
-		 sleep 2;}
+		 sleep 2;
 		}
-	};*/
+	}
+
+	//--- Copy to clipboard building positions with in 20m v1
+		_posX = [];
+	{
+	    _posX append (_x buildingPos -1);
+	} forEach nearestObjects [player, ["House"], 20];
+
+	copyToClipboard str(_posX);
+
+	//--- Copy to clipboard building positions with in 20m v2
+	_posX = [];
+    {
+        _posX pushback (_x buildingPos -1);
+    } forEach (nearestObjects [player, ["building"], 20]);
+
+    copyToClipboard (str _posX);
+
+*/
+};
 
 if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 	0 spawn {
