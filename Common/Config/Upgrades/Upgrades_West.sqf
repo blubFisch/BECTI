@@ -18,9 +18,9 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Halo
 	true, //--- Air Radar
 	true, //--- Art Radar
+	true, //--- Respawn Range
 	(missionNamespace getVariable "CTI_VEHICLES_LVOSS") == 1, //--- LVOSS System
 	(missionNamespace getVariable "CTI_VEHICLES_ERA") == 1, //--- ERA System
-	true, //--- ERA System
 	true, //--- Satellite
 	true, //--- Nuke
 	true, //--- Supply Rate
