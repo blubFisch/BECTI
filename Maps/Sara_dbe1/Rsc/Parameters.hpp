@@ -281,36 +281,6 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
-	class CTI_VEHICLES_AIR_FFAR {
-		title = "UNITS: Aircraft FFAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_DAR {
-		title = "UNITS: Aircraft DAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_AA {
-		title = "UNITS: Aircraft AA Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_AT {
-		title = "UNITS: Aircraft AT Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_CM {
-		title = "UNITS: Aircraft Countermeasures";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
 	class CTI_MARKERS_INFANTRY {
 		title = "UNITS: Show Map Infantry";
 		values[] = {0,1};
@@ -322,15 +292,63 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
+	};	
+	class SEPARATOR_VEH {
+		title = "=========================== VEHICLES ============================";
+		values[] = {1};
+		texts[] = {""};
+		default = 1;
 	};
-	class CTI_UNITS_FUEL_CONSUMPTION {
-		title = "UNITS: Increased Fuel Consumption";
+	class CTI_VEHICLES_AIR_FFAR {
+		title = "VEHICLES: Aircraft FFAR";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 1;
+	};
+	class CTI_VEHICLES_AIR_DAR {
+		title = "VEHICLES: Aircraft DAR";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 1;
+	};
+	class CTI_VEHICLES_AIR_AA {
+		title = "VEHICLES: Aircraft AA Missiles";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 1;
+	};
+	class CTI_VEHICLES_AIR_AT {
+		title = "VEHICLES: Aircraft AT Missiles";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 1;
+	};
+	class CTI_VEHICLES_AIR_CM {
+		title = "VEHICLES: Aircraft Countermeasures";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 1;
+	};
+	class CTI_VEHICLES_FUEL_CONSUMPTION {
+		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_VEHICLES_LVOSS {
+		title = "VEHICLES: Enable LVOSS";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enable LVOSS"};
+		default = 1;
+	};
+	class CTI_VEHICLES_ERA {
+		title = "VEHICLES: Enable ERA/ARENA";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enable ERA/ARENA"};
+		default = 1;
+	};	
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
-		title = "UNITS: Vehicles Reycling Delay";
+		title = "VEHICLES: Vehicles Recycling Delay";
 		values[] = {60,120,180,240,300,600,1200,1800,2400,3000,3600};
 		texts[] = {"1 Minute","2 Minutes","3 Minutes","4 Minutes","5 Minutes","10 Minutes","20 Minutes","30 Minutes","40 Minutes","50 Minutes","1 Hour"};
 		default = 1200;
@@ -339,7 +357,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = -1;
+		default = 1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
