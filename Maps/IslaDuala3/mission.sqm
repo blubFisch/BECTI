@@ -282,7 +282,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Numbo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Numbo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=21;
@@ -327,7 +327,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kwako"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kwako";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=22;
@@ -372,7 +372,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kirabo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kirabo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=23;
@@ -417,7 +417,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Larenga"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Larenga";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=24;
@@ -460,7 +460,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mawimbela"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mawimbela";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=25;
@@ -505,7 +505,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lina Prison"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="LinaPrison";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=26;
@@ -550,7 +550,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kinsella"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kinsella";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=27;
@@ -595,7 +595,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camara"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Camara";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=28;
@@ -640,7 +640,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cainna Wind"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="CainnaWind";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=29;
@@ -685,7 +685,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ramons Plantation"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="RamonsPlantation";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=30;
@@ -1879,7 +1879,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Simbala"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Simbala";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=102;
@@ -1924,7 +1924,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kimbaka"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kimbaka";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=103;
@@ -1968,7 +1968,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Campolongo"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Campolongo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=104;
@@ -3795,7 +3795,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Kinsella"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoKinsella";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=183;
@@ -4211,7 +4211,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vixena Factory"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="VixenaFactory";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=206;
@@ -4504,7 +4504,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Fishala"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Fishala";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=214;
@@ -4839,7 +4839,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Orellan"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Orellan";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=225;
@@ -5050,7 +5050,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kingala"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kingala";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 			};
 			id=230;
 			type="FlagPole_F";
@@ -5280,7 +5280,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Refugee Camp"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="RefugeeCamp";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=237;
@@ -5449,7 +5449,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Tasmera"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoTasmera";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=241;
@@ -5829,7 +5829,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Boona"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Boona";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=260;
@@ -6084,7 +6084,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lukasa"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lukasa";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=267;
@@ -6254,7 +6254,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Imalia"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Imalia";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=272;
@@ -6550,7 +6550,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ursana"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ursana";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=282;
@@ -6929,7 +6929,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Djolan"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Djolan";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=294;
@@ -7182,7 +7182,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""De Boor"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="DeBoor";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=303;
@@ -7479,7 +7479,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Katakabi"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Katakabi";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=312;
@@ -7691,7 +7691,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vestinga"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Vestinga";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=321;
@@ -7862,7 +7862,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Spookdorp"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Spookdorp";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=326;
@@ -8158,7 +8158,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Swonto"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoSwonto";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=336;
@@ -8370,7 +8370,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Caspal"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Caspal";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=342;
@@ -8707,7 +8707,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Forteza"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Forteza";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=352;
@@ -8876,7 +8876,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Minesini"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Minesini";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=356;
@@ -9129,7 +9129,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Porto Hazena"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="PortoHazena";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=364;
@@ -9383,7 +9383,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ashlake Resort"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="AshlakeResort";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=371;
@@ -9552,7 +9552,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pinley"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pinley";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=376;
@@ -9721,7 +9721,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Tarisol"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Tarisol";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=383;
@@ -9974,7 +9974,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ravane"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ravane";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=390;
@@ -10143,7 +10143,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kalimbo Army Base"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="KalimboArmybase";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=395;
@@ -10439,7 +10439,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""DualaFireHQ"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="DualaFireHQ";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=403;
@@ -10611,7 +10611,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Swonto"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Swonto";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=409;
@@ -10739,7 +10739,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mochiwo"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mochiwo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=412;
@@ -10909,7 +10909,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Polani"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Polani";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=416;
@@ -11121,7 +11121,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kiera Yanga"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="KieraYanga";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=424;
@@ -11334,7 +11334,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mangomak"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mangomak";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=430;
@@ -11589,7 +11589,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chaba"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chaba";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=437;
@@ -11760,7 +11760,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kaalom"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kaalom";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=442;
@@ -11930,7 +11930,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""MacHida"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="MacHida";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=447;
@@ -12143,7 +12143,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camp Bokoro"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="CampBokoro";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=453;
@@ -12314,7 +12314,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Xibo"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Xibo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=459;
@@ -12525,7 +12525,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Zeelor"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Zeelor";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=465;
@@ -12737,7 +12737,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Canto"", resistance, 15, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Canto";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=474;
@@ -12991,7 +12991,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Molatia"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoMolatia";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=482;
@@ -13202,7 +13202,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cova"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Cova";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=488;
@@ -13373,7 +13373,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Maluri"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Maluri";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=493;
@@ -13543,7 +13543,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pumado"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pumado";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=498;
@@ -13756,7 +13756,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Casinda"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Casinda";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=504;
@@ -13927,7 +13927,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Engor"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Engor";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=509;
@@ -14180,7 +14180,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bolabongo"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bolabongo";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=516;
@@ -14476,7 +14476,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Naromaru"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Naromaru";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=524;
@@ -14686,7 +14686,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Papunya"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Papunya";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=530;
@@ -14856,7 +14856,7 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bobadah"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bobadah";
-				createAsSimpleObject=1;
+				createAsSimpleObject=0;
 				disableSimulation=1;
 			};
 			id=535;
