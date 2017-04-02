@@ -39,7 +39,7 @@ if (CTI_WEATHER_FOG_DECAY == -1) then { _fog_decay_setting = random (0.04) };
 if (CTI_WEATHER_FOG_DECAY >= 0) then { _fog_decay_setting = CTI_WEATHER_FOG_DECAY};
 if (CTI_WEATHER_FOG_DECAY_COEF == 0) then {_fog_variance_coef_setting = 1};
 if (CTI_WEATHER_FOG_DECAY_COEF > 0) then {_fog_variance_coef_setting = CTI_WEATHER_FOG_DECAY_COEF};
-if (CTI_WEATHER_FOG_ALT == -1) then { _fog_alt_setting = random(10) };
+if (CTI_WEATHER_FOG_ALT == -1) then { _fog_alt_setting = random [-5000,0,5000] };
 if (CTI_WEATHER_FOG_ALT >= 0) then { _fog_alt_setting = CTI_WEATHER_FOG_ALT};
 if (CTI_WEATHER_FOG_ALT_COEF == 0) then {_fog_alt_variance_coef_setting = 1};
 if (CTI_WEATHER_FOG_ALT_COEF > 0) then {_fog_alt_variance_coef_setting = CTI_WEATHER_FOG_ALT_COEF};
@@ -174,7 +174,7 @@ while {!CTI_GameOver} do {
 			if (CTI_WEATHER_FOG_COEF == -1) then {_fog_variance_coef_setting = random (0.99)};
 			if (CTI_WEATHER_FOG_DECAY == -1) then { _fog_decay_setting = random 1 };
 			if (CTI_WEATHER_FOG_DECAY_COEF == -1) then {_fog_decay_variance_coef_setting = random (0.99)};
-			if (CTI_WEATHER_FOG_ALT == -1) then { _fog_alt_setting = random 1 };
+			if (CTI_WEATHER_FOG_ALT == -1) then { _fog_alt_setting = random [-5000,0,5000] };
 			if (CTI_WEATHER_FOG_ALT_COEF == -1) then {_fog_alt_variance_coef_setting = random (0.99)};
 			if (CTI_WEATHER_WIND == -1) then { _wind_setting = random 1 };
 			if (CTI_WEATHER_WIND_COEF == -1) then {_wind_variance_coef_setting = random (0.99)};
