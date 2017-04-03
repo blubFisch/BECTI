@@ -481,7 +481,7 @@ CTI_Coin_OnBuildingSold = {
 	if (call CTI_CL_FNC_IsPlayerCommander) then {
 		_list = [];
 		_position = screenToWorld [0.5,0.5];
-		{if ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo CTI_P_SideID) then {_list pushBack _x}} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 15]);
+		{if ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo CTI_P_SideID) then {_list pushBack _x}} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 10]);
 		
 		if (count _list > 0) then {
 			_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;

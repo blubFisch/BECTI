@@ -72,6 +72,8 @@ with missionNamespace do {
 	CTI_COIN_COLOR_VALID_UI = [0.259,0.713,1,0.3];
 	CTI_COIN_COLOR_OUTOFRANGE = "#bababa";
 	CTI_COIN_COLOR_OUTOFRANGE_UI = [1,1,1,0.1];
+	CTI_COIN_COLOR_SELL = "#30fd07";
+	CTI_COIN_COLOR_SELL_UI = [0.188,0.992,0.027,1];
 
 	//--- Create the construction camera
 	CTI_COIN_CAMCONSTRUCT = "camconstruct" camCreate [_startPos select 0, _startPos select 1, 15];
@@ -121,6 +123,47 @@ with missionNamespace do {
 		
 		//--- Abort if the source is destroyed
 		if !(alive CTI_COIN_ORIGIN) exitWith {};
+		
+		//--- SELL HELPER
+		if (call CTI_CL_FNC_IsPlayerCommander) then {
+			_list = [];
+			_position = screenToWorld [0.5,0.5];
+			{
+				if ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo CTI_P_SideID) then {_list pushBack _x};
+			} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 10]);
+			_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
+			if (_position distance _nearest < 10) then {
+				_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
+				_nearest_var = missionNamespace getVariable [format["CTI_%1_%2", CTI_P_SideJoined, typeOf _nearest], []];
+				_nearest_title = _nearest_var select 0;
+				switch (typeName _nearest_title) do {
+					case "STRING": { _nearest_title = _nearest_title; };
+					case "ARRAY": {
+						_nearest_title = _nearest_title select 0;
+					};
+				};
+				_nearest_refund = round((_nearest_var select 2) * CTI_BASE_DEFENSES_SOLD_COEF);
+				//update bottom ui with text
+				_sellText = format ["<t color='#42b6ff' shadow='2' size='1' align='center' valign='top'>%1 - <t color='#30fd07'>$%2</t> | Press O to Sell</t>", _nearest_title, _nearest_refund];
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _sellText);
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlCommit 0;
+				//--- Reset the selector to default
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlSetTextColor CTI_COIN_COLOR_SELL_UI;
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlCommit 0;
+			} else {
+				//--- Update the defense team count
+				_defense_team = CTI_P_SideLogic getVariable "cti_defensive_team";
+				_defense_count = count(_defense_team call CTI_CO_FNC_GetLiveUnits);
+				_defensecountText = format ["<t color='#42b6ff' shadow='2' size='1' align='right' valign='top'>Defensive Team Count: %1 / %2</t>", _defense_count, CTI_BASE_DEFENSES_AUTO_LIMIT];
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _defensecountText);
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlCommit 0;
+				//--- Reset the selector to default
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlSetTextColor CTI_COIN_COLOR_OUTOFRANGE_UI;
+				((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlCommit 0;
+			
+			};
+		};
+		//END SELL
 		
 		//--- Parameters are set, a preview is being created or is being moved
 		if !(isNil 'CTI_COIN_PARAM') then {
@@ -240,15 +283,16 @@ with missionNamespace do {
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112224) ctrlCommit 0;
 		};
 		
+		//NOW SET ABOVE WITHIN SELL HELPER
 		//--- Update the defense team count
-		_defense_team = CTI_P_SideLogic getVariable "cti_defensive_team";
+		/*_defense_team = CTI_P_SideLogic getVariable "cti_defensive_team";
 		_defense_count = count(_defense_team call CTI_CO_FNC_GetLiveUnits);
 		if (!(_last_defense_count isEqualTo _defense_count) || commandingMenu != _last_menu) then {
 			_defensecountText = format ["<t color='#42b6ff' shadow='2' size='1' align='right' valign='top'>Defensive Team Count: %1 / %2</t>", _defense_count, CTI_BASE_DEFENSES_AUTO_LIMIT];
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _defensecountText);
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlCommit 0;
 			_last_defense_count = _defense_count;
-		};
+		};*/
 		
 		//--- Update the controls if the menu differs from the last
 		if (commandingMenu != _last_menu) then {
