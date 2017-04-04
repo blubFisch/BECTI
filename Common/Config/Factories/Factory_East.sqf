@@ -723,11 +723,11 @@ _u pushBack "O_APC_Wheeled_02_rcws_F";
 
 if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
-	_u pushBack 'O_MRAP_02_gmg_F';	
-	_u pushBack 'O_MRAP_02_hmg_F';			
+	/*_u pushBack 'O_MRAP_02_gmg_F';	
+	_u pushBack 'O_MRAP_02_hmg_F';*/			
 	_u pushBack 'O_Truck_02_transport_F';
 /*	_u pushBack 'O_Truck_03_transport_F';*/
-	_u pushBack 'O_MRAP_02_F';
+	/*_u pushBack 'O_MRAP_02_F';*/
 /*	_u pushBack 'O_MRAP_02_hmg_F';
 	_u pushBack 'O_MRAP_02_gmg_F';*/
 /*	_u pushBack 'O_UGV_01_F';

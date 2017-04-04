@@ -135,7 +135,7 @@ class Params {
 		title = "TOWNS: Occupation Skill level";
 		values[] = {20,30,40,50,60,70,80,90,100};
 		texts[] = {"20","30","40","50","60","70","80","90","100"};
-		default = 80;
+		default = 60;
 	};
 	class CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Squad Count";
@@ -183,7 +183,7 @@ class Params {
 		title = "TOWNS: Occupation Squad Queue Ratio";
 		values[] = {0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
-		default = 20;
+		default = 40;
 	};
 	class CTI_TOWNS_RESISTANCE_LIMIT_AI {
 		title = "TOWNS: Resistance Soft max AI Limit";
@@ -195,7 +195,7 @@ class Params {
 		title = "TOWNS: Resistance Squad Queue Ratio";
 		values[] = {0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"0","10","20","30","40","50","60","70","80","90","100"};
-		default = 20;
+		default = 40;
 	};
 	class CTI_TOWNS_CAPTURE_MODE {
 		title = "TOWNS: CAPTURE MODE";
@@ -285,31 +285,31 @@ class Params {
 		title = "UNITS: Aircraft FFAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_DAR {
 		title = "UNITS: Aircraft DAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_AA {
 		title = "UNITS: Aircraft AA Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_AT {
 		title = "UNITS: Aircraft AT Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_VEHICLES_AIR_CM {
 		title = "UNITS: Aircraft Countermeasures";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
+		default = 1;
 	};
 	class CTI_MARKERS_INFANTRY {
 		title = "UNITS: Show Map Infantry";

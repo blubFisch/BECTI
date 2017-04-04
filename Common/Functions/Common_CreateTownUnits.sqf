@@ -30,34 +30,20 @@ if (_ratio < 1) then {_ratio = 1};
 //--- Ones server get filled we decrease the ammount.
 
 if (CTI_TOWNS_DYNAMIC_FPS_MODE > 0) then {
-	_fps = diag_fpsMin;
+	_fps = diag_fps;
 	
-	//--- Only proc if the overall FPS are below 48
-	if (_fps < 48) then {
+	//--- Only proc if the overall FPS are below 40
+	if (_fps <= 40) then {
 		_coef = switch (true) do {
-			case (_fps >= 46): {4};
-			case (_fps >= 44): {3};
-			case (_fps >= 42): {2};
-			case (_fps >= 40): {1};
-			case (_fps >= 38): {.95};
-			case (_fps >= 36): {.90};
-			case (_fps >= 34): {.85};
-			case (_fps >= 32): {.80};
-			case (_fps >= 30): {.75};
-			case (_fps >= 28): {.70};
-			case (_fps >= 26): {.65};
-			case (_fps >= 24): {.60};
-			case (_fps >= 21): {.55};
-			case (_fps >= 19): {.50};
-			case (_fps >= 17): {.45};
-			case (_fps >= 15): {.40};
-			case (_fps >= 13): {.35};
-			case (_fps >= 11): {.30};
-			default {1};
+			case (_fps > 40): {.85};
+			case (_fps > 35): {.70};
+			case (_fps > 30): {.50};
+			case (_fps > 25): {.25};
+			case (_fps > 20): {.20};
+			default {.20};
 		};
 		
 		_active_units =ceil(_active_units * _coef);
-		_ratio = ceil(_ratio * _coef);
 	};	
 };
 

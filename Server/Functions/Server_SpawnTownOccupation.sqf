@@ -605,26 +605,24 @@ _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
 		if (count _camps > 0 && random 100 > 30) then {
 			_camp_index = floor(random count _camps);
 			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS, _tries] call CTI_CO_FNC_GetRandomPosition;
-			_position = [_position, 30, "meadow", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+			_position = [_position, 30, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
 			_camps deleteAt _camp_index;
 		} else {
-			_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, _tries] call CTI_CO_FNC_GetRandomPosition;
-			_position = [_position, 80, "meadow", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+			//_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, _tries] call CTI_CO_FNC_GetRandomPosition;
+			_position = [ASLToAGL getPosASL _town, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
 		};
 	} else {
 		_position = [[ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE/1.5, 0] call CTI_CO_FNC_GetRandomPosition, 200, "sea", 8, 3, 1, true] call CTI_CO_FNC_GetRandomBestPlaces;
-		/*_places_water = [];
-		_places = selectBestPlaces [([ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, 0] call CTI_CO_FNC_GetRandomPosition), 200, "(1 * sea) * (1 - meadow) * (1 - hills) * (1 - houses) * (1 - forest) * (1 - trees)", 8, 3]; //--- 0 to 1. 1 is full sea.
-		{if ((_x select 1) == 1) then {_places_water pushBack (_x select 0)}} forEach _places;
-		if (count _places_water > 0) then { //--- Use safe water spot
-			_position = _places_water select floor(random count _places_water);
-		} else { //--- Failsafe
-			_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, 0] call CTI_CO_FNC_GetRandomPosition;
-		};*/
+
 	};
 
 	_positions pushBack _position;
-	
+	/*//--- Paint Spawning Positions	
+	_marker = createMarker [(format ["safepos%1", ([0, 350] call BIS_fnc_randomInt)]), _position];
+	_marker setMarkerShape "ICON";
+	_marker setMarkerType "hd_dot";
+	_marker setMarkerColor "ColorRed";*/
+
 	_group = createGroup _side;
 	_group setGroupIdGlobal [format["(%1) %2", _town, _group]];
 	_groups pushBack _group;

@@ -1,4 +1,10 @@
-﻿Upcoming release
+﻿1.06.4
+Removed: Ifrit/Hunter
+Removed: kord gun/tripod bag from opfor
+Added: Podnos static pod to blufor
+Added: Remaining rpg ammo types
+Tweaked: Nuke range incrased to 1km
+Added: Gear menu Cam
 
 1.06.3
 Tweaked: Blufor titan ammo at correct tiers
@@ -16,7 +22,6 @@ Fixed: Floating Camp in takistan
 Fixed: Some defence structure ruins not disappearing on death
 Fixed: Town occupation not spawning
 Fixed: Base defence will not respawn after it dies
-Disabled: Air CM/Rocket upgrades
 
 1.06.2
 Fixed: Rearm on some aircraft giving incorrect loadouts

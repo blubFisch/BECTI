@@ -375,8 +375,12 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 6) then {
 if (CTI_TOWNS_OCCUPATION_RESISTANCE == 7) then { 
 //--- Syndikat TOWN OCCUPATION - Tanoa Forces
 	//--- Infantry
-	GUER_SOLDIER = "I_G_Soldier_F";
-	GUER_SOLDIER_AA = "I_Soldier_AA_F";
+	GUER_SOLDIER = "I_C_Soldier_Bandit_7_F";
+	GUER_SOLDIER_AR = "I_C_Soldier_Bandit_3_F";
+    GUER_SOLDIER_LAT = "I_C_Soldier_Bandit_2_F";
+    GUER_SOLDIER_GL = "I_C_Soldier_Bandit_6_F";
+    GUER_SOLDIER_MEDIC = "I_C_Soldier_Bandit_1_F";
+	/*GUER_SOLDIER_AA = "I_G_Soldier_AA_F";
 	GUER_SOLDIER_AR = "I_G_Soldier_AR_F";
 	GUER_SOLDIER_AT = "I_Soldier_AT_F";
 	GUER_SOLDIER_CREW = "I_crew_F";
@@ -390,7 +394,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 7) then {
 	GUER_SOLDIER_PILOT = "I_G_officer_F";
 	GUER_SOLDIER_SNIPER = "I_G_Soldier_M_F";
 	GUER_SOLDIER_TEAMLEADER = "I_G_Soldier_TL_F";
-	GUER_SOLDIER_SQUADLEADER = "I_G_Soldier_SL_F";
+	GUER_SOLDIER_SQUADLEADER = "I_G_Soldier_SL_F";*/
 	//--- Naval Infantry
 	GUER_SOLDIER_NAVAL_INFANTRY = "I_diver_F";
 	GUER_SOLDIER_NAVAL_SQUADLEADER = "I_diver_TL_F";
@@ -535,7 +539,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 8) then {
 if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then { 
 //--- RHS GREF RESISTANCE
 	//--- Infantry
-	GUER_SOLDIER = "rhsgref_cdf_reg_rifleman";
+	/*GUER_SOLDIER = "rhsgref_cdf_reg_rifleman";
 	GUER_SOLDIER_AA = "rhsgref_cdf_reg_specialist_aa";
 	GUER_SOLDIER_AR = "rhsgref_cdf_reg_machinegunner";
 	GUER_SOLDIER_AT = "rhsgref_cdf_reg_grenadier_rpg";
@@ -550,30 +554,46 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then {
 	GUER_SOLDIER_PILOT = "rhsgref_cdf_air_pilot";
 	GUER_SOLDIER_SNIPER = "rhsgref_cdf_reg_marksman";
 	GUER_SOLDIER_TEAMLEADER = "rhsgref_cdf_reg_squadleader";
-	GUER_SOLDIER_SQUADLEADER = "rhsgref_cdf_reg_squadleader";
+	GUER_SOLDIER_SQUADLEADER = "rhsgref_cdf_reg_squadleader";*/
+	GUER_SOLDIER = "rhsgref_nat_reg_rifleman_akms";
+	GUER_SOLDIER_AA = "rhsgref_nat_specialist_aa";
+	GUER_SOLDIER_AR = "rhsgref_nat_machinegunner";
+	GUER_SOLDIER_AT = "rhsgref_nat_grenadier_rpg";
+	GUER_SOLDIER_CREW = "rhsgref_nat_crew";
+	GUER_SOLDIER_LAT = "rhsgref_nat_grenadier_rpg";
+	GUER_SOLDIER_HAT = "rhsgref_nat_grenadier_rpg";
+	GUER_SOLDIER_ENGINEER = "rhsgref_nat_sabeteur";
+	GUER_SOLDIER_EXP = "rhsgref_nat_sabeteur";
+	GUER_SOLDIER_GL = "rhsgref_nat_grenadier";
+	GUER_SOLDIER_MEDIC = "rhsgref_nat_medic";
+	GUER_SOLDIER_MG = "rhsgref_nat_machinegunner";
+	GUER_SOLDIER_PILOT = "rhsgref_cdf_air_pilot";
+	GUER_SOLDIER_SNIPER = "rhsgref_nat_scout";
+	GUER_SOLDIER_TEAMLEADER = "rhsgref_nat_commander";
+	GUER_SOLDIER_SQUADLEADER = "rhsgref_nat_commander";
 	//--- Naval Infantry
 	GUER_SOLDIER_NAVAL_INFANTRY = "I_diver_F";
 	GUER_SOLDIER_NAVAL_SQUADLEADER = "I_diver_TL_F";
 	//--- Light Vehicles
-	GUER_VEHICLE_LIGHT1 = ["rhsgref_cdf_reg_uaz_dshkm"];
-	GUER_VEHICLE_LIGHT2 = ["rhsgref_cdf_reg_uaz_ags"];
-	GUER_VEHICLE_LIGHT3 = ["rhsgref_BRDM2"];
-	GUER_VEHICLE_LIGHT4 = ["rhsgref_cdf_btr70"];
-	GUER_VEHICLE_LIGHT5 = ["rhsgref_BRDM2_ATGM"];
-	GUER_VEHICLE_LIGHT6 = ["rhsgref_cdf_bmd1"];
-	GUER_VEHICLE_LIGHT7 = ["rhsgref_cdf_bmd2"];
+	GUER_VEHICLE_LIGHT1 = ["rhsgref_nat_uaz_dshkm"];
+	GUER_VEHICLE_LIGHT2 = ["rhsgref_nat_uaz_ags"];
+	GUER_VEHICLE_LIGHT3 = ["rhsgref_nat_uaz_spg9"];
+	GUER_VEHICLE_LIGHT4 = ["rhsgref_ins_g_btr60"];
+	GUER_VEHICLE_LIGHT5 = ["rhsgref_BRDM2_ins_g"];
+	GUER_VEHICLE_LIGHT6 = ["rhsgref_ins_g_ural_Zu23"];
+	GUER_VEHICLE_LIGHT7 = ["rhsgref_ins_g_btr70"];
 	//--- APCs
-	GUER_VEHICLE_APC1 = ["rhsgref_cdf_bmp1"];
-	GUER_VEHICLE_APC2 = ["rhsgref_cdf_bmp2e"];
-	GUER_VEHICLE_APC3 = ["rhsgref_cdf_bmp2d"];
+	GUER_VEHICLE_APC1 = ["rhsgref_ins_g_bmd1"];
+	GUER_VEHICLE_APC2 = ["rhsgref_ins_g_bmd1p"];
+	GUER_VEHICLE_APC3 = ["rhsgref_ins_g_bmd2"];
 	//--- Tanks
-	GUER_VEHICLE_ARMORED1 = ["rhsgref_cdf_t72ba_tv"];	
-	GUER_VEHICLE_ARMORED2 = ["rhsgref_cdf_t72bb_tv"];
-	GUER_VEHICLE_ARMORED3 = ["rhsgref_cdf_t80bv_tv"];
+	GUER_VEHICLE_ARMORED1 = ["rhsgref_ins_g__t72ba"];	
+	GUER_VEHICLE_ARMORED2 = ["rhsgref_ins_g__t72ba"];
+	GUER_VEHICLE_ARMORED3 = ["rhsgref_ins_g__t72ba"];
 	//--- AA Vehicles
-	GUER_VEHICLE_AA1 = ["rhsgref_cdf_ural_Zu23"];
-	GUER_VEHICLE_AA2 = ["rhsgref_cdf_gaz66_zu23"];
-	GUER_VEHICLE_AA3 = ["rhsgref_cdf_zsu234"];
+	GUER_VEHICLE_AA1 = ["rhsgref_ins_g_ural_Zu23"];
+	GUER_VEHICLE_AA2 = ["rhsgref_ins_g_gaz66_zu23"];
+	GUER_VEHICLE_AA3 = ["rhsgref_ins_g_zsu234"];
 	//--- Air
 	GUER_AIR_HELI1 = ["rhsgref_cdf_Mi24D"];
 	GUER_AIR_HELI2 = ["rhsgref_cdf_reg_Mi17Sh_UPK"];

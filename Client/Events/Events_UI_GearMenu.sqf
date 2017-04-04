@@ -5,6 +5,16 @@ switch (_action) do {
 		//-- Load the list.
 		call CTI_UI_Gear_LoadAvailableUnits;
 		
+		//-- Start Gear Cam		
+		CTI_Gear_cam_pos1 = player modelToWorld [0.3,0,1];
+		CTI_Gear_cam = "camera" camCreate CTI_Gear_cam_pos1;
+		CTI_Gear_cam cameraEffect ["INTERNAL", "BACK"];
+		CTI_Gear_cam_pos2 = player modelToWorld [-0.4,1.9,1.6];
+		CTI_Gear_cam camSetPos CTI_Gear_cam_pos2; 
+		CTI_Gear_cam camSetDir (CTI_Gear_cam_pos2 vectorFromTo CTI_Gear_cam_pos1);
+		CTI_Gear_cam camCommit 0.75;
+		//End Gear Cam
+		
 		execVM "Client\GUI\GUI_GearMenu.sqf";
 		
 		//--- Handle drag stop //todo check the getVariable modification.
@@ -21,6 +31,12 @@ switch (_action) do {
 		ctrlEnable [70029, false];
 	};
     };
+	case "onUnload": {
+		// Cleanup Gear Cam
+		CTI_Gear_cam cameraEffect["TERMINATE","BACK"];
+		camDestroy CTI_Gear_cam;
+		showCinemaBorder true;
+	};
 	case "onShoppingTabClicked": { //--- A shopping tab was clicked upon
 		//--- New tab
 		_changedto = _this select 1;

@@ -717,9 +717,9 @@ if (CTI_APEX_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 1) then {
 		//NATO Tropic APEX
-		_u pushBack "OFPS_HUNTER";
+/*		_u pushBack "OFPS_HUNTER";
 		_u pushBack "OFPS_HUNTER_HMG";
-		_u pushBack "OFPS_HUNTER_GMG";
+		_u pushBack "OFPS_HUNTER_GMG";*/
 		_u pushBack 'B_T_LSV_01_unarmed_F';
 		_u pushBack 'B_T_LSV_01_armed_F';
 		

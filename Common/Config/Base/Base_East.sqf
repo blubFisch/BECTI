@@ -5,7 +5,7 @@ if (CTI_FACTION_EAST == 0) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//RHS
 	}
 };
 if (CTI_FACTION_EAST == 1) then {
@@ -14,7 +14,7 @@ if (CTI_FACTION_EAST == 1) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//RHS
 	}
 };
 if (CTI_FACTION_EAST == 2) then {
@@ -23,7 +23,7 @@ if (CTI_FACTION_EAST == 2) then {
 		case 0: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Vanilla
 		case 1: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_T_APC_Wheeled_02_rcws_ghex_F"];};//Apex
 		case 2: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "CUP_O_BMP_HQ_RU"];};//CUP
-		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "rhs_btr80_vmf"];};//RHS
+		case 3: {missionNamespace setVariable [format["CTI_%1_HQ", _side], "O_APC_Wheeled_02_rcws_F"];};//RHS
 	}
 };
 
@@ -1106,7 +1106,7 @@ _specials = [];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1.5]];
 	};*/
 	
-	_headers pushBack 		"Mortar";
+	/*_headers pushBack 		"Mortar";
 	_classes pushBack 		"O_Mortar_01_F";
 	_prices pushBack 		5000;
 	_placements pushBack 	[180, 5];
@@ -1114,7 +1114,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		3;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 	
 	if (CTI_CUP_ADDON > 0) then {
 
@@ -1214,7 +1214,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		5000;
+	_prices pushBack 		7500;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];

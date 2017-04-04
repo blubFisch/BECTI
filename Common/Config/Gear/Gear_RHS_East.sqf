@@ -1037,13 +1037,13 @@ _i pushBack "RHS_DShkM_TripodLow_Bag";
 _u pushBack 2;
 _p pushBack 500;
 
-_i pushBack "RHS_Kord_Tripod_Bag";
+/*_i pushBack "RHS_Kord_Tripod_Bag";
 _u pushBack 2;
 _p pushBack 500;
 
 _i pushBack "RHS_Kord_Gun_Bag";
 _u pushBack 3;
-_p pushBack 120;
+_p pushBack 120;*/
 
 _i pushBack "RHS_NSV_Tripod_Bag";
 _u pushBack 3;
@@ -1921,21 +1921,21 @@ _i pushBack "rhs_mag_zarya2";
 _u pushBack 0;
 _p pushBack 50;
 
-/*_i pushBack "rhs_rpg7_OG7V_mag";
+_i pushBack "rhs_rpg7_OG7V_mag";
 _u pushBack 1;
-_p pushBack 200;*/
-/*
+_p pushBack 200;
+
 _i pushBack "rhs_rpg7_PG7V_mag";
 _u pushBack 0;
 _p pushBack 50;
-*/
+
 _i pushBack "rhs_rpg7_PG7VL_mag";
 _u pushBack 1;
 _p pushBack 350;
 
-/*_i pushBack "rhs_rpg7_PG7VM_mag";
+_i pushBack "rhs_rpg7_PG7VM_mag";
 _u pushBack 1;
-_p pushBack 350;*/
+_p pushBack 350;
 
 _i pushBack "rhs_rpg7_PG7VR_mag";
 _u pushBack 1;
