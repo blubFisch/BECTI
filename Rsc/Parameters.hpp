@@ -483,7 +483,7 @@ class Params {
 		title = "WEATHER: Fog value";
 		values[] = {-1,0,10,20,30,40,50,60,70,80,90,100};
 		texts[] = {"Random","Clear","10","20","30","40","50","60","70","80","90","MAX"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_COEF {
 		title = "WEATHER: Fog Variance";
@@ -495,25 +495,25 @@ class Params {
 		title = "WEATHER: Fog decay level";
 		values[] = {-1,0,0.02,0.04,0.06,0.08,0.1,0.15,0.20,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","0.02","0.04","0.06","0.08","0.1","0.15","0.20","0.25","0.5","0.75","1"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_DECAY_COEF {
 		title = "WEATHER: Fog decay Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_ALT {
 		title = "WEATHER: Fog altitude";
 		values[] = {-1,0,1,5,25,50,100,200,300,400,500,600,700,800,900,1000};
 		texts[] = {"Random","0m","1m","5m","25m","50m","100m","200m","300m","400m","500m","600m","700m","800m","900m","1km"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_FOG_ALT_COEF {
 		title = "WEATHER: Fog altitude Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_WIND {
 		title = "WEATHER: Wind";

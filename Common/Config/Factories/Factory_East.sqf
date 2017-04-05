@@ -748,9 +748,9 @@ if (CTI_APEX_ADDON > 0) then {
 	//Universal APEX
     _u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
     _u pushBack 'O_T_Truck_03_medical_ghex_F';
-    _u pushBack 'O_T_MRAP_02_gmg_ghex_F';
+   /* _u pushBack 'O_T_MRAP_02_gmg_ghex_F';
     _u pushBack 'O_T_MRAP_02_hmg_ghex_F';
-    _u pushBack 'O_T_MRAP_02_ghex_F';
+    _u pushBack 'O_T_MRAP_02_ghex_F';*/
 
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -764,11 +764,11 @@ if (CTI_APEX_ADDON > 0) then {
 	_u pushBack 'O_T_Quadbike_01_ghex_F';
 	_u pushBack 'O_T_Truck_03_transport_ghex_F';
 	_u pushBack 'O_T_Truck_03_covered_ghex_F';
-	_u pushBack 'O_T_MRAP_02_ghex_F';
+	/*_u pushBack 'O_T_MRAP_02_ghex_F';
 	_u pushBack 'O_T_MRAP_02_gmg_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
-	_u pushBack 'O_T_UGV_01_ghex_F';
-	_u pushBack 'O_T_UGV_01_rcws_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
+	/*_u pushBack 'O_T_UGV_01_ghex_F';
+	_u pushBack 'O_T_UGV_01_rcws_ghex_F';*/
 	_u pushBack 'O_T_Truck_03_medical_ghex_F';
 		
 	};
@@ -784,7 +784,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_Dingo_GL_GER_Wdl';		
 	_u pushBack 'CUP_O_Ural_RU';			
 	_u pushBack 'CUP_O_BRDM2_ATGM_RUS';  
-        _u pushBack 'CUP_O_BTR60_CSAT';   		
+    _u pushBack 'CUP_O_BTR60_CSAT';   		
 	_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';		
 	_u pushBack 'CUP_O_UAZ_METIS_RU';		
 	_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';		
@@ -795,7 +795,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_UAZ_AGS30_RU';		
 	_u pushBack 'CUP_I_SUV_Armored_ION';  
 	_u pushBack 'CUP_B_UAZ_Unarmed_CDF';		
-        _u pushBack 'CUP_O_Ural_Refuel_RU';		
+    _u pushBack 'CUP_O_Ural_Refuel_RU';		
 	_u pushBack 'CUP_O_BTR90_RU';	
 /*	_u pushBack 'CUP_O_LR_SPG9_TKA';*/
 	_u pushBack 'CUP_M1030';
@@ -1621,8 +1621,8 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	_u pushBack 'O_Soldier_F';
 	_u pushBack 'O_crew_F';
-	_u pushBack 'O_MRAP_02_F';
-	_u pushBack 'O_MRAP_02_hmg_F';
+/*	_u pushBack 'O_MRAP_02_F';
+	_u pushBack 'O_MRAP_02_hmg_F';*/
 
 	
 };
@@ -1653,8 +1653,8 @@ if (CTI_APEX_ADDON > 0) then {
 	_u pushBack 'O_T_Soldier_F';
 	_u pushBack 'O_T_crew_F';
 	_u pushBack 'O_T_Truck_03_transport_ghex_F';
-	_u pushBack 'O_T_MRAP_02_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+/*	_u pushBack 'O_T_MRAP_02_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
 		
 	};
 	if (CTI_FACTION_EAST == 2) then {
@@ -1688,9 +1688,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	//Universal OFPS
 	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-	_u pushBack 'OFPS_UAZ';
+	/*_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
-	_u pushBack 'OFPS_UAZ_AGS30';
+	_u pushBack 'OFPS_UAZ_AGS30';*/
 	//_u pushBack 'usaf_police_car2';
 	//_u pushBack 'usaf_police_offroad';
 	
@@ -1752,8 +1752,8 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	_u pushBack 'O_Soldier_F';
 	_u pushBack 'O_crew_F';
-	_u pushBack 'O_MRAP_02_F';
-	_u pushBack 'O_MRAP_02_hmg_F';
+	/*_u pushBack 'O_MRAP_02_F';
+	_u pushBack 'O_MRAP_02_hmg_F';*/
 };
 if (CTI_FACTION_EAST == 1) then {
 	//CSAT Tropic Vanilla
@@ -1780,9 +1780,9 @@ if (CTI_APEX_ADDON > 0) then {
 		//CSAT Tropic APEX
 	_u pushBack 'O_T_Soldier_F';
 	_u pushBack 'O_T_crew_F';
-	_u pushBack 'O_T_Truck_03_transport_ghex_F';
+/*	_u pushBack 'O_T_Truck_03_transport_ghex_F';
 	_u pushBack 'O_T_MRAP_02_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
 		
 	};
 	if (CTI_FACTION_EAST == 2) then {
@@ -1812,9 +1812,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	//Universal OFPS
 	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-	_u pushBack 'OFPS_UAZ';
+	/*_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
-	_u pushBack 'OFPS_UAZ_AGS30';
+	_u pushBack 'OFPS_UAZ_AGS30';*/
 	//_u pushBack 'usaf_police_car2';
 	//_u pushBack 'usaf_police_offroad';
 	
