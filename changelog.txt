@@ -1,4 +1,11 @@
-﻿1.06.4
+﻿1.06.5
+Removed: Ifrit/Hunter ones again :)
+Fixed: Resistance bounty
+Added: Base respawn inside buildings
+Added: GUI for selling in build menu
+Disabled: Fog
+
+1.06.4
 Removed: Ifrit/Hunter
 Removed: kord gun/tripod bag from opfor
 Added: Podnos static pod to blufor
