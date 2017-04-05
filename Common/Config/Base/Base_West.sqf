@@ -91,7 +91,7 @@ _times pushBack			0;
 _placements pushBack 	[180, 15, false];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 9]];
 _conditions pushBack 	(compile format["!(%1 call CTI_CO_FNC_IsHQDeployed)", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3904.12,6981.64,1.19565]];
 
 _headers pushBack 		[CTI_CONTROLCENTER, "Control Center", "CC"];
 _classes pushBack 		["Land_Research_HQ_F", "Land_Research_HQ_ruins_F", ["Land_Research_HQ_F"]];							  
@@ -100,7 +100,7 @@ _times pushBack 		90;
 _placements pushBack 	[90, 25, false];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4.3]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3978.2,6875.4,0.786194],[3988.04,6879.7,0.887917],[3991.47,6872.75,3.98753],[3981.89,6868.68,2.29331],[3991.4,6872.58,5.88554],[3985.98,6879.72,2.43553],[3979.73,6876.48,2.3094],[3979.86,6871.08,3.7733],[3981.78,6869.04,4.38641]];
 
 _headers pushBack		[CTI_BARRACKS, "Barracks", "Barracks"];
 _classes pushBack		["Land_Cargo_House_V1_F", "Land_Cargo_House_V1_ruins_F"];
@@ -109,7 +109,7 @@ _times pushBack			30;
 _placements pushBack 	[180, 15];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 9]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3848.3,6874.86,1.18793]];
 
 _headers pushBack		[CTI_LIGHT, "Light Vehicle Factory", "Light"];
 _classes pushBack		["Land_Medevac_HQ_V1_F", "Land_Medevac_HQ_V1_ruins_F"];
@@ -118,7 +118,7 @@ _times pushBack 		80;
 _placements pushBack 	[90, 25];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3685.77,6952.81,2.11581],[3695.62,6957.11,-0.986191],[3699.05,6950.16,-0.494629],[3689.47,6946.09,2.35851],[3698.94,6950.15,2.09032],[3694.17,6957.47,1.90448],[3687.53,6954.9,3.91107],[3687.39,6947.3,5.21969],[3689.36,6946.45,4.89316],[3698.9,6955.15,-1.20224],[3690.66,6953.32,0.936378],[3687.54,6946.24,2.78345],[3695.04,6948.23,0.749107]];
 
 _headers pushBack 		[CTI_HEAVY, "Heavy Vehicle Factory", "Heavy"];
 _classes pushBack 		["Land_Cargo_HQ_V1_F", "Land_Cargo_HQ_V1_ruins_F"];
@@ -127,7 +127,7 @@ _times pushBack 		120;
 _placements pushBack 	[90, 25];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[4082.29,6917.48,1.21694],[4092.13,6921.78,0.382057],[4095.56,6914.82,0.586716],[4085.99,6910.76,1.57256],[4095.46,6914.82,3.15199],[4090.68,6922.14,3.09859],[4084.04,6919.57,3.60253],[4083.9,6911.97,3.80704],[4085.87,6911.12,4.00489],[4095.42,6919.82,0.502472],[4087.18,6917.99,0.887215],[4084.05,6910.91,1.51677],[4091.55,6912.89,0.789642]];
 
 _headers pushBack 		[CTI_AIR, "Aircraft Factory", "Air"];
 _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
@@ -136,7 +136,7 @@ _times pushBack 		140;
 _placements pushBack 	[180, 40];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 20000]]; 
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[4051.1,7061.18,0.0137024],[4051.88,7065.82,1.34125],[4052.78,7061.17,3.26552],[4051.01,7061.23,3.00688],[4052.77,7061.17,6.26984],[4051,7061.22,6.01172],[4051.86,7065.81,7.35086],[4052.63,7062.05,9.15019],[4051.4,7061.7,9.03256],[4048.98,7055.89,9.0554],[4051.79,7052.62,9.47598],[4054.6,7055.79,9.94395],[4051.77,7058.84,12.9386],[4049.92,7056.09,12.8567],[4051.7,7053.96,13.1287],[4053.63,7056.06,13.4384],[4050.83,7063.43,11.8566],[4051.87,7065.94,11.8369],[4053.02,7061.02,12.3327]];
 
 _headers pushBack 		[CTI_AMMO, "Ammo Depot", "Ammo"];
 _classes pushBack 		["Land_Cargo_HQ_V2_F", "Land_Cargo_HQ_V2_ruins_F"];
@@ -145,7 +145,7 @@ _times pushBack 		90;
 _placements pushBack 	[90, 25];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3798.57,7132.85,-0.301735],[3808.45,7137.08,2.54567],[3811.82,7130.1,1.7543],[3802.22,7126.1,-1.18235],[3811.72,7130.09,4.29044],[3807,7137.44,4.92696],[3800.34,7134.93,3.05473],[3800.15,7127.33,1.29271],[3802.11,7126.46,1.4517],[3811.72,7135.09,3.02294],[3803.46,7133.32,0.794472],[3800.29,7126.26,-1.50388],[3807.8,7128.2,0.4562]];
 
 _headers pushBack 		[CTI_REPAIR, "Repair Depot", "Repair"];
 _classes pushBack 		["Land_Cargo_HQ_V3_F", "Land_Cargo_HQ_V3_ruins_F"];
@@ -154,7 +154,7 @@ _times pushBack 		90;
 _placements pushBack 	[90, 25];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 25]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[3936.33,7189.24,3.0222],[3946.21,7193.47,0.94381],[3949.58,7186.49,-3.00772],[3939.98,7182.49,-0.901817],[3949.48,7186.48,-0.409264],[3944.76,7193.84,4.29426],[3938.1,7191.32,5.6748],[3937.91,7183.72,2.99001],[3939.87,7182.85,1.85287],[3949.48,7191.48,-1.01615],[3941.22,7189.71,1.44054],[3938.05,7182.66,-0.0679092],[3945.56,7184.59,-2.19778]];
 
 _headers pushBack 		[CTI_NAVAL, "Naval Yard", "Naval"];
 _classes pushBack 		["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"];
@@ -163,7 +163,7 @@ _times pushBack 		80;
 _placements pushBack 	[180, 60];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
-_respawnBPos pushBack	[];
+_respawnBPos pushBack	[[4132.64,6992.97,0.898651],[4137.95,6992.87,0.676865],[4135.19,6996.11,0.150589],[4138.11,6996.04,0.205414]];
 
 if (CTI_RHS_ADDON > 0) then { 
 		_headers pushBack 		[CTI_RADAR, "Air Radar", "Air Radar"];

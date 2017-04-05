@@ -679,7 +679,7 @@ CTI_MARKERS_VEHICLES_DEAD_DELAY = 125;
 CTI_PLAYER_DEFAULT_ALIAS = "Soldier";
 
 CTI_RESPAWN_AI_RANGE = 600;
-CTI_RESPAWN_BASE_MODE = 0; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
+CTI_RESPAWN_BASE_MODE = 1; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
