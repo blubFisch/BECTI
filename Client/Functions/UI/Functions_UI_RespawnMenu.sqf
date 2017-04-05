@@ -300,7 +300,7 @@ CTI_UI_Respawn_OnRespawnReady = {
 					if (_where in (CTI_P_SideJoined call CTI_CO_FNC_GetSideStructures)) then {
 						_bposlist = (missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, typeOf _where]) select CTI_STRUCTURE_RESPAWNBPOS;
 						
-						_bpos = [[0],[0],[0]];
+						_bpos = [0,0,0];
 						switch (typeName _bposlist) do { //--- TODO: Check if a spot is already occupied by another player/ai
 							case "ARRAY": {_bpos = _where buildingPos (_bposlist select 0 select floor(random count _bposlist))};
 							case "SCALAR": {
