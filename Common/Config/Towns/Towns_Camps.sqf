@@ -1,7 +1,7 @@
 _classnames = [];
 _respawnBPos = [];
 
-_classnames pushBack 		"Land_BagBunker_Tower_F";
+_classnames pushBack 		"Land_i_House_Small_02_V1_F";
 _respawnBPos pushBack 		-1;
 
 for '_i' from 0 to (count _classnames) -1 do {
