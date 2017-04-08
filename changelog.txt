@@ -1,3 +1,6 @@
+1.06.6
+Fixed: Deploying one fob truck multiple times
+
 ﻿1.06.5
 Removed: Ifrit/Hunter ones again :)
 Fixed: Resistance bounty
