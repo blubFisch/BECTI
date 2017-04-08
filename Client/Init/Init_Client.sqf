@@ -87,7 +87,7 @@ CTI_P_ActionLowGear = false;
 CTI_P_ActionPush = false;
 
 CTI_P_Coloration_Money = "#BAFF81";
-
+CTI_P_fob_currently_deploying = false;
 //--- Artillery Computer is only enabled on demand
 if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngineArtillery false};
 
