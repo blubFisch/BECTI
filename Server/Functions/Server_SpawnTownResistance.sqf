@@ -83,19 +83,19 @@ _tries = 400;
 if (isNil {_town getVariable "cti_naval"}) then {
 	if (CTI_ZOMBIE_MODE == 0 && isNil {_town getVariable "cti_zombie"}) then {
 		if (CTI_GUERILLA_MODE == 0 && isNil {_town getVariable "cti_infantry"}) then {
+			switch (true) do { 
 
 			//--- Normal Town Values
-			switch (true) do { 
 				case (_value >= 20 && _value < 30) : { //--- 20-25 SV towns
 					_pool_units = [
 						["GUER_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
 						["GUER_TOWNS_SQUAD_SNIPER", 1, 60],
 						[
 							["GUER_TOWNS_SQUAD_LIGHT1", 1, 60],
+							["GUER_TOWNS_SQUAD_LIGHT2", 2, 50]
 						]
 					];
 				};				
-			switch (true) do { 
 				case (_value >= 30 && _value < 40) : { //--- 30-35 SV towns
 					_pool_units = [
 						["GUER_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
@@ -103,11 +103,11 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						["GUER_TOWNS_SQUAD_AA", 1, 30],
 						["GUER_TOWNS_SQUAD_SNIPER", 1, 30],
 						[
-							["GUER_TOWNS_SQUAD_LIGHT1", 2, 99]
+							["GUER_TOWNS_SQUAD_LIGHT1", 2, 99],
+							["GUER_TOWNS_SQUAD_LIGHT2", 2, 50]
 						]
 					];
 				};	
-			switch (true) do { 
 				case (_value >= 40 && _value < 50) : { //--- 40-45 SV towns
 					_pool_units = [
 						["GUER_TOWNS_SQUAD_RIFLEMEN1", 2, 99],
@@ -119,11 +119,10 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						]
 					];
 				};		
-			switch (true) do { 
 				case (_value >= 50 && _value < 60) : { //--- 50-55 SV towns
 					_pool_units = [
-						["GUER_TOWNS_SQUAD_RIFLEMEN1", 2, 99],
-						["GUER_TOWNS_SQUAD_AT1", 2, 80],	
+						["GUER_TOWNS_SQUAD_RIFLEMEN1", 1, 99],
+						["GUER_TOWNS_SQUAD_AT1", 1, 80],	
 						["GUER_TOWNS_SQUAD_AA", 1, 40],
 						[
 							["GUER_TOWNS_SQUAD_LIGHT1", 1, 99],
@@ -134,18 +133,17 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						]
 					];
 				};			
-			switch (true) do { 
 				case (_value >= 60 && _value < 70) : { //--- 60-65 SV towns
 					_pool_units = [
-						["GUER_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
-						["GUER_TOWNS_SQUAD_AT1", 2, 99],	
-						["GUER_TOWNS_SQUAD_AA", 1, 33],
+						["GUER_TOWNS_SQUAD_RIFLEMEN1", 1],
+						["GUER_TOWNS_SQUAD_AT1", 1],	
+						["GUER_TOWNS_SQUAD_AA", 1, 30],
 						[
-							["GUER_TOWNS_SQUAD_LIGHT1", 1, 99],
-							["GUER_TOWNS_SQUAD_LIGHT2", 2, 33]
+							["GUER_TOWNS_SQUAD_LIGHT1", 1],
+							["GUER_TOWNS_SQUAD_LIGHT2", 2, 60]
 						],
 						[
-							["GUER_TOWNS_SQUAD_APC1", 2, 90]
+							["GUER_TOWNS_SQUAD_APC1", 2, 40]
 						]
 					];
 				};
