@@ -527,53 +527,53 @@ if (isNil {_town getVariable "cti_naval"}) then {
 	switch (true) do {
 		case (_value < 70) : { 
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL1", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 4, 99]
+				["GUER_TOWNS_SQUAD_NAVAL1", 2, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99]
 			];
 		};
 		case (_value >= 70 && _value < 80) : { 
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL1", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 4, 99],
+				["GUER_TOWNS_SQUAD_NAVAL1", 2, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99],
 				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 30]
 			];
 		};
 		case (_value >= 80 && _value < 90) : {
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL2", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 2, 40],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 2, 60]
+				["GUER_TOWNS_SQUAD_NAVAL2", 2, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 40],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 60]
 			];
 		};
 		case (_value >= 90 && _value < 100) : {  
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL2", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 2, 30],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 2, 70]
+				["GUER_TOWNS_SQUAD_NAVAL2", 2, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70]
 			];
 		};
 		case (_value >= 100 && _value < 110) : { 
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL3", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 3, 30],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 3, 70],
+				["GUER_TOWNS_SQUAD_NAVAL3", 3, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70],
 				["GUER_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 50]
 			];
 		};
 		case (_value >= 110 && _value < 120) : { 
 			_pool_units = [ 
-				["GUER_TOWNS_SQUAD_NAVAL3", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 3, 20],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 4, 80],
-				["GUER_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 2, 90]
+				["GUER_TOWNS_SQUAD_NAVAL3", 3, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 20],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 80],
+				["GUER_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90]
 			];
 		};
 		case (_value >= 120) : { 
 			_pool_units = [
-				["GUER_TOWNS_SQUAD_NAVAL3", 1, 99],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 3, 10],
-				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 4, 90],
-				["GUER_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 2, 90],
+				["GUER_TOWNS_SQUAD_NAVAL3", 3, 99],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 10],
+				["GUER_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 90],
+				["GUER_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90],
 				["GUER_TOWNS_SQUAD_LARGE_ASSAULT_BOAT", 1, 05]
 			];
 		};
