@@ -83,7 +83,9 @@ _tries = 400;
 if (isNil {_town getVariable "cti_naval"}) then {
 	if (CTI_ZOMBIE_MODE == 0 && isNil {_town getVariable "cti_zombie"}) then {
 		if (CTI_GUERILLA_MODE == 0 && isNil {_town getVariable "cti_infantry"}) then {
-			switch (true) do {
+
+			//--- Guerilla Town Values
+			switch (true) do { 
 				case (_value < 70) : { 
 					_pool_units = [
 						["GUER_TOWNS_SQUAD_RIFLEMEN1", 2, 99],
@@ -269,6 +271,8 @@ if (isNil {_town getVariable "cti_naval"}) then {
 				};
 			};
 		} else {
+		
+		//--- Normal Mode 
 				switch (true) do {
 					case (_value < 80) : { 
 						_pool_units = [
@@ -411,6 +415,8 @@ if (isNil {_town getVariable "cti_naval"}) then {
 				};	
 		};
 	} else {
+
+	 //--- Zombie Town Values
 		switch (true) do {
 			case (_value < 70) : { 
 				_pool_units = [
@@ -463,7 +469,9 @@ if (isNil {_town getVariable "cti_naval"}) then {
 			};
 		};
 	};
-} else {
+} else { 
+
+//--- Naval Town Values
 	switch (true) do {
 		case (_value < 70) : { 
 			_pool_units = [
