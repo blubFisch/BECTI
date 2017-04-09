@@ -1,5 +1,6 @@
 private ["_vehicle","_side","_logic","_vehiclepos","_vehicledir","_fobtype","_fobclass","_fobclassruins","_foblargeclass","_foblargeclassruins"];
-
+if !(CTI_P_fob_currently_deploying) then {
+CTI_P_fob_currently_deploying = true;
 _vehicle = _this select 0;
 _fobtype = _this select 3 select 0;
 _vehiclepos = getPos _vehicle;
@@ -16,6 +17,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_fobclass = "Land_Medevac_house_V1_F";
 	_foblargeclass = "WarfareBDepot";
 };
+
 switch (_fobtype) do {
 	case "small": {
 		if (count(_logic getVariable "cti_fobs") < CTI_BASE_FOB_MAX) then {
@@ -33,4 +35,7 @@ switch (_fobtype) do {
 			hint "Max Large Fobs Reached, dismantle to build more.";
 		};
 	};
+};
+sleep 30;
+CTI_P_fob_currently_deploying = false;
 };
