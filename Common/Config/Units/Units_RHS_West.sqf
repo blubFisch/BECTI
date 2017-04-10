@@ -1856,6 +1856,108 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
+//--- RHS OFPS shit goes here for now untill some one can make it right.
+
+_c pushBack 'ofps_RHS_AH64D_GS';
+_p pushBack '';
+_n pushBack 'AH-64D GS (1x Cannon/4x FFAR)';
+_o pushBack 19500;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH64D_noradar';
+_p pushBack '';
+_n pushBack 'AH-64D No radar';
+_o pushBack 55000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH64D_CS';
+_p pushBack '';
+_n pushBack 'AH-64D CS (1x Cannon/16x ATGM)';
+_o pushBack 49500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH64D';
+_p pushBack '';
+_n pushBack 'AH-64D MultiRole (8x ATGM/2x FFAR)';
+_o pushBack 27200;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH64D_AA';
+_p pushBack '';
+_n pushBack 'AH-64D AA (2x AA/8x ATGM/2x FFAR)';
+_o pushBack 34000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_UH60M_d';
+_p pushBack '';
+_n pushBack 'UH-60M Blackhawk';
+_o pushBack 13125;
+_t pushBack 30;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH1Z';
+_p pushBack '';
+_n pushBack 'AH-1Z (Multi-Role)';
+_o pushBack 40000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_AH1Z_CS';
+_p pushBack '';
+_n pushBack 'AH-1Z  Hellfire';
+_o pushBack 45000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_CH_47F_10';
+_p pushBack '';
+_n pushBack 'CH-47F Chinook';
+_o pushBack 11250;
+_t pushBack 30;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_UH1Y_d_GS';
+_p pushBack '';
+_n pushBack 'UH-1YD (2x Doorgun/2x FFAR)';
+_o pushBack 17250;
+_t pushBack 30;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
 //--- Naval Vehicles
 
 _c pushBack 'rhsusf_mkvsoc';

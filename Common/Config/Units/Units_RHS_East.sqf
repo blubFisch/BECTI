@@ -712,6 +712,38 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
+//--- OFPS RHS Units blow, TODO setup nested.
+_c pushBack 'ofps_rhs_t80bvk';
+_p pushBack '';
+_n pushBack 'T-80BVK';
+_o pushBack 18750;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_rhs_t80ue1';
+_p pushBack '';
+_n pushBack 'T-80UE-1';
+_o pushBack 26500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_rhs_t80um';
+_p pushBack '';
+_n pushBack 'T-80UM';
+_o pushBack 18975;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 10;
+
+
 //--- Repair Vehicles
 _c pushBack 'RHS_Ural_Fuel_MSV_01';
 _p pushBack '';
@@ -1050,6 +1082,97 @@ _n pushBack 'An-2 Antonov (Unarmed)';
 _o pushBack 14000;
 _t pushBack 30;
 _u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+//--- RHS OFPS Units, TODO: needs to be set up as nested
+_c pushBack 'ofps_RHS_Mi24V_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-24 (CAS)';
+_o pushBack 30600;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi24V_FAB_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-24V FAB';
+_o pushBack 34000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi24V_AT_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-24V AT';
+_o pushBack 45000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi8AMTSh_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-8AMTSh (6x FFAR)';
+_o pushBack 38250;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi8AMTSh_UPK23_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-8AMTSh UPK (2x 23mm/4x FFAR)';
+_o pushBack 24000;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi8MTV3_UPK23_vvsc'; //2x 23mm AC+40x FFAR
+_p pushBack '';
+_n pushBack 'Mi-8MTV-3 UPK (2x 23mm/2x FFAR)';
+_o pushBack 20625;
+_t pushBack 30;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi8MTV3_FAB_vvsc'; //40x FFAR+2x FAB 5000kg bombs
+_p pushBack '';
+_n pushBack 'Mi-8MTV-3 FAB';
+_o pushBack 15000;
+_t pushBack 30;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Mi8mt_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-8MT (2x 7.62mm)';
+_o pushBack 13125;
+_t pushBack 30;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+
+_c pushBack 'ofps_RHS_Ka52_UPK23_vvsc';
+_p pushBack '';
+_n pushBack 'Ka-52 UPK';
+_o pushBack 75000;
+_t pushBack 30;
+_u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
