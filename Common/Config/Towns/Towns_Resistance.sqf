@@ -555,7 +555,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then {
 	GUER_SOLDIER_SNIPER = "rhsgref_cdf_reg_marksman";
 	GUER_SOLDIER_TEAMLEADER = "rhsgref_cdf_reg_squadleader";
 	GUER_SOLDIER_SQUADLEADER = "rhsgref_cdf_reg_squadleader";*/
-	GUER_SOLDIER = "rhsgref_nat_reg_rifleman_akms";
+	GUER_SOLDIER = "rhsgref_nat_hunter";
 	GUER_SOLDIER_AA = "rhsgref_nat_specialist_aa";
 	GUER_SOLDIER_AR = "rhsgref_nat_machinegunner";
 	GUER_SOLDIER_AT = "rhsgref_nat_grenadier_rpg";
