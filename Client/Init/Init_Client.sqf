@@ -29,6 +29,7 @@ CTI_CL_FNC_OnJailed = compileFinal preprocessFile "Client\Functions\Client_OnJai
 CTI_CL_FNC_OnMissionEnding = compileFinal preprocessFile "Client\Functions\Client_OnMissionEnding.sqf";
 CTI_CL_FNC_OnPlayerFired = compileFinal preprocessFile "Client\Functions\Client_OnPlayerFired.sqf";
 CTI_CL_FNC_OnPlayerKilled = compileFinal preprocessFile "Client\Functions\Client_OnPlayerKilled.sqf";
+CTI_CL_FNC_OnWeaponAssembled = compileFinal preprocessFile "Client\Functions\Client_OnWeaponAssembled.sqf";
 CTI_CL_FNC_OnPurchaseDelegationReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseDelegationReceived.sqf";
 CTI_CL_FNC_OnPurchaseOrderReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseOrderReceived.sqf";
 CTI_CL_FNC_OnStructureConstructed = compileFinal preprocessFile "Client\Functions\Client_OnStructureConstructed.sqf";
@@ -182,6 +183,7 @@ CTI_InitClient = true;
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
 
 player addEventHandler ["killed", {_this spawn CTI_CL_FNC_OnPlayerKilled}];
+player addEventHandler ["WeaponAssembled", {_this spawn CTI_CL_FNC_OnWeaponAssembled}];
 /*if !(CTI_IsServer) then { //--- Pure client execution
 	[player, missionNamespace getVariable format ["CTI_AI_%1_DEFAULT_GEAR", CTI_P_SideJoined]] call CTI_CO_FNC_EquipUnit;
 
