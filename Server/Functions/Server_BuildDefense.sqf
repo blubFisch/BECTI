@@ -233,7 +233,7 @@ if (_iscomposition) then {
 			_defense setVehicleLock "LOCKED";
 		}
 	};
-
+	_defense setVariable ["cti_static_properly_created", true, true]; //-- set cti_static_properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers and variables
 	_defense call CTI_CO_FNC_UnitCreated;
 };
 
