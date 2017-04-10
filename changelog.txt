@@ -1,5 +1,12 @@
 1.06.6
 Fixed: Deploying one fob truck multiple times
+Added: 4 extra slots, and removed HC slots
+Replaced: Camps with watch towers
+Added: Spawn inside camps
+Tweaked: Upgrade Tree SV adjustments (reduced by 6250SV overall/redistributed)
+Tweaked: Resistance and occupation classes for small towns
+Fixed: Isladuala town connection
+Fixed: UAZ's spawning empty in towns
 
 ﻿1.06.5
 Removed: Ifrit/Hunter ones again :)

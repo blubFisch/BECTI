@@ -122,6 +122,7 @@ switch (toLower(worldName)) do {
 		Naromaru setVariable ["cti_town_neighbors",[Cova,Numbo,Papunya,Bolabongo,AeroportoMolatia]];
 		Papunya setVariable ["cti_town_neighbors",[Vestinga,Kwako,AeroportoSwonto,Bolabongo,Naromaru,Numbo]];
 		Bobadah setVariable ["cti_town_neighbors",[AeroportoMolatia,Pumado,Maluri,Zeelor,Canto]];
+		Imalia setVariable ["cti_town_neighbors",[Lukasa,Boona]];
 	};
 	case "stratis": {
 		OutpostNorth setVariable ["cti_town_neighbors",[AgiaMarina,ComPlatform,KillFarm]];

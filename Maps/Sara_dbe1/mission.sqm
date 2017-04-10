@@ -2046,7 +2046,7 @@ class Mission
 				init="nullreturn = [Chantico,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=166;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2105,7 +2105,7 @@ class Mission
 				init="nullreturn = [Dolores,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=167;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2164,8 +2164,7 @@ class Mission
 				init="nullreturn = [Ortego,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=168;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2224,7 +2223,7 @@ class Mission
 				init="nullreturn = [Ortego,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=169;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2283,7 +2282,7 @@ class Mission
 				init="nullreturn = [Cayo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=170;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2342,7 +2341,7 @@ class Mission
 				init="nullreturn = [Chantico,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=171;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2401,7 +2400,7 @@ class Mission
 				init="nullreturn = [Bagango,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=172;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2460,7 +2459,7 @@ class Mission
 				init="nullreturn = [Bagango,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=173;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2519,8 +2518,7 @@ class Mission
 				init="nullreturn = [WorkCamp,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=174;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.36600113;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2579,7 +2577,7 @@ class Mission
 				init="nullreturn = [TresValles,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=175;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2638,7 +2636,7 @@ class Mission
 				init="nullreturn = [Estrella,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=176;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2697,7 +2695,7 @@ class Mission
 				init="nullreturn = [Somato,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=177;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2756,7 +2754,7 @@ class Mission
 				init="nullreturn = [Pita,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=178;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2815,7 +2813,7 @@ class Mission
 				init="nullreturn = [Corazol,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=179;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2874,8 +2872,7 @@ class Mission
 				init="nullreturn = [Corazol,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=180;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.00020980835;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2934,8 +2931,7 @@ class Mission
 				init="nullreturn = [RocaDelDror,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=181;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.75;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2994,7 +2990,7 @@ class Mission
 				init="nullreturn = [Iguana,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=182;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3053,7 +3049,7 @@ class Mission
 				init="nullreturn = [Modesta,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=183;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3112,8 +3108,7 @@ class Mission
 				init="nullreturn = [Pacamac,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=184;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3172,7 +3167,7 @@ class Mission
 				init="nullreturn = [Pacamac,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=185;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3231,7 +3226,7 @@ class Mission
 				init="nullreturn = [Everon,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=186;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3290,7 +3285,7 @@ class Mission
 				init="nullreturn = [Mercalillo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=187;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3349,8 +3344,7 @@ class Mission
 				init="nullreturn = [Obregan,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=188;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3409,7 +3403,7 @@ class Mission
 				init="nullreturn = [Obregan,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=189;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3468,8 +3462,7 @@ class Mission
 				init="nullreturn = [Rahmandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=190;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-9.5367432e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3528,7 +3521,7 @@ class Mission
 				init="nullreturn = [Rahmandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=191;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3587,8 +3580,7 @@ class Mission
 				init="nullreturn = [Rahmandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=192;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-1.9073486e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3647,8 +3639,7 @@ class Mission
 				init="nullreturn = [RockQuarry,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=193;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3707,7 +3698,7 @@ class Mission
 				init="nullreturn = [Masbee,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=194;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3766,7 +3757,7 @@ class Mission
 				init="nullreturn = [Masbee,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=195;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3825,8 +3816,7 @@ class Mission
 				init="nullreturn = [Benoma,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=196;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-1.9073486e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3885,7 +3875,7 @@ class Mission
 				init="nullreturn = [Epomia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=197;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3944,7 +3934,7 @@ class Mission
 				init="nullreturn = [Epomia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=198;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4003,7 +3993,7 @@ class Mission
 				init="nullreturn = [Malaredo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=199;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4062,8 +4052,7 @@ class Mission
 				init="nullreturn = [Carmen,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=201;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4122,7 +4111,7 @@ class Mission
 				init="nullreturn = [Tlaloc,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=202;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4181,7 +4170,7 @@ class Mission
 				init="nullreturn = [Tlaloc,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=203;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4240,8 +4229,7 @@ class Mission
 				init="nullreturn = [Antigua,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=204;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.016002655;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4300,7 +4288,7 @@ class Mission
 				init="nullreturn = [Antigua,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=205;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4359,8 +4347,7 @@ class Mission
 				init="nullreturn = [Antigua,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=206;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=9.5367432e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4419,8 +4406,7 @@ class Mission
 				init="nullreturn = [Hunapu,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=207;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.15199852;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4479,8 +4465,7 @@ class Mission
 				init="nullreturn = [Hunapu,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=208;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4539,8 +4524,7 @@ class Mission
 				init="nullreturn = [Arcadia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=209;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=9.5367432e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4599,8 +4583,7 @@ class Mission
 				init="nullreturn = [Rashidah,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=210;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-9.5367432e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4659,7 +4642,7 @@ class Mission
 				init="nullreturn = [Paraiso,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=212;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4718,7 +4701,7 @@ class Mission
 				init="nullreturn = [Paraiso,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=213;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4777,7 +4760,7 @@ class Mission
 				init="nullreturn = [Paraiso,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=214;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4836,7 +4819,7 @@ class Mission
 				init="nullreturn = [Corazol,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=216;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4895,7 +4878,7 @@ class Mission
 				init="nullreturn = [RocaDelDror,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=217;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4954,8 +4937,7 @@ class Mission
 				init="nullreturn = [Iguana,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=218;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-1.9073486e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5014,8 +4996,7 @@ class Mission
 				init="nullreturn = [Benoma,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=219;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-1.9073486e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5074,7 +5055,7 @@ class Mission
 				init="nullreturn = [Modesta,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=220;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7496,7 +7477,7 @@ class Mission
 				init="nullreturn = [Paraiso,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=218;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7555,8 +7536,7 @@ class Mission
 				init="nullreturn = [Corazol,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=219;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-9.5367432e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7615,8 +7595,7 @@ class Mission
 				init="nullreturn = [Modesta,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=220;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7675,7 +7654,7 @@ class Mission
 				init="nullreturn = [Ortego,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=221;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7734,7 +7713,7 @@ class Mission
 				init="nullreturn = [Pita,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=222;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7793,7 +7772,7 @@ class Mission
 				init="nullreturn = [Benoma,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=223;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7852,7 +7831,7 @@ class Mission
 				init="nullreturn = [Bagango,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=224;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7911,7 +7890,7 @@ class Mission
 				init="nullreturn = [Carmen,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=225;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7970,7 +7949,7 @@ class Mission
 				init="nullreturn = [Malaredo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=226;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8029,8 +8008,7 @@ class Mission
 				init="nullreturn = [Malaredo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=227;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8089,7 +8067,7 @@ class Mission
 				init="nullreturn = [Epomia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=228;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8227,8 +8205,7 @@ class Mission
 				init="nullreturn = [IslaDelVida,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=231;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.012001038;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8346,8 +8323,7 @@ class Mission
 				init="nullreturn = [IslaDelVida,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=233;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.0020003319;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8465,7 +8441,7 @@ class Mission
 				init="nullreturn = [Arcadia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=235;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8524,8 +8500,7 @@ class Mission
 				init="nullreturn = [Cayo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=236;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8584,7 +8559,7 @@ class Mission
 				init="nullreturn = [Cayo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=237;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8643,7 +8618,7 @@ class Mission
 				init="nullreturn = [Iguana,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=238;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8702,8 +8677,7 @@ class Mission
 				init="nullreturn = [Dolores,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=239;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-1.9073486e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8762,7 +8736,7 @@ class Mission
 				init="nullreturn = [Dolores,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=240;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8821,8 +8795,7 @@ class Mission
 				init="nullreturn = [Ortego,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=241;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.00038909912;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8881,7 +8854,7 @@ class Mission
 				init="nullreturn = [Somato,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=242;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8940,7 +8913,7 @@ class Mission
 				init="nullreturn = [Somato,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=243;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9058,8 +9031,7 @@ class Mission
 				init="nullreturn = [Rashidah,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=245;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9118,7 +9090,7 @@ class Mission
 				init="nullreturn = [Everon,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=246;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9177,7 +9149,7 @@ class Mission
 				init="nullreturn = [Obregan,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=247;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9236,7 +9208,7 @@ class Mission
 				init="nullreturn = [Mercalillo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=248;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9295,7 +9267,7 @@ class Mission
 				init="nullreturn = [Mercalillo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=249;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9354,7 +9326,7 @@ class Mission
 				init="nullreturn = [Masbee,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=250;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9413,7 +9385,7 @@ class Mission
 				init="nullreturn = [RockQuarry,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 			};
 			id=251;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0

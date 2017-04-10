@@ -2143,7 +2143,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=227;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2225,7 +2225,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=229;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2285,7 +2285,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=231;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2367,8 +2367,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=233;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.43598938;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2409,7 +2408,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=234;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2469,7 +2468,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=241;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2551,7 +2550,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=244;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2592,7 +2591,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=245;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2652,7 +2651,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=247;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2734,7 +2733,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=249;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2775,7 +2774,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=250;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2835,7 +2834,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=252;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2917,7 +2916,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=254;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2958,8 +2957,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=255;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3019,8 +3017,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=257;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.11598206;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3102,8 +3099,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=259;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3144,7 +3140,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=260;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3245,7 +3241,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=264;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3286,7 +3282,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=265;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3388,7 +3384,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=269;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3429,8 +3425,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=270;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.5039978;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3491,8 +3486,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=272;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.12239075;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3575,7 +3569,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=274;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3616,7 +3610,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=275;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3676,8 +3670,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=277;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3759,8 +3752,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=279;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=12.356567;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3801,7 +3793,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=280;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3861,8 +3853,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=282;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3945,7 +3936,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=284;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3986,7 +3977,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=285;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4089,7 +4080,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=289;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4130,7 +4121,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=290;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4233,8 +4224,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=294;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4294,7 +4284,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=297;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4376,7 +4366,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=299;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4417,8 +4407,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=300;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.21899414;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4478,7 +4467,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=302;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4561,7 +4550,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=305;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4621,8 +4610,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=307;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-3.0517578e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4723,7 +4711,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=314;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4826,7 +4814,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=317;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4909,7 +4897,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=319;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4950,8 +4938,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=320;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.21099854;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5012,7 +4999,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=322;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5094,7 +5081,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=324;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5135,7 +5122,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=325;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5195,7 +5182,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=327;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5277,7 +5264,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=329;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5337,7 +5324,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=332;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5419,7 +5406,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=334;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5460,8 +5447,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=335;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5521,8 +5507,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=337;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-7.6293945e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5604,7 +5589,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=339;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5645,7 +5630,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=340;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5705,7 +5690,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=344;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5787,8 +5772,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=346;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.3515625;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5848,7 +5832,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=349;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5930,7 +5914,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=351;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5971,7 +5955,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=352;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6032,7 +6016,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=354;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6114,7 +6098,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=356;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6155,8 +6139,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=357;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.099998474;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6217,7 +6200,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=361;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6299,7 +6282,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=363;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6360,7 +6343,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=365;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6442,8 +6425,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=367;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.049999237;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6484,8 +6466,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=368;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-7.6293945e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6545,7 +6526,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=370;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6646,7 +6627,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=375;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6728,7 +6709,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=377;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6788,8 +6769,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=380;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=-0.12301636;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6871,7 +6851,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=382;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6912,7 +6892,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=383;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6973,8 +6953,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=391;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.0089416504;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0

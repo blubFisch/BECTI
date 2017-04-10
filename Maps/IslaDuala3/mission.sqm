@@ -8,14 +8,14 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=547;
+		nextID=550;
 	};
 	class Camera
 	{
-		pos[]={2615.8997,73.512184,7941.1528};
-		dir[]={0.23720551,-0.68487829,0.68896925};
-		up[]={0.22295351,0.72865653,0.64757425};
-		aside[]={0.94553167,-5.4154953e-008,-0.32553717};
+		pos[]={4975.7441,482.0708,4825.4478};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -79,12 +79,15 @@ class AddonsMetaData
 randomSeed=16390692;
 class ScenarioData
 {
-	author="~FGM~ Reliq";
+	author="Reliq [OFPS]";
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="Conquer the Island BECTI - OFPS.NET - $VERSIONNAME$"
+		overviewText="Crafted by Benny and OFPS Team";
+
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
@@ -282,8 +285,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Numbo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Numbo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=21;
 			type="FlagPole_F";
@@ -327,8 +328,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kwako"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kwako";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=22;
 			type="FlagPole_F";
@@ -372,8 +371,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kirabo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kirabo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=23;
 			type="FlagPole_F";
@@ -417,8 +414,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Larenga"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Larenga";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=24;
 			type="FlagPole_F";
@@ -460,8 +455,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mawimbela"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mawimbela";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=25;
 			type="FlagPole_F";
@@ -505,8 +498,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lina Prison"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="LinaPrison";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=26;
 			type="FlagPole_F";
@@ -550,8 +541,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kinsella"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kinsella";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=27;
 			type="FlagPole_F";
@@ -595,8 +584,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camara"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Camara";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=28;
 			type="FlagPole_F";
@@ -640,8 +627,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cainna Wind"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="CainnaWind";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=29;
 			type="FlagPole_F";
@@ -685,8 +670,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ramons Plantation"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="RamonsPlantation";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=30;
 			type="FlagPole_F";
@@ -1879,8 +1862,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Simbala"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Simbala";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=102;
 			type="FlagPole_F";
@@ -1924,8 +1905,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kimbaka"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kimbaka";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=103;
 			type="FlagPole_F";
@@ -1968,8 +1947,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Campolongo"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Campolongo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=104;
 			type="FlagPole_F";
@@ -2014,7 +1991,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=109;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2055,7 +2032,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=110;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2096,7 +2073,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=112;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2137,7 +2114,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=113;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2178,7 +2155,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=115;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2219,7 +2196,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=116;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2260,7 +2237,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=117;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2301,7 +2278,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=119;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2342,7 +2319,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=121;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.023954391;
 			class CustomAttributes
 			{
@@ -2384,7 +2361,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=122;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.4758234;
 			class CustomAttributes
 			{
@@ -2426,7 +2403,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=124;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-4.3869019e-005;
 			class CustomAttributes
 			{
@@ -2468,7 +2445,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=129;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -2510,7 +2487,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=132;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-4.7683716e-005;
 			class CustomAttributes
 			{
@@ -2552,7 +2529,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=136;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.34515762;
 			class CustomAttributes
 			{
@@ -2594,7 +2571,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=140;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -3795,8 +3772,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Kinsella"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoKinsella";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=183;
 			type="FlagPole_F";
@@ -3965,7 +3940,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=200;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -4007,7 +3982,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=201;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4048,7 +4023,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=202;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4089,7 +4064,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=203;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4130,7 +4105,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=204;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4171,7 +4146,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=205;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4211,8 +4186,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vixena Factory"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="VixenaFactory";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=206;
 			type="FlagPole_F";
@@ -4299,7 +4272,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=208;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4340,7 +4313,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=210;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4381,7 +4354,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=211;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4422,7 +4395,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=111;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.70500183;
 			class CustomAttributes
 			{
@@ -4464,7 +4437,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=213;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4504,8 +4477,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Fishala"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Fishala";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=214;
 			type="FlagPole_F";
@@ -4550,7 +4521,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=215;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4632,7 +4603,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=217;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4673,7 +4644,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=218;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -4715,7 +4686,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=219;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4756,7 +4727,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=223;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -4798,7 +4769,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=224;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.0001039505;
 			class CustomAttributes
 			{
@@ -4839,8 +4810,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Orellan"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Orellan";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=225;
 			type="FlagPole_F";
@@ -4926,7 +4895,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=227;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.025001526;
 			class CustomAttributes
 			{
@@ -4968,7 +4937,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=228;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -5010,7 +4979,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=229;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5050,7 +5019,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kingala"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kingala";
-				createAsSimpleObject=0;
 			};
 			id=230;
 			type="FlagPole_F";
@@ -5113,7 +5081,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=232;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.035447121;
 			class CustomAttributes
 			{
@@ -5155,7 +5123,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=233;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.6212463e-005;
 			class CustomAttributes
 			{
@@ -5197,7 +5165,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=235;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.15950012;
 			class CustomAttributes
 			{
@@ -5239,7 +5207,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=236;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.080001831;
 			class CustomAttributes
 			{
@@ -5280,8 +5248,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Refugee Camp"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="RefugeeCamp";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=237;
 			type="FlagPole_F";
@@ -5366,7 +5332,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=239;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.013000488;
 			class CustomAttributes
 			{
@@ -5408,7 +5374,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=240;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -5449,8 +5415,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Tasmera"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoTasmera";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=241;
 			type="FlagPole_F";
@@ -5537,7 +5501,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=243;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.29574585;
 			class CustomAttributes
 			{
@@ -5579,7 +5543,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=244;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.17981339;
 			class CustomAttributes
 			{
@@ -5621,7 +5585,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=245;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.13730621;
 			class CustomAttributes
 			{
@@ -5663,7 +5627,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=246;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.12099838;
 			class CustomAttributes
 			{
@@ -5705,7 +5669,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=256;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.42100048;
 			class CustomAttributes
 			{
@@ -5747,7 +5711,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=257;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5788,7 +5752,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=258;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.15301132;
 			class CustomAttributes
 			{
@@ -5829,8 +5793,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Boona"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Boona";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=260;
 			type="FlagPole_F";
@@ -5917,7 +5879,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=262;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -5959,7 +5921,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=263;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.021211624;
 			class CustomAttributes
 			{
@@ -6001,7 +5963,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=264;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.13960075;
 			class CustomAttributes
 			{
@@ -6043,7 +6005,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=265;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.15626526;
 			class CustomAttributes
 			{
@@ -6084,8 +6046,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lukasa"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lukasa";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=267;
 			type="FlagPole_F";
@@ -6171,7 +6131,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=269;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00012969971;
 			class CustomAttributes
 			{
@@ -6213,7 +6173,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=270;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=8.392334e-005;
 			class CustomAttributes
 			{
@@ -6254,8 +6214,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Imalia"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Imalia";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=272;
 			type="FlagPole_F";
@@ -6342,7 +6300,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=274;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.1905365;
 			class CustomAttributes
 			{
@@ -6384,7 +6342,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=275;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.04681778;
 			class CustomAttributes
 			{
@@ -6426,7 +6384,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=278;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00022411346;
 			class CustomAttributes
 			{
@@ -6468,7 +6426,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=279;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6509,7 +6467,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=280;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -6550,8 +6508,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ursana"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ursana";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=282;
 			type="FlagPole_F";
@@ -6638,7 +6594,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=284;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.54502487;
 			class CustomAttributes
 			{
@@ -6680,7 +6636,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=285;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.11100101;
 			class CustomAttributes
 			{
@@ -6722,7 +6678,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=287;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.0067176819;
 			class CustomAttributes
 			{
@@ -6764,7 +6720,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=288;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6805,7 +6761,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=290;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-2.9563904e-005;
 			class CustomAttributes
 			{
@@ -6847,7 +6803,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=291;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6888,7 +6844,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=292;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.20113564;
 			class CustomAttributes
 			{
@@ -6929,8 +6885,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Djolan"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Djolan";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=294;
 			type="FlagPole_F";
@@ -7016,7 +6970,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=296;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.067764282;
 			class CustomAttributes
 			{
@@ -7058,7 +7012,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=297;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.28631973;
 			class CustomAttributes
 			{
@@ -7100,7 +7054,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=298;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7141,7 +7095,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=299;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.0082550049;
 			class CustomAttributes
 			{
@@ -7182,8 +7136,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""De Boor"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="DeBoor";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=303;
 			type="FlagPole_F";
@@ -7270,7 +7222,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=305;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.040180206;
 			class CustomAttributes
 			{
@@ -7312,7 +7264,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=306;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.13154221;
 			class CustomAttributes
 			{
@@ -7354,7 +7306,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=307;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.31969452;
 			class CustomAttributes
 			{
@@ -7396,7 +7348,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=308;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -7438,7 +7390,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=309;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
@@ -7479,8 +7431,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Katakabi"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Katakabi";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=312;
 			type="FlagPole_F";
@@ -7566,7 +7516,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=314;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.45552826;
 			class CustomAttributes
 			{
@@ -7608,7 +7558,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=318;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.60810852;
 			class CustomAttributes
 			{
@@ -7650,7 +7600,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=319;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -7691,8 +7641,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vestinga"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Vestinga";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=321;
 			type="FlagPole_F";
@@ -7779,7 +7727,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=323;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.032001495;
 			class CustomAttributes
 			{
@@ -7821,7 +7769,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=324;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-5.3405762e-005;
 			class CustomAttributes
 			{
@@ -7862,8 +7810,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Spookdorp"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Spookdorp";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=326;
 			type="FlagPole_F";
@@ -7949,7 +7895,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=328;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
@@ -7991,7 +7937,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=329;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.26145554;
 			class CustomAttributes
 			{
@@ -8033,7 +7979,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=332;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
@@ -8075,7 +8021,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=333;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.19768524;
 			class CustomAttributes
 			{
@@ -8117,7 +8063,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=334;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.24470949;
 			class CustomAttributes
 			{
@@ -8158,8 +8104,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Swonto"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoSwonto";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=336;
 			type="FlagPole_F";
@@ -8245,7 +8189,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=338;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -8287,7 +8231,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=339;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.020988464;
 			class CustomAttributes
 			{
@@ -8329,7 +8273,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=340;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.36133099;
 			class CustomAttributes
 			{
@@ -8370,8 +8314,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Caspal"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Caspal";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=342;
 			type="FlagPole_F";
@@ -8457,7 +8399,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=344;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8498,7 +8440,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=345;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00020694733;
 			class CustomAttributes
 			{
@@ -8540,7 +8482,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=346;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.43300056;
 			class CustomAttributes
 			{
@@ -8582,7 +8524,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=347;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-2.1934509e-005;
 			class CustomAttributes
 			{
@@ -8624,7 +8566,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=349;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00025177002;
 			class CustomAttributes
 			{
@@ -8666,7 +8608,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=350;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.069530487;
 			class CustomAttributes
 			{
@@ -8707,8 +8649,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Forteza"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Forteza";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=352;
 			type="FlagPole_F";
@@ -8794,7 +8734,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=354;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8835,7 +8775,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=355;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.16799927;
 			class CustomAttributes
 			{
@@ -8876,8 +8816,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Minesini"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Minesini";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=356;
 			type="FlagPole_F";
@@ -8963,7 +8901,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=358;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.13099861;
 			class CustomAttributes
 			{
@@ -9005,7 +8943,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=359;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.033081055;
 			class CustomAttributes
 			{
@@ -9047,7 +8985,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=360;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.34199905;
 			class CustomAttributes
 			{
@@ -9089,7 +9027,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=361;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9129,8 +9067,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Porto Hazena"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="PortoHazena";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=364;
 			type="FlagPole_F";
@@ -9216,7 +9152,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=366;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.014999866;
 			class CustomAttributes
 			{
@@ -9258,7 +9194,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=367;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -9300,7 +9236,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=368;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.11400032;
 			class CustomAttributes
 			{
@@ -9342,7 +9278,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=369;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.089004517;
 			class CustomAttributes
 			{
@@ -9383,8 +9319,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ashlake Resort"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="AshlakeResort";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=371;
 			type="FlagPole_F";
@@ -9469,7 +9403,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=373;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.055999756;
 			class CustomAttributes
 			{
@@ -9511,7 +9445,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=374;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.087997437;
 			class CustomAttributes
 			{
@@ -9552,8 +9486,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pinley"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pinley";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=376;
 			type="FlagPole_F";
@@ -9639,7 +9571,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=378;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
@@ -9681,7 +9613,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=379;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9721,8 +9653,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Tarisol"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Tarisol";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=383;
 			type="FlagPole_F";
@@ -9808,7 +9738,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=385;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -9850,7 +9780,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=386;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.12900019;
 			class CustomAttributes
 			{
@@ -9892,7 +9822,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=387;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.029000282;
 			class CustomAttributes
 			{
@@ -9934,7 +9864,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=388;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9974,8 +9904,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ravane"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ravane";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=390;
 			type="FlagPole_F";
@@ -10061,7 +9989,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=392;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.019000053;
 			class CustomAttributes
 			{
@@ -10103,7 +10031,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=393;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10143,8 +10071,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kalimbo Army Base"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="KalimboArmybase";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=395;
 			type="FlagPole_F";
@@ -10231,7 +10157,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=397;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.071998596;
 			class CustomAttributes
 			{
@@ -10273,7 +10199,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=398;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.727478e-005;
 			class CustomAttributes
 			{
@@ -10315,7 +10241,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=399;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.067764759;
 			class CustomAttributes
 			{
@@ -10357,7 +10283,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=400;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -10399,7 +10325,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=401;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.10658169;
 			class CustomAttributes
 			{
@@ -10439,8 +10365,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""DualaFireHQ"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="DualaFireHQ";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=403;
 			type="FlagPole_F";
@@ -10486,7 +10410,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=405;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.12799835;
 			class CustomAttributes
 			{
@@ -10570,7 +10494,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=407;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.057003021;
 			class CustomAttributes
 			{
@@ -10611,8 +10535,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Swonto"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Swonto";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=409;
 			type="FlagPole_F";
@@ -10698,7 +10620,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=411;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.24295139;
 			class CustomAttributes
 			{
@@ -10739,8 +10661,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mochiwo"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mochiwo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=412;
 			type="FlagPole_F";
@@ -10826,7 +10746,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=414;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.012000084;
 			class CustomAttributes
 			{
@@ -10868,7 +10788,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=415;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.13284683;
 			class CustomAttributes
 			{
@@ -10909,8 +10829,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Polani"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Polani";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=416;
 			type="FlagPole_F";
@@ -10996,7 +10914,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=418;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.19545507;
 			class CustomAttributes
 			{
@@ -11038,7 +10956,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=420;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.14484406;
 			class CustomAttributes
 			{
@@ -11080,7 +10998,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=421;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00022983551;
 			class CustomAttributes
 			{
@@ -11121,8 +11039,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kiera Yanga"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="KieraYanga";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=424;
 			type="FlagPole_F";
@@ -11209,7 +11125,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=426;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.0016918182;
 			class CustomAttributes
 			{
@@ -11251,7 +11167,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=427;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.0082540512;
 			class CustomAttributes
 			{
@@ -11293,7 +11209,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=428;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00014972687;
 			class CustomAttributes
 			{
@@ -11334,8 +11250,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mangomak"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mangomak";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=430;
 			type="FlagPole_F";
@@ -11422,7 +11336,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=432;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00017738342;
 			class CustomAttributes
 			{
@@ -11464,7 +11378,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=433;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.11375046;
 			class CustomAttributes
 			{
@@ -11506,7 +11420,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=434;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.014347076;
 			class CustomAttributes
 			{
@@ -11548,7 +11462,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=435;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -11589,8 +11503,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chaba"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chaba";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=437;
 			type="FlagPole_F";
@@ -11677,7 +11589,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=439;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.14469528;
 			class CustomAttributes
 			{
@@ -11719,7 +11631,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=440;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.13742161;
 			class CustomAttributes
 			{
@@ -11760,8 +11672,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kaalom"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kaalom";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=442;
 			type="FlagPole_F";
@@ -11847,7 +11757,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=444;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.29073381;
 			class CustomAttributes
 			{
@@ -11889,7 +11799,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=445;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-6.7710876e-005;
 			class CustomAttributes
 			{
@@ -11930,8 +11840,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""MacHida"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="MacHida";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=447;
 			type="FlagPole_F";
@@ -12018,7 +11926,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=449;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.00042915344;
 			class CustomAttributes
 			{
@@ -12060,7 +11968,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=450;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.13873529;
 			class CustomAttributes
 			{
@@ -12102,7 +12010,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=451;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.00059127808;
 			class CustomAttributes
 			{
@@ -12143,8 +12051,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camp Bokoro"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="CampBokoro";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=453;
 			type="FlagPole_F";
@@ -12231,7 +12137,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=455;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.17608976;
 			class CustomAttributes
 			{
@@ -12273,7 +12179,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=456;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.006986618;
 			class CustomAttributes
 			{
@@ -12314,8 +12220,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Xibo"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Xibo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=459;
 			type="FlagPole_F";
@@ -12401,7 +12305,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=461;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -12443,7 +12347,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=462;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12484,7 +12388,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=463;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.44050026;
 			class CustomAttributes
 			{
@@ -12525,8 +12429,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Zeelor"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Zeelor";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=465;
 			type="FlagPole_F";
@@ -12612,7 +12514,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=467;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.65243912;
 			class CustomAttributes
 			{
@@ -12654,7 +12556,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=468;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.1778717;
 			class CustomAttributes
 			{
@@ -12696,7 +12598,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=469;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.47708893;
 			class CustomAttributes
 			{
@@ -12737,8 +12639,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Canto"", resistance, 15, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Canto";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=474;
 			type="FlagPole_F";
@@ -12824,7 +12724,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=476;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=4.7683716e-006;
 			class CustomAttributes
 			{
@@ -12866,7 +12766,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=477;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -12908,7 +12808,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=479;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-7.1525574e-005;
 			class CustomAttributes
 			{
@@ -12950,7 +12850,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=480;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.13455582;
 			class CustomAttributes
 			{
@@ -12991,8 +12891,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Molatia"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoMolatia";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=482;
 			type="FlagPole_F";
@@ -13079,7 +12977,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=484;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.056442261;
 			class CustomAttributes
 			{
@@ -13121,7 +13019,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=485;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.31904221;
 			class CustomAttributes
 			{
@@ -13163,7 +13061,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=486;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13202,8 +13100,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cova"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Cova";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=488;
 			type="FlagPole_F";
@@ -13290,7 +13186,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=490;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.14337158;
 			class CustomAttributes
 			{
@@ -13332,7 +13228,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=491;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.5376358;
 			class CustomAttributes
 			{
@@ -13373,8 +13269,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Maluri"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Maluri";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=493;
 			type="FlagPole_F";
@@ -13460,7 +13354,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=495;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.72290039;
 			class CustomAttributes
 			{
@@ -13502,7 +13396,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=496;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.23333359;
 			class CustomAttributes
 			{
@@ -13543,8 +13437,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pumado"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pumado";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=498;
 			type="FlagPole_F";
@@ -13631,7 +13523,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=500;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.0081233978;
 			class CustomAttributes
 			{
@@ -13673,7 +13565,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=501;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -13715,7 +13607,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=502;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.017972946;
 			class CustomAttributes
 			{
@@ -13756,8 +13648,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Casinda"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Casinda";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=504;
 			type="FlagPole_F";
@@ -13844,7 +13734,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=506;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.357687;
 			class CustomAttributes
 			{
@@ -13886,7 +13776,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=507;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -13927,8 +13817,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Engor"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Engor";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=509;
 			type="FlagPole_F";
@@ -14014,7 +13902,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=511;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.094115257;
 			class CustomAttributes
 			{
@@ -14056,7 +13944,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=512;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14097,7 +13985,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=513;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.21427536;
 			class CustomAttributes
 			{
@@ -14139,7 +14027,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=514;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.1552734e-005;
 			class CustomAttributes
 			{
@@ -14180,8 +14068,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bolabongo"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bolabongo";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=516;
 			type="FlagPole_F";
@@ -14267,7 +14153,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=518;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -14309,7 +14195,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=519;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -14351,7 +14237,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=520;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -14393,7 +14279,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=521;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
@@ -14435,7 +14321,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=522;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.14773655;
 			class CustomAttributes
 			{
@@ -14466,7 +14352,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5062.6016,17.156805,5104.7305};
+				position[]={5058.0356,17.156786,5107.3022};
 				angles[]={0,4.6843066,0};
 			};
 			side="Empty";
@@ -14476,11 +14362,10 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Naromaru"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Naromaru";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=524;
 			type="FlagPole_F";
+			atlOffset=-1.9073486e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14551,8 +14436,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5182.7739,16.621803,5248.6787};
-				angles[]={0,0.017211042,0};
+				position[]={5182.7739,16.621803,5248.6792};
+				angles[]={0,0.017208947,0};
 			};
 			side="Empty";
 			flags=5;
@@ -14562,7 +14447,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=526;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
@@ -14604,7 +14489,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=527;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14645,7 +14530,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=528;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.036000252;
 			class CustomAttributes
 			{
@@ -14686,8 +14571,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Papunya"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Papunya";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=530;
 			type="FlagPole_F";
@@ -14773,7 +14656,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=532;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.070106506;
 			class CustomAttributes
 			{
@@ -14804,8 +14687,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3554.9346,85.886078,5111.4033};
-				angles[]={0,4.8847713,0};
+				position[]={3554.9351,85.885941,5111.4028};
+				angles[]={0,4.8847752,0};
 			};
 			side="Empty";
 			flags=1;
@@ -14815,8 +14698,8 @@ class Mission
 				disableSimulation=1;
 			};
 			id=533;
-			type="Land_i_House_Small_02_V1_F";
-			atlOffset=0.63000488;
+			type="Land_BagBunker_Tower_F";
+			atlOffset=0.62999725;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14856,8 +14739,6 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bobadah"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bobadah";
-				createAsSimpleObject=0;
-				disableSimulation=1;
 			};
 			id=535;
 			type="FlagPole_F";
@@ -14943,7 +14824,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=537;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=0.040565491;
 			class CustomAttributes
 			{
@@ -14985,7 +14866,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=538;
-			type="Land_i_House_Small_02_V1_F";
+			type="Land_BagBunker_Tower_F";
 			atlOffset=-0.26300049;
 			class CustomAttributes
 			{
