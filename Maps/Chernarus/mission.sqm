@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10084.093,281.93225,5071.2041};
-		dir[]={0.068332449,-0.090984158,0.99351066};
-		up[]={0.0062431456,0.99585164,0.090772398};
-		aside[]={0.99764675,1.5290425e-007,-0.068616562};
+		pos[]={6364.8379,324.24014,7496.9482};
+		dir[]={-0.8605321,-0.12197033,0.49460214};
+		up[]={-0.10575449,0.99252844,0.060783278};
+		aside[]={0.49831742,5.5826968e-007,0.86700112};
 	};
 };
 binarizationWanted=0;
@@ -332,10 +332,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vybor"", resistance, 25, 70] execVM ""Common\Init\Init_Location.sqf""";
 				name="Vybor";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=19;
 			type="FlagPole_F";
 			atlOffset=9.1552734e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item18
 		{
@@ -352,10 +377,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Gorka"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Gorka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=20;
 			type="FlagPole_F";
 			atlOffset=-0.00033569336;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item19
 		{
@@ -372,10 +422,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Guglovo"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Guglovo";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=21;
 			type="FlagPole_F";
 			atlOffset=-0.00015258789;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item20
 		{
@@ -392,9 +467,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lopatino"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lopatino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=23;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item21
 		{
@@ -411,9 +511,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Gvozdno"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Gvozdno";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=24;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item22
 		{
@@ -430,9 +555,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Nadezhdino"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Nadezhdino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=25;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item23
 		{
@@ -449,10 +599,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mogilevka"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mogilevka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=26;
 			type="FlagPole_F";
 			atlOffset=9.1552734e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item24
 		{
@@ -469,10 +644,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Solnichniy"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Solnichniy";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=27;
 			type="FlagPole_F";
 			atlOffset=0.00013637543;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item25
 		{
@@ -489,10 +689,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Berezino"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Berezino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=28;
 			type="FlagPole_F";
 			atlOffset=-3.8146973e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item26
 		{
@@ -509,9 +734,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kamenka"", resistance, 25, 70] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kamenka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=29;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item27
 		{
@@ -528,10 +778,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Krasnostav"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Krasnostav";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=30;
 			type="FlagPole_F";
 			atlOffset=0.04699707;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item28
 		{
@@ -548,10 +823,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pavlovo"", resistance, 25, 70] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pavlovo";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=31;
 			type="FlagPole_F";
 			atlOffset=3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item29
 		{
@@ -568,9 +868,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kozlovka"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kozlovka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=32;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item30
 		{
@@ -586,10 +911,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Prigorodki"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Prigorodki";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=33;
 			type="FlagPole_F";
 			atlOffset=0.68996429;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item31
 		{
@@ -606,10 +956,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Grishino"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Grishino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=34;
 			type="FlagPole_F";
 			atlOffset=-0.0060424805;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item32
 		{
@@ -1749,10 +2124,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Komarovo"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Komarovo";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=160;
 			type="FlagPole_F";
 			atlOffset=0.029587746;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item68
 		{
@@ -1769,10 +2169,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Msta"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Msta";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=161;
 			type="FlagPole_F";
 			atlOffset=3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item69
 		{
@@ -1789,10 +2214,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Dubrovka"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Dubrovka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=162;
 			type="FlagPole_F";
 			atlOffset=7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item70
 		{
@@ -1809,10 +2259,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kamyshovo"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kamyshovo";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=163;
 			type="FlagPole_F";
 			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item71
 		{
@@ -1829,9 +2304,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chernogorsk"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chernogorsk";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=164;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item72
 		{
@@ -1848,9 +2348,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Olsha"", resistance, 15, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Olsha";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=165;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item73
 		{
@@ -1866,10 +2391,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Elektrozavodsk"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Elektrozavodsk";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=166;
 			type="FlagPole_F";
 			atlOffset=0.9460001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item74
 		{
@@ -1886,9 +2436,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Zelenogorsk"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Zelenogorsk";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=167;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item75
 		{
@@ -1905,10 +2480,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Shakhovka"", resistance, 25, 70] execVM ""Common\Init\Init_Location.sqf""";
 				name="Shakhovka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=168;
 			type="FlagPole_F";
 			atlOffset=4.5776367e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item76
 		{
@@ -1925,10 +2525,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Polana"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Polana";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=169;
 			type="FlagPole_F";
 			atlOffset=-0.011489868;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item77
 		{
@@ -1945,10 +2570,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Khelm"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Khelm";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=170;
 			type="FlagPole_F";
 			atlOffset=0.012771606;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item78
 		{
@@ -1965,9 +2615,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Stary Sobor"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="StarySobor";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=171;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item79
 		{
@@ -1984,10 +2659,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pogorevka"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pogorevka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=172;
 			type="FlagPole_F";
 			atlOffset=3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item80
 		{
@@ -2004,10 +2704,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kabanino"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kabanino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=173;
 			type="FlagPole_F";
 			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item81
 		{
@@ -2024,10 +2749,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Myshkino"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Myshkino";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=174;
 			type="FlagPole_F";
 			atlOffset=-1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item82
 		{
@@ -4493,9 +5243,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Nizhnoye"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Nizhnoye";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=173;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item139
 		{
@@ -4719,10 +5494,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Staroye"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Staroye";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=179;
 			type="FlagPole_F";
 			atlOffset=9.1552734e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item145
 		{
@@ -4780,10 +5580,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Orlovets"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Orlovets";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=181;
 			type="FlagPole_F";
 			atlOffset=0.00032043457;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item147
 		{
@@ -5260,9 +6085,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vyshnoye"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Vyshnoye";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=194;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item160
 		{
@@ -5402,10 +6252,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Balota"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Balota";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=198;
 			type="FlagPole_F";
 			atlOffset=0.050023079;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item164
 		{
@@ -5503,10 +6378,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pusta"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pusta";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=201;
 			type="FlagPole_F";
 			atlOffset=0.68899536;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item167
 		{
@@ -5605,9 +6505,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pustoshka"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pustoshka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=204;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item170
 		{
@@ -5706,10 +6631,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Dolina"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Dolina";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=207;
 			type="FlagPole_F";
 			atlOffset=0.00035858154;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item173
 		{
@@ -5807,10 +6757,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Petrovka"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Petrovka";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=210;
 			type="FlagPole_F";
 			atlOffset=0.32000732;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item176
 		{
@@ -5950,9 +6925,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Airfield"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Airfield";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=214;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item180
 		{
@@ -6092,9 +7092,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Novy Sobor"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="NovySobor";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=218;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item184
 		{
@@ -6275,10 +7300,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Altar"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Altar";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=223;
 			type="FlagPole_F";
 			atlOffset=0.12658691;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item189
 		{
@@ -6335,10 +7385,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Tulga"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Tulga";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=226;
 			type="FlagPole_F";
 			atlOffset=0.43133545;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item191
 		{
@@ -6396,9 +7471,34 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pobeda Dam"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="PobedaDam";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=228;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item193
 		{
@@ -6456,10 +7556,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Devils Castle"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="DevilsCastle";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=231;
 			type="FlagPole_F";
 			atlOffset=3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item195
 		{
@@ -9019,6 +10144,7 @@ class Mission
 				init="nullReturn = [this, ""Fuel Depot"", resistance, 60, 120] execVM ""Common\Init\Init_Location.sqf""; this setVariable [""cti_naval"", true];";
 				name="FuelDepot";
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=335;
 			type="FlagPole_F";
@@ -12223,10 +13349,35 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Wind Farm"", resistance, 60, 120] execVM ""Common\Init\Init_Location.sqf""; this setVariable [""cti_naval"", true];";
 				name="WindFarm";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=412;
 			type="FlagPole_F";
 			atlOffset=0.10578918;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item339
 		{

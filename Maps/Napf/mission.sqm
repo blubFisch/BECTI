@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7883.0615,150.25078,8854.2871};
+		pos[]={7881.7207,164.99142,8827.3662};
 		dir[]={-0.12232294,-0.35725811,0.9259637};
 		up[]={-0.046788562,0.93400425,0.35418147};
 		aside[]={0.99138844,-4.6566129e-009,0.13096575};
@@ -338,6 +338,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Luzern"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Luzern";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=19;
 			type="FlagPole_F";
@@ -358,6 +360,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Airbase"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Airbase";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=20;
 			type="FlagPole_F";
@@ -377,6 +381,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Suhrenfeld"", resistance, 45, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Suhrenfeld";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=21;
 			type="FlagPole_F";
@@ -397,6 +403,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Worb"", resistance, 45, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Worb";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=22;
 			type="FlagPole_F";
@@ -417,6 +425,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Hirsegg"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Hirsegg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=23;
 			type="FlagPole_F";
@@ -436,6 +446,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""NapfCastle"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="NapfCastle";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=24;
 			type="FlagPole_F";
@@ -455,6 +467,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Romoos"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Romoos";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=25;
 			type="FlagPole_F";
@@ -474,6 +488,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Horw"", resistance, 35, 90] execVM ""Common\Init\Init_Location.sqf""";
 				name="Horw";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=26;
 			type="FlagPole_F";
@@ -494,6 +510,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Liestal"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Liestal";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=27;
 			type="FlagPole_F";
@@ -513,6 +531,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""InternationalAir"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="InternationalAir";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=28;
 			type="FlagPole_F";
@@ -533,6 +553,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ramsebode"", resistance, 45, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ramsebode";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=29;
 			type="FlagPole_F";
@@ -552,6 +574,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Wolhusen"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Wolhusen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=30;
 			type="FlagPole_F";
@@ -572,6 +596,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Hindelbank"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Hindelbank";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=31;
 			type="FlagPole_F";
@@ -592,6 +618,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Sorenberg"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Sorenberg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=32;
 			type="FlagPole_F";
@@ -612,6 +640,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""SouthAirstrip"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="SouthAirstrip";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=33;
 			type="FlagPole_F";
@@ -631,6 +661,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Schangen"", resistance, 45, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Schangen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=34;
 			type="FlagPole_F";
@@ -1725,6 +1757,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Eichmatt"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Eichmatt";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=160;
 			type="FlagPole_F";
@@ -1743,6 +1777,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bernerplatte"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bernerplatte";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=161;
 			type="FlagPole_F";
@@ -1763,6 +1799,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pfeffikon"", resistance, 30, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pfeffikon";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=162;
 			type="FlagPole_F";
@@ -1781,6 +1819,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Muttenz"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Muttenz";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=163;
 			type="FlagPole_F";
@@ -1800,6 +1840,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Farnen"", resistance, 40, 90] execVM ""Common\Init\Init_Location.sqf""";
 				name="Farnen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=164;
 			type="FlagPole_F";
@@ -1820,6 +1862,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Griswil"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Griswil";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=165;
 			type="FlagPole_F";
@@ -1839,6 +1883,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lenzburg"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lenzburg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=167;
 			type="FlagPole_F";
@@ -1859,6 +1905,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Alpnach"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Alpnach";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=168;
 			type="FlagPole_F";
@@ -1878,6 +1926,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Sachseln"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Sachseln";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=169;
 			type="FlagPole_F";
@@ -1897,6 +1947,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Hafen"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Hafen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=170;
 			type="FlagPole_F";
@@ -1916,6 +1968,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Hungerschwand"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Hungerschwand";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=171;
 			type="FlagPole_F";
@@ -1935,6 +1989,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lausen"", resistance, 40, 90] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lausen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=172;
 			type="FlagPole_F";
@@ -1954,6 +2010,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Olten"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Olten";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=173;
 			type="FlagPole_F";
@@ -1973,6 +2031,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""NeueWelt"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="NeueWelt";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=174;
 			type="FlagPole_F";
@@ -6354,6 +6414,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Seltisberg"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Seltisberg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=230;
 			type="FlagPole_F";
@@ -7114,6 +7176,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Wind Farm"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""; this setVariable [""cti_naval"", true];";
 				name="WindFarm";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=697;
 			type="FlagPole_F";
@@ -9021,6 +9085,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Oil Rig"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""; this setVariable [""cti_naval"", true];";
 				name="OilRig";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=818;
 			type="FlagPole_F";
@@ -10927,6 +10993,7 @@ class Mission
 				init="nullReturn = [this, ""Fuel Depot"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""; this setVariable [""cti_naval"", true];";
 				name="FuelDepot";
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=921;
 			type="FlagPole_F";
@@ -24998,6 +25065,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Froburg"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Froburg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1536;
 			type="FlagPole_F";
@@ -25099,6 +25168,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Village"", resistance, 30, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Village";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1539;
 			type="FlagPole_F";
@@ -25200,6 +25271,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Brienz"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Brienz";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1542;
 			type="FlagPole_F";
@@ -25302,6 +25375,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Goldwil"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Goldwil";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1545;
 			type="FlagPole_F";
@@ -25445,6 +25520,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Schimbrig"", resistance, 25, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Schimbrig";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1548;
 			type="FlagPole_F";
@@ -25586,6 +25663,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Feldmoos"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Feldmoos";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1552;
 			type="FlagPole_F";
@@ -25730,6 +25809,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Eggwil"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Eggwil";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1556;
 			type="FlagPole_F";
@@ -25957,6 +26038,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chatzbach"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chatzbach";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1562;
 			type="FlagPole_F";
@@ -26099,6 +26182,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bruderholz"", resistance, 30, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bruderholz";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1566;
 			type="FlagPole_F";
@@ -26243,6 +26328,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Signau"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Signau";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1570;
 			type="FlagPole_F";
@@ -26385,6 +26472,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Huttwil"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Huttwil";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1574;
 			type="FlagPole_F";
@@ -26527,6 +26616,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bubendorf"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bubendorf";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1578;
 			type="FlagPole_F";
@@ -27749,6 +27840,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Trueb"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Trueb";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1613;
 			type="FlagPole_F";
@@ -28285,6 +28378,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mayak"", resistance, 15, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mayak";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1636;
 			type="FlagPole_F";
@@ -28386,6 +28481,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Nordstern"", resistance, 15, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Nordstern";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1642;
 			type="FlagPole_F";
@@ -28488,6 +28585,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Hasle"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Hasle";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1645;
 			type="FlagPole_F";
@@ -28630,6 +28729,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Waldegg"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Waldegg";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1649;
 			type="FlagPole_F";
@@ -28732,6 +28833,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ittingen"", resistance, 20, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ittingen";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1653;
 			type="FlagPole_F";
@@ -28874,6 +28977,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Unterdorf"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Unterdorf";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1657;
 			type="FlagPole_F";
@@ -29019,6 +29124,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Schrattendamm"", resistance, 35, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Schrattendamm";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=1661;
 			type="FlagPole_F";
