@@ -521,9 +521,9 @@ CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
 CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
-CTI_BASE_DEFENSES_AUTO_RANGE = 250; //--- Range from the nearest barrack at which AI may auto man a defense
-CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 250; //--- Range needed for a defense to be able to rearm at a service point
-CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 350; //--- Delay after which an empty defense is considered empty
+CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
+CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
+CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
 CTI_BASE_DEFENSES_SOLD_COEF = 0.25; //--- The player will get a fund return based on the defense price * coef when a defense is sold
 
 //--- Base: HQ
