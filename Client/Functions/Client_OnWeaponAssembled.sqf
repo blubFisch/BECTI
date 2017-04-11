@@ -44,7 +44,8 @@ _ruins = "";
 _defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]]; */
 
 _defense call CTI_CO_FNC_UnitCreated;
-if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select 1) >> "artilleryScanner") > 0 ) then {
+//if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select 1) >> "artilleryScanner") > 0 ) then {
+if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && (_defense isKindOf "StaticMortar") ) then { 
 	(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 	_defense setVariable ["_properly_created", true, true]; //-- set _properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers 
 };
