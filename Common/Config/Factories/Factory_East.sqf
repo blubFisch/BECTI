@@ -1298,17 +1298,17 @@ if (CTI_RHS_ADDON > 0) then {
 //Universal RHS
 /*_u pushBack 'rhs_Mi8AMT_vvsc';*/
 _u pushBack 'rhs_ka60_c';
-_u pushBack 'RHS_Mi8mt_vvsc';
+/*_u pushBack 'RHS_Mi8mt_vvsc';*/
 _u pushBack 'RHS_Mi8mt_cargo_vdv';
 /*_u pushBack 'RHS_Mi8MTV3_vvsc';
 _u pushBack 'RHS_Mi8MTV3_FAB_vvsc';*/
-_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
+/*_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
-_u pushBack 'RHS_Mi8AMTSh_vvsc';
+_u pushBack 'RHS_Mi8AMTSh_vvsc';*/
 _u pushBack 'RHS_Su25SM_vvs';
 /*_u pushBack 'RHS_Su25SM_CAS_vvs';*/
-_u pushBack 'RHS_Mi24V_vvsc';
-_u pushBack 'RHS_Mi24V_FAB_vvsc';
+/*_u pushBack 'RHS_Mi24V_vvsc';*/
+/*_u pushBack 'RHS_Mi24V_FAB_vvsc';*/
 /*_u pushBack 'RHS_Mi24V_UPK23_vvsc';*/
 /*_u pushBack 'RHS_Mi24P_vvsc';
 _u pushBack 'RHS_Mi24P_CAS_vvsc';
@@ -1331,9 +1331,9 @@ _u pushBack 'ofps_RHS_Mi24V_AT_vvsc';
 _u pushBack 'ofps_RHS_Mi8AMTSh_vvsc';
 _u pushBack 'ofps_RHS_Mi8AMTSh_UPK23_vvsc';
 _u pushBack 'ofps_RHS_Mi8MTV3_UPK23_vvsc';
-_u pushBack 'ofps_RHS_Mi8MTV3_FAB_vvsc';
+/*_u pushBack 'ofps_RHS_Mi8MTV3_FAB_vvsc';*/
 _u pushBack 'ofps_RHS_Mi8mt_vvsc';
-_u pushBack 'ofps_RHS_Ka52_UPK23_vvsc';
+/*_u pushBack 'ofps_RHS_Ka52_UPK23_vvsc';*/
 
 };
 
