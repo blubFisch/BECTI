@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1616.8152,175.9789,17007.145};
-		dir[]={-0.03917053,-0.8118636,0.58253843};
-		up[]={-0.054467797,0.58384305,0.81003749};
-		aside[]={0.99774998,4.1647581e-008,0.06708955};
+		pos[]={8797.4277,75.790565,12420.196};
+		dir[]={0.70891434,-0.63671637,-0.30337673};
+		up[]={0.58536929,0.77109694,-0.25050604};
+		aside[]={-0.39343408,-6.4610504e-009,-0.91935533};
 	};
 };
 binarizationWanted=0;
@@ -8190,19 +8190,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17204,8.1211996,3748.5};
+				position[]={17204,8.1207056,3748.5};
 				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=723;
 			type="Land_MilOffices_V1_F";
-			atlOffset=0.034999847;
+			atlOffset=0.034505844;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9538,7 +9537,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=820;
@@ -9828,7 +9826,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=868;
@@ -10368,7 +10365,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=890;
@@ -11483,7 +11479,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=923;
@@ -12783,7 +12778,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=974;
@@ -12993,7 +12987,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=985;
@@ -13035,7 +13028,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=986;
@@ -13077,7 +13069,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=987;
@@ -13530,7 +13521,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1008;
@@ -13571,7 +13561,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1009;
@@ -14618,7 +14607,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1048;
 			type="Land_Pier_addon";
@@ -14976,7 +14964,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1077;
 			type="Land_Pier_addon";
@@ -14994,7 +14981,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1078;
 			type="Land_Pier_addon";
@@ -15012,7 +14998,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1079;
 			type="Land_Pier_addon";
@@ -15030,7 +15015,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1080;
 			type="Land_Pier_addon";
@@ -15048,7 +15032,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1081;
 			type="Land_Pier_addon";
@@ -24826,7 +24809,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1510;
@@ -24910,7 +24892,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1513;

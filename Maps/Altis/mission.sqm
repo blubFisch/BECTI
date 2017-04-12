@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15344.344,109.09171,14108.813};
-		dir[]={0.89334035,-0.44707569,-0.045589283};
-		up[]={0.44649985,0.89449447,-0.02278588};
-		aside[]={-0.050966091,-3.0566298e-008,-0.9987067};
+		pos[]={19488.311,91.30452,22584.365};
+		dir[]={-0.075477853,-0.6357283,0.76821643};
+		up[]={-0.062161852,0.77191275,0.63268435};
+		aside[]={0.9952113,-3.166133e-008,0.097780116};
 	};
 };
 binarizationWanted=0;
@@ -7895,7 +7895,7 @@ class Mission
 			colorName="ColorBlack";
 			a=1050;
 			b=5;
-			angle=334.28787;
+			angle=334.28784;
 			id=280;
 			atlOffset=120.88238;
 		};
@@ -11389,7 +11389,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1741;
@@ -11929,7 +11928,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1754;
@@ -25489,7 +25487,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3442;
@@ -26789,7 +26786,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3473;
@@ -26999,7 +26995,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3478;
@@ -27041,7 +27036,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3479;
@@ -27083,7 +27077,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3480;
@@ -29299,19 +29292,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2554.9004,7.9259481,15564.953};
+				position[]={2554.8999,7.9258413,15564.953};
 				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3535;
 			type="Land_MilOffices_V1_F";
-			atlOffset=0.03499794;
+			atlOffset=0.034891129;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30537,7 +30529,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3566;
 			type="Land_Pier_addon";
@@ -30878,7 +30869,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3586;
 			type="Land_Pier_addon";
@@ -30896,7 +30886,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3587;
 			type="Land_Pier_addon";
@@ -30914,7 +30903,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3588;
 			type="Land_Pier_addon";
@@ -30932,7 +30920,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3589;
 			type="Land_Pier_addon";
@@ -30950,7 +30937,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=3590;
 			type="Land_Pier_addon";
@@ -32430,7 +32416,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3639;
@@ -33879,7 +33864,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3698;
@@ -35493,7 +35477,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3742;
@@ -35535,7 +35518,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3743;
@@ -35577,7 +35559,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3744;
@@ -35619,7 +35600,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3745;
@@ -35781,13 +35761,12 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6719.4492,39.725456,9552.6973};
-				angles[]={0,1.5529037,0};
+				angles[]={0,1.5529066,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3749;
@@ -36077,7 +36056,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3756;
@@ -36617,7 +36595,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3769;
@@ -37036,7 +37013,7 @@ class Mission
 			};
 			id=3779;
 			type="Land_IndPipe1_20m_F";
-			atlOffset=3.2779694;
+			atlOffset=3.2784691;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46748,19 +46725,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6760.1934,37.878815,9592.3066};
-				angles[]={0,4.7123985,0};
+				position[]={6760.1929,37.878315,9592.3066};
+				angles[]={0,4.712389,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4011;
 			type="Land_Airport_Tower_F";
-			atlOffset=0.51095772;
+			atlOffset=0.51045799;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46833,13 +46809,12 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6718.1934,39.58947,9589.3066};
-				angles[]={0,1.5529037,0};
+				angles[]={0,1.5529066,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4013;
@@ -47870,7 +47845,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4153;
@@ -48609,7 +48583,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4173;
@@ -48651,7 +48624,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4174;
@@ -48693,7 +48665,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4175;
@@ -48735,7 +48706,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4176;
@@ -48777,7 +48747,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=4177;

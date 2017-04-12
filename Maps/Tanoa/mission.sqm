@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1739.1305,69.780769,8306.627};
-		dir[]={-0.66195327,-0.58797771,0.46486929};
-		up[]={-0.4811781,0.80887675,0.3379162};
-		aside[]={0.57470953,3.5535777e-008,0.81836069};
+		pos[]={7462.0474,54.704781,2705.6472};
+		dir[]={-0.38814738,-0.32423413,-0.86269027};
+		up[]={-0.13303953,0.94597292,-0.29569098};
+		aside[]={-0.91195482,7.4505806e-008,0.41031268};
 	};
 };
 binarizationWanted=0;
@@ -3110,6 +3110,7 @@ class Mission
 			};
 			id=170;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3274,6 +3275,7 @@ class Mission
 			};
 			id=174;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=1.1920929e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3315,6 +3317,7 @@ class Mission
 			};
 			id=175;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3438,6 +3441,7 @@ class Mission
 			};
 			id=178;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3520,6 +3524,7 @@ class Mission
 			};
 			id=180;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3561,6 +3566,7 @@ class Mission
 			};
 			id=181;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3602,6 +3608,7 @@ class Mission
 			};
 			id=183;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3643,6 +3650,7 @@ class Mission
 			};
 			id=185;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3807,6 +3815,7 @@ class Mission
 			};
 			id=190;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3848,6 +3857,7 @@ class Mission
 			};
 			id=191;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3971,6 +3981,7 @@ class Mission
 			};
 			id=195;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4012,6 +4023,7 @@ class Mission
 			};
 			id=196;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4176,6 +4188,7 @@ class Mission
 			};
 			id=200;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4258,6 +4271,7 @@ class Mission
 			};
 			id=202;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4340,6 +4354,7 @@ class Mission
 			};
 			id=204;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4463,6 +4478,7 @@ class Mission
 			};
 			id=208;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4627,6 +4643,7 @@ class Mission
 			};
 			id=212;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4750,6 +4767,7 @@ class Mission
 			};
 			id=215;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4791,6 +4809,7 @@ class Mission
 			};
 			id=216;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4832,6 +4851,7 @@ class Mission
 			};
 			id=217;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6071,6 +6091,7 @@ class Mission
 			};
 			id=189;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6141,7 +6162,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12752.945,13.253119,7257.7373};
+				position[]={12752.945,13.25312,7257.7373};
 				angles[]={0.0079935296,4.9523964,6.2086577};
 			};
 			side="Empty";
@@ -6153,6 +6174,7 @@ class Mission
 			};
 			id=191;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6239,6 +6261,7 @@ class Mission
 			};
 			id=193;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6410,6 +6433,7 @@ class Mission
 			};
 			id=197;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6581,6 +6605,7 @@ class Mission
 			};
 			id=201;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6872,6 +6897,7 @@ class Mission
 			};
 			id=213;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6957,6 +6983,7 @@ class Mission
 			};
 			id=215;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7291,6 +7318,7 @@ class Mission
 			};
 			id=224;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8040,6 +8068,7 @@ class Mission
 			};
 			id=246;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8081,6 +8110,7 @@ class Mission
 			};
 			id=248;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.1920929e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8286,6 +8316,7 @@ class Mission
 			};
 			id=254;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8315,7 +8346,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10163.902,14.748137,2665.9797};
+				position[]={10163.902,14.748138,2665.9797};
 				angles[]={6.2033553,4.2702837,6.0781097};
 			};
 			side="Empty";
@@ -8327,6 +8358,7 @@ class Mission
 			};
 			id=255;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8368,6 +8400,7 @@ class Mission
 			};
 			id=256;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8610,7 +8643,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=182;
@@ -8937,18 +8969,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7479,39.011208,2646.25};
+				position[]={7479,39.010841,2646.25};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=196;
 			type="Land_Cargo_Tower_V2_F";
-			atlOffset=1.1509972;
+			atlOffset=1.150631;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11189,7 +11220,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=296;
@@ -14564,18 +14594,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7441.5,37.175484,2683.875};
+				position[]={7441.5,37.175713,2683.875};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=422;
 			type="Land_Airport_02_controlTower_F";
-			atlOffset=1.3301697;
+			atlOffset=0.00014877319;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14612,7 +14641,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=423;
@@ -15723,7 +15751,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=458;
@@ -16182,7 +16209,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=471;
@@ -16224,7 +16250,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=472;
@@ -16266,7 +16291,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=473;
@@ -16558,7 +16582,7 @@ class Mission
 			};
 			id=479;
 			type="Land_Cargo40_grey_F";
-			atlOffset=44.718414;
+			atlOffset=44.71801;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16599,7 +16623,7 @@ class Mission
 			};
 			id=480;
 			type="Land_Cargo40_cyan_F";
-			atlOffset=45.367012;
+			atlOffset=45.366425;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16641,7 +16665,7 @@ class Mission
 			};
 			id=481;
 			type="Land_Cargo40_brick_red_F";
-			atlOffset=1.0967255e-005;
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16683,7 +16707,7 @@ class Mission
 			};
 			id=482;
 			type="Land_Cargo40_blue_F";
-			atlOffset=0.0004401207;
+			atlOffset=0.00043678284;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16724,7 +16748,7 @@ class Mission
 			};
 			id=483;
 			type="Land_Cargo40_light_green_F";
-			atlOffset=44.441666;
+			atlOffset=44.441921;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16754,19 +16778,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={595.25,4.4961996,9601.75};
+				position[]={595.25,4.496562,9601.75};
 				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=499;
 			type="Land_MilOffices_V1_F";
-			atlOffset=48.231636;
+			atlOffset=48.231998;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17216,7 +17239,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=545;
@@ -17424,7 +17446,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=550;
@@ -17548,7 +17569,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=554;
@@ -17883,7 +17903,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=563;
@@ -18208,7 +18227,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={621.75,-5.4652815,9642.75};
+				position[]={621.75,-5.4652805,9642.75};
 			};
 			side="Empty";
 			class Attributes
@@ -18255,7 +18274,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=572;
@@ -18926,7 +18944,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=671;
@@ -19136,7 +19153,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=676;
@@ -19262,7 +19278,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=679;
@@ -19597,7 +19612,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=687;
@@ -19973,7 +19987,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=696;
@@ -21265,7 +21278,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=730;
@@ -21306,7 +21318,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=731;
@@ -30096,7 +30107,7 @@ class Mission
 			colorName="ColorBlack";
 			a=1160;
 			b=5;
-			angle=169.95964;
+			angle=169.95963;
 			id=1022;
 			atlOffset=21.120663;
 		};

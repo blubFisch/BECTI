@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7881.7207,164.99142,8827.3662};
-		dir[]={-0.12232294,-0.35725811,0.9259637};
-		up[]={-0.046788562,0.93400425,0.35418147};
-		aside[]={0.99138844,-4.6566129e-009,0.13096575};
+		pos[]={1994.9031,119.73421,15189.732};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -7869,7 +7869,6 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=723;
@@ -8443,7 +8442,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13338.75,-5.71527,1323.75};
+				position[]={13338.75,-5.7152691,1323.75};
 				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
@@ -9036,7 +9035,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13380.75,-5.4652691,1324};
+				position[]={13380.75,-5.46527,1324};
 			};
 			side="Empty";
 			class Attributes
@@ -9120,19 +9119,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5810.3662,39.011269,19069.992};
-				angles[]={0,1.5529037,0};
+				position[]={5810.3662,39.011093,19069.992};
+				angles[]={0,1.5529066,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=820;
 			type="Land_Cargo_Tower_V2_F";
-			atlOffset=0.13598824;
+			atlOffset=0.13581467;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9417,7 +9415,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=868;
@@ -9957,7 +9954,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=890;
@@ -10376,7 +10372,7 @@ class Mission
 			};
 			id=905;
 			type="Land_IndPipe1_20m_F";
-			atlOffset=3.2779694;
+			atlOffset=3.2781143;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11075,7 +11071,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=923;
@@ -12375,7 +12370,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=974;
@@ -12585,7 +12579,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=985;
@@ -12627,7 +12620,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=986;
@@ -12669,7 +12661,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=987;
@@ -13122,7 +13113,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1008;
@@ -13163,7 +13153,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1009;
@@ -14212,7 +14201,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1048;
 			type="Land_Pier_addon";
@@ -14553,7 +14541,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1077;
 			type="Land_Pier_addon";
@@ -14571,7 +14558,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1078;
 			type="Land_Pier_addon";
@@ -14589,7 +14575,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1079;
 			type="Land_Pier_addon";
@@ -14607,7 +14592,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1080;
 			type="Land_Pier_addon";
@@ -14625,7 +14609,6 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1081;
 			type="Land_Pier_addon";
@@ -24398,19 +24381,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5851.1104,37.164631,19109.602};
-				angles[]={0,4.7123985,0};
+				position[]={5851.1099,37.164486,19109.602};
+				angles[]={0,4.712389,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1510;
 			type="Land_Airport_Tower_F";
-			atlOffset=0.51095963;
+			atlOffset=0.51081467;
 			class CustomAttributes
 			{
 				class Attribute0
