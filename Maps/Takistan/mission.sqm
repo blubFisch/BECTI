@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=406;
+		nextID=414;
 	};
 	class MarkerIDProvider
 	{
@@ -16,13 +16,23 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6593.0459,1695.0898,7318.936};
-		dir[]={0.42443261,-0.60764372,0.67142677};
-		up[]={0.32472223,0.79412818,0.51368904};
-		aside[]={0.84535211,3.5896664e-007,-0.53437555};
+		pos[]={5927.2832,160.70094,7051.7954};
+		dir[]={0.25233415,-0.13144855,0.95868719};
+		up[]={0.033461362,0.99132144,0.127129};
+		aside[]={0.96707821,-5.3221083e-007,-0.25454459};
 	};
 };
 binarizationWanted=0;
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Modules_F",
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Structures_F_Mil_Flags",
+	"A3_Structures_F_Mil_Cargo",
+	"A3_Structures_F_Mil_BagBunker"
+};
 class AddonsMetaData
 {
 	class List
@@ -33,35 +43,35 @@ class AddonsMetaData
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -1370,72 +1380,16 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={223.49609,581.50513,126.94531};
+				position[]={213.64301,584.47314,126.945};
 			};
-			name="HC2_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=99;
-			type="HeadlessClient_F";
-			atlOffset=2.7835083;
-		};
-		class Item52
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={234.69336,580.0946,126.7207};
-			};
-			name="HC3_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=100;
-			type="HeadlessClient_F";
-			atlOffset=0.88122559;
-		};
-		class Item53
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={247.01172,583.80548,127.16797};
-			};
-			name="HC4_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=101;
-			type="HeadlessClient_F";
-			atlOffset=3.0648804;
-		};
-		class Item54
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={256.41797,587.716,127.61719};
-			};
-			name="HC5_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=102;
-			type="HeadlessClient_F";
-			atlOffset=5.7476807;
-		};
-		class Item55
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={213.64258,584.47308,126.94531};
-			};
-			name="HC1_1";
+			name="HeadlessClient";
 			init="this allowDamage false;";
 			isPlayable=1;
 			id=103;
 			type="HeadlessClient_F";
-			atlOffset=4.086731;
+			atlOffset=4.0869751;
 		};
-		class Item56
+		class Item52
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1546,7 +1500,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item57
+		class Item53
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1656,7 +1610,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item58
+		class Item54
 		{
 			dataType="Group";
 			side="East";
@@ -1713,7 +1667,7 @@ class Mission
 			id=210;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item59
+		class Item55
 		{
 			dataType="Group";
 			side="East";
@@ -1770,7 +1724,7 @@ class Mission
 			id=212;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item60
+		class Item56
 		{
 			dataType="Group";
 			side="East";
@@ -1827,7 +1781,7 @@ class Mission
 			id=214;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item61
+		class Item57
 		{
 			dataType="Group";
 			side="East";
@@ -1884,7 +1838,7 @@ class Mission
 			id=216;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item62
+		class Item58
 		{
 			dataType="Group";
 			side="West";
@@ -1940,7 +1894,7 @@ class Mission
 			id=218;
 			atlOffset=0.88116455;
 		};
-		class Item63
+		class Item59
 		{
 			dataType="Group";
 			side="West";
@@ -1996,7 +1950,7 @@ class Mission
 			id=220;
 			atlOffset=0.88122559;
 		};
-		class Item64
+		class Item60
 		{
 			dataType="Group";
 			side="West";
@@ -2052,7 +2006,7 @@ class Mission
 			id=222;
 			atlOffset=0.88116455;
 		};
-		class Item65
+		class Item61
 		{
 			dataType="Group";
 			side="West";
@@ -2108,7 +2062,7 @@ class Mission
 			id=224;
 			atlOffset=0.88122559;
 		};
-		class Item66
+		class Item62
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2123,27 +2077,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Khushab"", resistance, 15, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Khushab";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=226;
 			type="FlagPole_F";
-		};
-		class Item67
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1487,259.4982,5939};
-				angles[]={0,3.1194096,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Khushab,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=227;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2168,7 +2106,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item68
+		class Item63
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1487,262.19141,5939};
+				angles[]={0,3.1194096,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Khushab,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=227;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item64
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2209,12 +2188,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item69
+		class Item65
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1846,225.4442,5626};
+				position[]={1846,228.13739,5626};
 				angles[]={0,5.5650001,0};
 			};
 			side="Empty";
@@ -2225,7 +2204,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=229;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2250,7 +2229,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item70
+		class Item66
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2264,28 +2243,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Jilavur"", resistance, 15, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Jilavur";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=230;
 			type="FlagPole_F";
 			atlOffset=0.38299561;
-		};
-		class Item71
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2361,202.3602,5298};
-				angles[]={0,2.7577276,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Jilavur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=231;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2310,7 +2273,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item72
+		class Item67
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2361,205.05339,5298};
+				angles[]={0,2.7577276,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Jilavur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=231;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item68
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2351,24 +2355,23 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item73
+		class Item69
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2728,197.21181,5180};
+				position[]={2728,199.46901,5180};
 				angles[]={0,2.5717595,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 				init="nullreturn = [Jilavur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 				disableSimulation=1;
 			};
 			id=233;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.43598938;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2393,12 +2396,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item74
+		class Item70
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2426,198.3082,4848};
+				position[]={2426,201.00139,4848};
 				angles[]={0,3.6036985,0};
 			};
 			side="Empty";
@@ -2409,7 +2412,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=234;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2434,7 +2437,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item75
+		class Item71
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2448,28 +2451,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""FeruzAbad"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="FeruzAbad";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=240;
 			type="FlagPole_F";
 			atlOffset=0.29299927;
-		};
-		class Item76
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5109,173.97061,6332};
-				angles[]={6.195919,2.9614048,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [FeruzAbad,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=241;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2494,7 +2481,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item77
+		class Item72
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5109,176.6638,6332};
+				angles[]={6.195919,2.9614048,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [FeruzAbad,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=241;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item73
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2535,12 +2563,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item78
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4983,152.04103,6055};
+				position[]={4983,154.73422,6055};
 				angles[]={0,5.629437,0};
 			};
 			side="Empty";
@@ -2551,7 +2579,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=244;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2576,12 +2604,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item79
+		class Item75
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5343,144.65462,6245};
+				position[]={5343,147.34781,6245};
 				angles[]={0.06981317,4.3135986,6.2133722};
 			};
 			side="Empty";
@@ -2592,7 +2620,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=245;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2617,7 +2645,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item80
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2631,28 +2659,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Anar"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Anar";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=246;
 			type="FlagPole_F";
 			atlOffset=0.30801392;
-		};
-		class Item81
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5958.2456,283.1713,5866.4912};
-				angles[]={0,0.18202509,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Anar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=247;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2677,7 +2689,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item82
+		class Item77
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5958.2456,285.8645,5866.4912};
+				angles[]={0,0.18202509,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Anar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=247;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2718,12 +2771,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item83
+		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6106.2993,307.3223,5499.8794};
+				position[]={6106.2993,310.0155,5499.8794};
 				angles[]={0,4.2806425,0};
 			};
 			side="Empty";
@@ -2734,7 +2787,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=249;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2759,12 +2812,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item84
+		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6239.1973,321.74417,5998.2583};
+				position[]={6239.1973,324.43738,5998.2583};
 				angles[]={0,3.22333,0};
 			};
 			side="Empty";
@@ -2775,7 +2828,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=250;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2800,7 +2853,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item85
+		class Item81
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2815,27 +2868,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Falar"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Falar";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=251;
 			type="FlagPole_F";
-		};
-		class Item86
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5975.0981,120.57203,7580.0049};
-				angles[]={0,1.4876035,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Falar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=252;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2860,7 +2897,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item87
+		class Item82
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5975.0981,123.26523,7580.0049};
+				angles[]={0,1.4876035,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Falar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=252;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item83
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2901,12 +2979,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item88
+		class Item84
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6168,132.27377,7334};
+				position[]={6168,134.96696,7334};
 				angles[]={0,3.0559485,0};
 			};
 			side="Empty";
@@ -2917,7 +2995,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=254;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2942,12 +3020,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item89
+		class Item85
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5963,134.30661,7071};
+				position[]={5963,137.09981,7071};
 				angles[]={0,4.2073951,6.2482786};
 			};
 			side="Empty";
@@ -2958,8 +3036,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=255;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2984,7 +3061,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item90
+		class Item86
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2999,28 +3076,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Shukurkalay"", resistance, 15, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Shukurkalay";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=256;
 			type="FlagPole_F";
-		};
-		class Item91
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1318,257.1282,3762};
-				angles[]={0,0.84533274,6.1086521};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Shukurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=257;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.11598206;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3045,7 +3105,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item92
+		class Item87
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1318,259.70541,3762};
+				angles[]={0,0.84533274,6.1086521};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Shukurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=257;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item88
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3086,12 +3187,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item93
+		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1738,211.9198,3712};
+				position[]={1738,214.713,3712};
 				angles[]={0,5.5650001,0};
 			};
 			side="Empty";
@@ -3102,8 +3203,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=259;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3128,12 +3228,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item94
+		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1320,221.66982,3407};
+				position[]={1320,224.36301,3407};
 				angles[]={0,3.8267915,0};
 			};
 			side="Empty";
@@ -3144,7 +3244,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=260;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3169,7 +3269,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item95
+		class Item91
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3184,11 +3284,36 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chaman"", resistance, 15, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chaman";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=261;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item96
+		class Item92
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3229,12 +3354,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item97
+		class Item93
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={794,238.99741,3013};
+				position[]={794,241.6906,3013};
 				angles[]={0,2.3980649,0};
 			};
 			side="Empty";
@@ -3245,7 +3370,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=264;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3270,12 +3395,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item98
+		class Item94
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={352,254.41701,2809};
+				position[]={352,257.1102,2809};
 				angles[]={0,0.060493112,0};
 			};
 			side="Empty";
@@ -3286,7 +3411,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=265;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3311,7 +3436,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item99
+		class Item95
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3326,11 +3451,36 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kakaru"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kakaru";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=266;
 			type="FlagPole_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item100
+		class Item96
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3372,12 +3522,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item101
+		class Item97
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5360,260.23941,4542};
+				position[]={5360,262.93262,4542};
 				angles[]={0.17453292,4.411459,0};
 			};
 			side="Empty";
@@ -3388,7 +3538,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=269;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3413,24 +3563,23 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item102
+		class Item98
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5303,221.21181,5023};
+				position[]={5303,223.401,5023};
 				angles[]={0,2.6524642,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 				init="nullreturn = [Kakaru,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 				disableSimulation=1;
 			};
 			id=270;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.5039978;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3455,7 +3604,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item103
+		class Item99
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3470,29 +3619,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Sakhe"", resistance, 30, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Sakhe";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=271;
 			type="FlagPole_F";
 			atlOffset=0.016998291;
-		};
-		class Item104
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3663,222.21181,4622};
-				angles[]={0,2.7804384,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Sakhe,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=272;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.12239075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3517,7 +3649,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item105
+		class Item100
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3663,224.78261,4622};
+				angles[]={0,2.7804384,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Sakhe,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=272;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item101
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3559,12 +3732,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item106
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3870,228.70702,4364};
+				position[]={3870,231.40021,4364};
 				angles[]={0,4.5207562,0};
 			};
 			side="Empty";
@@ -3575,7 +3748,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=274;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3600,12 +3773,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item107
+		class Item103
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3519,237.35582,4183};
+				position[]={3519,240.04901,4183};
 				angles[]={0,1.4625248,0};
 			};
 			side="Empty";
@@ -3616,7 +3789,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=275;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3641,7 +3814,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item108
+		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3656,28 +3829,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""ChakChak"", resistance, 30, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="ChakChak";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=276;
 			type="FlagPole_F";
-		};
-		class Item109
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4347,397.50177,1087};
-				angles[]={0.034906585,3.1194096,0.034906585};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [ChakChak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=277;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3702,7 +3858,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item110
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4347,400.29498,1087};
+				angles[]={0.034906585,3.1194096,0.034906585};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [ChakChak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=277;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item106
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3743,24 +3940,23 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item111
+		class Item107
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4650.8853,319.86179,701.21478};
+				position[]={4650.8853,322.55499,701.21478};
 				angles[]={0,2.3267229,0};
 			};
 			side="Empty";
-			flags=1;
+			flags=5;
 			class Attributes
 			{
 				init="nullreturn = [ChakChak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
 				disableSimulation=1;
 			};
 			id=279;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=12.356567;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3785,12 +3981,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item112
+		class Item108
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4185,326.30139,561};
+				position[]={4185,328.9946,561};
 				angles[]={0,1.4356593,0};
 			};
 			side="Empty";
@@ -3801,7 +3997,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=280;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3826,7 +4022,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item113
+		class Item109
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3840,29 +4036,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Huzrutimam"", resistance, 20, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Huzrutimam";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=281;
 			type="FlagPole_F";
 			atlOffset=1.2049866;
-		};
-		class Item114
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5951,308.04898,1308};
-				angles[]={6.2308254,2.478193,6.2308254};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Huzrutimam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=282;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3887,7 +4066,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item115
+		class Item110
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5951,310.84219,1308};
+				angles[]={6.2308254,2.478193,6.2308254};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Huzrutimam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=282;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item111
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3929,12 +4149,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item116
+		class Item112
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6349,290.60178,1185};
+				position[]={6349,293.29498,1185};
 				angles[]={0,4.5449424,0};
 			};
 			side="Empty";
@@ -3945,7 +4165,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=284;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3970,12 +4190,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item117
+		class Item113
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5944,300.91022,1035};
+				position[]={5944,303.60342,1035};
 				angles[]={0,1.295715,6.195919};
 			};
 			side="Empty";
@@ -3986,7 +4206,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=285;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4011,7 +4231,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item118
+		class Item114
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4026,12 +4246,37 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Sultansafe"", resistance, 20, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Sultansafe";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=286;
 			type="FlagPole_F";
 			atlOffset=0.019989014;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item119
+		class Item115
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4073,12 +4318,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item120
+		class Item116
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6713,318.16458,1993};
+				position[]={6713,320.85779,1993};
 				angles[]={0,2.3193681,6.2308254};
 			};
 			side="Empty";
@@ -4089,7 +4334,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=289;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4114,12 +4359,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item121
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6347,352.97379,1939};
+				position[]={6347,355.66699,1939};
 				angles[]={0,0.56862831,0};
 			};
 			side="Empty";
@@ -4130,7 +4375,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=290;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4155,7 +4400,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item122
+		class Item118
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4170,12 +4415,37 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Landay"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Landay";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=291;
 			type="FlagPole_F";
 			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
-		class Item123
+		class Item119
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4217,12 +4487,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item124
+		class Item120
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2207,368.45657,464};
+				position[]={2207,371.24979,464};
 				angles[]={0.08726646,4.2414117,0};
 			};
 			side="Empty";
@@ -4233,8 +4503,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=294;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4259,7 +4528,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item125
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4274,27 +4543,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""LoyManara"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="LoyManara";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=296;
 			type="FlagPole_F";
-		};
-		class Item126
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8289,301.4082,2264};
-				angles[]={0,1.6027949,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [LoyManara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=297;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4319,7 +4572,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item127
+		class Item122
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8289,304.10141,2264};
+				angles[]={0,1.6027949,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [LoyManara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=297;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4360,12 +4654,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item128
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8696,303.45218,2220};
+				position[]={8696,306.14539,2220};
 				angles[]={0,1.7784207,0.052359879};
 			};
 			side="Empty";
@@ -4376,7 +4670,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=299;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4401,12 +4695,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item129
+		class Item125
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8747,332.67401,2570};
+				position[]={8747,335.58621,2570};
 				angles[]={6.1959186,2.6011515,0.08726646};
 			};
 			side="Empty";
@@ -4417,8 +4711,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=300;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.21899414;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4443,7 +4736,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item130
+		class Item126
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4458,27 +4751,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chardarakht"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chardarakht";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=301;
 			type="FlagPole_F";
-		};
-		class Item131
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9928,343.01257,2306};
-				angles[]={0,1.6039925,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Chardarakht,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=302;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4503,7 +4780,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item132
+		class Item127
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9928,345.70578,2306};
+				angles[]={0,1.6039925,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Chardarakht,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=302;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4545,12 +4863,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item133
+		class Item129
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10395,359.27658,2379};
+				position[]={10395,361.96979,2379};
 				angles[]={0,4.8943391,0};
 			};
 			side="Empty";
@@ -4561,7 +4879,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=305;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4586,7 +4904,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item134
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4600,29 +4918,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""HazarBagh"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="HazarBagh";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=306;
 			type="FlagPole_F";
 			atlOffset=0.44900513;
-		};
-		class Item135
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11691,382.06616,2560};
-				angles[]={0,1.217402,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [HazarBagh,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=307;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4647,7 +4948,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item136
+		class Item131
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11691,384.7594,2560};
+				angles[]={0,1.217402,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [HazarBagh,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=307;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4688,7 +5030,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item137
+		class Item133
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4702,28 +5044,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Jaza"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="Jaza";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=313;
 			type="FlagPole_F";
 			atlOffset=0.65365601;
-		};
-		class Item138
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9119,323.61374,1975};
-				angles[]={0.08726646,5.6230841,0.08726646};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Jaza,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=314;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4748,7 +5074,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item139
+		class Item134
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9119,326.30695,1975};
+				angles[]={0.08726646,5.6230841,0.08726646};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Jaza,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=314;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item135
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4790,7 +5157,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item140
+		class Item136
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4805,28 +5172,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Timurkalay"", resistance, 30, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Timurkalay";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=316;
 			type="FlagPole_F";
 			atlOffset=-3.0517578e-005;
-		};
-		class Item141
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8764.7666,274.42126,5176.5786};
-				angles[]={0,5.6004829,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Timurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=317;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4851,7 +5202,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item142
+		class Item137
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8764.7666,277.11447,5176.5786};
+				angles[]={0,5.6004829,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Timurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=317;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item138
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4893,12 +5285,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item143
+		class Item139
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8775,301.87299,5427};
+				position[]={8775,304.56619,5427};
 				angles[]={0,0.36765361,6.0737457};
 			};
 			side="Empty";
@@ -4909,7 +5301,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=319;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4934,12 +5326,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item144
+		class Item140
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9000,249.21201,5611};
+				position[]={9000,252.1162,5611};
 				angles[]={0,1.4823605,0};
 			};
 			side="Empty";
@@ -4950,8 +5342,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=320;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.21099854;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4976,7 +5367,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item145
+		class Item141
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4991,28 +5382,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Garmarud"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Garmarud";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=321;
 			type="FlagPole_F";
 			atlOffset=0.012008667;
-		};
-		class Item146
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8932,203.77061,6923};
-				angles[]={0,1.1271968,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Garmarud,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=322;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5037,7 +5412,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item147
+		class Item142
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8932,206.46381,6923};
+				angles[]={0,1.1271968,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Garmarud,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=322;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item143
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5078,12 +5494,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item148
+		class Item144
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9365,226.95741,6607};
+				position[]={9365,229.6506,6607};
 				angles[]={0,4.8943391,0};
 			};
 			side="Empty";
@@ -5094,7 +5510,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=324;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5119,12 +5535,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item149
+		class Item145
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9133,211.36383,6480};
+				position[]={9133,214.05702,6480};
 				angles[]={0,4.6132436,0};
 			};
 			side="Empty";
@@ -5135,7 +5551,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=325;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5160,7 +5576,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item150
+		class Item146
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5175,27 +5591,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Garmsar"", resistance, 30, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Garmsar";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=326;
 			type="FlagPole_F";
-		};
-		class Item151
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={10488,260.13022,6309};
-				angles[]={0,0.1106656,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Garmsar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=327;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5220,7 +5620,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item152
+		class Item147
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10488,262.82343,6309};
+				angles[]={0,0.1106656,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Garmsar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=327;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item148
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5261,12 +5702,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item153
+		class Item149
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11040,299.98776,6277};
+				position[]={11040,302.68097,6277};
 				angles[]={0,4.8943391,0};
 			};
 			side="Empty";
@@ -5277,7 +5718,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=329;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5302,7 +5743,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item154
+		class Item150
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5317,27 +5758,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Imarat"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Imarat";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=331;
 			type="FlagPole_F";
-		};
-		class Item155
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7983,159.85941,7936};
-				angles[]={0,0.51613575,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Imarat,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=332;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5362,7 +5787,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item156
+		class Item151
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7983,162.5526,7936};
+				angles[]={0,0.51613575,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Imarat,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=332;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item152
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5403,12 +5869,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item157
+		class Item153
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8361,215.4306,8007};
+				position[]={8361,218.12379,8007};
 				angles[]={0,1.8828304,0};
 			};
 			side="Empty";
@@ -5419,7 +5885,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=334;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5444,12 +5910,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item158
+		class Item154
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8376,180.61623,7612};
+				position[]={8376,183.3094,7612};
 				angles[]={0.052359879,3.9723868,0.052359879};
 			};
 			side="Empty";
@@ -5460,8 +5926,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=335;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5486,7 +5951,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item159
+		class Item155
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5501,28 +5966,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Zavarak"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Zavarak";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=336;
 			type="FlagPole_F";
-		};
-		class Item160
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9606,108.57178,11679};
-				angles[]={0,5.4589667,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Zavarak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=337;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5547,7 +5995,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item161
+		class Item156
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9606,111.26498,11679};
+				angles[]={0,5.4589667,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Zavarak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=337;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item157
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5588,12 +6077,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item162
+		class Item158
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10036,125.12861,11394};
+				position[]={10036,127.82181,11394};
 				angles[]={0,5.2988844,0};
 			};
 			side="Empty";
@@ -5604,7 +6093,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=339;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5629,12 +6118,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item163
+		class Item159
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9829,124.9726,11280};
+				position[]={9829,127.6658,11280};
 				angles[]={0,3.3498189,0};
 			};
 			side="Empty";
@@ -5645,7 +6134,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=340;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5670,7 +6159,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item164
+		class Item160
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5685,27 +6174,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Karachinar"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Karachinar";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=343;
 			type="FlagPole_F";
-		};
-		class Item165
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={12227,136.63742,10592};
-				angles[]={0,6.0825014,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Karachinar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=344;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5730,7 +6203,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item166
+		class Item161
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12227,139.33061,10592};
+				angles[]={0,6.0825014,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Karachinar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=344;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item162
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5771,12 +6285,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item167
+		class Item163
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12427,170.21181,10175};
+				position[]={12427,173.25656,10175};
 				angles[]={0,6.0657377,0};
 			};
 			side="Empty";
@@ -5787,8 +6301,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=346;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.3515625;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5813,7 +6326,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item168
+		class Item164
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5828,27 +6341,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Rasman"", resistance, 50, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Rasman";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=348;
 			type="FlagPole_F";
-		};
-		class Item169
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6220.8271,62.858379,11340.968};
-				angles[]={0,0.67651749,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Rasman,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=349;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5873,7 +6370,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item170
+		class Item165
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6220.8271,65.551575,11340.968};
+				angles[]={0,0.67651749,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Rasman,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=349;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item166
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5914,12 +6452,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item171
+		class Item167
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6441,62.6642,11237};
+				position[]={6441,65.357399,11237};
 				angles[]={0,5.2988896,0};
 			};
 			side="Empty";
@@ -5930,7 +6468,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=351;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5955,12 +6493,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item172
+		class Item168
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6108.3057,68.732452,10866.605};
+				position[]={6108.3057,71.425652,10866.605};
 				angles[]={0,5.1047277,0};
 			};
 			side="Empty";
@@ -5971,7 +6509,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=352;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5996,7 +6534,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item173
+		class Item169
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6011,28 +6549,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bastam"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bastam";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=353;
 			type="FlagPole_F";
 			atlOffset=7.6293945e-006;
-		};
-		class Item174
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5651.6812,81.136444,9070.9551};
-				angles[]={0,1.5020354,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Bastam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=354;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6057,7 +6579,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item175
+		class Item170
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5651.6812,83.829643,9070.9551};
+				angles[]={0,1.5020354,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Bastam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=354;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item171
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6098,12 +6661,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item176
+		class Item172
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6242,105.89699,8961};
+				position[]={6242,108.59019,8961};
 				angles[]={0,3.1890895,0};
 			};
 			side="Empty";
@@ -6114,7 +6677,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=356;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6139,12 +6702,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item177
+		class Item173
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5738,97.742584,8765};
+				position[]={5738,100.53578,8765};
 				angles[]={0,4.2977576,0};
 			};
 			side="Empty";
@@ -6155,8 +6718,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=357;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.099998474;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6181,7 +6743,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item178
+		class Item174
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6196,28 +6758,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Shamali"", resistance, 15, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Shamali";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=360;
 			type="FlagPole_F";
 			atlOffset=-1.9073486e-006;
-		};
-		class Item179
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4162,27.757404,11599};
-				angles[]={0,4.586937,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Shamali,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=361;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6242,7 +6788,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item180
+		class Item175
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4162,30.450602,11599};
+				angles[]={0,4.586937,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Shamali,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=361;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item176
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6283,12 +6870,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item181
+		class Item177
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4287.0635,48.576698,11842.171};
+				position[]={4287.0635,51.269894,11842.171};
 				angles[]={0,2.78949,0.052359879};
 			};
 			side="Empty";
@@ -6299,7 +6886,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=363;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6324,7 +6911,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item182
+		class Item178
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6339,28 +6926,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Nagara"", resistance, 40, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Nagara";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=364;
 			type="FlagPole_F";
 			atlOffset=-3.8146973e-006;
-		};
-		class Item183
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3211,87.9086,9736};
-				angles[]={0,1.8354501,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Nagara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=365;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6385,7 +6956,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item184
+		class Item179
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3211,90.601799,9736};
+				angles[]={0,1.8354501,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Nagara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=365;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item180
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6426,12 +7038,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item185
+		class Item181
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3369,53.568584,10112};
+				position[]={3369,56.311779,10112};
 				angles[]={6.2482791,2.6886621,0};
 			};
 			side="Empty";
@@ -6442,8 +7054,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=367;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.049999237;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6468,12 +7079,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item186
+		class Item182
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3014,114.48298,10224};
+				position[]={3014,117.17619,10224};
 				angles[]={6.2308254,2.2920885,6.2308254};
 			};
 			side="Empty";
@@ -6484,8 +7095,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=368;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-7.6293945e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6510,7 +7120,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item187
+		class Item183
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6524,28 +7134,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Nur"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Nur";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=369;
 			type="FlagPole_F";
 			atlOffset=0.76699829;
-		};
-		class Item188
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1959.2715,146.51256,11748.227};
-				angles[]={0,3.5431006,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Nur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=370;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6570,7 +7164,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item189
+		class Item184
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1959.2715,149.20575,11748.227};
+				angles[]={0,3.5431006,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Nur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=370;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item185
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6611,7 +7246,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item190
+		class Item186
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6626,27 +7261,11 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Gospandi"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Gospandi";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=374;
 			type="FlagPole_F";
-		};
-		class Item191
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3565.2739,160.75441,8410.7012};
-				angles[]={0.034906585,5.2823262,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Gospandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=375;
-			type="Land_BagBunker_Tower_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6671,7 +7290,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item192
+		class Item187
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3565.2739,163.4476,8410.7012};
+				angles[]={0.034906585,5.2823262,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Gospandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=375;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item188
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6712,12 +7372,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item193
+		class Item189
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3709.917,146.47621,8797.6094};
+				position[]={3709.917,149.1694,8797.6094};
 				angles[]={0.06981317,1.9094425,0};
 			};
 			side="Empty";
@@ -6728,7 +7388,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=377;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6753,7 +7413,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item194
+		class Item190
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6767,29 +7427,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mulladost"", resistance, 30, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mulladost";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=379;
 			type="FlagPole_F";
 			atlOffset=1.0743713;
-		};
-		class Item195
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={1867,339.41199,7872};
-				angles[]={0,1.9859403,6.0911989};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Mulladost,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=380;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.12301636;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6814,7 +7457,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item196
+		class Item191
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1867,342.22821,7872};
+				angles[]={0,1.9859403,6.0911989};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Mulladost,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=380;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item192
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6855,12 +7539,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item197
+		class Item193
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2311,247.83542,7742};
+				position[]={2311,250.52861,7742};
 				angles[]={0,2.9388533,0};
 			};
 			side="Empty";
@@ -6871,7 +7555,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=382;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6896,12 +7580,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item198
+		class Item194
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1939,310.4942,7504};
+				position[]={1939,313.18741,7504};
 				angles[]={0.19198622,5.3670444,6.0911989};
 			};
 			side="Empty";
@@ -6912,7 +7596,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=383;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6937,7 +7621,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item199
+		class Item195
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6952,29 +7636,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ravanay"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ravanay";
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=390;
 			type="FlagPole_F";
 			atlOffset=0.11380005;
-		};
-		class Item200
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11581,261.96036,8622};
-				angles[]={0,1.6666836,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-				init="nullreturn = [Ravanay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
-				disableSimulation=1;
-			};
-			id=391;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.0089416504;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6999,7 +7666,48 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item201
+		class Item196
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11581,264.64462,8622};
+				angles[]={0,1.6666836,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Ravanay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=391;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item197
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7041,7 +7749,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item202
+		class Item198
 		{
 			dataType="Marker";
 			position[]={114,7.1320011e+016,5514};
@@ -7050,7 +7758,7 @@ class Mission
 			id=397;
 			atlOffset=7.1320011e+016;
 		};
-		class Item203
+		class Item199
 		{
 			dataType="Marker";
 			position[]={13370,10.080322,11225};
@@ -7059,7 +7767,7 @@ class Mission
 			id=398;
 			atlOffset=-180.34866;
 		};
-		class Item204
+		class Item200
 		{
 			dataType="Marker";
 			position[]={4174,448.42334,2830};
@@ -7068,7 +7776,7 @@ class Mission
 			id=399;
 			atlOffset=-122.46545;
 		};
-		class Item205
+		class Item201
 		{
 			dataType="Marker";
 			position[]={4035,164.01599,5630};
@@ -7076,7 +7784,7 @@ class Mission
 			type="Empty";
 			id=400;
 		};
-		class Item206
+		class Item202
 		{
 			dataType="Marker";
 			position[]={7586,7.1320011e+016,5819};
@@ -7085,7 +7793,7 @@ class Mission
 			id=401;
 			atlOffset=7.1320011e+016;
 		};
-		class Item207
+		class Item203
 		{
 			dataType="Marker";
 			position[]={12519,429.71109,2682};
@@ -7093,7 +7801,7 @@ class Mission
 			type="Empty";
 			id=402;
 		};
-		class Item208
+		class Item204
 		{
 			dataType="Marker";
 			position[]={6859,144.48479,9915};
@@ -7101,16 +7809,242 @@ class Mission
 			type="Empty";
 			id=403;
 		};
+		class Item205
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={76.432274,500.7301,646.59406};
+						angles[]={0.17421664,0,0.31838655};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Romeo";
+						isPlayable=1;
+					};
+					id=407;
+					type="O_Soldier_F";
+					atlOffset=0.038360596;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=406;
+			atlOffset=0.038360596;
+		};
+		class Item206
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={77.789696,501.14832,646.76007};
+						angles[]={0.17421664,0,0.31838655};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Sierra";
+						isPlayable=1;
+					};
+					id=409;
+					type="O_Soldier_F";
+					atlOffset=0.038360596;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=408;
+			atlOffset=0.038360596;
+		};
+		class Item207
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={220.97025,566.5412,57.017925};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Romeo";
+						isPlayable=1;
+					};
+					id=411;
+					type="B_Soldier_F";
+					atlOffset=0.91967773;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=410;
+			atlOffset=0.91967773;
+		};
+		class Item208
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={225.61185,565.90698,56.992535};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Sierra";
+						isPlayable=1;
+					};
+					id=413;
+					type="B_Soldier_F";
+					atlOffset=0.92126465;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=412;
+			atlOffset=0.92126465;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=41;
+			nextID=45;
 		};
 		class Links
 		{
-			items=41;
+			items=45;
 			class Item0
 			{
 				linkID=0;
@@ -7516,6 +8450,46 @@ class Mission
 				linkID=40;
 				item0=33;
 				item1=225;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item41
+			{
+				linkID=41;
+				item0=407;
+				item1=34;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item42
+			{
+				linkID=42;
+				item0=409;
+				item1=34;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item43
+			{
+				linkID=43;
+				item0=411;
+				item1=33;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item44
+			{
+				linkID=44;
+				item0=413;
+				item1=33;
 				class CustomData
 				{
 					type="Sync";

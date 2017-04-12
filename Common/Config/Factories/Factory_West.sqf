@@ -1302,12 +1302,12 @@ _u pushBack 'RHS_UH1Y_UNARMED_d';
 _u pushBack 'RHS_UH60M_MEV2_d';
 _u pushBack 'RHS_MELB_MH6M';
 _u pushBack 'RHS_MELB_H6M';
-_u pushBack 'RHS_UH60M_d';
-_u pushBack 'RHS_CH_47F_10';
+/*_u pushBack 'RHS_UH60M_d';*/
+/*_u pushBack 'RHS_CH_47F_10';*/
 _u pushBack 'rhsusf_CH53E_USMC_D';
 /*_u pushBack 'RHS_UH1Y_d';
 _u pushBack 'RHS_UH1Y_FFAR_d';*/
-_u pushBack 'RHS_UH1Y_d_GS';
+/*_u pushBack 'RHS_UH1Y_d_GS';*/
 /*_u pushBack 'RHS_AH1Z_GS';*/
 /*_u pushBack 'RHS_C130J';*/
 _u pushBack 'RHS_MELB_AH6M_L';
@@ -1315,18 +1315,31 @@ _u pushBack 'RHS_A10';
 /*_u pushBack 'RHS_AH64D_noradar_GS';
 _u pushBack 'RHS_AH1Z';
 _u pushBack 'RHS_MELB_AH6M_M';*/
-_u pushBack 'RHS_AH64D_GS';
+/*_u pushBack 'RHS_AH64D_GS';*/
 _u pushBack 'rhsusf_f22';
 /*_u pushBack 'RHS_AH64D_noradar_AA';
 _u pushBack 'RHS_AH1Z_CS';
 _u pushBack 'RHS_AH64D_noradar';
 _u pushBack 'RHS_MELB_AH6M_H';*/
-_u pushBack 'RHS_AH64D_CS';
+/*_u pushBack 'RHS_AH64D_CS';*/
 _u pushBack 'RHS_A10_AT';
 /*_u pushBack 'RHS_AH64DGrey';*/
-_u pushBack 'RHS_AH64D';
-_u pushBack 'RHS_AH64D_AA';
+/*_u pushBack 'RHS_AH64D';
+_u pushBack 'RHS_AH64D_AA';*/
 _u pushBack 'RHS_an2';
+
+
+//--- Blow are OFPS RHS units, this isnt the right place for it as its and should be nested.
+_u pushBack 'ofps_RHS_AH64D';
+_u pushBack 'ofps_RHS_AH64D_GS';
+_u pushBack 'ofps_RHS_AH64D_CS';
+_u pushBack 'ofps_RHS_AH64D_AA';
+/*_u pushBack 'ofps_RHS_AH64D_noradar';*/
+/*_u pushBack 'ofps_RHS_UH60M_d';*/
+/*_u pushBack 'ofps_RHS_AH1Z';
+_u pushBack 'ofps_RHS_AH1Z_CS';*/
+_u pushBack 'ofps_RHS_CH_47F_10';
+_u pushBack 'ofps_RHS_UH1Y_d_GS';
 
 };
 

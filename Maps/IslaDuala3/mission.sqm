@@ -8,14 +8,14 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=547;
+		nextID=558;
 	};
 	class Camera
 	{
-		pos[]={2615.8997,73.512184,7941.1528};
-		dir[]={0.23720551,-0.68487829,0.68896925};
-		up[]={0.22295351,0.72865653,0.64757425};
-		aside[]={0.94553167,-5.4154953e-008,-0.32553717};
+		pos[]={3686.9736,91.372993,8333.1611};
+		dir[]={-0.24339144,-0.36322412,0.89936382};
+		up[]={-0.094885938,0.93169463,0.35061845};
+		aside[]={0.96529073,-2.8664363e-007,0.26123017};
 	};
 };
 binarizationWanted=0;
@@ -79,12 +79,14 @@ class AddonsMetaData
 randomSeed=16390692;
 class ScenarioData
 {
-	author="~FGM~ Reliq";
+	author="Reliq [OFPS]";
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="Conquer the Island BECTI - OFPS.NET - $VERSIONNAME$";
+		overviewText="Crafted by Benny and OFPS Team";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
@@ -106,7 +108,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=381;
+		items=378;
 		class Item0
 		{
 			dataType="Marker";
@@ -282,8 +284,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Numbo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Numbo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=21;
 			type="FlagPole_F";
@@ -327,8 +329,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kwako"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kwako";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=22;
 			type="FlagPole_F";
@@ -372,8 +374,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kirabo"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kirabo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=23;
 			type="FlagPole_F";
@@ -417,8 +419,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Larenga"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Larenga";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=24;
 			type="FlagPole_F";
@@ -460,8 +462,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mawimbela"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mawimbela";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=25;
 			type="FlagPole_F";
@@ -505,8 +507,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lina Prison"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="LinaPrison";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=26;
 			type="FlagPole_F";
@@ -550,8 +552,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kinsella"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kinsella";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=27;
 			type="FlagPole_F";
@@ -595,8 +597,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camara"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Camara";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=28;
 			type="FlagPole_F";
@@ -640,8 +642,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cainna Wind"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="CainnaWind";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=29;
 			type="FlagPole_F";
@@ -685,8 +687,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ramons Plantation"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="RamonsPlantation";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=30;
 			type="FlagPole_F";
@@ -1799,72 +1801,16 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={381.26529,24.189476,6489.4575};
+				position[]={371.41101,25.328613,6489.458};
 			};
-			name="HC2_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=97;
-			type="HeadlessClient_F";
-			atlOffset=1.0585575;
-		};
-		class Item62
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={392.46255,23.664263,6489.2329};
-				angles[]={6.2661862,0,0.071875811};
-			};
-			name="HC3_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=98;
-			type="HeadlessClient_F";
-		};
-		class Item63
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={404.77994,25.695671,6489.6802};
-			};
-			name="HC4_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=99;
-			type="HeadlessClient_F";
-			atlOffset=1.384819;
-		};
-		class Item64
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={414.18619,28.587914,6490.1294};
-			};
-			name="HC5_1";
-			init="this allowDamage false;";
-			isPlayable=1;
-			id=100;
-			type="HeadlessClient_F";
-			atlOffset=4.0804787;
-		};
-		class Item65
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={371.4108,25.328636,6489.4575};
-			};
-			name="HC1_1";
+			name="HeadlessClient";
 			init="this allowDamage false;";
 			isPlayable=1;
 			id=101;
 			type="HeadlessClient_F";
-			atlOffset=1.3704796;
+			atlOffset=1.3703842;
 		};
-		class Item66
+		class Item62
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1879,8 +1825,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Simbala"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Simbala";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=102;
 			type="FlagPole_F";
@@ -1909,7 +1855,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item67
+		class Item63
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1924,8 +1870,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kimbaka"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kimbaka";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=103;
 			type="FlagPole_F";
@@ -1953,7 +1899,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item68
+		class Item64
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1968,8 +1914,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Campolongo"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Campolongo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=104;
 			type="FlagPole_F";
@@ -1998,7 +1944,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item69
+		class Item65
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2039,7 +1985,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item70
+		class Item66
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2080,7 +2026,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item71
+		class Item67
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2121,7 +2067,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item72
+		class Item68
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2162,7 +2108,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item73
+		class Item69
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2203,7 +2149,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item74
+		class Item70
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2244,7 +2190,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item75
+		class Item71
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2285,7 +2231,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item76
+		class Item72
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2326,7 +2272,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item77
+		class Item73
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2368,7 +2314,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item78
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2410,7 +2356,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item79
+		class Item75
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2452,7 +2398,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item80
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2494,7 +2440,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item81
+		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2536,7 +2482,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item82
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2578,7 +2524,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item83
+		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2620,7 +2566,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item84
+		class Item80
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2732,7 +2678,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item85
+		class Item81
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2843,40 +2789,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item86
-		{
-			dataType="Marker";
-			position[]={3746.9424,119.96777,1068.1364};
-			name="alpha_";
-			text=" BECTI BENNY OFPS BETA";
-			type="mil_warning";
-			alpha=0.29548854;
-			id=145;
-			atlOffset=136.08354;
-		};
-		class Item87
-		{
-			dataType="Marker";
-			position[]={9402.7578,107.29834,5162.2383};
-			name="alpha__1";
-			text=" BECTI BENNY OFPS BETA";
-			type="mil_warning";
-			alpha=0.29548854;
-			id=146;
-			atlOffset=162.75833;
-		};
-		class Item88
-		{
-			dataType="Marker";
-			position[]={313.10477,115.31693,2911.0684};
-			name="alpha__2";
-			text=" BECTI BENNY OFPS BETA";
-			type="mil_warning";
-			alpha=0.29548854;
-			id=147;
-			atlOffset=159.03693;
-		};
-		class Item89
+		class Item82
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2917,7 +2830,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item90
+		class Item83
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2958,7 +2871,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item91
+		class Item84
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2999,7 +2912,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item92
+		class Item85
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3040,7 +2953,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item93
+		class Item86
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3081,7 +2994,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item94
+		class Item87
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3122,7 +3035,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item95
+		class Item88
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3163,7 +3076,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item96
+		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3204,7 +3117,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item97
+		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3245,7 +3158,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item98
+		class Item91
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3286,7 +3199,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item99
+		class Item92
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3327,7 +3240,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item100
+		class Item93
 		{
 			dataType="Group";
 			side="East";
@@ -3384,7 +3297,7 @@ class Mission
 			id=167;
 			atlOffset=-9.5367432e-007;
 		};
-		class Item101
+		class Item94
 		{
 			dataType="Group";
 			side="East";
@@ -3441,7 +3354,7 @@ class Mission
 			id=169;
 			atlOffset=-9.5367432e-007;
 		};
-		class Item102
+		class Item95
 		{
 			dataType="Group";
 			side="East";
@@ -3498,7 +3411,7 @@ class Mission
 			id=171;
 			atlOffset=-9.5367432e-007;
 		};
-		class Item103
+		class Item96
 		{
 			dataType="Group";
 			side="East";
@@ -3555,7 +3468,7 @@ class Mission
 			id=173;
 			atlOffset=-0.23057556;
 		};
-		class Item104
+		class Item97
 		{
 			dataType="Group";
 			side="West";
@@ -3611,7 +3524,7 @@ class Mission
 			id=175;
 			atlOffset=0.41972733;
 		};
-		class Item105
+		class Item98
 		{
 			dataType="Group";
 			side="West";
@@ -3667,7 +3580,7 @@ class Mission
 			id=177;
 			atlOffset=0.44403076;
 		};
-		class Item106
+		class Item99
 		{
 			dataType="Group";
 			side="West";
@@ -3723,7 +3636,7 @@ class Mission
 			id=179;
 			atlOffset=0.31980705;
 		};
-		class Item107
+		class Item100
 		{
 			dataType="Group";
 			side="West";
@@ -3780,7 +3693,7 @@ class Mission
 			id=181;
 			atlOffset=0.17867279;
 		};
-		class Item108
+		class Item101
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3795,8 +3708,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Kinsella"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoKinsella";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=183;
 			type="FlagPole_F";
@@ -3825,7 +3738,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item109
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3866,7 +3779,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item110
+		class Item103
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3908,7 +3821,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item111
+		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3949,7 +3862,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item112
+		class Item105
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3991,7 +3904,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item113
+		class Item106
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4032,7 +3945,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item114
+		class Item107
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4073,7 +3986,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item115
+		class Item108
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4114,7 +4027,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item116
+		class Item109
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4155,7 +4068,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item117
+		class Item110
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4196,7 +4109,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item118
+		class Item111
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4211,8 +4124,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vixena Factory"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="VixenaFactory";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=206;
 			type="FlagPole_F";
@@ -4241,7 +4154,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item119
+		class Item112
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4283,7 +4196,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item120
+		class Item113
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4324,7 +4237,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item121
+		class Item114
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4365,7 +4278,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item122
+		class Item115
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4406,7 +4319,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item123
+		class Item116
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4448,7 +4361,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item124
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4489,7 +4402,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item125
+		class Item118
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4504,8 +4417,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Fishala"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Fishala";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=214;
 			type="FlagPole_F";
@@ -4534,7 +4447,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item126
+		class Item119
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4575,7 +4488,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item127
+		class Item120
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4616,7 +4529,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item128
+		class Item121
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4657,7 +4570,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item129
+		class Item122
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4699,7 +4612,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item130
+		class Item123
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4740,7 +4653,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item131
+		class Item124
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4782,7 +4695,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item132
+		class Item125
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4824,7 +4737,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item133
+		class Item126
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4839,8 +4752,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Orellan"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Orellan";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=225;
 			type="FlagPole_F";
@@ -4869,7 +4782,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item134
+		class Item127
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4910,7 +4823,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item135
+		class Item128
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4952,7 +4865,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item136
+		class Item129
 		{
 			dataType="Object";
 			class PositionInfo
@@ -4994,7 +4907,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item137
+		class Item130
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5035,7 +4948,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item138
+		class Item131
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5050,13 +4963,14 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kingala"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kingala";
-				createAsSimpleObject=0;
+				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=230;
 			type="FlagPole_F";
 			atlOffset=0.00015354156;
 		};
-		class Item139
+		class Item132
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5097,7 +5011,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item140
+		class Item133
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5139,7 +5053,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item141
+		class Item134
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5181,7 +5095,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item142
+		class Item135
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5223,7 +5137,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item143
+		class Item136
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5265,7 +5179,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item144
+		class Item137
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5280,8 +5194,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Refugee Camp"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="RefugeeCamp";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=237;
 			type="FlagPole_F";
@@ -5309,7 +5223,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item145
+		class Item138
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5350,7 +5264,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item146
+		class Item139
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5392,7 +5306,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item147
+		class Item140
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5434,7 +5348,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item148
+		class Item141
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5449,8 +5363,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Tasmera"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoTasmera";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=241;
 			type="FlagPole_F";
@@ -5479,7 +5393,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item149
+		class Item142
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5521,7 +5435,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item150
+		class Item143
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5563,7 +5477,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item151
+		class Item144
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5605,7 +5519,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item152
+		class Item145
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5647,7 +5561,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item153
+		class Item146
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5689,7 +5603,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item154
+		class Item147
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5731,7 +5645,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item155
+		class Item148
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5772,7 +5686,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item156
+		class Item149
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5814,7 +5728,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item157
+		class Item150
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5829,8 +5743,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Boona"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Boona";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=260;
 			type="FlagPole_F";
@@ -5859,7 +5773,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item158
+		class Item151
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5901,7 +5815,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item159
+		class Item152
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5943,7 +5857,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item160
+		class Item153
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5985,7 +5899,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item161
+		class Item154
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6027,7 +5941,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item162
+		class Item155
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6069,7 +5983,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item163
+		class Item156
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6084,8 +5998,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Lukasa"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Lukasa";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=267;
 			type="FlagPole_F";
@@ -6114,7 +6028,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item164
+		class Item157
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6155,7 +6069,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item165
+		class Item158
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6197,7 +6111,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item166
+		class Item159
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6239,7 +6153,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item167
+		class Item160
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6254,8 +6168,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Imalia"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Imalia";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=272;
 			type="FlagPole_F";
@@ -6284,7 +6198,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item168
+		class Item161
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6326,7 +6240,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item169
+		class Item162
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6368,7 +6282,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item170
+		class Item163
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6410,7 +6324,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item171
+		class Item164
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6452,7 +6366,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item172
+		class Item165
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6493,7 +6407,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item173
+		class Item166
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6535,7 +6449,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item174
+		class Item167
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6550,8 +6464,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ursana"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ursana";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=282;
 			type="FlagPole_F";
@@ -6580,7 +6494,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item175
+		class Item168
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6622,7 +6536,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item176
+		class Item169
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6664,7 +6578,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item177
+		class Item170
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6706,7 +6620,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item178
+		class Item171
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6748,7 +6662,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item179
+		class Item172
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6789,7 +6703,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item180
+		class Item173
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6831,7 +6745,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item181
+		class Item174
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6872,7 +6786,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item182
+		class Item175
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6914,7 +6828,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item183
+		class Item176
 		{
 			dataType="Object";
 			class PositionInfo
@@ -6929,8 +6843,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Djolan"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Djolan";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=294;
 			type="FlagPole_F";
@@ -6959,7 +6873,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item184
+		class Item177
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7000,7 +6914,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item185
+		class Item178
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7042,7 +6956,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item186
+		class Item179
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7084,7 +6998,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item187
+		class Item180
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7125,7 +7039,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item188
+		class Item181
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7167,7 +7081,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item189
+		class Item182
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7182,8 +7096,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""De Boor"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="DeBoor";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=303;
 			type="FlagPole_F";
@@ -7212,7 +7126,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item190
+		class Item183
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7254,7 +7168,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item191
+		class Item184
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7296,7 +7210,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item192
+		class Item185
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7338,7 +7252,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item193
+		class Item186
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7380,7 +7294,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item194
+		class Item187
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7422,7 +7336,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item195
+		class Item188
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7464,7 +7378,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item196
+		class Item189
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7479,8 +7393,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Katakabi"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Katakabi";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=312;
 			type="FlagPole_F";
@@ -7508,7 +7422,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item197
+		class Item190
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7550,7 +7464,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item198
+		class Item191
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7592,7 +7506,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item199
+		class Item192
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7634,7 +7548,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item200
+		class Item193
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7676,7 +7590,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item201
+		class Item194
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7691,8 +7605,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Vestinga"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Vestinga";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=321;
 			type="FlagPole_F";
@@ -7721,7 +7635,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item202
+		class Item195
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7763,7 +7677,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item203
+		class Item196
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7805,7 +7719,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item204
+		class Item197
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7847,7 +7761,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item205
+		class Item198
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7862,8 +7776,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Spookdorp"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Spookdorp";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=326;
 			type="FlagPole_F";
@@ -7892,7 +7806,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item206
+		class Item199
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7933,7 +7847,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item207
+		class Item200
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7975,7 +7889,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item208
+		class Item201
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8017,7 +7931,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item209
+		class Item202
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8059,7 +7973,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item210
+		class Item203
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8101,7 +8015,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item211
+		class Item204
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8143,7 +8057,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item212
+		class Item205
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8158,8 +8072,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Swonto"", resistance, 10, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoSwonto";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=336;
 			type="FlagPole_F";
@@ -8188,7 +8102,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item213
+		class Item206
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8229,7 +8143,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item214
+		class Item207
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8271,7 +8185,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item215
+		class Item208
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8313,7 +8227,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item216
+		class Item209
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8355,7 +8269,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item217
+		class Item210
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8370,8 +8284,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Caspal"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Caspal";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=342;
 			type="FlagPole_F";
@@ -8400,7 +8314,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item218
+		class Item211
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8441,7 +8355,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item219
+		class Item212
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8482,7 +8396,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item220
+		class Item213
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8524,7 +8438,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item221
+		class Item214
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8566,7 +8480,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item222
+		class Item215
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8608,7 +8522,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item223
+		class Item216
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8650,7 +8564,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item224
+		class Item217
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8692,7 +8606,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item225
+		class Item218
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8707,8 +8621,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Forteza"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Forteza";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=352;
 			type="FlagPole_F";
@@ -8737,7 +8651,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item226
+		class Item219
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8778,7 +8692,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item227
+		class Item220
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8819,7 +8733,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item228
+		class Item221
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8861,7 +8775,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item229
+		class Item222
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8876,8 +8790,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Minesini"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="Minesini";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=356;
 			type="FlagPole_F";
@@ -8906,7 +8820,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item230
+		class Item223
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8947,7 +8861,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item231
+		class Item224
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8989,7 +8903,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item232
+		class Item225
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9031,7 +8945,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item233
+		class Item226
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9073,7 +8987,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item234
+		class Item227
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9114,7 +9028,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item235
+		class Item228
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9129,8 +9043,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Porto Hazena"", resistance, 35, 100] execVM ""Common\Init\Init_Location.sqf""";
 				name="PortoHazena";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=364;
 			type="FlagPole_F";
@@ -9159,7 +9073,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item236
+		class Item229
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9200,7 +9114,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item237
+		class Item230
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9242,7 +9156,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item238
+		class Item231
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9284,7 +9198,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item239
+		class Item232
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9326,7 +9240,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item240
+		class Item233
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9368,7 +9282,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item241
+		class Item234
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9383,8 +9297,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ashlake Resort"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="AshlakeResort";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=371;
 			type="FlagPole_F";
@@ -9412,7 +9326,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item242
+		class Item235
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9453,7 +9367,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item243
+		class Item236
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9495,7 +9409,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item244
+		class Item237
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9537,7 +9451,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item245
+		class Item238
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9552,8 +9466,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pinley"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pinley";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=376;
 			type="FlagPole_F";
@@ -9582,7 +9496,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item246
+		class Item239
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9623,7 +9537,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item247
+		class Item240
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9665,7 +9579,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item248
+		class Item241
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9706,7 +9620,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item249
+		class Item242
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9721,8 +9635,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Tarisol"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Tarisol";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=383;
 			type="FlagPole_F";
@@ -9751,7 +9665,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item250
+		class Item243
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9792,7 +9706,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item251
+		class Item244
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9834,7 +9748,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item252
+		class Item245
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9876,7 +9790,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item253
+		class Item246
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9918,7 +9832,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item254
+		class Item247
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9959,7 +9873,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item255
+		class Item248
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9974,8 +9888,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Ravane"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Ravane";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=390;
 			type="FlagPole_F";
@@ -10004,7 +9918,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item256
+		class Item249
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10045,7 +9959,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item257
+		class Item250
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10087,7 +10001,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item258
+		class Item251
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10128,7 +10042,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item259
+		class Item252
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10143,8 +10057,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kalimbo Army Base"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="KalimboArmybase";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=395;
 			type="FlagPole_F";
@@ -10173,7 +10087,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item260
+		class Item253
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10215,7 +10129,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item261
+		class Item254
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10257,7 +10171,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item262
+		class Item255
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10299,7 +10213,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item263
+		class Item256
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10341,7 +10255,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item264
+		class Item257
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10383,7 +10297,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item265
+		class Item258
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10425,7 +10339,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item266
+		class Item259
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10439,8 +10353,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""DualaFireHQ"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="DualaFireHQ";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=403;
 			type="FlagPole_F";
@@ -10469,7 +10383,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item267
+		class Item260
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10512,7 +10426,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item268
+		class Item261
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10525,6 +10439,7 @@ class Mission
 			class Attributes
 			{
 				init="this setVariable [""cti_depot"", DualaFireHQ];";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=406;
@@ -10553,7 +10468,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item269
+		class Item262
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10596,7 +10511,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item270
+		class Item263
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10611,8 +10526,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Swonto"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Swonto";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=409;
 			type="FlagPole_F";
@@ -10641,7 +10556,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item271
+		class Item264
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10682,7 +10597,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item272
+		class Item265
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10724,7 +10639,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item273
+		class Item266
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10739,8 +10654,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mochiwo"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mochiwo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=412;
 			type="FlagPole_F";
@@ -10769,7 +10684,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item274
+		class Item267
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10810,7 +10725,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item275
+		class Item268
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10852,7 +10767,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item276
+		class Item269
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10894,7 +10809,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item277
+		class Item270
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10909,8 +10824,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Polani"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Polani";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=416;
 			type="FlagPole_F";
@@ -10939,7 +10854,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item278
+		class Item271
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10980,7 +10895,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item279
+		class Item272
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11022,7 +10937,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item280
+		class Item273
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11064,7 +10979,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item281
+		class Item274
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11106,7 +11021,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item282
+		class Item275
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11121,8 +11036,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kiera Yanga"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="KieraYanga";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=424;
 			type="FlagPole_F";
@@ -11151,7 +11066,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item283
+		class Item276
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11193,7 +11108,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item284
+		class Item277
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11235,7 +11150,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item285
+		class Item278
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11277,7 +11192,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item286
+		class Item279
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11319,7 +11234,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item287
+		class Item280
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11334,8 +11249,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Mangomak"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Mangomak";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=430;
 			type="FlagPole_F";
@@ -11364,7 +11279,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item288
+		class Item281
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11406,7 +11321,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item289
+		class Item282
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11448,7 +11363,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item290
+		class Item283
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11490,7 +11405,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item291
+		class Item284
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11532,7 +11447,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item292
+		class Item285
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11574,7 +11489,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item293
+		class Item286
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11589,8 +11504,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Chaba"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Chaba";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=437;
 			type="FlagPole_F";
@@ -11619,7 +11534,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item294
+		class Item287
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11661,7 +11576,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item295
+		class Item288
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11703,7 +11618,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item296
+		class Item289
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11745,7 +11660,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item297
+		class Item290
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11760,8 +11675,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Kaalom"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Kaalom";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=442;
 			type="FlagPole_F";
@@ -11790,7 +11705,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item298
+		class Item291
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11831,7 +11746,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item299
+		class Item292
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11873,7 +11788,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item300
+		class Item293
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11915,7 +11830,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item301
+		class Item294
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11930,8 +11845,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""MacHida"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="MacHida";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=447;
 			type="FlagPole_F";
@@ -11960,7 +11875,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item302
+		class Item295
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12002,7 +11917,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item303
+		class Item296
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12044,7 +11959,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item304
+		class Item297
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12086,7 +12001,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item305
+		class Item298
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12128,7 +12043,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item306
+		class Item299
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12143,8 +12058,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Camp Bokoro"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="CampBokoro";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=453;
 			type="FlagPole_F";
@@ -12173,7 +12088,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item307
+		class Item300
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12215,7 +12130,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item308
+		class Item301
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12257,7 +12172,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item309
+		class Item302
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12299,7 +12214,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item310
+		class Item303
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12314,8 +12229,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Xibo"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Xibo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=459;
 			type="FlagPole_F";
@@ -12344,7 +12259,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item311
+		class Item304
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12385,7 +12300,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item312
+		class Item305
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12427,7 +12342,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item313
+		class Item306
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12468,7 +12383,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item314
+		class Item307
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12510,7 +12425,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item315
+		class Item308
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12525,8 +12440,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Zeelor"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Zeelor";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=465;
 			type="FlagPole_F";
@@ -12555,7 +12470,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item316
+		class Item309
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12596,7 +12511,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item317
+		class Item310
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12638,7 +12553,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item318
+		class Item311
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12680,7 +12595,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item319
+		class Item312
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12722,7 +12637,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item320
+		class Item313
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12737,8 +12652,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Canto"", resistance, 15, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Canto";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=474;
 			type="FlagPole_F";
@@ -12767,7 +12682,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item321
+		class Item314
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12808,7 +12723,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item322
+		class Item315
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12850,7 +12765,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item323
+		class Item316
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12892,7 +12807,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item324
+		class Item317
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12934,7 +12849,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item325
+		class Item318
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12976,7 +12891,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item326
+		class Item319
 		{
 			dataType="Object";
 			class PositionInfo
@@ -12991,8 +12906,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Aeroporto Molatia"", resistance, 15, 50] execVM ""Common\Init\Init_Location.sqf""";
 				name="AeroportoMolatia";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=482;
 			type="FlagPole_F";
@@ -13021,7 +12936,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item327
+		class Item320
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13063,7 +12978,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item328
+		class Item321
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13105,7 +13020,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item329
+		class Item322
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13147,7 +13062,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item330
+		class Item323
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13188,7 +13103,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item331
+		class Item324
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13202,8 +13117,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Cova"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Cova";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=488;
 			type="FlagPole_F";
@@ -13232,7 +13147,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item332
+		class Item325
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13274,7 +13189,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item333
+		class Item326
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13316,7 +13231,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item334
+		class Item327
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13358,7 +13273,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item335
+		class Item328
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13373,8 +13288,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Maluri"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Maluri";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=493;
 			type="FlagPole_F";
@@ -13403,7 +13318,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item336
+		class Item329
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13444,7 +13359,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item337
+		class Item330
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13486,7 +13401,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item338
+		class Item331
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13528,7 +13443,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item339
+		class Item332
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13543,8 +13458,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Pumado"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Pumado";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=498;
 			type="FlagPole_F";
@@ -13573,7 +13488,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item340
+		class Item333
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13615,7 +13530,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item341
+		class Item334
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13657,7 +13572,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item342
+		class Item335
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13699,7 +13614,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item343
+		class Item336
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13741,7 +13656,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item344
+		class Item337
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13756,8 +13671,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Casinda"", resistance, 10, 40] execVM ""Common\Init\Init_Location.sqf""";
 				name="Casinda";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=504;
 			type="FlagPole_F";
@@ -13786,7 +13701,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item345
+		class Item338
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13828,7 +13743,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item346
+		class Item339
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13870,7 +13785,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item347
+		class Item340
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13912,7 +13827,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item348
+		class Item341
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13927,8 +13842,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Engor"", resistance, 25, 80] execVM ""Common\Init\Init_Location.sqf""";
 				name="Engor";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=509;
 			type="FlagPole_F";
@@ -13957,7 +13872,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item349
+		class Item342
 		{
 			dataType="Object";
 			class PositionInfo
@@ -13998,7 +13913,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item350
+		class Item343
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14040,7 +13955,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item351
+		class Item344
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14081,7 +13996,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item352
+		class Item345
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14123,7 +14038,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item353
+		class Item346
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14165,7 +14080,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item354
+		class Item347
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14180,8 +14095,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bolabongo"", resistance, 40, 120] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bolabongo";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=516;
 			type="FlagPole_F";
@@ -14210,7 +14125,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item355
+		class Item348
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14251,7 +14166,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item356
+		class Item349
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14293,7 +14208,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item357
+		class Item350
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14335,7 +14250,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item358
+		class Item351
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14377,7 +14292,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item359
+		class Item352
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14419,7 +14334,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item360
+		class Item353
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14461,12 +14376,12 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item361
+		class Item354
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5062.6016,17.156805,5104.7305};
+				position[]={5058.0356,17.156786,5107.3022};
 				angles[]={0,4.6843066,0};
 			};
 			side="Empty";
@@ -14476,11 +14391,12 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Naromaru"", resistance, 20, 60] execVM ""Common\Init\Init_Location.sqf""";
 				name="Naromaru";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=524;
 			type="FlagPole_F";
+			atlOffset=-1.9073486e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14505,7 +14421,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item362
+		class Item355
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14546,13 +14462,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item363
+		class Item356
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5182.7739,16.621803,5248.6787};
-				angles[]={0,0.017211042,0};
+				position[]={5182.7739,16.621803,5248.6792};
+				angles[]={0,0.017208947,0};
 			};
 			side="Empty";
 			flags=5;
@@ -14588,7 +14504,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item364
+		class Item357
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14629,7 +14545,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item365
+		class Item358
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14671,7 +14587,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item366
+		class Item359
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14686,8 +14602,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Papunya"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Papunya";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=530;
 			type="FlagPole_F";
@@ -14716,7 +14632,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item367
+		class Item360
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14757,7 +14673,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item368
+		class Item361
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14799,13 +14715,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item369
+		class Item362
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3554.9346,85.886078,5111.4033};
-				angles[]={0,4.8847713,0};
+				position[]={3554.9351,85.885941,5111.4028};
+				angles[]={0,4.8847752,0};
 			};
 			side="Empty";
 			flags=1;
@@ -14816,7 +14732,7 @@ class Mission
 			};
 			id=533;
 			type="Land_BagBunker_Tower_F";
-			atlOffset=0.63000488;
+			atlOffset=0.62999725;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14841,7 +14757,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item370
+		class Item363
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14856,8 +14772,8 @@ class Mission
 				skill=0.60000002;
 				init="nullReturn = [this, ""Bobadah"", resistance, 10, 30] execVM ""Common\Init\Init_Location.sqf""";
 				name="Bobadah";
-				createAsSimpleObject=0;
 				disableSimulation=1;
+				dynamicSimulation=1;
 			};
 			id=535;
 			type="FlagPole_F";
@@ -14886,7 +14802,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item371
+		class Item364
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14927,7 +14843,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item372
+		class Item365
 		{
 			dataType="Object";
 			class PositionInfo
@@ -14969,7 +14885,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item373
+		class Item366
 		{
 			dataType="Object";
 			class PositionInfo
@@ -15011,7 +14927,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item374
+		class Item367
 		{
 			dataType="Marker";
 			position[]={8683.1416,16.74,2137.0212};
@@ -15019,7 +14935,7 @@ class Mission
 			type="Empty";
 			id=540;
 		};
-		class Item375
+		class Item368
 		{
 			dataType="Marker";
 			position[]={4120.4448,-85.108398,3936.4644};
@@ -15028,7 +14944,7 @@ class Mission
 			id=541;
 			atlOffset=-100.0684;
 		};
-		class Item376
+		class Item369
 		{
 			dataType="Marker";
 			position[]={6353.8013,-60.290527,5110.9063};
@@ -15037,7 +14953,7 @@ class Mission
 			id=542;
 			atlOffset=-80.130371;
 		};
-		class Item377
+		class Item370
 		{
 			dataType="Marker";
 			position[]={3836.0596,-13.940918,9957.5205};
@@ -15046,7 +14962,7 @@ class Mission
 			id=543;
 			atlOffset=-21.437035;
 		};
-		class Item378
+		class Item371
 		{
 			dataType="Marker";
 			position[]={3797.5098,14.9,7378.5264};
@@ -15054,7 +14970,7 @@ class Mission
 			type="Empty";
 			id=544;
 		};
-		class Item379
+		class Item372
 		{
 			dataType="Marker";
 			position[]={2966.1301,29.642532,1921.3524};
@@ -15063,7 +14979,7 @@ class Mission
 			id=545;
 			atlOffset=-1.9073486e-005;
 		};
-		class Item380
+		class Item373
 		{
 			dataType="Marker";
 			position[]={7599.0195,0.16357422,4637.7529};
@@ -15072,16 +14988,241 @@ class Mission
 			id=546;
 			atlOffset=-8.9573746;
 		};
+		class Item374
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={464.30927,27.33695,6428.4746};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Romeo";
+						isPlayable=1;
+					};
+					id=551;
+					type="B_Soldier_F";
+					atlOffset=0.41852379;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=550;
+			atlOffset=0.41852379;
+		};
+		class Item375
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={468.95087,27.965158,6428.4487};
+						angles[]={6.2731848,0,0.1751854};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Sierra";
+						isPlayable=1;
+					};
+					id=553;
+					type="B_Soldier_F";
+					atlOffset=0.22542381;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=552;
+			atlOffset=0.22542381;
+		};
+		class Item376
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={780.05676,15.018089,6238.2896};
+						angles[]={0.066899881,0,0.18196473};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Romeo";
+						isPlayable=1;
+					};
+					id=555;
+					type="O_Soldier_F";
+					atlOffset=0.1482687;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=554;
+			atlOffset=0.1482687;
+		};
+		class Item377
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={781.41418,15.108463,6238.4556};
+						angles[]={0.066899881,0,0.18196473};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						description="Sierra";
+						isPlayable=1;
+					};
+					id=557;
+					type="O_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=556;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=41;
+			nextID=45;
 		};
 		class Links
 		{
-			items=41;
+			items=45;
 			class Item0
 			{
 				linkID=0;
@@ -15487,6 +15628,46 @@ class Mission
 				linkID=40;
 				item0=31;
 				item1=182;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item41
+			{
+				linkID=41;
+				item0=553;
+				item1=31;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item42
+			{
+				linkID=42;
+				item0=551;
+				item1=31;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item43
+			{
+				linkID=43;
+				item0=555;
+				item1=32;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item44
+			{
+				linkID=44;
+				item0=557;
+				item1=32;
 				class CustomData
 				{
 					type="Sync";

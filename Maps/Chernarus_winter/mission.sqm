@@ -2077,7 +2077,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=166;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2118,8 +2118,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=167;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.016002655;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2160,7 +2159,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=168;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2201,8 +2200,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=169;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.014732361;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2243,8 +2241,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=170;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.071563721;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2285,7 +2282,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=171;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2326,8 +2323,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=172;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2368,7 +2364,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=173;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2409,8 +2405,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=174;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0032200813;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2451,7 +2446,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=175;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2492,8 +2487,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=176;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.010070324;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2534,8 +2528,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=177;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-3.8146973e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2576,8 +2569,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=178;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.039001465;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2618,8 +2610,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=179;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-4.7683716e-007;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2660,8 +2651,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=180;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.002784729;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2702,8 +2692,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=181;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.25721741;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2744,7 +2733,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=182;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2785,8 +2774,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=183;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=1.1444092e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2827,8 +2815,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=184;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.028991699;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2869,7 +2856,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=185;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2910,8 +2897,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=186;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.015991211;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2952,8 +2938,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=187;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0034790039;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2994,8 +2979,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=188;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.10002136;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3036,8 +3020,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=189;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.046112061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3078,7 +3061,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=190;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3119,7 +3102,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=191;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3160,7 +3143,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=193;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3201,8 +3184,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=194;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.026016235;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3243,7 +3225,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=195;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3284,8 +3266,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=196;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=3.0517578e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3326,7 +3307,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=197;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3367,7 +3348,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=198;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3408,7 +3389,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=199;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3449,7 +3430,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=200;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3490,8 +3471,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=201;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3532,8 +3512,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=202;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.15100098;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3574,8 +3553,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=203;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0029907227;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3616,8 +3594,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=205;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.0018310547;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3658,8 +3635,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=206;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.072357178;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3700,7 +3676,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=207;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3741,7 +3717,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=208;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3782,7 +3758,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=209;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3823,8 +3799,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=210;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.082824707;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3865,8 +3840,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=211;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=3.0517578e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3907,7 +3881,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=215;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3948,8 +3922,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=216;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.03518486;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3990,8 +3963,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=217;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-3.8146973e-006;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4032,8 +4004,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=218;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0020899773;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4074,8 +4045,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=219;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.0047302246;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4116,7 +4086,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=220;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4379,8 +4349,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=169;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.0047874451;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4421,7 +4390,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=170;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4462,8 +4431,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=171;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0030460358;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4504,8 +4472,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=172;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.024300098;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4565,8 +4532,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=174;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.012518883;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4607,7 +4573,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=175;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4648,7 +4614,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=176;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4689,8 +4655,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=177;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.041992188;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4731,8 +4696,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=178;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4793,8 +4757,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=180;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.016998291;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4855,8 +4818,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=182;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-6.1035156e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4897,8 +4859,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=183;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.039001465;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4939,8 +4900,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=184;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.012329102;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4981,8 +4941,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=185;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-3.0517578e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5023,8 +4982,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=186;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.011993408;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5065,8 +5023,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=187;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.00021362305;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5107,8 +5064,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=188;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.13607788;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5149,8 +5105,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=189;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.099990845;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5191,8 +5146,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=190;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5233,7 +5187,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=191;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5274,7 +5228,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=192;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5343,8 +5297,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=195;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.11602783;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5385,8 +5338,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=196;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.053009033;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5427,7 +5379,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=197;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5488,8 +5440,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=199;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.13399935;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5530,8 +5481,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=200;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-5.9604645e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5591,8 +5541,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=202;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.037994385;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5633,8 +5582,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=203;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.033004761;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5694,8 +5642,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=205;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.055969238;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5736,8 +5683,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=206;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.0081176758;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5798,8 +5744,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=208;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.11099243;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5840,8 +5785,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=209;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.010734558;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5901,7 +5845,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=211;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5942,8 +5886,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=212;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.1000061;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5984,7 +5927,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=213;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6044,7 +5987,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=215;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6085,7 +6028,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=216;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6126,7 +6069,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=217;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6186,7 +6129,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=219;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6227,8 +6170,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=220;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.098144531;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6269,8 +6211,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=221;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.022888184;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6311,8 +6252,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=222;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-0.023010254;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6373,7 +6313,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=224;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6433,8 +6373,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=227;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.052001953;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6494,8 +6433,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=229;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.33958435;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6556,7 +6494,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=233;
-			type="Land_BagBunker_Tower_F";
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7718,8 +7656,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=280;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=-1.5258789e-005;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8094,8 +8031,7 @@ class Mission
 				disableSimulation=1;
 			};
 			id=293;
-			type="Land_BagBunker_Tower_F";
-			atlOffset=0.16699219;
+			type="Land_Cargo_Patrol_V3_F";
 			class CustomAttributes
 			{
 				class Attribute0

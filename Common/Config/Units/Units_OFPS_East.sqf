@@ -405,7 +405,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;*/
 
-/*_u pushBack 'ofps_rhs_t72bd_tv';	
+_u pushBack 'ofps_rhs_t72bd_tv';	
 _p pushBack '';
 _n pushBack ["T-72B3 (obr 2012g) (ofps)"];  
 _o pushBack 12000;
@@ -433,7 +433,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Repair Vehicles
 

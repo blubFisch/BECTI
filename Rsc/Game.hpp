@@ -40,5 +40,5 @@ author = "Benny and OFPS Team";
 class Header {
 	gameType = CTI;
 	minPlayers = 1;
-	maxPlayers = 40;
+	maxPlayers = 44;
 };
