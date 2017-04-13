@@ -1,3 +1,7 @@
+1.06.7
+Tweaked: vanilla repair function has been removed
+Tweaked: Field repair only repairs vehicle modules up to 40% of their health
+
 1.06.6
 Replaced: Camps with watch towers
 Added: 4 extra slots, and removed HC slots

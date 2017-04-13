@@ -145,7 +145,7 @@ CTI_TOOLKIT_REPAIR_TIME_CAR = 20; // repair time for wheeled vehicles including 
 CTI_TOOLKIT_REPAIR_TIME_AIR = 45; // repair time for aircraft in seconds
 CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
 CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
-CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.75; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
+CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.4; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
 //-------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------//
 //-- vehicle stealth
