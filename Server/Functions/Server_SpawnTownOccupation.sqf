@@ -94,232 +94,232 @@ if (isNil {_town getVariable "cti_naval"}) then {
 				//--- Normal Town Values
 				case (_value >= 20 && _value < 30) : { //--- 20-25 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
-						["TOWNS_TOWNS_SQUAD_SNIPER", 1, 60],
+						["TOWNS_SQUAD_RIFLEMEN1", 3, 99],
+						["TOWNS_SQUAD_SNIPER", 1, 60],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 1, 60]
+							["TOWNS_SQUAD_LIGHT1", 1, 60]
 						]
 					];
 				};				
 				case (_value >= 30 && _value < 40) : { //--- 30-35 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
-						["TOWNS_TOWNS_SQUAD_AT1", 1, 50],	
-						["TOWNS_TOWNS_SQUAD_AA", 1, 30],
-						["TOWNS_TOWNS_SQUAD_SNIPER", 1, 30],
+						["TOWNS_SQUAD_RIFLEMEN1", 3, 99],
+						["TOWNS_SQUAD_AT1", 1, 50],	
+						["TOWNS_SQUAD_AA", 1, 30],
+						["TOWNS_SQUAD_SNIPER", 1, 30],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 2, 99]
+							["TOWNS_SQUAD_LIGHT1", 2, 99]
 						]
 					];
 				};	
 				case (_value >= 40 && _value < 50) : { //--- 40-45 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 2, 99],
-						["TOWNS_TOWNS_SQUAD_AT1", 2, 99],	
-						["TOWNS_TOWNS_SQUAD_AA", 1, 33],
+						["TOWNS_SQUAD_RIFLEMEN1", 2, 99],
+						["TOWNS_SQUAD_AT1", 2, 99],	
+						["TOWNS_SQUAD_AA", 1, 33],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 1, 99],
-							["TOWNS_TOWNS_SQUAD_LIGHT2", 2, 50]
+							["TOWNS_SQUAD_LIGHT1", 1, 99],
+							["TOWNS_SQUAD_LIGHT2", 2, 50]
 						]
 					];
 				};		
 				case (_value >= 50 && _value < 60) : { //--- 50-55 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 2, 99],
-						["TOWNS_TOWNS_SQUAD_AT1", 2, 80],	
-						["TOWNS_TOWNS_SQUAD_AA", 1, 40],
+						["TOWNS_SQUAD_RIFLEMEN1", 2, 99],
+						["TOWNS_SQUAD_AT1", 2, 80],	
+						["TOWNS_SQUAD_AA", 1, 40],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 1, 99],
-							["TOWNS_TOWNS_SQUAD_LIGHT2", 2, 33]
+							["TOWNS_SQUAD_LIGHT1", 1, 99],
+							["TOWNS_SQUAD_LIGHT2", 2, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC1", 1, 80]
+							["TOWNS_SQUAD_APC1", 1, 80]
 						]
 					];
 				};			
 				case (_value >= 60 && _value < 70) : { //--- 60-65 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
-						["TOWNS_TOWNS_SQUAD_AT1", 2, 99],	
-						["TOWNS_TOWNS_SQUAD_AA", 1, 33],
+						["TOWNS_SQUAD_RIFLEMEN1", 3, 99],
+						["TOWNS_SQUAD_AT1", 2, 99],	
+						["TOWNS_SQUAD_AA", 1, 33],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 1, 99],
-							["TOWNS_TOWNS_SQUAD_LIGHT2", 2, 33]
+							["TOWNS_SQUAD_LIGHT1", 1, 99],
+							["TOWNS_SQUAD_LIGHT2", 2, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC1", 2, 90]
+							["TOWNS_SQUAD_APC1", 2, 90]
 						]
 					];
 				};
 				case (_value >= 70 && _value < 80) : { //--- 70-75 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
-						["TOWNS_TOWNS_SQUAD_AT1", 2, 99],
-						["TOWNS_TOWNS_SQUAD_AA", 1, 33],
+						["TOWNS_SQUAD_RIFLEMEN1", 3, 99],
+						["TOWNS_SQUAD_AT1", 2, 99],
+						["TOWNS_SQUAD_AA", 1, 33],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT1", 2, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT2", 2, 50]
+							["TOWNS_SQUAD_LIGHT1", 2, 66],
+							["TOWNS_SQUAD_LIGHT2", 2, 50]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC1", 3, 99]
+							["TOWNS_SQUAD_APC1", 3, 99]
 						]
 					];
 				};
 				case (_value >= 80 && _value < 90) : { //--- 80-85 SV towns
 					_pool_units = [
-						["TOWNS_TOWNS_SQUAD_RIFLEMEN1", 2, 66],
-						["TOWNS_TOWNS_SQUAD_SNIPER", 1, 66],
-						["TOWNS_TOWNS_SQUAD_AT1", 1, 66],
-						["TOWNS_TOWNS_SQUAD_AA", 2, 33],
+						["TOWNS_SQUAD_RIFLEMEN1", 2, 66],
+						["TOWNS_SQUAD_SNIPER", 1, 66],
+						["TOWNS_SQUAD_AT1", 1, 66],
+						["TOWNS_SQUAD_AA", 2, 33],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT3", 3, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT4", 1, 66]
+							["TOWNS_SQUAD_LIGHT2", 2, 33],
+							["TOWNS_SQUAD_LIGHT3", 3, 66],
+							["TOWNS_SQUAD_LIGHT4", 1, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC1", 3, 99],
-							["TOWNS_TOWNS_SQUAD_APC2", 1, 50]
+							["TOWNS_SQUAD_APC1", 3, 99],
+							["TOWNS_SQUAD_APC2", 1, 50]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA1", 1, 33]
+							["TOWNS_SQUAD_VEHICLE_AA1", 1, 33]
 						]
 					];
 				};
 				case (_value >= 90 && _value < 100) : { //--- 90-95 SV towns
 					_pool_units = [
 						[
-							["TOWNS_TOWNS_SQUAD_RIFLEMEN3", 2, 66], 
-							["TOWNS_TOWNS_SQUAD_SNIPER", 1, 33], 
-							["TOWNS_TOWNS_SQUAD_AT2", 2, 66], 
-							["TOWNS_TOWNS_SQUAD_AA", 2, 33]				
+							["TOWNS_SQUAD_RIFLEMEN3", 2, 66], 
+							["TOWNS_SQUAD_SNIPER", 1, 33], 
+							["TOWNS_SQUAD_AT2", 2, 66], 
+							["TOWNS_SQUAD_AA", 2, 33]				
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT3", 1, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT4", 3, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT5", 2, 33]
+							["TOWNS_SQUAD_LIGHT3", 1, 33],
+							["TOWNS_SQUAD_LIGHT4", 3, 66],
+							["TOWNS_SQUAD_LIGHT5", 2, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC1", 2, 33],
-							["TOWNS_TOWNS_SQUAD_APC2", 3, 66]
+							["TOWNS_SQUAD_APC1", 2, 33],
+							["TOWNS_SQUAD_APC2", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA1", 1, 33]
+							["TOWNS_SQUAD_VEHICLE_AA1", 1, 33]
 						]
 					];
 				};
 				case (_value >= 100 && _value < 110) : { //--- 100-105 SV towns
 					_pool_units = [
 						[
-							["TOWNS_TOWNS_SQUAD_RIFLEMEN3", 3, 66],
-							["TOWNS_TOWNS_SQUAD_SNIPER", 2, 33], 
-							["TOWNS_TOWNS_SQUAD_AT2", 2, 99], 
-							["TOWNS_TOWNS_SQUAD_AA", 2, 66]
+							["TOWNS_SQUAD_RIFLEMEN3", 3, 66],
+							["TOWNS_SQUAD_SNIPER", 2, 33], 
+							["TOWNS_SQUAD_AT2", 2, 99], 
+							["TOWNS_SQUAD_AA", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT4", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT5", 1, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 1, 66]
+							["TOWNS_SQUAD_LIGHT4", 2, 33],
+							["TOWNS_SQUAD_LIGHT5", 1, 66],
+							["TOWNS_SQUAD_LIGHT6", 1, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 99],
-							["TOWNS_TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 99],
+							["TOWNS_SQUAD_APC3", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED1", 2, 33]
+							["TOWNS_SQUAD_ARMORED1", 2, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT4", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT5", 2, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 1, 66]
+							["TOWNS_SQUAD_LIGHT4", 2, 33],
+							["TOWNS_SQUAD_LIGHT5", 2, 66],
+							["TOWNS_SQUAD_LIGHT6", 1, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 66],
-							["TOWNS_TOWNS_SQUAD_APC3", 2, 66]
+							["TOWNS_SQUAD_APC2", 2, 66],
+							["TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED1", 1, 33]
+							["TOWNS_SQUAD_ARMORED1", 1, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA1", 2, 66],
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA2", 1, 33]
+							["TOWNS_SQUAD_VEHICLE_AA1", 2, 66],
+							["TOWNS_SQUAD_VEHICLE_AA2", 1, 33]
 						]
 					];
 				};
 				case (_value >= 110 && _value < 120) : { //--- 110-115 SV towns
 					_pool_units = [
 						[
-							["TOWNS_TOWNS_SQUAD_RIFLEMEN3", 4, 66],
-							["TOWNS_TOWNS_SQUAD_SNIPER", 3, 66], 
-							["TOWNS_TOWNS_SQUAD_AT2", 3, 99], 
-							["TOWNS_TOWNS_SQUAD_AA", 3, 99]
+							["TOWNS_SQUAD_RIFLEMEN3", 4, 66],
+							["TOWNS_SQUAD_SNIPER", 3, 66], 
+							["TOWNS_SQUAD_AT2", 3, 99], 
+							["TOWNS_SQUAD_AA", 3, 99]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT5", 2, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 3, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT7", 3, 66]
+							["TOWNS_SQUAD_LIGHT5", 2, 66],
+							["TOWNS_SQUAD_LIGHT6", 3, 66],
+							["TOWNS_SQUAD_LIGHT7", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 33],
+							["TOWNS_SQUAD_APC3", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED2", 1, 66],
-							["TOWNS_TOWNS_SQUAD_ARMORED3", 2, 33]
+							["TOWNS_SQUAD_ARMORED2", 1, 66],
+							["TOWNS_SQUAD_ARMORED3", 2, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT5", 2, 66],
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT7", 1, 33]
+							["TOWNS_SQUAD_LIGHT5", 2, 66],
+							["TOWNS_SQUAD_LIGHT6", 2, 33],
+							["TOWNS_SQUAD_LIGHT7", 1, 33]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 33],
+							["TOWNS_SQUAD_APC3", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_ARMORED3", 1, 66]
+							["TOWNS_SQUAD_ARMORED2", 2, 33],
+							["TOWNS_SQUAD_ARMORED3", 1, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA3", 2, 66]
+							["TOWNS_SQUAD_VEHICLE_AA2", 2, 33],
+							["TOWNS_SQUAD_VEHICLE_AA3", 2, 66]
 						]
 					];
 				};
 				case (_value >= 120) : { //--- 120 SV towns
 					_pool_units = [
 						[
-							["TOWNS_TOWNS_SQUAD_RIFLEMEN3", 4, 66],
-							["TOWNS_TOWNS_SQUAD_SNIPER", 4, 66], 
-							["TOWNS_TOWNS_SQUAD_AT2", 4, 99], 
-							["TOWNS_TOWNS_SQUAD_AA", 4, 66]
+							["TOWNS_SQUAD_RIFLEMEN3", 4, 66],
+							["TOWNS_SQUAD_SNIPER", 4, 66], 
+							["TOWNS_SQUAD_AT2", 4, 99], 
+							["TOWNS_SQUAD_AA", 4, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT7", 2, 66]
+							["TOWNS_SQUAD_LIGHT6", 2, 33],
+							["TOWNS_SQUAD_LIGHT7", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 33],
+							["TOWNS_SQUAD_APC3", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_ARMORED3", 2, 66]
+							["TOWNS_SQUAD_ARMORED2", 2, 33],
+							["TOWNS_SQUAD_ARMORED3", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_LIGHT6", 2, 33],
-							["TOWNS_TOWNS_SQUAD_LIGHT7", 2, 66]
+							["TOWNS_SQUAD_LIGHT6", 2, 33],
+							["TOWNS_SQUAD_LIGHT7", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 33],
+							["TOWNS_SQUAD_APC3", 3, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_ARMORED2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_ARMORED3", 2, 66]
+							["TOWNS_SQUAD_ARMORED2", 2, 33],
+							["TOWNS_SQUAD_ARMORED3", 2, 66]
 						],
 						[
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA2", 2, 33],
-							["TOWNS_TOWNS_SQUAD_VEHICLE_AA3", 2, 66]
+							["TOWNS_SQUAD_VEHICLE_AA2", 2, 33],
+							["TOWNS_SQUAD_VEHICLE_AA3", 2, 66]
 						]
 					];
 				};
@@ -330,139 +330,139 @@ if (isNil {_town getVariable "cti_naval"}) then {
 			switch (true) do {
 					case (_value < 80) : { 
 						_pool_units = [
-						["TOWNS_SQUAD_RIFLEMEN1", 1, 99],
-						["TOWNS_SQUAD_AT1", 1, 99],			
+						["SQUAD_RIFLEMEN1", 1, 99],
+						["SQUAD_AT1", 1, 99],			
 						[
-							["TOWNS_SQUAD_LIGHT1", 2, 75],
-							["TOWNS_SQUAD_LIGHT2", 2, 25]
+							["SQUAD_LIGHT1", 2, 75],
+							["SQUAD_LIGHT2", 2, 25]
 						]
 						];
 					};
 					case (_value >= 80 && _value < 90) : {  
 						_pool_units = [
 						[	
-							["TOWNS_SQUAD_RIFLEMEN1", 1, 50],
-							["TOWNS_SQUAD_SNIPER", 1, 50], 
-							["TOWNS_SQUAD_AT1", 4, 75], 
-							["TOWNS_SQUAD_AA", 4, 65]
+							["SQUAD_RIFLEMEN1", 1, 50],
+							["SQUAD_SNIPER", 1, 50], 
+							["SQUAD_AT1", 4, 75], 
+							["SQUAD_AA", 4, 65]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT1", 1, 30],
-							["TOWNS_SQUAD_LIGHT2", 2, 50]
+							["SQUAD_LIGHT1", 1, 30],
+							["SQUAD_LIGHT2", 2, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30]
+							["SQUAD_APC1", 2, 30]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT1", 1, 30],
-							["TOWNS_SQUAD_LIGHT2", 1, 50]
+							["SQUAD_LIGHT1", 1, 30],
+							["SQUAD_LIGHT2", 1, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30]
+							["SQUAD_APC1", 2, 30]
 						]
 						];
 					};
 					case (_value >= 90 && _value < 100) : {
 						_pool_units = [
 						[	
-							["TOWNS_SQUAD_RIFLEMEN2", 1, 50],
-							["TOWNS_SQUAD_SNIPER", 1, 50], 
-							["TOWNS_SQUAD_AT1", 4, 75], 
-							["TOWNS_SQUAD_AA", 4, 65]
+							["SQUAD_RIFLEMEN2", 1, 50],
+							["SQUAD_SNIPER", 1, 50], 
+							["SQUAD_AT1", 4, 75], 
+							["SQUAD_AA", 4, 65]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT2", 1, 30],
-							["TOWNS_SQUAD_LIGHT3", 2, 50]
+							["SQUAD_LIGHT2", 1, 30],
+							["SQUAD_LIGHT3", 2, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 4, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 4, 70]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT2", 1, 30],
-							["TOWNS_SQUAD_LIGHT3", 1, 50]
+							["SQUAD_LIGHT2", 1, 30],
+							["SQUAD_LIGHT3", 1, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 3, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 3, 70]
 						]
 						];
 					};
 					case (_value >= 100 && _value < 110) : { 
 						_pool_units = [
 						[	
-							["TOWNS_SQUAD_RIFLEMEN2", 1, 50],
-							["TOWNS_SQUAD_SNIPER", 1, 50], 
-							["TOWNS_SQUAD_AT1", 4, 75], 
-							["TOWNS_SQUAD_AA", 4, 65]
+							["SQUAD_RIFLEMEN2", 1, 50],
+							["SQUAD_SNIPER", 1, 50], 
+							["SQUAD_AT1", 4, 75], 
+							["SQUAD_AA", 4, 65]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 2, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 2, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 4, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 4, 70]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 1, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 1, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 3, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 3, 70]
 						]
 						];
 					};
 					case (_value >= 110 && _value < 120) : { 
 						_pool_units = [
 						[	
-							["TOWNS_SQUAD_RIFLEMEN2", 1, 50],
-							["TOWNS_SQUAD_SNIPER", 1, 50], 
-							["TOWNS_SQUAD_AT1", 4, 75], 
-							["TOWNS_SQUAD_AA", 4, 65]
+							["SQUAD_RIFLEMEN2", 1, 50],
+							["SQUAD_SNIPER", 1, 50], 
+							["SQUAD_AT1", 4, 75], 
+							["SQUAD_AA", 4, 65]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 2, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 2, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 4, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 4, 70]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 1, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 1, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 3, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 3, 70]
 						]
 						];
 					};
 					case (_value >= 120) : { 
 						_pool_units = [
 						[	
-							["TOWNS_SQUAD_RIFLEMEN2", 1, 50],
-							["TOWNS_SQUAD_SNIPER", 1, 50], 
-							["TOWNS_SQUAD_AT1", 4, 75], 
-							["TOWNS_SQUAD_AA", 4, 65]
+							["SQUAD_RIFLEMEN2", 1, 50],
+							["SQUAD_SNIPER", 1, 50], 
+							["SQUAD_AT1", 4, 75], 
+							["SQUAD_AA", 4, 65]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 2, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 2, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 4, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 4, 70]
 						],
 						[
-							["TOWNS_SQUAD_LIGHT3", 1, 30],
-							["TOWNS_SQUAD_LIGHT4", 1, 50]
+							["SQUAD_LIGHT3", 1, 30],
+							["SQUAD_LIGHT4", 1, 50]
 						],
 						[
-							["TOWNS_SQUAD_APC1", 2, 30],
-							["TOWNS_SQUAD_APC2", 3, 70]
+							["SQUAD_APC1", 2, 30],
+							["SQUAD_APC2", 3, 70]
 						]
 						];
 					};
@@ -474,51 +474,51 @@ if (isNil {_town getVariable "cti_naval"}) then {
 		switch (true) do {
 			case (_value < 70) : { 
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 8, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 2, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 8, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 2, 99]
 				];
 			};
 			case (_value >= 70 && _value < 80) : {  
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 6, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 2, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 6, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 2, 99]
 				];
 			};
 			case (_value >= 80 && _value < 90) : {
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99]
 				];
 			};
 			case (_value >= 90 && _value < 100) : { 
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99]
 				];
 			};
 			case (_value >= 100 && _value < 110) : { 
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 2, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 6, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 2, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 6, 99]
 				];
 			};
 			case (_value >= 110 && _value < 120) : {
 				_pool_units = [ 
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 2, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 8, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 2, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 8, 99]
 				];
 			};
 			case (_value >= 120) : { 
 				_pool_units = [
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 2, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 4, 99],
-					["TOWNS_TOWNS_SQUAD_ZOMBIE1", 8, 99]
+					["TOWNS_SQUAD_ZOMBIE1", 2, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 4, 99],
+					["TOWNS_SQUAD_ZOMBIE1", 8, 99]
 				];
 			};
 		};
@@ -529,54 +529,54 @@ if (isNil {_town getVariable "cti_naval"}) then {
 	switch (true) do {
 		case (_value < 70) : { 
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL1", 2, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99]
+				["TOWNS_SQUAD_NAVAL1", 2, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99]
 			];
 		};
 		case (_value >= 70 && _value < 80) : { 
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL1", 2, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 30]
+				["TOWNS_SQUAD_NAVAL1", 2, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 30]
 			];
 		};
 		case (_value >= 80 && _value < 90) : {
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL2", 2, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 40],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 60]
+				["TOWNS_SQUAD_NAVAL2", 2, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 40],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 60]
 			];
 		};
 		case (_value >= 90 && _value < 100) : {  
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL2", 2, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70]
+				["TOWNS_SQUAD_NAVAL2", 2, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70]
 			];
 		};
 		case (_value >= 100 && _value < 110) : { 
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL3", 3, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70],
-				["TOWNS_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 50]
+				["TOWNS_SQUAD_NAVAL3", 3, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 30],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 70],
+				["TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 50]
 			];
 		};
 		case (_value >= 110 && _value < 120) : { 
 			_pool_units = [ 
-				["TOWNS_TOWNS_SQUAD_NAVAL3", 3, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 20],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 80],
-				["TOWNS_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90]
+				["TOWNS_SQUAD_NAVAL3", 3, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 20],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 80],
+				["TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90]
 			];
 		};
 		case (_value >= 120) : { 
 			_pool_units = [
-				["TOWNS_TOWNS_SQUAD_NAVAL3", 3, 99],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT1", 1, 10],
-				["TOWNS_TOWNS_SQUAD_ASSAULT_BOAT2", 1, 90],
-				["TOWNS_TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90],
-				["TOWNS_TOWNS_SQUAD_LARGE_ASSAULT_BOAT", 1, 05]
+				["TOWNS_SQUAD_NAVAL3", 3, 99],
+				["TOWNS_SQUAD_ASSAULT_BOAT1", 1, 10],
+				["TOWNS_SQUAD_ASSAULT_BOAT2", 1, 90],
+				["TOWNS_SQUAD_MEDIUM_ASSAULT_BOAT", 1, 90],
+				["TOWNS_SQUAD_LARGE_ASSAULT_BOAT", 1, 05]
 			];
 		};
 	};
