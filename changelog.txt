@@ -5,6 +5,7 @@ Added: Spawn inside camps system
 Tweaked: Upgrade Tree SV adjustments (reduced by 6250SV overall/redistributed)
 Tweaked: Resistance and occupation classes for small towns
 Tweaked: Extended base statics range for respawn and rearm
+Fixed: Base damage after 1.68 update
 Fixed: Deploying one fob truck multiple times
 Fixed: Isladuala town connection
 Fixed: UAZ's spawning empty in towns
