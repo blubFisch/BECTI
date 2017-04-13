@@ -9,50 +9,7 @@ _p = [];
 
 //************************OFPS Stuff************************
 
-//launchers
-/*_i pushBack "sfp_pskott68";
-_u pushBack 1;
-_p pushBack 700;
-
-_i pushBack "sfp_grg86";
-_u pushBack 1;
-_p pushBack 900;*/
-
-//Launcher ammo
-
-/*_i pushBack "sfp_pskott68_mag";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "sfp_grg_he_mag";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "sfp_grg_heat_mag";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "sfp_grg_heat_66_mag";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "sfp_grg_heat_62_mag";
-_u pushBack 1;
-_p pushBack 150;*/
-
-//-- Magazines
-_i pushBack "hlc_500rnd_762x51_Belt";
-_u pushBack 3;
-_p pushBack 100;
-/* 
-_i pushBack "hlc_500rnd_762x51_Cinematic";
-_u pushBack 3;
-_p pushBack 1000;
-
-_i pushBack "HLC_wp_M134Painless";
-_u pushBack 3;
-_p pushBack 8000;
-*/
+/*
 
 //--Winter Stuff
 //Camo
@@ -121,7 +78,7 @@ _p pushBack 300;
 _i pushBack "IP_V_BandollierO_snw";
 _u pushBack 0;
 _p pushBack 300;
-/*
+
 _i pushBack "IP_V_TacVest_SnowHex";
 _u pushBack 0;
 _p pushBack 300;
@@ -129,7 +86,7 @@ _p pushBack 300;
 _i pushBack "IP_V_TacVest_SnowTiger";
 _u pushBack 0;
 _p pushBack 300;
-*/
+
 
 //Backpacks
 _i pushBack "IP_B_AssaultPack_SnowHex";
@@ -213,22 +170,6 @@ _p pushBack 1000;
 
 _i pushBack "A3_GPNVG18_F";
 _u pushBack 2;
-_p pushBack 1000;
-
-
-//SFP PACK
-//-- Grenades
-/*_i pushBack "sfp_handgrenade_shgr07";
-_u pushBack 0;
-_p pushBack 50;
-
-_i pushBack "sfp_handgrenade_shgr56";
-_u pushBack 0;
-_p pushBack 50;
-
-_i pushBack "sfp_handgrenade_shgr2000";
-_u pushBack 0;
-_p pushBack 50;*/
-
+_p pushBack 1000;*/
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf";
