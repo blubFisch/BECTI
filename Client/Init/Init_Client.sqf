@@ -660,12 +660,6 @@ if (isNil "Radio_Say3D") then {
      (_array select 0) say3D [(_array select 1), (_array select 2)];
 };
 
-//--- UAV RANGE limit
-UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
-if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
-	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
-};
-
 //--- Igiload script
 _igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
 
@@ -680,6 +674,9 @@ waitUntil {!isNil "EtVInitialized"};
 
 //--- cmEARPLUGS
 call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
+
+//--- UAV Range Strict
+_uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_uavrange.sqf";
 
 //--- Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };

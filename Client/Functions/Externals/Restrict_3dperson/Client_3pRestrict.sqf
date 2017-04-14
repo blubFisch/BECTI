@@ -7,7 +7,7 @@ if ((difficultyOption "thirdPersonView") isEqualTo 1) then
         {
             while {(true)} do
             {
-                if (cameraView == "External") then
+                if (!(cameraView in ["GUNNER","INTERNAL"]) && cameraOn == vehicle (player)) then
                 {
                     if ((vehicle player) == player) then
                     {
