@@ -683,6 +683,7 @@ call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\co
 
 //--- Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
+
 //--- Spawn init calls tablet
 0 spawn { call CTI_CL_FNC_Spawn; };
 

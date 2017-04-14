@@ -1,7 +1,7 @@
-//--- No loop need, if third person view is not available anyway
-if (difficultyEnabled "3rdPersonView") then
+//--- No loop need, if third person view is not enabled in server profile
+if ((difficultyOption "thirdPersonView") isEqualTo 1) then
 {
-    switch (CTI_GAMEPLAY_3P) do
+    switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
     {
         case 1://--- Vehicles only
         {
