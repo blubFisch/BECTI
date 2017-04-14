@@ -6,7 +6,7 @@ while { true } do {
         hint "active";
         _ctrl = UAVControl _drone;
         _seat = _ctrl select 1;
-        if(_seat in ["Driver","Gunner"] && _range < (player distance _drone)) then {
+        if( _range < (player distance _drone)) then {
             player connectTerminalToUAV objNull;
             hint ["<t size='1.3' color='#2394ef'>Information</t><br /><br />You have lost connection to your UAV. Maximum range is <t color='#ccffaf'>%1 meters.</t>",_range];
         };
