@@ -1,5 +1,5 @@
 _action = _this select 0;
-
+true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": { //--- Triggered on the very first loading of the UI
 		//-- Load the list.
