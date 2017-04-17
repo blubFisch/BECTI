@@ -59,7 +59,8 @@ if (_net) then {_unit setVariable ["cti_net", _sideID, true]};
 
 //--- Add a Killed EH.
 _unit addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", _sideID]];
-
+//-- Deleted EH
+_unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2, true];}];
 //Check Barrack Upgrade and set default skills
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_logic = (_side) call CTI_CO_FNC_GetSideLogic;
