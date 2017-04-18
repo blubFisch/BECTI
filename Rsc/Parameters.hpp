@@ -21,13 +21,13 @@ class Params {
 		title = "FACTION: Starting gear";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class CTI_FACTION_DEFAULT_TROOPS {
 		title = "FACTION: Default infantry";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
+		default = 3;
 	};
 	class SEPARATOR0 {
 		title = "========================== INCOME ============================";
@@ -153,19 +153,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8,9};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter","RHS GREF"};
-		default = 6;
+		default = 9;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 2;
+		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 2;
+		default = 5;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";

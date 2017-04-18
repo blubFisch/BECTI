@@ -1,4 +1,5 @@
 //--- No loop need, if third person view is not enabled in server profile
+//--- TO DO: rewrite using PlayerViewChanged EH with out loops
 if ((difficultyOption "thirdPersonView") isEqualTo 1) then
 {
     switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
