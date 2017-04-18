@@ -1233,7 +1233,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		7500;
+	_prices pushBack 		15000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];

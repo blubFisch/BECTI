@@ -9,10 +9,10 @@ _p = [];
 
 //************************OFPS Stuff************************
 
-/*//-- Magazines
-_i pushBack "hlc_500rnd_762x51_Belt";
+//-- Magazines
+/*_i pushBack "hlc_500rnd_762x51_Belt";
 _u pushBack 4;
-_p pushBack 100;
+_p pushBack 100;*/
 /* 
 _i pushBack "hlc_500rnd_762x51_Cinematic";
 _u pushBack 4;
@@ -21,10 +21,11 @@ _p pushBack 4000;
 _i pushBack "HLC_wp_M134Painless";
 _u pushBack 4;
 _p pushBack 10000;
+*/
 
 //--Winter Stuff
 //Camo
-_i pushBack "Blue_Snow_Camo";
+/*_i pushBack "Blue_Snow_Camo";
 _u pushBack 0;
 _p pushBack 100;
 
@@ -123,4 +124,4 @@ _i pushBack "IP_launch_O_Titan_snw_F";
 _u pushBack 3;
 _p pushBack 2000;*/
 
-[_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf";
+[_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_Config_Set.sqf"; 

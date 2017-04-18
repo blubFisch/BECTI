@@ -841,18 +841,18 @@ _u pushBack 'rhsusf_mrzr4_d';
 /*_u pushBack 'rhsusf_m998_w_2dr';*/
 _u pushBack 'rhsusf_m1025_w';
 _u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
-_u pushBack 'rhsusf_rg33_usmc_d';
-_u pushBack 'rhsusf_rg33_usmc_wd';
+/*_u pushBack 'rhsusf_rg33_usmc_d';
+_u pushBack 'rhsusf_rg33_usmc_wd';*/
 _u pushBack 'rhsusf_m1025_d';
 _u pushBack 'rhsusf_m1025_w_m2';
 _u pushBack 'rhsusf_m1025_w_mk19';
 /*_u pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
-_u pushBack 'rhsusf_M1232_usarmy_wd';
+_u pushBack 'rhsusf_M1232_usarmy_wd';*/
 _u pushBack 'rhsusf_rg33_m2_usmc_d';
-_u pushBack 'rhsusf_M1232_M2_usarmy_d';
-_u pushBack 'rhsusf_M1232_MK19_usarmy_d';
+/*_u pushBack 'rhsusf_M1232_M2_usarmy_d';
+_u pushBack 'rhsusf_M1232_MK19_usarmy_d';*/
 _u pushBack 'rhsusf_rg33_m2_usmc_wd';
-_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
+/*_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
 _u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
 _u pushBack 'rhsusf_m998_d_2dr_fulltop';*/
 _u pushBack 'rhsusf_m1025_d_m2';
@@ -1246,7 +1246,7 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'O_UAV_02_F';		
+	/*_u pushBack 'O_UAV_02_F';	*/	
 	/*_u pushBack 'B_UCSV_01';
 	_u pushBack 'B_UCSV_02';*/
 	/*_u pushBack 'bwi_a3_t6a';
@@ -1255,7 +1255,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'bwi_a3_at6b_3';
 	_u pushBack 'sab_alphajet';
 	_u pushBack 'sab_alphajet2';*/
-	/*_u pushBack 'OFPS_BUZZA_B';*/
+	_u pushBack 'OFPS_BUZZA_B';
 	/*_u pushBack 'pook_tu953M80_CDF';
 	_u pushBack 'pook_tu95ms_CDF';
 	_u pushBack 'pook_tu95ms16_CDF';
@@ -1311,18 +1311,18 @@ _u pushBack 'RHS_UH1Y_FFAR_d';*/
 /*_u pushBack 'RHS_AH1Z_GS';*/
 /*_u pushBack 'RHS_C130J';*/
 _u pushBack 'RHS_MELB_AH6M_L';
-_u pushBack 'RHS_A10';
+/*_u pushBack 'RHS_A10';*/
 /*_u pushBack 'RHS_AH64D_noradar_GS';
 _u pushBack 'RHS_AH1Z';
 _u pushBack 'RHS_MELB_AH6M_M';*/
 /*_u pushBack 'RHS_AH64D_GS';*/
-_u pushBack 'rhsusf_f22';
+/*_u pushBack 'rhsusf_f22';*/
 /*_u pushBack 'RHS_AH64D_noradar_AA';
 _u pushBack 'RHS_AH1Z_CS';
 _u pushBack 'RHS_AH64D_noradar';
 _u pushBack 'RHS_MELB_AH6M_H';*/
 /*_u pushBack 'RHS_AH64D_CS';*/
-_u pushBack 'RHS_A10_AT';
+/*_u pushBack 'RHS_A10_AT';*/
 /*_u pushBack 'RHS_AH64DGrey';*/
 /*_u pushBack 'RHS_AH64D';
 _u pushBack 'RHS_AH64D_AA';*/

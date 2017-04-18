@@ -77,7 +77,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[40000], //--- Nuke
 	[3000,5500,8000], //--- Supply Rate
 	[3000,6000,9000,12000], //--- Base Health
-	[500,1000,1500,2000] //--- Base Defense
+	[500,1000,2500,5000] //--- Base Defense
 ]];
 };
 

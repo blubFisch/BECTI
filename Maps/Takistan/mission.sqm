@@ -167,20 +167,19 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={8457,353.33691,3150};
+			position[]={1573.3729,368.90259,-328.48047};
 			name="cti-spawn3";
 			type="Empty";
 			id=3;
-			atlOffset=-8.7026978;
 		};
 		class Item4
 		{
 			dataType="Marker";
-			position[]={11170,2.6708984,7654};
+			position[]={12789.211,189.54175,7812.9424};
 			name="cti-spawn4";
 			type="Empty";
 			id=4;
-			atlOffset=-333.29669;
+			atlOffset=-334.07007;
 		};
 		class Item5
 		{
@@ -193,10 +192,11 @@ class Mission
 		class Item6
 		{
 			dataType="Marker";
-			position[]={6557,371.86081,4470};
+			position[]={2123.2085,265.34473,3066.7344};
 			name="cti-spawn6";
 			type="Empty";
 			id=6;
+			atlOffset=-11.799622;
 		};
 		class Item7
 		{
@@ -210,11 +210,11 @@ class Mission
 		class Item8
 		{
 			dataType="Marker";
-			position[]={4902,128.40479,9289};
+			position[]={750.91925,694.98389,10015.062};
 			name="cti-spawn8";
 			type="Empty";
 			id=8;
-			atlOffset=-12.258835;
+			atlOffset=-32.144836;
 		};
 		class Item9
 		{
@@ -227,20 +227,19 @@ class Mission
 		class Item10
 		{
 			dataType="Marker";
-			position[]={5745,235.48828,451};
+			position[]={12190.713,251.41202,9283.1045};
 			name="cti-spawn10";
 			type="Empty";
 			id=10;
-			atlOffset=-151.46136;
 		};
 		class Item11
 		{
 			dataType="Marker";
-			position[]={10409,429,3495};
+			position[]={6045.8589,154.99512,-7.322113};
 			name="cti-spawn11";
 			type="Empty";
 			id=11;
-			atlOffset=-168.52148;
+			atlOffset=-279.37946;
 		};
 		class Item12
 		{
@@ -6012,6 +6011,7 @@ class Mission
 			};
 			id=337;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6469,6 +6469,7 @@ class Mission
 			};
 			id=351;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7096,6 +7097,7 @@ class Mission
 			};
 			id=368;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7770,24 +7772,25 @@ class Mission
 		class Item200
 		{
 			dataType="Marker";
-			position[]={4174,448.42334,2830};
+			position[]={13024.257,584.69116,4499.5361};
 			name="cti-spawn16";
 			type="Empty";
 			id=399;
-			atlOffset=-122.46545;
+			atlOffset=-188.4881;
 		};
 		class Item201
 		{
 			dataType="Marker";
-			position[]={4035,164.01599,5630};
+			position[]={12997.211,28.742676,6017.8525};
 			name="cti-spawn17";
 			type="Empty";
 			id=400;
+			atlOffset=-463.26694;
 		};
 		class Item202
 		{
 			dataType="Marker";
-			position[]={7586,7.1320011e+016,5819};
+			position[]={-468.3071,7.1320011e+016,2444.8582};
 			name="cti-spawn18";
 			type="Empty";
 			id=401;
@@ -7804,10 +7807,11 @@ class Mission
 		class Item204
 		{
 			dataType="Marker";
-			position[]={6859,144.48479,9915};
+			position[]={11063.958,45.504639,12689.497};
 			name="cti-spawn20";
 			type="Empty";
 			id=403;
+			atlOffset=-28.424957;
 		};
 		class Item205
 		{

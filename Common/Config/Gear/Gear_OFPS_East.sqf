@@ -7,13 +7,9 @@ _i = [];
 _u = [];
 _p = [];
 
-//************************OFPS Stuff************************
-
-/*
-
 //--Winter Stuff
 //Camo
-_i pushBack "IP_U_O_CombatUniform_SnowHex";
+/*_i pushBack "IP_U_O_CombatUniform_SnowHex";
 _u pushBack 0;
 _p pushBack 100;
 
@@ -77,8 +73,8 @@ _p pushBack 300;
 
 _i pushBack "IP_V_BandollierO_snw";
 _u pushBack 0;
-_p pushBack 300;
-
+_p pushBack 300;*/
+/*
 _i pushBack "IP_V_TacVest_SnowHex";
 _u pushBack 0;
 _p pushBack 300;
@@ -86,10 +82,10 @@ _p pushBack 300;
 _i pushBack "IP_V_TacVest_SnowTiger";
 _u pushBack 0;
 _p pushBack 300;
-
+*/
 
 //Backpacks
-_i pushBack "IP_B_AssaultPack_SnowHex";
+/*_i pushBack "IP_B_AssaultPack_SnowHex";
 _u pushBack 0;
 _p pushBack 300;
 

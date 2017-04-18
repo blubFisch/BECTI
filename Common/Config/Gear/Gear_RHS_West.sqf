@@ -658,13 +658,13 @@ _i pushBack "RHS_M2_Tripod_Bag";
 _u pushBack 1;
 _p pushBack 250;
 
-_i pushBack "rhs_M252_Gun_Bag";
+/*_i pushBack "rhs_M252_Gun_Bag";
 _u pushBack 4;
 _p pushBack 5000;
 
 _i pushBack "rhs_M252_Bipod_Bag";
 _u pushBack 4;
-_p pushBack 2500;
+_p pushBack 2500;*/
 
 _i pushBack "RHS_M2_MiniTripod_Bag";
 _u pushBack 1;
