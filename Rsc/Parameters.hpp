@@ -349,9 +349,9 @@ class Params {
 	};
 	class CTI_GAMEPLAY_3P {
 		title = "GAMEPLAY: 3P view";
-		values[] = {-1,0,1,2};
-		texts[] = {"All","No group view","Vehicle","None"};
-		default = -1;
+		values[] = {1,2,3};
+		texts[] = {"Vehicles","Infrantry","None"};
+		default = 1;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";
@@ -393,7 +393,7 @@ class Params {
 		title = "TEAM: Team Stack protection";
 		values[] = {0,1,2,3,4,5};
 		texts[] = {"Disabled","+1 Player","+2 Players","+3 Players","+4 Players","+5 Players"};
-		default = 1;
+		default = 2;
 	};
 	class SEPARATOR8 {
 		title = "======================== MAP SETTINGS =========================";
