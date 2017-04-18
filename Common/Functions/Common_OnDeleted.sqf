@@ -20,7 +20,7 @@
 	None
 	
   # EXAMPLE #
-    _object addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2, true];}];
+    _object addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 */
 _this enableSimulationGlobal false;
 
