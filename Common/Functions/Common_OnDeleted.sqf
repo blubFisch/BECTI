@@ -22,5 +22,6 @@
   # EXAMPLE #
     _object addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 */
-_this enableSimulationGlobal false;
-
+_object = _this select 0;
+_object enableSimulationGlobal false;
+deleteVehicle _this;
