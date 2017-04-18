@@ -90,7 +90,7 @@ if (_handle) then {
 	_vehicle setVariable ["cti_occupant", _side];
 	_vehicle setVariable ["initial_side", _side, true];
 	//-- Deleted EH
-	_vehicle addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2, true];}];
+	_vehicle addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 };
 
 //--- Tire protection (Client, HC, Server). TODO: Detect if the vehicle has wheels
