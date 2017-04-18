@@ -19,7 +19,7 @@ if (local _unit) then {
 		_unit addEventHandler ["FiredMan",{_this spawn FNC_BAPS_FIRED}];
 		_unit addEventHandler ["FiredMan",{_this spawn FNC_CRAMControl_AttackerFiredEH}];
 		//-- Deleted EH
-		_unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2, true];}];
+		_unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 	};
 } else {
 	if (CTI_Log_Level >= CTI_Log_Error) then {
