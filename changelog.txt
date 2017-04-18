@@ -1,4 +1,4 @@
-1.06.7
+**1.06.7**
 Added: ka52 at af4 for opfor
 Added: Emr 7.62 ammo to gear menu
 Replaced: Gaz-233114 with brdm models (res doesn't engage correctly)
@@ -18,6 +18,7 @@ Tweaked: Initial starting locations paced on edges of map
 Tweaked: Added 5% more weapon sway
 Removed: Apex objects from all maps
 Removed: Pack mortars
+Removed: Fuel consumption, until coded better
 
 1.06.6
 Replaced: Camps with watch towers

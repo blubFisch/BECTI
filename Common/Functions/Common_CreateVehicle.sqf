@@ -118,9 +118,9 @@ clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
 //--- Advanced Fuel Consumption
-if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
+/*if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
-};
+};*/
 
 //---APS system
 _upgrades = nil;

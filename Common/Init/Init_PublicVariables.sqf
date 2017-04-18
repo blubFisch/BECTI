@@ -6,7 +6,7 @@ with missionNamespace do {
 		_this addEventHandler ["HandleDamage", {_this call CTI_CO_FNC_EXT_HandleTiresDamages}];
 	};
 	//--- Handle the fuel consumption 
-	CTI_PVF_CO_AdvancedFuelConsumption = {
+/*	CTI_PVF_CO_AdvancedFuelConsumption = {
 		_vehicle = _this;
 		while {alive _vehicle} do {
 			_tick = 1;
@@ -40,5 +40,5 @@ with missionNamespace do {
 			};
 			sleep _tick;
 		};
-	};
+	};*/
 };
