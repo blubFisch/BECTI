@@ -7,7 +7,8 @@ waituntil {!isnull (finddisplay 46)};
 if (CBA_Loaded) then
 {
 	//KEYBINDS Refresh
-	_keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
+	//DISABLED custom keybinds using CBA
+	/*_keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
 	if (!isNil "_keybindear") then {
 		_actualkeyear = ((_keybindear) select 5) select 0;
 		if (!isNil "_actualkeyear") then {
@@ -15,12 +16,13 @@ if (CBA_Loaded) then
 		} else {
 			cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT;
 		};
-	};
-	_keybindtablet = ["OFPS", "toggle_tablet"] call cba_fnc_getKeybind;
+	};*/
+	//DISABLED custom keybinds using CBA
+	/*_keybindtablet = ["OFPS", "toggle_tablet"] call cba_fnc_getKeybind;
 	if (!isNil "_keybindtablet") then {
 		_actualkeytablet = ((_keybindtablet) select 5) select 0;
 		tablet_hotkeyDIKCodeNumberWin = _actualkeytablet;
-	};
+	};*/
 
 	//If default On Mode
 	if(ZAM_showNames_default_on) then {

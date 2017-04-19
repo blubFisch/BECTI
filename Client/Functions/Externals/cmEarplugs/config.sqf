@@ -213,8 +213,8 @@ switch cmEarplugs_myHotkeyChoice do {
 	default		{ cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT};
 };
 //// Key Handlers are added using CBA
-//-- Check if CBA Loaded
-if (missionNamespace getVariable "CBA_Loaded") then {
+//-- Check if CBA Loaded - DISABLED
+/*if (missionNamespace getVariable "CBA_Loaded") then {
 	["OFPS", "toggle_earplugs", ["Toggle earplugs", "Remove or Insert your earplugs."], "", "", [0xD2, [false, true, false]]] call cba_fnc_addKeybind;
 	_keybindear = ["OFPS", "toggle_earplugs"] call cba_fnc_getKeybind;
 	if (!isNil "_keybindear") then {
@@ -226,7 +226,9 @@ if (missionNamespace getVariable "CBA_Loaded") then {
 		};
 	};
 	publicVariable	"cmEarplugs_hotkeyDIKCodeNumber";
-};
+};*/
+cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT;
+publicVariable	"cmEarplugs_hotkeyDIKCodeNumber";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //END ALL
