@@ -84,7 +84,4 @@ if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 
 _unit call CTI_CO_FNC_UnitCreated;
 
-//--- Removes inveotry option
-removeAllActions _unit;
-
 _unit
