@@ -119,70 +119,74 @@ clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
 //--- Advanced Fuel Consumption
-if (CTI_UNITS_FUEL_CONSUMPTION > 0) then {
+if (CTI_VEHICLES_FUEL_CONSUMPTION > 0) then {
 	(_vehicle) remoteExec ["CTI_PVF_CO_AdvancedFuelConsumption"];
 };
 
-//---APS system
+//---APS system upgrades
 _upgrades = nil;
 _upgrade_lvoss = 0;
 _upgrade_era = 0;
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
-	_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;
-	_upgrade_era = _upgrades select CTI_UPGRADE_ERA;
-};
-if (isNil "_upgrade_lvoss") then {_upgrade_lvoss = 0;};
-if (isNil "_upgrade_era") then {_upgrade_era = 0;};
-//---Add LVOSS system
-if (_vehicle isKindOf "Car") then {
-	if (_upgrade_lvoss > 0) then {
-		switch (_upgrade_lvoss) do {
-			case 0: {
-				_vehicle setVariable ["ammo_left", 0, true];
-				_vehicle setVariable ["ammo_right", 0, true];
-			};
-			case 1: {
-				_vehicle setVariable ["ammo_left", 1, true];
-				_vehicle setVariable ["ammo_right", 1, true];
-			};
-			case 2: {
-				_vehicle setVariable ["ammo_left", 2, true];
-				_vehicle setVariable ["ammo_right", 2, true];
-			};
-		};
-		_vehicle setVariable ["reloading_left", 0, true];
-		_vehicle setVariable ["reloading_right", 0, true];
-	};
+	if (CTI_VEHICLES_LVOSS == 1) then {_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;};
+	if (CTI_VEHICLES_ERA == 1) then {_upgrade_era = _upgrades select CTI_UPGRADE_ERA;};
 };
 
-//---Add ERA system
-if (_vehicle isKindOf "Tank") then {
-	if (_upgrade_era > 0) then {
-		switch (_upgrade_era) do {
-			case 0: {
-				_vehicle setVariable ["ammo_left", 0, true];
-				_vehicle setVariable ["ammo_right", 0, true];
+//---Add LVOSS system
+if (CTI_VEHICLES_LVOSS == 1) then {
+	if (isNil "_upgrade_lvoss") then {_upgrade_lvoss = 0;};
+	if (_vehicle isKindOf "Car") then {
+		if (_upgrade_lvoss > 0) then {
+			switch (_upgrade_lvoss) do {
+				case 0: {
+					_vehicle setVariable ["ammo_left", 0, true];
+					_vehicle setVariable ["ammo_right", 0, true];
+				};
+				case 1: {
+					_vehicle setVariable ["ammo_left", 1, true];
+					_vehicle setVariable ["ammo_right", 1, true];
+				};
+				case 2: {
+					_vehicle setVariable ["ammo_left", 2, true];
+					_vehicle setVariable ["ammo_right", 2, true];
+				};
 			};
-			case 1: {
-				_vehicle setVariable ["ammo_left", 1, true];
-				_vehicle setVariable ["ammo_right", 1, true];
-			};
-			case 2: {
-				_vehicle setVariable ["ammo_left", 2, true];
-				_vehicle setVariable ["ammo_right", 2, true];
-			};
-			case 3: {
-				_vehicle setVariable ["ammo_left", 3, true];
-				_vehicle setVariable ["ammo_right", 3, true];
-			};
-			case 4: {
-				_vehicle setVariable ["ammo_left", 4, true];
-				_vehicle setVariable ["ammo_right", 4, true];
-			};			
+			_vehicle setVariable ["reloading_left", 0, true];
+			_vehicle setVariable ["reloading_right", 0, true];
 		};
-		_vehicle setVariable ["reloading_left", 0, true];
-		_vehicle setVariable ["reloading_right", 0, true];
+	};
+};
+//---Add ERA system
+if (CTI_VEHICLES_ERA == 1) then {
+	if (isNil "_upgrade_era") then {_upgrade_era = 0;};
+	if (_vehicle isKindOf "Tank") then {
+		if (_upgrade_era > 0) then {
+			switch (_upgrade_era) do {
+				case 0: {
+					_vehicle setVariable ["ammo_left", 0, true];
+					_vehicle setVariable ["ammo_right", 0, true];
+				};
+				case 1: {
+					_vehicle setVariable ["ammo_left", 1, true];
+					_vehicle setVariable ["ammo_right", 1, true];
+				};
+				case 2: {
+					_vehicle setVariable ["ammo_left", 2, true];
+					_vehicle setVariable ["ammo_right", 2, true];
+				};
+				case 3: {
+					_vehicle setVariable ["ammo_left", 3, true];
+					_vehicle setVariable ["ammo_right", 3, true];
+				};
+				case 4: {
+					_vehicle setVariable ["ammo_left", 4, true];
+					_vehicle setVariable ["ammo_right", 4, true];
+				};			
+			};
+			_vehicle setVariable ["reloading_left", 0, true];
+			_vehicle setVariable ["reloading_right", 0, true];
+		};
 	};
 };
 _vehicle call CTI_CO_FNC_UnitCreated;

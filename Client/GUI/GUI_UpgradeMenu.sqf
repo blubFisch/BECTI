@@ -19,15 +19,30 @@ while { true } do {
 	
 	if (time - _last_upgrades_check > .75) then {
 		_last_upgrades_check = time;
+		//check if upgrade enabled
 		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
+		_upgradesenabled = [];
+		_upgradesenabledlevel = [];
+		_enabled = missionNamespace getVariable format["CTI_%1_UPGRADES_ENABLED", (CTI_P_SideJoined)];
+		_enabledlevels = missionNamespace getVariable Format["CTI_%1_UPGRADES_LEVELS", CTI_P_SideJoined];
+		{
+			if (_enabled select _forEachIndex) then {
+				_upgradesenabled pushback _x;
+			};
+		} forEach (_upgrades);
+		{
+			if (_enabled select _forEachIndex) then {
+				_upgradesenabledlevel pushback _x;
+			};
+		} forEach (_enabledlevels);
+		//end upgrade enabled checks
 		_need_reload = false;
-		
 		for '_i' from 0 to ((lnbSize 250002) select 0)-1 do {
 			_value = lnbValue[250002, [_i, 0]];
-			if ((_upgrades select _i) != _value) then {
+			if ((_upgradesenabled select _i) != _value) then {
 				if (_i == _selected) then {_need_reload = true};
-				((uiNamespace getVariable "cti_dialog_ui_upgrademenu") displayCtrl 250002) lnbSetText [[_i, 0], format["%1/%2", _upgrades select _i, (missionNamespace getVariable Format["CTI_%1_UPGRADES_LEVELS", CTI_P_SideJoined]) select _i]];
-				((uiNamespace getVariable "cti_dialog_ui_upgrademenu") displayCtrl 250002) lnbSetValue [[_i, 0], _upgrades select _i];
+				((uiNamespace getVariable "cti_dialog_ui_upgrademenu") displayCtrl 250002) lnbSetText [[_i, 0], format["%1/%2", _upgradesenabled select _i, _upgradesenabledlevel select _i]];
+				((uiNamespace getVariable "cti_dialog_ui_upgrademenu") displayCtrl 250002) lnbSetValue [[_i, 0], _upgradesenabled select _i];
 			};
 		};
 		
