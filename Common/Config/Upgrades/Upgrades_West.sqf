@@ -55,29 +55,29 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-    [1500,2000,2500,3000], //--- Gear
-	[1000,2000,3000,4000], //--- Barracks
-	[2000,2500,3500,5000,24000], //--- Light
-	[3500,5000,6500,8000], //--- Heavy
-	[1500,2000], //--- Naval
+    [1000,1500,3000,3500], //--- Gear
+	[1000,1500,3000,4000], //--- Barracks
+	[2000,2250,3500,4500,20000], //--- Light
+	[3500,4500,6000,8000], //--- Heavy
+	[1500,3000], //--- Naval
 	[4000,6000,8000,10000,12000], //--- Air
-	[1500], //--- Air FFAR
-	[2500], //--- Air DAR
-	[3500], //--- Air AT
-	[2500], //--- Air AA
-	[1500], //--- Air CM
-	[1500, 3000, 4500], //--- Forward Logistics
-	[1000, 2000], //--- Halo
-	[1000, 1500, 2000], //--- Air Radar
-	[1000, 1500, 2000], //--- Art Radar
-	[1000,2000,3000], //--- Respawn Range
+	[10], //--- Air FFAR
+	[10], //--- Air DAR
+	[10], //--- Air AT
+	[10], //--- Air AA
+	[10], //--- Air CM
+	[1500,3000, 4500], //--- Forward Logistics
+	[1000,2000], //--- Halo
+	[1000,1500,2000], //--- Air Radar
+	[1000,1500,2000], //--- Art Radar
+	[1000,1500,2500], //--- Respawn Range
 	[1500,2000], //--- LVOSS System
 	[2000,4000,6000,8000], //--- ERA System
 	[4000,20000], //--- Satellite
 	[40000], //--- Nuke
-	[4000, 8000, 12000], //--- Supply Rate
-	[4000, 5000, 6000, 7000], //--- Base Health
-	[500, 1000, 1500, 2000] //--- Base Defense
+	[3000,5500,8000], //--- Supply Rate
+	[3000,6000,9000,12000], //--- Base Health
+	[500,1000,2500,5000] //--- Base Defense
 ]];
 };
 

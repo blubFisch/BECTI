@@ -1,4 +1,53 @@
-﻿Upcoming release
+**1.06.7**
+Added: ka52 at af4 for opfor
+Added: Emr 7.62 ammo to gear menu
+Replaced: Gaz-233114 with brdm models (res doesn't engage correctly)
+Replaced: Rg-33 unarmed with rg-33 m2
+Replace: Rhs fixed wing w vanilla assets
+Tweaked: Lower price of AF4/5 assets
+Tweaked: Base/repair menu mortar cost
+Tweaked: Increased base defense 3/4 SV cost
+Tweaked: Isla duala camps/bridges fixed
+Tweaked: Titan prices AT:3000/1000/800 AA:5000/750
+Tweaked: Few performance optimizations 
+Tweaked: Base damage decrease
+Tweaked: Teamstack set to +2
+Tweaked: Vanilla repair function has been removed
+Tweaked: Field repair only repairs vehicle modules up to 40% of their health
+Tweaked: Initial starting locations paced on edges of map
+Tweaked: Added 5% more weapon sway
+Removed: Apex objects from all maps
+Removed: Pack mortars
+Removed: Fuel consumption, until coded better
+
+1.06.6
+Replaced: Camps with watch towers
+Added: 4 extra slots, and removed HC slots
+Added: Spawn inside camps system
+Tweaked: Upgrade Tree SV adjustments (reduced by 6250SV overall/redistributed)
+Tweaked: Resistance and occupation classes for small towns
+Tweaked: Extended base statics range for respawn and rearm
+Fixed: Base damage after 1.68 update
+Fixed: Deploying one fob truck multiple times
+Fixed: Isladuala town connection
+Fixed: UAZ's spawning empty in towns
+Fixed: RHS Unit tweaks
+Fixed: Gear template  bug where you can buy high level gear
+
+﻿1.06.5
+Removed: Ifrit/Hunter ones again :)
+Fixed: Resistance bounty
+Added: Base respawn inside buildings
+Added: GUI for selling in build menu
+Disabled: Fog
+
+1.06.4
+Removed: Ifrit/Hunter
+Removed: kord gun/tripod bag from opfor
+Added: Podnos static pod to blufor
+Added: Remaining rpg ammo types
+Tweaked: Nuke range incrased to 1km
+Added: Gear menu Cam
 
 1.06.3
 Tweaked: Blufor titan ammo at correct tiers
@@ -16,10 +65,6 @@ Fixed: Floating Camp in takistan
 Fixed: Some defence structure ruins not disappearing on death
 Fixed: Town occupation not spawning
 Fixed: Base defence will not respawn after it dies
-Removed: Ifrit/Hunter
-Removed: kord gun/tripod bag from opfor
-Added: Podnos static pod to blufor
-Added: Remaining rpg ammo types
 
 1.06.2
 Fixed: Rearm on some aircraft giving incorrect loadouts

@@ -689,9 +689,9 @@ _u pushBack "B_MBT_01_arty_F";
 
 if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
-	_u pushBack "B_MRAP_01_F";
+	/*_u pushBack "B_MRAP_01_F";
 	_u pushBack "B_MRAP_01_hmg_F";
-	_u pushBack "B_MRAP_01_gmg_F";
+	_u pushBack "B_MRAP_01_gmg_F";*/
 	_u pushBack "B_Truck_01_medical_F";
 	_u pushBack 'B_Slingload_01_Medevac_F';
 	_u pushBack 'O_Truck_03_device_F';
@@ -819,10 +819,10 @@ if (CTI_OFPS_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 1) then {
 		//NATO Tropic OFPS
-		_u pushBack 'OFPS_HMMWV_GPK';		
+		/*_u pushBack 'OFPS_HMMWV_GPK';		
 		_u pushBack 'OFPS_HMMWV_AA';		
 		_u pushBack 'OFPS_HMMWV_TOW';	
-		_u pushBack 'OFPS_HMMWV_SOV';
+		_u pushBack 'OFPS_HMMWV_SOV';*/
 		
 		
 	};
@@ -841,18 +841,18 @@ _u pushBack 'rhsusf_mrzr4_d';
 /*_u pushBack 'rhsusf_m998_w_2dr';*/
 _u pushBack 'rhsusf_m1025_w';
 _u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
-_u pushBack 'rhsusf_rg33_usmc_d';
-_u pushBack 'rhsusf_rg33_usmc_wd';
+/*_u pushBack 'rhsusf_rg33_usmc_d';
+_u pushBack 'rhsusf_rg33_usmc_wd';*/
 _u pushBack 'rhsusf_m1025_d';
 _u pushBack 'rhsusf_m1025_w_m2';
 _u pushBack 'rhsusf_m1025_w_mk19';
 /*_u pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
-_u pushBack 'rhsusf_M1232_usarmy_wd';
+_u pushBack 'rhsusf_M1232_usarmy_wd';*/
 _u pushBack 'rhsusf_rg33_m2_usmc_d';
-_u pushBack 'rhsusf_M1232_M2_usarmy_d';
-_u pushBack 'rhsusf_M1232_MK19_usarmy_d';
+/*_u pushBack 'rhsusf_M1232_M2_usarmy_d';
+_u pushBack 'rhsusf_M1232_MK19_usarmy_d';*/
 _u pushBack 'rhsusf_rg33_m2_usmc_wd';
-_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
+/*_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
 _u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
 _u pushBack 'rhsusf_m998_d_2dr_fulltop';*/
 _u pushBack 'rhsusf_m1025_d_m2';
@@ -1246,7 +1246,7 @@ if (CTI_CUP_ADDON > 0) then {
 //--- OFPS UNITS
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
-	_u pushBack 'O_UAV_02_F';		
+	/*_u pushBack 'O_UAV_02_F';	*/	
 	/*_u pushBack 'B_UCSV_01';
 	_u pushBack 'B_UCSV_02';*/
 	/*_u pushBack 'bwi_a3_t6a';
@@ -1255,7 +1255,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'bwi_a3_at6b_3';
 	_u pushBack 'sab_alphajet';
 	_u pushBack 'sab_alphajet2';*/
-	/*_u pushBack 'OFPS_BUZZA_B';*/
+	_u pushBack 'OFPS_BUZZA_B';
 	/*_u pushBack 'pook_tu953M80_CDF';
 	_u pushBack 'pook_tu95ms_CDF';
 	_u pushBack 'pook_tu95ms16_CDF';
@@ -1302,31 +1302,44 @@ _u pushBack 'RHS_UH1Y_UNARMED_d';
 _u pushBack 'RHS_UH60M_MEV2_d';
 _u pushBack 'RHS_MELB_MH6M';
 _u pushBack 'RHS_MELB_H6M';
-_u pushBack 'RHS_UH60M_d';
-_u pushBack 'RHS_CH_47F_10';
+/*_u pushBack 'RHS_UH60M_d';*/
+/*_u pushBack 'RHS_CH_47F_10';*/
 _u pushBack 'rhsusf_CH53E_USMC_D';
 /*_u pushBack 'RHS_UH1Y_d';
 _u pushBack 'RHS_UH1Y_FFAR_d';*/
-_u pushBack 'RHS_UH1Y_d_GS';
+/*_u pushBack 'RHS_UH1Y_d_GS';*/
 /*_u pushBack 'RHS_AH1Z_GS';*/
 /*_u pushBack 'RHS_C130J';*/
 _u pushBack 'RHS_MELB_AH6M_L';
-_u pushBack 'RHS_A10';
+/*_u pushBack 'RHS_A10';*/
 /*_u pushBack 'RHS_AH64D_noradar_GS';
 _u pushBack 'RHS_AH1Z';
 _u pushBack 'RHS_MELB_AH6M_M';*/
-_u pushBack 'RHS_AH64D_GS';
-_u pushBack 'rhsusf_f22';
+/*_u pushBack 'RHS_AH64D_GS';*/
+/*_u pushBack 'rhsusf_f22';*/
 /*_u pushBack 'RHS_AH64D_noradar_AA';
 _u pushBack 'RHS_AH1Z_CS';
 _u pushBack 'RHS_AH64D_noradar';
 _u pushBack 'RHS_MELB_AH6M_H';*/
-_u pushBack 'RHS_AH64D_CS';
-_u pushBack 'RHS_A10_AT';
+/*_u pushBack 'RHS_AH64D_CS';*/
+/*_u pushBack 'RHS_A10_AT';*/
 /*_u pushBack 'RHS_AH64DGrey';*/
-_u pushBack 'RHS_AH64D';
-_u pushBack 'RHS_AH64D_AA';
+/*_u pushBack 'RHS_AH64D';
+_u pushBack 'RHS_AH64D_AA';*/
 _u pushBack 'RHS_an2';
+
+
+//--- Blow are OFPS RHS units, this isnt the right place for it as its and should be nested.
+_u pushBack 'ofps_RHS_AH64D';
+_u pushBack 'ofps_RHS_AH64D_GS';
+_u pushBack 'ofps_RHS_AH64D_CS';
+_u pushBack 'ofps_RHS_AH64D_AA';
+/*_u pushBack 'ofps_RHS_AH64D_noradar';*/
+/*_u pushBack 'ofps_RHS_UH60M_d';*/
+/*_u pushBack 'ofps_RHS_AH1Z';
+_u pushBack 'ofps_RHS_AH1Z_CS';*/
+_u pushBack 'ofps_RHS_CH_47F_10';
+_u pushBack 'ofps_RHS_UH1Y_d_GS';
 
 };
 
@@ -1636,8 +1649,8 @@ if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
 	_u pushBack "B_Soldier_F";
 	_u pushBack "B_crew_F";
-	_u pushBack "B_MRAP_01_F";
-	_u pushBack "B_MRAP_01_hmg_F";
+	/*_u pushBack "B_MRAP_01_F";
+	_u pushBack "B_MRAP_01_hmg_F";*/
 	_u pushBack "B_G_Offroad_01_repair_F";
 
 };
@@ -1665,8 +1678,8 @@ if (CTI_APEX_ADDON > 0) then {
 		//NATO Tropic APEX
 		_u pushBack "B_T_Soldier_F";
 		_u pushBack "B_T_crew_F";
-		_u pushBack "OFPS_HUNTER";
-		_u pushBack "OFPS_HUNTER_HMG";
+		/*_u pushBack "OFPS_HUNTER";
+		_u pushBack "OFPS_HUNTER_HMG";*/
 
 	};
 	if (CTI_FACTION_WEST == 2) then {
@@ -1763,8 +1776,8 @@ if (CTI_FACTION_WEST == 0) then {
 	//NATO Arid Vanilla
 	_u pushBack "B_Soldier_F";
 	_u pushBack "B_crew_F";
-	_u pushBack "B_MRAP_01_F";
-	_u pushBack "B_MRAP_01_hmg_F";
+  /*_u pushBack "B_MRAP_01_F";
+	_u pushBack "B_MRAP_01_hmg_F";*/
 	_u pushBack "B_G_Offroad_01_repair_F";
 
 };
@@ -1789,10 +1802,10 @@ if (CTI_APEX_ADDON > 0) then {
 	};
 	if (CTI_FACTION_WEST == 1) then {
 		//NATO Tropic APEX
-		_u pushBack "B_T_Soldier_F";
+	  /*_u pushBack "B_T_Soldier_F";
 		_u pushBack "B_T_crew_F";
 		_u pushBack "OFPS_HUNTER";
-		_u pushBack "OFPS_HUNTER_HMG";
+		_u pushBack "OFPS_HUNTER_HMG";*/
 
 	};
 	if (CTI_FACTION_WEST == 2) then {
@@ -1803,9 +1816,9 @@ if (CTI_APEX_ADDON > 0) then {
 //--- CUP UNITS
 if (CTI_CUP_ADDON > 0) then { 
 	//Universal CUP
-	_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
+	/*_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
 	_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
-	_u pushBack 'CUP_B_HMMWV_MK19_USMC';	
+	_u pushBack 'CUP_B_HMMWV_MK19_USMC';*/	
 	
 	if (CTI_FACTION_WEST == 0) then {
 		//NATO Arid CUP

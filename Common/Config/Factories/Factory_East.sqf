@@ -748,9 +748,9 @@ if (CTI_APEX_ADDON > 0) then {
 	//Universal APEX
     _u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
     _u pushBack 'O_T_Truck_03_medical_ghex_F';
-    _u pushBack 'O_T_MRAP_02_gmg_ghex_F';
+   /* _u pushBack 'O_T_MRAP_02_gmg_ghex_F';
     _u pushBack 'O_T_MRAP_02_hmg_ghex_F';
-    _u pushBack 'O_T_MRAP_02_ghex_F';
+    _u pushBack 'O_T_MRAP_02_ghex_F';*/
 
 
 	if (CTI_FACTION_EAST == 0) then {
@@ -764,11 +764,11 @@ if (CTI_APEX_ADDON > 0) then {
 	_u pushBack 'O_T_Quadbike_01_ghex_F';
 	_u pushBack 'O_T_Truck_03_transport_ghex_F';
 	_u pushBack 'O_T_Truck_03_covered_ghex_F';
-	_u pushBack 'O_T_MRAP_02_ghex_F';
+	/*_u pushBack 'O_T_MRAP_02_ghex_F';
 	_u pushBack 'O_T_MRAP_02_gmg_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
-	_u pushBack 'O_T_UGV_01_ghex_F';
-	_u pushBack 'O_T_UGV_01_rcws_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
+	/*_u pushBack 'O_T_UGV_01_ghex_F';
+	_u pushBack 'O_T_UGV_01_rcws_ghex_F';*/
 	_u pushBack 'O_T_Truck_03_medical_ghex_F';
 		
 	};
@@ -784,7 +784,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_B_Dingo_GL_GER_Wdl';		
 	_u pushBack 'CUP_O_Ural_RU';			
 	_u pushBack 'CUP_O_BRDM2_ATGM_RUS';  
-        _u pushBack 'CUP_O_BTR60_CSAT';   		
+    _u pushBack 'CUP_O_BTR60_CSAT';   		
 	_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';		
 	_u pushBack 'CUP_O_UAZ_METIS_RU';		
 	_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';		
@@ -795,7 +795,7 @@ if (CTI_CUP_ADDON > 0) then {
 	_u pushBack 'CUP_O_UAZ_AGS30_RU';		
 	_u pushBack 'CUP_I_SUV_Armored_ION';  
 	_u pushBack 'CUP_B_UAZ_Unarmed_CDF';		
-        _u pushBack 'CUP_O_Ural_Refuel_RU';		
+    _u pushBack 'CUP_O_Ural_Refuel_RU';		
 	_u pushBack 'CUP_O_BTR90_RU';	
 /*	_u pushBack 'CUP_O_LR_SPG9_TKA';*/
 	_u pushBack 'CUP_M1030';
@@ -907,7 +907,7 @@ if (CTI_RHS_ADDON > 0) then {
 _u pushBack 'rhs_tigr_m_msv';
 _u pushBack 'rhs_gaz66_msv';*/
 _u pushBack 'rhs_kamaz5350_msv';
-_u pushBack 'rhs_tigr_m_3camo_msv';
+/*_u pushBack 'rhs_tigr_m_3camo_msv';*/
 /*_u pushBack 'rhs_tigr_3camo_msv';*/
 _u pushBack 'RHS_UAZ_MSV_01';
 /*_u pushBack 'rhs_uaz_open_MSV_01';*/
@@ -915,8 +915,8 @@ _u pushBack 'rhsgref_BRDM2UM_msv';
 _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';
-/*_u pushBack 'rhsgref_BRDM2_msv';*/
-//_u pushBack 'rhs_gaz66_ap2_msv';
+_u pushBack 'rhsgref_BRDM2_msv';
+_u pushBack 'rhs_gaz66_ap2_msv';
 _u pushBack 'rhs_tigr_sts_3camo_msv';
 /*_u pushBack 'rhs_btr60_msv';*/
 _u pushBack 'rhs_btr70_msv';
@@ -1089,16 +1089,16 @@ _u pushBack 'rhs_bmp2d_msv';
 /*_u pushBack 'rhs_Ob_681_2'; */
 /*_u pushBack 'rhs_t72ba_tv';*/
 /*_u pushBack 'rhs_t72bb_tv'; */ 
-_u pushBack 'rhs_t72bd_tv'; 
+/*_u pushBack 'rhs_t72bd_tv'; */
 _u pushBack 'rhs_sprut_vdv'; 
 /*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
 _u pushBack 'rhs_bmd4vdv'; */
 /*_u pushBack 'rhs_t80';*/ 
-_u pushBack 'rhs_t80ue1'; 
+/*_u pushBack 'rhs_t80ue1'; */
 _u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t80bvk';
+/*_u pushBack 'rhs_t80bvk';*/
 /*_u pushBack 'rhs_t90a_tv'; */
 /*_u pushBack 'rhs_bmp3mera_msv'; */
 _u pushBack 'rhs_bmd4ma_vdv'; 
@@ -1106,6 +1106,12 @@ _u pushBack 'rhs_bmd4ma_vdv';
 _u pushBack 'RHS_BM21_MSV_01';
 _u pushBack 'rhs_9k79';
 _u pushBack 'rhs_9k79_K';*/
+
+//--- OFPS RHS Units Below, TODO setup nested.
+_u pushBack 'ofps_rhs_t80bvk';
+_u pushBack 'ofps_rhs_t80ue1';
+_u pushBack 'ofps_rhs_t72bd_tv';
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_HEAVY], _u];
@@ -1126,7 +1132,7 @@ _u = [];
 	_u pushBack 'O_Heli_Attack_02_black_F';
 	_u pushBack 'O_UAV_02_CAS_F';*/
 	_u pushBack 'O_UAV_02_F';
-	/*_u pushBack 'O_Plane_CAS_02_F';*/
+	_u pushBack 'O_Plane_CAS_02_F';
 	_u pushBack "O_UAV_02_CAS_F";
 
 
@@ -1246,7 +1252,7 @@ if (CTI_CUP_ADDON > 0) then {
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
 	/*_u pushBack 'O_T_UAV_04_CAS_F';*/			
-    _u pushBack 'O_UCSV_01';
+    /*_u pushBack 'O_UCSV_01';*/
 	/*_u pushBack 'sfp_bo105_unarmed';
 	_u pushBack 'sfp_bo105';*/
 	/*_u pushBack 'O_UCSV_01';*/
@@ -1260,7 +1266,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'sfp_j12';
 	_u pushBack 'sfp_j12_rb15';
 	_u pushBack 'sfp_j12_cap';*/
-	/*_u pushBack 'OFPS_BUZAA_O';*/
+	_u pushBack 'OFPS_BUZAA_O';
 	/*_u pushBack 'usaf_b1b';
 	_u pushBack 'pook_tu953M80';
 	_u pushBack 'pook_tu95ms';
@@ -1292,17 +1298,17 @@ if (CTI_RHS_ADDON > 0) then {
 //Universal RHS
 /*_u pushBack 'rhs_Mi8AMT_vvsc';*/
 _u pushBack 'rhs_ka60_c';
-_u pushBack 'RHS_Mi8mt_vvsc';
+/*_u pushBack 'RHS_Mi8mt_vvsc';*/
 _u pushBack 'RHS_Mi8mt_cargo_vdv';
 /*_u pushBack 'RHS_Mi8MTV3_vvsc';
 _u pushBack 'RHS_Mi8MTV3_FAB_vvsc';*/
-_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
+/*_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
-_u pushBack 'RHS_Mi8AMTSh_vvsc';
-_u pushBack 'RHS_Su25SM_vvs';
+_u pushBack 'RHS_Mi8AMTSh_vvsc';*/
+/*_u pushBack 'RHS_Su25SM_vvs';*/
 /*_u pushBack 'RHS_Su25SM_CAS_vvs';*/
-_u pushBack 'RHS_Mi24V_vvsc';
-_u pushBack 'RHS_Mi24V_FAB_vvsc';
+/*_u pushBack 'RHS_Mi24V_vvsc';*/
+/*_u pushBack 'RHS_Mi24V_FAB_vvsc';*/
 /*_u pushBack 'RHS_Mi24V_UPK23_vvsc';*/
 /*_u pushBack 'RHS_Mi24P_vvsc';
 _u pushBack 'RHS_Mi24P_CAS_vvsc';
@@ -1310,13 +1316,25 @@ _u pushBack 'RHS_Mi24V_AT_vvsc';*/
 _u pushBack 'RHS_Mi24P_AT_vvsc';
 /*_u pushBack 'RHS_Ka52_vvsc';
 _u pushBack 'RHS_Ka52_UPK23_vvsc';*/
-_u pushBack 'RHS_Su25SM_KH29_vvs';
-_u pushBack 'RHS_T50_vvs_055';
+/*_u pushBack 'RHS_Su25SM_KH29_vvs';
+_u pushBack 'RHS_T50_vvs_055';*/
 /*_u pushBack 'RHS_TU95MS_vvs_tambov';*/
 /*_u pushBack 'RHS_TU95MS_vvs_old';*/
 /*_u pushBack 'rhs_mi28n_vvsc';
 _u pushBack 'rhs_mi28n_s13_vvsc';*/
 _u pushBack 'rhs_an2';
+
+//--- Below is RHS OFPS units, needs to be placed as nested.
+_u pushBack 'ofps_RHS_Mi24V_vvsc';
+_u pushBack 'ofps_RHS_Mi24V_FAB_vvsc';
+_u pushBack 'ofps_RHS_Mi24V_AT_vvsc';
+_u pushBack 'ofps_RHS_Mi8AMTSh_vvsc';
+_u pushBack 'ofps_RHS_Mi8AMTSh_UPK23_vvsc';
+_u pushBack 'ofps_RHS_Mi8MTV3_UPK23_vvsc';
+/*_u pushBack 'ofps_RHS_Mi8MTV3_FAB_vvsc';*/
+_u pushBack 'ofps_RHS_Mi8mt_vvsc';
+/*_u pushBack 'ofps_RHS_Ka52_UPK23_vvsc';*/
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
@@ -1621,8 +1639,8 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	_u pushBack 'O_Soldier_F';
 	_u pushBack 'O_crew_F';
-	_u pushBack 'O_MRAP_02_F';
-	_u pushBack 'O_MRAP_02_hmg_F';
+/*	_u pushBack 'O_MRAP_02_F';
+	_u pushBack 'O_MRAP_02_hmg_F';*/
 
 	
 };
@@ -1653,8 +1671,8 @@ if (CTI_APEX_ADDON > 0) then {
 	_u pushBack 'O_T_Soldier_F';
 	_u pushBack 'O_T_crew_F';
 	_u pushBack 'O_T_Truck_03_transport_ghex_F';
-	_u pushBack 'O_T_MRAP_02_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+/*	_u pushBack 'O_T_MRAP_02_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
 		
 	};
 	if (CTI_FACTION_EAST == 2) then {
@@ -1688,9 +1706,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	//Universal OFPS
 	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-	_u pushBack 'OFPS_UAZ';
+	/*_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
-	_u pushBack 'OFPS_UAZ_AGS30';
+	_u pushBack 'OFPS_UAZ_AGS30';*/
 	//_u pushBack 'usaf_police_car2';
 	//_u pushBack 'usaf_police_offroad';
 	
@@ -1752,8 +1770,8 @@ if (CTI_FACTION_EAST == 0) then {
 	//CSAT Arid Vanilla
 	_u pushBack 'O_Soldier_F';
 	_u pushBack 'O_crew_F';
-	_u pushBack 'O_MRAP_02_F';
-	_u pushBack 'O_MRAP_02_hmg_F';
+	/*_u pushBack 'O_MRAP_02_F';
+	_u pushBack 'O_MRAP_02_hmg_F';*/
 };
 if (CTI_FACTION_EAST == 1) then {
 	//CSAT Tropic Vanilla
@@ -1780,9 +1798,9 @@ if (CTI_APEX_ADDON > 0) then {
 		//CSAT Tropic APEX
 	_u pushBack 'O_T_Soldier_F';
 	_u pushBack 'O_T_crew_F';
-	_u pushBack 'O_T_Truck_03_transport_ghex_F';
+/*	_u pushBack 'O_T_Truck_03_transport_ghex_F';
 	_u pushBack 'O_T_MRAP_02_ghex_F';
-	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+	_u pushBack 'O_T_MRAP_02_hmg_ghex_F';*/
 		
 	};
 	if (CTI_FACTION_EAST == 2) then {
@@ -1812,9 +1830,9 @@ if (CTI_OFPS_ADDON > 0) then {
 	//Universal OFPS
 	//_u pushBack 'sfp_dakota';
 	//_u pushBack 'sfp_mercedes';
-	_u pushBack 'OFPS_UAZ';
+	/*_u pushBack 'OFPS_UAZ';
 	_u pushBack 'OFPS_UAZ_MG';
-	_u pushBack 'OFPS_UAZ_AGS30';
+	_u pushBack 'OFPS_UAZ_AGS30';*/
 	//_u pushBack 'usaf_police_car2';
 	//_u pushBack 'usaf_police_offroad';
 	

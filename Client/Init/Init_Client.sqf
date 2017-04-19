@@ -29,6 +29,7 @@ CTI_CL_FNC_OnJailed = compileFinal preprocessFile "Client\Functions\Client_OnJai
 CTI_CL_FNC_OnMissionEnding = compileFinal preprocessFile "Client\Functions\Client_OnMissionEnding.sqf";
 CTI_CL_FNC_OnPlayerFired = compileFinal preprocessFile "Client\Functions\Client_OnPlayerFired.sqf";
 CTI_CL_FNC_OnPlayerKilled = compileFinal preprocessFile "Client\Functions\Client_OnPlayerKilled.sqf";
+CTI_CL_FNC_OnWeaponAssembled = compileFinal preprocessFile "Client\Functions\Client_OnWeaponAssembled.sqf";
 CTI_CL_FNC_OnPurchaseDelegationReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseDelegationReceived.sqf";
 CTI_CL_FNC_OnPurchaseOrderReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseOrderReceived.sqf";
 CTI_CL_FNC_OnStructureConstructed = compileFinal preprocessFile "Client\Functions\Client_OnStructureConstructed.sqf";
@@ -44,6 +45,7 @@ CTI_CL_FNC_UpdateAirRadarMarker = compileFinal preprocessFile "Client\Functions\
 CTI_CL_FNC_UpdateRadarMarkerAir = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerAir.sqf";
 CTI_CL_FNC_UpdateRadarMarkerArt = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerArt.sqf";
 CTI_CL_FNC_UpdateRadarSatellite = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarSatellite.sqf";
+CTI_CL_FNC_UpdateBaseVariables = compileFinal preprocessFile "Client\Functions\Client_UpdateBaseVariables.sqf";
 
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateClientAI.sqf";
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateOrders.sqf";
@@ -87,7 +89,7 @@ CTI_P_ActionLowGear = false;
 CTI_P_ActionPush = false;
 
 CTI_P_Coloration_Money = "#BAFF81";
-
+CTI_P_fob_currently_deploying = false;
 //--- Artillery Computer is only enabled on demand
 if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngineArtillery false};
 
@@ -182,6 +184,7 @@ CTI_InitClient = true;
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
 
 player addEventHandler ["killed", {_this spawn CTI_CL_FNC_OnPlayerKilled}];
+player addEventHandler ["WeaponAssembled", {_this spawn CTI_CL_FNC_OnWeaponAssembled}];
 /*if !(CTI_IsServer) then { //--- Pure client execution
 	[player, missionNamespace getVariable format ["CTI_AI_%1_DEFAULT_GEAR", CTI_P_SideJoined]] call CTI_CO_FNC_EquipUnit;
 
@@ -505,8 +508,9 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 
 if (CTI_DEV_MODE > 0) then {
 	onMapSingleClick "vehicle player setPos _pos"; //--- benny debug: teleport
-	player addEventHandler ["HandleDamage", {if (player != (_this select 3)) then {(_this select 3) setDammage 1}; false}]; //--- God-Slayer mode.
-/*	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+	player addEventHandler ["HandleDamage", {false}];
+/*	player addEventHandler ["HandleDamage", {if (player != (_this select 3)) then {(_this select 3) setDammage 1}; false}]; //--- God-Slayer mode.
+	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
 	player addAction ["<t color='#a5c4ff'>MENU: Construction (HQ)</t>", "Client\Actions\Action_BuildMenu.sqf"];//debug
 	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
 	CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
@@ -658,12 +662,6 @@ if (isNil "Radio_Say3D") then {
      (_array select 0) say3D [(_array select 1), (_array select 2)];
 };
 
-//--- UAV RANGE limit
-UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
-if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
-	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
-};
-
 //--- Igiload script
 _igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
 
@@ -679,8 +677,12 @@ waitUntil {!isNil "EtVInitialized"};
 //--- cmEARPLUGS
 call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
 
+//--- UAV Range Strict
+_uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_uavrange.sqf";
+
 //--- Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
+
 //--- Spawn init calls tablet
 0 spawn { call CTI_CL_FNC_Spawn; };
 

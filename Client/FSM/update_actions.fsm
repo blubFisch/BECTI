@@ -11,8 +11,8 @@ link1[] = {1,2};
 link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-169.174210,197.969833,422.452942,-638.185547,306,884,1};
-window[] = {2,-1,-1,-1,-1,1015,234,1489,234,3,324};
+globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-294.235992,72.908051,422.452942,-638.185547,141,609,1};
+window[] = {0,-1,-1,-1,-1,807,26,1281,26,1,159};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -69,68 +69,6 @@ class FSM
                          "		//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target == player && CTI_Base_HQInRange""];" \n
                          "		(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
                          "	};" \n
-                         "};" \n
-                         "" \n
-                         "//--- Generic base checks" \n
-                         "_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;" \n
-                         "" \n
-                         "CTI_Base_HQInRange = if (alive _hq && _hq distance player < CTI_BASE_CONSTRUCTION_RANGE) then {true} else {false};" \n
-                         "CTI_Base_ControlCenterInRange = if !(isNull ([CTI_CONTROLCENTER, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_CC] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_SatelliteInRange = if !(isNull ([CTI_SATELLITE, player, _structures, CTI_BASE_SATELLITE_RANGE_SATCAM] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "" \n
-                         "CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE = if (CTI_Base_ControlCenterInRange) then {CTI_BASE_PURCHASE_UNITS_RANGE_CC} else {CTI_BASE_PURCHASE_UNITS_RANGE};" \n
-                         "" \n
-                         "_barracks = [CTI_BARRACKS, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure;" \n
-                         "CTI_Base_BarracksInRange = if !(isNull _barracks) then {true} else {false};" \n
-                         "CTI_Base_GearInRange = if (_barracks distance player < CTI_BASE_GEAR_RANGE) then {true} else {false};" \n
-                         "CTI_Base_GearInRange_Mobile = if ((count([player, CTI_SPECIAL_AMMOTRUCK, CTI_SERVICE_AMMO_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) || (count([player, CTI_SPECIAL_GEAR, CTI_SERVICE_GEAR_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0)) then {true} else {false};" \n
-                         "" \n
-                         "CTI_Base_LightInRange = if !(isNull ([CTI_LIGHT, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_HeavyInRange = if !(isNull ([CTI_HEAVY, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_AirInRange = if !(isNull ([CTI_AIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_AmmoInRange = if !(isNull ([CTI_AMMO, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_RepairInRange = if !(isNull ([CTI_REPAIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "CTI_Base_NavalInRange = if !(isNull ([CTI_NAVAL, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};" \n
-                         "" \n
-                         "CTI_Base_RepairInRange_Mobile = if (count([player, CTI_SPECIAL_REPAIRTRUCK, CTI_SERVICE_REPAIR_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};" \n
-                         "CTI_Base_FuelInRange_Mobile = if (count([player, CTI_SPECIAL_FUELTRUCK, CTI_SERVICE_FUEL_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};" \n
-                         "CTI_Base_DefenseTruckInRange_Mobile = if (count([player, CTI_SPECIAL_DEFENSETRUCK, CTI_SERVICE_DEFENSE_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};" \n
-                         "" \n
-                         "//--- Depot check" \n
-                         "_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;" \n
-                         "if !(isNull _depot) then {" \n
-                         "	_available = false;" \n
-                         "	switch (CTI_TOWNS_DEPOT_ACCESS_MODE) do {" \n
-                         "		case 1: {if ([_depot getVariable ""cti_depot"", CTI_P_SideID] call CTI_CO_FNC_HasAllCamps) then {_available = true}}; //--- Check if the camps belong to the player's side" \n
-                         "		default {_available = true}; //--- Default, The depot belongs to the player's side" \n
-                         "	};" \n
-                         "	" \n
-                         "	CTI_Base_DepotInRange = _available;" \n
-                         "} else {" \n
-                         "	CTI_Base_DepotInRange = false;" \n
-                         "};" \n
-                         "CTI_Base_GearInRange_Depot = CTI_Base_DepotInRange;" \n
-                         "" \n
-                         "//--- FOB Check" \n
-                         "_in_range = false;" \n
-                         "if (CTI_BASE_FOB_MAX > 0) then {" \n
-                         "	_nearest = [vehicle player, CTI_P_SideLogic getVariable [""cti_fobs"",[]]] call CTI_CO_FNC_GetClosestEntity;" \n
-                         "	if (_nearest distance vehicle player <= CTI_BASE_GEAR_FOB_RANGE) then {_in_range = true};" \n
-                         "};" \n
-                         "CTI_Base_GearInRange_FOB = _in_range;" \n
-                         "" \n
-                         "//--- Large FOB Check" \n
-                         "_in_range_large = false;" \n
-                         "if (CTI_BASE_LARGE_FOB_MAX > 0) then {" \n
-                         "	_nearest = [vehicle player, CTI_P_SideLogic getVariable [""cti_large_fobs"",[]]] call CTI_CO_FNC_GetClosestEntity;" \n
-                         "	if (_nearest distance vehicle player <= CTI_BASE_GEAR_LARGE_FOB_RANGE) then {_in_range_large = true};" \n
-                         "};" \n
-                         "CTI_Base_LargeFOBInRange = _in_range_large;" \n
-                         "CTI_Base_GearInRange_LARGE_FOB = _in_range_large;" \n
-                         "" \n
-                         "//--- Track the player's gear" \n
-                         "if (CTI_GEAR_RESPAWN_WITH_LAST > 0) then {" \n
-                         "	if (alive player && !CTI_P_Respawning) then {CTI_P_CurrentGear = (player) call CTI_CO_FNC_GetUnitLoadout};" \n
                          "};" \n
                          "" \n
                          "//--- Actions" \n

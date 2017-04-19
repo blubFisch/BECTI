@@ -582,6 +582,15 @@ _d pushBack 0;
 
 //--- Air Vehicles
 
+_u pushBack 'OFPS_BUZZA_B';
+_p pushBack '';
+_n pushBack ["NATO AA Buzzard"]; 
+_o pushBack 75000;
+_t pushBack 5;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
 
 /*_c pushBack 'AAF_D_Heli_Transport_02_F';
 _p pushBack '';

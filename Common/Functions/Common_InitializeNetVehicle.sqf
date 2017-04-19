@@ -108,10 +108,10 @@ if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 };
 
 if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
-	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["small"], 10, false, true, "", "(player==driver _target)"];
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["small"], 10, false, true, "", "(player==driver _target) && !(CTI_P_fob_currently_deploying)"];
 };
 if (CTI_SPECIAL_DEPLOYABLEFOBLARGE in _special) then { //--- LARGE FOB vehicle.
-	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(player==driver _target)"];
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(player==driver _target) && !(CTI_P_fob_currently_deploying)"];
 };
 
 //--- Get a proper icon
