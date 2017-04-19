@@ -558,15 +558,6 @@ CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 2;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
 CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.4;//--- Rockets
 CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.1;//--- Bombs
-//--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
-CTI_BASE_DAMAGE_MAX_SHELL = 0.1;//--- Tanks
-CTI_BASE_DAMAGE_MAX_ARTY = 0.1;//--- Arty
-CTI_BASE_DAMAGE_MAX_SATCHEL = 0.5;//--- Satchels
-CTI_BASE_DAMAGE_MAX_CANNON = 0.1;//--- HE Cannons
-CTI_BASE_DAMAGE_MAX_MISSLE = 0.1;//--- Missiles from helis and others
-CTI_BASE_DAMAGE_MAX_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
-CTI_BASE_DAMAGE_MAX_ROCKETS = 0.1;//--- Rockets
-CTI_BASE_DAMAGE_MAX_BOMB = 0.5;//--- Bombs
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
