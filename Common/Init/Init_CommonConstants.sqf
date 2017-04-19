@@ -32,11 +32,22 @@ CTI_SUPPLY_DEPOT = "SupplyDepot";
 CTI_SATELLITE = "Satellite";
 CTI_LARGE_FOB = "LargeFOB";
 
-CTI_FACTORIES = [CTI_BARRACKS,CTI_LIGHT,CTI_HEAVY,CTI_AIR,CTI_REPAIR,CTI_AMMO,CTI_NAVAL];
+CTI_FACTORIES = [CTI_BARRACKS, CTI_LIGHT, CTI_HEAVY, CTI_AIR, CTI_REPAIR, CTI_AMMO, CTI_NAVAL, CTI_RADAR, CTI_RADAR_ART];
 
 CTI_WEST_COLOR = "ColorBlue";
 CTI_EAST_COLOR = "ColorRed";
 CTI_RESISTANCE_COLOR = "ColorGreen";
+
+CTI_STRUCTURE_LABELS = 0;
+CTI_STRUCTURE_CLASSES = 1;
+CTI_STRUCTURE_PRICE = 2;
+CTI_STRUCTURE_TIME = 3;
+CTI_STRUCTURE_PLACEMENT = 4;
+CTI_STRUCTURE_SPECIALS = 5;
+CTI_STRUCTURE_CONDITION = 6;
+CTI_STRUCTURE_RESPAWNBPOS = 7;
+
+CTI_CAMP_RESPAWNBPOS = 0;
 
 CTI_GEAR_TAB_PRIMARY = 0;
 CTI_GEAR_TAB_SECONDARY = 1;
@@ -134,7 +145,7 @@ CTI_TOOLKIT_REPAIR_TIME_CAR = 20; // repair time for wheeled vehicles including 
 CTI_TOOLKIT_REPAIR_TIME_AIR = 45; // repair time for aircraft in seconds
 CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
 CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
-CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.75; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
+CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.4; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
 //-------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------//
 //-- vehicle stealth
@@ -348,8 +359,8 @@ CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respaw
  */
 
 //--- Towns: Camps
-CTI_TOWNS_CAMPS_CAPTURE_RANGE = 10; //--- Range needed to capture/protect a camp
-CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 25; //--- Range needed to capture/protect a camp for town AIs
+CTI_TOWNS_CAMPS_CAPTURE_RANGE = 5; //--- Range needed to capture/protect a camp
+CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 30; //--- Range needed to capture/protect a camp for town AIs
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to match CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE), proc all 5 seconds.
@@ -510,9 +521,9 @@ CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
 CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
-CTI_BASE_DEFENSES_AUTO_RANGE = 250; //--- Range from the nearest barrack at which AI may auto man a defense
-CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 250; //--- Range needed for a defense to be able to rearm at a service point
-CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 350; //--- Delay after which an empty defense is considered empty
+CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
+CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
+CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
 CTI_BASE_DEFENSES_SOLD_COEF = 0.25; //--- The player will get a fund return based on the defense price * coef when a defense is sold
 
 //--- Base: HQ
@@ -539,14 +550,14 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 //--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 4;//--- Tanks
-CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.5;//--- Arty
-CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 1;//--- Satchels
-CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.5;//--- HE Cannons
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 0.5;//--- Missiles
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1.5;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.3;//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.1;//--- Satchels
+CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;//--- HE Cannons
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 2;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
-CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.5;//--- Rockets
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.5;//--- Bombs
+CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.4;//--- Rockets
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.1;//--- Bombs
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
@@ -673,9 +684,11 @@ CTI_MARKERS_VEHICLES_DEAD_DELAY = 125;
 CTI_PLAYER_DEFAULT_ALIAS = "Soldier";
 
 CTI_RESPAWN_AI_RANGE = 600;
+CTI_RESPAWN_BASE_MODE = 1; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
+CTI_RESPAWN_CAMPS_MODE = 1; //--- Determine where the client should respawn at camps (0: Near the camp, 1: Use listed camp buildingPos)
 CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2000; //--- Determine the range needed to respawn at a town's camps (from the town center)
 CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to respawn at a town's camps (from a camp)
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
@@ -738,7 +751,8 @@ CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 1; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
+CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
+CTI_GC_CLEANUP_AIWEAPONS = 1; //--- 1 to enable / 0 to disable - Remove simulation from dead bodys to prevent looting and remove all weapons, dont enable both.
 
 CTI_HALO_COOLDOWN = 300;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;

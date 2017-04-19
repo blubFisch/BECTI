@@ -555,7 +555,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then {
 	GUER_SOLDIER_SNIPER = "rhsgref_cdf_reg_marksman";
 	GUER_SOLDIER_TEAMLEADER = "rhsgref_cdf_reg_squadleader";
 	GUER_SOLDIER_SQUADLEADER = "rhsgref_cdf_reg_squadleader";*/
-	GUER_SOLDIER = "rhsgref_nat_reg_rifleman_akms";
+	GUER_SOLDIER = "rhsgref_nat_hunter";
 	GUER_SOLDIER_AA = "rhsgref_nat_specialist_aa";
 	GUER_SOLDIER_AR = "rhsgref_nat_machinegunner";
 	GUER_SOLDIER_AT = "rhsgref_nat_grenadier_rpg";
@@ -587,9 +587,9 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 9) then {
 	GUER_VEHICLE_APC2 = ["rhsgref_ins_g_bmd1p"];
 	GUER_VEHICLE_APC3 = ["rhsgref_ins_g_bmd2"];
 	//--- Tanks
-	GUER_VEHICLE_ARMORED1 = ["rhsgref_ins_g__t72ba"];	
-	GUER_VEHICLE_ARMORED2 = ["rhsgref_ins_g__t72ba"];
-	GUER_VEHICLE_ARMORED3 = ["rhsgref_ins_g__t72ba"];
+	GUER_VEHICLE_ARMORED1 = ["rhsgref_ins_g_t72ba"];	
+	GUER_VEHICLE_ARMORED2 = ["rhsgref_ins_g_t72ba"];
+	GUER_VEHICLE_ARMORED3 = ["rhsgref_ins_g_t72ba"];
 	//--- AA Vehicles
 	GUER_VEHICLE_AA1 = ["rhsgref_ins_g_ural_Zu23"];
 	GUER_VEHICLE_AA2 = ["rhsgref_ins_g_gaz66_zu23"];

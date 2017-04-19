@@ -50,19 +50,6 @@ funcVectorDot = compileFinal preprocessFileLineNumbers "Server\Functions\Externa
 funcVectorScale = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\fVectorScale.sqf";
 funcVectorSub = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\fVectorSub.sqf";
 
-switch (toLower(worldName)) do {
-	case "altis": {
-		//--- Load Naval Town Structures
-		call compile preprocessFileLineNumbers "Server\Init\initTownStructuresAltis.sqf";
-		//--- Load Map Structures
-		call compile preprocessFileLineNumbers "Server\Init\initMapStructuresAltis.sqf";
-	};
-	case "stratis": {
-		//--- Load Naval Town Structures
-		call compile preprocessFileLineNumbers "Server\Init\initTownStructuresStratis.sqf";
-	};
-};
-
 call compile preprocessFileLineNumbers "Server\Init\Init_PublicVariables.sqf";
 call compile preprocessFileLineNumbers "Server\Functions\FSM\Functions_FSM_RepairTruck.sqf";
 call compile preprocessFileLineNumbers "Server\Functions\FSM\Functions_FSM_UpdateAI.sqf";

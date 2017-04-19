@@ -1,6 +1,6 @@
 private ["_action","_upgrades","_enable"];
 _action = _this select 0;
-
+true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": {
 		//--- Gear available?

@@ -163,3 +163,13 @@ if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
 		deleteVehicle _this;
 	};
 };
+
+//--- Dont delete man but remove simulation to prevent looting
+if (CTI_GC_CLEANUP_AIWEAPONS > 0 && !_isvehicle_killed) then {
+	_killed spawn {
+		removeallweapons _this;
+		clearmagazinecargo _this;
+		sleep 2; //--- Adding sleep to prvent dead bodys from getting stuck wile falling down 
+		_this enableSimulationGlobal false;
+    };
+};

@@ -1,6 +1,6 @@
 private ["_action"];
 _action = _this select 0;
-
+true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": {
 		CTI_P_LastRootMenu = "Commanding";

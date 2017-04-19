@@ -1,5 +1,5 @@
 _action = _this select 0;
-
+true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": { //--- Triggered on the very first loading of the UI
 		//-- Load the list.
@@ -117,7 +117,7 @@ switch (_action) do {
 			if (_updated) then { call CTI_UI_Gear_UpdatePrice };
 		} else {
 			if (uiNamespace getVariable "cti_dialog_ui_gear_target" isKindOf "Man") then {
-				(_selected) call CTI_UI_Gear_EquipTemplate;
+				(lnbValue[70108, [_selected, 1]]) call CTI_UI_Gear_EquipTemplate;
 			};
 		};
 	};

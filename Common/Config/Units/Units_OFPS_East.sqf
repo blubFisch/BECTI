@@ -405,7 +405,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;*/
 
-/*_u pushBack 'ofps_rhs_t72bd_tv';	
+_u pushBack 'ofps_rhs_t72bd_tv';	
 _p pushBack '';
 _n pushBack ["T-72B3 (obr 2012g) (ofps)"];  
 _o pushBack 12000;
@@ -433,7 +433,7 @@ _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- Repair Vehicles
 
@@ -475,9 +475,9 @@ _d pushBack 0;*/
 _c pushBack 'OFPS_BUZAA_O';
 _p pushBack '';
 _n pushBack 'A143 Buzzard CAP';
-_o pushBack 18000;
+_o pushBack 75000;
 _t pushBack 50;
-_u pushBack 2;
+_u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
