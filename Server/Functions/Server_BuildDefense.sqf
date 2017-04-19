@@ -217,6 +217,9 @@ if (_iscomposition) then {
 
 	_defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]];
 
+    //-- Deleted EH
+	_defense addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
+
 	if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
 		//todo: determine if the defense is "auto" or not via config simulation
 		[_defense, CTI_BASE_DEFENSES_EMPTY_TIMEOUT] spawn CTI_SE_FNC_HandleEmptyVehicle; //--- Track the defense lifespan
