@@ -28,7 +28,7 @@ _distance = _this select 2;    //distance
 Radio_Say3D = [_obj,_snd,_distance];
 publicVariable "Radio_Say3D";
  
-// run on current machine also if not dedi server
-if (not isDedicated) then {_obj say3D [_snd,_distance,1]};
+//run on all player clients incl. player host
+if (hasInterface) then {_obj say3D [_snd,_distance,1]};
  
 true

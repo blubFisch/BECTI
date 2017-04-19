@@ -25,7 +25,7 @@ _radio =  "Land_HelipadEmpty_F" createVehicle position _vehicle; //Land_HelipadE
 		_action = _vehicle addaction ["Radio off","Client\Functions\Client_VehicleRadio.sqf",0,0,false,true,"","driver _target == player"];
 		_radio attachTo [_vehicle, [0,-1,1]];
 		sleep 1;
-		nul = [_radio,CTI_SOUND_valkyries,50] call Common_Say3D;
+		nul = [_radio,CTI_SOUND_valkyries,50] call CTI_CO_FNC_Say3D;
 		_radio setDamage 0;
 		_track = time + 240;//240fulllength
 		while {true} do {
