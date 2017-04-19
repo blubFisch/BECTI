@@ -28,19 +28,18 @@ if (CBA_Loaded) then
 		sleep 5;
 		player call ZAM_fnc_showNames_Press;
 	};
-
-	//hide score on HUD
-	disableSerialization;
-	_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
-	if ( !isNull _displayscorehud ) then {
-		_statusscorehud = _displayscorehud displayCtrl 15283;
-		_statusscorehud ctrlShow false;	
-	};
 };
 
 //--- No more weapon sway
 if (local player) then {
 	_swayamount = CTI_WEAPON_SWAY / 100;
 	player setCustomAimCoef _swayamount;
-	player addMPEventhandler ["MPRespawn", {player setCustomAimCoef _swayamount;}];
+};
+
+//--- Hide score on HUD
+disableSerialization;
+_displayscorehud = uiNamespace getVariable [ "RscMissionStatus_display", displayNull ];
+if ( !isNull _displayscorehud ) then {
+	_statusscorehud = _displayscorehud displayCtrl 15283;
+	_statusscorehud ctrlShow false;	
 };
