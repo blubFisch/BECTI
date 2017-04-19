@@ -807,7 +807,7 @@ class CTI_RscGearMenu
 			w = "SafeZoneW * 0.29";
 			h = "SafeZoneH * 0.09";
 		};		
-		class CTI_Gear_Container_Primary_Muzzle : CTI_Gear_Container_Map { // wasp
+		class CTI_Gear_Container_Primary_Muzzle : CTI_Gear_Container_Map {
 			idc = 77014;
 			
 			x = "SafeZoneX + (SafeZoneW * 0.70)";
@@ -1126,7 +1126,7 @@ class CTI_RscGearMenu
 			onMouseButtonDown = "";
 			onMouseButtonDblClick = "";
 		};
-		class CTI_Gear_Control_Primary_Muzzle: CTI_Gear_Control_Map { // wasp
+		class CTI_Gear_Control_Primary_Muzzle: CTI_Gear_Control_Map {
 			idc = 70014;
 			
 			x = "SafeZoneX + (SafeZoneW * 0.70)";
