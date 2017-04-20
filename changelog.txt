@@ -22,7 +22,9 @@ Tweaked: Gear UI Menu
 Removed: SAM Warning
 Removed: Apex objects from all maps
 Removed: Pack mortars
-Removed: Fuel consumption, until coded better
+Disabled: Era upgrads
+Disabled: Fuel burn
+Enabled: Air CM, FFAR, AA, DAR by default 
 
 1.06.6
 Replaced: Camps with watch towers
