@@ -407,9 +407,9 @@ _i pushBack "5Rnd_127x108_APDS_Mag";
 _u pushBack 0;
 _p pushBack 250;
 
-/*_i pushBack "launch_RPG32_F";
-_u pushBack 2;
-_p pushBack 600;*/
+_i pushBack "launch_RPG32_F";
+_u pushBack 1;
+_p pushBack 1200;
 
 
 _i pushBack "launch_O_Titan_F"; //AA

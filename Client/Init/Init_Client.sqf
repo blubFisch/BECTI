@@ -616,11 +616,10 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-//Disabled to move to barracs upgrade
-//FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 //--- Sam altitude warning
-call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
+// Disabling for now, to much spam.
+//call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
 
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";

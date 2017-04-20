@@ -96,9 +96,6 @@ CTI_AI_COMMANDER_FUNDS_AIR = 1000;
 
 CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY = 360;
 
-//---  CBA Check 
-CBA_Loaded = false;
-if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then {CBA_Loaded = true;};
 //---  OFPS Core Pack Check
 OFPS_Core_Loaded = false;
 if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then {OFPS_Core_Loaded = true;};
@@ -649,6 +646,9 @@ CTI_VEHICLES_ERA_COOLDOWN_TIME = 150; //--- Max cooldown time between ERA charge
 
 //--- Vehicles: Parameter
 with missionNamespace do {
+	if (isNil 'CTI_VEHICLES_FUEL_CONSUMPTION') then {CTI_VEHICLES_FUEL_CONSUMPTION = 1}; //-- Enable advanced fuel consumption
+	if (isNil 'CTI_VEHICLES_LVOSS') then {CTI_VEHICLES_LVOSS = 1}; //-- Enable lvoss on wheeled vehicles
+	if (isNil 'CTI_VEHICLES_ERA') then {CTI_VEHICLES_ERA = 1}; //-- Enable era on tracked vehicles
 	if (isNil 'CTI_VEHICLES_AIR_FFAR') then {CTI_VEHICLES_AIR_FFAR = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_DAR') then {CTI_VEHICLES_AIR_DAR = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_AA') then {CTI_VEHICLES_AIR_AA = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
@@ -957,7 +957,6 @@ with missionNamespace do {
 	if (isNil 'CTI_PLAYERS_GROUPSIZE') then {CTI_PLAYERS_GROUPSIZE = 4}; //--Limit Player AI
 
 	if (isNil 'CTI_UNITS_FATIGUE') then {CTI_UNITS_FATIGUE = 0};
-	if (isNil 'CTI_UNITS_FUEL_CONSUMPTION') then {CTI_UNITS_FUEL_CONSUMPTION = 1};
 	if (isNil 'CTI_GAMEPLAY_3P') then {CTI_GAMEPLAY_3P = -1};
 	if (isNil 'CTI_WEAPON_SWAY') then {CTI_WEAPON_SWAY = 50};
 	if (isnil 'CTI_SM_NONV') then {CTI_SM_NONV = 1};
