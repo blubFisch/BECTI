@@ -1,5 +1,5 @@
 _source = _this select 3;
-
+true call CTI_CL_FNC_UpdateBaseVariables;
 _areaSize = CTI_COIN_AREA_DEFAULT;
 _origin = player;
 

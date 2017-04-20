@@ -993,13 +993,13 @@ _i pushBack "RHS_SPG9_Tripod_Bag";
 _u pushBack 3;
 _p pushBack 500;
 
-_i pushBack "RHS_Podnos_Bipod_Bag";
+/*_i pushBack "RHS_Podnos_Bipod_Bag";
 _u pushBack 4;
 _p pushBack 2500;
 
 _i pushBack "RHS_Podnos_Gun_Bag";
 _u pushBack 4;
-_p pushBack 5000;
+_p pushBack 5000;*/
 
 _i pushBack "RHS_Metis_Gun_Bag";
 _u pushBack 3;

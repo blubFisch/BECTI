@@ -45,6 +45,7 @@ CTI_CL_FNC_UpdateAirRadarMarker = compileFinal preprocessFile "Client\Functions\
 CTI_CL_FNC_UpdateRadarMarkerAir = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerAir.sqf";
 CTI_CL_FNC_UpdateRadarMarkerArt = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarMarkerArt.sqf";
 CTI_CL_FNC_UpdateRadarSatellite = compileFinal preprocessFile "Client\Functions\Client_UpdateRadarSatellite.sqf";
+CTI_CL_FNC_UpdateBaseVariables = compileFinal preprocessFile "Client\Functions\Client_UpdateBaseVariables.sqf";
 
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateClientAI.sqf";
 call compile preprocessFileLineNumbers "Client\Functions\FSM\Functions_FSM_UpdateOrders.sqf";
@@ -507,8 +508,9 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 
 if (CTI_DEV_MODE > 0) then {
 	onMapSingleClick "vehicle player setPos _pos"; //--- benny debug: teleport
-	player addEventHandler ["HandleDamage", {if (player != (_this select 3)) then {(_this select 3) setDammage 1}; false}]; //--- God-Slayer mode.
-/*	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
+	player addEventHandler ["HandleDamage", {false}];
+/*	player addEventHandler ["HandleDamage", {if (player != (_this select 3)) then {(_this select 3) setDammage 1}; false}]; //--- God-Slayer mode.
+	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
 	player addAction ["<t color='#a5c4ff'>MENU: Construction (HQ)</t>", "Client\Actions\Action_BuildMenu.sqf"];//debug
 	player addAction ["<t color='#ff0000'>DEBUGGER 2000</t>", "debug_diag.sqf"];//debug
 	CTI_PurchaseMenu = player addAction ["<t color='#a5c4ff'>DEBUG: Purchase Units</t>", "Client\Actions\Action_PurchaseMenu.sqf", "HQ", 1, false, true, "", "_target == player"];//debug
@@ -614,11 +616,10 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-//Disabled to move to barracs upgrade
-//FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 //--- Sam altitude warning
-call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
+// Disabling for now, to much spam.
+//call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
 
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
@@ -650,7 +651,6 @@ if ( !isNull _displayscorehud ) then {
 };
 
 //--- Radio
-Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
 if (isNil "Radio_Say3D") then {
     Radio_Say3D = [objNull,"nosound",0];
 };
@@ -658,12 +658,6 @@ if (isNil "Radio_Say3D") then {
       private["_array"];
       _array = _this select 1;
      (_array select 0) say3D [(_array select 1), (_array select 2)];
-};
-
-//--- UAV RANGE limit
-UAV_RANGE = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UAV_Range.sqf";
-if ((missionNamespace getVariable "CTI_GAMEPLAY_DARTER") >0 ) then {
-	["darter","onEachFrame",{0 call UAV_RANGE } ] call BIS_fnc_addStackedEventHandler;
 };
 
 //--- Igiload script
@@ -681,8 +675,12 @@ waitUntil {!isNil "EtVInitialized"};
 //--- cmEARPLUGS
 call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
 
+//--- UAV Range Strict
+_uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_uavrange.sqf";
+
 //--- Earplugs
 0 spawn { call CTI_CL_FNC_EarPlugsSpawn; };
+
 //--- Spawn init calls tablet
 0 spawn { call CTI_CL_FNC_Spawn; };
 

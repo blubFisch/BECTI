@@ -6,7 +6,7 @@ _lb_queued_content = [];
 // ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110901) ctrlSetStructuredText parseText "<t>Producing: Soldier</t>";
 while { true } do {
 	if (isNil {uiNamespace getVariable "cti_dialog_ui_purchasemenu"}) exitWith {}; //--- Menu is closed.
-	
+	true call CTI_CL_FNC_UpdateBaseVariables;
 	//--- If the factory source (tab) is no longer available, we simply try to find a new one. If none are found then we simply exit
 	if !([CTI_Base_BarracksInRange, CTI_Base_LightInRange, CTI_Base_HeavyInRange, CTI_Base_AirInRange, CTI_Base_RepairInRange, CTI_Base_AmmoInRange, CTI_Base_NavalInRange, CTI_Base_DepotInRange] select (uiNamespace getVariable "cti_dialog_ui_purchasemenu_factory_index")) then {
 		_get = call CTI_UI_Purchase_GetFirstAvailableFactories;

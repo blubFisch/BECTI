@@ -96,9 +96,6 @@ CTI_AI_COMMANDER_FUNDS_AIR = 1000;
 
 CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY = 360;
 
-//---  CBA Check 
-CBA_Loaded = false;
-if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then {CBA_Loaded = true;};
 //---  OFPS Core Pack Check
 OFPS_Core_Loaded = false;
 if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then {OFPS_Core_Loaded = true;};
@@ -145,7 +142,7 @@ CTI_TOOLKIT_REPAIR_TIME_CAR = 20; // repair time for wheeled vehicles including 
 CTI_TOOLKIT_REPAIR_TIME_AIR = 45; // repair time for aircraft in seconds
 CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
 CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
-CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.75; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
+CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.4; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
 //-------------------------------------------------------------------------------------------------------------------------//
 //-------------------------------------------------------------------------------------------------------------------------//
 //-- vehicle stealth
@@ -550,13 +547,13 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 //--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2.5;//--- Tanks
-CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.5;//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1.5;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.3;//--- Arty
 CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.1;//--- Satchels
 CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;//--- HE Cannons
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 4;//--- Missiles from helis and others
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 2;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
-CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.5;//--- Rockets
+CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.4;//--- Rockets
 CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.1;//--- Bombs
 
 //--- Base: Purchase range
@@ -649,6 +646,9 @@ CTI_VEHICLES_ERA_COOLDOWN_TIME = 150; //--- Max cooldown time between ERA charge
 
 //--- Vehicles: Parameter
 with missionNamespace do {
+	if (isNil 'CTI_VEHICLES_FUEL_CONSUMPTION') then {CTI_VEHICLES_FUEL_CONSUMPTION = 1}; //-- Enable advanced fuel consumption
+	if (isNil 'CTI_VEHICLES_LVOSS') then {CTI_VEHICLES_LVOSS = 1}; //-- Enable lvoss on wheeled vehicles
+	if (isNil 'CTI_VEHICLES_ERA') then {CTI_VEHICLES_ERA = 1}; //-- Enable era on tracked vehicles
 	if (isNil 'CTI_VEHICLES_AIR_FFAR') then {CTI_VEHICLES_AIR_FFAR = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_DAR') then {CTI_VEHICLES_AIR_DAR = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_AA') then {CTI_VEHICLES_AIR_AA = 1}; //--- AA Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
@@ -748,7 +748,8 @@ CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 1; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
+CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
+CTI_GC_CLEANUP_AIWEAPONS = 1; //--- 1 to enable / 0 to disable - Remove simulation from dead bodys to prevent looting and remove all weapons, dont enable both.
 
 CTI_HALO_COOLDOWN = 300;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;
@@ -956,7 +957,6 @@ with missionNamespace do {
 	if (isNil 'CTI_PLAYERS_GROUPSIZE') then {CTI_PLAYERS_GROUPSIZE = 4}; //--Limit Player AI
 
 	if (isNil 'CTI_UNITS_FATIGUE') then {CTI_UNITS_FATIGUE = 0};
-	if (isNil 'CTI_UNITS_FUEL_CONSUMPTION') then {CTI_UNITS_FUEL_CONSUMPTION = 1};
 	if (isNil 'CTI_GAMEPLAY_3P') then {CTI_GAMEPLAY_3P = -1};
 	if (isNil 'CTI_WEAPON_SWAY') then {CTI_WEAPON_SWAY = 50};
 	if (isnil 'CTI_SM_NONV') then {CTI_SM_NONV = 1};

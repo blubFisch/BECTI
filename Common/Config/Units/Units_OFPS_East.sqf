@@ -475,9 +475,9 @@ _d pushBack 0;*/
 _c pushBack 'OFPS_BUZAA_O';
 _p pushBack '';
 _n pushBack 'A143 Buzzard CAP';
-_o pushBack 18000;
+_o pushBack 75000;
 _t pushBack 50;
-_u pushBack 2;
+_u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;

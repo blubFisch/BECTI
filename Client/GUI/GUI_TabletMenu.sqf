@@ -11,7 +11,7 @@ _last_infocheck = -100;
 
 while { true } do {
 	if (isNil {uiNamespace getVariable "cti_dialog_ui_tabletmenu"}) exitWith {}; //--- Menu is closed.
-	
+	true call CTI_CL_FNC_UpdateBaseVariables;
 	if (time - _last_infocheck > 1) then {
 		_uptime = call CTI_CL_FNC_GetMissionTime;
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl (777006)) ctrlSetStructuredText (parseText format["TIME: <t color='#d4ceff'>%1 Day(s) %2:%3:%4</t>", _uptime select 0,_uptime select 1,_uptime select 2, _uptime select 3]);

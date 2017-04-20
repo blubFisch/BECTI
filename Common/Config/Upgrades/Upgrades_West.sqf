@@ -19,8 +19,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Air Radar
 	true, //--- Art Radar
 	true, //--- Respawn Range
-	true, //--- LVOSS System
-	true, //--- ERA System
+	(missionNamespace getVariable "CTI_VEHICLES_LVOSS") == 1, //--- LVOSS System
+	(missionNamespace getVariable "CTI_VEHICLES_ERA") == 1, //--- ERA System
 	true, //--- Satellite
 	true, //--- Nuke
 	true, //--- Supply Rate
@@ -77,7 +77,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[40000], //--- Nuke
 	[3000,5500,8000], //--- Supply Rate
 	[3000,6000,9000,12000], //--- Base Health
-	[500,1000,1500,2000] //--- Base Defense
+	[500,1000,2500,5000] //--- Base Defense
 ]];
 };
 

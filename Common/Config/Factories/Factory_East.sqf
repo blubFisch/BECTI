@@ -907,7 +907,7 @@ if (CTI_RHS_ADDON > 0) then {
 _u pushBack 'rhs_tigr_m_msv';
 _u pushBack 'rhs_gaz66_msv';*/
 _u pushBack 'rhs_kamaz5350_msv';
-_u pushBack 'rhs_tigr_m_3camo_msv';
+/*_u pushBack 'rhs_tigr_m_3camo_msv';*/
 /*_u pushBack 'rhs_tigr_3camo_msv';*/
 _u pushBack 'RHS_UAZ_MSV_01';
 /*_u pushBack 'rhs_uaz_open_MSV_01';*/
@@ -915,8 +915,8 @@ _u pushBack 'rhsgref_BRDM2UM_msv';
 _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';
-/*_u pushBack 'rhsgref_BRDM2_msv';*/
-//_u pushBack 'rhs_gaz66_ap2_msv';
+_u pushBack 'rhsgref_BRDM2_msv';
+_u pushBack 'rhs_gaz66_ap2_msv';
 _u pushBack 'rhs_tigr_sts_3camo_msv';
 /*_u pushBack 'rhs_btr60_msv';*/
 _u pushBack 'rhs_btr70_msv';
@@ -1132,7 +1132,7 @@ _u = [];
 	_u pushBack 'O_Heli_Attack_02_black_F';
 	_u pushBack 'O_UAV_02_CAS_F';*/
 	_u pushBack 'O_UAV_02_F';
-	/*_u pushBack 'O_Plane_CAS_02_F';*/
+	_u pushBack 'O_Plane_CAS_02_F';
 	_u pushBack "O_UAV_02_CAS_F";
 
 
@@ -1252,7 +1252,7 @@ if (CTI_CUP_ADDON > 0) then {
 if (CTI_OFPS_ADDON > 0) then { 
 	//Universal OFPS
 	/*_u pushBack 'O_T_UAV_04_CAS_F';*/			
-    _u pushBack 'O_UCSV_01';
+    /*_u pushBack 'O_UCSV_01';*/
 	/*_u pushBack 'sfp_bo105_unarmed';
 	_u pushBack 'sfp_bo105';*/
 	/*_u pushBack 'O_UCSV_01';*/
@@ -1266,7 +1266,7 @@ if (CTI_OFPS_ADDON > 0) then {
 	_u pushBack 'sfp_j12';
 	_u pushBack 'sfp_j12_rb15';
 	_u pushBack 'sfp_j12_cap';*/
-	/*_u pushBack 'OFPS_BUZAA_O';*/
+	_u pushBack 'OFPS_BUZAA_O';
 	/*_u pushBack 'usaf_b1b';
 	_u pushBack 'pook_tu953M80';
 	_u pushBack 'pook_tu95ms';
@@ -1305,7 +1305,7 @@ _u pushBack 'RHS_Mi8MTV3_FAB_vvsc';*/
 /*_u pushBack 'RHS_Mi8MTV3_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
 _u pushBack 'RHS_Mi8AMTSh_vvsc';*/
-_u pushBack 'RHS_Su25SM_vvs';
+/*_u pushBack 'RHS_Su25SM_vvs';*/
 /*_u pushBack 'RHS_Su25SM_CAS_vvs';*/
 /*_u pushBack 'RHS_Mi24V_vvsc';*/
 /*_u pushBack 'RHS_Mi24V_FAB_vvsc';*/
@@ -1316,8 +1316,8 @@ _u pushBack 'RHS_Mi24V_AT_vvsc';*/
 _u pushBack 'RHS_Mi24P_AT_vvsc';
 /*_u pushBack 'RHS_Ka52_vvsc';
 _u pushBack 'RHS_Ka52_UPK23_vvsc';*/
-_u pushBack 'RHS_Su25SM_KH29_vvs';
-_u pushBack 'RHS_T50_vvs_055';
+/*_u pushBack 'RHS_Su25SM_KH29_vvs';
+_u pushBack 'RHS_T50_vvs_055';*/
 /*_u pushBack 'RHS_TU95MS_vvs_tambov';*/
 /*_u pushBack 'RHS_TU95MS_vvs_old';*/
 /*_u pushBack 'rhs_mi28n_vvsc';

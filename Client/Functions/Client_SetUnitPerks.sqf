@@ -53,7 +53,8 @@ while {! CTI_GameOver} do {
 		case (_rank == "LIEUTENANT") : { 
 			_playerai = 6;
 			if (_playerai < _upgrade_barracks_ai) then {_playerai = _upgrade_barracks_ai};
-			player setUnitTrait ["Engineer",true];
+			// removed so players dont get vanilla repair
+			//player setUnitTrait ["Engineer",true];
 			if (_info4 == 0) then {
 				["rank-up", [name player ,_rank, "Engineer", _playerai]] call CTI_CL_FNC_DisplayMessage;
 				_info4 = 1;
