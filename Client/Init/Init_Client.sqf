@@ -651,7 +651,6 @@ if ( !isNull _displayscorehud ) then {
 };
 
 //--- Radio
-Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
 if (isNil "Radio_Say3D") then {
     Radio_Say3D = [objNull,"nosound",0];
 };

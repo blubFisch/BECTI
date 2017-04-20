@@ -21,7 +21,7 @@
 	  -> will track the radar range
 */
 
-private ["_marker", "_side", "_vehicle","_rangebase","_objects","_count_enemies"];
+private ["_marker", "_side", "_vehicle","_rangebase","_objects","_count_enemies","_last_loop"];
 
 _vehicle = _this;
 _color = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideColoration;
@@ -34,6 +34,7 @@ _marker setMarkerBrushLocal "Border";
 _marker setMarkerSizeLocal [_rangebase,_rangebase];
 _marker setMarkerColorLocal _color;
 _marker setMarkerAlphaLocal 0.9;
+_last_loop = -600;
 
 while {alive _vehicle} do {
 	_objects = _vehicle nearEntities CTI_BASE_SATELLITE_BASE_DETECTION_RANGE;
@@ -41,7 +42,10 @@ while {alive _vehicle} do {
 	if (_count_enemies > 0) then {
 		_marker setMarkerColorLocal "ColorOrange";
 		["base-hostilenear", [_count_enemies]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", (CTI_P_SideJoined)];
-		[_vehicle,CTI_SOUND_purgesiren_2,200] call Common_Say3D;
+		if (time - _last_loop > 60) then {
+			_last_loop = time;
+			[_vehicle,CTI_SOUND_purgesiren_1,100] call CTI_CO_FNC_Say3D;
+		};
 	};
 	sleep CTI_BASE_SATELLITE_BASE_DETECTION_TIME;
 	_marker setMarkerColorLocal _color;
