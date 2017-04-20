@@ -96,9 +96,6 @@ CTI_AI_COMMANDER_FUNDS_AIR = 1000;
 
 CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY = 360;
 
-//---  CBA Check 
-CBA_Loaded = false;
-if ( isClass (configFile >> "CfgSettings" >> "CBA") ) then {CBA_Loaded = true;};
 //---  OFPS Core Pack Check
 OFPS_Core_Loaded = false;
 if ( isClass (configFile >> "CfgPatches" >> "ofps_Sound") ) then {OFPS_Core_Loaded = true;};

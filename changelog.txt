@@ -1,9 +1,11 @@
 **1.06.7**
 Added: ka52 at af4 for opfor
 Added: Emr 7.62 ammo to gear menu
+Added: RPG-42 to OPFOR gear 1
 Replaced: Gaz-233114 with brdm models (res doesn't engage correctly)
 Replaced: Rg-33 unarmed with rg-33 m2
-Replace: Rhs fixed wing w vanilla assets
+Replaced: Rhs fixed wing w vanilla assets
+Replaced: Name tags with Vanilla
 Tweaked: Lower price of AF4/5 assets
 Tweaked: Base/repair menu mortar cost
 Tweaked: Increased base defense 3/4 SV cost
@@ -16,6 +18,8 @@ Tweaked: Vanilla repair function has been removed
 Tweaked: Field repair only repairs vehicle modules up to 40% of their health
 Tweaked: Initial starting locations paced on edges of map
 Tweaked: Added 5% more weapon sway
+Tweaked: Gear UI Menu
+Removed: SAM Warning
 Removed: Apex objects from all maps
 Removed: Pack mortars
 Removed: Fuel consumption, until coded better

@@ -11,11 +11,11 @@ waituntil {!isnull (finddisplay 46)};
 
 			while {_OPRtrig} do {
 
-				sleep 0.001;
+				sleep 1;
 
 					if (_OPRbreathing) then {
 						_OPRstartingpos = position player;
-						sleep 0.001;
+						sleep 1;
 						_OPRposition = position _OPRdude;
 
 						_OPRstationary = _OPRstartingpos select 0 == _OPRposition select 0 && _OPRstartingpos select 1 == _OPRposition select 1;
