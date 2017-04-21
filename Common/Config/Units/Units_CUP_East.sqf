@@ -1,6 +1,6 @@
 /*
-//--- This file presents classnames and their vaules to the mission, to manage units that are in factory menu use factory file.
-//--- A tiny error in this file will break the game, be very carefull when editing!
+//--- This file presents classnames and their values to the mission, to manage units that are in factory menu use factory file.
+//--- A tiny error in this file will break the game, be very careful when editing!
 //--- Standard format below:
 
 //--- Class Name
@@ -9,13 +9,13 @@ _c pushBack 'O_T_Soldier_AA_F';
 //--- Picture will be used from config
 _p pushBack ''; 
 
-//--- Custom picture if config doesnt have one
+//--- Custom picture if config doesn’t have one
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg'; 
 
 //--- Name leaving blank will use name from config
 _n pushBack '';
 
-//--- Defualt config name + custom
+//--- Default config name + custom
 _n pushBack '%1 Friendly name';
 
 //--- Fully custom name
@@ -30,13 +30,13 @@ _o pushBack 4000;
 //--- Time it will take to build in seconds
 _t pushBack 5; 
 
-//--- Upgrade level which unit will be aviable starts from 0
+//--- Upgrade level which unit will be available starts from 0
 _u pushBack 2; 
 
-//--- Which factory unit will be avaiable for purchase
+//--- Which factory unit will be available for purchase
 _f pushBack CTI_FACTORY_BARRACKS; 
 
-//-- Special / Script blank will do npthing special
+//-- Special / Script blank will do nothing special
 _s pushBack ""; 
 
 //---  Special / Script service-medic will mark vehicles as medical respawn truck
@@ -45,7 +45,7 @@ _s pushBack "service-medic";
 //--- Distance unit will spawn from factory in meters
 _d pushBack 0; 
 
-*/
+*/ 
 
 _side = _this;
 _faction = "East";
