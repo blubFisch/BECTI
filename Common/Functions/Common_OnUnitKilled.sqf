@@ -118,8 +118,6 @@ if (!isNil '_var') then {
 						
 						if (isNull _logic) exitWith{};
 						
-						("kill by group-> " + str(_x) + " sidedefteam-> " +  str((_logic getVariable ["cti_defensive_team", "undef"])) + " isbasedefkill-> " + str(_x == (_logic getVariable ["cti_defensive_team", objNull]))) remoteexec ["diag_log"];
-						
 						if (_x == (_logic getVariable ["cti_defensive_team", objNull])) then {
 							[_var_name, _bounty, _killed_pname] remoteExec ["CTI_PVF_CLT_OnBaseDefensesKill", side _x];
 						};
