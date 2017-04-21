@@ -1,3 +1,52 @@
+/*
+//--- This file presents classnames and their values to the mission, to manage units that spawn in towns use Towns_Reistance file.
+//--- A tiny error in this file will break the game, be very careful when editing!
+//--- Standard format below:
+
+//--- Class Name
+_c pushBack 'O_T_Soldier_AA_F';
+
+//--- Picture will be used from config
+_p pushBack ''; 
+
+//--- Custom picture if config doesn’t have one
+_p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg'; 
+
+//--- Name leaving blank will use name from config
+_n pushBack '';
+
+//--- Default config name + custom
+_n pushBack '%1 Friendly name';
+
+//--- Fully custom name
+_n pushBack 'Friendly name';
+
+//--- Name that will have spawn range based on current upgrade
+_n pushBack (format ["Friendly name - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+
+//--- Price of the unit
+_o pushBack 4000;
+
+//--- Time it will take to build in seconds
+_t pushBack 5; 
+
+//--- Upgrade level which unit will be available starts from 0
+_u pushBack 2; 
+
+//--- Which factory unit will be available for purchase
+_f pushBack CTI_FACTORY_BARRACKS; 
+
+//-- Special / Script blank will do nothing special
+_s pushBack ""; 
+
+//---  Special / Script service-medic will mark vehicles as medical respawn truck
+_s pushBack "service-medic"; 
+
+//--- Distance unit will spawn from factory in meters
+_d pushBack 0; 
+
+*/ 
+
 _side = _this;
 _faction = "Resistance";
 
@@ -583,7 +632,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Naval
-/*
+
 _c pushBack 'CUP_B_RHIB2Turret_USMC';
 _p pushBack '';
 _n pushBack '';
@@ -613,11 +662,12 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 //--- Air
 
-//-------------- ION PMC
+
 //--- Infantry
+
 _c pushBack 'CUP_I_PMC_Bodyguard_M4';
 _p pushBack '';
 _n pushBack '';
@@ -1802,7 +1852,7 @@ _d pushBack 0;
 if (CTI_OFPS_ADDON > 0) then { 
 
 //-------------- Swedish Winter
-/*//--- Infantry
+//--- Infantry
 _c pushBack 'sfp_m90s_rifleman_ak5';
 _p pushBack '';
 _n pushBack '';
@@ -1972,7 +2022,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 //--- Light
 _c pushBack 'sfp_bv206_winter';
 _p pushBack '';
@@ -2035,6 +2085,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- APCs
+
 _c pushBack 'sfp_patgb203';
 _p pushBack '';
 _n pushBack '';
@@ -2066,6 +2117,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Tanks
+
 _c pushBack 'sfp_ikv91';
 _p pushBack '';
 _n pushBack '';
@@ -2097,6 +2149,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Zombies
+
 _c pushBack 'RyanZombieboss15';
 _p pushBack '';
 _n pushBack '';
@@ -2303,6 +2356,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Light Vehicles
+
 _c pushBack 'rhsgref_nat_uaz_dshkm';
 _p pushBack '';
 _n pushBack '';
@@ -2373,7 +2427,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'rhsgref_ins_g_bmd1';
+_c pushBack 'rhsgref_ins_g_bmd1';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 5000;
@@ -2401,9 +2455,9 @@ _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
-/*_c pushBack 'rhsgref_cdf_bmd2';
+_c pushBack 'rhsgref_cdf_bmd2';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 7000;
@@ -2411,9 +2465,10 @@ _t pushBack 30;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 //--- APCs
+
 _c pushBack 'rhsgref_ins_g_bmd1';
 _p pushBack '';
 _n pushBack '';
@@ -2475,6 +2530,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Tanks
+
 _c pushBack 'rhsgref_ins_g_t72ba';
 _p pushBack '';
 _n pushBack '';
@@ -2506,6 +2562,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- AA Vehicles
+
 _c pushBack 'rhsgref_ins_g_ural_Zu23';
 _p pushBack '';
 _n pushBack '';
@@ -2537,6 +2594,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Air
+
 _c pushBack 'rhsgref_cdf_Mi24D';
 _p pushBack '';
 _n pushBack '';

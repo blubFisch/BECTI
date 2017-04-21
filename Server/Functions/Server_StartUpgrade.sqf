@@ -48,9 +48,16 @@ _logic  setVariable ["cti_upgrade", _upgrade,true];
 _logic  setVariable ["cti_upgrade_level", _level];
 
 while {(_logic getVariable "cti_upgrade_lt") >0 } do{
-	sleep 10;
-	_logic setVariable ["cti_upgrade_lt", (_logic getVariable "cti_upgrade_lt") -10 , true];
+//--- Dev mode
+	if (CTI_DEV_MODE > 0) then {
+		sleep 1;
+		_logic setVariable ["cti_upgrade_lt", (_logic getVariable "cti_upgrade_lt") -1 , true];
+	} else {
+		sleep 10;
+		_logic setVariable ["cti_upgrade_lt", (_logic getVariable "cti_upgrade_lt") -10 , true];
+	};
 };
+
 _logic setVariable ["cti_upgrade_lt",-1, true];
 
 _upgrades set [_upgrade, (_upgrades select _upgrade) + 1];
