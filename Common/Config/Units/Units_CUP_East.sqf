@@ -1,3 +1,52 @@
+/*
+//--- This file presents classnames and their vaules to the mission, to manage units that are in factory menu use factory file.
+//--- A tiny error in this file will break the game, be very carefull when editing!
+//--- Standard format below:
+
+//--- Class Name
+_c pushBack 'O_T_Soldier_AA_F';
+
+//--- Picture will be used from config
+_p pushBack ''; 
+
+//--- Custom picture if config doesnt have one
+_p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg'; 
+
+//--- Name leaving blank will use name from config
+_n pushBack '';
+
+//--- Defualt config name + custom
+_n pushBack '%1 Friendly name';
+
+//--- Fully custom name
+_n pushBack 'Friendly name';
+
+//--- Name that will have spawn range based on current upgrade
+_n pushBack (format ["Friendly name - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+
+//--- Price of the unit
+_o pushBack 4000;
+
+//--- Time it will take to build in seconds
+_t pushBack 5; 
+
+//--- Upgrade level which unit will be aviable starts from 0
+_u pushBack 2; 
+
+//--- Which factory unit will be avaiable for purchase
+_f pushBack CTI_FACTORY_BARRACKS; 
+
+//-- Special / Script blank will do npthing special
+_s pushBack ""; 
+
+//---  Special / Script service-medic will mark vehicles as medical respawn truck
+_s pushBack "service-medic"; 
+
+//--- Distance unit will spawn from factory in meters
+_d pushBack 0; 
+
+*/
+
 _side = _this;
 _faction = "East";
 
@@ -102,17 +151,15 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*
 _c pushBack 'CUP_O_RU_Soldier_TL';
 _p pushBack '';
-_n pushBack ["%1 (Russian)"]; 
+_n pushBack '%1 (Russian)'; 
 _o pushBack 100;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
 
 _c pushBack 'CUP_O_RU_Medic';
 _p pushBack '';
@@ -234,17 +281,15 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
-/*
 _c pushBack 'CUP_O_RU_Soldier_TL_VDV_EMR';
 _p pushBack '';
-_n pushBack ["%1 (Russian)"]; 
+_n pushBack '%1 (Russian)'; 
 _o pushBack 100;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-*/
 
 _c pushBack 'CUP_O_RU_Medic_VDV_EMR';
 _p pushBack '';
@@ -277,7 +322,7 @@ _s pushBack "";
 _d pushBack 0;
 
 //--- Light Vehicles
-/*
+
 _c pushBack 'CUP_M1030';
 _p pushBack '';
 _n pushBack '';
@@ -296,7 +341,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_I_SUV_Armored_ION';
 _p pushBack '';
@@ -438,7 +483,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_BTR90_HQ_RU';
+_c pushBack 'CUP_O_BTR90_HQ_RU';
 _p pushBack '';
 _n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6000;
@@ -457,7 +502,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-*/
+
 _c pushBack 'OFPS_LR_MG';
 _p pushBack '';
 _n pushBack 'LandRover MG (Arid)';
@@ -537,7 +582,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-/*
+
 _c pushBack 'CUP_C_LR_Transport_CTK';
 _p pushBack '';
 _n pushBack '';
@@ -546,7 +591,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'OFPS_UAZ';
 _p pushBack '';
@@ -628,7 +673,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_UAZ_Open_CSAT';
+_c pushBack 'CUP_O_UAZ_Open_CSAT';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 150;
@@ -636,7 +681,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'OFPS_UAZ_SPG9';
 _p pushBack '';
@@ -668,7 +713,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_Ural_Empty_RU';
+_c pushBack 'CUP_O_Ural_Empty_RU';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -687,7 +732,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 _c pushBack 'CUP_O_Ural_ZU23_RU';
 _p pushBack '';
 _n pushBack 'Ural ZU23';
@@ -698,7 +743,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_TowingTractor_USMC';
+_c pushBack 'CUP_B_TowingTractor_USMC';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 50;
@@ -717,7 +762,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
 
 _c pushBack 'CUP_I_BTR40_MG_TKG';
 _p pushBack '';
@@ -729,7 +773,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_GAZ_Vodnik_PK_RU';
+_c pushBack 'CUP_O_GAZ_Vodnik_PK_RU';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
@@ -747,7 +791,7 @@ _t pushBack 30;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';
 _p pushBack '';
@@ -1148,7 +1192,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_C_Mi17_Civilian_RU';
+_c pushBack 'CUP_C_Mi17_Civilian_RU';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 3000;
@@ -1166,7 +1210,7 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_O_Mi8_SLA_1';
 _p pushBack '';
@@ -1268,7 +1312,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_Mi8_medevac_CHDKZ';
+_c pushBack 'CUP_O_Mi8_medevac_CHDKZ';
 _p pushBack '';
 _n pushBack (format ["Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 8000;
@@ -1296,7 +1340,7 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_O_AN2_TK';
 _p pushBack '';
@@ -1398,7 +1442,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_O_C47_SLA';
+_c pushBack 'CUP_O_C47_SLA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 2000;
@@ -1416,7 +1460,7 @@ _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_O_C130J_TKA';
 _p pushBack '';
@@ -1457,7 +1501,6 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-
 
 //--- Naval Vehicles
 
@@ -1504,5 +1547,3 @@ _s pushBack "";
 _d pushBack 0;
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Units\Set_Units.sqf";
-
-

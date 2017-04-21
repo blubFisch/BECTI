@@ -1,3 +1,52 @@
+/*
+//--- This file presents classnames and their vaules to the mission, to manage units that are in factory menu use factory file.
+//--- A tiny error in this file will break the game, be very carefull when editing!
+//--- Standard format below:
+
+//--- Class Name
+_c pushBack 'O_T_Soldier_AA_F';
+
+//--- Picture will be used from config
+_p pushBack ''; 
+
+//--- Custom picture if config doesnt have one
+_p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg'; 
+
+//--- Name leaving blank will use name from config
+_n pushBack '';
+
+//--- Defualt config name + custom
+_n pushBack '%1 Friendly name';
+
+//--- Fully custom name
+_n pushBack 'Friendly name';
+
+//--- Name that will have spawn range based on current upgrade
+_n pushBack (format ["Friendly name - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+
+//--- Price of the unit
+_o pushBack 4000;
+
+//--- Time it will take to build in seconds
+_t pushBack 5; 
+
+//--- Upgrade level which unit will be aviable starts from 0
+_u pushBack 2; 
+
+//--- Which factory unit will be avaiable for purchase
+_f pushBack CTI_FACTORY_BARRACKS; 
+
+//-- Special / Script blank will do npthing special
+_s pushBack ""; 
+
+//---  Special / Script service-medic will mark vehicles as medical respawn truck
+_s pushBack "service-medic"; 
+
+//--- Distance unit will spawn from factory in meters
+_d pushBack 0; 
+
+*/
+
 _side = _this;
 _faction = "West";
 
@@ -245,7 +294,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_HMMWV_Transport_USA';
+_c pushBack 'CUP_B_HMMWV_Transport_USA';
 _p pushBack '';
 _n pushBack 'HMMV Transport';
 _o pushBack 300;
@@ -253,7 +302,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_I_SUV_Armored_ION';
 _p pushBack '';
@@ -265,7 +314,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_C_SUV_CIV';
+_c pushBack 'CUP_C_SUV_CIV';
 _p pushBack '';
 _n pushBack 'Civil SUV';
 _o pushBack 550;
@@ -294,7 +343,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 _c pushBack 'CUP_B_HMMWV_Ambulance_USMC';
 _p pushBack '';
 _n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
@@ -335,7 +384,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
+_c pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1500;
@@ -343,7 +392,7 @@ _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';
 _p pushBack '';
@@ -375,7 +424,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_HMMWV_M1114_USMC';
+_c pushBack 'CUP_B_HMMWV_M1114_USMC';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -383,7 +432,7 @@ _t pushBack 10;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_HMMWV_MK19_USMC';
 _p pushBack '';
@@ -415,7 +464,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_HMMWV_Transport_USA';
+_c pushBack 'CUP_B_HMMWV_Transport_USA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 100;
@@ -443,7 +492,7 @@ _t pushBack 10;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_Jackal2_GMG_GB_W';
 _p pushBack '';
@@ -455,7 +504,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_Jackal2_L2A1_GB_D';
+_c pushBack 'CUP_B_Jackal2_L2A1_GB_D';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
@@ -474,8 +523,6 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-
-*/
 
 _c pushBack 'CUP_RG31_M2';
 _p pushBack '';
@@ -567,7 +614,7 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_Mastiff_GMG_GB_D';
+_c pushBack 'CUP_B_Mastiff_GMG_GB_D';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1800;
@@ -626,7 +673,6 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-*/
 
 _c pushBack 'C_Quadbike_01_F';
 _p pushBack '';
@@ -840,7 +886,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_M113_USA';
+_c pushBack 'CUP_B_M113_USA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -859,7 +905,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
-*/
+
 _c pushBack 'CUP_B_M163_USA';
 _p pushBack '';
 _n pushBack 'M163 VADS';
@@ -872,7 +918,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1A1_NATO_T';
 _p pushBack '';
-_n pushBack ["%1 (NATO)"];
+_n pushBack '%1 (NATO)';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 2;
@@ -882,7 +928,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1A1_DES_US_Army';
 _p pushBack '';
-_n pushBack ["%1 (Desert US Army)"];
+_n pushBack '%1 (Desert US Army)';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 2;
@@ -892,7 +938,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1A1_Woodland_US_Army';
 _p pushBack '';
-_n pushBack ["%1 (Woodland US Army)"];
+_n pushBack '%1 (Woodland US Army)';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 2;
@@ -902,7 +948,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1A1_DES_USMC';
 _p pushBack '';
-_n pushBack ["%1 (Desert USMC)"];
+_n pushBack '%1 (Desert USMC)';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 2;
@@ -912,7 +958,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_M1A1_Woodland_USMC';
 _p pushBack '';
-_n pushBack ["%1 (Woodland USMC)"];
+_n pushBack '%1 (Woodland USMC)';
 _o pushBack 20000;
 _t pushBack 20;
 _u pushBack 2;
@@ -949,7 +995,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-/*
+
 _c pushBack 'CUP_B_M270_DPICM_USMC';
 _p pushBack '';
 _n pushBack 'M270 MLRS (DPICM)';
@@ -959,7 +1005,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-*/
+
 _c pushBack 'CUP_B_FV510_GB_W';
 _p pushBack '';
 _n pushBack 'FV510 Warrior';
@@ -1132,7 +1178,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_NATO';
 _p pushBack '';
-_n pushBack ["%1 (NATO)"];
+_n pushBack '%1 (NATO)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1142,7 +1188,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_Desert_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Desert)"];
+_n pushBack '%1 (Desert)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1152,7 +1198,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_Snow_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Winter)"];
+_n pushBack '%1 (Winter)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1162,7 +1208,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_2CS_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Winter Tiger)"];
+_n pushBack '%1 (Winter Tiger)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1172,7 +1218,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_2CW_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Woodland Tiger)"];
+_n pushBack '%1 (Woodland Tiger)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1182,7 +1228,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_2CD_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Desert Tiger)"];
+_n pushBack '%1 (Desert Tiger)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1192,7 +1238,7 @@ _d pushBack 0;
 
 _c pushBack 'CUP_B_Challenger2_Woodland_BAF';
 _p pushBack '';
-_n pushBack ["%1 (Woodland)"];
+_n pushBack '%1 (Woodland)';
 _o pushBack 22000;
 _t pushBack 20;
 _u pushBack 3;
@@ -1285,7 +1331,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-/*
+
 _c pushBack 'CUP_B_CH53E_GER';
 _p pushBack '';
 _n pushBack 'CH53E';
@@ -1314,7 +1360,7 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_UH1Y_GUNSHIP_USMC';
 _p pushBack '';
@@ -1366,7 +1412,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_UH60M_Unarmed_US';
+_c pushBack 'CUP_B_UH60M_Unarmed_US';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 6000;
@@ -1374,7 +1420,7 @@ _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_AH64D_NO_USA';
 _p pushBack '';
@@ -1476,7 +1522,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_USMC_MQ9';
+_c pushBack 'CUP_USMC_MQ9';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 35000;
@@ -1494,7 +1540,7 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_MV22_USMC_RAMPGUN';
 _p pushBack '';
@@ -1506,7 +1552,7 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
-/*_c pushBack 'CUP_B_C47_USA';
+_c pushBack 'CUP_B_C47_USA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 2000;
@@ -1514,7 +1560,7 @@ _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_AC47_Spooky_USA';
 _p pushBack '';
@@ -1638,7 +1684,7 @@ _d pushBack 0;
 
 //--- Naval Vehicles
 
-/*_c pushBack 'CUP_B_RHIB_USMC';
+_c pushBack 'CUP_B_RHIB_USMC';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -1646,7 +1692,7 @@ _t pushBack 25;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
-_d pushBack 0;*/
+_d pushBack 0;
 
 _c pushBack 'CUP_B_RHIB2Turret_USMC';
 _p pushBack '';
@@ -1681,9 +1727,3 @@ _s pushBack "";
 _d pushBack 0;
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Units\Set_Units.sqf";
-
-
-
-
-
-
