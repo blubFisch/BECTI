@@ -1083,16 +1083,16 @@ _u pushBack 'rhs_bmp2d_msv';
 /*_u pushBack 'rhs_Ob_681_2'; */
 /*_u pushBack 'rhs_t72ba_tv';*/
 /*_u pushBack 'rhs_t72bb_tv'; */ 
-_u pushBack 'rhs_t72bd_tv';
+/*_u pushBack 'rhs_t72bd_tv';*/
 _u pushBack 'rhs_sprut_vdv'; 
 /*_u pushBack 'rhs_bmp3_msv'; 
 _u pushBack 'rhs_bmd2m'; 
 _u pushBack 'rhs_brm1k_msv'; 
 _u pushBack 'rhs_bmd4vdv'; */
 /*_u pushBack 'rhs_t80';*/ 
-_u pushBack 'rhs_t80ue1';
+/*_u pushBack 'rhs_t80ue1';*/
 _u pushBack 'rhs_bmp3m_msv'; 
-_u pushBack 'rhs_t80bvk';
+/*_u pushBack 'rhs_t80bvk';*/
 /*_u pushBack 'rhs_t90a_tv'; */
 /*_u pushBack 'rhs_bmp3mera_msv'; */
 _u pushBack 'rhs_bmd4ma_vdv'; 
@@ -1103,10 +1103,10 @@ _u pushBack 'rhs_9k79_K';*/
 
 //--- OFPS RHS Units Below, TODO setup nested.
 //--- This units blow are breaking the factory menu, commenting out untill fixed
-/*_u pushBack 'ofps_rhs_t80bvk';
+_u pushBack 'ofps_rhs_t80bvk';
 _u pushBack 'ofps_rhs_t80ue1';
 _u pushBack 'ofps_rhs_t72bd_tv';
-_u pushBack 'ofps_rhs_t80um';
+/*_u pushBack 'ofps_rhs_t80um';
 _u pushBack 'ofps_rhs_t90_tv';
 _u pushBack 'ofps_rhs_t90a_tv';*/
 
