@@ -632,7 +632,7 @@ _d pushBack 0;
 
 //--- Air Vehicles
 
-_u pushBack 'OFPS_BUZZA_B';
+_c pushBack 'OFPS_BUZZA_B';
 _p pushBack '';
 _n pushBack 'NATO AA Buzzard'; 
 _o pushBack 75000;
