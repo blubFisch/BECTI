@@ -496,12 +496,12 @@ CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY = 8; //--- Time after which a projectile is
 
 //--- Base: Satellite
 CTI_BASE_SATELLITE_RANGE_SATCAM = 15000; //--- Determine how far a player has to be from a factory to access the satellite
-CTI_BASE_SATELLITE_BASE_DETECTION_RANGE = 500; //--- Distance from base enemies are detected
+CTI_BASE_SATELLITE_BASE_DETECTION_RANGE = 300; //--- Distance from base enemies are detected
 CTI_BASE_SATELLITE_BASE_DETECTION_TIME = 240;  //--- Detection cycle, time between scans
 CTI_BASE_SATELLITE_BASE_BASECAM_HEIGHT = 400;  //--- Height of base camera
 
 //--- Base: Area
-CTI_BASE_AREA_RANGE = 250;
+CTI_BASE_AREA_RANGE = 300;
 
 //--- Base: Construction
 CTI_BASE_CONSTRUCTION_BOUNTY = 3; //--- The bounty awarded upon a hostile structure destruction
@@ -509,7 +509,7 @@ CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY = 0.3; //--- The bounty multiplier awarded 
 CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT = 500; //--- Decay starts after x seconds unattended.
 CTI_BASE_CONSTRUCTION_DECAY_DELAY = 10; //--- Decay each x seconds.
 CTI_BASE_CONSTRUCTION_DECAY_FROM = 10; //--- Decay of x / 100 each y seconds.
-CTI_BASE_CONSTRUCTION_RANGE = 250; //--- Determine how far the commander may be from the HQ to build
+CTI_BASE_CONSTRUCTION_RANGE = 300; //--- Determine how far the commander may be from the HQ to build
 CTI_BASE_CONSTRUCTION_RATIO_INIT = 1; //--- The initial construction ratio
 CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multiplied by this coefficient to make repairs less effective at each factory's destruction.
 CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (structure cost * x)
@@ -521,7 +521,7 @@ CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may m
 CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
-CTI_BASE_DEFENSES_SOLD_COEF = 0.25; //--- The player will get a fund return based on the defense price * coef when a defense is sold
+CTI_BASE_DEFENSES_SOLD_COEF = 0.50; //--- The player will get a fund return based on the defense price * coef when a defense is sold
 
 //--- Base: HQ
 CTI_BASE_HQ_BOUNTY = 2.50; //--- The bounty awarded upon HQ destruction
@@ -559,8 +559,8 @@ CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.1;//--- Bombs
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
 CTI_BASE_GEAR_LARGE_FOB_RANGE = 20; //--- Determine how far a player has to be from a FOB to access the Gear Menu
-CTI_BASE_GEAR_RANGE = 250; //--- Determine how far a player has to be from a Barracks to access the Gear Menu
-CTI_BASE_PURCHASE_UNITS_RANGE = 250; //--- Determine how far a player has to be from a factory to access the Factory Menu without CC
+CTI_BASE_GEAR_RANGE = 300; //--- Determine how far a player has to be from a Barracks to access the Gear Menu
+CTI_BASE_PURCHASE_UNITS_RANGE = 300; //--- Determine how far a player has to be from a factory to access the Factory Menu without CC
 CTI_BASE_PURCHASE_UNITS_RANGE_CC = 15000; //--- Determine how far a player has to be from a factory to access the Factory Menu with CC
 
 //--- Base: Workers
