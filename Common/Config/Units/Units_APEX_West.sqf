@@ -275,7 +275,7 @@ _d pushBack 0;
 
 _c pushBack 'B_T_Recon_Exp_F';
 _p pushBack '';
-_n pushBack '%1 (Special Forces)'; ;
+_n pushBack '%1 (Special Forces)';
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 3;
