@@ -11,7 +11,7 @@
 	_marker setMarkerTypeLocal (CTI_P_MarkerPrefix+"hq");
 	_marker setMarkerTextLocal "HQ";
 	_marker setMarkerColorLocal CTI_P_SideColor;
-	_marker setMarkerSizeLocal [1,1];
+	_marker setMarkerSizeLocal [0.8,0.8];
 	
 	while {!CTI_GameOver} do {
 		_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
