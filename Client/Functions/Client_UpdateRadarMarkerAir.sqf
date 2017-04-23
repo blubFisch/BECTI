@@ -24,10 +24,12 @@
 private ["_marker", "_side", "_vehicle","_rangeair"];
 
 _vehicle = _this;
+_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
 
 _rangeair = CTI_BASE_AIRRADAR_RANGES select ([CTI_P_SideJoined, CTI_UPGRADE_AIRR] call CTI_CO_FNC_GetUpgrade);
 _marker_name=format ["RADAR_AIR_%1",_this];
-_marker=createMarkerLocal [_marker_name,getposATL _this];
+//_marker=createMarkerLocal [_marker_name,getposATL _this];
+_marker=createMarkerLocal [_marker_name,getPos _hq];
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerBrushLocal "Border";
 _marker setMarkerSizeLocal [_rangeair,_rangeair];
