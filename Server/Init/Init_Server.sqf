@@ -273,7 +273,7 @@ if !( isNil "ADMIN_ZEUS") then {
 };
 
 
-// Initialize control scripts for Pook SAM Site
+/*// Initialize control scripts for Pook SAM Site
 // Must have exactly 1 instance per side, running on HC if possible
 0 spawn {
 	// Give HCs some init time
@@ -295,7 +295,7 @@ if !( isNil "ADMIN_ZEUS") then {
 		[west] spawn FNC_HandleSAMSite;
 	};
 };
-
+*/
 // Initialize control scripts for C-RAM turrets
 // Must have exactly 1 instance per side, running on HC if possible
 0 spawn {
