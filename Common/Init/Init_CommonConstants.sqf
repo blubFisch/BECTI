@@ -332,7 +332,7 @@ CTI_SUBTYPE_UNIFORM = 801;
 CTI_SUBTYPE_BACKPACK = 901;
 
 //--- Gear: Parameters
-CTI_GEAR_RESELL_TAX = 0.25; //--- Owned items are traded for: <item price> * <tax>
+CTI_GEAR_RESELL_TAX = 0.6; //--- Owned items are traded for: <item price> * <tax>
 CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respawn with his last known gear or not
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -691,7 +691,7 @@ CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to res
 CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
 CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
-CTI_RESPAWN_MOBILE_SAFE_RANGE = 50; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_MOBILE_SAFE_RANGE = 40; //--- Disable respawn if enemies are within this range
 CTI_RESPAWN_MOBILE_RANGE = 500;
 
 CTI_SATCAM_ZOOM_MIN = 50;
