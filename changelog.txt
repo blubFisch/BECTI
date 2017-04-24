@@ -1,3 +1,14 @@
+**1.06.8**
+Tweaked: Increase blufor AF apache costs/lower opfor AF heli costs
+Tweaked: Increase cost of LF spam units (Marid/M117/Marshal)
+Tweaked: Reduced t80ue1 cost/raised m1a1sa(tusk1) cost
+Added: Rpg-42 ammo for gear1
+Removed: Patriot and Radar from base defenses
+Tweaked: Centered Base markers and detection markers
+Tweaked: Increased base range to 300m
+Tweaked: Gear selling tax is now lower, you will now get 60% back
+Tweaked: Safe respawn dropped from 75m to 40m
+
 **1.06.7**
 Added: ka52 at af4 for opfor
 Added: Emr 7.62 ammo to gear menu
