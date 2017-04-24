@@ -78,11 +78,11 @@ with missionNamespace do {
 		// TODO: deduplicate code (Server_HandleStaticDefenses.sqf)
 		// TODO: proper/extensible vehicle switch
 		
-		//--- Configure the weapon / gunner
+/*		//--- Configure the weapon / gunner
 		if (typeOf(_static) find "POOK_ANMPQ53_B" == 0 || typeOf(_static) find "POOK_ANMPQ53_O" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery_B" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery_O" == 0) then {
 			_ai disableAI "AUTOTARGET";
 			_ai disableAI "TARGET";
-		} else {
+		} else {*/
 			//--- Change Skill
 			_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
 			_ai setSkill ["aimingShake", 1]; // Set weapon sway handling

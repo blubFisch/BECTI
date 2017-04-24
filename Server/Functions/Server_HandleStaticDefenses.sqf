@@ -122,8 +122,9 @@ while {alive _structure} do {
 						_ai assignAsGunner _x;
 						[_ai] orderGetIn true;
 						_ai moveInGunner _x;
-						
+						/*
 						// TODO: deduplicate code (Init_Client_Headless.sqf)
+						// TO Renable remove change skill block on bottom and uncomment this one
 						
 						//--- Configure the weapon / gunner
 						if (typeOf(_x) find "POOK_ANMPQ53_B" == 0 || typeOf(_x) find "POOK_ANMPQ53_O" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery_O" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery_B" == 0) then {
@@ -146,7 +147,25 @@ while {alive _structure} do {
 							_ai setCombatMode "RED";
 							_ai setSpeedMode "FULL";
 							_ai enableAttack true;
-						};
+						};*/
+
+						//--- Change Skill
+						_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
+						_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
+						_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
+						_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
+						_ai setSkill ["spotDistance", 1]; // Set detection distance
+						_ai setSkill ["spotTime", 1]; // Set detection time
+						_ai setSkill ["courage", 1]; // Never retreat
+						_ai setSkill ["commanding", 1]; // Communication skills
+						_ai setSkill ["general", 1]; //Sets all above
+
+						//--- Set to Combat
+						_ai setBehaviour "AWARE";
+						_ai setCombatMode "RED";
+						_ai setSpeedMode "FULL";
+						_ai enableAttack true;
+
 					} else {
 						//--- At least one HC is available
 

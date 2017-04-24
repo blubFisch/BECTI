@@ -25,10 +25,12 @@ private ["_marker", "_side", "_vehicle","_rangebase","_objects","_count_enemies"
 
 _vehicle = _this;
 _color = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideColoration;
+_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
 
 _rangebase = CTI_BASE_SATELLITE_BASE_DETECTION_RANGE;
 _marker_name=format ["BASE_SATELLITE_%1",_this];
-_marker=createMarkerLocal [_marker_name,getposATL _this];
+//_marker=createMarkerLocal [_marker_name,getposATL _this];
+_marker=createMarkerLocal [_marker_name,getPos _hq];
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerBrushLocal "Border";
 _marker setMarkerSizeLocal [_rangebase,_rangebase];

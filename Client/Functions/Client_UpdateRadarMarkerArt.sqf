@@ -24,10 +24,12 @@
 private ["_marker", "_side", "_vehicle","_rangeart"];
 
 _vehicle = _this;
+_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
 
 _rangeart = CTI_BASE_ARTRADAR_RANGES select ([CTI_P_SideJoined, CTI_UPGRADE_ARTR] call CTI_CO_FNC_GetUpgrade);
 _marker_name=format ["RADAR_ART_%1",_this];
-_marker=createMarkerLocal [_marker_name,getposATL _this];
+//_marker=createMarkerLocal [_marker_name,getposATL _this];
+_marker=createMarkerLocal [_marker_name,getPos _hq];
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerBrushLocal "Border";
 _marker setMarkerSizeLocal [_rangeart,_rangeart];

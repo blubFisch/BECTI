@@ -51,7 +51,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[40000], //--- Nuke
 	[1000, 2000, 4000], //--- Supply Rate
 	[4000, 5000, 6000, 7000], //--- Base Health
-	[500, 1000, 1500, 2000] //--- Base Defense
+	[500, 1000, 1500] //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
@@ -66,7 +66,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[10], //--- Air AT
 	[10], //--- Air AA
 	[10], //--- Air CM
-	[1500,3000, 4500], //--- Forward Logistics
+	[1500,3000,4500], //--- Forward Logistics
 	[1000,2000], //--- Halo
 	[1000,1500,2000], //--- Air Radar
 	[1000,1500,2000], //--- Art Radar
@@ -77,7 +77,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[40000], //--- Nuke
 	[3000,5500,8000], //--- Supply Rate
 	[3000,6000,9000,12000], //--- Base Health
-	[500,1000,2500,5000] //--- Base Defense
+	[500,1000,2500] //--- Base Defense
 ]];
 };
 
@@ -131,7 +131,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 	1, //--- Nuke
 	3, //--- Supply Rate
 	4, //--- Base Health
-	4 //--- Base Defense
+	3 //--- Base Defense
 ]];
 };
 
@@ -159,7 +159,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 	[[],[],[]], //--- Supply Rate
 	[[],[],[],[]], //--- Base Health
-	[[],[],[],[]] //--- Base Defense
+	[[],[],[]] //--- Base Defense
 ]];
 } else {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
@@ -185,7 +185,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 	[[],[],[]], //--- Supply Rate
 	[[],[],[],[]], //--- Base Health
-	[[],[],[],[]] //--- Base Defense
+	[[],[],[]] //--- Base Defense
 ]];
 };
 
@@ -213,7 +213,7 @@ if (CTI_DEV_MODE > 0) then {
 		[1], //--- Nuke
 		[1,1,1], //--- Supply Rate
 		[1,1,1,1], //--- Base Health
-		[1,1,1,1] //--- Base Defense
+		[1,1,1] //--- Base Defense
 	]];
 }else {
 	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
@@ -230,17 +230,17 @@ if (CTI_DEV_MODE > 0) then {
 			[60], //--- Air AA
 			[60], //--- Air CM
 			[60,120,180], //--- Towns Depots
-			[60, 60], //--- Halo
-			[60, 60, 60], //--- Air Radar
-			[60, 60, 60], //--- Art Radar
-			[60, 60, 60], //--- Respawn Range
-			[60, 60], //--- LVOSS System
-			[60, 60, 60, 60], //--- ERA System
-			[60, 300], //--- Satellite
+			[60,60], //--- Halo
+			[60,60,60], //--- Air Radar
+			[60,60,60], //--- Art Radar
+			[60,60,60], //--- Respawn Range
+			[60,60], //--- LVOSS System
+			[60,60,60,60], //--- ERA System
+			[60,300], //--- Satellite
 			[300], //--- Nuke
 			[60,75,90], //--- Supply Rate
 			[60,120,180,240], //--- Base Health
-			[60,120,180,240] //--- Base Defense
+			[60,120,180] //--- Base Defense
 		]];
 	} else {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
@@ -256,17 +256,17 @@ if (CTI_DEV_MODE > 0) then {
 			[60], //--- Air AA
 			[60], //--- Air CM
 			[60,120,180], //--- Towns Depots
-			[60, 60], //--- Halo
-			[60, 60, 60], //--- Air Radar
-			[60, 60, 60], //--- Art Radar
-			[60, 60, 60], //--- Respawn Range
-			[60, 60], //--- LVOSS System
-			[60, 60, 60, 60], //--- ERA System
-			[60, 300], //--- Satellite
+			[60,60], //--- Halo
+			[60,60,60], //--- Air Radar
+			[60,60,60], //--- Art Radar
+			[60,60,60], //--- Respawn Range
+			[60,60], //--- LVOSS System
+			[60,60,60,60], //--- ERA System
+			[60,300], //--- Satellite
 			[300], //--- Nuke
 			[60,75,90], //--- Supply Rate
 			[60,120,180,240], //--- Base Health
-			[60,120,180,240] //--- Base Defense
+			[60,120,180] //--- Base Defense
 		]];
 	};
 };
@@ -324,7 +324,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
 	["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br /><t color='#ffff00'>Unlocks Light 5 Upgrade which unlocks the Nuke Truck.</t></t>"], //--- Nuke
 	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 2 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 3 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 4 SV per Interval</t>"], //--- Supply Rate
 	["Base Health", "<t>Improves base structures health<br /><t color='#ffff00'>LVL 1</t> - 25% Boost </t><br /><t color='#ffff00'>LVL 2</t> - 50% Boost<br /><t color='#ffff00'>LVL 3</t> - 75% Boost <br /><t color='#ffff00'>LVL 4</t> - 100% Boost </t>"], //--- Base Health
-	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more.<br /><t color='#ffff00'>LVL 4</t> - Unlocks SAM/PATRIOT and more.   </t>"] //--- Base defense
+	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more."] //--- Base defense
 ]];
 
 //--- Check potential missing definition.

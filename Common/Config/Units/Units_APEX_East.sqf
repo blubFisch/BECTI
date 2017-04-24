@@ -561,7 +561,7 @@ _d pushBack 0;
 _c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F'; //Marid
 _p pushBack '';
 _n pushBack '3- MSE-3 Marid (Pacific)'; 
-_o pushBack 2250;
+_o pushBack 3500;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
