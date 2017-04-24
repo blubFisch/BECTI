@@ -548,7 +548,7 @@ _d pushBack 0;
 _c pushBack 'O_APC_Wheeled_02_rcws_F'; //Marid
 _p pushBack '';
 _n pushBack '3- MSE3 Marid';
-_o pushBack 2250;
+_o pushBack 3500;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;

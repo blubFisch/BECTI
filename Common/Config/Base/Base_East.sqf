@@ -1040,7 +1040,7 @@ _specials = [];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];*/
 
-		_headers pushBack 		"SAM - AA Radar";
+		/*_headers pushBack 		"SAM - AA Radar";
 		_classes pushBack 		"POOK_ANMPQ53_O";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
@@ -1048,7 +1048,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];*/
 		
 	};
 	
@@ -1320,7 +1320,7 @@ if (CTI_RHS_ADDON > 0) then {
 		
 	if (CTI_OFPS_ADDON > 0) then { 
 		
-		_headers pushBack 		"SAM - AA Launcher";
+		/*_headers pushBack 		"SAM - AA Launcher";
 		_classes pushBack 		"pook_MIM104_PAC2Battery_O";
 		_prices pushBack 		60000;
 		_placements pushBack 	[180, 15];
@@ -1328,7 +1328,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];*/
 
 	};	
 

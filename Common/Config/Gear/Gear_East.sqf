@@ -101,13 +101,13 @@ _i pushBack "150Rnd_762x54_Box_Tracer";  //Zafir
 _u pushBack 1;
 _p pushBack 150;
 
-/*_i pushBack "RPG32_F";
+_i pushBack "RPG32_F";
 _u pushBack 2;
 _p pushBack 300;
 
 _i pushBack "RPG32_HE_F";
 _u pushBack 2;
-_p pushBack 250;*/
+_p pushBack 250;
 
 _i pushBack "Titan_AA";
 _u pushBack 4;

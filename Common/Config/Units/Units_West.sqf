@@ -517,7 +517,7 @@ _d pushBack 0;
 _c pushBack 'B_APC_Wheeled_01_cannon_F'; //Marshall
 _p pushBack '';
 _n pushBack '4- AMV-7 Marshall';
-_o pushBack 6000;
+_o pushBack 7500;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
