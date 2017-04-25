@@ -1,3 +1,7 @@
+Upcoming release
+Fixed: On teamswap player wont loose original gear hopefully
+Tweaked: View distance for statics been added, they seem to work better now
+
 **1.06.8**
 Tweaked: Increase blufor AF apache costs/lower opfor AF heli costs
 Tweaked: Increase cost of LF spam units (Marid/M117/Marshal)
