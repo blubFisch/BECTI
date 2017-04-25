@@ -1,3 +1,7 @@
+//--- HC View Distance
+setViewDistance 5000;
+setObjectViewDistance 5000;
+
 if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: Client\Init\Init_Client_Headless.sqf", "Waiting for the Headless Client stabilization before sending the register request"] call CTI_CO_FNC_Log };
 
 while {isNull player} do {

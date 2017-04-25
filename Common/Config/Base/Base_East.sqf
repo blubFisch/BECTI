@@ -986,7 +986,7 @@ _specials = [];
 */	
 	if (CTI_APEX_ADDON > 0) then {
 
-		_headers pushBack ["Cargo Tower (big) Jungle",[["RuinOnDestroyed", "Land_cargo_tower_v4_ruins_f"]]];
+/*		_headers pushBack ["Cargo Tower (big) Jungle",[["RuinOnDestroyed", "Land_cargo_tower_v4_ruins_f"]]];
 		_classes pushBack 		"Land_Cargo_Tower_V4_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 30];
@@ -994,7 +994,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]]; //4-5 HE slammer rounds to go down
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]]; //4-5 HE slammer rounds to go down*/
 
 		/*Cant use due to apex object
 		_headers pushBack 		"Air Tower";

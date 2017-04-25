@@ -1,5 +1,9 @@
 //todo: Kerberos Tracker -> perma track main infos with clients UID (teamkills, kills, hq killed (ff/no ff)).
 
+//--- Server View Distance
+setViewDistance 200;
+setObjectViewDistance 200;
+
 CTI_SE_FNC_AddScore = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AddScore.sqf";
 CTI_SE_FNC_AI_PurchaseSquad = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AI_PurchaseSquad.sqf";
 CTI_SE_FNC_AttemptDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptDefenseDelegation.sqf";

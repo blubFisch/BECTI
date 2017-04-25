@@ -761,7 +761,7 @@ _d pushBack 10;
 
 //--- OFPS RHS Vehicles TODO: Created nested or seporate file for them.
 
-_u pushBack 'ofps_rhs_t72bd_tv';	
+_c pushBack 'ofps_rhs_t72bd_tv';	
 _p pushBack '';
 _n pushBack 'T-72B3 (obr 2012g) (ofps)';  
 _o pushBack 12000;
@@ -771,7 +771,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_u pushBack 'ofps_rhs_t80bvk';
+_c pushBack 'ofps_rhs_t80bvk';
 _p pushBack '';
 _n pushBack 'T-80BVK (ofps)';  
 _o pushBack 18750;
@@ -781,7 +781,7 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 
-_u pushBack 'ofps_rhs_t80ue1';	
+_c pushBack 'ofps_rhs_t80ue1';	
 _p pushBack '';
 _n pushBack 'T-80UE-1 (ofps)';  
 _o pushBack 26500;
