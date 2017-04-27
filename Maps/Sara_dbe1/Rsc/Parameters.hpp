@@ -30,11 +30,11 @@ class Params {
 		default = 3;
 	};
 	class SEPARATOR0 {
-		title = "========================== INCOME ============================";
+		title = "========================== BASES ============================";
 		values[] = {1};
 		texts[] = {""};
 		default = 1;
-	};
+	};	
 	class CTI_BASE_AREA_MAX {
 		title = "BASE: Areas";
 		values[] = {1,2,3,4,5};
@@ -43,6 +43,12 @@ class Params {
 	};
 	class CTI_BASE_HQ_REPAIR {
 		title = "BASE: HQ Repairable";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
+	class CTI_BASE_HEALTH_UPGRADE {
+		title = "BASE: Enable Base Health Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
