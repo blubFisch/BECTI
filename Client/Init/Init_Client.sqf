@@ -550,13 +550,15 @@ if (CTI_DEV_MODE > 0) then {
 	_q setDammage 1;
 	{uiNamespace setVariable [_x, displayNull]} forEach ["cti_title_capture"];
 	600200 cutRsc["CTI_CaptureBar","PLAIN",0];
+	
+	//--- Below are scripts that you can run in debugger
 
 	//--- Generates a list in log what units belong to HC
 	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
-	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
+	diag_log ("GROUPOWNER-INFO:" + str _candidates);
 
 	//--- Copy to clipboard building positions with in 20m
-	/*	_posX = [];
+		_posX = [];
 	{
 	    _posX append (_x buildingPos -1);
 	} forEach nearestObjects [player, ["House"], 20];
@@ -590,6 +592,13 @@ if (CTI_DEV_MODE > 0) then {
 
     copyToClipboard (str _posX);
 
+	//--- Add in cash to commander on blufor
+	_logic = (west) call CTI_CO_FNC_GetSideLogic;
+	_funds = (west) call CTI_CO_FNC_GetFundsCommander;
+	_logic setVariable ["cti_commander_funds", _funds + 100000, true];
+
+	//--- Add in supply to commander on blufor
+	_logic = (west) call CTI_CO_FNC_GetSideLogic; _logic setVariable ["cti_supply", 100000000, true];
 */
 };
 

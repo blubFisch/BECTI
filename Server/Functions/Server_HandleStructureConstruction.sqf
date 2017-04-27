@@ -82,10 +82,9 @@ switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 		}; 
 	};
 	case 2: { //--- Timed Based with Repairs
-		if !(CTI_DEBUG) then {
-			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
-		};
 		
+			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
+
 		//--- Handle the structure state
 		if (_isDestroyed) then {
 			//--- The structure was destroyed, but can be repaired
@@ -129,8 +128,7 @@ if (_completion >= 100) then { //--- The structure is complete
 		_structure setVariable ["cti_altdmg", 0];
 		_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages, _multiply_damages]];
 	} else {
-//		_structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]];
-        _structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _structure, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]]; 
+		_structure addEventHandler ["killed", format ["[_this select 0, _this select 1, '%1', %2, %3, %4, %5] spawn CTI_SE_FNC_OnBuildingDestroyed", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio]];
 		if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
 			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position, _multiply_damages]];
 		} else {
