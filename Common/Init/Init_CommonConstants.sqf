@@ -547,14 +547,14 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 //--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1.5;//--- Tanks
-CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.3;//--- Arty
-CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.1;//--- Satchels
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.4;//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.4;//--- Satchels
 CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;//--- HE Cannons
 CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 2;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
 CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.4;//--- Rockets
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.1;//--- Bombs
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.4;//--- Bombs
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
