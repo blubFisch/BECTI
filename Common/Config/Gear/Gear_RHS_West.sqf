@@ -679,11 +679,11 @@ _u pushBack 2;
 _p pushBack 500;
 
 _i pushBack "rhs_Tow_Gun_Bag";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 2000;
 
 _i pushBack "rhs_TOW_Tripod_Bag";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 500;
 
 

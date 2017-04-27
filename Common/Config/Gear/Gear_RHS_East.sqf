@@ -1002,11 +1002,11 @@ _u pushBack 4;
 _p pushBack 5000;*/
 
 _i pushBack "RHS_Metis_Gun_Bag";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 2000;
 
 _i pushBack "RHS_Metis_Tripod_Bag";
-_u pushBack 3;
+_u pushBack 4;
 _p pushBack 500;
 
 _i pushBack "RHS_Kornet_Gun_Bag";
