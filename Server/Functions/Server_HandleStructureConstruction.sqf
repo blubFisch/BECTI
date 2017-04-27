@@ -81,6 +81,30 @@ switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 			_completion_last = _completion;
 		}; 
 	};
+	case 2: { //--- Timed Based with Repairs
+		if !(CTI_DEBUG) then {
+			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
+		};
+		
+		//--- Handle the structure state
+		if (_isDestroyed) then {
+			//--- The structure was destroyed, but can be repaired
+			_lasttouch = time;
+			while {_completion > 0 && _completion < 100} do {
+				_completion = _structure getVariable "cti_completion";
+				sleep CTI_BASE_CONSTRUCTION_DECAY_DELAY;
+
+				if (_completion > _completion_last) then { _lasttouch = time };
+
+				if (time - _lasttouch > CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT) then {_structure setVariable ["cti_completion", _completion - CTI_BASE_CONSTRUCTION_DECAY_FROM]};
+
+				_completion_last = _completion;
+			}; 
+		} else {
+			//--- The structure was freshly built after the given time, it's complete
+			_completion = 100;
+		};
+	};
 };
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -88,7 +112,7 @@ _logic setVariable ["cti_structures_wip", (_logic getVariable "cti_structures_wi
 
 deleteVehicle _structure;
 
-if (_completion >= 100) then {
+if (_completion >= 100) then { //--- The structure is complete
 	_structure = ((_var select 1) select 0) createVehicle _position;
 	_structure setDir _direction;
 	_structure setPos _position;
@@ -123,7 +147,7 @@ if (_completion >= 100) then {
 	};
 
 	[_structure, _variable] remoteExec ["CTI_PVF_CLT_OnStructureConstructed", _side];
-} else {
+} else { //--- The structure has expired
 	private ["_areas", "_closest", "_delete_pos", "_need_update", "_structures_positions"];
 	//--- We update the base area array to remove potential empty areas. First we get the 2D positions of our structures
 	_areas = _logic getVariable "cti_structures_areas";
