@@ -963,7 +963,7 @@ _specials = [];
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];*/
 	};
 	
-	_headers pushBack 		"AT Defense";
+	/*_headers pushBack 		"AT Defense";
 	_classes pushBack 		"B_static_AT_F";
 	_prices pushBack 		3000;
 	_placements pushBack 	[180, 5];
@@ -971,7 +971,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		2;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"AA Defense";
 	_classes pushBack 		"B_static_AA_F";
@@ -985,7 +985,7 @@ _specials = [];
 	
 	if (CTI_CUP_ADDON > 0) then {
 
-		_headers pushBack 		"TOW Tripod";
+		/*_headers pushBack 		"TOW Tripod";
 		_classes pushBack 		"CUP_B_TOW_TriPod_USMC";
 		_prices pushBack 		8000;
 		_placements pushBack 	[180, 5];
@@ -993,7 +993,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 
 	};
 	
@@ -1018,7 +1018,7 @@ _specials = [];
 
 	if (CTI_RHS_ADDON > 0) then { 
 		
-		_headers pushBack 		"M41A4 TOW";
+		/*_headers pushBack 		"M41A4 TOW";
 		_classes pushBack 		"RHS_TOW_TriPod_D";
 		_prices pushBack 		4000;
 		_placements pushBack 	[180, 15];
@@ -1026,7 +1026,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 
 		//OPFOR ZU-23 to fill the gap
 		_headers pushBack 		"Zu-23-2";
@@ -1110,6 +1110,16 @@ _specials = [];
 		*/
 	};
 
+	_headers pushBack 		"AT Defense";
+	_classes pushBack 		"B_static_AT_F";
+	_prices pushBack 		10000;
+	_placements pushBack 	[180, 5];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack [];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];
+
 	if (CTI_CUP_CORE_ADDON > 0) then {
 
 		_headers pushBack 		"EarthenNest (Green)";
@@ -1184,7 +1194,7 @@ if (CTI_RHS_ADDON > 0) then {
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		15000;
+	_prices pushBack 		10000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];

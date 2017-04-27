@@ -1052,7 +1052,7 @@ _specials = [];
 		
 	};
 	
-	_headers pushBack 		"AT Defense";
+	/*_headers pushBack 		"AT Defense";
 	_classes pushBack 		"O_static_AT_F";
 	_prices pushBack 		3000;
 	_placements pushBack 	[180, 5];
@@ -1060,7 +1060,7 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		2;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"AA Defense";
 	_classes pushBack 		"O_static_AA_F";
@@ -1088,7 +1088,7 @@ _specials = [];
 	};
 	
 	if (CTI_CUP_ADDON > 0) then { 
-		_headers pushBack 		"Metis AT-13";
+		/*_headers pushBack 		"Metis AT-13";
 		_classes pushBack 		"CUP_O_Metis_RU";
 		_prices pushBack 		6000;
 		_placements pushBack 	[180, 5];
@@ -1096,7 +1096,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 		
 	};
 	
@@ -1226,14 +1226,33 @@ _specials = [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 
+		/*_headers pushBack 		"AT Defense";
+		_classes pushBack 		"O_static_AT_F";
+		_prices pushBack 		10000;
+		_placements pushBack 	[180, 5];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[];*/
+
 	};
 
+	_headers pushBack 		"AT Defense";
+	_classes pushBack 		"O_static_AT_F";
+	_prices pushBack 		10000;
+	_placements pushBack 	[180, 5];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack [];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];
 
 if (CTI_RHS_ADDON > 0) then { 
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		15000;
+	_prices pushBack 		10000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -1260,6 +1279,16 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinblacklist pushBack ["*"];
 	_upgrade pushBack		3;	
 	_specials pushBack 		[];
+
+	/*_headers pushBack 		"AT Defense";
+	_classes pushBack 		"O_static_AT_F";
+	_prices pushBack 		10000;
+	_placements pushBack 	[180, 5];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack [];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];*/
 };
 
 //******************************BASE DEFENSE 4******************************
