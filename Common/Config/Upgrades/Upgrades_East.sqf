@@ -24,8 +24,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Satellite
 	true, //--- Nuke
 	true, //--- Supply Rate
-	true, //--- Base Health
-	true  //--- Base Defense Upgrade	
+	(missionNamespace getVariable "CTI_BASE_HEALTH_UPGRADE") == 1, //--- Base Health
+	true //--- Base Defense Upgrade	
 ]];
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [

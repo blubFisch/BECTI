@@ -27,7 +27,7 @@
 	  -> Will search for manable statics around _structure
 */
 
-private ["_ai", "_defense_team", "_delegate", "_direction", "_distance", "_logic", "_manned", "_net", "_position", "_side", "_sideID", "_structure", "_var"];
+private ["_ai", "_defense_team", "_delegate", "_direction", "_distance", "_logic", "_manned", "_net", "_position", "_side", "_sideID", "_structure", "_var", "_lastrearmtime", "_lastrearmdiff"];
 
 _structure = _this select 0;
 _side = _this select 1;
@@ -50,9 +50,11 @@ while {alive _structure} do {
 	{
 		if (!(isNil {_x getVariable "cti_aman_enabled"}) && ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo _sideID)) then {
 			_last_occupied = _x getVariable ["cti_aman_time_occupied", -6000];
+			_lastrearmtime = _x getVariable ["cti_defense_time_rearmed", 0];
+			_lastrearmdiff = time - _lastrearmtime;
 			
 			//--- Check if our defense has run out of ammo
-			if !(someAmmo _x) then {
+			if (!(someAmmo _x) && _lastrearmdiff > CTI_BASE_DEFENSES_AUTO_REARM_DELAY) then {
 				//--- Check if we have a nearby ammo source
 				_ammo_trucks = [_x, CTI_SPECIAL_AMMOTRUCK, CTI_BASE_DEFENSES_AUTO_REARM_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles;
 				_nearest = [CTI_AMMO, _x, (_side) call CTI_CO_FNC_GetSideStructures, CTI_BASE_DEFENSES_AUTO_REARM_RANGE] call CTI_CO_FNC_GetClosestStructure;
@@ -69,6 +71,7 @@ while {alive _structure} do {
 						[_x, 1] remoteExec ["CTI_PVF_CLT_RequestVehicleRearm", owner gunner _x];
 					};
 				};
+				_x setVariable ["cti_defense_time_rearmed", time];
 			};
 			
 			//--- The static is occupied

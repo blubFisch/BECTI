@@ -28,13 +28,13 @@ class Params {
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
 		default = 3;
-	};
+	};	
 	class SEPARATOR0 {
-		title = "========================== INCOME ============================";
+		title = "========================== BASES ============================";
 		values[] = {1};
 		texts[] = {""};
 		default = 1;
-	};
+	};	
 	class CTI_BASE_AREA_MAX {
 		title = "BASE: Areas";
 		values[] = {1,2,3,4,5};
@@ -47,6 +47,12 @@ class Params {
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_BASE_HEALTH_UPGRADE {
+		title = "BASE: Enable Base Health Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};		
 	class CTI_BASE_FOB_MAX {
 		title = "BASE: FOB Limit";
 		values[] = {0,1,2,3,4,5,6,7,8,9,10};
