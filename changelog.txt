@@ -1,7 +1,15 @@
-Upcoming release
+**Upcoming release**
+Added: Delay before statics can rearm from ammo fac
+Added: Base repair (After factory dies you have 10 min to repair)
+
+**1.06.9**
 Fixed: On teamswap player wont loose original gear hopefully
 Tweaked: View distance for statics been added, they seem to work better now
-Added: Base repair (After factory dies you have 10 min to repair)
+Tweaked: Increase AT static cost/raise tier
+Tweaked: Decrease Mortar static cost
+Tweaked: Increase base defense 3 SV cost
+Tweaked: Move AT static packs to G4
+Tweaked: Base damage temporary fix
 
 **1.06.8**
 Tweaked: Increase blufor AF apache costs/lower opfor AF heli costs
