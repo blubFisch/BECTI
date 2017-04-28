@@ -541,6 +541,8 @@ CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_BagBunker_Large_F", "WarfareBDepot"]; //-
 CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be from a Large FOB in order to use it
 
 //--- Base: Misc
+CTI_BASE_MARKER_DESTROYED_COLOR = "ColorBlack"; //--- A destroyed structure will have this color upon destruction
+CTI_BASE_MARKER_DESTROYED_DELAY = CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT; //--- A destroyed structure will remain on the map x seconds
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for player shooting enemy structure showing current building health. Also displays hint to the structure's friendly team showing base health, position, and name of structure
@@ -580,7 +582,7 @@ CTI_BASE_WORKERS_WANDER_RANGE_MAX = 225; //--- Worker may wander no further than
 with missionNamespace do {
 	if (isNil 'CTI_BASE_HEALTH_UPGRADE') then {CTI_BASE_HEALTH_UPGRADE = 1}; //--- Enable Base Health Upgrade - see above for values : CTI_BASE_HEALTH_MULTIPLIER
 	if (isNil 'CTI_BASE_AREA_MAX') then {CTI_BASE_AREA_MAX = 2}; //--- Amount of base areas which may be built
-	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 0}; //--- Construction mode to use for structures (0: Timed, 1: Workers)
+	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 2}; //--- Construction mode to use for structures (0: Timed, 1: Workers, 2: Timed + Repairs)
 	if (isNil 'CTI_BASE_FOB_MAX') then {CTI_BASE_FOB_MAX = 2}; //--- Maximum amount of FOBs which a side may place
 	if (isNil 'CTI_BASE_LARGE_FOB_MAX') then {CTI_BASE_LARGE_FOB_MAX = 2}; //--- Maximum amount of Large FOBs which a side may place
 	if (isNil 'CTI_BASE_HQ_REPAIR') then {CTI_BASE_HQ_REPAIR = 1}; //--- Determine whether the HQ can be repaired or not
