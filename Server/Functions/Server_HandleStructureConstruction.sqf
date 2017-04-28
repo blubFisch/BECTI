@@ -82,9 +82,6 @@ switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 		}; 
 	};
 	case 2: { //--- Timed Based with Repairs
-		
-			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
-
 		//--- Handle the structure state
 		if (_isDestroyed) then {
 			//--- The structure was destroyed, but can be repaired
@@ -101,6 +98,8 @@ switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 			}; 
 		} else {
 			//--- The structure was freshly built after the given time, it's complete
+			sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //this timer determines how long it takes for the structure to pop up, ss83
+			
 			_completion = 100;
 		};
 	};
