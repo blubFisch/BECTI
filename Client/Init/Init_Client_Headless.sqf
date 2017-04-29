@@ -1,7 +1,3 @@
-//--- HC View Distance
-setViewDistance 5000;
-setObjectViewDistance 5000;
-
 if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: Client\Init\Init_Client_Headless.sqf", "Waiting for the Headless Client stabilization before sending the register request"] call CTI_CO_FNC_Log };
 
 while {isNull player} do {
@@ -80,16 +76,7 @@ with missionNamespace do {
 		_ai moveInGunner _static;
 		
 		//--- Exception for AT statics to be less aggressive    
-		if (typeOf(_static) find "B_static_AT_F" == 0 || typeOf(_static) find "rhs_d30_at_msv" == 0 || typeOf(_static) find "O_static_AT_F" == 0 ) then {
-			_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
-			_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
-			_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
-			_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
-			_ai setSkill ["spotDistance", 0.5]; // Set detection distance
-			_ai setSkill ["spotTime", 1]; // Set detection time
-			_ai setSkill ["courage", 1]; // Never retreat
-			_ai setSkill ["commanding", 1]; // Communication skills
-		} else {
+
 			//--- Change Skill for rest of the statics
 			_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
 			_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
@@ -99,6 +86,18 @@ with missionNamespace do {
 			_ai setSkill ["spotTime", 1]; // Set detection time
 			_ai setSkill ["courage", 1]; // Never retreat
 			_ai setSkill ["commanding", 1]; // Communication skills
+
+			//--- Exception for AT statics to be less aggressive  
+			if (_static isKindOf "AT_01_base_F" || _static isKindOf "rhs_d30_at_msv") then {
+				_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
+				_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
+				_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
+				_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
+				_ai setSkill ["spotDistance", 0.6]; // Set detection distance
+				_ai setSkill ["spotTime", 0.6]; // Set detection time
+				_ai setSkill ["courage", 1]; // Never retreat
+				_ai setSkill ["commanding", 1]; // Communication skills		
+			};
 
 			//--- Set to Combat
 			_ai setBehaviour "AWARE";

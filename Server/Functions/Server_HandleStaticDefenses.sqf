@@ -126,17 +126,6 @@ while {alive _structure} do {
 						[_ai] orderGetIn true;
 						_ai moveInGunner _x;
 
-					//--- Exception for AT statics to be less aggressive    
-					if (typeOf(_static) find "B_static_AT_F" == 0 || typeOf(_static) find "rhs_d30_at_msv" == 0 || typeOf(_static) find "O_static_AT_F" == 0 ) then {
-						_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
-						_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
-						_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
-						_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
-						_ai setSkill ["spotDistance", 0.5]; // Set detection distance
-						_ai setSkill ["spotTime", 1]; // Set detection time
-						_ai setSkill ["courage", 1]; // Never retreat
-						_ai setSkill ["commanding", 1]; // Communication skills
-					} else {
 						//--- Change Skill for rest of the statics
 						_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
 						_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
@@ -146,6 +135,18 @@ while {alive _structure} do {
 						_ai setSkill ["spotTime", 1]; // Set detection time
 						_ai setSkill ["courage", 1]; // Never retreat
 						_ai setSkill ["commanding", 1]; // Communication skills
+
+						//--- Exception for AT statics to be less aggressive  
+						if (_x isKindOf "AT_01_base_F" || _x isKindOf "rhs_d30_at_msv") then {
+							_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
+							_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
+							_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
+							_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
+							_ai setSkill ["spotDistance", 0.6]; // Set detection distance
+							_ai setSkill ["spotTime", 0.6]; // Set detection time
+							_ai setSkill ["courage", 1]; // Never retreat
+							_ai setSkill ["commanding", 1]; // Communication skills
+						};
 
 						//--- Set to Combat
 						_ai setBehaviour "AWARE";
