@@ -125,34 +125,8 @@ while {alive _structure} do {
 						_ai assignAsGunner _x;
 						[_ai] orderGetIn true;
 						_ai moveInGunner _x;
-						/*
-						// TODO: deduplicate code (Init_Client_Headless.sqf)
-						// TO Renable remove change skill block on bottom and uncomment this one
-						
-						//--- Configure the weapon / gunner
-						if (typeOf(_x) find "POOK_ANMPQ53_B" == 0 || typeOf(_x) find "POOK_ANMPQ53_O" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery_O" == 0 || typeOf(_x) find "pook_MIM104_PAC2Battery_B" == 0) then {
-							_ai disableAI "AUTOTARGET";
-							_ai disableAI "TARGET";
-						} else {
-							//--- Change Skill
-							_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
-							_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
-							_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
-							_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
-							_ai setSkill ["spotDistance", 1]; // Set detection distance
-							_ai setSkill ["spotTime", 1]; // Set detection time
-							_ai setSkill ["courage", 1]; // Never retreat
-							_ai setSkill ["commanding", 1]; // Communication skills
-							_ai setSkill ["general", 1]; //Sets all above
 
-							//--- Set to Combat
-							_ai setBehaviour "AWARE";
-							_ai setCombatMode "RED";
-							_ai setSpeedMode "FULL";
-							_ai enableAttack true;
-						};*/
-
-						//--- Change Skill
+						//--- Change Skill for rest of the statics
 						_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
 						_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
 						_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
@@ -162,6 +136,19 @@ while {alive _structure} do {
 						_ai setSkill ["courage", 1]; // Never retreat
 						_ai setSkill ["commanding", 1]; // Communication skills
 						_ai setSkill ["general", 1]; //Sets all above
+
+						//--- Exception for AT statics to be less aggressive  
+						if (_x isKindOf "AT_01_base_F" || _x isKindOf "rhs_d30_at_msv") then {
+							_ai setSkill ["aimingAccuracy", 0.8]; // Set accuracy
+							_ai setSkill ["aimingShake", 0.8]; // Set weapon sway handling
+							_ai setSkill ["aimingSpeed", 0.8]; // Set aiming speed
+							_ai setSkill ["reloadSpeed", 0.8]; // Max out reload speed
+							_ai setSkill ["spotDistance", 0.8]; // Set detection distance
+							_ai setSkill ["spotTime", 0.8]; // Set detection time
+							_ai setSkill ["courage", 0.8]; // Never retreat
+							_ai setSkill ["commanding", 0.8]; // Communication skills		
+							_ai setSkill ["general", 0.8]; //Sets all above
+						};
 
 						//--- Set to Combat
 						_ai setBehaviour "AWARE";
