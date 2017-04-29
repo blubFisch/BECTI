@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID","_health", "_var", "_variable", "_virtual_damages","_ruins","_fobtype","_health"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID","_health", "_var", "_variable", "_virtual_damages","_ruins","_fobtype","_health","_lastdamagetime", "_lastdamagediff"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -52,6 +52,12 @@ _ruins = _this select 10 select 0;
 _fobtype = _this select 11 select 0;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 //_logic = (_side) call CTI_CO_FNC_GetSideLogic; // this line isn't needed? - ProtossMaaster
+
+//check for last damage time
+_lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", time]; 			
+_lastdamagediff = time - _lastdamagetime;
+_damaged setVariable ["cti_damage_lastdamaged", time];
+if (_lastdamagediff < 1) exitWith {0};
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
