@@ -1,6 +1,3 @@
-//--- Headless Client view distance
-setViewDistance 3800;
-setObjectViewDistance 3800;
 
 CTI_P_SideJoined = side player;
 CTI_P_SideID = CTI_P_SideJoined call CTI_CO_FNC_GetSideID;

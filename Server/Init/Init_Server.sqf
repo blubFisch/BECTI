@@ -1,6 +1,6 @@
 //todo: Kerberos Tracker -> perma track main infos with clients UID (teamkills, kills, hq killed (ff/no ff)).
 
-//--- Server View Distance
+//--- Server View Distance, dont need much here it doesnt run any ai
 setViewDistance 200;
 setObjectViewDistance 200;
 
