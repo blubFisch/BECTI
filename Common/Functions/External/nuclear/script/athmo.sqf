@@ -2,7 +2,6 @@ private ["_xpos", "_ypos", "_vx", "_vy", "_vz", "_coe", "_ran", "_pos", "_veloci
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-
 quake = {
 
 		for "_i" from 0 to 140 do {
@@ -21,7 +20,7 @@ quake = {
 };
 player spawn quake;
 
-if ( player distance [_xpos, _ypos] < radiation_radius * 1.5 ) then
+if ( player distance [_xpos, _ypos] < blast_wave_radius * 1.5 ) then
 {
   _x = 0;
   while { alive player && _x < 200 } do

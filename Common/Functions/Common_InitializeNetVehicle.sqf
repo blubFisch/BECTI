@@ -72,7 +72,7 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 
 if (CTI_SPECIAL_NUKETRUCK in _special) then { //--- Nuke vehicle.
 	_vehicle call {[_this, 30] execvm "Common\Functions\External\nuclear\geiger.sqf"};
-	_vehicle addAction ["<t color='#ff0000'>ARM NUCLEAR DEVICE</t>", "Common\Functions\External\nuclear\functions\fn_bombArm.sqf", [], 93, false, true, "", "_this == player"];
+	_vehicle addAction ["<t color='#ff0000'>ARM NUCLEAR DEVICE <t color='#ffffff'> (10min timer)</t></t>", "Common\Functions\External\nuclear\functions\fn_bombArm.sqf", [], 93, false, true, "", "_this == player"];
 	//[[[_vehicle], "Common\Functions\External\nuclear\functions\fn_bombTimer.sqf"], "BIS_fnc_execVM", true] call BIS_fnc_MP;
 };
 

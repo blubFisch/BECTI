@@ -2,7 +2,7 @@ private ["_time", "_object", "_target", "_time_difference"];
 
 cutText ["BOMB ARMED", "PLAIN DOWN"];
 
-_time = 600;
+_time = 60;
 _object = _this select 0;
 
 _object setVariable ["nukearmtime", serverTime, true];
@@ -27,7 +27,6 @@ while {alive _object && _time > 0 && !isNull _object} do {
 	if (_time_difference < 8 && _time_difference > 7) then {
 		playsound CTI_SOUND_choppa;
 	};
-
 
 	if (_time_difference <= 0) then {
 		call {[_object] execvm "Common\Functions\External\nuclear\detonation.sqf"}; 

@@ -11,14 +11,13 @@ _ypos = _this select 1;
 "dynamicBlur" ppEffectEnable true;
 "dynamicBlur" ppEffectAdjust [1];
 "dynamicBlur" ppEffectCommit 1;
-
 "colorCorrections" ppEffectEnable true;
 "colorCorrections" ppEffectAdjust [0.8, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.0, 0.6, 2],[0.3, 0.3, 0.3, 0.1]];"colorCorrections" ppEffectCommit 0.4;
- 
+
 "dynamicBlur" ppEffectAdjust [0.5];
 "dynamicBlur" ppEffectCommit 3;
 
-0 setOvercast 0;
+//0 setOvercast 0;
 sleep 0.1;
 
 _xHandle = []spawn
@@ -28,10 +27,8 @@ _xHandle = []spawn
 	"colorCorrections" ppEffectCommit 2;
 };
 
-
 "dynamicBlur" ppEffectAdjust [2];
 "dynamicBlur" ppEffectCommit 1;
-
 "dynamicBlur" ppEffectAdjust [0.5];
 "dynamicBlur" ppEffectCommit 4;
 

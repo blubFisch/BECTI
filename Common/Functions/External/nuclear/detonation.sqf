@@ -1,23 +1,20 @@
 private ["_object", "_xpos", "_ypos"];
-
 _object = _this select 0;
 _xpos = getpos _object select 0;
 _ypos = getpos _object select 1;
 
-//Annoucement
-playsound CTI_SOUND_nuke;
-
-//Nuke Settings
+//Nuke Settings - ALL MAIN SETTING USE THIS FILE
 call compile preprocessfile "Common\Functions\External\nuclear\config.sqf";
-//Object Variables
-//[_object] execVM "Common\Functions\External\nuclear\config1.sqf";
+
 //Destroy Object - Truck
 [_object] execVM "Common\Functions\External\nuclear\script\destroy.sqf";
+//Announcement
+//playsound CTI_SOUND_nuke;
 //Make Units Escape
-[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\escape.sqf";
-if (!isServer) then {
+//[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\escape.sqf";//no need right now due to performance
+if (isServer) then {
 	//Player Quake and Dust
-	[] execVM "Common\Functions\External\nuclear\script\athmo.sqf";
+	[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\athmo.sqf";
 	//Player Color and Flash
 	[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\colorcorrection.sqf";
 	[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\flash.sqf";
@@ -39,13 +36,17 @@ if (!isServer) then {
 	sleep 0.5;
 	[_xpos, _ypos] exec "Common\Functions\External\nuclear\script\hatnod.sqs";
 	[_xpos, _ypos] exec "Common\Functions\External\nuclear\script\blast1.sqs";
+	//Other effects
+	for [{_dis = 1000}, {_dis <= blast_wave_radius}, {_dis = _dis + 100}] do
+	{
+	  [_xpos, _ypos, _dis] exec "Common\Functions\External\nuclear\script\wave.sqs";
+	  if ( _dis < 3000 ) then {[_xpos, _ypos, _dis] execvm "Common\Functions\External\nuclear\script\noise.sqf"};
+	};
 };
-//Main Damage - links
-if ( damage_on ) then
-{
-	[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\damage.sqf";
-};
-if (!isServer) then {
+//Main Damage
+[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\damage.sqf";
+
+if (isServer) then {
 	//Blast Rings
 	[_xpos, _ypos] exec "Common\Functions\External\nuclear\script\ring1.sqs";
 	sleep 0.5;

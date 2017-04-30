@@ -5,7 +5,7 @@ _ypos = _this select 1;
 		   
 sleep 2;
 
-if ( player distance [_xpos, _ypos] < radiation_radius * 1.3 ) then
+if ( player distance [_xpos, _ypos] < blast_wave_radius * 1.5 ) then
 {
   _x = 0;
   while { alive player && _x < 200 } do
