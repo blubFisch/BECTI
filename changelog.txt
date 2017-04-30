@@ -1,6 +1,7 @@
 **Upcoming release**
-Added: Delay before statics can rearm from ammo fac
+Added: Delay before statics can rearm from ammo fac (60 sec)
 Added: Base repair (After factory dies you have 10 min to repair)
+Tweaked: Statics engagement distance
 
 **1.06.9**
 Fixed: On teamswap player wont loose original gear hopefully
