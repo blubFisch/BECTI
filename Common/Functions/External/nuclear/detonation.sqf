@@ -12,7 +12,7 @@ call compile preprocessfile "Common\Functions\External\nuclear\config.sqf";
 //playsound CTI_SOUND_nuke;
 //Make Units Escape
 //[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\escape.sqf";//no need right now due to performance
-if (isServer) then {
+if (!isServer) then {
 	//Player Quake and Dust
 	[_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\athmo.sqf";
 	//Player Color and Flash
@@ -46,7 +46,7 @@ if (isServer) then {
 //Main Damage
 [_xpos, _ypos] execVM "Common\Functions\External\nuclear\script\damage.sqf";
 
-if (isServer) then {
+if (!isServer) then {
 	//Blast Rings
 	[_xpos, _ypos] exec "Common\Functions\External\nuclear\script\ring1.sqs";
 	sleep 0.5;
