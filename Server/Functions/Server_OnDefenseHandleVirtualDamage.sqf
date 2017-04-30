@@ -53,7 +53,7 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
 //check for last damage time
-_lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", time]; 			
+_lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
 _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
 if (_lastdamagediff < 1) exitWith {0};
