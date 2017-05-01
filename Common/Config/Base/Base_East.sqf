@@ -89,7 +89,7 @@ _classes pushBack		["Land_Research_house_V1_F", "Land_Research_house_V1_ruins_F"
 _prices pushBack 		500;
 _times pushBack			0;
 _placements pushBack 	[180, 15, false];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 8]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["!(%1 call CTI_CO_FNC_IsHQDeployed)", _side]);
 _respawnBPos pushBack	-1;
 
@@ -98,7 +98,7 @@ _classes pushBack 		["Land_Research_HQ_F", "Land_Research_HQ_ruins_F", ["Land_Re
 _prices pushBack 		4000;
 _times pushBack 		90;
 _placements pushBack 	[90, 25, false];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -107,7 +107,7 @@ _classes pushBack		["Land_Cargo_House_V1_F", "Land_Cargo_House_V1_ruins_F"];
 _prices pushBack		2000;
 _times pushBack			30;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 8]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -116,7 +116,7 @@ _classes pushBack		["Land_Medevac_HQ_V1_F", "Land_Medevac_HQ_V1_ruins_F"];
 _prices pushBack 		4000;
 _times pushBack 		80;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -125,7 +125,7 @@ _classes pushBack 		["Land_Cargo_HQ_V1_F", "Land_Cargo_HQ_V1_ruins_F"];
 _prices pushBack 		6000;
 _times pushBack 		120;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -134,7 +134,7 @@ _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
 _prices pushBack 		8000;
 _times pushBack 		140;
 _placements pushBack 	[180, 40];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 20000]]; 
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]]; 
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -143,7 +143,7 @@ _classes pushBack 		["Land_Cargo_HQ_V2_F", "Land_Cargo_HQ_V2_ruins_F"];
 _prices pushBack 		2000;
 _times pushBack 		90;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -152,7 +152,7 @@ _classes pushBack 		["Land_Cargo_HQ_V3_F", "Land_Cargo_HQ_V3_ruins_F"];
 _prices pushBack 		4000;
 _times pushBack 		90;
 _placements pushBack 	[90, 25];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -161,7 +161,7 @@ _classes pushBack 		["Land_Lighthouse_small_F", "Land_Lighthouse_small_ruins_F"]
 _prices pushBack 		3000;
 _times pushBack 		80;
 _placements pushBack 	[180, 60];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -171,7 +171,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 		_respawnBPos pushBack	-1;
 
@@ -180,7 +180,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 		_respawnBPos pushBack	-1;
 } else {
@@ -190,7 +190,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 		_respawnBPos pushBack	-1;
 
@@ -199,7 +199,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 		_respawnBPos pushBack	-1;
 	} else {
@@ -217,7 +217,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_prices pushBack 		2500;
 		_times pushBack 		60;
 		_placements pushBack 	[180, 30, false];
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 		_conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 		_respawnBPos pushBack	-1;
 	};
@@ -228,7 +228,7 @@ _classes pushBack 		["Land_dp_smallTank_F", "Land_dp_smallTank_ruins_F"];
 _prices pushBack 		2500;
 _times pushBack 		60;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
@@ -237,7 +237,7 @@ _classes pushBack 		["Land_Radar_Small_F", "Land_Radar_Small_ruins_F"];
 _prices pushBack 		4500;
 _times pushBack 		60;
 _placements pushBack 	[180, 15];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 4]];
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 
