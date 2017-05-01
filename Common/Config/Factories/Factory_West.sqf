@@ -678,9 +678,9 @@ _u pushBack "B_Quadbike_01_F";
 /*_u pushBack "B_G_Offroad_01_armed_F";
 _u pushBack "C_Van_01_transport_F";
 _u pushBack "B_Truck_01_transport_F";*/
-/*_u pushBack "B_Truck_01_medical_F";
+_u pushBack "B_Truck_01_medical_F";
 _u pushBack 'B_Slingload_01_Medevac_F';
-_u pushBack 'O_Truck_03_device_F';*/
+/*_u pushBack 'O_Truck_03_device_F';*/
 /*_u pushBack "B_UGV_01_F";
 _u pushBack "B_UGV_01_rcws_F";
 _u pushback 'I_C_Offroad_02_unarmed_F';*/
@@ -862,7 +862,7 @@ _u pushBack 'rhsusf_m998_d_4dr_fulltop';
 _u pushBack 'rhsusf_m998_d_4dr_halftop';
 _u pushBack 'rhsusf_m998_d_4dr';
 _u pushBack 'rhsusf_M1083A1P2_B_d_flatbed_fmtv_usarmy';*/
-_u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
+/*_u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';*/
 /*_u pushBack 'rhsusf_M1083A1P2_d_open_fmtv_usarmy';*/
 _u pushBack 'rhsusf_M1232_usarmy_d';
 _u pushBack 'rhsusf_M1232_usarmy_wd';

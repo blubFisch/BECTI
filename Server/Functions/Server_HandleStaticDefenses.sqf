@@ -140,14 +140,14 @@ while {alive _structure} do {
 						//--- Exception for AT statics to be less aggressive  
 						if (_x isKindOf "AT_01_base_F" || _x isKindOf "rhs_d30_at_msv") then {
 							_ai setSkill ["aimingAccuracy", 0.8]; // Set accuracy
-							_ai setSkill ["aimingShake", 0.8]; // Set weapon sway handling
-							_ai setSkill ["aimingSpeed", 0.8]; // Set aiming speed
+							_ai setSkill ["aimingShake", 0.5]; // Set weapon sway handling
+							_ai setSkill ["aimingSpeed", 0.5]; // Set aiming speed
 							_ai setSkill ["reloadSpeed", 0.8]; // Max out reload speed
-							_ai setSkill ["spotDistance", 0.8]; // Set detection distance
-							_ai setSkill ["spotTime", 0.8]; // Set detection time
-							_ai setSkill ["courage", 0.8]; // Never retreat
-							_ai setSkill ["commanding", 0.8]; // Communication skills		
-							_ai setSkill ["general", 0.8]; //Sets all above
+							_ai setSkill ["spotDistance", 0.65]; // Set detection distance = 2600m
+							_ai setSkill ["spotTime", 0.5]; // Set detection time
+							_ai setSkill ["courage", 1]; // Never retreat
+							_ai setSkill ["commanding", 1]; // Communication skills		
+							/*_ai setSkill ["general", 0.8]; //Sets all above*/
 						};
 
 						//--- Set to Combat
