@@ -1,9 +1,8 @@
 private ["_xpos", "_ypos", "_radius", "_units", "_distance", "_dir", "_x"];
-
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-_radius = radiation_radius * 2.3;
+_radius = blast_wave_radius * 2;
 _units = [_xpos, _ypos, 0] nearobjects ["All", _radius];
 
 {
