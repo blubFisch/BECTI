@@ -185,7 +185,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 	[[],[],[]], //--- Supply Rate
 	[[],[],[],[]], //--- Base Health
-	[[],[],[]] //--- Base Defense
+	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[CTI_UPGRADE_BARRACKS, 3]] //--- Base Defense
 ]];
 };
 

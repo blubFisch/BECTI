@@ -672,12 +672,12 @@ _specials = [];
 
 		_headers pushBack 		"Mk.19 (M3)";
 		_classes pushBack 		"RHS_MK19_TriPod_D";
-		_prices pushBack 		2500;
+		_prices pushBack 		3000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		0;	
+		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
 		_headers pushBack 		"M2HB (M3)";
@@ -867,12 +867,12 @@ _specials = [];
 	if (CTI_RHS_ADDON > 0) then { 
 		_headers pushBack 		"FIM-92F (DMS)";
 		_classes pushBack 		"RHS_Stinger_AA_pod_D";
-		_prices pushBack 		2900;
+		_prices pushBack 		2500;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		1;	
+		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 	};
 
@@ -975,12 +975,12 @@ _specials = [];
 
 	_headers pushBack 		"AA Defense";
 	_classes pushBack 		"B_static_AA_F";
-	_prices pushBack 		2000;
+	_prices pushBack 		5000;
 	_placements pushBack 	[180, 5];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		2;	
+	_upgrade pushBack		3;	
 	_specials pushBack 		[];
 	
 	if (CTI_CUP_ADDON > 0) then {
@@ -1031,7 +1031,7 @@ _specials = [];
 		//OPFOR ZU-23 to fill the gap
 		_headers pushBack 		"Zu-23-2";
 		_classes pushBack 		"RHS_ZU23_MSV";
-		_prices pushBack 		5000;
+		_prices pushBack 		3500;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -1079,12 +1079,12 @@ _specials = [];
 
 		_headers pushBack 		"D-30 AT";
 		_classes pushBack 		"CUP_B_D30_AT_CDF";
-		_prices pushBack 		6000;
+		_prices pushBack 		5000;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
-		_upgrade pushBack		3;	
+		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
 /*		_headers pushBack 		"M252 81mm mortar";
@@ -1115,7 +1115,7 @@ _specials = [];
 	_prices pushBack 		10000;
 	_placements pushBack 	[180, 5];
 	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinmenus pushBack 	["HQ"/*, "RepairTruck"*/];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		3;	
 	_specials pushBack 		[];
@@ -1184,12 +1184,12 @@ if (CTI_RHS_ADDON > 0) then {
 	//OPFOR D-30&Podnos to fill the gap
 	_headers pushBack 		"2A18M (D-30A) AT";
 	_classes pushBack 		"rhs_d30_at_msv";
-	_prices pushBack 		6000;
+	_prices pushBack 		5000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		3;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 
 	_headers pushBack 		"2B14-1 Podnos";
@@ -1197,7 +1197,7 @@ if (CTI_RHS_ADDON > 0) then {
 	_prices pushBack 		10000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinmenus pushBack 	["RepairTruck" /*"HQ",*/];
 	_coinblacklist pushBack ["*"];
 	_upgrade pushBack		3;	
 	_specials pushBack 		[]

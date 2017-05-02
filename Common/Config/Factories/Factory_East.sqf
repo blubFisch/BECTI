@@ -916,7 +916,7 @@ _u pushBack 'rhsgref_ins_uaz_dshkm';
 _u pushBack 'rhsgref_ins_uaz_ags';
 _u pushBack 'rhs_tigr_sts_msv';
 _u pushBack 'rhsgref_BRDM2_msv';
-_u pushBack 'rhs_gaz66_ap2_msv';
+/*_u pushBack 'rhs_gaz66_ap2_msv';*/
 _u pushBack 'rhs_tigr_sts_3camo_msv';
 /*_u pushBack 'rhs_btr60_msv';*/
 _u pushBack 'rhs_btr70_msv';
