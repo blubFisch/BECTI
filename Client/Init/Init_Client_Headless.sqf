@@ -1,6 +1,9 @@
 //--- Headless View Distance
-setViewDistance 4000;
-setObjectViewDistance 4000;
+//--- Synced to Player View Distance + Extra to compensate for slow AI  
+_hcVD = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
+_hcVDcomp = _hcVD + 500;
+setViewDistance _hcVDcomp;
+setObjectViewDistance _hcVDcomp;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: Client\Init\Init_Client_Headless.sqf", "Waiting for the Headless Client stabilization before sending the register request"] call CTI_CO_FNC_Log };
 
@@ -110,7 +113,6 @@ with missionNamespace do {
 		_ai setCombatMode "RED";
 		_ai setSpeedMode "FULL";
 		_ai enableAttack true;
-		
 
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FUNCTION: CTI_PVF_HC_OnDefenseDelegationReceived", format["An AI [%1] has been created on the HC to man static [%2 (%3)]", _ai, _static, typeOf _static]] call CTI_CO_FNC_Log;
