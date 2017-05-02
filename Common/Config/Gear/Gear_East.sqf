@@ -101,13 +101,13 @@ _i pushBack "150Rnd_762x54_Box_Tracer";  //Zafir
 _u pushBack 1;
 _p pushBack 150;
 
-/*_i pushBack "RPG32_F";
-_u pushBack 2;
+_i pushBack "RPG32_F";
+_u pushBack 1;
 _p pushBack 300;
 
 _i pushBack "RPG32_HE_F";
-_u pushBack 2;
-_p pushBack 250;*/
+_u pushBack 1;
+_p pushBack 250;
 
 _i pushBack "Titan_AA";
 _u pushBack 4;
@@ -407,9 +407,9 @@ _i pushBack "5Rnd_127x108_APDS_Mag";
 _u pushBack 0;
 _p pushBack 250;
 
-/*_i pushBack "launch_RPG32_F";
-_u pushBack 2;
-_p pushBack 600;*/
+_i pushBack "launch_RPG32_F";
+_u pushBack 1;
+_p pushBack 1200;
 
 
 _i pushBack "launch_O_Titan_F"; //AA

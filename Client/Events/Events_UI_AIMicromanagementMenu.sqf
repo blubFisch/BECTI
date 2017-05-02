@@ -198,12 +198,24 @@ switch (_action) do {
                 if (_who == effectiveCommander vehicle _who && vehicle _who != _who) then {deleteVehicle (vehicle _who)};
 				_who setDammage 1;
 				_isvehicle_killed = if (_who isKindOf "Man") then {false} else {true};
+				//--- Clean up man isntatly on death
 				if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
-				_who spawn {
-				sleep 2;
-				deleteVehicle _this;
+					_who spawn {
+						sleep 2;
+						deleteVehicle _this;
 					};
 				};
+
+				//--- Dont delete man but remove simulation to prevent looting
+				if (CTI_GC_CLEANUP_AIWEAPONS > 0 && !_isvehicle_killed) then {
+					_who spawn {
+						removeallweapons _this;
+						clearmagazinecargo _this;
+						sleep 2; //--- Adding sleep to prvent dead bodys from getting stuck wile falling down 
+						_this enableSimulationGlobal false;
+				    };
+				};
+
 			} forEach _selection;
 			{((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270002) lbDelete _x} forEach _selection;
 			

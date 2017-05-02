@@ -30,11 +30,11 @@ class Params {
 		default = 3;
 	};
 	class SEPARATOR0 {
-		title = "========================== INCOME ============================";
+		title = "========================== BASES ============================";
 		values[] = {1};
 		texts[] = {""};
 		default = 1;
-	};
+	};	
 	class CTI_BASE_AREA_MAX {
 		title = "BASE: Areas";
 		values[] = {1,2,3,4,5};
@@ -43,6 +43,12 @@ class Params {
 	};
 	class CTI_BASE_HQ_REPAIR {
 		title = "BASE: HQ Repairable";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
+	class CTI_BASE_HEALTH_UPGRADE {
+		title = "BASE: Enable Base Health Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
@@ -303,37 +309,37 @@ class Params {
 		title = "VEHICLES: Aircraft FFAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_VEHICLES_AIR_DAR {
 		title = "VEHICLES: Aircraft DAR";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_VEHICLES_AIR_AA {
 		title = "VEHICLES: Aircraft AA Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_VEHICLES_AIR_AT {
 		title = "VEHICLES: Aircraft AT Missiles";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
+		default = 2;
 	};
 	class CTI_VEHICLES_AIR_CM {
 		title = "VEHICLES: Aircraft Countermeasures";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
+		default = 2;
+	};	
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_VEHICLES_LVOSS {
 		title = "VEHICLES: Enable LVOSS";

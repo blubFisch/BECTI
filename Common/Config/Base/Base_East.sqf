@@ -734,12 +734,12 @@ _specials = [];
 
 		_headers pushBack 		"AGS-30 (6P17)";
 		_classes pushBack 		"rhs_AGS30_TriPod_MSV";
-		_prices pushBack 		1000;
+		_prices pushBack 		2000;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		0;	
+		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
 	};
@@ -932,17 +932,17 @@ _specials = [];
 
 		_headers pushBack 		"9K38 (Djigit)";
 		_classes pushBack 		"rhs_Igla_AA_pod_msv";
-		_prices pushBack 		1000;
+		_prices pushBack 		2500;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
-		_upgrade pushBack		1;	
+		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
 		_headers pushBack 		"Zu-23-2";
 		_classes pushBack 		"RHS_ZU23_MSV";
-		_prices pushBack 		5000;
+		_prices pushBack 		3500;
 		_placements pushBack 	[180, 15];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -950,7 +950,7 @@ _specials = [];
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		"KORD (6U16)";
+		/*_headers pushBack 		"KORD (6U16)";
 		_classes pushBack 		"rhs_KORD_high_MSV";
 		_prices pushBack 		1000;
 		_placements pushBack 	[180, 15];
@@ -958,7 +958,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		1;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 
 	};
 
@@ -986,7 +986,7 @@ _specials = [];
 */	
 	if (CTI_APEX_ADDON > 0) then {
 
-		_headers pushBack ["Cargo Tower (big) Jungle",[["RuinOnDestroyed", "Land_cargo_tower_v4_ruins_f"]]];
+/*		_headers pushBack ["Cargo Tower (big) Jungle",[["RuinOnDestroyed", "Land_cargo_tower_v4_ruins_f"]]];
 		_classes pushBack 		"Land_Cargo_Tower_V4_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 30];
@@ -994,7 +994,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10], ["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_sfp_mil_shed", 30], ["Land_sfp_torebodahangar", 30], ["Land_sfp_torebodahangar_alt2", 30], ["Land_Dome_Small_F", 22], ["Land_Dome_Big_F", 32], ["Land_Ss_hangar", 40], ["Land_Ss_hangard", 30], ["Land_Cargo_Patrol_V1_F", 10],  ["Land_Cargo_Tower_V1_F", 14], ["Land_Cargo_Tower_V4_F", 7],["Land_IRMaskingCover_02_F", 10], ["Land_IRMaskingCover_01_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_F", 10], ["CamoNet_BLUFOR_open_F", 10], ["CamoNet_BLUFOR_big_F", 10], ["Land_Ammostore2", 10]];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]]; //4-5 HE slammer rounds to go down
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]]; //4-5 HE slammer rounds to go down*/
 
 		/*Cant use due to apex object
 		_headers pushBack 		"Air Tower";
@@ -1040,7 +1040,7 @@ _specials = [];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];*/
 
-		_headers pushBack 		"SAM - AA Radar";
+		/*_headers pushBack 		"SAM - AA Radar";
 		_classes pushBack 		"POOK_ANMPQ53_O";
 		_prices pushBack 		5000;
 		_placements pushBack 	[180, 15];
@@ -1048,11 +1048,11 @@ _specials = [];
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];*/
 		
 	};
 	
-	_headers pushBack 		"AT Defense";
+	/*_headers pushBack 		"AT Defense";
 	_classes pushBack 		"O_static_AT_F";
 	_prices pushBack 		3000;
 	_placements pushBack 	[180, 5];
@@ -1060,16 +1060,16 @@ _specials = [];
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
 	_upgrade pushBack		2;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
 
 	_headers pushBack 		"AA Defense";
 	_classes pushBack 		"O_static_AA_F";
-	_prices pushBack 		2000;
+	_prices pushBack 		5000;
 	_placements pushBack 	[180, 5];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack [];
-	_upgrade pushBack		2;	
+	_upgrade pushBack		3;	
 	_specials pushBack 		[];
 	
 
@@ -1088,7 +1088,7 @@ _specials = [];
 	};
 	
 	if (CTI_CUP_ADDON > 0) then { 
-		_headers pushBack 		"Metis AT-13";
+		/*_headers pushBack 		"Metis AT-13";
 		_classes pushBack 		"CUP_O_Metis_RU";
 		_prices pushBack 		6000;
 		_placements pushBack 	[180, 5];
@@ -1096,7 +1096,7 @@ _specials = [];
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[];
+		_specials pushBack 		[];*/
 		
 	};
 	
@@ -1226,32 +1226,51 @@ _specials = [];
 		_upgrade pushBack		3;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 
+		/*_headers pushBack 		"AT Defense";
+		_classes pushBack 		"O_static_AT_F";
+		_prices pushBack 		10000;
+		_placements pushBack 	[180, 5];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[];*/
+
 	};
 
+	_headers pushBack 		"AT Defense";
+	_classes pushBack 		"O_static_AT_F";
+	_prices pushBack 		10000;
+	_placements pushBack 	[180, 5];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ"/*, "RepairTruck"*/];
+	_coinblacklist pushBack [];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];
 
 if (CTI_RHS_ADDON > 0) then { 
 
 	_headers pushBack 		"2B14-1 Podnos";
 	_classes pushBack 		"rhs_2b14_82mm_msv";
-	_prices pushBack 		15000;
+	_prices pushBack 		10000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
-	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinmenus pushBack 	["RepairTruck"/*"HQ",*/];
 	_coinblacklist pushBack ["*"];
 	_upgrade pushBack		3;	
 	_specials pushBack 		[];
 	
 	_headers pushBack 		"2A18M (D-30A) AT";
 	_classes pushBack 		"rhs_d30_at_msv";
-	_prices pushBack 		6000;
+	_prices pushBack 		5000;
 	_placements pushBack 	[180, 15];
 	_categories pushBack 	"Defense";
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack ["*"];
-	_upgrade pushBack		3;	
+	_upgrade pushBack		2;	
 	_specials pushBack 		[];
 	
-	_headers pushBack 		"9M133-1 Kornet-M";
+	/*_headers pushBack 		"9M133-1 Kornet-M";
 	_classes pushBack 		"rhs_Kornet_9M133_2_msv";
 	_prices pushBack 		5000;
 	_placements pushBack 	[180, 15];
@@ -1259,7 +1278,17 @@ if (CTI_RHS_ADDON > 0) then {
 	_coinmenus pushBack 	["HQ", "RepairTruck"];
 	_coinblacklist pushBack ["*"];
 	_upgrade pushBack		3;	
-	_specials pushBack 		[];
+	_specials pushBack 		[];*/
+
+	/*_headers pushBack 		"AT Defense";
+	_classes pushBack 		"O_static_AT_F";
+	_prices pushBack 		10000;
+	_placements pushBack 	[180, 5];
+	_categories pushBack 	"Defense";
+	_coinmenus pushBack 	["HQ", "RepairTruck"];
+	_coinblacklist pushBack [];
+	_upgrade pushBack		3;	
+	_specials pushBack 		[];*/
 };
 
 //******************************BASE DEFENSE 4******************************
@@ -1320,7 +1349,7 @@ if (CTI_RHS_ADDON > 0) then {
 		
 	if (CTI_OFPS_ADDON > 0) then { 
 		
-		_headers pushBack 		"SAM - AA Launcher";
+		/*_headers pushBack 		"SAM - AA Launcher";
 		_classes pushBack 		"pook_MIM104_PAC2Battery_O";
 		_prices pushBack 		60000;
 		_placements pushBack 	[180, 15];
@@ -1328,7 +1357,7 @@ if (CTI_RHS_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		4;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];*/
 
 	};	
 

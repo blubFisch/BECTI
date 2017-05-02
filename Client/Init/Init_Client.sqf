@@ -1,3 +1,4 @@
+
 CTI_P_SideJoined = side player;
 CTI_P_SideID = CTI_P_SideJoined call CTI_CO_FNC_GetSideID;
 CTI_P_SideLogic = CTI_P_SideJoined call CTI_CO_FNC_GetSideLogic;
@@ -550,13 +551,15 @@ if (CTI_DEV_MODE > 0) then {
 	_q setDammage 1;
 	{uiNamespace setVariable [_x, displayNull]} forEach ["cti_title_capture"];
 	600200 cutRsc["CTI_CaptureBar","PLAIN",0];
+	
+	//--- Below are scripts that you can run in debugger
 
 	//--- Generates a list in log what units belong to HC
 	_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
-	diag_log ("GROUPOWNER-INFO:" + str _candidates);*/
+	diag_log ("GROUPOWNER-INFO:" + str _candidates);
 
 	//--- Copy to clipboard building positions with in 20m
-	/*	_posX = [];
+		_posX = [];
 	{
 	    _posX append (_x buildingPos -1);
 	} forEach nearestObjects [player, ["House"], 20];
@@ -590,6 +593,13 @@ if (CTI_DEV_MODE > 0) then {
 
     copyToClipboard (str _posX);
 
+	//--- Add in cash to commander on blufor
+	_logic = (west) call CTI_CO_FNC_GetSideLogic;
+	_funds = (west) call CTI_CO_FNC_GetFundsCommander;
+	_logic setVariable ["cti_commander_funds", _funds + 100000, true];
+
+	//--- Add in supply to commander on blufor
+	_logic = (west) call CTI_CO_FNC_GetSideLogic; _logic setVariable ["cti_supply", 100000000, true];
 */
 };
 
@@ -616,11 +626,10 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-//Disabled to move to barracs upgrade
-//FNC_RewardPlayerAISkill = compileFinal preprocessFile "Client\Functions\Externals\RewardPlayerAISkill.sqf";
 
 //--- Sam altitude warning
-call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
+// Disabling for now, to much spam.
+//call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
 
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
@@ -652,7 +661,6 @@ if ( !isNull _displayscorehud ) then {
 };
 
 //--- Radio
-Common_Say3D = compile preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
 if (isNil "Radio_Say3D") then {
     Radio_Say3D = [objNull,"nosound",0];
 };

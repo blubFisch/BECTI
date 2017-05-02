@@ -1,5 +1,9 @@
 //todo: Kerberos Tracker -> perma track main infos with clients UID (teamkills, kills, hq killed (ff/no ff)).
 
+//--- Server View Distance, dont need much here it doesnt run any ai
+setViewDistance 200;
+setObjectViewDistance 200;
+
 CTI_SE_FNC_AddScore = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AddScore.sqf";
 CTI_SE_FNC_AI_PurchaseSquad = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AI_PurchaseSquad.sqf";
 CTI_SE_FNC_AttemptDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptDefenseDelegation.sqf";
@@ -273,7 +277,7 @@ if !( isNil "ADMIN_ZEUS") then {
 };
 
 
-// Initialize control scripts for Pook SAM Site
+/*// Initialize control scripts for Pook SAM Site
 // Must have exactly 1 instance per side, running on HC if possible
 0 spawn {
 	// Give HCs some init time
@@ -295,7 +299,7 @@ if !( isNil "ADMIN_ZEUS") then {
 		[west] spawn FNC_HandleSAMSite;
 	};
 };
-
+*/
 // Initialize control scripts for C-RAM turrets
 // Must have exactly 1 instance per side, running on HC if possible
 0 spawn {

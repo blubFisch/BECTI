@@ -48,14 +48,16 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
 _baseratio = 1;
-switch (_upgrade_basehealth) do {
-	case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
-	case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
-	case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
-	case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
-	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+//--- Base Health Upgrade
+if (CTI_BASE_HEALTH_UPGRADE > 0) then {
+	switch (_upgrade_basehealth) do {
+		case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
+		case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
+		case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
+		case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
+		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+	};
 };
-
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Adjust damage for ammo types
 //--- Tanks

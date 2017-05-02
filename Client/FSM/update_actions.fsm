@@ -11,8 +11,8 @@ link1[] = {1,2};
 link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-294.235992,72.908051,422.452942,-638.185547,141,609,1};
-window[] = {0,-1,-1,-1,-1,807,26,1281,26,1,159};
+globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-294.235992,72.908051,422.452942,-638.185547,230,884,1};
+window[] = {2,-1,-1,-1,-1,948,122,1377,167,3,248};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -70,7 +70,10 @@ class FSM
                          "		(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
                          "	};" \n
                          "};" \n
-                         "" \n
+                         "//--- Update player's last held gear" \n
+                         "if (CTI_GEAR_RESPAWN_WITH_LAST > 0) then {" \n
+                         "	if (alive player && !CTI_P_Respawning) then {CTI_P_CurrentGear = (player) call CTI_CO_FNC_GetUnitLoadout};" \n
+                         "};" \n
                          "//--- Actions" \n
                          "if (""ToolKit"" in items player && player == vehicle player) then {" \n
                          "	if (count(vehicle player nearEntities [[""Car"",""Air"",""Tank"",""Ship""], 10]) > 0) then {" \n

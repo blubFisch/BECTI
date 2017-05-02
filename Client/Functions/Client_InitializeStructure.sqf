@@ -36,7 +36,7 @@ if (((_var select 0) select 0) in CTI_FACTORIES) then {
 _marker = createMarkerLocal [Format ["cti_structure_%1", CTI_P_MarkerIterator], getPos _structure];CTI_P_MarkerIterator = CTI_P_MarkerIterator + 1;
 _marker setMarkerTypeLocal format["%1installation", CTI_P_MarkerPrefix];
 _marker setMarkerColorLocal CTI_P_SideColor;
-_marker setMarkerSizeLocal [0.75, 0.75]; 
+_marker setMarkerSizeLocal [0.60, 0.60]; 
 _marker setMarkerTextLocal ((_var select 0) select 2);
 
 //--- Set the type if needed
@@ -48,6 +48,11 @@ if (isNil {_structure getVariable "cti_structure_type"}) then {_structure setVar
 	_marker = _this select 1;
 	
 	waitUntil { sleep 5; !alive _structure };
+	
+	if !(isNull _structure) then { _marker setMarkerColorLocal CTI_BASE_MARKER_DESTROYED_COLOR };
+	
+	sleep CTI_BASE_MARKER_DESTROYED_DELAY;
+	
 	deleteMarkerLocal _marker;
 };
 

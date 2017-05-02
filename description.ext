@@ -16,7 +16,6 @@
 //--- Player Name tag
 class CfgFunctions
 {
-	#include "Client\Functions\Externals\zam_shownames\zam_shownames.cpp"
 	#include "Common\Functions\External\LARs\LARs_spawnComp.cpp"
 };
 #include "Common\Config\Compositions\compositions.cfg"

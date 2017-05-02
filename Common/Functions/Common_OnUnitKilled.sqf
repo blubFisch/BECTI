@@ -118,8 +118,6 @@ if (!isNil '_var') then {
 						
 						if (isNull _logic) exitWith{};
 						
-						("kill by group-> " + str(_x) + " sidedefteam-> " +  str((_logic getVariable ["cti_defensive_team", "undef"])) + " isbasedefkill-> " + str(_x == (_logic getVariable ["cti_defensive_team", objNull]))) remoteexec ["diag_log"];
-						
 						if (_x == (_logic getVariable ["cti_defensive_team", objNull])) then {
 							[_var_name, _bounty, _killed_pname] remoteExec ["CTI_PVF_CLT_OnBaseDefensesKill", side _x];
 						};
@@ -164,12 +162,12 @@ if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
 	};
 };
 
-//--- Dont delete man but remove simulation to prevent looting
+//--- Dont delete man but remove simulation and weapons (Keep items in backpack/vest for fun factor)
+//--- TO DO: This doesnt work on players
 if (CTI_GC_CLEANUP_AIWEAPONS > 0 && !_isvehicle_killed) then {
 	_killed spawn {
 		removeallweapons _this;
-		clearmagazinecargo _this;
-		sleep 2; //--- Adding sleep to prvent dead bodys from getting stuck wile falling down 
+		sleep 5; //--- Adding sleep to prvent dead bodys from getting stuck wile falling down 
 		_this enableSimulationGlobal false;
     };
 };

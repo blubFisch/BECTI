@@ -1,3 +1,52 @@
+/*
+//--- This file presents classnames and their values to the mission, to manage units that are in factory menu use factory file.
+//--- A tiny error in this file will break the game, be very careful when editing!
+//--- Standard format below:
+
+//--- Class Name
+_c pushBack 'O_T_Soldier_AA_F';
+
+//--- Picture will be used from config
+_p pushBack ''; 
+
+//--- Custom picture if config doesn’t have one
+_p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg'; 
+
+//--- Name leaving blank will use name from config
+_n pushBack '';
+
+//--- Default config name + custom
+_n pushBack '%1 Friendly name';
+
+//--- Fully custom name
+_n pushBack 'Friendly name';
+
+//--- Name that will have spawn range based on current upgrade
+_n pushBack (format ["Friendly name - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+
+//--- Price of the unit
+_o pushBack 4000;
+
+//--- Time it will take to build in seconds
+_t pushBack 5; 
+
+//--- Upgrade level which unit will be available starts from 0
+_u pushBack 2; 
+
+//--- Which factory unit will be available for purchase
+_f pushBack CTI_FACTORY_BARRACKS; 
+
+//-- Special / Script blank will do nothing special
+_s pushBack ""; 
+
+//---  Special / Script service-medic will mark vehicles as medical respawn truck
+_s pushBack "service-medic"; 
+
+//--- Distance unit will spawn from factory in meters
+_d pushBack 0; 
+
+*/ 
+
 _side = _this;
 _faction = "East";
 
@@ -15,7 +64,7 @@ _d = []; //--- Extra Distance (From Factory)
 
 _c pushBack 'rhs_msv_emr_rifleman';
 _p pushBack '';
-_n pushBack "0- Rifleman (AK74M)"; 
+_n pushBack '0- Rifleman (AK74M)'; 
 _o pushBack 200;
 _t pushBack 5;
 _u pushBack 0;
@@ -25,7 +74,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_aa';
 _p pushBack '';
-_n pushBack "3- AA Specialist (9K38 Igla)"; 
+_n pushBack '3- AA Specialist (9K38 Igla)'; 
 _o pushBack 1200;
 _t pushBack 5;
 _u pushBack 3;
@@ -35,7 +84,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_arifleman';
 _p pushBack '';
-_n pushBack "2- Machine Gunner (PKP)"; 
+_n pushBack '2- Machine Gunner (PKP)'; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 2;
@@ -45,7 +94,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_at';
 _p pushBack '';
-_n pushBack "2- AT Specialist (RPG-7V2)"; 
+_n pushBack '2- AT Specialist (RPG-7V2)'; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 2;
@@ -55,7 +104,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_combatcrew';
 _p pushBack '';
-_n pushBack "0- Crew (Combat)"; 
+_n pushBack '0- Crew (Combat)'; 
 _o pushBack 200;
 _t pushBack 5;
 _u pushBack 0;
@@ -65,7 +114,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_LAT';
 _p pushBack '';
-_n pushBack "0- Rifleman (RPG-26)"; 
+_n pushBack '0- Rifleman (RPG-26)'; 
 _o pushBack 350;
 _t pushBack 5;
 _u pushBack 0;
@@ -75,7 +124,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_RShG2';
 _p pushBack '';
-_n pushBack "0- Rifleman (RShG-2)"; 
+_n pushBack '0- Rifleman (RShG-2)'; 
 _o pushBack 550;
 _t pushBack 5;
 _u pushBack 1;
@@ -85,7 +134,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_engineer';
 _p pushBack '';
-_n pushBack "2- Engineer (Toolkit)"; 
+_n pushBack '2- Engineer (Toolkit)'; 
 _o pushBack 600;
 _t pushBack 5;
 _u pushBack 2;
@@ -95,7 +144,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_grenadier';
 _p pushBack '';
-_n pushBack "1- Grenadier"; 
+_n pushBack '1- Grenadier'; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 1;
@@ -105,7 +154,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_medic';
 _p pushBack '';
-_n pushBack "1- Medic"; 
+_n pushBack '1- Medic'; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 1;
@@ -115,7 +164,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_pilot';
 _p pushBack '';
-_n pushBack "2- Pilot"; 
+_n pushBack '2- Pilot'; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 2;
@@ -125,7 +174,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_marksman';
 _p pushBack '';
-_n pushBack "1- Marksman (SVDM)"; 
+_n pushBack '1- Marksman (SVDM)'; 
 _o pushBack 450;
 _t pushBack 5;
 _u pushBack 1;
@@ -135,7 +184,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_junior_sergeant';
 _p pushBack '';
-_n pushBack "1- Junior Sergeant"; 
+_n pushBack '1- Junior Sergeant'; 
 _o pushBack 300;
 _t pushBack 5;
 _u pushBack 1;
@@ -145,7 +194,7 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_sergeant';
 _p pushBack '';
-_n pushBack "2- Sergeant"; 
+_n pushBack '2- Sergeant'; 
 _o pushBack 400;
 _t pushBack 5;
 _u pushBack 2;
@@ -155,14 +204,13 @@ _d pushBack 0;
 
 _c pushBack 'rhs_msv_emr_officer';
 _p pushBack '';
-_n pushBack "3- Officer"; 
+_n pushBack '3- Officer'; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-
 
 //--- Light Vehicles Theme: 500+(LFLx250)+500(WpnSys/Armored)
 
@@ -186,15 +234,15 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
 
-// _c pushBack 'rhs_gaz66_msv';
-// _p pushBack '';
-// _n pushBack 'GAZ-66';
-// _o pushBack 350;
-// _t pushBack 30;
-// _u pushBack 0;
-// _f pushBack CTI_FACTORY_LIGHT;
-// _s pushBack "";
-// _d pushBack 10;
+_c pushBack 'rhs_gaz66_msv';
+_p pushBack '';
+_n pushBack 'GAZ-66';
+_o pushBack 350;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 10;
 
 _c pushBack 'rhs_kamaz5350_msv';
 _p pushBack '';
@@ -216,15 +264,15 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
 
-// _c pushBack 'rhs_tigr_3camo_msv';
-// _p pushBack '';
-// _n pushBack 'GAZ-233011 Camo';
-// _o pushBack 450;
-// _t pushBack 30;
-// _u pushBack 0;
-// _f pushBack CTI_FACTORY_LIGHT;
-// _s pushBack "";
-// _d pushBack 10;
+_c pushBack 'rhs_tigr_3camo_msv';
+_p pushBack '';
+_n pushBack 'GAZ-233011 Camo';
+_o pushBack 450;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 10;
 
 _c pushBack 'RHS_UAZ_MSV_01';
 _p pushBack '';
@@ -236,16 +284,15 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
 
-
-// _c pushBack 'rhs_uaz_open_MSV_01';
-// _p pushBack '';
-// _n pushBack '';
-// _o pushBack 1000;
-// _t pushBack 30;
-// _u pushBack 0;
-// _f pushBack CTI_FACTORY_LIGHT;
-// _s pushBack "";
-// _d pushBack 10;
+_c pushBack 'rhs_uaz_open_MSV_01';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
+_t pushBack 30;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 10;
 
 _c pushBack 'rhsgref_BRDM2UM_msv';
 _p pushBack '';
@@ -370,7 +417,7 @@ _d pushBack 10;
 _c pushBack 'rhs_btr80a_msv';
 _p pushBack '';
 _n pushBack '4- BTR-80A';
-_o pushBack 3000;
+_o pushBack 3500;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -473,7 +520,7 @@ _d pushBack 10;
 _c pushBack 'rhs_t80ue1';
 _p pushBack '';
 _n pushBack 'T-80UE-1';
-_o pushBack 26500;
+_o pushBack 24500;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -712,39 +759,40 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
 
-//--- OFPS RHS Units blow, TODO setup nested.
-_c pushBack 'ofps_rhs_t80bvk';
-_p pushBack '';
-_n pushBack 'T-80BVK';
-_o pushBack 18750;
-_t pushBack 30;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 10;
+//--- OFPS RHS Vehicles TODO: Created nested or seporate file for them.
 
-_c pushBack 'ofps_rhs_t80ue1';
+_c pushBack 'ofps_rhs_t72bd_tv';	
 _p pushBack '';
-_n pushBack 'T-80UE-1';
-_o pushBack 26500;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 10;
-
-_c pushBack 'ofps_rhs_t72bd_tv';
-_p pushBack '';
-_n pushBack 'T-72B3 (2012)';
+_n pushBack 'T-72B3 (obr 2012g) (ofps)';  
 _o pushBack 12000;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
-_d pushBack 10;
+_d pushBack 0;
 
+_c pushBack 'ofps_rhs_t80bvk';
+_p pushBack '';
+_n pushBack 'T-80BVK (ofps)';  
+_o pushBack 18750;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'ofps_rhs_t80ue1';	
+_p pushBack '';
+_n pushBack 'T-80UE-1 (ofps)';  
+_o pushBack 26500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
 
 //--- Repair Vehicles
+
 _c pushBack 'RHS_Ural_Fuel_MSV_01';
 _p pushBack '';
 _n pushBack 'Ural Fuel Truck';
@@ -786,6 +834,7 @@ _s pushBack "deployable-fob-large";
 _d pushBack 10;
 
 //--- Ammo Vehicles
+
 _c pushBack 'rhs_gaz66_ammo_msv';
 _p pushBack '';
 _n pushBack 'Gaz Ammo Truck';
@@ -797,6 +846,7 @@ _s pushBack "service-ammotruck";
 _d pushBack 10;
 
 //--- Air Vehicles
+
 _c pushBack 'rhs_Mi8AMT_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-8AMT Unarned';
@@ -899,7 +949,6 @@ _d pushBack 10;
 
 // --- Radar Warning Receiver causes microstuttering for all Su-25 and Mi-24s
 
-
 _c pushBack 'RHS_Mi24V_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24 (CAS)';
@@ -909,7 +958,6 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
 
 _c pushBack 'RHS_Mi24V_FAB_vvsc';
 _p pushBack '';
@@ -921,7 +969,6 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-
 _c pushBack 'RHS_Mi24V_UPK23_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V UPK';
@@ -931,7 +978,6 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
 
 _c pushBack 'RHS_Mi24P_vvsc';
 _p pushBack '';
@@ -943,7 +989,6 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-
 _c pushBack 'RHS_Mi24P_CAS_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24P CAS';
@@ -954,7 +999,6 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
 
-
 _c pushBack 'RHS_Mi24V_AT_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V AT';
@@ -964,7 +1008,6 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
-
 
 _c pushBack 'RHS_Mi24P_AT_vvsc';
 _p pushBack '';
@@ -1087,10 +1130,11 @@ _s pushBack "";
 _d pushBack 10;
 
 //--- RHS OFPS Units, TODO: needs to be set up as nested
+
 _c pushBack 'ofps_RHS_Mi24V_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24 (CAS)';
-_o pushBack 30600;
+_o pushBack 27500;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -1100,7 +1144,7 @@ _d pushBack 10;
 _c pushBack 'ofps_RHS_Mi24V_FAB_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V FAB';
-_o pushBack 34000;
+_o pushBack 31000;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -1110,7 +1154,7 @@ _d pushBack 10;
 _c pushBack 'ofps_RHS_Mi24V_AT_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24V AT';
-_o pushBack 47500;
+_o pushBack 45000;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
@@ -1120,7 +1164,7 @@ _d pushBack 10;
 _c pushBack 'ofps_RHS_Mi8AMTSh_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-8AMTSh (6x FFAR)';
-_o pushBack 38250;
+_o pushBack 35000;
 _t pushBack 30;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
@@ -1130,7 +1174,7 @@ _d pushBack 10;
 _c pushBack 'ofps_RHS_Mi8AMTSh_UPK23_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-8AMTSh UPK (2x 23mm/4x FFAR)';
-_o pushBack 24000;
+_o pushBack 19000;
 _t pushBack 30;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
@@ -1170,7 +1214,7 @@ _d pushBack 10;
 _c pushBack 'ofps_RHS_Ka52_UPK23_vvsc';
 _p pushBack '';
 _n pushBack 'Ka-52 UPK';
-_o pushBack 55000;
+_o pushBack 52500;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
