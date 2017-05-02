@@ -1,7 +1,19 @@
-**Upcoming release**
+**1.07**
 Added: Delay before statics can rearm from ammo fac (60 sec)
 Added: Base repair (After factory dies you have 10 min to repair)
-Tweaked: Statics engagement distance
+Tweaked: AI view distance is syned to max player distance
+Tweaked: Base AT statics skill adjusted
+Tweaked: Nuke performance tweaks
+Tweaked: Base damage will now be more accurate, AF is still pos.
+Tweaked: rpg42 ammo tier
+Tweaked: LF rhs med trucks with vanilla (to prevent respawn bug)
+Tweaked: Mk19/AGS30 to BD1
+Tweaked: Stinger/Djigit to BD2
+Tweaked: AA Defense to BD3
+Tweaked: D30 to BD2
+Removed: AT statics from repair truck
+Removed: Mortars from base defense
+Removed: KORD/Kornet
 
 **1.06.9**
 Fixed: On teamswap player wont loose original gear hopefully
