@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID","_health", "_var", "_variable", "_virtual_damages","_ruins","_fobtype","_health"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID","_health", "_var", "_variable", "_virtual_damages","_ruins","_fobtype","_health","_lastdamagetime", "_lastdamagediff"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -52,6 +52,12 @@ _ruins = _this select 10 select 0;
 _fobtype = _this select 11 select 0;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 //_logic = (_side) call CTI_CO_FNC_GetSideLogic; // this line isn't needed? - ProtossMaaster
+
+//check for last damage time
+_lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
+_lastdamagediff = time - _lastdamagetime;
+_damaged setVariable ["cti_damage_lastdamaged", time];
+if (_lastdamagediff < 1) exitWith {0};
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
@@ -72,34 +78,42 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 //--- Tanks
 if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
+	if (_damage > CTI_BASE_DAMAGE_MAX_SHELL) then {_damage = CTI_BASE_DAMAGE_MAX_SHELL};
 };
 //--- Arty (Has to be Spesific as tanks use same basecore)
 if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo isKindOf "R_230mm_fly") || (_ammo isKindOf "Mo_cluster_AP") || (_ammo isKindof "ArtilleryRocketCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
+	if (_damage > CTI_BASE_DAMAGE_MAX_ARTY) then {_damage = CTI_BASE_DAMAGE_MAX_ARTY};
 };
 //--- Satchels
 if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
+	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
 };
 //--- HE Cannons
 if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
+	if (_damage > CTI_BASE_DAMAGE_MAX_CANNON) then {_damage = CTI_BASE_DAMAGE_MAX_CANNON};
 };
 //--- Missiles
 if ((_ammo isKindOf "MissileCore") || (_ammo isKindOf "MissileBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
+	if (_damage > CTI_BASE_DAMAGE_MAX_MISSLE) then {_damage = CTI_BASE_DAMAGE_MAX_MISSLE};
 };
 //--- Explosions
 if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (_ammo isKindOf "HelicopterExploSmall") || (_ammo isKindOf "HelicopterExploBig")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
+	if (_damage > CTI_BASE_DAMAGE_MAX_FUEL) then {_damage = CTI_BASE_DAMAGE_MAX_FUEL};
 };
 //--- Rockets
 if (_ammo isKindOf "RocketCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
+	if (_damage > CTI_BASE_DAMAGE_MAX_ROCKETS) then {_damage = CTI_BASE_DAMAGE_MAX_ROCKETS};
 };
 //--- Bombs
 if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo isKindOf "MineCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
+	if (_damage > CTI_BASE_DAMAGE_MAX_BOMB) then {_damage = CTI_BASE_DAMAGE_MAX_BOMB};
 };
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {

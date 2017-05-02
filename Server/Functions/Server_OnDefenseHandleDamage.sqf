@@ -42,7 +42,6 @@ _reduce_damages = _this select 5;
 _variable = _this select 6;
 _position = _this select 7;
 _multiply_damages = _this select 8;
-
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 //Base Health Upgrade
