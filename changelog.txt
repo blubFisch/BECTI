@@ -1,7 +1,8 @@
 **1.07**
 Added: Delay before statics can rearm from ammo fac (60 sec)
 Added: Base repair (After factory dies you have 10 min to repair)
-Tweaked: AI view distance is syned to max player distance
+Tweaked: Economy (Smaller towns will get higher pay per cycle, dropped rewards down by 15%)
+Tweaked: AI view distance is synced to max player distance
 Tweaked: Base AT statics skill adjusted
 Tweaked: Nuke performance tweaks
 Tweaked: Base damage will now be more accurate, AF is still pos.
