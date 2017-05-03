@@ -275,7 +275,7 @@ CTI_UPGRADE_BASE_HEALTH = 21;
 CTI_UPGRADE_BASE_DEFENSES = 22;
 
 //--- Supply
-CTI_UPGRADE_CST_SUPPLY_COEF = [1, 2, 3, 4]; //--- Supply coefficient (Default * upgrade)
+CTI_UPGRADE_CST_SUPPLY_COEF = [1, 1.25, 1.50, 1.85]; //--- Supply coefficient (Default * upgrade)
 CTI_UPGRADE_BARRACKS_SKILL = [40, 55, 70, 85, 100]; //--- Factory health upgrade damage reduce multipliers
 
 //-----------------------------------------------------------------------------------------------------------------------//
@@ -365,7 +365,7 @@ CTI_TOWNS_CAMPS_CAPTURE_BOUNTY = 500; //--- Bounty value
 CTI_TOWNS_CAMPS_CAPTURE_BOUNTY_DELAY = 300; //--- Award the bounty depending if the last camp capture happened longer than x seconds ago
 
 //--- Towns: Capture
-CTI_TOWNS_CAPTURE_BOUNTY_COEF = 100; //--- Bounty coefficient upon capture, (max sv * coefficient)
+CTI_TOWNS_CAPTURE_BOUNTY_COEF = 80; //--- Bounty coefficient upon capture, (max sv * coefficient)
 CTI_TOWNS_CAPTURE_BOUNTY_DELAY = 600; //--- Award the bounty depending if the last town capture happened longer than x seconds ago
 CTI_TOWNS_CAPTURE_DELETE_FORCES = 1; //--- Determine whether the resistance or occupation forces should be removed upon town capture or not (0: Disabled, 1: West & East, 2: All)
 CTI_TOWNS_CAPTURE_DETECTION_MODE = 1; //--- Determine the towns detection mode (0: All, 1: Players, 2: Playable units)
@@ -385,24 +385,23 @@ CTI_TOWNS_DEPOT_BUILD_DISTANCE = 15; //--- Determine how far a unit/vehicle will
 CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_green_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
-//--- Towns: Economy Based on Island
-switch (toLower(worldName)) do {
-	//--- Small Islands
-	case "stratis": {CTI_TOWNS_INCOME_RATIO = 10.0};
-	case "takistan": {CTI_TOWNS_INCOME_RATIO = 8.0};
-	case "isladuala3": {CTI_TOWNS_INCOME_RATIO = 7.0};
+//--- Towns: Economy
 
-	//--- Medium Islands
-	case "chernarus": {CTI_TOWNS_INCOME_RATIO = 7.0};
+//--- Economy delay Based on Island, Enabled when Auto mode selcted in Parameters
+if (CTI_ECONOMY_INCOME_CYCLE == 0) then {
+	switch (toLower(worldName)) do {
+		case "stratis": {CTI_ECONOMY_INCOME_CYCLE = 50};
+		case "takistan": {CTI_ECONOMY_INCOME_CYCLE = 55};
+		case "isladuala3": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		case "chernarus": {CTI_ECONOMY_INCOME_CYCLE = 65};
+		case "altis": { CTI_ECONOMY_INCOME_CYCLE = 75};
+		case "tanoa": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		case "napf": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		default {CTI_ECONOMY_INCOME_CYCLE = 65};
+	};
+};
 
-	//--- Big Islands
-	case "altis": { CTI_TOWNS_INCOME_RATIO = 6.0 };
-	case "tanoa": {CTI_TOWNS_INCOME_RATIO = 6.0};
-	case "napf": {CTI_TOWNS_INCOME_RATIO = 6.0};
-
-	//--- Islands not specified
-	default {CTI_TOWNS_INCOME_RATIO = 6.0};
-};	 
+CTI_TOWNS_INCOME_RATIO = 7.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio) 
 
 CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an unoccupied town bring to the side.
 
@@ -694,7 +693,7 @@ CTI_ARTILLERY_FILTER = 1; //--- Toggle artillery magazines like mines and AT min
 CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 
 CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
-CTI_BOUNTY_COEF_PVP = 1.2; //--- Bounty coefficient multiplicator based on the killed unit score
+CTI_BOUNTY_COEF_PVP = 1; //--- Bounty coefficient multiplicator based on the killed unit score
 
 CTI_COIN_AREA_DEFAULT = [30, 10];
 CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
@@ -942,7 +941,7 @@ with missionNamespace do {
 
 	if (isNil 'CTI_ARTILLERY_SETUP') then {CTI_ARTILLERY_SETUP = 0}; //--- Artillery status (-2: Disabled, -1: Artillery Computer, 0: Short, 1: Medium, 2: Long, 3: Far)
 
-	if (isNil 'CTI_ECONOMY_INCOME_CYCLE') then {CTI_ECONOMY_INCOME_CYCLE = 60};
+	if (isNil 'CTI_ECONOMY_INCOME_CYCLE') then {CTI_ECONOMY_INCOME_CYCLE = 65};
 
 	CTI_ECONOMY_POOL_AWARD_PERCENTAGE_WEST = 0.1;
 	CTI_ECONOMY_POOL_AWARD_PERCENTAGE_EAST = 0.1;
