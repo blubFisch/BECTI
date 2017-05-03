@@ -385,8 +385,25 @@ CTI_TOWNS_DEPOT_BUILD_DISTANCE = 15; //--- Determine how far a unit/vehicle will
 CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_green_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
-//--- Towns: Economy
-CTI_TOWNS_INCOME_RATIO = 8.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio)
+//--- Towns: Economy Based on Island
+switch (toLower(worldName)) do {
+	//--- Small Islands
+	case "stratis": {CTI_TOWNS_INCOME_RATIO = 10.0};
+	case "takistan": {CTI_TOWNS_INCOME_RATIO = 8.0};
+	case "isladuala3": {CTI_TOWNS_INCOME_RATIO = 7.0};
+
+	//--- Medium Islands
+	case "chernarus": {CTI_TOWNS_INCOME_RATIO = 7.0};
+
+	//--- Big Islands
+	case "altis": { CTI_TOWNS_INCOME_RATIO = 6.0 };
+	case "tanoa": {CTI_TOWNS_INCOME_RATIO = 6.0};
+	case "napf": {CTI_TOWNS_INCOME_RATIO = 6.0};
+
+	//--- Islands not specified
+	default {CTI_TOWNS_INCOME_RATIO = 6.0};
+};	 
+
 CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an unoccupied town bring to the side.
 
 //--- Towns: Markers
@@ -685,7 +702,7 @@ CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- To incrase build area when mobile
 CTI_COIN_AREA_REPAIR = [45, 10];
 CTI_COIN_AREA_DEFENSE = [30, 6];
 
-CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 30; //--- Keep values of 10
+CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 40; //--- Keep values of 10
 
 CTI_MARKERS_OPACITY = 0.3;
 CTI_MARKERS_TOWN_AREA_RANGE = 320;
