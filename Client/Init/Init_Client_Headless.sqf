@@ -1,6 +1,9 @@
-//--- HC View Distance
-setViewDistance 5000;
-setObjectViewDistance 5000;
+//--- Headless View Distance
+//--- Synced to Player View Distance + Extra to compensate for slow AI  
+_hcVD = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
+_hcVDcomp = _hcVD + 500;
+setViewDistance _hcVDcomp;
+setObjectViewDistance _hcVDcomp;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FILE: Client\Init\Init_Client_Headless.sqf", "Waiting for the Headless Client stabilization before sending the register request"] call CTI_CO_FNC_Log };
 
@@ -78,37 +81,38 @@ with missionNamespace do {
 		_ai assignAsGunner _static;
 		[_ai] orderGetIn true;
 		_ai moveInGunner _static;
-
-		// TODO: deduplicate code (Server_HandleStaticDefenses.sqf)
-		// TODO: proper/extensible vehicle switch
 		
-/*		//--- Configure the weapon / gunner
-		if (typeOf(_static) find "POOK_ANMPQ53_B" == 0 || typeOf(_static) find "POOK_ANMPQ53_O" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery_B" == 0 || typeOf(_static) find "pook_MIM104_PAC2Battery_O" == 0) then {
-			_ai disableAI "AUTOTARGET";
-			_ai disableAI "TARGET";
-		} else {*/
-			//--- Change Skill
-			_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
-			_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
-			_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
-			_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
-			_ai setSkill ["spotDistance", 1]; // Set detection distance
-			_ai setSkill ["spotTime", 1]; // Set detection time
-			_ai setSkill ["courage", 1]; // Never retreat
-			_ai setSkill ["commanding", 1]; // Communication skills
-			_ai setSkill ["general", 1]; //Sets all above
+		//--- Exception for AT statics to be less aggressive    
 
-			//--- Update the gunner's properties every 60 seconds to fix them going into hold fire mode
-			_ai spawn {
-				while {alive _this} do {
-					_this setBehaviour "AWARE";
-					_this setCombatMode "RED";
-					_this enableAttack true;
-					_this allowFleeing 0;
-					sleep 60;
-				};
-			};
+		//--- Change Skill for rest of the statics
+		_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
+		_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
+		_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
+		_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
+		_ai setSkill ["spotDistance", 1]; // Set detection distance
+		_ai setSkill ["spotTime", 1]; // Set detection time
+		_ai setSkill ["courage", 1]; // Never retreat
+		_ai setSkill ["commanding", 1]; // Communication skills
+		_ai setSkill ["general", 1]; //Sets all above
+
+		//--- Exception for AT statics to be less aggressive  
+		if (_static isKindOf "AT_01_base_F" || _static isKindOf "rhs_d30_at_msv") then {
+			_ai setSkill ["aimingAccuracy", 0.8]; // Set accuracy
+			_ai setSkill ["aimingShake", 0.5]; // Set weapon sway handling
+			_ai setSkill ["aimingSpeed", 0.5]; // Set aiming speed
+			_ai setSkill ["reloadSpeed", 0.8]; // Max out reload speed
+			_ai setSkill ["spotDistance", 0.65]; // Set detection distance = 2600m
+			_ai setSkill ["spotTime", 0.5]; // Set detection time
+			_ai setSkill ["courage", 1]; // Never retreat
+			_ai setSkill ["commanding", 1]; // Communication skills		
+			/*_ai setSkill ["general", 0.8]; //Sets all above*/
 		};
+
+		//--- Set to Combat
+		_ai setBehaviour "AWARE";
+		_ai setCombatMode "RED";
+		_ai setSpeedMode "FULL";
+		_ai enableAttack true;
 
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FUNCTION: CTI_PVF_HC_OnDefenseDelegationReceived", format["An AI [%1] has been created on the HC to man static [%2 (%3)]", _ai, _static, typeOf _static]] call CTI_CO_FNC_Log;

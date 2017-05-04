@@ -3,7 +3,7 @@ private ["_xpos", "_ypos"];
 _xpos = _this select 0;
 _ypos = _this select 1;
 
-if ( [_xpos, _ypos, 0] distance player < (radiation_radius * 0.7) ) then
+if ( [_xpos, _ypos, 0] distance player < (blast_wave_radius * 1) ) then
 {
   0 faderadio 0.3;
   0 fadesound 0.3;

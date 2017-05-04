@@ -11,10 +11,8 @@ sleep 3;
 
 _bomb = "Land_HelipadEmpty_F" createvehicle _pos;
 _bomb allowdammage false;
-_bomb say [CTI_SOUND_nuclear_boom, radiation_radius * 2.9];
-
-playsound CTI_SOUND_nuclear_boom;
-
+//[_bomb,CTI_SOUND_nuke, blast_wave_radius * 2] call CTI_CO_FNC_Say3D;
+[_bomb,CTI_SOUND_nuclear_boom, blast_wave_radius * 2] call CTI_CO_FNC_Say3D;
 
 enableCamShake true;
 addCamShake [5, 20, 10];

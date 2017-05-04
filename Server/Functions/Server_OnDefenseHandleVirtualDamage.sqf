@@ -36,7 +36,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health"];
+private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health","_lastdamagetime", "_lastdamagediff"];
 
 _damaged = _this select 0;
 _damage = _this select 1;
@@ -52,17 +52,26 @@ _multiply_damages = _this select 9;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
+//check for last damage time
+_lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
+_lastdamagediff = time - _lastdamagetime;
+_damaged setVariable ["cti_damage_lastdamaged", time];
+if (_lastdamagediff <= 0.1) exitWith {0};
+
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
 _baseratio = 1;
-switch (_upgrade_basehealth) do {
-	case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
-	case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
-	case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
-	case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
-	case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+//--- Base Health Upgrade
+if (CTI_BASE_HEALTH_UPGRADE > 0) then {
+	switch (_upgrade_basehealth) do {
+		case 0: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 0;};
+		case 1: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 1;};
+		case 2: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 2;};
+		case 3: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 3;};
+		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
+	};
 };
 //Adjust damage for ammo types
 //--- Tanks

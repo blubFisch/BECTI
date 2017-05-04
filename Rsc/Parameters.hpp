@@ -28,13 +28,13 @@ class Params {
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Apex","CUP","RHS"};
 		default = 3;
-	};
+	};	
 	class SEPARATOR0 {
-		title = "========================== INCOME ============================";
+		title = "========================== BASES ============================";
 		values[] = {1};
 		texts[] = {""};
 		default = 1;
-	};
+	};	
 	class CTI_BASE_AREA_MAX {
 		title = "BASE: Areas";
 		values[] = {1,2,3,4,5};
@@ -47,6 +47,12 @@ class Params {
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_BASE_HEALTH_UPGRADE {
+		title = "BASE: Enable Base Health Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};		
 	class CTI_BASE_FOB_MAX {
 		title = "BASE: FOB Limit";
 		values[] = {0,1,2,3,4,5,6,7,8,9,10};
@@ -73,9 +79,9 @@ class Params {
 	};
 	class CTI_ECONOMY_INCOME_CYCLE {
 		title = "INCOME: Delay";
-		values[] = {30,35,40,45,50,55,60,65,70,75,80};
-		texts[] = {"30 Seconds","35 Seconds","40 Seconds","45 Seconds","50 Seconds","55 Seconds","01:00 Minutes","01:05 Minutes","01:10 Minutes","01:15 Minutes"};
-		default = 55;
+		values[] = {0,30,35,40,45,50,55,60,65,70,75};
+		texts[] = {"Auto","30 Seconds","35 Seconds","40 Seconds","45 Seconds","50 Seconds","55 Seconds","01:00 Minutes","01:05 Minutes","01:10 Minutes","01:15 Minutes"};
+		default = 0;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST_COMMANDER {
 		title = "INCOME: Starting Funds (East Commander)";

@@ -538,7 +538,7 @@ _d pushBack 0;
 _c pushBack 'O_Truck_03_medical_F';
 _p pushBack '';
 _n pushBack (format ["0- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 4500;
+_o pushBack 6000;
 _t pushBack 20;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;

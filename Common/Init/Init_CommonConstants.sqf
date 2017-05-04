@@ -275,7 +275,7 @@ CTI_UPGRADE_BASE_HEALTH = 21;
 CTI_UPGRADE_BASE_DEFENSES = 22;
 
 //--- Supply
-CTI_UPGRADE_CST_SUPPLY_COEF = [1, 2, 3, 4]; //--- Supply coefficient (Default * upgrade)
+CTI_UPGRADE_CST_SUPPLY_COEF = [1, 1.25, 1.50, 1.85]; //--- Supply coefficient (Default * upgrade)
 CTI_UPGRADE_BARRACKS_SKILL = [40, 55, 70, 85, 100]; //--- Factory health upgrade damage reduce multipliers
 
 //-----------------------------------------------------------------------------------------------------------------------//
@@ -365,7 +365,7 @@ CTI_TOWNS_CAMPS_CAPTURE_BOUNTY = 500; //--- Bounty value
 CTI_TOWNS_CAMPS_CAPTURE_BOUNTY_DELAY = 300; //--- Award the bounty depending if the last camp capture happened longer than x seconds ago
 
 //--- Towns: Capture
-CTI_TOWNS_CAPTURE_BOUNTY_COEF = 100; //--- Bounty coefficient upon capture, (max sv * coefficient)
+CTI_TOWNS_CAPTURE_BOUNTY_COEF = 80; //--- Bounty coefficient upon capture, (max sv * coefficient)
 CTI_TOWNS_CAPTURE_BOUNTY_DELAY = 600; //--- Award the bounty depending if the last town capture happened longer than x seconds ago
 CTI_TOWNS_CAPTURE_DELETE_FORCES = 1; //--- Determine whether the resistance or occupation forces should be removed upon town capture or not (0: Disabled, 1: West & East, 2: All)
 CTI_TOWNS_CAPTURE_DETECTION_MODE = 1; //--- Determine the towns detection mode (0: All, 1: Players, 2: Playable units)
@@ -386,7 +386,23 @@ CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_gree
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
 //--- Towns: Economy
-CTI_TOWNS_INCOME_RATIO = 8.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio)
+
+//--- Economy delay Based on Island, Enabled when Auto mode selcted in Parameters
+if (CTI_ECONOMY_INCOME_CYCLE == 0) then {
+	switch (toLower(worldName)) do {
+		case "stratis": {CTI_ECONOMY_INCOME_CYCLE = 50};
+		case "takistan": {CTI_ECONOMY_INCOME_CYCLE = 55};
+		case "isladuala3": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		case "chernarus": {CTI_ECONOMY_INCOME_CYCLE = 65};
+		case "altis": { CTI_ECONOMY_INCOME_CYCLE = 75};
+		case "tanoa": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		case "napf": {CTI_ECONOMY_INCOME_CYCLE = 80};
+		default {CTI_ECONOMY_INCOME_CYCLE = 65};
+	};
+};
+
+CTI_TOWNS_INCOME_RATIO = 7.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio) 
+
 CTI_TOWNS_INCOME_UNOCCUPIED_PERCENTAGE = 1.00; //--- Determine how much value an unoccupied town bring to the side.
 
 //--- Towns: Markers
@@ -522,6 +538,7 @@ CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at whic
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
 CTI_BASE_DEFENSES_SOLD_COEF = 0.50; //--- The player will get a fund return based on the defense price * coef when a defense is sold
+CTI_BASE_DEFENSES_AUTO_REARM_DELAY = 60; //--- Time delay between auto reloads
 
 //--- Base: HQ
 CTI_BASE_HQ_BOUNTY = 2.50; //--- The bounty awarded upon HQ destruction
@@ -540,6 +557,8 @@ CTI_TOWNS_LARGE_FOB_CLASSNAME = ["Land_BagBunker_Large_F", "WarfareBDepot"]; //-
 CTI_TOWNS_LARGE_FOB_RANGE = 40; //--- Determine how far a player needs to be from a Large FOB in order to use it
 
 //--- Base: Misc
+CTI_BASE_MARKER_DESTROYED_COLOR = "ColorBlack"; //--- A destroyed structure will have this color upon destruction
+CTI_BASE_MARKER_DESTROYED_DELAY = CTI_BASE_CONSTRUCTION_DECAY_TIMEOUT; //--- A destroyed structure will remain on the map x seconds
 CTI_BASE_NOOBPROTECTION = 1; //--- Make structures invulnerable to friendly fire
 CTI_BASE_HEALTH_MULTIPLIER = [1, 1.25, 1.5, 1.75, 2]; //--- Factory health upgrade damage reduce multipliers
 CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for player shooting enemy structure showing current building health. Also displays hint to the structure's friendly team showing base health, position, and name of structure
@@ -547,14 +566,24 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 //--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2;//--- Tanks
-CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 0.4;//--- Arty
-CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 0.4;//--- Satchels
-CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.1;//--- HE Cannons
-CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 2;//--- Missiles from helis and others
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 1;//--- Arty
+CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 1;//--- Satchels
+CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.3;//--- HE Cannons
+CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
-CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 0.4;//--- Rockets
-CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 0.4;//--- Bombs
+CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 1;//--- Rockets
+CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;//--- Bombs
+
+//--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
+CTI_BASE_DAMAGE_MAX_SHELL = 0.1;//--- Tanks
+CTI_BASE_DAMAGE_MAX_ARTY = 0.1;//--- Arty
+CTI_BASE_DAMAGE_MAX_SATCHEL = 0.5;//--- Satchels
+CTI_BASE_DAMAGE_MAX_CANNON = 0.1;//--- HE Cannons
+CTI_BASE_DAMAGE_MAX_MISSLE = 0.1;//--- Missiles from helis and others
+CTI_BASE_DAMAGE_MAX_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
+CTI_BASE_DAMAGE_MAX_ROCKETS = 0.1;//--- Rockets
+CTI_BASE_DAMAGE_MAX_BOMB = 0.5;//--- Bombs
 
 //--- Base: Purchase range
 CTI_BASE_GEAR_FOB_RANGE = 4; //--- Determine how far a player has to be from a FOB to access the Gear Menu
@@ -577,8 +606,9 @@ CTI_BASE_WORKERS_WANDER_RANGE_MAX = 225; //--- Worker may wander no further than
 
 //--- Base: Parameters
 with missionNamespace do {
+	if (isNil 'CTI_BASE_HEALTH_UPGRADE') then {CTI_BASE_HEALTH_UPGRADE = 1}; //--- Enable Base Health Upgrade - see above for values : CTI_BASE_HEALTH_MULTIPLIER
 	if (isNil 'CTI_BASE_AREA_MAX') then {CTI_BASE_AREA_MAX = 2}; //--- Amount of base areas which may be built
-	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 0}; //--- Construction mode to use for structures (0: Timed, 1: Workers)
+	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 2}; //--- Construction mode to use for structures (0: Timed, 1: Workers, 2: Timed + Repairs)
 	if (isNil 'CTI_BASE_FOB_MAX') then {CTI_BASE_FOB_MAX = 2}; //--- Maximum amount of FOBs which a side may place
 	if (isNil 'CTI_BASE_LARGE_FOB_MAX') then {CTI_BASE_LARGE_FOB_MAX = 2}; //--- Maximum amount of Large FOBs which a side may place
 	if (isNil 'CTI_BASE_HQ_REPAIR') then {CTI_BASE_HQ_REPAIR = 1}; //--- Determine whether the HQ can be repaired or not
@@ -663,7 +693,7 @@ CTI_ARTILLERY_FILTER = 1; //--- Toggle artillery magazines like mines and AT min
 CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 
 CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
-CTI_BOUNTY_COEF_PVP = 1.2; //--- Bounty coefficient multiplicator based on the killed unit score
+CTI_BOUNTY_COEF_PVP = 1; //--- Bounty coefficient multiplicator based on the killed unit score
 
 CTI_COIN_AREA_DEFAULT = [30, 10];
 CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
@@ -671,7 +701,7 @@ CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- To incrase build area when mobile
 CTI_COIN_AREA_REPAIR = [45, 10];
 CTI_COIN_AREA_DEFENSE = [30, 6];
 
-CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 30; //--- Keep values of 10
+CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 40; //--- Keep values of 10
 
 CTI_MARKERS_OPACITY = 0.3;
 CTI_MARKERS_TOWN_AREA_RANGE = 320;
@@ -911,7 +941,7 @@ with missionNamespace do {
 
 	if (isNil 'CTI_ARTILLERY_SETUP') then {CTI_ARTILLERY_SETUP = 0}; //--- Artillery status (-2: Disabled, -1: Artillery Computer, 0: Short, 1: Medium, 2: Long, 3: Far)
 
-	if (isNil 'CTI_ECONOMY_INCOME_CYCLE') then {CTI_ECONOMY_INCOME_CYCLE = 60};
+	if (isNil 'CTI_ECONOMY_INCOME_CYCLE') then {CTI_ECONOMY_INCOME_CYCLE = 65};
 
 	CTI_ECONOMY_POOL_AWARD_PERCENTAGE_WEST = 0.1;
 	CTI_ECONOMY_POOL_AWARD_PERCENTAGE_EAST = 0.1;

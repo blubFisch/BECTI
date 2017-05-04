@@ -4,7 +4,7 @@ _xpos = _this select 0;
 _ypos = _this select 1;
 _blast_time = _this select 2;
 
-_all_radius = radiation_radius * 1.3;
+_all_radius = radiation_radius * 1.5;
 _radius = _all_radius;
 _v = _radius / (2 * main_nuclear_half_life);
 
