@@ -82,7 +82,7 @@ if (_iscomposition) then {
 	_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
 	{	
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense
-			if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_x setVariable ["cti_aman_enabled", true]};
+			if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {_x setVariable ["cti_aman_enabled", true]};
 		};
 		_x setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 		_x call CTI_CO_FNC_UnitCreated;
