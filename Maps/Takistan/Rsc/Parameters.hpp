@@ -69,7 +69,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 9000;
+		default = 8000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -334,12 +334,12 @@ class Params {
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
 		default = 2;
-	};	
+	};
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_VEHICLES_LVOSS {
 		title = "VEHICLES: Enable LVOSS";
@@ -363,7 +363,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = 1;
+		default = -1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";

@@ -1,5 +1,10 @@
-upcomming release
+upcoming release
 Fixed: Fob damage and tweaked base damage for titan ammo
+Tweaked: Upgrade test descriptions
+Tweaked: Enabled Arty Computer
+Tweaked: Spawn distance on Napf
+Tweaked: Paramter file for Isladula was old
+Tweaked: Base static AT spot range dropped by 15%
 
 **1.07**
 Added: Delay before statics can rearm from ammo fac (60 sec)

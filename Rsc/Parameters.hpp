@@ -363,7 +363,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = 1;
+		default = -1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";

@@ -101,7 +101,7 @@ with missionNamespace do {
 			_ai setSkill ["aimingShake", 0.5]; // Set weapon sway handling
 			_ai setSkill ["aimingSpeed", 0.5]; // Set aiming speed
 			_ai setSkill ["reloadSpeed", 0.8]; // Max out reload speed
-			_ai setSkill ["spotDistance", 0.65]; // Set detection distance = 2600m
+			_ai setSkill ["spotDistance", 0.5]; // Set detection distance = 2600m
 			_ai setSkill ["spotTime", 0.5]; // Set detection time
 			_ai setSkill ["courage", 1]; // Never retreat
 			_ai setSkill ["commanding", 1]; // Communication skills		
