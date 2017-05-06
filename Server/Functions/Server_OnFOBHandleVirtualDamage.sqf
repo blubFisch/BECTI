@@ -109,7 +109,7 @@ if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (
 	if (_damage > CTI_BASE_DAMAGE_MAX_FUEL) then {_damage = CTI_BASE_DAMAGE_MAX_FUEL};
 };
 //--- Rockets
-if ((_ammo isKindOf "RocketCore") || (_ammo isKindOf "M_Titan_AT") || (_ammo isKindOf "M_Titan_AP") || (_ammo isKindOf "M_Titan_AA") then {
+if ((_ammo isKindOf "RocketCore") || (_ammo isKindOf "M_Titan_AT") || (_ammo isKindOf "M_Titan_AP") || (_ammo isKindOf "M_Titan_AA")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
 	if (_damage > CTI_BASE_DAMAGE_MAX_ROCKETS) then {_damage = CTI_BASE_DAMAGE_MAX_ROCKETS};
 };

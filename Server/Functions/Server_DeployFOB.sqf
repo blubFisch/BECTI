@@ -41,7 +41,7 @@ _damagemult = 0;
 switch (_fobtype) do {
 	case "small": {
 		_structure = _fobclass createVehicle _position;
-		_structure setPosATL _position;
+		_structure setPos _position;
 		_structure setVectorUp [0,0,0];
 		(_structure) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
 		_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") + [_structure], true];
@@ -52,7 +52,7 @@ switch (_fobtype) do {
 	};
 	case "large": {
 		_structure = _fobclass createVehicle _position;
-		_structure setPosATL _position;
+		_structure setPos _position;
 		_structure setVectorUp [0,0,0];
 		_structure setVariable ["cti_large_fob", [],true];
 		(_structure) remoteExec ["CTI_PVF_CLT_OnLargeFOBDeployment", _side];
