@@ -57,7 +57,7 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
 _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
-if (_lastdamagediff < 1) exitWith {0};
+if (_lastdamagediff <= 0.1) exitWith {0};
 
 if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
