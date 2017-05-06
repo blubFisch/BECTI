@@ -1,3 +1,6 @@
+upcomming release
+Fixed: Fob damage and tweaked base damage for titan ammo
+
 **1.07**
 Added: Delay before statics can rearm from ammo fac (60 sec)
 Added: Base repair (After factory dies you have 10 min to repair)
