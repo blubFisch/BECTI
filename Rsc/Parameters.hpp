@@ -151,19 +151,19 @@ class Params {
 	};
 	class CTI_TOWNS_OCCUPATION_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Forces";
-		values[] = {0,1,2,3,4,5,6,7,8,9};
+		values[] = {0,1,2,3,4,5,6,7};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","Syndikat Paramilitary - APEX","ION PMC - CUP","NAPA Chernarus - CUP","Royal Army Corp Of Sahrani - CUP","Takistani Military - CUP","GREF - RHS"};
 		default = 9;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
-		values[] = {0,1,2,3,4,5};
+		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","Russians - RHS"};
 		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
-		values[] = {0,1,2,3,4,5};
+		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Pacific Special Forces - APEX","Russians - CUP","Russians - RHS"};
 		default = 5;
 	};
