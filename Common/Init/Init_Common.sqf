@@ -340,10 +340,10 @@ if (CTI_FACTION_MODE == 2) then {
 		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_AFRF_East.sqf";
 	};
 	if (CTI_RHS_GREF_ADDON > 0) then { 
-		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_GREF.sqf";
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_GREF_Resistance.sqf";
 	};
 	if (CTI_RHS_SAF_ADDON > 0) then { 
-		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_SAF.sqf";
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_SAF_Resistance.sqf";
 	};
 	if (CTI_RHS_USAF_ADDON > 0) then { 
 		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_USAF_West.sqf";
