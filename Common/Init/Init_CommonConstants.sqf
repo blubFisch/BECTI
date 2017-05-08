@@ -906,9 +906,11 @@ if (OFPS_Core_Loaded) then {
 
 with missionNamespace do {
 
+	if (isNil 'CTI_FACTION_MODE') then {CTI_FACTION_MODE = 0};
 	if (isNil 'CTI_FACTION_WEST') then {CTI_FACTION_WEST = 0};
 	if (isNil 'CTI_FACTION_EAST') then {CTI_FACTION_EAST = 0};
 	
+	if (isNil 'CTI_FACTION_DEFAULT_BASE') then {CTI_FACTION_DEFAULT_BASE = 0};
 	if (isNil 'CTI_FACTION_DEFAULT_VEHICLES') then {CTI_FACTION_DEFAULT_VEHICLES = 0};
 	if (isNil 'CTI_FACTION_DEFAULT_GEAR') then {CTI_FACTION_DEFAULT_GEAR = 0};
 	if (isNil 'CTI_FACTION_DEFAULT_TROOPS') then {CTI_FACTION_DEFAULT_TROOPS = 0};
@@ -991,16 +993,34 @@ with missionNamespace do {
 	if (isNil 'CTI_WEATHER_WAVES_COEF') then {CTI_WEATHER_WAVES_COEF = -1};
 	if (isNil 'CTI_WEATHER_VARIANCE_TIME') then {CTI_WEATHER_VARIANCE_TIME = -1};
 	if (isNil 'CTI_WEATHER_STORM_TIME') then {CTI_WEATHER_STORM_TIME = -1};
-
-	if (isNil 'CTI_APEX_ADDON') then {CTI_APEX_ADDON = 1};
-	if (isNil 'CTI_CUP_ADDON') then {CTI_CUP_ADDON = 1};
+	
+	if (isNil 'CTI_VANILLA_ADDON') then {CTI_VANILLA_ADDON = 0};
+	if (isNil 'CTI_HELI_ADDON') then {CTI_HELI_ADDON = 0};
+	if (isNil 'CTI_MARKSMEN_ADDON') then {CTI_MARKSMEN_ADDON = 0};
+	if (isNil 'CTI_APEX_ADDON') then {CTI_APEX_ADDON = 0};
+	if (isNil 'CTI_JETS_ADDON') then {CTI_JETS_ADDON = 0};
+	if (isNil 'CTI_TANKS_ADDON') then {CTI_TANKS_ADDON = 0};
+	if (isNil 'CTI_OFPS_CORE_ADDON') then {CTI_OFPS_CORE_ADDON = 0};
+	if (isNil 'CTI_OFPS_UNITS_ADDON') then {CTI_OFPS_UNITS_ADDON = 0};
+	if (isNil 'CTI_OFPS_RHS_ADDON') then {CTI_OFPS_RHS_ADDON = 0};
+	if (isNil 'CTI_OFPS_CUP_ADDON') then {CTI_OFPS_CUP_ADDON = 0};
+	if (isNil 'CTI_CUP_UNITS_ADDON') then {CTI_CUP_UNITS_ADDON = 0};
+	if (isNil 'CTI_CUP_VEHICLES_ADDON') then {CTI_CUP_VEHICLES_ADDON = 0};
+	if (isNil 'CTI_CUP_WEAPONS_ADDON') then {CTI_CUP_WEAPONS_ADDON = 0};
 	if (isNil 'CTI_CUP_CORE_ADDON') then {CTI_CUP_CORE_ADDON = 0};
-	if (isNil 'CTI_OFPS_ADDON') then {CTI_OFPS_ADDON = 1};
-	if (isNil 'CTI_RHS_ADDON') then {CTI_RHS_ADDON = 0};
-
-	if (isNil 'CTI_DEV_MODE') then {CTI_DEV_MODE = 0};
+	if (isNil 'CTI_CUP_TERRAINS_ADDON') then {CTI_CUP_TERRAINS_ADDON = 0};
+	if (isNil 'CTI_RHS_AFRF_ADDON') then {CTI_RHS_AFRF_ADDON = 0};
+	if (isNil 'CTI_RHS_GREF_ADDON') then {CTI_RHS_GREF_ADDON = 0};
+	if (isNil 'CTI_RHS_SAF_ADDON') then {CTI_RHS_SAF_ADDON = 0};
+	if (isNil 'CTI_RHS_USAF_ADDON') then {CTI_RHS_USAF_ADDON = 0};
+	
 	if (isNil 'CTI_ZOMBIE_MODE') then {CTI_ZOMBIE_MODE = 0};
 	if (isNil 'CTI_GUERILLA_MODE') then {CTI_GUERILLA_MODE = 0};
+	if (isNil 'CTI_OFPS_MODE') then {CTI_OFPS_MODE = 0};
+	
+	if (isNil 'CTI_DATABASE_ENABLED') then {CTI_DATABASE_ENABLED = 0};
+	
+	if (isNil 'CTI_DEV_MODE') then {CTI_DEV_MODE = 0};
 	
 	if (isnil "CTI_GAMEPLAY_DARTER") then {CTI_GAMEPLAY_DARTER = 2000};
 

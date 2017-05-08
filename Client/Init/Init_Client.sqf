@@ -155,28 +155,247 @@ call compile preprocessFile "Client\Functions\UI\Functions_UI_ServiceMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_UnitsCamera.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_UpgradeMenu.sqf";
 
-if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_West.sqf"};
-if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_East.sqf"};
+//--- VANILLA MODE
+if (CTI_FACTION_MODE == 0) then { 
+	//--Load Vanilla
+	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_East.sqf"};
+	};
+	//--Load Heli Gear
+	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_East.sqf"};
+	};	
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON == 1) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_East.sqf"};
+	};
+	//--- Load APEX Gear
+	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_East.sqf"};
+	};
+	//--- Load JETS Gear
+	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_East.sqf"};
+	};	
+	//--- Load TANKS Gear
+	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_East.sqf"};
+	};
+	//--- Load CUP Gear
+	if (CTI_CUP_WEAPONS_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_East.sqf"};
+	};
+	//--- Load RHS Gear
+	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_AFRF_East.sqf"};
+	};
+	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_USAF_West.sqf"};
+	};
+	//--- OFPS Gear
+	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_East.sqf"};
+	};
+	//--- OFPS RHS Gear
+	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_East.sqf"};
+	};
+	//--- OFPS CUP Gear
+	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_East.sqf"};
+	};
+};
 
-//--- Load APEX Gear
-if (CTI_APEX_ADDON > 0) then {
-	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_APEX_West.sqf"};
-	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_APEX_East.sqf"};
+//--- CUP MODE
+if (CTI_FACTION_MODE == 1) then { 
+	//--Load Vanilla
+	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_East.sqf"};
+	};
+	//--Load Heli Gear
+	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_East.sqf"};
+	};	
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_East.sqf"};
+	};
+	//--- Load APEX Gear
+	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_East.sqf"};
+	};
+	//--- Load JETS Gear
+	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_East.sqf"};
+	};	
+	//--- Load TANKS Gear
+	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_East.sqf"};
+	};
+	//--- Load CUP Gear
+	if (CTI_CUP_WEAPONS_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_East.sqf"};
+	};
+	//--- Load RHS Gear
+	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_AFRF_East.sqf"};
+	};
+	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_USAF_West.sqf"};
+	};
+	//--- OFPS Gear
+	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_East.sqf"};
+	};
+	//--- OFPS RHS Gear
+	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_East.sqf"};
+	};
+	//--- OFPS CUP Gear
+	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_East.sqf"};
+	};	
 };
-//--- Load CUP Gear
-if (CTI_CUP_ADDON > 0) then {
-	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_CUP_West.sqf"};
-	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_CUP_East.sqf"};
+
+//--- RHS MODE
+if (CTI_FACTION_MODE == 2) then { 
+	//--Load Vanilla
+	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_East.sqf"};
+	};
+	//--Load Heli Gear
+	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_East.sqf"};
+	};	
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_East.sqf"};
+	};
+	//--- Load APEX Gear
+	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_East.sqf"};
+	};
+	//--- Load JETS Gear
+	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_East.sqf"};
+	};	
+	//--- Load TANKS Gear
+	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_East.sqf"};
+	};
+	//--- Load CUP Gear
+	if (CTI_CUP_WEAPONS_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_East.sqf"};
+	};
+	//--- Load RHS Gear
+	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_AFRF_East.sqf"};
+	};
+	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_USAF_West.sqf"};
+	};
+	//--- OFPS Gear
+	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_East.sqf"};
+	};
+	//--- OFPS RHS Gear
+	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_East.sqf"};
+	};
+	//--- OFPS CUP Gear
+	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_East.sqf"};
+	};	
 };
-//--- Load OFPS Gear
-if (CTI_OFPS_ADDON > 0) then {
-	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_OFPS_West.sqf"};
-	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_OFPS_East.sqf"};
-};
-//--- Load RHS Gear
-if (CTI_RHS_ADDON > 0) then {
-	if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_RHS_West.sqf"};
-	if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Gear\Gear_RHS_East.sqf"};
+//--- OFPS MODE
+if (CTI_FACTION_MODE == 3) then { 
+	//--Load Vanilla
+	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_East.sqf"};
+	};
+	//--Load Heli Gear
+	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_East.sqf"};
+	};	
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_East.sqf"};
+	};
+	//--- Load APEX Gear
+	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_East.sqf"};
+	};
+	//--- Load JETS Gear
+	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_East.sqf"};
+	};	
+	//--- Load TANKS Gear
+	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_East.sqf"};
+	};
+	//--- Load CUP Gear
+	if (CTI_CUP_WEAPONS_ADDON > 0) then {
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_East.sqf"};
+	};
+	//--- Load RHS Gear
+	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_AFRF_East.sqf"};
+	};
+	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_USAF_West.sqf"};
+	};
+	//--- OFPS Gear
+	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_East.sqf"};
+	};
+	//--- OFPS RHS Gear
+	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_East.sqf"};
+	};
+	//--- OFPS CUP Gear
+	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_East.sqf"};
+	};	
 };
 
 CTI_InitClient = true;
@@ -297,42 +516,44 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 				_placement_distance = CTI_BASE_STARTUP_PLACEMENT;
 				_faction_west = "";
 				switch (CTI_FACTION_WEST) do {
-					case 0: {_faction_west = "NATO Arid";};
-					case 1: {_faction_west = "NATO Tropic";};
-					case 2: {_faction_west = "NATO Winter";};
+					case 0: {_faction_west = "NATO Vanilla (arid)";};
+					case 1: {_faction_west = "NATO Pacific APEX (woodland)";};
+					case 2: {_faction_west = "USMC CUP (Arid)";};
+					case 3: {_faction_west = "USAF RHS (Arid)";};
 				};
 				_faction_east = "";
 				switch (CTI_FACTION_EAST) do {
-					case 0: {_faction_east = "CSAT Arid";};
-					case 1: {_faction_east = "CSAT Tropic";};
-					case 2: {_faction_east = "CSAT Winter";};
+					case 0: {_faction_east = "CSAT Vanilla (arid)";};
+					case 1: {_faction_east = "CSAT Pacific APEX (woodland)";};
+					case 2: {_faction_east = "Russia CUP (Arid)";};
+					case 2: {_faction_east = "Russia RHS (Arid)";};
 				};
 				_town_west = "";
 				switch (CTI_TOWNS_OCCUPATION_WEST) do {
 					case 0: {_town_west = "Vanilla NATO";};
-					case 1: {_town_west = "US Army";};
-					case 2: {_town_west = "Mixed Forces";};
-					case 3: {_town_west = "Pacific Special Forces";};
+					case 1: {_town_west = "Pacific Special Forces - APEX";};
+					case 2: {_town_west = "US Army - CUP";};
+					case 3: {_town_west = "Russians - RHS";};
 					case 4: {_town_west = "Winter NATO";};
 				};
 				_town_east = "";
 				switch (CTI_TOWNS_OCCUPATION_EAST) do {
 					case 0: {_town_east = "Vanilla CSAT";};
-					case 1: {_town_east = "Russians";};
-					case 2: {_town_east = "Mixed Forces";};
-					case 3: {_town_east = "Pacific Special Forces";};
+					case 1: {_town_east = "Pacific Special Forces - APEX";};
+					case 2: {_town_east = "Russians - CUP";};
+					case 3: {_town_east = "Russians - RHS";};
 					case 4: {_town_east = "Winter CSAT";};
 				};
 				_town_indie = "";
 				switch (CTI_TOWNS_OCCUPATION_RESISTANCE) do {
 					case 0: {_town_indie = "Vanilla - AAF";};
 					case 1: {_town_indie = "Vanilla - FIA";};
-					case 2: {_town_indie = "CUP - ION PMC";};
-					case 3: {_town_indie = "CUP - NAPA Chernarus";};
-					case 4: {_town_indie = "CUP - Royal Army Corp Of Sahrani";};
-					case 5: {_town_indie = "CUP - Takistani Military";};
-					case 6: {_town_indie = "Mixed";};
-					case 7: {_town_indie = "Syndikat Paramilitary";};
+					case 2: {_town_indie = "Syndikat Paramilitary - APEX";};
+					case 3: {_town_indie = "ION PMC - CUP";};
+					case 4: {_town_indie = "NAPA Chernarus - CUP";};
+					case 5: {_town_indie = "Royal Army Corp Of Sahrani - CUP";};
+					case 6: {_town_indie = "Takistani Military - CUP";};
+					case 7: {_town_indie = "GREF - RHS";};
 					case 8: {_town_indie = "AAF/Swedish Winter";};
 				};
 				_town_level_resistance = "";

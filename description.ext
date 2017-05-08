@@ -18,7 +18,7 @@ class CfgFunctions
 {
 	#include "Common\Functions\External\LARs\LARs_spawnComp.cpp"
 };
-#include "Common\Config\Compositions\compositions.cfg"
+#include "Common\Config\Common\Compositions\compositions.cfg"
 
 //VON Modification
 //channel, disableChat, disableVoice

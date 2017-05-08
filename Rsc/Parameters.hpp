@@ -1,33 +1,27 @@
 class Params {
+	class CTI_FACTION_MODE {
+		title = "FACTION: Main Mod Mode";
+		values[] = {0,1,2,3,4};
+		texts[] = {"Vanilla/DLC", "CUP Mode", "RHS Mode", "OFPS Mode (everything unlocked)", "Database Mode"};
+		default = 0;
+	};
 	class CTI_FACTION_WEST {
-		title = "FACTION: West Forces";
-		values[] = {0,1,2};
-		texts[] = {"NATO Arid","NATO Tropic","NATO Winter"};
+		title = "FACTION: Default West Faction";
+		values[] = {0,1,2,3};
+		texts[] = {"NATO Vanilla (arid)","NATO Pacific APEX (woodland)","USMC CUP (Arid)", "USAF RHS (Arid)"};
 		default = 0;
 	};
 	class CTI_FACTION_EAST {
-		title = "FACTION: East Forces";
+		title = "FACTION: Default East Faction";
+		values[] = {0,1,2,3};
+		texts[] = {"CSAT Vanilla (arid)","CSAT Pacific APEX (woodland)","Russia CUP (Arid)","Russia RHS (Arid)"};
+		default = 0;
+	};
+	class CTI_FACTION_DEFAULT_BASE {
+		title = "FACTION: Default Base Factories/Objects";
 		values[] = {0,1,2};
-		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
-		default = 0;
-	};
-	class CTI_FACTION_DEFAULT_VEHICLES {
-		title = "FACTION: Starting vehicles and mhq";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 0;
-	};
-	class CTI_FACTION_DEFAULT_GEAR {
-		title = "FACTION: Starting gear";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 3;
-	};
-	class CTI_FACTION_DEFAULT_TROOPS {
-		title = "FACTION: Default infantry";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 3;
+		texts[] = {"Vanilla","CUP","RHS"};
+		default = 1;
 	};	
 	class SEPARATOR0 {
 		title = "========================== BASES ============================";
@@ -158,19 +152,19 @@ class Params {
 	class CTI_TOWNS_OCCUPATION_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7,8,9};
-		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter","RHS GREF"};
+		texts[] = {"Vanilla - AAF","Vanilla - FIA","Syndikat Paramilitary - APEX","ION PMC - CUP","NAPA Chernarus - CUP","Royal Army Corp Of Sahrani - CUP","Takistani Military - CUP","GREF - RHS"};
 		default = 9;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
-		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter","RHS"};
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","Russians - RHS"};
 		default = 5;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3,4,5};
-		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter","RHS"};
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","Russians - CUP","Russians - RHS"};
 		default = 5;
 	};
 	class CTI_TOWNS_PEACE {
@@ -593,36 +587,120 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
+	class CTI_VANILLA_ADDON {
+		title = "ADDON: Vanilla Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_HELI_ADDON {
+		title = "ADDON: HELI DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_MARKSMEN_ADDON {
+		title = "ADDON: MARKSMEN DLC Support";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
 	class CTI_APEX_ADDON {
 		title = "ADDON: APEX DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_JETS_ADDON {
+		title = "ADDON: JETS DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_TANKS_ADDON {
+		title = "ADDON: TANKS DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};	
+	class CTI_CUP_UNITS_ADDON {
+		title = "ADDON: CUP Units";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_CUP_ADDON {
-		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
+	class CTI_CUP_VEHICLES_ADDON {
+		title = "ADDON: CUP Vehicles";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
+	class CTI_CUP_WEAPONS_ADDON {
+		title = "ADDON: CUP Weapons";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};	
 	class CTI_CUP_CORE_ADDON {
-		title = "ADDON: CUP CORE and CUP Terrains";
+		title = "ADDON: CUP CORE";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_OFPS_ADDON {
-		title = "ADDON: OFPS MOD Pack Support";
+	class CTI_CUP_TERRAINS_ADDON {
+		title = "ADDON: CUP Terrains";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_RHS_ADDON {
-		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
+	class CTI_RHS_AFRF_ADDON {
+		title = "ADDON: RHS AFRF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_GREF_ADDON {
+		title = "ADDON: RHS GREF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_SAF_ADDON {
+		title = "ADDON: RHS SAF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_USAF_ADDON {
+		title = "ADDON: RHS USAF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_CORE_ADDON {
+		title = "ADDON: OFPS Core Pack Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_OFPS_UNITS_ADDON {
+		title = "ADDON: OFPS Units Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_RHS_ADDON {
+		title = "ADDON: OFPS RHS Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_CUP_ADDON {
+		title = "ADDON: OFPS CUP Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};	
 	class SEPARATOR10 {
 		title = "========================= GAMEMODES ===========================";
 		values[] = {1};
@@ -642,6 +720,18 @@ class Params {
 		default = 0;
 	};
 	class SEPARATOR11 {
+		title = "========================== DATABASE ===========================";
+		values[] = {1};
+		texts[] = {""};
+		default = 1;
+	};
+	class CTI_DATABASE_ENABLED {
+		title = "DATABASE: Enable Database Connection";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 0;
+	};
+	class SEPARATOR12 {
 		title = "========================== DEV MODE ===========================";
 		values[] = {1};
 		texts[] = {""};
