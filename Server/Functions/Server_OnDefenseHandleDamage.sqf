@@ -73,7 +73,7 @@ if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
 };
 //--- HE Cannons
-if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
 };
 //--- Missiles
