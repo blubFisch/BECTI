@@ -75,6 +75,7 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 };
 //--- Adjust damage for ammo types
 //--- This is active file that works with base damage 2/17/2017 -Omon
+//--- This damage values are also used in FOB damage system as well as Statics "Live thanks for living this notes in"
 
 //--- Tanks
 if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
@@ -92,7 +93,7 @@ if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
 };
 //--- HE Cannons
-if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase") || (_ammo isKindOf "VehicleMagazine")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
 	if (_damage > CTI_BASE_DAMAGE_MAX_CANNON) then {_damage = CTI_BASE_DAMAGE_MAX_CANNON};
 };
@@ -107,7 +108,7 @@ if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (
 	if (_damage > CTI_BASE_DAMAGE_MAX_FUEL) then {_damage = CTI_BASE_DAMAGE_MAX_FUEL};
 };
 //--- Rockets
-if (_ammo isKindOf "RocketCore") then {
+if ((_ammo isKindOf "RocketCore") || (_ammo isKindOf "M_Titan_AT") || (_ammo isKindOf "M_Titan_AP") || (_ammo isKindOf "M_Titan_AA")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
 	if (_damage > CTI_BASE_DAMAGE_MAX_ROCKETS) then {_damage = CTI_BASE_DAMAGE_MAX_ROCKETS};
 };

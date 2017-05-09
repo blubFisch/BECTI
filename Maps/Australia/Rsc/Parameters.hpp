@@ -30,19 +30,31 @@ class Params {
 		default = 3;
 	};
 	class SEPARATOR0 {
-		title = "========================== INCOME ============================";
+		title = "========================== BASES ============================";
 		values[] = {1};
 		texts[] = {""};
 		default = 1;
-	};
+	};	
 	class CTI_BASE_AREA_MAX {
 		title = "BASE: Areas";
 		values[] = {1,2,3,4,5};
 		texts[] = {"1","2","3","4","5"};
 		default = 2;
 	};
+	class CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT {
+		title = "BASE: Areas Identical Structures Limit";
+		values[] = {-1,1,2,3,4,5,10};
+		texts[] = {"Unlimited","1","2","3","4","5","10"};
+		default = 1;
+	};
 	class CTI_BASE_HQ_REPAIR {
 		title = "BASE: HQ Repairable";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
+	class CTI_BASE_HEALTH_UPGRADE {
+		title = "BASE: Enable Base Health Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
@@ -281,36 +293,6 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
-	class CTI_VEHICLES_AIR_FFAR {
-		title = "UNITS: Aircraft FFAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_DAR {
-		title = "UNITS: Aircraft DAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_AA {
-		title = "UNITS: Aircraft AA Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_AT {
-		title = "UNITS: Aircraft AT Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
-	class CTI_VEHICLES_AIR_CM {
-		title = "UNITS: Aircraft Countermeasures";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 1;
-	};
 	class CTI_MARKERS_INFANTRY {
 		title = "UNITS: Show Map Infantry";
 		values[] = {0,1};
@@ -322,15 +304,63 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
+	};	
+	class SEPARATOR_VEH {
+		title = "=========================== VEHICLES ============================";
+		values[] = {1};
+		texts[] = {""};
+		default = 1;
 	};
-	class CTI_UNITS_FUEL_CONSUMPTION {
-		title = "UNITS: Increased Fuel Consumption";
+	class CTI_VEHICLES_AIR_FFAR {
+		title = "VEHICLES: Aircraft FFAR";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_DAR {
+		title = "VEHICLES: Aircraft DAR";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_AA {
+		title = "VEHICLES: Aircraft AA Missiles";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_AT {
+		title = "VEHICLES: Aircraft AT Missiles";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_CM {
+		title = "VEHICLES: Aircraft Countermeasures";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
+		default = 2;
+	};
+	class CTI_VEHICLES_FUEL_CONSUMPTION {
+		title = "VEHICLES: Increased Fuel Consumption";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 0;
+	};
+	class CTI_VEHICLES_LVOSS {
+		title = "VEHICLES: Enable LVOSS";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enable LVOSS"};
+		default = 1;
+	};
+	class CTI_VEHICLES_ERA {
+		title = "VEHICLES: Enable ERA/ARENA";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 0;
 	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
-		title = "UNITS: Vehicles Reycling Delay";
+		title = "VEHICLES: Vehicles Recycling Delay";
 		values[] = {60,120,180,240,300,600,1200,1800,2400,3000,3600};
 		texts[] = {"1 Minute","2 Minutes","3 Minutes","4 Minutes","5 Minutes","10 Minutes","20 Minutes","30 Minutes","40 Minutes","50 Minutes","1 Hour"};
 		default = 1200;
@@ -555,13 +585,13 @@ class Params {
 		title = "WEATHER: Day Duration";
 		values[] = {1,2,3,4,5,6,7,8,9,10,11,12};
 		texts[] = {"1 hour","2 hours","3 hours","4 hours","5 hours","6 hours","7 hours","8 hours","9 hours","10 hours","11 hours","12 hours"};
-		default = 12;
+		default = 3;
 	};
   	class CTI_WEATHER_FAST_NIGHT {
 		title = "WEATHER: Night Duration";
 		values[] = {1,2,3,4,5,6,7,8,9,10,11,12};
 		texts[] = {"1 hour","2 hours","3 hours","4 hours","5 hours","6 hours","7 hours","8 hours","9 hours","10 hours","11 hours","12 hours"};
-		default = 12;
+		default = 1;
 	};
 	class SEPARATOR9 {
 		title = "=========================== ADDONS ============================";

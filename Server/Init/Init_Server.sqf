@@ -131,7 +131,7 @@ if (_attempts >= 500) then {
 	_logic setVariable ["cti_upgrade_lt", -1, true];
 	
 	//--- Create the defensive teams if needed
-	if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {
+	if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {
 		_defense_team = createGroup _side;
 		_defense_team setGroupID ["Defense Team"];
 		_defense_team setBehaviour "AWARE";

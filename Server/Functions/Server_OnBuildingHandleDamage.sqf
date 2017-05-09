@@ -77,7 +77,7 @@ if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
 };
 //--- HE Cannons
-if ((_ammo isKindOf "GranadeBase") || (_ammo isKindOf "BulletBase")) then {
+if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
 	if (_damage > CTI_BASE_DAMAGE_MAX_CANNON) then {_damage = CTI_BASE_DAMAGE_MAX_CANNON};
 };

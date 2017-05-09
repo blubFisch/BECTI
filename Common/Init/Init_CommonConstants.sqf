@@ -532,8 +532,10 @@ CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (str
 CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 
 //--- Base: Defenses
+CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be manned within a given area
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
-CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_LIMIT = 20; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_MODE = 2; //--- AI Base Defenses mode (0: No AI, 1: Global Limit, 2: Limit per Area)
 CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
@@ -569,20 +571,20 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1;//--- Tanks
 CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 1;//--- Arty
 CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 1;//--- Satchels
-CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 0.3;//--- HE Cannons
+CTI_BASE_DAMAGE_MULTIPLIER_CANNON = 1;//--- HE Cannons
 CTI_BASE_DAMAGE_MULTIPLIER_MISSLE = 1;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MULTIPLIER_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
 CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 1;//--- Rockets
 CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;//--- Bombs
 
 //--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
-CTI_BASE_DAMAGE_MAX_SHELL = 0.1;//--- Tanks
-CTI_BASE_DAMAGE_MAX_ARTY = 0.1;//--- Arty
+CTI_BASE_DAMAGE_MAX_SHELL = 0.08;//--- Tanks
+CTI_BASE_DAMAGE_MAX_ARTY = 0.05;//--- Arty
 CTI_BASE_DAMAGE_MAX_SATCHEL = 0.5;//--- Satchels
-CTI_BASE_DAMAGE_MAX_CANNON = 0.1;//--- HE Cannons
-CTI_BASE_DAMAGE_MAX_MISSLE = 0.1;//--- Missiles from helis and others
+CTI_BASE_DAMAGE_MAX_CANNON = 0.002;//--- HE Cannons
+CTI_BASE_DAMAGE_MAX_MISSLE = 0.05;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MAX_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
-CTI_BASE_DAMAGE_MAX_ROCKETS = 0.1;//--- Rockets
+CTI_BASE_DAMAGE_MAX_ROCKETS = 0.05;//--- Rockets
 CTI_BASE_DAMAGE_MAX_BOMB = 0.5;//--- Bombs
 
 //--- Base: Purchase range
@@ -608,6 +610,7 @@ CTI_BASE_WORKERS_WANDER_RANGE_MAX = 225; //--- Worker may wander no further than
 with missionNamespace do {
 	if (isNil 'CTI_BASE_HEALTH_UPGRADE') then {CTI_BASE_HEALTH_UPGRADE = 1}; //--- Enable Base Health Upgrade - see above for values : CTI_BASE_HEALTH_MULTIPLIER
 	if (isNil 'CTI_BASE_AREA_MAX') then {CTI_BASE_AREA_MAX = 2}; //--- Amount of base areas which may be built
+	if (isNil 'CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT') then {CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT = 1}; //--- Amount of identical structures which may be present within a base area (-1: Unlimited)
 	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 2}; //--- Construction mode to use for structures (0: Timed, 1: Workers, 2: Timed + Repairs)
 	if (isNil 'CTI_BASE_FOB_MAX') then {CTI_BASE_FOB_MAX = 2}; //--- Maximum amount of FOBs which a side may place
 	if (isNil 'CTI_BASE_LARGE_FOB_MAX') then {CTI_BASE_LARGE_FOB_MAX = 2}; //--- Maximum amount of Large FOBs which a side may place
