@@ -45,7 +45,7 @@ class Params {
 		title = "BASE: Areas Identical Structures Limit";
 		values[] = {-1,1,2,3,4,5,10};
 		texts[] = {"Unlimited","1","2","3","4","5","10"};
-		default = -1;
+		default = 1;
 	};
 	class CTI_BASE_HQ_REPAIR {
 		title = "BASE: HQ Repairable";
