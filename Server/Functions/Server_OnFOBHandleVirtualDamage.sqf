@@ -94,7 +94,7 @@ if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
 	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
 };
 //--- HE Cannons
-if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase")) then {
+if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase") || (_ammo isKindOf "VehicleMagazine")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
 	if (_damage > CTI_BASE_DAMAGE_MAX_CANNON) then {_damage = CTI_BASE_DAMAGE_MAX_CANNON};
 };
@@ -118,6 +118,8 @@ if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo is
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
 	if (_damage > CTI_BASE_DAMAGE_MAX_BOMB) then {_damage = CTI_BASE_DAMAGE_MAX_BOMB};
 };
+
+
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;
