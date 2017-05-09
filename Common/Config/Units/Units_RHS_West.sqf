@@ -293,7 +293,7 @@ _s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
-_p pushBack '';
+_p pushBack '\rhsusf\addons\rhsusf_c_fmtv\data\ico\ico_m1078_flat_m2.paa';
 _n pushBack '1- M1078A1P2-B Truck Woodland';
 _o pushBack 1000;
 _t pushBack 30;
@@ -683,16 +683,6 @@ _s pushBack "";
 _d pushBack 10;
 
 _c pushBack 'rhsusf_M1078A1P2_wd_flatbed_fmtv_usarmy';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-
-_c pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;

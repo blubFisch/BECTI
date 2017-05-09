@@ -180,6 +180,79 @@ while {alive _structure} do {
     						[_x, _defense_team, _side, _ai_args] Call CTI_SE_FNC_AttemptDefenseDelegation;
     					};
 					};
+					
+					//--- Check if the AI is still the gunner
+					if !(isNull gunner _x) then {
+						if (CTI_Log_Level >= CTI_Log_Debug) then {
+							["DEBUG", "FILE: Server\Functions\Server_HandleStaticDefenses.sqf", format["Defense [%1] (%2) from side [%3] has a gunner (%4), attempting to delete him", _x, typeOf _x, _side, gunner _x]] call CTI_CO_FNC_Log;
+						};
+						_x deleteVehicleCrew gunner _x;
+					};
+					
+					//--- Do we have an HC?
+					_delegate = false;
+					if !(isNil {missionNamespace getVariable "CTI_HEADLESS_CLIENTS"}) then {
+						if (count(missionNamespace getVariable "CTI_HEADLESS_CLIENTS") > 0) then { _delegate = true };
+					};
+					
+					//--- The arguments used to create the AI
+					_ai_args = [missionNamespace getVariable format["CTI_%1_Static", _side], _defense_team, _position, _sideID, _net];
+					
+					//--- No delegation possible, create on the server
+					if !(_delegate) then {
+						if (CTI_Log_Level >= CTI_Log_Information) then {
+							["INFORMATION", "FILE: Server\Functions\Server_HandleStaticDefenses.sqf", format["No HC were detected, defense [%1] (%2) from side [%3] will be server-managed", _x, typeOf _x, _side]] call CTI_CO_FNC_Log;
+						};
+						
+						//--- Create the unit
+						_ai = (_ai_args) call CTI_CO_FNC_CreateUnit;
+						
+						//--- Assign him to the defense
+						[_ai] allowGetIn true;
+						_ai assignAsGunner _x;
+						[_ai] orderGetIn true;
+						_ai moveInGunner _x;
+
+						//--- Change Skill for rest of the statics
+						_ai setSkill ["aimingAccuracy", 1]; // Set accuracy
+						_ai setSkill ["aimingShake", 1]; // Set weapon sway handling
+						_ai setSkill ["aimingSpeed", 1]; // Set aiming speed
+						_ai setSkill ["reloadSpeed", 1]; // Max out reload speed
+						_ai setSkill ["spotDistance", 1]; // Set detection distance
+						_ai setSkill ["spotTime", 1]; // Set detection time
+						_ai setSkill ["courage", 1]; // Never retreat
+						_ai setSkill ["commanding", 1]; // Communication skills
+						_ai setSkill ["general", 1]; //Sets all above
+
+						//--- Exception for AT statics to be less aggressive  
+						if (_x isKindOf "AT_01_base_F" || _x isKindOf "rhs_d30_at_msv") then {
+							_ai setSkill ["aimingAccuracy", 0.8]; // Set accuracy
+							_ai setSkill ["aimingShake", 0.5]; // Set weapon sway handling
+							_ai setSkill ["aimingSpeed", 0.5]; // Set aiming speed
+							_ai setSkill ["reloadSpeed", 0.8]; // Max out reload speed
+							_ai setSkill ["spotDistance", 0.5]; // Set detection distance = 2600m
+							_ai setSkill ["spotTime", 0.5]; // Set detection time
+							_ai setSkill ["courage", 1]; // Never retreat
+							_ai setSkill ["commanding", 1]; // Communication skills		
+							/*_ai setSkill ["general", 0.8]; //Sets all above*/
+						};
+
+						//--- Set to Combat
+						_ai setBehaviour "AWARE";
+						_ai setCombatMode "RED";
+						_ai setSpeedMode "FULL";
+						_ai enableAttack true;
+
+					} else {
+						//--- At least one HC is available
+
+						if (CTI_Log_Level >= CTI_Log_Information) then {
+							["INFORMATION", "FILE: Server\Functions\Server_HandleStaticDefenses.sqf", format["At least one HC is present, defense [%1] (%2) from side [%3] will be managed by an HC", _x, typeOf _x, _side]] call CTI_CO_FNC_Log;
+						};
+
+						[_x, _defense_team, _side, _ai_args] Call CTI_SE_FNC_AttemptDefenseDelegation;
+					};
+					
 				};
 			};
 		};

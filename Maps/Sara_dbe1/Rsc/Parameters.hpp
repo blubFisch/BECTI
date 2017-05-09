@@ -69,7 +69,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 20000;
+		default = 8000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -334,7 +334,7 @@ class Params {
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
 		default = 2;
-	};	
+	};
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
@@ -363,7 +363,7 @@ class Params {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
 		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = 1;
+		default = -1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
@@ -579,13 +579,13 @@ class Params {
 		title = "WEATHER: Day Duration";
 		values[] = {1,2,3,4,5,6,7,8,9,10,11,12};
 		texts[] = {"1 hour","2 hours","3 hours","4 hours","5 hours","6 hours","7 hours","8 hours","9 hours","10 hours","11 hours","12 hours"};
-		default = 12;
+		default = 3;
 	};
   	class CTI_WEATHER_FAST_NIGHT {
 		title = "WEATHER: Night Duration";
 		values[] = {1,2,3,4,5,6,7,8,9,10,11,12};
 		texts[] = {"1 hour","2 hours","3 hours","4 hours","5 hours","6 hours","7 hours","8 hours","9 hours","10 hours","11 hours","12 hours"};
-		default = 12;
+		default = 1;
 	};
 	class SEPARATOR9 {
 		title = "=========================== ADDONS ============================";
