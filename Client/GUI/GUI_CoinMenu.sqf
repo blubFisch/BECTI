@@ -154,7 +154,7 @@ with missionNamespace do {
 				//--- Update the defense team count
 				_defense_team = CTI_P_SideLogic getVariable "cti_defensive_team";
 				_defense_count = count(_defense_team call CTI_CO_FNC_GetLiveUnits);
-				_defensecountText = format ["<t color='#42b6ff' shadow='2' size='1' align='right' valign='top'>Defensive Team Count: %1 / %2</t>", _defense_count, CTI_BASE_DEFENSES_AUTO_LIMIT];
+				_defensecountText = format ["<t color='#42b6ff' shadow='2' size='1' align='right' valign='top'>Defensive Team Count (%3 Per Base Area): %1 / %2</t>", _defense_count, CTI_BASE_DEFENSES_AUTO_LIMIT, CTI_BASE_DEFENSES_AUTO_AREA_LIMIT];
 				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _defensecountText);
 				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlCommit 0;
 				//--- Reset the selector to default
@@ -337,7 +337,7 @@ with missionNamespace do {
 		};
 		
 		//--- Update Auto defense icon if needed (and if enabled)
-		if (!(_last_autodefense isEqualTo (profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true])) && CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {
+		if (!(_last_autodefense isEqualTo (profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true])) && CTI_BASE_DEFENSES_AUTO_MODE > 0) then {
 			_last_autodefense = profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true];
 			
 			_color = CTI_COIN_COLOR_OUTOFRANGE_UI;
