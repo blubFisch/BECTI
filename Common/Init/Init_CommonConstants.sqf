@@ -532,10 +532,10 @@ CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (str
 CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 
 //--- Base: Defenses
-CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 12; //--- Amount of defenses which may be manned within a given area
+CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be manned within a given area
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
-CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
-CTI_BASE_DEFENSES_AUTO_MODE = 1; //--- AI Base Defenses mode (0: No AI, 1: Global Limit, 2: Limit per Area)
+CTI_BASE_DEFENSES_AUTO_LIMIT = 20; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_MODE = 2; //--- AI Base Defenses mode (0: No AI, 1: Global Limit, 2: Limit per Area)
 CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
@@ -610,7 +610,7 @@ CTI_BASE_WORKERS_WANDER_RANGE_MAX = 225; //--- Worker may wander no further than
 with missionNamespace do {
 	if (isNil 'CTI_BASE_HEALTH_UPGRADE') then {CTI_BASE_HEALTH_UPGRADE = 1}; //--- Enable Base Health Upgrade - see above for values : CTI_BASE_HEALTH_MULTIPLIER
 	if (isNil 'CTI_BASE_AREA_MAX') then {CTI_BASE_AREA_MAX = 2}; //--- Amount of base areas which may be built
-	if (isNil 'CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT') then {CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT = -1}; //--- Amount of identical structures which may be present within a base area (-1: Unlimited)
+	if (isNil 'CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT') then {CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT = 1}; //--- Amount of identical structures which may be present within a base area (-1: Unlimited)
 	if (isNil 'CTI_BASE_CONSTRUCTION_MODE') then {CTI_BASE_CONSTRUCTION_MODE = 2}; //--- Construction mode to use for structures (0: Timed, 1: Workers, 2: Timed + Repairs)
 	if (isNil 'CTI_BASE_FOB_MAX') then {CTI_BASE_FOB_MAX = 2}; //--- Maximum amount of FOBs which a side may place
 	if (isNil 'CTI_BASE_LARGE_FOB_MAX') then {CTI_BASE_LARGE_FOB_MAX = 2}; //--- Maximum amount of Large FOBs which a side may place
