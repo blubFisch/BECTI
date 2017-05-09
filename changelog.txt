@@ -1,12 +1,13 @@
-upcoming release
+**1.07.1**
 Fixed: Fob damage and tuned base damage
 Tweaked: Upgrade text descriptions
 Tweaked: Enabled Arty Computer
 Tweaked: Spawn distance on Napf
-Tweaked: Paramter file for Isladula was old
+Tweaked: Parameter file for Isladula was old
 Tweaked: Base static AT spot range dropped by 15%
+Tweaked: Dropped AF price to 5k and bumped AF4 and AF5 upgrade cost
 Added: Camps to naval towns
-Added: Defence limiter per base area (10 auto man ai per base)
+Added: Defense limiter per base area (10 auto man ai per base)
 Added: Base building limiter (1 same type of building per base)
 
 **1.07**

@@ -60,7 +60,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 	[2000,2250,3500,4500,20000], //--- Light
 	[3500,4500,6000,8000], //--- Heavy
 	[1500,3000], //--- Naval
-	[4000,6000,8000,10000,12000], //--- Air
+	[4000,6000,8000,11000,14000], //--- Air
 	[10], //--- Air FFAR
 	[10], //--- Air DAR
 	[10], //--- Air AT
