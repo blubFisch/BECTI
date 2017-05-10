@@ -530,6 +530,7 @@ CTI_BASE_CONSTRUCTION_RATIO_INIT = 1; //--- The initial construction ratio
 CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multiplied by this coefficient to make repairs less effective at each factory's destruction.
 CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (structure cost * x)
 CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
+CTI_BASE_CONSTRUCTION_LIMIT_WHITELIST = [CTI_SUPPLY_DEPOT]; //--- Whitelist structures from limit here. [XX,XX,XX]
 
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be manned within a given area
