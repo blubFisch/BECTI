@@ -1,3 +1,8 @@
+**1.07.2**
+Fixed: Altis naval camp
+Fixed: Supply depot building limit
+Tweaked: Gear order by Luke
+
 **1.07.1**
 Fixed: Fob damage and tuned base damage
 Tweaked: Upgrade text descriptions
