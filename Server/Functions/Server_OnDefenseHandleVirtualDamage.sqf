@@ -73,8 +73,11 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 	};
 };
-/*
-//Adjust damage for ammo types
+
+//--- Adjust damage for ammo types
+//--- This is active file that works with base damage 2/17/2017 -Omon
+//--- This damage values are also used in FOB damage system as well as Statics "Live thanks for living this notes in"
+
 //--- Tanks
 if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
@@ -86,9 +89,14 @@ if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo 
 	if (_damage > CTI_BASE_DAMAGE_MAX_ARTY) then {_damage = CTI_BASE_DAMAGE_MAX_ARTY};
 };
 //--- Satchels
-if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
+if (_ammo isKindOf "TimeBombCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
 	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
+};
+//--- Pipe Bomb
+if (_ammo isKindOf "PipeBombCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_PIPE;
+	if (_damage > CTI_BASE_DAMAGE_MAX_PIPE) then {_damage = CTI_BASE_DAMAGE_MAX_PIPE};
 };
 //--- HE Cannons
 if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase") || (_ammo isKindOf "VehicleMagazine")) then {
@@ -115,7 +123,10 @@ if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo is
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
 	if (_damage > CTI_BASE_DAMAGE_MAX_BOMB) then {_damage = CTI_BASE_DAMAGE_MAX_BOMB};
 };
-*/
+
+//--- Damage multiplier for base defenses so they not as strong as factories
+_damage = _damage * 4;
+
 //--- Do we have to reduce the damages?
 if (_reduce_damages > 0 ) then {
 	_reduce_damages = _reduce_damages * _baseratio;

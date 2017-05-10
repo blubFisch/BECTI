@@ -1,3 +1,6 @@
+**Upcomming release**
+Tweaked: Damage for defenses
+
 **1.07.2**
 Fixed: Altis naval camp
 Fixed: Supply depot building limit
