@@ -88,9 +88,14 @@ if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo 
 	if (_damage > CTI_BASE_DAMAGE_MAX_ARTY) then {_damage = CTI_BASE_DAMAGE_MAX_ARTY};
 };
 //--- Satchels
-if ((_ammo isKindOf "TimeBombCore") || (_ammo isKindOf "PipeBombCore")) then {
+if (_ammo isKindOf "TimeBombCore") then {
 	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
 	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
+};
+//--- Pipe Bomb
+if (_ammo isKindOf "PipeBombCore") then {
+	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_PIPE;
+	if (_damage > CTI_BASE_DAMAGE_MAX_PIPE) then {_damage = CTI_BASE_DAMAGE_MAX_PIPE};
 };
 //--- HE Cannons
 if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase") || (_ammo isKindOf "VehicleMagazine")) then {
