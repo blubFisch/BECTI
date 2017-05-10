@@ -581,7 +581,7 @@ CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;//--- Bombs
 //--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
 CTI_BASE_DAMAGE_MAX_SHELL = 0.08;//--- Tanks
 CTI_BASE_DAMAGE_MAX_ARTY = 0.05;//--- Arty
-CTI_BASE_DAMAGE_MAX_SATCHEL = 0.5;//--- Satchels
+CTI_BASE_DAMAGE_MAX_SATCHEL = 1;//--- Satchels
 CTI_BASE_DAMAGE_MAX_CANNON = 0.002;//--- HE Cannons
 CTI_BASE_DAMAGE_MAX_MISSLE = 0.05;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MAX_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 
