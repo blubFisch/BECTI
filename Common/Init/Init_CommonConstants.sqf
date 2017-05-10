@@ -530,6 +530,7 @@ CTI_BASE_CONSTRUCTION_RATIO_INIT = 1; //--- The initial construction ratio
 CTI_BASE_CONSTRUCTION_RATIO_ON_DEATH = 0.60; //--- The completion ratio is multiplied by this coefficient to make repairs less effective at each factory's destruction.
 CTI_BASE_CONSTRUCTION_REFUNDS = 0.60; //--- The refund value of a structure (structure cost * x)
 CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
+CTI_BASE_CONSTRUCTION_LIMIT_WHITELIST = [CTI_SUPPLY_DEPOT]; //--- Whitelist structures from limit here. [XX,XX,XX]
 
 //--- Base: Defenses
 CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be manned within a given area
@@ -580,7 +581,7 @@ CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;//--- Bombs
 //--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
 CTI_BASE_DAMAGE_MAX_SHELL = 0.08;//--- Tanks
 CTI_BASE_DAMAGE_MAX_ARTY = 0.05;//--- Arty
-CTI_BASE_DAMAGE_MAX_SATCHEL = 0.5;//--- Satchels
+CTI_BASE_DAMAGE_MAX_SATCHEL = 1;//--- Satchels
 CTI_BASE_DAMAGE_MAX_CANNON = 0.002;//--- HE Cannons
 CTI_BASE_DAMAGE_MAX_MISSLE = 0.05;//--- Missiles from helis and others
 CTI_BASE_DAMAGE_MAX_FUEL = 0; //--- Players that trying to ram buildings, or if a unit blows up to bad spawn will not cause damage. 

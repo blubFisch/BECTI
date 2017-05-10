@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={24740.254,77.474861,13748.493};
-		dir[]={0.89858693,-0.40415597,0.17098235};
-		up[]={0.39705354,0.91467947,0.075551495};
-		aside[]={0.18693063,-3.3699325e-007,-0.98239541};
+		pos[]={24732.596,25.7006,13759.468};
+		dir[]={0.84262431,-0.46952364,-0.26371181};
+		up[]={0.4480961,0.8829174,-0.14023845};
+		aside[]={-0.29868129,-1.7287675e-007,-0.95436037};
 	};
 };
 binarizationWanted=0;
@@ -28802,7 +28802,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2592.5254,-5.1073856,15617.453};
+				position[]={2592.5254,-5.1073866,15617.453};
 			};
 			side="Empty";
 			class Attributes
@@ -28968,7 +28968,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2515.0254,-5.903863,15617.203};
+				position[]={2515.0254,-5.9038639,15617.203};
 				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
@@ -29736,7 +29736,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2593.7754,-5.8237505,15509.453};
+				position[]={2593.7754,-5.8237514,15509.453};
 			};
 			side="Empty";
 			class Attributes
@@ -33796,7 +33796,7 @@ class Mission
 			};
 			id=3717;
 			type="Land_Cargo20_brick_red_F";
-			atlOffset=0.0071339607;
+			atlOffset=0.013530254;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33837,7 +33837,7 @@ class Mission
 			};
 			id=3718;
 			type="Land_Cargo20_brick_red_F";
-			atlOffset=2.3830309;
+			atlOffset=2.3889704;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33879,7 +33879,7 @@ class Mission
 			};
 			id=3719;
 			type="Land_Cargo20_brick_red_F";
-			atlOffset=0.15349102;
+			atlOffset=0.15942574;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53671,7 +53671,7 @@ class Mission
 			};
 			id=4398;
 			type="Land_City2_8m_F";
-			atlOffset=1.7886314;
+			atlOffset=1.7886219;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -54931,7 +54931,7 @@ class Mission
 			};
 			id=4428;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.022293091;
+			atlOffset=0.022293568;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55183,7 +55183,7 @@ class Mission
 			};
 			id=4435;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.0015153885;
+			atlOffset=0.0015149117;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55225,7 +55225,7 @@ class Mission
 			};
 			id=4436;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.27821159;
+			atlOffset=0.27821207;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55392,7 +55392,7 @@ class Mission
 			};
 			id=4441;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.00021934509;
+			atlOffset=0.00021982193;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55464,19 +55464,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15195.558,9.6844654,7887.5835};
-				angles[]={0,1.571292,0};
+				position[]={15195.558,9.6847858,7887.583};
+				angles[]={0,1.571285,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Vikos,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [ComPlatform,this] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=4443;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.010345936;
+			atlOffset=0.010665417;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55560,7 +55560,7 @@ class Mission
 			};
 			id=4446;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.0049610138;
+			atlOffset=0.0049614906;
 			class CustomAttributes
 			{
 				class Attribute0

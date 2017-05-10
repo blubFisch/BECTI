@@ -307,8 +307,8 @@ CTI_Coin_UpdateBaseAreaLimits = {
 				_structures_kind = [(CTI_COIN_PARAM select 0) select 0, (CTI_P_SideJoined call CTI_CO_FNC_GetSideStructures)] call CTI_CO_FNC_GetSideStructuresByType;
 				_structure_count = count([_nearest_area, _structures_kind, CTI_BASE_AREA_RANGE, true] call CTI_CO_FNC_GetEntitiesInRange);
 				
-				//--- The structure limit has been reached for that base area
-				if (_structure_count >= (missionNamespace getVariable "CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT")) then {_valid = "structureLimitInArea"};
+				//--- The structure limit has been reached for that base area and not in whitelist
+				if (_structure_count >= (missionNamespace getVariable "CTI_BASE_AREA_STRUCTURES_IDENTICAL_LIMIT") && !(((CTI_COIN_PARAM select 0) select 0) in CTI_BASE_CONSTRUCTION_LIMIT_WHITELIST)) then {_valid = "structureLimitInArea"};
 			};
 		};
 	};
