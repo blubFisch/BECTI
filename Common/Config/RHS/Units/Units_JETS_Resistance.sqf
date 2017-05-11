@@ -51,6 +51,16 @@ _d = []; //--- Extra Distance (From Factory)
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+_c pushBack 'I_Plane_Fighter_04_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 67500;
+_t pushBack 50;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+
 
 //--- Naval Vehicles
 

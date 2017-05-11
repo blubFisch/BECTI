@@ -41,7 +41,7 @@ switch (CTI_FACTION_WEST) do {
 	};
 	case 1: { //NATO Pacific APEX (woodland)
 		//Set MHQ
-		missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_APC_Wheeled_01_cannon_F"];//use ofps skin
+		missionNamespace setVariable [format["CTI_%1_HQ", _side], "B_T_APC_Wheeled_01_cannon_F"];
 		//Set Infantry
 		missionNamespace setVariable [format["CTI_%1_Commander", _side], "B_spotter_F"];
 		missionNamespace setVariable [format["CTI_%1_Worker", _side], "B_spotter_F"];

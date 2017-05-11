@@ -14,8 +14,8 @@ _u pushBack 2;
 _p pushBack 600;
 */
 
-//***********************RHS Stuff************************
-//Handguns
+//------------------------------ GUNS ------------------------------
+//--- PISTOLS
 
 _i pushBack "rhs_weap_makarov_pm";
 _u pushBack 0;
@@ -45,7 +45,8 @@ _i pushBack "rhs_weap_pya";
 _u pushBack 0;
 _p pushBack 100;
 
-//SMG
+
+//--- SMG
 _i pushBack "rhs_weap_pp2000_folded";
 _u pushBack 0;
 _p pushBack 900;
@@ -55,10 +56,7 @@ _u pushBack 0;
 _p pushBack 900;
 
 
-//Shotgun
-
-
-//Rifles
+//--- ASSAULT RIFLES
 
 _i pushBack "rhs_weap_m38";
 _u pushBack 0;
@@ -421,7 +419,10 @@ _i pushBack "rhs_weap_ak74m_gp25";
 _u pushBack 2;
 _p pushBack 1200;
 
-//LMG
+
+//--- GRENADE LAUNCHERS
+
+//--- Machine Guns
 _i pushBack "rhs_weap_pkm";
 _u pushBack 3;
 _p pushBack 1200;
@@ -430,7 +431,9 @@ _i pushBack "rhs_weap_pkp";
 _u pushBack 4;
 _p pushBack 1800;
 
-//Sniper
+//--- DMR
+
+//--- SNIPERS	
 _i pushBack "rhs_weap_45th_asval";
 _u pushBack 2;
 _p pushBack 1050;
@@ -497,7 +500,9 @@ _u pushBack 4;
 _p pushBack 3000;
 
 
-//Launchers
+
+//------------------------------ LAUNCHERS	------------------------------
+//--- LAUNCHERS	
 _i pushBack "rhs_weap_rpg26";
 _u pushBack 0;
 _p pushBack 650;
@@ -514,8 +519,298 @@ _i pushBack "rhs_weap_igla";
 _u pushBack 3;
 _p pushBack 4000;
 
+//------------------------------ EXPLOSIVES	------------------------------
+//--- EXPLOSIVES	
 
-//Uniforms
+//------------------------------ ACCESSORIES ------------------------------
+//--- ATTACHMENTS
+
+_i pushBack "rhs_acc_ak5";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhs_1PN138";
+_u pushBack 2;
+_p pushBack 400;
+
+_i pushBack "rhsusf_m112x4_mag";
+_u pushBack 2;
+_p pushBack 800;
+
+_i pushBack "rhs_acc_dtk";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhs_acc_dtk3";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhs_acc_2dpZenit_ris";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhs_acc_perst3";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhs_acc_grip_rk2";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_grip_ffg2";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_grip_rk6";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_1p63";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_1p78";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "rhs_acc_1p78_3d";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_ak5";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dh520x56";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhs_acc_dtk";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk1";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk1983";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk1l";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk1p";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk2";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk3";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk4long";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk4screws";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_dtk4short";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_ekp1";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_ekp1b";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_ekp1c";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_ekp1d";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_npz";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pbs1";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pbs4";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pgs64";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pgs64_74u";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pgs64_74un";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhs_acc_pkas";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pkas_asval";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pkas_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_rakursPM";
+_u pushBack 2;
+_p pushBack 250;
+
+_i pushBack "rhs_acc_tgpa";
+_u pushBack 2;
+_p pushBack 500;
+
+_i pushBack "rhs_acc_tgpv";
+_u pushBack 2;
+_p pushBack 500;
+
+_i pushBack "rhs_acc_uuk";
+_u pushBack 0;
+_p pushBack 100;
+
+
+_i pushBack "rhs_acc_1p29";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "rhs_acc_1p29_asval";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_1p29_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhs_acc_pgo7v2"; //2x entries deleted below here by mistake
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhs_acc_pgo7v3";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhs_acc_pgo7v3_ak";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v3_asval";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v3_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v_ak";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v_asval";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pgo7v_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m2";
+_u pushBack 2;
+_p pushBack 400;
+
+_i pushBack "rhs_acc_pso1m21";
+_u pushBack 2;
+_p pushBack 450;
+
+_i pushBack "rhs_acc_pso1m21_ak";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m21_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m21_svd";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m2_ak";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m2_asval";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_acc_pso1m2_pkp";
+_u pushBack 1;
+_p pushBack 200;
+
+
+_i pushBack "rhs_acc_1pn93_1";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhs_acc_1pn93_2";
+_u pushBack 2;
+_p pushBack 300;
+
+//--- OPTICS 
+
+//--- ITEMS 
+
+_i pushBack "rhs_tr8_periscope_pip";
+_u pushBack 0;
+_p pushBack 200;
+
+_i pushBack "rhs_tr8_periscope";
+_u pushBack 0;
+_p pushBack 200;
+
+_i pushBack "rhs_mine_tm62m_mag";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhs_pdu4";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "NVGoggles_OPFOR";
+_u pushBack 1;
+_p pushBack 600;
+
+//--- SUPPRESSORS
+
+//------------------------------ UNIFORMS------------------------------
+//--- UNIFORMS	
 _i pushBack "rhs_chdkz_uniform_1";
 _u pushBack 0;
 _p pushBack 300;
@@ -621,7 +916,7 @@ _u pushBack 1;
 _p pushBack 400;
 
 
-//Vests
+//--- VESTS
 _i pushBack "rhs_6sh46";
 _u pushBack 0;
 _p pushBack 150;
@@ -970,8 +1265,7 @@ _i pushBack "rhs_6b13_Flora_crewofficer";
 _u pushBack 2;
 _p pushBack 300;
 
-
-//Backpacks
+//--- BACKPACKS
 _i pushBack "rhs_rpg_empty";
 _u pushBack 1;
 _p pushBack 300;
@@ -1061,7 +1355,9 @@ _u pushBack 3;
 _p pushBack 500;
 
 
-//Helmets
+//--- DISMANTLED WEAPONS
+
+//--- HeadGear	
 
 _i pushBack "rhs_balaclava";
 _u pushBack 0;
@@ -1447,293 +1743,12 @@ _i pushBack "rhs_zsh7a_mike_green_alt";
 _u pushBack 1;
 _p pushBack 100;
 
+//--- HATS	
 
-//Facemask
+//--- FACE
 
-//Gun Accessories
-
-_i pushBack "rhs_acc_ak5";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhs_1PN138";
-_u pushBack 2;
-_p pushBack 400;
-
-_i pushBack "rhsusf_m112x4_mag";
-_u pushBack 2;
-_p pushBack 800;
-
-_i pushBack "rhs_acc_dtk";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhs_acc_dtk3";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhs_acc_2dpZenit_ris";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhs_acc_perst3";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhs_acc_grip_rk2";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_grip_ffg2";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_grip_rk6";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_1p63";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_1p78";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "rhs_acc_1p78_3d";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_ak5";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dh520x56";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhs_acc_dtk";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk1";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk1983";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk1l";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk1p";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk2";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk3";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk4long";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk4screws";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_dtk4short";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_ekp1";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_ekp1b";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_ekp1c";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_ekp1d";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_npz";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pbs1";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pbs4";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pgs64";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pgs64_74u";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pgs64_74un";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhs_acc_pkas";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pkas_asval";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pkas_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_rakursPM";
-_u pushBack 2;
-_p pushBack 250;
-
-_i pushBack "rhs_acc_tgpa";
-_u pushBack 2;
-_p pushBack 500;
-
-_i pushBack "rhs_acc_tgpv";
-_u pushBack 2;
-_p pushBack 500;
-
-_i pushBack "rhs_acc_uuk";
-_u pushBack 0;
-_p pushBack 100;
-
-
-_i pushBack "rhs_acc_1p29";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "rhs_acc_1p29_asval";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_1p29_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhs_acc_pgo7v2"; //2x entries deleted below here by mistake
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhs_acc_pgo7v3";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhs_acc_pgo7v3_ak";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v3_asval";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v3_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v_ak";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v_asval";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pgo7v_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m2";
-_u pushBack 2;
-_p pushBack 400;
-
-_i pushBack "rhs_acc_pso1m21";
-_u pushBack 2;
-_p pushBack 450;
-
-_i pushBack "rhs_acc_pso1m21_ak";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m21_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m21_svd";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m2_ak";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m2_asval";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_acc_pso1m2_pkp";
-_u pushBack 1;
-_p pushBack 200;
-
-
-_i pushBack "rhs_acc_1pn93_1";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhs_acc_1pn93_2";
-_u pushBack 2;
-_p pushBack 300;
-
-
-//Equipment
-
-_i pushBack "rhs_tr8_periscope_pip";
-_u pushBack 0;
-_p pushBack 200;
-
-_i pushBack "rhs_tr8_periscope";
-_u pushBack 0;
-_p pushBack 200;
-
-_i pushBack "rhs_mine_tm62m_mag";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhs_pdu4";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "NVGoggles_OPFOR";
-_u pushBack 1;
-_p pushBack 600;
-
-//Ammo
+//------------------------------ MAGAZINES ------------------------------
+//--- MAGAZINES
 
 _i pushBack "rhs_mag_9x19mm_7n31_44";
 _u pushBack 0;
@@ -1867,6 +1882,8 @@ _i pushBack "rhs_5Rnd_338lapua_t5000";
 _u pushBack 0;
 _p pushBack 50;
 
+
+//--- THROWABLE / DEPLOYABLE
 //handgrenade
 _i pushBack "rhs_mag_fakel";
 _u pushBack 0;
@@ -1987,6 +2004,8 @@ _p pushBack 30;
 _i pushBack "rhs_VG40OP_white";
 _u pushBack 2;
 _p pushBack 30;
+
+//--- GRENADELAUNCHER / MISSILES
 
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";

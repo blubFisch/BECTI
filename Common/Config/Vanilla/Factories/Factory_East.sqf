@@ -10,38 +10,95 @@ _u = [];
 //--- Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {  
 		//CSAT Vanilla (arid)*********************
-		_u pushBack 'O_soldier_AR_F';
-		_u pushBack 'O_Soldier_A_F';
-		_u pushBack 'O_soldier_exp_F';
-		_u pushBack 'O_Soldier_GL_F';
-		_u pushBack 'O_soldier_M_F';
-		_u pushBack 'O_medic_F';
+		//--- CSAT Infantry (Arid)
 		_u pushBack 'O_Soldier_F';
-		_u pushBack 'O_soldier_PG_F';
-		_u pushBack 'O_engineer_F';
-		_u pushBack 'O_sniper_F';
-		_u pushBack 'O_soldier_repair_F';
-		_u pushBack 'O_soldier_LAT_F';
-		_u pushBack 'O_soldier_AA_F';
-		_u pushBack 'O_soldier_AT_F';
-		_u pushBack 'O_spotter_F';
-		_u pushBack 'O_soldier_UAV_F';
-		_u pushBack 'O_Helipilot_F';
-		_u pushBack 'O_crew_F';
-		_u pushBack 'O_Soldier_TL_F';
+		_u pushBack 'O_officer_F';
+		_u pushBack 'O_Soldier_lite_F';
+		_u pushBack 'O_Soldier_GL_F';
+		_u pushBack 'O_Soldier_AR_F';
 		_u pushBack 'O_Soldier_SL_F';
-		_u pushBack 'O_Diver_F';
-		_u pushBack 'O_Diver_TL_F';
-		_u pushBack 'O_Recon_Exp_F';
-		_u pushBack 'O_Recon_JTAC_F';
-		_u pushBack 'O_Recon_Medic_F';
-		_u pushBack 'O_Recon_F';
-		_u pushBack 'O_Recon_LAT_F';
-		_u pushBack 'O_Recon_TL_F';
-		_u pushBack 'O_Sniper_F';
-		_u pushBack 'O_ghillie_tna_F';
-		_u pushBack 'O_Spotter_F';
+		_u pushBack 'O_Soldier_TL_F';
+		_u pushBack 'O_soldier_M_F';
+		_u pushBack 'O_Soldier_LAT_F';
+		_u pushBack 'O_medic_F';
+		_u pushBack 'O_soldier_repair_F';
+		_u pushBack 'O_soldier_exp_F';
+		_u pushBack 'O_helipilot_F';
+		_u pushBack 'O_Soldier_A_F';
+		_u pushBack 'O_Soldier_AT_F';
+		_u pushBack 'O_Soldier_AA_F';
+		_u pushBack 'O_engineer_F';
+		_u pushBack 'O_crew_F';
+		_u pushBack 'O_Pilot_F';
+		_u pushBack 'O_helicrew_F';
+		_u pushBack 'O_soldier_PG_F';
+		_u pushBack 'O_soldier_UAV_F';
+		_u pushBack 'O_Survivor_F';
+		_u pushBack 'O_Soldier_unarmed_F';
+		_u pushBack 'O_Soldier_AAR_F';
+		_u pushBack 'O_Soldier_AAT_F';
+		_u pushBack 'O_Soldier_AAA_F';
+		_u pushBack 'O_support_MG_F';
+		_u pushBack 'O_support_GMG_F';
+		_u pushBack 'O_support_Mort_F';
+		_u pushBack 'O_support_AMG_F';
+		_u pushBack 'O_support_AMort_F';
+
 		//CSAT Vanilla (woodland)******************************************
+
+		//--- FIA Infantry (woodland)
+		_u pushBack 'O_G_Soldier_F';
+		_u pushBack 'O_G_Soldier_lite_F';
+		_u pushBack 'O_G_Soldier_SL_F';
+		_u pushBack 'O_G_Soldier_TL_F';
+		_u pushBack 'O_G_Soldier_AR_F';
+		_u pushBack 'O_G_medic_F';
+		_u pushBack 'O_G_engineer_F';
+		_u pushBack 'O_G_Soldier_exp_F';
+		_u pushBack 'O_G_Soldier_GL_F';
+		_u pushBack 'O_G_Soldier_M_F';
+		_u pushBack 'O_G_Soldier_LAT_F';
+		_u pushBack 'O_G_Soldier_A_F';
+		_u pushBack 'O_G_officer_F';
+		_u pushBack 'O_G_Soldier_unarmed_F';
+		_u pushBack 'O_G_Survivor_F';
+
+		//--- CSAT Infantry (Urban)
+		_u pushBack 'O_soldierU_F';
+		_u pushBack 'O_soldierU_AR_F';
+		_u pushBack 'O_soldierU_AAR_F';
+		_u pushBack 'O_soldierU_LAT_F';
+		_u pushBack 'O_soldierU_AT_F';
+		_u pushBack 'O_soldierU_AAT_F';
+		_u pushBack 'O_soldierU_AA_F';
+		_u pushBack 'O_soldierU_AAA_F';
+		_u pushBack 'O_soldierU_TL_F';
+		_u pushBack 'O_SoldierU_SL_F';
+		_u pushBack 'O_soldierU_medic_F';
+		_u pushBack 'O_soldierU_repair_F';
+		_u pushBack 'O_soldierU_exp_F';
+		_u pushBack 'O_engineer_U_F';
+		_u pushBack 'O_soldierU_M_F';
+		_u pushBack 'O_soldierU_A_F';
+		_u pushBack 'O_SoldierU_GL_F';
+		_u pushBack 'O_SoldierU_unarmed_F';
+
+		//--- CSAT Special Forces
+		_u pushBack 'O_diver_F';
+		_u pushBack 'O_diver_TL_F';
+		_u pushBack 'O_diver_exp_F';
+		_u pushBack 'O_spotter_F';
+		_u pushBack 'O_sniper_F';
+		_u pushBack 'O_recon_F';
+		_u pushBack 'O_recon_M_F';
+		_u pushBack 'O_recon_LAT_F';
+		_u pushBack 'O_recon_medic_F';
+		_u pushBack 'O_recon_exp_F';
+		_u pushBack 'O_recon_JTAC_F';
+		_u pushBack 'O_recon_TL_F';
+		_u pushBack 'O_ghillie_lsh_F';
+		_u pushBack 'O_ghillie_sard_F';
+		_u pushBack 'O_ghillie_ard_F';
 };
 //------------------------------ Heli ------------------------------
 //--- Infantry
@@ -61,29 +118,44 @@ if (CTI_APEX_ADDON  == 1 || CTI_APEX_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************		
 		//CSAT Pacific APEX (woodland)******************************************
-		_u pushBack 'O_T_soldier_AR_F';
+		//--- CSAT Infantry (Pacific)
 		_u pushBack 'O_T_Soldier_A_F';
-		_u pushBack 'O_T_Soldier_exp_F';
-		_u pushBack 'O_T_Soldier_GL_F';
-		_u pushBack 'O_T_Soldier_M_F';
+		_u pushBack 'O_T_Soldier_AAR_F';
+		_u pushBack 'O_T_Support_AMG_F';
+		_u pushBack 'O_T_Support_AMort_F';
+		_u pushBack 'O_T_Soldier_AAA_F';
+		_u pushBack 'O_T_Soldier_AAT_F';
+		_u pushBack 'O_T_Soldier_AR_F';
 		_u pushBack 'O_T_Medic_F';
-		_u pushBack 'O_T_Soldier_F';
-		_u pushBack 'O_T_Soldier_PG_F';
+		_u pushBack 'O_T_Crew_F';
 		_u pushBack 'O_T_Engineer_F';
-		_u pushBack 'O_T_Soldier_repair_F';
-		_u pushBack 'O_T_Soldier_LAT_F';
+		_u pushBack 'O_T_Soldier_Exp_F';
+		_u pushBack 'O_T_Soldier_GL_F';
+		_u pushBack 'O_T_Support_GMG_F';
+		_u pushBack 'O_T_Support_MG_F';
+		_u pushBack 'O_T_Support_Mort_F';
+		_u pushBack 'O_T_Helicrew_F';
+		_u pushBack 'O_T_Helipilot_F';
+		_u pushBack 'O_T_Soldier_M_F';
 		_u pushBack 'O_T_Soldier_AA_F';
 		_u pushBack 'O_T_Soldier_AT_F';
-		_u pushBack 'O_T_Soldier_UAV_F';
-		_u pushBack 'O_T_Helipilot_F';
-		_u pushBack 'O_T_Crew_F';
-		_u pushBack 'O_T_Soldier_TL_F';
+		_u pushBack 'O_T_Officer_F';
+		_u pushBack 'O_T_Soldier_PG_F';
+		_u pushBack 'O_T_Pilot_F';
+		_u pushBack 'O_T_Soldier_Repair_F';
+		_u pushBack 'O_T_Soldier_F';
+		_u pushBack 'O_T_Soldier_LAT_F';
 		_u pushBack 'O_T_Soldier_SL_F';
-		//CSAT Special Forces*********************
+		_u pushBack 'O_T_Soldier_TL_F';
+		_u pushBack 'O_T_Soldier_UAV_F';
+
+		//--- CSAT Special Forces (Pacific)
 		_u pushBack 'O_T_Diver_F';
+		_u pushBack 'O_T_Diver_Exp_F';
 		_u pushBack 'O_T_Diver_TL_F';
 		_u pushBack 'O_T_Recon_Exp_F';
 		_u pushBack 'O_T_Recon_JTAC_F';
+		_u pushBack 'O_T_Recon_M_F';
 		_u pushBack 'O_T_Recon_Medic_F';
 		_u pushBack 'O_T_Recon_F';
 		_u pushBack 'O_T_Recon_LAT_F';
@@ -91,14 +163,24 @@ if (CTI_APEX_ADDON  == 1 || CTI_APEX_ADDON >= 3) then {
 		_u pushBack 'O_T_Sniper_F';
 		_u pushBack 'O_T_ghillie_tna_F';
 		_u pushBack 'O_T_Spotter_F';
-		//CSAT Pacific Viper*********************
-		_u pushBack 'O_V_Soldier_Exp_ghex_F';
-		_u pushBack 'O_V_Soldier_JTAC_ghex_F';
-		_u pushBack 'O_V_Soldier_M_ghex_F';
+
+		//--- CSAT Viper Team
+		_u pushBack 'O_V_Soldier_hex_F';
+		_u pushBack 'O_V_Soldier_TL_hex_F';
+		_u pushBack 'O_V_Soldier_Exp_hex_F';
+		_u pushBack 'O_V_Soldier_Medic_hex_F';
+		_u pushBack 'O_V_Soldier_M_hex_F';
+		_u pushBack 'O_V_Soldier_LAT_hex_F';
+		_u pushBack 'O_V_Soldier_JTAC_hex_F';
+
+		//--- CSAT Viper Team (Pacific)
 		_u pushBack 'O_V_Soldier_ghex_F';
-		_u pushBack 'O_V_Soldier_Medic_ghex_F';
-		_u pushBack 'O_V_Soldier_LAT_ghex_F';
 		_u pushBack 'O_V_Soldier_TL_ghex_F';
+		_u pushBack 'O_V_Soldier_Exp_ghex_F';
+		_u pushBack 'O_V_Soldier_Medic_ghex_F';
+		_u pushBack 'O_V_Soldier_M_ghex_F';
+		_u pushBack 'O_V_Soldier_LAT_ghex_F';
+		_u pushBack 'O_V_Soldier_JTAC_ghex_F';	
 };
 //------------------------------ APEX VEHICLES ------------------------------
 if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
@@ -222,28 +304,29 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		_u pushBack 'I_C_Offroad_02_unarmed_F';
-		_u pushBack 'O_G_Offroad_01_F';	
-		_u pushBack 'O_Truck_02_medical_F';
-		_u pushBack 'O_Truck_03_medical_F';
-		_u pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
-		_u pushBack 'O_Truck_03_device_F';
+		//--- Light Vehicles
 		_u pushBack 'O_Quadbike_01_F';
-		_u pushBack "O_G_Offroad_01_armed_F";
-		_u pushBack 'C_Van_01_transport_F';
-		_u pushBack "O_APC_Wheeled_02_rcws_F";	
-
-		_u pushBack 'O_MRAP_02_gmg_F';	
-		_u pushBack 'O_MRAP_02_hmg_F';			
-		_u pushBack 'O_Truck_02_transport_F';
-		_u pushBack 'O_Truck_03_transport_F';
 		_u pushBack 'O_MRAP_02_F';
 		_u pushBack 'O_MRAP_02_hmg_F';
 		_u pushBack 'O_MRAP_02_gmg_F';
+		_u pushBack 'O_Truck_02_covered_F';
+		_u pushBack 'O_Truck_02_transport_F';
+		_u pushBack 'O_Truck_03_transport_F';
+	
+
+		_u pushBack 'I_C_Offroad_02_unarmed_F';
+		_u pushBack 'C_Van_01_transport_F';
+		_u pushBack 'O_G_Offroad_01_F';	
+		_u pushBack "O_G_Offroad_01_armed_F";
+		_u pushBack 'O_Truck_02_medical_F';
+		_u pushBack 'O_Truck_03_medical_F';
+		
+		_u pushBack "O_APC_Wheeled_02_rcws_F";	//marid
+		_u pushBack 'O_Truck_03_device_F';//nuke
+		//--- Autonomous
 		_u pushBack 'O_UGV_01_F';
 		_u pushBack 'O_UGV_01_rcws_F';
-		_u pushBack "O_MBT_02_arty_F";
-		
+
 		//CSAT Vanilla (woodland)******************************************
 };
 //------------------------------ Heli ------------------------------
@@ -251,6 +334,12 @@ if (CTI_HELI_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************	
 		//CSAT Pacific APEX (woodland)******************************************
+		_u pushBack 'Land_Pod_Heli_Transport_04_bench_F';
+		_u pushBack 'Land_Pod_Heli_Transport_04_covered_F';
+		_u pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
+		_u pushBack 'Land_Pod_Heli_Transport_04_bench_black_F';
+		_u pushBack 'Land_Pod_Heli_Transport_04_covered_black_F';
+		_u pushBack 'Land_Pod_Heli_Transport_04_medevac_black_F';	
 		//Russia CUP (Arid)*********************
 		//Russia RHS (Arid)*********************
 };	
@@ -259,22 +348,43 @@ if (CTI_APEX_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************		
 		//CSAT Pacific APEX (woodland)******************************************
-		_u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
-		_u pushBack 'O_T_Truck_03_medical_ghex_F';
-		_u pushBack 'O_T_MRAP_02_gmg_ghex_F';
+		_u pushBack 'O_G_Quadbike_01_F';
+		_u pushBack 'O_G_Offroad_01_F';
+		_u pushBack 'O_G_Offroad_01_armed_F';
+		_u pushBack 'O_G_Van_01_transport_F';
+		_u pushBack 'O_T_LSV_02_armed_F';
+		_u pushBack 'O_T_LSV_02_armed_viper_F';
+		_u pushBack 'O_T_LSV_02_unarmed_F';
+		_u pushBack 'O_T_LSV_02_unarmed_viper_F';
+		_u pushBack 'O_LSV_02_armed_F';
+		_u pushBack 'O_LSV_02_armed_viper_F';
+		_u pushBack 'O_LSV_02_unarmed_F';
+		_u pushBack 'O_LSV_02_unarmed_viper_F';
+		_u pushBack 'O_T_LSV_02_armed_black_F';
+		_u pushBack 'O_T_LSV_02_armed_ghex_F';
+		_u pushBack 'O_T_LSV_02_armed_arid_F';
+		_u pushBack 'O_T_LSV_02_unarmed_black_F';
+		_u pushBack 'O_T_LSV_02_unarmed_ghex_F';
+		_u pushBack 'O_T_LSV_02_unarmed_arid_F';
+		_u pushBack 'O_LSV_02_armed_black_F';
+		_u pushBack 'O_LSV_02_armed_ghex_F';
+		_u pushBack 'O_LSV_02_armed_arid_F';
+		_u pushBack 'O_LSV_02_unarmed_black_F';
+		_u pushBack 'O_LSV_02_unarmed_ghex_F';
+		_u pushBack 'O_LSV_02_unarmed_arid_F';
+		_u pushBack 'O_T_MRAP_02_ghex_F';
 		_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
-		_u pushBack 'O_T_MRAP_02_ghex_F';	
-		_u pushBack 'O_T_LSV_02_armed_F';		
-		_u pushBack 'O_T_LSV_02_unarmed_F';		
+		_u pushBack 'O_T_MRAP_02_gmg_ghex_F';
 		_u pushBack 'O_T_Quadbike_01_ghex_F';
 		_u pushBack 'O_T_Truck_03_transport_ghex_F';
 		_u pushBack 'O_T_Truck_03_covered_ghex_F';
-		_u pushBack 'O_T_MRAP_02_ghex_F';
-		_u pushBack 'O_T_MRAP_02_gmg_ghex_F';
-		_u pushBack 'O_T_MRAP_02_hmg_ghex_F';
+		_u pushBack 'O_T_Truck_03_device_ghex_F';//nuke
+
+		_u pushBack 'O_T_Truck_03_medical_ghex_F';	
+		_u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';//marid
+		//--- Autonomous
 		_u pushBack 'O_T_UGV_01_ghex_F';
-		_u pushBack 'O_T_UGV_01_rcws_ghex_F';
-		_u pushBack 'O_T_Truck_03_medical_ghex_F';
+		_u pushBack 'O_T_UGV_01_rcws_ghex_F';	
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
@@ -440,10 +550,11 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		_u pushBack "O_APC_Tracked_02_cannon_F";
-		_u pushBack "O_MBT_02_cannon_F";
-		_u pushBack "O_APC_Tracked_02_AA_F";
-		_u pushBack "O_MBT_02_arty_F";		
+		_u pushBack 'O_APC_Tracked_02_cannon_F';
+		_u pushBack 'O_APC_Tracked_02_AA_F';
+		_u pushBack 'O_MBT_02_cannon_F';
+		_u pushBack 'O_MBT_02_arty_F';
+		
 		//CSAT Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -457,12 +568,13 @@ if (CTI_HELI_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		//CSAT Vanilla (woodland)*********************	
-		_u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
+		//CSAT Vanilla (woodland)*********************
 		_u pushBack 'O_T_APC_Tracked_02_cannon_ghex_F';
-		_u pushBack 'O_T_MBT_02_cannon_ghex_F';
 		_u pushBack 'O_T_APC_Tracked_02_AA_ghex_F';
-		_u pushBack 'O_T_MBT_02_arty_ghex_F';		
+		_u pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
+		_u pushBack 'O_T_MBT_02_cannon_ghex_F';
+		_u pushBack 'O_T_MBT_02_arty_ghex_F';	
+		
 		//CSAT Pacific APEX (woodland)*********************
 };
 //------------------------------ JETS ------------------------------
@@ -600,27 +712,40 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then {
 		//CSAT Vanilla (arid)********************* 
-		_u pushBack 'O_Heli_Light_02_unarmed_F';
 		_u pushBack 'O_Heli_Light_02_F';
+		_u pushBack 'O_Heli_Light_02_unarmed_F';
+		_u pushBack 'O_Heli_Light_02_v2_F';
 		_u pushBack 'O_Heli_Attack_02_F';
 		_u pushBack 'O_Heli_Attack_02_black_F';
-		_u pushBack 'O_UAV_02_CAS_F';
-		_u pushBack 'O_UAV_02_F';
 		_u pushBack 'O_Plane_CAS_02_F';
-		_u pushBack "O_UAV_02_CAS_F";		
+
+		//--- Autonomous
+		_u pushBack 'O_UAV_02_F';
+		_u pushBack 'O_UAV_02_CAS_F';	
+		
 		//CSAT Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
 if (CTI_HELI_ADDON >= 2) then {
-		//CSAT Vanilla (arid)*********************
-		_u pushBack 'O_Heli_Transport_04_F';
-		_u pushBack "O_Heli_Transport_04_ammo_F";
-		_u pushBack "O_Heli_Transport_04_bench_F";
-		_u pushBack "O_Heli_Transport_04_covered_F";
-		_u pushBack "O_Heli_Transport_04_medevac_F";
-		_u pushBack "O_Heli_Transport_04_repair_F";		
+		//CSAT Vanilla (arid)*********************	
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_Heli_Transport_04_F';
+		_u pushBack 'O_Heli_Transport_04_ammo_F';
+		_u pushBack 'O_Heli_Transport_04_bench_F';
+		_u pushBack 'O_Heli_Transport_04_box_F';
+		_u pushBack 'O_Heli_Transport_04_covered_F';
+		_u pushBack 'O_Heli_Transport_04_fuel_F';
+		_u pushBack 'O_Heli_Transport_04_medevac_F';
+		_u pushBack 'O_Heli_Transport_04_repair_F';
+		_u pushBack 'O_Heli_Transport_04_black_F';
+		_u pushBack 'O_Heli_Transport_04_ammo_black_F';
+		_u pushBack 'O_Heli_Transport_04_bench_black_F';
+		_u pushBack 'O_Heli_Transport_04_box_black_F';
+		_u pushBack 'O_Heli_Transport_04_covered_black_F';
+		_u pushBack 'O_Heli_Transport_04_fuel_black_F';
+		_u pushBack 'O_Heli_Transport_04_medevac_black_F';
+		_u pushBack 'O_Heli_Transport_04_repair_black_F';	
 		//Russia CUP (Arid)*********************
 		//Russia RHS (Arid)*********************
 };	
@@ -628,22 +753,32 @@ if (CTI_HELI_ADDON >= 2) then {
 if (CTI_APEX_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		_u pushBack 'C_Plane_Civil_01_F';
-		_u pushBack "O_T_UAV_04_CAS_F";	
-		_u pushBack "O_T_VTOL_02_infantry_hex_F";
-		_u pushBack "O_T_VTOL_02_vehicle_hex_F";	
+	
 		//CSAT Vanilla (woodland)*********************	
-		_u pushBack "O_T_VTOL_02_infantry_F";
-		_u pushBack "O_T_VTOL_02_vehicle_F";	
+	
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_T_VTOL_02_infantry_F';
+		_u pushBack 'O_T_VTOL_02_infantry_hex_F';
+		_u pushBack 'O_T_VTOL_02_infantry_ghex_F';
+		_u pushBack 'O_T_VTOL_02_vehicle_F';
+		_u pushBack 'O_T_VTOL_02_vehicle_hex_F';
+		_u pushBack 'O_T_VTOL_02_vehicle_ghex_F';
+
+		//--- Autonomous
+		_u pushBack 'O_UAV_01_F';
+		_u pushBack 'O_T_UAV_04_CAS_F';
+		
 		//CSAT Vanilla APEX (winter)*********************
-	/*	_u pushBack "O_T_VTOL_02_infantry_grey_F";
-		_u pushBack "O_T_VTOL_02_vehicle_grey_F";*/		
+		_u pushBack "O_T_VTOL_02_infantry_grey_F";
+		_u pushBack "O_T_VTOL_02_vehicle_grey_F";	
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_Plane_Fighter_02_F';
+		_u pushBack 'O_Plane_Fighter_02_Stealth_F';	
 };	
 //--------------------------------- TANKS ------------------------------
 if (CTI_TANKS_ADDON >= 2) then {
@@ -816,13 +951,10 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		_u pushBack "O_G_Offroad_01_repair_F";
-		_u pushBack 'O_Truck_03_repair_F';
-		_u pushBack "O_Truck_03_covered_F";//FOB
+		_u pushBack 'O_G_Offroad_01_repair_F';
 		_u pushBack "O_Truck_02_box_F";//FOB LARGE*/
+		_u pushBack "O_Truck_03_covered_F";//FOB
 		_u pushBack "Land_Pod_Heli_Transport_04_repair_F";
-		_u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
-		_u pushBack "O_Truck_03_fuel_F";
 		_u pushBack "CTI_Salvager_East";				
 		//CSAT Vanilla (woodland)*********************		
 };
@@ -836,13 +968,12 @@ if (CTI_HELI_ADDON >= 2) then {
 };	
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then {
-		//CSAT Vanilla (arid)*********************
-		_u pushBack "O_Truck_03_repair_ghex_F";
-		_u pushBack "O_Truck_02_fuel_ghex_F";	
-		//CSAT Vanilla (woodland)*********************		
+		//CSAT Vanilla (arid)*********************	
+		//CSAT Vanilla (woodland)*********************				
 		//CSAT Pacific APEX (woodland)*********************
-		_u pushBack 'O_T_Truck_03_fuel_ghex_F';
-		_u pushBack 'O_T_Truck_03_repair_ghex_F';		
+		_u pushBack 'O_Truck_03_repair_F';
+		_u pushBack 'O_T_Truck_03_repair_ghex_F';
+		_u pushBack "O_Truck_03_repair_ghex_F";				
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then {
@@ -901,10 +1032,12 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//CSAT Vanilla (arid)*********************
+		_u pushBack 'O_Truck_02_Ammo_F';
 		/*_u pushBack "Box_East_Wps_F";*/
 		_u pushBack "O_supplyCrate_F";
 		_u pushBack "Land_Pod_Heli_Transport_04_ammo_F";	
-		_u pushBack "O_Truck_02_Ammo_F";		
+		_u pushBack 'O_Truck_02_fuel_F';
+		_u pushBack "Land_Pod_Heli_Transport_04_fuel_F";
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT (winter)*********************
 		//_u pushBack 'AAF_D_Truck_02_box_F';		
@@ -922,7 +1055,12 @@ if (CTI_APEX_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_Truck_03_ammo_F';
 		_u pushBack 'O_T_Truck_03_ammo_ghex_F';
+		_u pushBack 'O_G_Van_01_fuel_F';	
+		_u pushBack 'O_Truck_03_fuel_F';
+		_u pushBack 'O_T_Truck_03_fuel_ghex_F';
+		_u pushBack "O_Truck_02_fuel_ghex_F";		
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then {
@@ -997,8 +1135,13 @@ if (CTI_APEX_ADDON >= 2) then {
 		_u pushBack "I_C_Boat_Transport_02_F";		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_G_Boat_Transport_01_F';
+		_u pushBack 'O_T_Boat_Armed_01_hmg_F';
 		_u pushBack 'O_T_Boat_Transport_01_F';
-		_u pushBack 'O_T_Boat_Armed_01_hmg_F';		
+		_u pushBack 'O_T_Lifeboat';
+		_u pushBack 'O_G_Boat_Transport_02_F';
+
+		
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then {
@@ -1096,9 +1239,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 //------------------------------ APEX ------------------------------
 //---Infantry
 if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
-		//CSAT Vanilla (arid)*********************	
-		_u pushBack 'O_Soldier_F';
-		_u pushBack 'O_crew_F';		
+		//CSAT Vanilla (arid)*********************		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
 		_u pushBack 'O_T_Soldier_F';
@@ -1232,12 +1373,15 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON  >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		_u pushBack 'C_Boat_Civil_01_F';
-		_u pushBack 'O_Boat_Transport_01_F';
 		_u pushBack 'O_Boat_Armed_01_hmg_F';
+		_u pushBack 'O_Boat_Transport_01_F';
+		_u pushBack 'O_Lifeboat';
+		_u pushBack 'O_SDV_01_F';
+		_u pushBack 'C_Boat_Civil_01_F';
+
+
 		_u pushBack 'B_Boat_Armed_01_minigun_F';
-		_u pushBack 'C_Boat_Civil_01_rescue_F';
-		_u pushBack 'O_SDV_01_F';	
+		_u pushBack 'C_Boat_Civil_01_rescue_F';	
 		//CSAT Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------

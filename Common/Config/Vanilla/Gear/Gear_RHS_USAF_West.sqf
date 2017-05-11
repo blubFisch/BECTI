@@ -14,8 +14,8 @@ _u pushBack 2;
 _p pushBack 600;
 */
 
-//***********************RHS Stuff************************
-//Handguns
+//------------------------------ GUNS ------------------------------
+//--- PISTOLS
 _i pushBack "rhsusf_weap_m1911a1";
 _u pushBack 1;
 _p pushBack 450;
@@ -40,7 +40,7 @@ _i pushBack "rhsusf_m112x4_mag";
 _u pushBack 2;
 _p pushBack 800;
 
-//SMG
+//--- SMG
 _i pushBack "rhsusf_weap_MP7A2";
 _u pushBack 0;
 _p pushBack 600;
@@ -57,7 +57,6 @@ _i pushBack "rhsusf_weap_MP7A2_desert";
 _u pushBack 0;
 _p pushBack 600;
 
-
 //Shotgun
 _i pushBack "rhs_weap_M590_5RD";
 _u pushBack 0;
@@ -67,8 +66,7 @@ _i pushBack "rhs_weap_M590_8RD";
 _u pushBack 0;
 _p pushBack 550;
 
-
-//Rifles
+//--- ASSAULT RIFLES
 _i pushBack "rhs_weap_m4";  //2 entries missing below this by mistake
 _u pushBack 1;
 _p pushBack 400;
@@ -259,7 +257,9 @@ _u pushBack 2;
 _p pushBack 500;
 
 
-//LMG
+//--- GRENADE LAUNCHERS
+
+//--- Machine Guns
 _i pushBack "rhs_weap_lmg_minimipara";
 _u pushBack 2;
 _p pushBack 600;
@@ -312,8 +312,9 @@ _i pushBack "rhs_weap_minimi_para_railed";
 _u pushBack 2;
 _p pushBack 600;
 
+//--- DMR
 
-//Sniper
+//--- SNIPERS	
 _i pushBack "rhs_weap_m39";
 _u pushBack 2;
 _p pushBack 600;
@@ -397,7 +398,8 @@ _u pushBack 4;
 _p pushBack 3000;
 
 
-//Launchers
+//------------------------------ LAUNCHERS	------------------------------
+//--- LAUNCHERS	
 _i pushBack "rhs_weap_m72a7";
 _u pushBack 0;
 _p pushBack 650;
@@ -436,8 +438,385 @@ _i pushBack "rhs_weap_fgm148";
 _u pushBack 4;
 _p pushBack 8000;
 
+//------------------------------ EXPLOSIVES	------------------------------
+//--- EXPLOSIVES	
 
-//Uniforms
+//------------------------------ ACCESSORIES ------------------------------
+//--- ATTACHMENTS
+_i pushBack "rhsusf_acc_anpas13gv1";
+_u pushBack 4;
+_p pushBack 900;
+
+_i pushBack "rhsusf_acc_anpeq15";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhsusf_acc_anpeq15_bk";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhsusf_acc_anpeq15_bk_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_bk_light";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhsusf_acc_anpeq15_bk_light_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_bk_top";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_bk_top_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_light";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_light_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_top";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_top_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_wmx";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_wmx_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_wmx_light";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15_wmx_light_h";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15A";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15side";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpeq15side_bk";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_anpvs27";
+_u pushBack 2;
+_p pushBack 250;
+
+_i pushBack "rhsusf_acc_compm4";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ELCAN";
+_u pushBack 3;
+_p pushBack 350;
+
+_i pushBack "rhsusf_acc_ELCAN_ard";
+_u pushBack 3;
+_p pushBack 350;
+
+_i pushBack "rhsusf_acc_ELCAN_ard_pip";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_ELCAN_pip";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_EOTECH";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_eotech_552";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_eotech_552_d";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_eotech_xps3";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_grip1";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_grip2";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_grip2_tan";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_grip3";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_grip3_tan";
+_u pushBack 1;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_grip4";
+_u pushBack 0;
+_p pushBack 100;
+
+_i pushBack "rhsusf_acc_harris_bipod";
+_u pushBack 1;
+_p pushBack 150;
+
+_i pushBack "rhsusf_acc_harris_swivel";
+_u pushBack 1;
+_p pushBack 150;
+
+_i pushBack "rhs_weap_optic_smaw";
+_u pushBack 2;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_ACOG";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "rhsusf_acc_ACOG2";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG2_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG2_USMC";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "rhsusf_acc_ACOG2_USMC_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG3";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG3_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG3_USMC";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG3_USMC_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_anpvs27";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_ACOG_d";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_d_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_MDO";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_ACOG_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_RMR";
+_u pushBack 2;
+_p pushBack 500;
+
+_i pushBack "rhsusf_acc_ACOG_RMR_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_sa";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_sa_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_USMC";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_USMC_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_wd";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_ACOG_wd_pip";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_M2A1";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_nt4_black";
+_u pushBack 2;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_nt4_tan";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_omega9k";
+_u pushBack 1;
+_p pushBack 250;
+
+_i pushBack "rhsusf_acc_rotex_mp7";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_premier";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_premier_anpvs27";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_premier_low";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SF3P556";
+_u pushBack 1;
+_p pushBack 50;
+
+_i pushBack "rhsusf_acc_SFMB556";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SpecterDR";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SpecterDR_A";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "rhsusf_acc_SpecterDR_D";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SpecterDR_OD";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SpecterDR_pvs27";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_SR25S";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_wmx";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "rhsusf_acc_M952V";
+_u pushBack 1;
+_p pushBack 200;
+
+
+_i pushBack "rhsusf_acc_M8541";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_M8541_low";
+_u pushBack 3;
+_p pushBack 400;
+
+_i pushBack "rhsusf_acc_M8541_low_d";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhsusf_acc_M8541_low_wd"; //missing several deleted entries below this
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhsusf_acc_M2010S";
+_u pushBack 2;
+_p pushBack 300;
+
+_i pushBack "rhsusf_acc_anpas13gv1";
+_u pushBack 3;
+_p pushBack 500;
+
+//--- OPTICS 
+
+//--- ITEMS 
+
+_i pushBack "rhsusf_ANPVS_14";
+_u pushBack 3;
+_p pushBack 900;
+
+_i pushBack "rhsusf_ANPVS_15";
+_u pushBack 3;
+_p pushBack 900;
+
+_i pushBack "rhsusf_Rhino";
+_u pushBack 0;
+_p pushBack 200;
+
+_i pushBack "lerca_1200_black";
+_u pushBack 1;
+_p pushBack 200;
+
+_i pushBack "lerca_1200_tan";
+_u pushBack 2;
+_p pushBack 350;
+
+_i pushBack "Leupold_Mk4";
+_u pushBack 0;
+_p pushBack 300;
+
+
+//--- SUPPRESSORS
+
+//------------------------------ UNIFORMS------------------------------
+//--- UNIFORMS	
 _i pushBack "rhs_uniform_cu_ocp";
 _u pushBack 0;
 _p pushBack 250;
@@ -508,8 +887,7 @@ _u pushBack 1;
 _p pushBack 300;
 
 
-//Vests
-
+//--- VESTS
 _i pushBack "rhs_vest_commander";
 _u pushBack 0;
 _p pushBack 150;
@@ -630,8 +1008,7 @@ _i pushBack "rhsusf_spc_teamleader";
 _u pushBack 4;
 _p pushBack 600;
 
-
-//Backpacks
+//--- BACKPACKS
 
 _i pushBack "rhs_medic_bag";
 _u pushBack 0;
@@ -693,8 +1070,9 @@ _i pushBack "rhs_TOW_Tripod_Bag";
 _u pushBack 4;
 _p pushBack 500;
 
+//--- DISMANTLED WEAPONS
 
-//Helmets
+//--- HeadGear	
 _i pushBack "rhs_Booniehat_m81";
 _u pushBack 0;
 _p pushBack 25;
@@ -1137,378 +1515,12 @@ _u pushBack 1;
 _p pushBack 100;
 
 
-//Facemask
+//--- HATS	
 
-//Gun Accessories
-_i pushBack "rhsusf_acc_anpas13gv1";
-_u pushBack 4;
-_p pushBack 900;
+//--- FACE
 
-_i pushBack "rhsusf_acc_anpeq15";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhsusf_acc_anpeq15_bk";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhsusf_acc_anpeq15_bk_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_bk_light";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhsusf_acc_anpeq15_bk_light_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_bk_top";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_bk_top_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_light";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_light_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_top";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_top_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_wmx";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_wmx_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_wmx_light";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15_wmx_light_h";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15A";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15side";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpeq15side_bk";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_anpvs27";
-_u pushBack 2;
-_p pushBack 250;
-
-_i pushBack "rhsusf_acc_compm4";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ELCAN";
-_u pushBack 3;
-_p pushBack 350;
-
-_i pushBack "rhsusf_acc_ELCAN_ard";
-_u pushBack 3;
-_p pushBack 350;
-
-_i pushBack "rhsusf_acc_ELCAN_ard_pip";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_ELCAN_pip";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_EOTECH";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_eotech_552";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_eotech_552_d";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_eotech_xps3";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_grip1";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_grip2";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_grip2_tan";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_grip3";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_grip3_tan";
-_u pushBack 1;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_grip4";
-_u pushBack 0;
-_p pushBack 100;
-
-_i pushBack "rhsusf_acc_harris_bipod";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "rhsusf_acc_harris_swivel";
-_u pushBack 1;
-_p pushBack 150;
-
-_i pushBack "rhs_weap_optic_smaw";
-_u pushBack 2;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_ACOG";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "rhsusf_acc_ACOG2";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG2_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG2_USMC";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "rhsusf_acc_ACOG2_USMC_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG3";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG3_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG3_USMC";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG3_USMC_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_anpvs27";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_ACOG_d";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_d_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_MDO";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_ACOG_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_RMR";
-_u pushBack 2;
-_p pushBack 500;
-
-_i pushBack "rhsusf_acc_ACOG_RMR_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_sa";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_sa_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_USMC";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_USMC_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_wd";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_ACOG_wd_pip";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_M2A1";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_nt4_black";
-_u pushBack 2;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_nt4_tan";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_omega9k";
-_u pushBack 1;
-_p pushBack 250;
-
-_i pushBack "rhsusf_acc_rotex_mp7";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_premier";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_premier_anpvs27";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_premier_low";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SF3P556";
-_u pushBack 1;
-_p pushBack 50;
-
-_i pushBack "rhsusf_acc_SFMB556";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SpecterDR";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SpecterDR_A";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "rhsusf_acc_SpecterDR_D";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SpecterDR_OD";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SpecterDR_pvs27";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_SR25S";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_wmx";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "rhsusf_acc_M952V";
-_u pushBack 1;
-_p pushBack 200;
-
-
-_i pushBack "rhsusf_acc_M8541";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_M8541_low";
-_u pushBack 3;
-_p pushBack 400;
-
-_i pushBack "rhsusf_acc_M8541_low_d";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhsusf_acc_M8541_low_wd"; //missing several deleted entries below this
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhsusf_acc_M2010S";
-_u pushBack 2;
-_p pushBack 300;
-
-_i pushBack "rhsusf_acc_anpas13gv1";
-_u pushBack 3;
-_p pushBack 500;
-
-
-//Equipment
-
-_i pushBack "rhsusf_ANPVS_14";
-_u pushBack 3;
-_p pushBack 900;
-
-_i pushBack "rhsusf_ANPVS_15";
-_u pushBack 3;
-_p pushBack 900;
-
-_i pushBack "rhsusf_Rhino";
-_u pushBack 0;
-_p pushBack 200;
-
-_i pushBack "lerca_1200_black";
-_u pushBack 1;
-_p pushBack 200;
-
-_i pushBack "lerca_1200_tan";
-_u pushBack 2;
-_p pushBack 350;
-
-_i pushBack "Leupold_Mk4";
-_u pushBack 0;
-_p pushBack 300;
-
-//Ammo
+//------------------------------ MAGAZINES ------------------------------
+//--- MAGAZINES
 _i pushBack "rhs_200rnd_556x45_B_SAW";
 _u pushBack 0;
 _p pushBack 50;
@@ -1842,5 +1854,10 @@ _p pushBack 300;
 _i pushBack "rhs_mag_M397_HE-T";
 _u pushBack 2;
 _p pushBack 50;
+
+//--- THROWABLE / DEPLOYABLE
+
+//--- GRENADELAUNCHER / MISSILES
+
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf"; 

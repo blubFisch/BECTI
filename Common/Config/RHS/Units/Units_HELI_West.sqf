@@ -51,9 +51,40 @@ _d = []; //--- Extra Distance (From Factory)
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+
+_c pushBack 'B_Heli_Transport_03_unarmed_F'; 
+_p pushBack '';
+_n pushBack (format ["HURON Heavy Airlift (unarmed)"]);
+_o pushBack 12750;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'B_Heli_Transport_03_black_F'; 
+_p pushBack '';
+_n pushBack (format ["HURON Heavy Airlift (black)"]);
+_o pushBack 12750;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'B_Heli_Transport_03_unarmed_green_F'; 
+_p pushBack '';
+_n pushBack (format ["HURON Heavy Airlift (green)"]);
+_o pushBack 12750;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'B_Heli_Transport_03_F'; 
 _p pushBack '';
-_n pushBack (format ["HURON Heavy Airlift (DLC ONLY)"]);
+_n pushBack (format ["HURON Heavy Airlift"]);
 _o pushBack 12750;
 _t pushBack 40;
 _u pushBack 2;

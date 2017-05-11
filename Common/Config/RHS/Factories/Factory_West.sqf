@@ -10,35 +10,75 @@ _u = [];
 //--- Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_soldier_AR_F";
-		_u pushBack "B_HeavyGunner_F";
-		_u pushBack "B_Soldier_A_F";
-		_u pushBack "B_soldier_exp_F";
-		_u pushBack "B_Soldier_GL_F";
-		_u pushBack "B_soldier_M_F";
-		_u pushBack "B_medic_F";
-		_u pushBack "B_Soldier_F";
-		_u pushBack "B_soldier_PG_F";
-		_u pushBack "B_engineer_F";
-		_u pushBack "B_sniper_F";
-		_u pushBack "B_soldier_repair_F";
-		_u pushBack "B_soldier_LAT_F";
-		_u pushBack "B_soldier_AA_F";
-		_u pushBack "B_soldier_AT_F";
-		_u pushBack "B_spotter_F";
-		_u pushBack "B_soldier_UAV_F";
-		_u pushBack "B_Helipilot_F";
-		_u pushBack "B_crew_F";
-		_u pushBack "B_Soldier_TL_F";
-		_u pushBack "B_Soldier_SL_F";
-		_u pushBack 'B_Diver_F';
-		_u pushBack 'B_Diver_TL_F';
-		_u pushBack 'B_Recon_Exp_F';
-		_u pushBack 'B_Recon_JTAC_F';
-		_u pushBack 'B_Recon_Medic_F';
-		_u pushBack 'B_Recon_F';
-		_u pushBack 'B_Recon_LAT_F';
-		_u pushBack 'B_Recon_TL_F';	
+		//--- NATO Infantry (Arid)
+		_u pushBack 'B_Soldier_F';
+		_u pushBack 'B_RangeMaster_F';
+		_u pushBack 'B_Soldier_lite_F';
+		_u pushBack 'B_Soldier_GL_F';
+		_u pushBack 'B_soldier_AR_F';
+		_u pushBack 'B_Soldier_SL_F';
+		_u pushBack 'B_Soldier_TL_F';
+		_u pushBack 'B_soldier_M_F';
+		_u pushBack 'B_soldier_LAT_F';
+		_u pushBack 'B_medic_F';
+		_u pushBack 'B_soldier_repair_F';
+		_u pushBack 'B_soldier_exp_F';
+		_u pushBack 'B_Helipilot_F';
+		_u pushBack 'B_Soldier_A_F';
+		_u pushBack 'B_soldier_AT_F';
+		_u pushBack 'B_soldier_AA_F';
+		_u pushBack 'B_engineer_F';
+		_u pushBack 'B_crew_F';
+		_u pushBack 'B_officer_F';
+		_u pushBack 'B_Competitor_F';
+		_u pushBack 'B_Pilot_F';
+		_u pushBack 'B_helicrew_F';
+		_u pushBack 'B_soldier_PG_F';
+		_u pushBack 'B_soldier_UAV_F';
+		_u pushBack 'B_Survivor_F';
+		_u pushBack 'B_Soldier_unarmed_F';
+		_u pushBack 'B_soldier_AAR_F';
+		_u pushBack 'B_soldier_AAT_F';
+		_u pushBack 'B_soldier_AAA_F';
+		_u pushBack 'B_support_MG_F';
+		_u pushBack 'B_support_GMG_F';
+		_u pushBack 'B_support_Mort_F';
+		_u pushBack 'B_support_AMG_F';
+		_u pushBack 'B_support_AMort_F';
+
+		//--- NATO FIA (Arid)
+		_u pushBack 'B_G_Soldier_F';
+		_u pushBack 'B_G_Soldier_lite_F';
+		_u pushBack 'B_G_Soldier_SL_F';
+		_u pushBack 'B_G_Soldier_TL_F';
+		_u pushBack 'B_G_Soldier_AR_F';
+		_u pushBack 'B_G_medic_F';
+		_u pushBack 'B_G_engineer_F';
+		_u pushBack 'B_G_Soldier_exp_F';
+		_u pushBack 'B_G_Soldier_GL_F';
+		_u pushBack 'B_G_Soldier_M_F';
+		_u pushBack 'B_G_Soldier_LAT_F';
+		_u pushBack 'B_G_Soldier_A_F';
+		_u pushBack 'B_G_officer_F';
+		_u pushBack 'B_G_Soldier_unarmed_F';
+		_u pushBack 'B_G_Survivor_F';
+		_u pushBack 'I_G_Story_Protagonist_F';
+		_u pushBack 'I_G_Story_SF_Captain_F';
+		_u pushBack 'I_G_resistanceLeader_F';
+
+		//--- NATO Special Forces
+		_u pushBack 'B_diver_F';
+		_u pushBack 'B_diver_TL_F';
+		_u pushBack 'B_diver_exp_F';
+		_u pushBack 'B_recon_F';
+		_u pushBack 'B_recon_LAT_F';
+		_u pushBack 'B_recon_exp_F';
+		_u pushBack 'B_recon_medic_F';
+		_u pushBack 'B_recon_TL_F';
+		_u pushBack 'B_recon_M_F';
+		_u pushBack 'B_recon_JTAC_F';
+		_u pushBack 'B_spotter_F';
+		_u pushBack 'B_sniper_F';
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -58,45 +98,67 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3 ) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
-		_u pushBack 'B_T_soldier_AR_F';
+		//--- NATO Infantry (Pacific)
 		_u pushBack 'B_T_Soldier_A_F';
-		_u pushBack 'B_T_Soldier_exp_F';
-		_u pushBack 'B_T_Soldier_GL_F';
-		_u pushBack 'B_T_Soldier_M_F';
+		_u pushBack 'B_T_Soldier_AAR_F';
+		_u pushBack 'B_T_Support_AMG_F';
+		_u pushBack 'B_T_Support_AMort_F';
+		_u pushBack 'B_T_Soldier_AAA_F';
+		_u pushBack 'B_T_Soldier_AAT_F';
+		_u pushBack 'B_T_Soldier_AR_F';
 		_u pushBack 'B_T_Medic_F';
-		_u pushBack 'B_T_Soldier_F';
-		_u pushBack 'B_T_Soldier_PG_F';
+		_u pushBack 'B_T_Crew_F';
 		_u pushBack 'B_T_Engineer_F';
-		_u pushBack 'B_T_Soldier_repair_F';
-		_u pushBack 'B_T_Soldier_LAT_F';
+		_u pushBack 'B_T_Soldier_Exp_F';
+		_u pushBack 'B_T_Soldier_GL_F';
+		_u pushBack 'B_T_Support_GMG_F';
+		_u pushBack 'B_T_Support_MG_F';
+		_u pushBack 'B_T_Support_Mort_F';
+		_u pushBack 'B_T_Helicrew_F';
+		_u pushBack 'B_T_Helipilot_F';
+		_u pushBack 'B_T_soldier_M_F';
 		_u pushBack 'B_T_Soldier_AA_F';
 		_u pushBack 'B_T_Soldier_AT_F';
-		_u pushBack 'B_T_Soldier_UAV_F';
-		_u pushBack 'B_T_Helipilot_F';
-		_u pushBack 'B_T_Crew_F';
-		_u pushBack 'B_T_Soldier_TL_F';
+		_u pushBack 'B_T_Officer_F';
+		_u pushBack 'B_T_Soldier_PG_F';
+		_u pushBack 'B_T_Pilot_F';
+		_u pushBack 'B_T_Soldier_Repair_F';
+		_u pushBack 'B_T_Soldier_F';
+		_u pushBack 'B_T_Soldier_LAT_F';
 		_u pushBack 'B_T_Soldier_SL_F';
-		//Special Forces
+		_u pushBack 'B_T_Soldier_TL_F';
+		_u pushBack 'B_T_Soldier_UAV_F';
+
+		//--- NATO Special Forces (Pacific)
 		_u pushBack 'B_T_Diver_F';
+		_u pushBack 'B_T_Diver_Exp_F';
 		_u pushBack 'B_T_Diver_TL_F';
 		_u pushBack 'B_T_Recon_Exp_F';
 		_u pushBack 'B_T_Recon_JTAC_F';
+		_u pushBack 'B_T_Recon_M_F';
 		_u pushBack 'B_T_Recon_Medic_F';
 		_u pushBack 'B_T_Recon_F';
 		_u pushBack 'B_T_Recon_LAT_F';
 		_u pushBack 'B_T_Recon_TL_F';
 		_u pushBack 'B_T_Sniper_F';
-		_u pushBack 'B_T_ghillie_tna_F';
 		_u pushBack 'B_T_Spotter_F';
-		//--- Infantry CTRG Special
-		_u pushBack 'B_CTRG_Soldier_AR_tna_F';
+		_u pushBack 'B_T_ghillie_tna_F';
+
+		//--- NATO CTRG
+		_u pushBack 'B_CTRG_Soldier_TL_tna_F';
 		_u pushBack 'B_CTRG_Soldier_Exp_tna_F';
-		_u pushBack 'B_CTRG_Soldier_JTAC_tna_F';
-		_u pushBack 'B_CTRG_Soldier_M_tna_F';
 		_u pushBack 'B_CTRG_Soldier_Medic_tna_F';
+		_u pushBack 'B_CTRG_Soldier_M_tna_F';
 		_u pushBack 'B_CTRG_Soldier_tna_F';
 		_u pushBack 'B_CTRG_Soldier_LAT_tna_F';
-		_u pushBack 'B_CTRG_Soldier_TL_tna_F';		
+		_u pushBack 'B_CTRG_Soldier_AR_tna_F';
+		_u pushBack 'B_CTRG_Soldier_JTAC_tna_F';
+		_u pushBack 'B_CTRG_Miller_F';
+
+		//--- NATO Gendarmerie
+		_u pushBack 'B_GEN_Soldier_F';
+		_u pushBack 'B_GEN_Commander_F';
+		
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3 ) then {  
@@ -213,26 +275,30 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack 'B_G_Offroad_01_F';		
+		_u pushBack 'B_MRAP_01_F';
+		_u pushBack 'B_MRAP_01_gmg_F';
+		_u pushBack 'B_MRAP_01_hmg_F';
+		_u pushBack 'B_G_Offroad_01_F';
+		_u pushBack 'B_G_Offroad_01_armed_F';
+		_u pushBack 'B_Quadbike_01_F';
+		_u pushBack 'B_G_Quadbike_01_F';
+		_u pushBack 'B_Truck_01_transport_F';
+		_u pushBack 'B_Truck_01_covered_F';
+		_u pushBack 'B_G_Van_01_transport_F';
+
+		//--- Autonomous
+		_u pushBack 'B_UGV_01_F';
+		_u pushBack 'B_UGV_01_rcws_F';
+
 		_u pushBack 'C_Quadbike_01_F';	
-		_u pushBack "B_Quadbike_01_F";
-		_u pushBack "B_G_Offroad_01_armed_F";
 		_u pushBack "C_Van_01_transport_F";
-		_u pushBack "B_Truck_01_transport_F";
-		_u pushBack "B_Truck_01_medical_F";
-		_u pushBack 'B_Slingload_01_Medevac_F';
-		_u pushBack 'O_Truck_03_device_F';
-		_u pushBack "B_UGV_01_F";
-		_u pushBack "B_UGV_01_rcws_F";
+
 		_u pushback 'I_C_Offroad_02_unarmed_F';
-		_u pushBack "B_APC_Wheeled_01_cannon_F";
-		_u pushBack "B_MBT_01_arty_F";		
-		_u pushBack "B_MRAP_01_F";
-		_u pushBack "B_MRAP_01_hmg_F";
-		_u pushBack "B_MRAP_01_gmg_F";
+				
 		_u pushBack "B_Truck_01_medical_F";
 		_u pushBack 'B_Slingload_01_Medevac_F';
-		_u pushBack 'O_Truck_03_device_F';		
+		_u pushBack "B_APC_Wheeled_01_cannon_F";
+		_u pushBack 'O_Truck_03_device_F';//nuke
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -244,10 +310,37 @@ if (CTI_VANILLA_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack 'B_T_LSV_01_unarmed_F';
-		_u pushBack 'B_T_LSV_01_armed_F';		
+		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_T_LSV_01_armed_F';
+		_u pushBack 'B_T_LSV_01_armed_CTRG_F';
+		_u pushBack 'B_T_LSV_01_unarmed_F';
+		_u pushBack 'B_T_LSV_01_unarmed_CTRG_F';
+		_u pushBack 'B_LSV_01_armed_F';
+		_u pushBack 'B_LSV_01_unarmed_F';
+		_u pushBack 'B_CTRG_LSV_01_light_F';
+		_u pushBack 'B_LSV_01_armed_black_F';
+		_u pushBack 'B_LSV_01_armed_olive_F';
+		_u pushBack 'B_LSV_01_armed_sand_F';
+		_u pushBack 'B_LSV_01_unarmed_black_F';
+		_u pushBack 'B_LSV_01_unarmed_olive_F';
+		_u pushBack 'B_LSV_01_unarmed_sand_F';
+		_u pushBack 'B_T_LSV_01_armed_black_F';
+		_u pushBack 'B_T_LSV_01_armed_olive_F';
+		_u pushBack 'B_T_LSV_01_armed_sand_F';
+		_u pushBack 'B_T_LSV_01_unarmed_black_F';
+		_u pushBack 'B_T_LSV_01_unarmed_olive_F';
+		_u pushBack 'B_T_LSV_01_unarmed_sand_F';
+		_u pushBack 'B_T_MRAP_01_F';
+		_u pushBack 'B_T_MRAP_01_gmg_F';
+		_u pushBack 'B_T_MRAP_01_hmg_F';
+		_u pushBack 'B_GEN_Offroad_01_gen_F';
+		_u pushBack 'B_T_Quadbike_01_F';
+		_u pushBack 'B_T_Truck_01_mover_F';
+		_u pushBack 'B_T_Truck_01_box_F';
+		_u pushBack 'B_T_Truck_01_transport_F';
+		_u pushBack 'B_T_Truck_01_covered_F';	
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
@@ -461,12 +554,13 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_APC_Tracked_01_rcws_F";
-		_u pushBack "B_APC_Tracked_01_AA_F";
-		_u pushBack "B_MBT_01_cannon_F";
-		_u pushBack "B_MBT_01_TUSK_F";
-		_u pushBack "B_MBT_01_arty_F";
-		_u pushBack "B_MBT_01_mlrs_F";	
+		_u pushBack 'B_APC_Tracked_01_rcws_F';
+		_u pushBack 'B_APC_Tracked_01_AA_F';
+		_u pushBack 'B_MBT_01_cannon_F';
+		_u pushBack 'B_MBT_01_arty_F';
+		_u pushBack 'B_MBT_01_mlrs_F';
+		_u pushBack 'B_MBT_01_TUSK_F';		
+
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -480,6 +574,13 @@ if (CTI_APEX_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_T_APC_Tracked_01_AA_F';
+		_u pushBack 'B_T_APC_Tracked_01_rcws_F';
+		_u pushBack 'B_T_APC_Wheeled_01_cannon_F';
+		_u pushBack 'B_T_MBT_01_arty_F';
+		_u pushBack 'B_T_MBT_01_mlrs_Fy';
+		_u pushBack 'B_T_MBT_01_cannon_F';
+		_u pushBack 'B_T_MBT_01_TUSK_F';
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
@@ -654,36 +755,49 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Heli_Light_01_F";
-		_u pushBack "B_Heli_Transport_01_F";
-		_u pushBack "B_Heli_Light_01_armed_F";
-		_u pushBack "B_Heli_Attack_01_F";
-		_u pushBack "B_UAV_02_CAS_F";
-		_u pushBack "B_UAV_02_F";
-		_u pushBack "B_Plane_CAS_01_F";		
+		_u pushBack 'B_Heli_Light_01_F';
+		_u pushBack 'B_Heli_Light_01_armed_F';
+		_u pushBack 'B_Heli_Light_01_stripped_F';
+		_u pushBack 'B_Heli_Attack_01_F';
+		_u pushBack 'B_Heli_Transport_01_F';
+		_u pushBack 'B_Heli_Transport_01_camo_F';
+		_u pushBack 'B_Plane_CAS_01_F';
+	
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
 if (CTI_HELI_ADDON >= 2) then { 
-		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Heli_Transport_03_F";		
+		//NATO Vanilla (arid)*********************		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
+		_u pushBack 'B_Heli_Transport_03_F';
+		_u pushBack 'B_Heli_Transport_03_unarmed_F';
+		_u pushBack 'B_Heli_Transport_03_black_F';
+		_u pushBack 'B_Heli_Transport_03_unarmed_green_F';		
 };	
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
-		//NATO Vanilla (arid)*********************
-		_u pushBack 'B_T_VTOL_01_infantry_F';
-		_u pushBack 'B_T_VTOL_01_vehicle_F';
-		_u pushBack 'B_T_VTOL_01_armed_F';		
+		//NATO Vanilla (arid)*********************	
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_CTRG_Heli_Transport_01_sand_F';
+		_u pushBack 'B_CTRG_Heli_Transport_01_tropic_F';
+
+		_u pushBack 'B_T_VTOL_01_infantry_blue_F';
+		_u pushBack 'B_T_VTOL_01_infantry_olive_F';
+		_u pushBack 'B_T_VTOL_01_armed_blue_F';
+		_u pushBack 'B_T_VTOL_01_armed_olive_F';
+
+		//--- Autonomous
+		_u pushBack 'B_T_UAV_03_F';
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_Plane_Fighter_01_F';
+		_u pushBack 'B_Plane_Fighter_01_Stealth_F';
 };	
 //--------------------------------- TANKS ------------------------------
 if (CTI_TANKS_ADDON >= 2) then { 
@@ -859,14 +973,14 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_G_Offroad_01_repair_F";
-		_u pushBack "B_Truck_01_Repair_F";
+		_u pushBack 'B_APC_Tracked_01_CRV_F';
+		_u pushBack 'B_G_Offroad_01_repair_F';
+		_u pushBack 'B_Truck_01_Repair_F';
+
 		_u pushBack "B_Truck_01_mover_F";//FOB
 		_u pushBack "B_Truck_01_box_F";//FOB LARGE
 		_u pushBack "CTI_Salvager_West";
-		_u pushBack 'B_Slingload_01_Repair_F';
-		_u pushBack "B_Truck_01_fuel_F";
-		_u pushBack 'B_Slingload_01_Fuel_F';		
+		_u pushBack 'B_Slingload_01_Repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -880,6 +994,10 @@ if (CTI_APEX_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_T_Truck_01_ammo_F';
+		_u pushBack 'B_T_Truck_01_medical_F';
+		_u pushBack 'B_T_Truck_01_Repair_F';
+		_u pushBack 'B_T_APC_Tracked_01_CRV_F';
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
@@ -948,6 +1066,10 @@ if (CTI_VANILLA_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		_u pushBack "B_Truck_01_ammo_F";
 		_u pushBack 'B_Slingload_01_Ammo_F';
+		_u pushBack 'B_Truck_01_fuel_F';
+		_u pushBack 'B_G_Van_01_fuel_F';	
+		_u pushBack "B_Truck_01_fuel_F";
+		_u pushBack 'B_Slingload_01_Fuel_F';			
 		/*_u pushBack "Box_NATO_Wps_F";*/
 		_u pushBack "B_supplyCrate_F";		
 		//NATO Vanilla (woodland)*********************		
@@ -963,6 +1085,8 @@ if (CTI_APEX_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_T_Truck_01_fuel_F';		
+		
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 
@@ -1028,11 +1152,17 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
+		_u pushBack 'B_Boat_Armed_01_minigun_F';
+		_u pushBack 'B_Boat_Transport_01_F';
+		_u pushBack 'B_Lifeboat';
+		_u pushBack 'B_G_Boat_Transport_01_F';
+
+		_u pushBack 'B_G_Boat_Transport_02_F';
+		_u pushBack 'B_SDV_01_F';
+
 		_u pushBack "C_Boat_Civil_01_F";
-		_u pushBack "B_Boat_Transport_01_F";
-		_u pushBack "B_Boat_Armed_01_minigun_F";
 		_u pushBack 'C_Boat_Civil_01_police_F';
-		_u pushBack "B_SDV_01_F";		
+		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1048,6 +1178,9 @@ if (CTI_APEX_ADDON >= 2) then {
 		_u pushBack "I_C_Boat_Transport_02_F";		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_T_Boat_Armed_01_minigun_F';
+		_u pushBack 'B_T_Boat_Transport_01_F';
+		_u pushBack 'B_T_Lifeboat';
 };
 //------------------------------ JETS ------------------------------
 if (CTI_JETS_ADDON >= 2) then { 

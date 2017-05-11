@@ -43,6 +43,65 @@ _d = []; //--- Extra Distance (From Factory)
 //--- Infantry
 
 //--- Light Vehicles
+_c pushBack 'Land_Pod_Heli_Transport_04_bench_F';
+_p pushBack '';
+_n pushBack 'POD Bench ';
+_o pushBack 1500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'Land_Pod_Heli_Transport_04_covered_F';
+_p pushBack '';
+_n pushBack 'POD';
+_o pushBack 1500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
+_p pushBack '';
+_n pushBack (format ["3- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 7500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'Land_Pod_Heli_Transport_04_bench_black_F';
+_p pushBack '';
+_n pushBack 'POD Bench (Black)';
+_o pushBack 1500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'Land_Pod_Heli_Transport_04_covered_black_F';
+_p pushBack '';
+_n pushBack 'POD (Black)';
+_o pushBack 1500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'Land_Pod_Heli_Transport_04_medevac_black_F';
+_p pushBack '';
+_n pushBack (format ["3- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 7500;
+_t pushBack 25;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
 
 //--- Heavy Vehicles
 
@@ -62,6 +121,16 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'O_Heli_Transport_04_black_F'; 
+_p pushBack '';
+_n pushBack 'Taru Lift (Black)';
+_o pushBack 9000;
+_t pushBack 40;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'O_Heli_Transport_04_ammo_F'; 
 _p pushBack '';
 _n pushBack 'Taru Ammo';
@@ -72,7 +141,47 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
 
+_c pushBack 'O_Heli_Transport_04_ammo_black_F'; 
+_p pushBack '';
+_n pushBack 'Taru Ammo (Black)';
+_o pushBack 29750;
+_t pushBack 40;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "service-ammotruck";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_fuel_F';
+_p pushBack '';
+_n pushBack 'Taru Lift Fuel';
+_o pushBack 5000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "service-fueltruck";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_fuel_black_F';
+_p pushBack '';
+_n pushBack 'Taru Lift Fuel (Black)';
+_o pushBack 5000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "service-fueltruck";
+_d pushBack 0;
+
 _c pushBack 'O_Heli_Transport_04_bench_F'; 
+_p pushBack '';
+_n pushBack 'Taru Unit Transport';
+_o pushBack 12750;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_bench_black_F'; 
 _p pushBack '';
 _n pushBack 'Taru Unit Transport';
 _o pushBack 12750;
@@ -92,7 +201,27 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'O_Heli_Transport_04_covered_black_F'; 
+_p pushBack '';
+_n pushBack (format ["Covered Trans(DLC ONLY)"]);
+_o pushBack 12750;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 _c pushBack 'O_Heli_Transport_04_medevac_F'; 
+_p pushBack '';
+_n pushBack (format ["AirRspwn(DLC ONLY)- Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 30000;
+_t pushBack 40;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "service-medic";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_medevac_black_F'; 
 _p pushBack '';
 _n pushBack (format ["AirRspwn(DLC ONLY)- Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 30000;
@@ -111,6 +240,37 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_repair_black_F'; 
+_p pushBack '';
+_n pushBack (format ["TaruRepr(DLC ONLY)"]);
+_o pushBack 55000;
+_t pushBack 40;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "service-repairtruck";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_box_F'; 
+_p pushBack '';
+_n pushBack 'Taru Lift Box';
+_o pushBack 9000;
+_t pushBack 40;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'O_Heli_Transport_04_box_black_F'; 
+_p pushBack '';
+_n pushBack 'Taru Lift Box (Black)';
+_o pushBack 9000;
+_t pushBack 40;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
 
 //--- Naval Vehicles
 

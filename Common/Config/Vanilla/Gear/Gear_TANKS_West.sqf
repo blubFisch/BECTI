@@ -14,7 +14,56 @@ _u pushBack 2;
 _p pushBack 600;
 */
 
-//************************HELI DLC Stuff************************
+//------------------------------ GUNS ------------------------------
+//--- PISTOLS
 
+//--- SMG
+
+//--- ASSAULT RIFLES
+
+//--- GRENADE LAUNCHERS
+
+//--- Machine Guns
+
+//--- DMR
+
+//--- SNIPERS	
+
+//------------------------------ LAUNCHERS	------------------------------
+//--- LAUNCHERS	
+
+//------------------------------ EXPLOSIVES	------------------------------
+//--- EXPLOSIVES	
+
+//------------------------------ ACCESSORIES ------------------------------
+//--- ATTACHMENTS
+
+//--- OPTICS 
+
+//--- ITEMS 
+
+//--- SUPPRESSORS
+
+//------------------------------ UNIFORMS------------------------------
+//--- UNIFORMS	
+
+//--- VESTS
+
+//--- BACKPACKS
+
+//--- DISMANTLED WEAPONS
+
+//--- HeadGear	
+
+//--- HATS	
+
+//--- FACE
+
+//------------------------------ MAGAZINES ------------------------------
+//--- MAGAZINES
+
+//--- THROWABLE / DEPLOYABLE
+
+//--- GRENADELAUNCHER / MISSILES
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf"; 

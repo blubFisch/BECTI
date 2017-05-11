@@ -139,6 +139,12 @@ if (CTI_FACTION_MODE == 0) then {
 		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_HELI_West.sqf";
 		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_HELI_East.sqf";
 	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_East.sqf";
+	};	
 	//--- APEX UNITS
 	if (CTI_APEX_ADDON > 0) then { 
 		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_APEX_Resistance.sqf";
@@ -225,6 +231,12 @@ if (CTI_FACTION_MODE == 1) then {
 		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_HELI_West.sqf";
 		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_HELI_East.sqf";
 	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_East.sqf";
+	};		
 	//--- APEX UNITS
 	if (CTI_APEX_ADDON > 0) then { 
 		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_APEX_Resistance.sqf";
@@ -311,6 +323,12 @@ if (CTI_FACTION_MODE == 2) then {
 		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_HELI_West.sqf";
 		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_HELI_East.sqf";
 	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_East.sqf";
+	};		
 	//--- APEX UNITS
 	if (CTI_APEX_ADDON > 0) then { 
 		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_APEX_Resistance.sqf";
@@ -397,6 +415,12 @@ if (CTI_FACTION_MODE == 3) then {
 		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_HELI_West.sqf";
 		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_HELI_East.sqf";
 	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_East.sqf";
+	};		
 	//--- APEX UNITS
 	if (CTI_APEX_ADDON > 0) then { 
 		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_APEX_Resistance.sqf";

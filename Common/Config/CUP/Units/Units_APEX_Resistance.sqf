@@ -40,6 +40,15 @@ _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 
+//--- GUER AAF (arid)
+
+//--- GUER FIA (Woodland)
+
+//--- GUER Special Forces
+
+//--- GUER Syndikat Paramilitary
+
+
 //--- Infantry
 //--- Syndikat
 _c pushBack 'I_C_Helipilot_F';
@@ -132,7 +141,179 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 
+_c pushBack 'I_C_Soldier_Camo_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_base_unarmed_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+
+//--- GUER Bandits
+_c pushBack 'I_C_Soldier_Bandit_1_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_2_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_3_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_4_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_5_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_6_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_7_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Soldier_Bandit_8_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Pilot_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 120;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+
+
 //--- Light Vehicles
+_c pushBack 'I_C_Offroad_02_unarmed_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Offroad_02_unarmed_brown_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Offroad_02_unarmed_olive_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Van_01_transport_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Van_01_transport_brown_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Van_01_transport_olive_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
 
 //--- Heavy Vehicles
 
@@ -141,7 +322,47 @@ _d pushBack 0;
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+_c pushBack 'I_C_Heli_Light_01_civil_F';
+_p pushBack '';
+_n pushBack 'Scout Plane'; 
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Plane_Civil_01_F';
+_p pushBack '';
+_n pushBack 'Scout Plane'; 
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
 
 //--- Naval Vehicles
+_c pushBack 'I_C_Boat_Transport_01_F';
+_p pushBack '';
+_n pushBack ["%1 (Pacific)"];
+_o pushBack 275;
+_t pushBack 15;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_NAVAL;
+_s pushBack "";
+_d pushBack 0;
+
+_c pushBack 'I_C_Boat_Transport_02_F';
+_p pushBack '';
+_n pushBack ["%1 (Pacific)"];
+_o pushBack 275;
+_t pushBack 15;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_NAVAL;
+_s pushBack "";
+_d pushBack 0;
+
+
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

@@ -28,168 +28,175 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true //--- Base Defense Upgrade	
 ]];
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-    [1000,1000,1000,1000], //--- Gear
-	[500,1000,1500,2000], //--- Barracks
-	[1000,2000,2000,3000,4000], //--- Light
-	[2000], //--- Heavy
-	[1500,2000], //--- Naval
-	[2500,5000], //--- Air
-	[1500], //--- Air FFAR
-	[1500], //--- Air DAR
-	[1500], //--- Air AT
-	[1500], //--- Air AA
-	[1500], //--- Air CM
-	[2500, 5000, 7500], //--- Towns Depots
-	[1000, 2000], //--- Halo
-	[1000, 1000, 1000], //--- Air Radar
-	[1000, 1000, 1000], //--- Art Radar
-	[1000,2000,3000], //--- Respawn Range
-	[1500,2000], //--- LVOSS System
-	[1000,2000,3000,4000], //--- ERA System
-	[1500,5000], //--- Satellite
-	[40000], //--- Nuke
-	[1000, 2000, 4000], //--- Supply Rate
-	[4000, 5000, 6000, 7000], //--- Base Health
-	[500, 1000, 1500] //--- Base Defense
-]];
+	//------------------------------ Guerilla Mode or Zombie Mode	------------------------------
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
+		[1000,1000,1000,1000], //--- Gear
+		[500,1000,1500,2000], //--- Barracks
+		[1000,2000,2000,3000,4000], //--- Light
+		[2000], //--- Heavy
+		[1500,2000], //--- Naval
+		[2500,5000], //--- Air
+		[1500], //--- Air FFAR
+		[1500], //--- Air DAR
+		[1500], //--- Air AT
+		[1500], //--- Air AA
+		[1500], //--- Air CM
+		[2500, 5000, 7500], //--- Towns Depots
+		[1000, 2000], //--- Halo
+		[1000, 1000, 1000], //--- Air Radar
+		[1000, 1000, 1000], //--- Art Radar
+		[1000,2000,3000], //--- Respawn Range
+		[1500,2000], //--- LVOSS System
+		[1000,2000,3000,4000], //--- ERA System
+		[1500,5000], //--- Satellite
+		[40000], //--- Nuke
+		[1000, 2000, 4000], //--- Supply Rate
+		[4000, 5000, 6000, 7000], //--- Base Health
+		[500, 1000, 1500] //--- Base Defense
+	]];
 } else {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-    [1000,1500,3000,3500], //--- Gear
-	[1000,1500,3000,4000], //--- Barracks
-	[2000,2250,3500,4500,20000], //--- Light
-	[3500,4500,6000,8000], //--- Heavy
-	[1500,3000], //--- Naval
-	[4000,6000,8000,10000,12000], //--- Air
-	[10], //--- Air FFAR
-	[10], //--- Air DAR
-	[10], //--- Air AT
-	[10], //--- Air AA
-	[10], //--- Air CM
-	[1500,3000,4500], //--- Forward Logistics
-	[1000,2000], //--- Halo
-	[1000,1500,2000], //--- Air Radar
-	[1000,1500,2000], //--- Art Radar
-	[1000,1500,2500], //--- Respawn Range
-	[1500,2000], //--- LVOSS System
-	[2000,4000,6000,8000], //--- ERA System
-	[4000,20000], //--- Satellite
-	[40000], //--- Nuke
-	[3000,5500,8000], //--- Supply Rate
-	[3000,6000,9000,12000], //--- Base Health
-	[500,1000,5000] //--- Base Defense
-]];
+	//------------------------------ Normal Mode	------------------------------
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
+		[1000,1500,3000,3500], //--- Gear
+		[1000,1500,3000,4000], //--- Barracks
+		[2000,2250,3500,4500,20000], //--- Light
+		[3500,4500,6000,8000], //--- Heavy
+		[1500,3000], //--- Naval
+		[4000,6000,8000,10000,12000], //--- Air
+		[10], //--- Air FFAR
+		[10], //--- Air DAR
+		[10], //--- Air AT
+		[10], //--- Air AA
+		[10], //--- Air CM
+		[1500,3000,4500], //--- Forward Logistics
+		[1000,2000], //--- Halo
+		[1000,1500,2000], //--- Air Radar
+		[1000,1500,2000], //--- Art Radar
+		[1000,1500,2500], //--- Respawn Range
+		[1500,2000], //--- LVOSS System
+		[2000,4000,6000,8000], //--- ERA System
+		[4000,20000], //--- Satellite
+		[40000], //--- Nuke
+		[3000,5500,8000], //--- Supply Rate
+		[3000,6000,9000,12000], //--- Base Health
+		[500,1000,5000] //--- Base Defense
+	]];
 };
 
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
-	3, //--- Gear
-	3, //--- Barracks
-	5, //--- Light
-	0, //--- Heavy
-	2, //--- Naval
-	2, //--- Air
-	0, //--- Air FFAR
-	0, //--- Air DAR
-	0, //--- Air AT
-	0, //--- Air AA
-	1, //--- Air CM
-	2, //--- Towns Depots
-	0, //--- Halo
-	1, //--- Air Radar
-	1, //--- Art Radar
-	3, //--- Respawn Range
-	2, //--- LVOSS System
-	2, //--- ERA System
-	1, //--- Satellite
-	1, //--- Nuke
-	3, //--- Supply Rate
-	2, //--- Base Health
-	2 //--- Base Defense
-]];
+	//------------------------------ Guerilla Mode or Zombie Mode	------------------------------
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
+		3, //--- Gear
+		3, //--- Barracks
+		5, //--- Light
+		0, //--- Heavy
+		2, //--- Naval
+		2, //--- Air
+		0, //--- Air FFAR
+		0, //--- Air DAR
+		0, //--- Air AT
+		0, //--- Air AA
+		1, //--- Air CM
+		2, //--- Towns Depots
+		0, //--- Halo
+		1, //--- Air Radar
+		1, //--- Art Radar
+		3, //--- Respawn Range
+		2, //--- LVOSS System
+		2, //--- ERA System
+		1, //--- Satellite
+		1, //--- Nuke
+		3, //--- Supply Rate
+		2, //--- Base Health
+		2 //--- Base Defense
+	]];
 } else {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
-	4, //--- Gear
-	4, //--- Barracks
-	5, //--- Light
-	4, //--- Heavy
-	2, //--- Naval
-	5, //--- Air
-	1, //--- Air FFAR
-	1, //--- Air DAR
-	1, //--- Air AT
-	1, //--- Air AA
-	1, //--- Air CM
-	3, //--- Towns Depots
-	2, //--- Halo
-	3, //--- Air Radar
-	3, //--- Art Radar
-	3, //--- Respawn Range
-	2, //--- LVOSS System
-	4, //--- ERA System
-	2, //--- Satellite
-	1, //--- Nuke
-	3, //--- Supply Rate
-	4, //--- Base Health
-	3 //--- Base Defense
-]];
+	//------------------------------ Normal Mode	------------------------------	
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
+		4, //--- Gear
+		4, //--- Barracks
+		5, //--- Light
+		4, //--- Heavy
+		2, //--- Naval
+		5, //--- Air
+		1, //--- Air FFAR
+		1, //--- Air DAR
+		1, //--- Air AT
+		1, //--- Air AA
+		1, //--- Air CM
+		3, //--- Towns Depots
+		2, //--- Halo
+		3, //--- Air Radar
+		3, //--- Art Radar
+		3, //--- Respawn Range
+		2, //--- LVOSS System
+		4, //--- ERA System
+		2, //--- Satellite
+		1, //--- Nuke
+		3, //--- Supply Rate
+		4, //--- Base Health
+		3 //--- Base Defense
+	]];
 };
 
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-	[[],[],[],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
-	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
-	[[],[]], //--- Naval
-	[[],[],[],[],[]], //--- Air
-	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AT
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AA
-	[[CTI_UPGRADE_AIR, 1]], //--- Air CM
-	[[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3]], //--- Towns Depots
-	[[CTI_UPGRADE_AIR, 1],[CTI_UPGRADE_AIR, 2]], //--- Halo
-	[[],[],[]], //--- Air Radar
-	[[],[],[]], //--- Art Radar
-	[[],[],[]], //--- Respawn Range
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
-	[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
-	[[CTI_UPGRADE_AIR, 1], []], //--- Satellite
-	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
-	[[],[],[]], //--- Supply Rate
-	[[],[],[],[]], //--- Base Health
-	[[],[],[]] //--- Base Defense
-]];
+	//------------------------------ Guerilla Mode or Zombie Mode	------------------------------	
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
+		[[],[],[],[]], //--- Gear
+		[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
+		[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
+		[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
+		[[],[]], //--- Naval
+		[[],[],[],[],[]], //--- Air
+		[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
+		[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
+		[[CTI_UPGRADE_AIR, 1]], //--- Air AT
+		[[CTI_UPGRADE_AIR, 1]], //--- Air AA
+		[[CTI_UPGRADE_AIR, 1]], //--- Air CM
+		[[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3]], //--- Towns Depots
+		[[CTI_UPGRADE_AIR, 1],[CTI_UPGRADE_AIR, 2]], //--- Halo
+		[[],[],[]], //--- Air Radar
+		[[],[],[]], //--- Art Radar
+		[[],[],[]], //--- Respawn Range
+		[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
+		[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
+		[[CTI_UPGRADE_AIR, 1], []], //--- Satellite
+		[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
+		[[],[],[]], //--- Supply Rate
+		[[],[],[],[]], //--- Base Health
+		[[],[],[]] //--- Base Defense
+	]];
 } else {
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-	[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
-	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
-	[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
-	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2]], //--- Naval
-	[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
-	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AT
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AA
-	[[CTI_UPGRADE_AIR, 1]], //--- Air CM
-	[[CTI_UPGRADE_BARRACKS,2],[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- Towns Depots
-	[[],[CTI_UPGRADE_AIR, 1]], //--- Halo
-	[[],[],[]], //--- Air Radar
-	[[],[],[]], //--- Art Radar
-	[[],[],[]], //--- Respawn Range
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
-	[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
-	[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 3]], //--- Satellite
-	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
-	[[],[],[]], //--- Supply Rate
-	[[],[],[],[]], //--- Base Health
-	[[],[],[]] //--- Base Defense
-]];
+	//------------------------------ Normal Mode	------------------------------
+	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
+		[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
+		[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
+		[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
+		[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
+		[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2]], //--- Naval
+		[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
+		[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
+		[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
+		[[CTI_UPGRADE_AIR, 1]], //--- Air AT
+		[[CTI_UPGRADE_AIR, 1]], //--- Air AA
+		[[CTI_UPGRADE_AIR, 1]], //--- Air CM
+		[[CTI_UPGRADE_BARRACKS,2],[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- Towns Depots
+		[[],[CTI_UPGRADE_AIR, 1]], //--- Halo
+		[[],[],[]], //--- Air Radar
+		[[],[],[]], //--- Art Radar
+		[[],[],[]], //--- Respawn Range
+		[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
+		[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
+		[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 3]], //--- Satellite
+		[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
+		[[],[],[]], //--- Supply Rate
+		[[],[],[],[]], //--- Base Health
+		[[],[],[]] //--- Base Defense
+	]];
 };
 
 if (CTI_DEV_MODE > 0) then { 
+	//------------------------------ DEV Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 		[1, 1, 1, 1], //--- Gear
 		[1, 1, 1, 1], //--- Barracks
@@ -216,6 +223,7 @@ if (CTI_DEV_MODE > 0) then {
 		[1,1,1] //--- Base Defense
 	]];
 }else {
+	//------------------------------ Guerilla Mode or Zombie Mode	------------------------------
 	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 			[30,60,120,180], //--- Gear
@@ -243,6 +251,7 @@ if (CTI_DEV_MODE > 0) then {
 			[60,120,180] //--- Base Defense
 		]];
 	} else {
+		//------------------------------ Normal Mode	------------------------------
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 			[30,60,120,180], //--- Gear
 			[60,120,180,240], //--- Barracks

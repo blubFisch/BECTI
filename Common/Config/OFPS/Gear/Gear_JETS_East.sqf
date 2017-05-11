@@ -14,6 +14,58 @@ _u pushBack 2;
 _p pushBack 600;
 */
 
+//------------------------------ GUNS ------------------------------
+//--- PISTOLS
+
+//--- SMG
+
+//--- ASSAULT RIFLES
+
+//--- GRENADE LAUNCHERS
+
+//--- Machine Guns
+
+//--- DMR
+
+//--- SNIPERS	
+
+//------------------------------ LAUNCHERS	------------------------------
+//--- LAUNCHERS	
+
+//------------------------------ EXPLOSIVES	------------------------------
+//--- EXPLOSIVES	
+
+//------------------------------ ACCESSORIES ------------------------------
+//--- ATTACHMENTS
+
+//--- OPTICS 
+
+//--- ITEMS 
+
+//--- SUPPRESSORS
+
+//------------------------------ UNIFORMS------------------------------
+//--- UNIFORMS	
+
+//--- VESTS
+
+//--- BACKPACKS
+
+//--- DISMANTLED WEAPONS
+
+//--- HeadGear	
+
+//--- HATS	
+
+//--- FACE
+
+//------------------------------ MAGAZINES ------------------------------
+//--- MAGAZINES
+
+//--- THROWABLE / DEPLOYABLE
+
+//--- GRENADELAUNCHER / MISSILES
+
 //************************HELI DLC Stuff************************
 
 
