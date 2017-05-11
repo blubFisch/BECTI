@@ -569,7 +569,7 @@ CTI_BASE_DISPLAY_HINT = 1; // 1 to enable, 0 to disable -- displays hint for pla
 //--- Blow are damage modifiers, ammo type for them is set in Server_OnBuildingHandleVirtualDamage.sqf
 //--- Bigger the numbers more damage that Ammo does!
 //--- 1 means no extra damage will be applied, if you put in 0 the ammo wont do any damage at all.
-CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 1;//--- Tanks
+CTI_BASE_DAMAGE_MULTIPLIER_SHELL = 2;//--- Tanks
 CTI_BASE_DAMAGE_MULTIPLIER_ARTY = 1;//--- Arty
 CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL = 1;//--- Satchels
 CTI_BASE_DAMAGE_MULTIPLIER_PIPE = 1; //--- Pipe Bombs
@@ -580,8 +580,8 @@ CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS = 1;//--- Rockets
 CTI_BASE_DAMAGE_MULTIPLIER_BOMB = 1;//--- Bombs
 
 //--- Max damage values for ammo types, this method retains indirect or lesser damage and limits glitchy OP damage values
-CTI_BASE_DAMAGE_MAX_SHELL = 0.08;//--- Tanks
-CTI_BASE_DAMAGE_MAX_ARTY = 0.05;//--- Arty
+CTI_BASE_DAMAGE_MAX_SHELL = 0.1;//--- Tanks
+CTI_BASE_DAMAGE_MAX_ARTY = 0.1;//--- Arty
 CTI_BASE_DAMAGE_MAX_SATCHEL = 1;//--- Satchels
 CTI_BASE_DAMAGE_MULTIPLIER_PIPE = 0.2;//--- Pipe Bombs
 CTI_BASE_DAMAGE_MAX_CANNON = 0.002;//--- HE Cannons
