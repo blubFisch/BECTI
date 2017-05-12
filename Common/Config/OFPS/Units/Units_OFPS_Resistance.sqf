@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */ 
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //-------------- OFPS AAF Winter
 //--- Infantry
@@ -51,6 +53,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_AA_F';
 _p pushBack '';
@@ -61,6 +64,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_AR_F';
 _p pushBack '';
@@ -71,6 +75,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_AT_F';
 _p pushBack '';
@@ -81,6 +86,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Soldier_crew_F';
 _p pushBack '';
@@ -91,6 +97,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Soldier_LAT_F';
 _p pushBack '';
@@ -101,6 +108,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Soldier_engineer_F';
 _p pushBack '';
@@ -111,6 +119,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_exp_F';
 _p pushBack '';
@@ -121,6 +130,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_GL_F';
 _p pushBack '';
@@ -131,6 +141,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_Medic_F';
 _p pushBack '';
@@ -141,6 +152,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Soldier_AR_F';
 _p pushBack '';
@@ -151,6 +163,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Soldier_pilot_F';
 _p pushBack '';
@@ -161,6 +174,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Sniper_F';
 _p pushBack '';
@@ -171,6 +185,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_TL_F';
 _p pushBack '';
@@ -181,6 +196,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'AAF_D_Special_SL_F';
 _p pushBack '';
@@ -191,6 +207,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //-------------- Swedish Winter
 //--- Infantry
@@ -203,6 +220,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_aa_specialist_rbs69';
 _p pushBack '';
@@ -213,6 +231,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_automaticrifleman_ksp90';
 _p pushBack '';
@@ -223,6 +242,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_at_specialist_pskott86';
 _p pushBack '';
@@ -233,6 +253,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_crew';
 _p pushBack '';
@@ -243,6 +264,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_at_specialist_grg86';
 _p pushBack '';
@@ -253,6 +275,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_engineer';
 _p pushBack '';
@@ -263,6 +286,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_explosive_specialist';
 _p pushBack '';
@@ -273,6 +297,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_gr';
 _p pushBack '';
@@ -283,6 +308,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_medic';
 _p pushBack '';
@@ -293,6 +319,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_machinegunner_ksp58';
 _p pushBack '';
@@ -303,6 +330,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_pilot';
 _p pushBack '';
@@ -313,6 +341,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_rifleman_ag90';
 _p pushBack '';
@@ -323,6 +352,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_teamleader';
 _p pushBack '';
@@ -333,6 +363,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90s_squadleader';
 _p pushBack '';
@@ -343,6 +374,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90t_combat_diver';
 _p pushBack '';
@@ -353,6 +385,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_m90t_combat_diver_tl';
 _p pushBack '';
@@ -363,6 +396,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Light
 _c pushBack 'sfp_bv206_winter';
@@ -374,6 +408,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_tgb1111_sog_ksp58';
 _p pushBack '';
@@ -384,6 +419,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_tgb13_ksp58';
 _p pushBack '';
@@ -394,6 +430,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_tgb1111';
 _p pushBack '';
@@ -404,6 +441,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_tgb1111_sog_rbs56';
 _p pushBack '';
@@ -414,6 +452,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_tgb16_rws';
 _p pushBack '';
@@ -424,6 +463,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- APCs
 
@@ -436,6 +476,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_strf90c_snow';
 _p pushBack '';
@@ -446,6 +487,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_lvkv90c_snow';
 _p pushBack '';
@@ -456,6 +498,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Tanks
 
@@ -468,6 +511,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 	
 _c pushBack 'sfp_strv102';
 _p pushBack '';
@@ -478,6 +522,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'sfp_strv122_snow';
 _p pushBack '';
@@ -488,6 +533,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 
 
@@ -502,6 +548,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'RyanZombieB_Soldier_02_f';
 _p pushBack '';
@@ -512,6 +559,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'RyanZombieB_Soldier_02_fmedium';
 _p pushBack '';
@@ -522,6 +570,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'RyanZombieB_Soldier_02_fwalker';
 _p pushBack '';
@@ -532,5 +581,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

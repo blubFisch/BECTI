@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */ 
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry
 
@@ -51,6 +53,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_AA';
 _p pushBack '';
@@ -61,6 +64,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_Soldier_AA_F';
 _p pushBack '';
@@ -71,6 +75,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_MG';
 _p pushBack '';
@@ -81,6 +86,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_AT';
 _p pushBack '';
@@ -91,6 +97,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Crew';
 _p pushBack '';
@@ -101,6 +108,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Engineer';
 _p pushBack '';
@@ -111,6 +119,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_GL_M16A2';
 _p pushBack '';
@@ -121,6 +130,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Medic';
 _p pushBack '';
@@ -131,6 +141,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_MG_PKM';
 _p pushBack '';
@@ -141,6 +152,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Pilot';
 _p pushBack '';
@@ -151,6 +163,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Sniper_KSVK';
 _p pushBack '';
@@ -161,6 +174,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_PMC_Soldier_TL';
 _p pushBack '';
@@ -171,6 +185,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 
 //-------------- NAPA Chernarus
@@ -184,6 +199,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Soldier_AA';
 _p pushBack '';
@@ -194,6 +210,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_Soldier_AA_F';
 _p pushBack '';
@@ -204,6 +221,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Soldier_AR';
 _p pushBack '';
@@ -214,6 +232,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Soldier_AT';
 _p pushBack '';
@@ -224,6 +243,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Crew';
 _p pushBack '';
@@ -234,6 +254,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Engineer';
 _p pushBack '';
@@ -244,6 +265,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Saboteur';
 _p pushBack '';
@@ -254,6 +276,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Soldier_GL';
 _p pushBack '';
@@ -264,6 +287,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Medic';
 _p pushBack '';
@@ -274,6 +298,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Soldier_MG';
 _p pushBack '';
@@ -284,6 +309,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Pilot';
 _p pushBack '';
@@ -294,6 +320,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Sniper';
 _p pushBack '';
@@ -304,6 +331,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Officer';
 _p pushBack '';
@@ -314,6 +342,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_GUE_Commander';
 _p pushBack '';
@@ -324,6 +353,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 
 //-------------- Royal Army Corp Of Sahrani - Desert
@@ -337,6 +367,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Soldier_AA';
 _p pushBack '';
@@ -347,6 +378,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_Soldier_AA_F';
 _p pushBack '';
@@ -357,6 +389,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_MMG';
 _p pushBack '';
@@ -367,6 +400,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Soldier_MAT';
 _p pushBack '';
@@ -377,6 +411,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Crew';
 _p pushBack '';
@@ -387,6 +422,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Soldier_HAT';
 _p pushBack '';
@@ -397,6 +433,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Engineer';
 _p pushBack '';
@@ -407,6 +444,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_GL';
 _p pushBack '';
@@ -417,6 +455,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Medic';
 _p pushBack '';
@@ -427,6 +466,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_MMG';
 _p pushBack '';
@@ -437,6 +477,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Pilot';
 _p pushBack '';
@@ -447,6 +488,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Sniper';
 _p pushBack '';
@@ -457,6 +499,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_Officer';
 _p pushBack '';
@@ -467,6 +510,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_RACS_SL';
 _p pushBack '';
@@ -477,6 +521,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 
 //-------------- Takistani Locals
@@ -490,6 +535,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_AA';
 _p pushBack '';
@@ -500,6 +546,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_Soldier_AA_F';
 _p pushBack '';
@@ -510,6 +557,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_AR';
 _p pushBack '';
@@ -520,6 +568,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_AT';
 _p pushBack '';
@@ -530,6 +579,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_AK_47S';
 _p pushBack '';
@@ -540,6 +590,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_HAT';
 _p pushBack '';
@@ -550,6 +601,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Mechanic';
 _p pushBack '';
@@ -560,6 +612,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_GL';
 _p pushBack '';
@@ -570,6 +623,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Demo';
 _p pushBack '';
@@ -580,6 +634,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Guerilla_Medic';
 _p pushBack '';
@@ -590,6 +645,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_MG';
 _p pushBack '';
@@ -600,6 +656,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_AK_47S';
 _p pushBack '';
@@ -610,6 +667,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Sniper';
 _p pushBack '';
@@ -620,6 +678,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Soldier_TL';
 _p pushBack '';
@@ -630,6 +689,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_TK_GUE_Commander';
 _p pushBack '';
@@ -640,6 +700,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //-------------- Takistani Military
 //--- Infantry
@@ -652,6 +713,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_AA';
 _p pushBack '';
@@ -662,6 +724,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_AR';
 _p pushBack '';
@@ -672,6 +735,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_AT';
 _p pushBack '';
@@ -682,6 +746,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Crew';
 _p pushBack '';
@@ -692,6 +757,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_LAT';
 _p pushBack '';
@@ -702,6 +768,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_HAT';
 _p pushBack '';
@@ -712,6 +779,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Engineer';
 _p pushBack '';
@@ -722,6 +790,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_GL';
 _p pushBack '';
@@ -732,6 +801,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Medic';
 _p pushBack '';
@@ -742,6 +812,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_MG';
 _p pushBack '';
@@ -752,6 +823,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Pilot';
 _p pushBack '';
@@ -762,6 +834,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Sniper_KSVK';
 _p pushBack '';
@@ -772,6 +845,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Soldier_SL';
 _p pushBack '';
@@ -782,6 +856,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_Officer';
 _p pushBack '';
@@ -792,6 +867,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_SpecOps';
 _p pushBack '';
@@ -802,6 +878,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_TK_SpecOps_TL';
 _p pushBack '';
@@ -812,6 +889,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Light
 _c pushBack 'CUP_O_UAZ_MG_TKA';
@@ -823,6 +901,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_UAZ_AGS30_TKA';
 _p pushBack '';
@@ -833,6 +912,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_LR_MG_TKA';
 _p pushBack '';
@@ -843,6 +923,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_BTR40_MG_TKA';
 _p pushBack '';
@@ -853,6 +934,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_LR_SPG9_TKA';
 _p pushBack '';
@@ -863,6 +945,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_UAZ_SPG9_TKA';
 _p pushBack '';
@@ -873,6 +956,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_BRDM2_TKA';
 _p pushBack '';
@@ -883,6 +967,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- APCs
 _c pushBack 'CUP_O_M113_TKA';
@@ -894,6 +979,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_BMP1_TKA';
 _p pushBack '';
@@ -904,6 +990,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_BMP2_TKA';
 _p pushBack '';
@@ -914,6 +1001,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Tanks
 _c pushBack 'CUP_O_T34_TKA';
@@ -925,6 +1013,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 	
 _c pushBack 'CUP_O_T55_TK';
 _p pushBack '';
@@ -935,6 +1024,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_T72_TKA';
 _p pushBack '';
@@ -945,6 +1035,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- AA Vehicles
 _c pushBack 'CUP_O_Ural_ZU23_TKA';
@@ -956,6 +1047,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_BMP2_ZU_TKA';
 _p pushBack '';
@@ -966,6 +1058,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_O_ZSU23_TK';
 _p pushBack '';
@@ -976,6 +1069,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 //--- Light
 _c pushBack 'CUP_I_Datsun_PK';
 _p pushBack '';
@@ -986,6 +1080,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_LR_MG_AAF';
 _p pushBack '';
@@ -996,6 +1091,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_BTR40_MG_TKG';
 _p pushBack '';
@@ -1006,6 +1102,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_M113_RACS';
 _p pushBack '';
@@ -1016,6 +1113,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_BRDM2_HQ_NAPA';
 _p pushBack '';
@@ -1026,6 +1124,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_BRDM2_NAPA';
 _p pushBack '';
@@ -1036,6 +1135,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_BRDM2_ATGM_NAPA';
 _p pushBack '';
@@ -1046,6 +1146,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- APCs
 _c pushBack 'CUP_I_BMP1_TK_GUE';
@@ -1057,6 +1158,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_BMP2_NAPA';
 _p pushBack '';
@@ -1067,6 +1169,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Tanks
 _c pushBack 'CUP_I_T34_NAPA';
@@ -1078,6 +1181,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 	
 _c pushBack 'CUP_I_T55_TK_GUE';
 _p pushBack '';
@@ -1088,6 +1192,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_T72_NAPA';
 _p pushBack '';
@@ -1098,6 +1203,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- AA Vehicles
 _c pushBack 'CUP_I_Ural_ZU23_NAPA';
@@ -1109,6 +1215,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_ZSU23_AAF';
 _p pushBack '';
@@ -1119,6 +1226,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'CUP_I_M163_AAF';
 _p pushBack '';
@@ -1129,6 +1237,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Naval
 
@@ -1141,5 +1250,6 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

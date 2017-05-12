@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry
 
@@ -54,6 +56,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'ofps_rhs_t80bvk';
 _p pushBack '';
@@ -64,6 +67,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'ofps_rhs_t80ue1';	
 _p pushBack '';
@@ -74,6 +78,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Repair Vehicles
 
@@ -89,6 +94,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi24V_FAB_vvsc';
 _p pushBack '';
@@ -99,6 +105,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi24V_AT_vvsc';
 _p pushBack '';
@@ -109,6 +116,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi8AMTSh_vvsc';
 _p pushBack '';
@@ -119,6 +127,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi8AMTSh_UPK23_vvsc';
 _p pushBack '';
@@ -129,6 +138,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi8MTV3_UPK23_vvsc'; //2x 23mm AC+40x FFAR
 _p pushBack '';
@@ -139,6 +149,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi8MTV3_FAB_vvsc'; //40x FFAR+2x FAB 5000kg bombs
 _p pushBack '';
@@ -149,6 +160,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Mi8mt_vvsc';
 _p pushBack '';
@@ -159,6 +171,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_Ka52_UPK23_vvsc';
 _p pushBack '';
@@ -169,7 +182,8 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Naval Vehicles
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

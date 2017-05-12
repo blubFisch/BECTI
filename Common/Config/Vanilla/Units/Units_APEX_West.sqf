@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry
 //--- NATO Infantry (Arid)
@@ -55,6 +57,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AA_F';
 _p pushBack '';
@@ -65,6 +68,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AT_F';
 _p pushBack '';
@@ -75,6 +79,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AR_F';
 _p pushBack '';
@@ -85,6 +90,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Crew_F';
 _p pushBack '';
@@ -95,6 +101,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Engineer_F';
 _p pushBack '';
@@ -105,6 +112,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_Exp_F';
 _p pushBack '';
@@ -115,6 +123,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_GL_F';
 _p pushBack '';
@@ -125,6 +134,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Helipilot_F';
 _p pushBack '';
@@ -135,6 +145,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_M_F';
 _p pushBack '';
@@ -145,6 +156,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Medic_F';
 _p pushBack '';
@@ -155,6 +167,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Officer_F';
 _p pushBack '';
@@ -165,6 +178,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_TL_F';
 _p pushBack '';
@@ -175,6 +189,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_SL_F';
 _p pushBack '';
@@ -185,6 +200,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_F';
 _p pushBack '';
@@ -195,6 +211,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_soldier_PG_F';
 _p pushBack '';
@@ -205,6 +222,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_Repair_F';
 _p pushBack '';
@@ -215,6 +233,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_LAT_F';
 _p pushBack '';
@@ -225,6 +244,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_soldier_UAV_F';
 _p pushBack '';
@@ -235,6 +255,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AAR_F';
 _p pushBack '';
@@ -245,6 +266,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Support_AMG_F';
 _p pushBack '';
@@ -255,6 +277,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Support_AMort_F';
 _p pushBack '';
@@ -265,6 +288,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AAA_F';
 _p pushBack '';
@@ -275,6 +299,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Soldier_AAT_F';
 _p pushBack '';
@@ -285,6 +310,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Support_GMG_F';
 _p pushBack '';
@@ -295,6 +321,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Support_MG_F';
 _p pushBack '';
@@ -305,6 +332,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Support_Mort_F';
 _p pushBack '';
@@ -315,6 +343,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Helicrew_F';
 _p pushBack '';
@@ -325,6 +354,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Pilot_F';
 _p pushBack '';
@@ -335,6 +365,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Infantry Special Forces
 _c pushBack 'B_T_Diver_F';
@@ -346,6 +377,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Diver_TL_F';
 _p pushBack '';
@@ -356,6 +388,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_Exp_F';
 _p pushBack '';
@@ -366,6 +399,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_JTAC_F';
 _p pushBack '';
@@ -376,6 +410,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_Medic_F';
 _p pushBack '';
@@ -386,6 +421,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_F';
 _p pushBack '';
@@ -396,6 +432,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_LAT_F';
 _p pushBack '';
@@ -406,6 +443,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_TL_F';
 _p pushBack '';
@@ -416,6 +454,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Sniper_F';
 _p pushBack '';
@@ -426,6 +465,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_ghillie_tna_F';
 _p pushBack '';
@@ -436,6 +476,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Spotter_F';
 _p pushBack '';
@@ -446,6 +487,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Diver_Exp_F';
 _p pushBack '';
@@ -456,6 +498,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Recon_M_F';
 _p pushBack '';
@@ -466,6 +509,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- NATO Gendarmerie
 _c pushBack 'B_GEN_Soldier_F';
@@ -477,6 +521,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_GEN_Commander_F';
 _p pushBack '';
@@ -487,6 +532,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Infantry CTRG Special
 _c pushBack 'B_CTRG_Soldier_AR_tna_F';
@@ -498,6 +544,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_Exp_tna_F';
 _p pushBack '';
@@ -508,6 +555,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_JTAC_tna_F';
 _p pushBack '';
@@ -518,6 +566,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_M_tna_F';
 _p pushBack '';
@@ -528,6 +577,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_Medic_tna_F';
 _p pushBack '';
@@ -538,6 +588,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_tna_F';
 _p pushBack '';
@@ -548,6 +599,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_LAT_tna_F';
 _p pushBack '';
@@ -558,6 +610,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Soldier_TL_tna_F';
 _p pushBack '';
@@ -568,6 +621,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Miller_F';
 _p pushBack '';
@@ -578,6 +632,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Light Vehicles
 _c pushBack 'B_T_Quadbike_01_F';
@@ -589,6 +644,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_mover_F';
 _p pushBack '';
@@ -599,6 +655,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_box_F';
 _p pushBack '';
@@ -609,6 +666,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_transport_F';
 _p pushBack '';
@@ -619,6 +677,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_covered_F';
 _p pushBack '';
@@ -629,6 +688,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_GEN_Offroad_01_gen_F';
 _p pushBack '';
@@ -639,6 +699,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_C_Offroad_02_unarmed_F';
 _p pushBack '';
@@ -649,6 +710,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_armed_F';
 _p pushBack '';
@@ -659,6 +721,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_armed_CTRG_F';
 _p pushBack '';
@@ -669,6 +732,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_unarmed_F';
 _p pushBack '';
@@ -679,6 +743,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_unarmed_CTRG_F';
 _p pushBack '';
@@ -689,6 +754,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_armed_F';
 _p pushBack '';
@@ -699,6 +765,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_unarmed_F';
 _p pushBack '';
@@ -709,6 +776,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_LSV_01_light_F';
 _p pushBack '';
@@ -719,6 +787,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_armed_black_F';
 _p pushBack '';
@@ -729,6 +798,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_armed_olive_F';
 _p pushBack '';
@@ -739,6 +809,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_armed_sand_F';
 _p pushBack '';
@@ -749,6 +820,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_unarmed_black_F';
 _p pushBack '';
@@ -759,6 +831,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_unarmed_olive_F';
 _p pushBack '';
@@ -769,6 +842,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_LSV_01_unarmed_sand_F';
 _p pushBack '';
@@ -779,6 +853,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_armed_black_F';
 _p pushBack '';
@@ -789,6 +864,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_armed_olive_F';
 _p pushBack '';
@@ -799,6 +875,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_armed_sand_F';
 _p pushBack '';
@@ -809,6 +886,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_unarmed_black_F';
 _p pushBack '';
@@ -819,6 +897,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_unarmed_olive_F';
 _p pushBack '';
@@ -829,6 +908,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_LSV_01_unarmed_sand_F';
 _p pushBack '';
@@ -839,6 +919,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MRAP_01_F';
 _p pushBack '';
@@ -849,6 +930,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MRAP_01_gmg_F';
 _p pushBack '';
@@ -859,6 +941,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MRAP_01_hmg_F';
 _p pushBack '';
@@ -869,6 +952,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_medical_F';   
 _p pushBack '';
@@ -879,6 +963,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Heavy Vehicles
 _c pushBack 'B_T_APC_Tracked_01_AA_F';
@@ -890,6 +975,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_APC_Tracked_01_rcws_F';
 _p pushBack '';
@@ -900,6 +986,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_APC_Wheeled_01_cannon_F';
 _p pushBack '';
@@ -910,6 +997,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MBT_01_cannon_F';
 _p pushBack '';
@@ -920,6 +1008,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MBT_01_TUSK_F';
 _p pushBack '';
@@ -930,6 +1019,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MBT_01_arty_F';
 _p pushBack '';
@@ -940,6 +1030,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_MBT_01_mlrs_F';
 _p pushBack '';
@@ -950,6 +1041,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Repair Vehicles
 
@@ -962,6 +1054,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_APC_Tracked_01_CRV_F';
 _p pushBack '';
@@ -972,6 +1065,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
+_g pushBack "";
 
 
 //--- Ammo Vehicles
@@ -984,6 +1078,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-fueltruck";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Truck_01_ammo_F';
 _p pushBack '';
@@ -994,6 +1089,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Air Vehicles
 
@@ -1006,6 +1102,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Heli_Transport_01_sand_F';
 _p pushBack '';
@@ -1016,6 +1113,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_CTRG_Heli_Transport_01_tropic_F';
 _p pushBack '';
@@ -1026,6 +1124,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_UAV_03_F';
 _p pushBack '';
@@ -1036,6 +1135,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_infantry_F';
 _p pushBack '';
@@ -1046,6 +1146,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_infantry_F';
 _p pushBack '';
@@ -1056,6 +1157,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_infantry_blue_F';
 _p pushBack '';
@@ -1066,6 +1168,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_infantry_olive_F';
 _p pushBack '';
@@ -1076,6 +1179,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_vehicle_F';
 _p pushBack '';
@@ -1086,6 +1190,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_armed_blue_F';
 _p pushBack '';
@@ -1096,6 +1201,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_armed_olive_F';
 _p pushBack '';
@@ -1106,6 +1212,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'B_T_VTOL_01_armed_F';
 _p pushBack '';
@@ -1116,6 +1223,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Naval Vehicles
 
@@ -1128,6 +1236,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'C_Scooter_Transport_01_F';
 _p pushBack '';
@@ -1138,6 +1247,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Boat_Transport_01_F';
 _p pushBack '';
@@ -1148,6 +1258,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'I_C_Boat_Transport_02_F';
 _p pushBack '';
@@ -1158,6 +1269,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'B_T_Boat_Armed_01_minigun_F';
 _p pushBack '';
@@ -1168,6 +1280,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

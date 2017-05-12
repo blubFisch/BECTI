@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry
 
@@ -52,6 +54,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BRDM2_T';
 _p pushBack '';
@@ -62,6 +65,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BRDM2ATGM_T';
 _p pushBack '';
@@ -72,6 +76,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BRDM2ATGM_T';
 _p pushBack '';
@@ -82,6 +87,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BRDM2HQ_T';
 _p pushBack '';
@@ -92,6 +98,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BRDM2HQ_T';
 _p pushBack '';
@@ -102,6 +109,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BTR60';
 _p pushBack '';
@@ -112,6 +120,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_LR_MG';
 _p pushBack '';
@@ -122,6 +131,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_LR_MG';
 _p pushBack '';
@@ -132,6 +142,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_LR_S';
 _p pushBack '';
@@ -142,6 +153,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_LR_S';
 _p pushBack '';
@@ -152,6 +164,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_LR_SPG9';
 _p pushBack '';
@@ -162,6 +175,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_LR_SPG9';
 _p pushBack '';
@@ -172,6 +186,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_LR_SX';
 _p pushBack '';
@@ -182,6 +197,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_LR_SX';
 _p pushBack '';
@@ -192,6 +208,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_UAZ';
 _p pushBack '';
@@ -202,6 +219,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_UAZ';
 _p pushBack '';
@@ -212,6 +230,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_UAZ_AGS30';
 _p pushBack '';
@@ -222,6 +241,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_UAZ_AGS30';
 _p pushBack '';
@@ -232,6 +252,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_UAZ_MG';
 _p pushBack '';
@@ -242,6 +263,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_UAZ_MG';
 _p pushBack '';
@@ -252,6 +274,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_UAZ_METIS';
 _p pushBack '';
@@ -262,6 +285,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_UAZ_METIS';
 _p pushBack '';
@@ -272,6 +296,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_UAZ_SPG9';
 _p pushBack '';
@@ -282,6 +307,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_UAZ_SPG9';
 _p pushBack '';
@@ -292,6 +318,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Heavy Vehicles
 _c pushBack 'OFPS_BMP1';
@@ -303,6 +330,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BMP1';
 _p pushBack '';
@@ -313,6 +341,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BMP1P';
 _p pushBack '';
@@ -323,6 +352,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP1_T';
 _p pushBack '';
@@ -333,6 +363,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP1P_T';
 _p pushBack '';
@@ -343,6 +374,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2';
 _p pushBack '';
@@ -353,6 +385,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BMP2';
 _p pushBack '';
@@ -363,6 +396,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2_T';
 _p pushBack '';
@@ -373,6 +407,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2_M_T';
 _p pushBack '';
@@ -383,6 +418,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_S_BMP2_M';
 _p pushBack '';
@@ -393,6 +429,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2_M';
 _p pushBack '';
@@ -403,6 +440,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2_ZSU';
 _p pushBack '';
@@ -413,6 +451,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_BMP2_ZSU_T';
 _p pushBack '';
@@ -423,6 +462,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_T55';
 _p pushBack '';
@@ -433,6 +473,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'OFPS_T55_T';
 _p pushBack '';
@@ -443,6 +484,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Repair Vehicles
 
@@ -452,4 +494,4 @@ _d pushBack 0;
 
 //--- Naval Vehicles
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry
 
@@ -60,6 +62,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH64D_noradar';
 _p pushBack '';
@@ -70,6 +73,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH64D_CS';
 _p pushBack '';
@@ -80,6 +84,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH64D';
 _p pushBack '';
@@ -90,6 +95,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH64D_AA';
 _p pushBack '';
@@ -100,6 +106,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_UH60M_d';
 _p pushBack '';
@@ -110,6 +117,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH1Z';
 _p pushBack '';
@@ -120,6 +128,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_AH1Z_CS';
 _p pushBack '';
@@ -130,6 +139,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_CH_47F_10';
 _p pushBack '';
@@ -140,6 +150,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'ofps_RHS_UH1Y_d_GS';
 _p pushBack '';
@@ -150,7 +161,8 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Naval Vehicles
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

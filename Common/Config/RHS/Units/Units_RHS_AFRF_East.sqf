@@ -24,6 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
+_g pushBack "Woodland"; //--- Filter by Camo
 
 */
 
@@ -39,6 +40,7 @@ _u = []; //--- Upgrade level needed.    0 1 2 3...
 _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
+_g = []; //--- Filter by Camo
 
 //--- Infantry R - Theme: Cost 200+(BLx100)+500(GL/Auto/AA/ATGM)
 
@@ -51,6 +53,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_aa';
 _p pushBack '';
@@ -61,6 +64,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_arifleman';
 _p pushBack '';
@@ -71,6 +75,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_at';
 _p pushBack '';
@@ -81,6 +86,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_combatcrew';
 _p pushBack '';
@@ -91,6 +97,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_LAT';
 _p pushBack '';
@@ -101,6 +108,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_RShG2';
 _p pushBack '';
@@ -111,6 +119,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_engineer';
 _p pushBack '';
@@ -121,6 +130,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_grenadier';
 _p pushBack '';
@@ -131,6 +141,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_medic';
 _p pushBack '';
@@ -141,6 +152,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_pilot';
 _p pushBack '';
@@ -151,6 +163,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_marksman';
 _p pushBack '';
@@ -161,6 +174,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_junior_sergeant';
 _p pushBack '';
@@ -171,6 +185,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_sergeant';
 _p pushBack '';
@@ -181,6 +196,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'rhs_msv_emr_officer';
 _p pushBack '';
@@ -191,6 +207,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
+_g pushBack "";
 
 //--- Light Vehicles Theme: 500+(LFLx250)+500(WpnSys/Armored)
 
@@ -203,6 +220,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_tigr_m_msv';
 _p pushBack '';
@@ -213,6 +231,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_gaz66_msv';
 _p pushBack '';
@@ -223,6 +242,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_kamaz5350_msv';
 _p pushBack '';
@@ -233,6 +253,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_tigr_m_3camo_msv';
 _p pushBack '';
@@ -243,6 +264,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_tigr_3camo_msv';
 _p pushBack '';
@@ -253,6 +275,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_UAZ_MSV_01';
 _p pushBack '';
@@ -263,6 +286,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_uaz_open_MSV_01';
 _p pushBack '';
@@ -273,6 +297,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhsgref_BRDM2UM_msv';
 _p pushBack '';
@@ -283,6 +308,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhsgref_ins_uaz_dshkm';
 _p pushBack '';
@@ -293,6 +319,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhsgref_ins_uaz_ags';
 _p pushBack '';
@@ -303,6 +330,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_tigr_sts_msv';
 _p pushBack '';
@@ -313,6 +341,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhsgref_BRDM2_msv';
 _p pushBack '';
@@ -323,6 +352,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_gaz66_ap2_msv';
 _p pushBack '';
@@ -333,6 +363,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_tigr_sts_3camo_msv';
 _p pushBack '';
@@ -343,6 +374,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_btr60_msv';
 _p pushBack '';
@@ -353,6 +385,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_btr70_msv';
 _p pushBack '';
@@ -363,6 +396,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_btr80_msv';
 _p pushBack '';
@@ -373,6 +407,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_gaz66_zu23_msv';
 _p pushBack '';
@@ -383,6 +418,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhsgref_BRDM2_ATGM_msv';
 _p pushBack '';
@@ -393,6 +429,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_btr80a_msv';
 _p pushBack '';
@@ -403,6 +440,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_BM21_MSV_01';
 _p pushBack '';
@@ -413,6 +451,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_9k79';
 _p pushBack '';
@@ -423,6 +462,7 @@ _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_9k79_K';
 _p pushBack '';
@@ -433,6 +473,7 @@ _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //Being used as salvage truck
 _c pushBack 'rhs_kamaz5350_flatbed_msv';
@@ -444,6 +485,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Heavy Vehicles Theme: 1500+(HFLx500)+2500(WpnSystem/MBT)*1.25(Advantaged)
 
@@ -456,6 +498,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_btr80_msv';
 _p pushBack '';
@@ -466,6 +509,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd1';
 _p pushBack '';
@@ -476,6 +520,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_pts_vmf';
 _p pushBack '';
@@ -486,6 +531,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t72bd_tv';
 _p pushBack '';
@@ -496,6 +542,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t80ue1';
 _p pushBack '';
@@ -506,6 +553,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t80bvk';
 _p pushBack '';
@@ -516,6 +564,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_prp3_msv';
 _p pushBack '';
@@ -526,6 +575,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmp1p_msv';
 _p pushBack '';
@@ -536,6 +586,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd2';
 _p pushBack '';
@@ -546,6 +597,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd1r';
 _p pushBack '';
@@ -556,6 +608,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_zsu234_aa';
 _p pushBack '';
@@ -566,6 +619,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmp2d_msv';
 _p pushBack '';
@@ -576,6 +630,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 
 _c pushBack 'rhs_Ob_681_2';
@@ -587,6 +642,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t72bb_tv';
 _p pushBack '';
@@ -597,6 +653,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_sprut_vdv';
 _p pushBack '';
@@ -607,6 +664,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmp3_msv';
 _p pushBack '';
@@ -617,6 +675,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd2m';
 _p pushBack '';
@@ -627,6 +686,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 
 _c pushBack 'rhs_brm1k_msv';
@@ -638,6 +698,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd4_vdv';
 _p pushBack '';
@@ -648,6 +709,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t80um';
 _p pushBack '';
@@ -658,6 +720,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmp3m_msv';
 _p pushBack '';
@@ -668,6 +731,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_t90a_tv';
 _p pushBack '';
@@ -678,6 +742,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmp3mera_msv';
 _p pushBack '';
@@ -688,6 +753,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_bmd4ma_vdv';
 _p pushBack '';
@@ -698,6 +764,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_2s3_tv';
 _p pushBack '';
@@ -708,6 +775,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_BM21_MSV_01';
 _p pushBack '';
@@ -718,6 +786,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_9k79';
 _p pushBack '';
@@ -728,6 +797,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_9k79_K';
 _p pushBack '';
@@ -738,6 +808,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Repair Vehicles
 
@@ -750,6 +821,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-fueltruck";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_gaz66_repair_msv';
 _p pushBack '';
@@ -760,6 +832,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_gaz66_r142_msv';
 _p pushBack '';
@@ -770,6 +843,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "deployable-fob";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_typhoon_vdv';
 _p pushBack '';
@@ -780,6 +854,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "deployable-fob-large";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Ammo Vehicles
 
@@ -792,6 +867,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-ammotruck";
 _d pushBack 10;
+_g pushBack "";
 
 //--- Air Vehicles
 
@@ -804,6 +880,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_Mi8MT_Cargo_vdv';
 _p pushBack '';
@@ -814,6 +891,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_ka60_c';
 _p pushBack '';
@@ -824,6 +902,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8mt_Cargo_vvsc';
 _p pushBack '';
@@ -834,6 +913,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8mt_vvsc';
 _p pushBack '';
@@ -844,6 +924,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8MTV3_vvsc'; //40x FFAR+40x HEAT Rockets
 _p pushBack '';
@@ -854,6 +935,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8MTV3_FAB_vvsc'; //40x FFAR+2x FAB 5000kg bombs
 _p pushBack '';
@@ -864,6 +946,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8MTV3_UPK23_vvsc'; //2x 23mm AC+40x FFAR
 _p pushBack '';
@@ -874,6 +957,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8AMTSh_UPK23_vvsc';
 _p pushBack '';
@@ -884,6 +968,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi8AMTSh_vvsc';
 _p pushBack '';
@@ -894,6 +979,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 // --- Radar Warning Receiver causes microstuttering for all Su-25 and Mi-24s
 
@@ -906,6 +992,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24V_FAB_vvsc';
 _p pushBack '';
@@ -916,6 +1003,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24V_UPK23_vvsc';
 _p pushBack '';
@@ -926,6 +1014,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24P_vvsc';
 _p pushBack '';
@@ -936,6 +1025,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24P_CAS_vvsc';
 _p pushBack '';
@@ -946,6 +1036,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24V_AT_vvsc';
 _p pushBack '';
@@ -956,6 +1047,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Mi24P_AT_vvsc';
 _p pushBack '';
@@ -966,6 +1058,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Ka52_vvsc';
 _p pushBack '';
@@ -976,6 +1069,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Ka52_UPK23_vvsc';
 _p pushBack '';
@@ -986,6 +1080,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Su25SM_vvs';
 _p pushBack '';
@@ -996,6 +1091,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Su25SM_CAS_vvs';
 _p pushBack '';
@@ -1006,6 +1102,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_Su25SM_KH29_vvs';
 _p pushBack '';
@@ -1016,6 +1113,7 @@ _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_T50_vvs_055';
 _p pushBack '';
@@ -1026,6 +1124,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_TU95MS_vvs_tambov';
 _p pushBack '';
@@ -1036,6 +1135,7 @@ _u pushBack 5;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'RHS_TU95MS_vvs_old';
 _p pushBack '';
@@ -1046,6 +1146,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_mi28n_vvsc';
 _p pushBack '';
@@ -1056,6 +1157,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_mi28n_s13_vvsc';
 _p pushBack '';
@@ -1066,6 +1168,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 _c pushBack 'rhs_an2';
 _p pushBack '';
@@ -1076,6 +1179,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 10;
+_g pushBack "";
 
 
 //--- Naval Vehicles
@@ -1089,5 +1193,6 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 5;
+_g pushBack "";
 
-[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
+[_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";
