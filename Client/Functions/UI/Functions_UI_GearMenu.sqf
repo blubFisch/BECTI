@@ -331,7 +331,10 @@ CTI_UI_Gear_DisplayShoppingItems = {
 	
 	//--- Prevent the reloading of the current tab via onLBSelChanged EH
 	uiNamespace setVariable ["cti_dialog_ui_gear_filter_reload", false];
-	
+
+	_filter_current = lbCurSel((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70202);
+	if (_filter_current != -1) then {_filter_use = ((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70202) lbData _filter_current};
+
 	lbClear 70202;
 	
 	_lb = ((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70202) lbAdd "All";
@@ -339,8 +342,6 @@ CTI_UI_Gear_DisplayShoppingItems = {
 	
 	//--- Make sure that we don't have if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {if !(isNil "_get") then {any empty filters
 	if (_tab != CTI_GEAR_TAB_TEMPLATES) then {
-		_filter_current = lbCurSel((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70202);
-		if (_filter_current != -1) then {_filter_use = ((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 70202) lbData _filter_current};
 		
 		_filters = [];
 		
@@ -348,7 +349,7 @@ CTI_UI_Gear_DisplayShoppingItems = {
 			_get = missionNamespace getVariable format["cti_%1", _x];
 			
 			if !(isNil "_get") then {
-				if (((_get select CTI_GEAR_PROPERTIES) select 0) <= _upgrade_gear && !((_get select CTI_GEAR_FILTERUI) in _filters)) then {_filters pushBack (_get select CTI_GEAR_FILTERUI)};
+				if (((_get select CTI_GEAR_PROPERTIES) select 0) <= _upgrade_gear && !((_get select CTI_GEAR_FILTERUI) in _filters) && !((_get select CTI_GEAR_FILTERUI) isEqualTo "")) then {_filters pushBack (_get select CTI_GEAR_FILTERUI)};
 			};
 		} forEach _list;
 		
