@@ -1,4 +1,4 @@
-private ["_faction", "_i", "_p", "_side", "_u"];
+private ["_faction", "_g", "_i", "_p", "_side", "_u"];
 
 _side = _this;
 _faction = "East";
@@ -6,12 +6,13 @@ _faction = "East";
 _i = []; //Gear Classname
 _u = []; //Upgrade Level
 _p = []; //Price
-_c = []; //Filters - Camo types WIP
+_g = []; //Filter
 
 /*EXAMPLE
 _i pushBack "ATMine_Range_Mag";
 _u pushBack 2;
 _p pushBack 600;
+_g pushBack "";
 */
 
 //------------------------------ GUNS ------------------------------
@@ -67,4 +68,4 @@ _p pushBack 600;
 //--- GRENADELAUNCHER / MISSILES
 
 
-[_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";
+[_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";
