@@ -139,8 +139,6 @@ CTI_UI_Purchase_FillUnitsList = {
 			};
 			
 			if (_load) then {
-			player sidechat format ["filter: [%1] for item [%2] match [%3]",_filter_use,_x,_var select CTI_UNIT_FILTERUI];//--- debug
-			diag_log format ["filter: [%1] for item [%2] match [%3]",_filter_use,_x,_var select CTI_UNIT_FILTERUI];//--- debug
 				if (_filter_use isEqualTo "all" || _filter_use isEqualTo (_var select CTI_UNIT_FILTERUI)) then {
 				
 				    _row = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbAddRow [format ["$%1", _var select CTI_UNIT_PRICE], _var select CTI_UNIT_LABEL];
