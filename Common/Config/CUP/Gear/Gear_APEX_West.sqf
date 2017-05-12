@@ -161,7 +161,8 @@ _g pushBack "";
 //Bipod:
 _i pushBack "bipod_01_F_khk";
 _u pushBack 1;
-_p pushBack 100; 
+_p pushBack 100;
+_g pushBack "";
 
 //--- OPTICS 
 _i pushBack "optic_ERCO_khk_F";
@@ -214,12 +215,14 @@ _g pushBack "";
 //UNIVERSAL
 _i pushBack "NVGoggles_tna_F";
 _u pushBack 0;
-_p pushBack 500; 
+_p pushBack 500;
+_g pushBack "";
 
 //NATO
 _i pushBack "NVGogglesB_grn_F";
 _u pushBack 3;
-_p pushBack 1500; 
+_p pushBack 1500;
+_g pushBack "";
 
 _i pushBack "NVGogglesB_blk_F";
 _u pushBack 3;
@@ -247,7 +250,8 @@ _g pushBack "";
 //(MX Series)
 _i pushBack "muzzle_snds_H_khk_F";
 _u pushBack 2;
-_p pushBack 650; 
+_p pushBack 650;
+_g pushBack "";
 
 _i pushBack "muzzle_snds_58_blk_F";
 _u pushBack 2;
@@ -596,17 +600,20 @@ _g pushBack "";
 //(Kevlar)
 _i pushBack "H_HelmetB_tna_F";
 _u pushBack 0;
-_p pushBack 300; 
+_p pushBack 300;
+_g pushBack "";
 
 //(Fancy Kevlar)
 _i pushBack "H_HelmetB_Enh_tna_F";
 _u pushBack 1;
-_p pushBack 300; 
+_p pushBack 300;
+_g pushBack "";
 
 //(Extra Fancy Kevlar)
 _i pushBack "H_HelmetB_Light_tna_F";
 _u pushBack 1;
-_p pushBack 300; 
+_p pushBack 300;
+_g pushBack "";
 
 //(Stealth Combat Helmet)
 _i pushBack "H_HelmetB_TI_tna_F";
@@ -618,34 +625,40 @@ _g pushBack "";
 //--- HATS	
 _i pushBack "H_Beret_gen_F";
 _u pushBack 0;
-_p pushBack 5; 
+_p pushBack 5;
+_g pushBack "";
 
 //(Boonie)
 _i pushBack "H_Booniehat_tna_F";
 _u pushBack 0;
-_p pushBack 300; 
+_p pushBack 300;
+_g pushBack "";
 
 //(Officer)
 _i pushBack "H_MilCap_gen_F";
 _u pushBack 0;
-_p pushBack 5; 
+_p pushBack 5;
+_g pushBack "";
 
 
 //(Officer)
 _i pushBack "H_MilCap_tna_F";
 _u pushBack 0;
-_p pushBack 5; 
+_p pushBack 5;
+_g pushBack "";
 
 //--- FACE
 //(Green Combat Goggles)
 _i pushBack "G_Combat_Goggles_tna_F";
 _u pushBack 0;
-_p pushBack 5; 
+_p pushBack 5;
+_g pushBack "";
 
 //(Stealth Balaclava)
 _i pushBack "G_Balaclava_TI_blk_F";
 _u pushBack 3;
-_p pushBack 300; 
+_p pushBack 300;
+_g pushBack "";
 
 
 _i pushBack "G_Balaclava_TI_G_tna_F";
@@ -676,8 +689,8 @@ _g pushBack "";
 
 _i pushBack "30Rnd_556x45_Stanag_Tracer_Yellow";
 _u pushBack 0;
-_p pushBack 20; 
-
+_p pushBack 20;
+_g pushBack "";
 
 _i pushBack "30Rnd_9x21_Mag_SMG_02";
 _u pushBack 0;
@@ -722,4 +735,4 @@ _g pushBack "";
 //--- GRENADELAUNCHER / MISSILES
 
 
-[_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf"; 
+[_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";

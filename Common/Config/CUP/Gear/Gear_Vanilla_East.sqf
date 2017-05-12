@@ -596,7 +596,8 @@ _g pushBack "";
 
 _i pushBack "V_BandollierB_cbr";
 _u pushBack 0;
-_p pushBack 200; 
+_p pushBack 200;
+_g pushBack "";
 
 _i pushBack "V_TacVest_brn";
 _u pushBack 1;
@@ -2075,7 +2076,8 @@ _g pushBack "";
  
 _i pushBack "HandGrenade_Stone";
 _u pushBack 0;
-_p pushBack 1; 
+_p pushBack 1;
+_g pushBack "";
 
 _i pushBack "B_IR_Grenade";
 _u pushBack 0;
@@ -2154,7 +2156,8 @@ _g pushBack "";
 
 _i pushBack "FlareYellow_F";
 _u pushBack 0;
-_p pushBack 2; 
+_p pushBack 2;
+_g pushBack "";
 
 _i pushBack "SLAMDirectionalMine_Wire_Mag";
 _u pushBack 1;
@@ -2229,7 +2232,8 @@ _g pushBack "";
  
 _i pushBack "HandGrenade_Stone";
 _u pushBack 0;
-_p pushBack 1; 
+_p pushBack 1;
+_g pushBack "";
 
 _i pushBack "B_IR_Grenade";
 _u pushBack 0;
@@ -2308,7 +2312,8 @@ _g pushBack "";
 
 _i pushBack "FlareYellow_F";
 _u pushBack 0;
-_p pushBack 2; 
+_p pushBack 2;
+_g pushBack "";
 
 _i pushBack "SLAMDirectionalMine_Wire_Mag";
 _u pushBack 1;
@@ -3196,7 +3201,8 @@ _g pushBack "";
 
 _i pushBack "DemoCharge_Remote_Mag";
 _u pushBack 2;
-_p pushBack 600; 
+_p pushBack 600;
+_g pushBack "";
 
 _i pushBack "ClaymoreDirectionalMine_Remote_Mag";
 _u pushBack 1;
@@ -3530,4 +3536,4 @@ _g pushBack "";
 //--- Templates (Those lines can be generated in the RPT on purchase by uncommenting the diag_log in Events_UI_GearMenu.sqf >> "onPurchase").
 _t = [];
 
-[_faction, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Template_Set.sqf"; 
+[_faction, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Template_Set.sqf";

@@ -243,7 +243,8 @@ _g pushBack "";
 
 _i pushBack "130Rnd_338_Mag";
 _u pushBack 3;
-_p pushBack 230; 
+_p pushBack 230;
+_g pushBack "";
 
 //--- THROWABLE / DEPLOYABLE
 

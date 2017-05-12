@@ -590,7 +590,8 @@ _g pushBack "";
 
 _i pushBack "CUP_launch_MAAWS";
 _u pushBack 3;
-_p pushBack 850; 
+_p pushBack 850;
+_g pushBack "";
 		
 _i pushBack "CUP_launch_MAAWS_Scope";
 _u pushBack 2;
@@ -1634,16 +1635,16 @@ _g pushBack "";
 
 _i pushBack "CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
 _u pushBack 0;
-_p pushBack 50; 
-
+_p pushBack 50;
+_g pushBack "";
 
 //---Caliber 5.56x45mm
 
  
 _i pushBack "CUP_20Rnd_556x45_Stanag";
 _u pushBack 0;
-_p pushBack 15; 
-
+_p pushBack 15;
+_g pushBack "";
 
 _i pushBack "30Rnd_556x45_Stanag";
 _u pushBack 1;

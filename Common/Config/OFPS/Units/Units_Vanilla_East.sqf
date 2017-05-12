@@ -1051,7 +1051,8 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0; 
+_d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'O_UGV_01_rcws_F';
 _p pushBack '';

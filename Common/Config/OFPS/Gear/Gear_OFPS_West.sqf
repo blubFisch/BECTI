@@ -67,4 +67,4 @@ _g pushBack "";
 
 //--- GRENADELAUNCHER / MISSILES
 
-[_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf"; 
+[_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";

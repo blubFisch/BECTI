@@ -1017,7 +1017,8 @@ _t pushBack 20;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
-_d pushBack 0; 
+_d pushBack 0;
+_g pushBack "";
 
 _c pushBack 'O_T_UGV_01_rcws_ghex_F';
 _p pushBack '';
@@ -1071,8 +1072,8 @@ _t pushBack 25;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "nuke-truck";
-_d pushBack 0; 
-
+_d pushBack 0;
+_g pushBack "";
 
 //--- Heavy Vehicles
 
