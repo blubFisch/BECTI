@@ -174,7 +174,7 @@ if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3 ) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************
+		//USA CUP (Desert)*********************
 		_u pushBack 'CUP_B_US_Soldier';
 		_u pushBack 'CUP_B_US_Soldier_AA';
 		_u pushBack 'CUP_B_US_Crew';
@@ -183,8 +183,30 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_US_Soldier_GL';
 		_u pushBack 'CUP_B_US_Medic';
 		_u pushBack 'CUP_B_US_Pilot';
-		_u pushBack 'CUP_B_US_Sniper_M107';		
-		//Russia CUP (Woodland)*********************	
+		_u pushBack 'CUP_B_US_Sniper_M107';
+		_u pushBack 'CUP_B_US_Soldier_AAT';
+		_u pushBack 'CUP_B_US_Soldier_AHAT';
+		_u pushBack 'CUP_B_US_Soldier_AAR';
+		_u pushBack 'CUP_B_US_Soldier_AMG';
+		_u pushBack 'CUP_B_US_Soldier_AR';
+		_u pushBack 'CUP_B_US_Engineer';
+		_u pushBack 'CUP_B_US_Soldier_Engineer_EOD';
+		_u pushBack 'CUP_B_US_Soldier_MG';
+		_u pushBack 'CUP_B_US_Soldier_Marksman';
+		_u pushBack 'CUP_B_US_Medic';
+		_u pushBack 'CUP_B_US_Officer';
+		_u pushBack 'CUP_B_US_Pilot_Light';
+		_u pushBack 'CUP_B_US_Soldier_ACOG';
+		_u pushBack 'CUP_B_US_Soldier_LAT';
+		_u pushBack 'CUP_B_US_Soldier_Light';
+		_u pushBack 'CUP_B_US_Soldier_Backpack';
+		_u pushBack 'CUP_B_US_Soldier_Engineer_Sapper';
+		_u pushBack 'CUP_B_US_Sniper_M110_TWS';
+		_u pushBack 'CUP_B_US_Spotter';
+		_u pushBack 'CUP_B_US_Soldier_SL';
+		_u pushBack 'CUP_B_US_Soldier_TL';
+		_u pushBack 'CUP_B_US_Soldier_UAV';
+		//USMC CUP (Woodland)*********************	
 		_u pushBack 'CUP_B_USMC_Soldier';
 		_u pushBack 'CUP_B_USMC_Soldier_MG';
 		_u pushBack 'CUP_B_USMC_Crew';
@@ -196,8 +218,109 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_USMC_Soldier_Marksman';
 		_u pushBack 'CUP_B_USMC_Sniper_M107';
 		_u pushBack 'CUP_B_USMC_Soldier_AA';
-		_u pushBack 'CUP_B_USMC_Soldier_AT';		
-		_u pushBack 'CUP_B_USMC_Soldier_HAT';		
+		_u pushBack 'CUP_B_USMC_Soldier_AT';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT';
+		_u pushBack 'CUP_B_USMC_Soldier_AR';
+		_u pushBack 'CUP_B_USMC_Soldier_TL';
+		_u pushBack 'CUP_B_USMC_Officer';
+		_u pushBack 'CUP_B_USMC_SpecOps_SD';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT';
+		_u pushBack 'CUP_B_USMC_SpecOps';
+		_u pushBack 'CUP_B_USMC_Sniper_M40A3';
+		_u pushBack 'CUP_B_USMC_Soldier_Light';
+		_u pushBack 'CUP_B_USMC_Soldier_SL';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV';
+		//FROG Man Woodland (Arid)*********************
+		_u pushBack 'CUP_B_USMC_Soldier_AA_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_AT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_AR_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Engineer_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_TL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_GL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_MG_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_RTO_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_Light_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_SpecOps_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_SL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Medic_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Crewman_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_Marksman_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Officer_FROG_WDL';
+		//FROG man (Desert)*********************
+		_u pushBack 'CUP_B_USMC_Soldier_AA_FROG_DES';
+		_u pushBack 'CUP_B_USMC_SpecOps_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_AT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Medic_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Engineer_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_TL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_AR_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Crewman_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_Marksman_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_GL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_Light_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_MG_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Officer_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_RTO_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_SL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV_FROG_DES';
+		//Force Rcon (Desert)*********************
+		_u pushBack 'CUP_B_FR_Soldier_Assault_GL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Assault_DES';
+		_u pushBack 'CUP_B_FR_Commander_DES';
+		_u pushBack 'CUP_B_FR_Story_Cooper_DES';
+		_u pushBack 'CUP_B_FR_Medic_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Exp_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Operator_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Light_DES';
+		_u pushBack 'CUP_B_FR_Soldier_GL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_AR_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Marksman_DES';
+		_u pushBack 'CUP_B_FR_Story_Miles_DES';
+		_u pushBack 'CUP_B_FR_Story_OHara_DES';
+		_u pushBack 'CUP_B_FR_Story_Rodriguez_DES';
+		_u pushBack 'CUP_B_FR_Saboteur_DES';
+		_u pushBack 'CUP_B_FR_Story_Sykes_DES';
+		_u pushBack 'CUP_B_FR_Soldier_TL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_UAV_DES';
+		//Force Recon (Woodland)*********************
+		_u pushBack 'CUP_B_FR_Soldier_Assault_GL';
+		_u pushBack 'CUP_B_FR_Soldier_Assault';
+		_u pushBack 'CUP_B_FR_Commander';
+		_u pushBack 'CUP_B_FR_Story_Cooper';
+		_u pushBack 'CUP_B_FR_Medic';
+		_u pushBack 'CUP_B_FR_Soldier_Exp';
+		_u pushBack 'CUP_B_FR_Soldier_Operator';
+		_u pushBack 'CUP_B_FR_Soldier_Light';
+		_u pushBack 'CUP_B_FR_Soldier_GL';
+		_u pushBack 'CUP_B_FR_Soldier_AR';
+		_u pushBack 'CUP_B_FR_Soldier_Marksman';
+		_u pushBack 'CUP_B_FR_Story_Miles';
+		_u pushBack 'CUP_B_FR_Story_OHara';
+		_u pushBack 'CUP_B_FR_Story_Rodriguez';
+		_u pushBack 'CUP_B_FR_Saboteur';
+		_u pushBack 'CUP_B_FR_Story_Sykes';
+		_u pushBack 'CUP_B_FR_Soldier_TL';
+		_u pushBack 'CUP_B_FR_Soldier_UAV';
+		//--- USA MAN SF
+		_u pushBack 'CUP_B_US_SpecOps_AR';
+		_u pushBack 'CUP_B_US_SpecOps_JTAC';
+		_u pushBack 'CUP_B_US_SpecOps_MG';
+		_u pushBack 'CUP_B_US_SpecOps_M';
+		_u pushBack 'CUP_B_US_SpecOps_Medic';
+		_u pushBack 'CUP_B_US_SpecOps';
+		_u pushBack 'CUP_B_US_SpecOps_Assault';
+		_u pushBack 'CUP_B_US_SpecOps_M14';
+		_u pushBack 'CUP_B_US_SpecOps_Night';
+		_u pushBack 'CUP_B_US_SpecOps_SD';
+		_u pushBack 'CUP_B_US_SpecOps_TL';
+		_u pushBack 'CUP_B_US_SpecOps_UAV';
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {  
