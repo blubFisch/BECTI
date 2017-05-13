@@ -43,148 +43,6 @@ _d = []; //--- Extra Distance (From Factory)
 _g = []; //--- Filter by Camo
  
 //--- Infantry
-_c pushBack 'CUP_O_RU_Soldier';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier'; 
-_o pushBack 300;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Soldier_AA';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier (AA)'; 
-_o pushBack 900;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Soldier_MG';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier (MG)'; 
-_o pushBack 550;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_soldier_GL';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier (GL)'; 
-_o pushBack 375;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Spotter';
-_p pushBack '';
-_n pushBack 'Russian Army Spotter'; 
-_o pushBack 350;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Crew';
-_p pushBack '';
-_n pushBack 'Russian Army Crew'; 
-_o pushBack 150;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Soldier_AT';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier (AT-RPG7)'; 
-_o pushBack 550;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Soldier_HAT';
-_p pushBack '';
-_n pushBack 'Russian Army Soldier (AT-Metis)'; 
-_o pushBack 1400;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Engineer';
-_p pushBack '';
-_n pushBack 'Russian Army Engineer'; 
-_o pushBack 600;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Soldier_TL';
-_p pushBack '';
-_n pushBack ["%1 (Russian)"]; 
-_o pushBack 100;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Medic';
-_p pushBack '';
-_n pushBack 'Russian Army Medic'; 
-_o pushBack 300;
-_t pushBack 5;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Pilot';
-_p pushBack '';
-_n pushBack 'Russian Army Pilot'; 
-_o pushBack 150;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_O_RU_Sniper_KSVK';
-_p pushBack '';
-_n pushBack 'Russian Army Sniper'; 
-_o pushBack 1000;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'CUP_O_RU_Soldier_VDV_EMR';
 _p pushBack '';
@@ -328,6 +186,1052 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
+
+//--- MSV / EMR
+
+_c pushBack 'CUP_O_RU_Soldier_AA_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_HAT_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_AR_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Crew_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Engineer_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Explosive_Specialist_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_GL_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_MG_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Marksman_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Medic_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Officer_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Pilot_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_LAT_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_AT_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Saiga_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Sniper_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Sniper_KSVK_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Light_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Spotter_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_SL_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_TL_EMR';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+//--- MSV - Flora
+
+_c pushBack 'CUP_O_RU_Crew';
+_p pushBack '';
+_n pushBack 'Russian Army Crew'; 
+_o pushBack 150;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_AA';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (AA)'; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_HAT';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (AT-Metis)'; 
+_o pushBack 1400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_AR';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (AT-Metis)'; 
+_o pushBack 1400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Engineer';
+_p pushBack '';
+_n pushBack 'Russian Army Engineer'; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Explosive_Specialist';
+_p pushBack '';
+_n pushBack 'Russian Army Specialist'; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Commander';
+_p pushBack '';
+_n pushBack 'Russian Army Commander'; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_soldier_GL';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (GL)'; 
+_o pushBack 375;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_MG';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (MG)'; 
+_o pushBack 550;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_Marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 550;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Medic';
+_p pushBack '';
+_n pushBack 'Russian Army Medic'; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Officer';
+_p pushBack '';
+_n pushBack 'Russian Army Officer'; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Pilot';
+_p pushBack '';
+_n pushBack 'Russian Army Pilot'; 
+_o pushBack 150;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier'; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_LAT';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_AT';
+_p pushBack '';
+_n pushBack 'Russian Army Soldier (AT-RPG7)'; 
+_o pushBack 550;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_Saiga';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Sniper';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Sniper_KSVK';
+_p pushBack '';
+_n pushBack 'Russian Army Sniper'; 
+_o pushBack 1000;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_Light';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Spotter';
+_p pushBack '';
+_n pushBack 'Russian Army Spotter'; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_SL';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 900;
+_t pushBack 5;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+_c pushBack 'CUP_O_RU_Soldier_TL';
+_p pushBack '';
+_n pushBack ["%1 (Russian)"]; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Flora";
+
+//--- MSV
+
+_c pushBack 'CUP_O_MVD_Soldier_MG';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Soldier_Marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Soldier';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Soldier_GL';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Soldier_AT';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Sniper';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+_c pushBack 'CUP_O_MVD_Soldier_TL';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "MSV Dark";
+
+//--- Spetsnaz Summer
+
+_c pushBack 'CUP_O_RUS_Saboteur';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_Soldier_GL';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_Soldier_Marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_Commander';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_SpecOps';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Night';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_SpecOps_SD';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Scout';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Scout_Night';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+_c pushBack 'CUP_O_RUS_Soldier_TL';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Woodland";
+
+//--- VDV Woodland
+
+_c pushBack 'CUP_O_RU_Soldier_AA_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_HAT_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Crew_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Engineer_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Explosive_Specialist_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Commander_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_GL_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_MG_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Marksman_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Medic_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Officer_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Pilot_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_LAT_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'pilotka';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_AT_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Saiga_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Sniper_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Sniper_KSVK_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_Light_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Spotter_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_SL_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+_c pushBack 'CUP_O_RU_Soldier_TL_VDV';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "VDV Woodland";
+
+//--- Spetsnaz Autumn
+
+_c pushBack 'CUP_O_RUS_Soldier_Marksman_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_Soldier_GL_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Night_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_SpecOps_SD_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_Commander_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Scout_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_Soldier_TL_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
+
+_c pushBack 'CUP_O_RUS_SpecOps_Scout_Night_Autumn';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 100;
+_t pushBack 5;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Spetsnaz Autumn";
 
 //--- Light Vehicles
 

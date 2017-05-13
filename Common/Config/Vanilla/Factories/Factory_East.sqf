@@ -207,16 +207,25 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_O_RU_Soldier_AA';
 		_u pushBack 'CUP_O_RU_Soldier_MG';
 		_u pushBack 'CUP_O_RU_Crew';
-		_u pushBack 'CUP_O_RU_Officer';
 		_u pushBack 'CUP_O_RU_Soldier_AT';
 		_u pushBack 'CUP_O_RU_Soldier_HAT';
 		_u pushBack 'CUP_O_RU_Engineer';
 		_u pushBack 'CUP_O_RU_Soldier_GL';
-		_u pushBack 'CUP_O_RU_Medic';
 		_u pushBack 'CUP_O_RU_Pilot';
-		_u pushBack 'CUP_O_RUS_SpecOps_Scout';
 		_u pushBack 'CUP_O_RU_Sniper_KSVK';
-		_u pushBack 'CUP_O_RU_Spotter';		
+		_u pushBack 'CUP_O_RU_Spotter';
+		_u pushBack 'CUP_O_RU_Soldier_AR';
+		_u pushBack 'CUP_O_RU_Explosive_Specialist';
+		_u pushBack 'CUP_O_RU_Commander';
+		_u pushBack 'CUP_O_RU_Soldier_Marksman';
+		_u pushBack 'CUP_O_RU_Medic';
+		_u pushBack 'CUP_O_RU_Officer';
+		_u pushBack 'CUP_O_RU_Soldier_LAT';
+		_u pushBack 'CUP_O_RU_Soldier_Saiga';
+		_u pushBack 'CUP_O_RU_Sniper';
+		_u pushBack 'CUP_O_RU_Soldier_Light';
+		_u pushBack 'CUP_O_RU_Soldier_SL';
+
 		//Russia CUP (Woodland)******************************************
 		_u pushBack 'CUP_O_RU_Soldier_VDV_EMR';
 		_u pushBack 'CUP_O_RU_Soldier_AA_VDV_EMR';
@@ -229,7 +238,86 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_O_RU_Medic_VDV_EMR';
 		_u pushBack 'CUP_O_RU_Pilot_VDV_EMR';
 		_u pushBack 'CUP_O_RU_Sniper_KSVK_VDV_EMR';
-		_u pushBack 'CUP_O_RU_Spotter_VDV_EMR';			
+		_u pushBack 'CUP_O_RU_Spotter_VDV_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_AA_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_HAT_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_AR_EMR';
+		_u pushBack 'CUP_O_RU_Crew_EMR';
+		_u pushBack 'CUP_O_RU_Engineer_EMR';
+		_u pushBack 'CUP_O_RU_Explosive_Specialist_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_GL_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_MG_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_Marksman_EMR';
+		_u pushBack 'CUP_O_RU_Medic_EMR';
+		_u pushBack 'CUP_O_RU_Officer_EMR';
+		_u pushBack 'CUP_O_RU_Pilot_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_LAT_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_AT_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_Saiga_EMR';
+		_u pushBack 'CUP_O_RU_Sniper_EMR';
+		_u pushBack 'CUP_O_RU_Sniper_KSVK_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_Light_EMR';
+		_u pushBack 'CUP_O_RU_Spotter_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_SL_EMR';
+		_u pushBack 'CUP_O_RU_Soldier_TL_EMR';
+		//--- MVD Dark
+		_u pushBack 'CUP_O_MVD_Soldier_MG';
+		_u pushBack 'CUP_O_MVD_Soldier_Marksman';
+		_u pushBack 'CUP_O_MVD_Soldier';
+		_u pushBack 'CUP_O_MVD_Soldier_GL';
+		_u pushBack 'CUP_O_MVD_Soldier_AT';
+		_u pushBack 'CUP_O_MVD_Sniper';
+		_u pushBack 'CUP_O_MVD_Soldier_TL';
+		//--- Spetsnaz Woodland
+		_u pushBack 'CUP_O_RUS_Saboteur';
+		_u pushBack 'CUP_O_RUS_Soldier_GL';
+		_u pushBack 'CUP_O_RUS_Soldier_Marksman';
+		_u pushBack 'CUP_O_RUS_Commander';
+		_u pushBack 'CUP_O_RUS_SpecOps';
+		_u pushBack 'CUP_O_RUS_SpecOps_Night';
+		_u pushBack 'CUP_O_RUS_SpecOps_SD';
+		_u pushBack 'CUP_O_RUS_SpecOps_Scout';
+		_u pushBack 'CUP_O_RUS_SpecOps_Scout_Night';
+		_u pushBack 'CUP_O_RUS_Soldier_TL';
+		//--- VDV Flora
+		_u pushBack 'CUP_O_RU_Soldier_AA_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_HAT_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_AR_VDV';
+		_u pushBack 'CUP_O_RU_Crew_VDV';
+		_u pushBack 'CUP_O_RU_Engineer_VDV';
+		_u pushBack 'CUP_O_RU_Explosive_Specialist_VDV';
+		_u pushBack 'CUP_O_RU_Commander_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_GL_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_MG_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_Marksman_VDV';
+		_u pushBack 'CUP_O_RU_Medic_VDV';
+		_u pushBack 'CUP_O_RU_Officer_VDV';
+		_u pushBack 'CUP_O_RU_Pilot_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_LAT_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_AT_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_Saiga_VDV';
+		_u pushBack 'CUP_O_RU_Sniper_VDV';
+		_u pushBack 'CUP_O_RU_Sniper_KSVK_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_Light_VDV';
+		_u pushBack 'CUP_O_RU_Spotter_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_SL_VDV';
+		_u pushBack 'CUP_O_RU_Soldier_TL_VDV';
+		//--- Spetsnaz Autumn
+		_u pushBack 'CUP_O_RUS_Soldier_Marksman_Autumn';
+		_u pushBack 'CUP_O_RUS_Soldier_GL_Autumn';
+		_u pushBack 'CUP_O_RUS_SpecOps_Night_Autumn';
+		_u pushBack 'CUP_O_RUS_SpecOps_SD_Autumn';
+		_u pushBack 'CUP_O_RUS_Commander_Autumn';
+		_u pushBack 'CUP_O_RUS_SpecOps_Autumn';
+		_u pushBack 'CUP_O_RUS_SpecOps_Scout_Autumn';
+		_u pushBack 'CUP_O_RUS_Soldier_TL_Autumn';
+		_u pushBack 'CUP_O_RUS_SpecOps_Scout_Night_Autumn';
+
+
+
+
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON == 0 || CTI_OFPS_CUP_ADDON >= 3) then {
@@ -246,12 +334,9 @@ if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
 		_u pushBack 'rhs_msv_emr_combatcrew';
 		_u pushBack 'rhs_msv_emr_LAT';
 		_u pushBack 'rhs_msv_emr_RShG2';
-		_u pushBack 'rhs_msv_emr_at';
-		_u pushBack 'rhs_msv_emr_engineer';
 		_u pushBack 'rhs_msv_emr_engineer';
 		_u pushBack 'rhs_msv_emr_grenadier';
 		_u pushBack 'rhs_msv_emr_medic';
-		_u pushBack 'rhs_msv_emr_arifleman';
 		_u pushBack 'rhs_pilot';
 		_u pushBack 'rhs_msv_emr_marksman';
 		_u pushBack 'rhs_msv_emr_sergeant';
@@ -809,7 +894,6 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Mi8_SLA_2';
 		_u pushBack 'CUP_B_MI6T_CDF';
 		_u pushBack 'CUP_C_Mi17_Civilian_RU';
-		_u pushBack 'CUP_B_Mi171Sh_ACR';
 		_u pushBack 'CUP_B_Mi24_D_CDF';
 		_u pushBack 'CUP_O_Mi24_P_RU';
 		_u pushBack 'CUP_O_Mi24_V_RU';
@@ -820,18 +904,14 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Ka60_GL_Hex_CSAT';
 		_u pushBack 'CUP_C_DC3_CIV';	
 		_u pushBack 'CUP_O_MI6T_TKA';			
-		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';		
-		_u pushBack 'CUP_O_Mi24_P_RU';		
+		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';			
 		_u pushBack 'CUP_O_Mi24_V_RU';
 		_u pushBack 'CUP_I_Mi24_Mk4_Empty_ION';		
 		_u pushBack 'CUP_I_Mi24_Mk4_ION';		
 		_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';
 		_u pushBack 'CUP_O_MI6T_TKA';			
-		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';		
-		_u pushBack 'CUP_O_Mi24_P_RU';		
-		_u pushBack 'CUP_O_Mi24_V_RU';
-		_u pushBack 'CUP_I_Mi24_Mk4_Empty_ION';		
-		_u pushBack 'CUP_I_Mi24_Mk4_ION';		
+		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';			
+		_u pushBack 'CUP_O_Mi24_V_RU';			
 		_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';		
 		//Russia CUP (Woodland)*********************
 		//Russia CUP (Winter)*********************		
