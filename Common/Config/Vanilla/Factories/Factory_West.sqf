@@ -335,7 +335,6 @@ if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {
 		_u pushBack 'rhsusf_army_ocp_rifleman_m4';
 		_u pushBack 'rhsusf_army_ocp_aa';
 		_u pushBack 'rhsusf_army_ocp_autorifleman';
-		_u pushBack 'rhsusf_army_ocp_riflemanat';
 		_u pushBack 'rhsusf_army_ocp_combatcrewman';
 		_u pushBack 'rhsusf_army_ocp_riflemanat';
 		_u pushBack 'rhsusf_usmc_marpat_d_javelin';
@@ -548,7 +547,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_M1133_MEV_Desert_Slat';
 		_u pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
 		_u pushBack 'CUP_B_M1128_MGS_Desert_Slat';
-
+		_u pushBack 'CUP_B_HMMWV_Avenger_USA';
+		_u pushBack 'CUP_B_LAV25M240_desert_USMC';
+		_u pushBack 'CUP_B_LAV25_HQ_USMC';
+		_u pushBack 'CUP_B_LAV25_HQ_desert_USMC';
+		_u pushBack 'CUP_B_M1129_MC_MK19_Desert_Slat';
+		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland_Slat';
+		_u pushBack 'CUP_B_AAV_Unarmed_USMC';
+		_u pushBack 'CUP_B_LAV25_USMC';
+		_u pushBack 'CUP_B_LAV25_desert_USMC';
 		//USMC CUP (woodland)*********************	
 		_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
 		_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
@@ -558,14 +565,12 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_RG31_M2_OD';
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1133_MEV_Woodland';
 		_u pushBack 'CUP_B_RG31_Mk19_OD_USMC';
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
 		_u pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
 		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
 		_u pushBack 'CUP_B_M1133_MEV_Woodland_Slat';
-		_u pushBack 'CUP_B_M1133_MEV_Woodland';
 		_u pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -587,7 +592,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_mrzr4_d';
 		_u pushBack 'rhsusf_m998_w_2dr';
 		_u pushBack 'rhsusf_m1025_w';
-		_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_rg33_usmc_d';
 		_u pushBack 'rhsusf_rg33_usmc_wd';
 		_u pushBack 'rhsusf_m1025_d';
@@ -601,7 +605,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_rg33_m2_usmc_wd';
 		_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
 		_u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
-		_u pushBack 'rhsusf_m998_d_2dr_fulltop';
 		_u pushBack 'rhsusf_m1025_d_m2';
 		_u pushBack 'rhsusf_m1025_d_Mk19';
 		_u pushBack 'rhsusf_m998_d_2dr_fulltop';
@@ -612,7 +615,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_d_open_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1232_usarmy_d';
-		_u pushBack 'rhsusf_M1232_usarmy_wd';
 		_u pushBack 'rhsusf_M1078A1P2_d_open_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_d_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy';
@@ -631,8 +633,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy';
-		_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
-		_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_open_fmtv_usarmy';
@@ -775,33 +775,21 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_Challenger2_Desert_BAF';
 		_u pushBack 'CUP_B_Challenger2_2CD_BAF';
 		_u pushBack 'CUP_B_M7Bradley_USA_D';
+		_u pushBack 'CUP_B_M270_DPICM_USA';
+		_u pushBack 'CUP_B_M270_HE_USA';
 		//USMC CUP (woodland)*********************	
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
-		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
-		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2Bradley_USA_W';
-		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
 		_u pushBack 'CUP_B_M6LineBacker_USA_W';
-		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
-		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
-		_u pushBack 'CUP_B_FV510_GB_W';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    	
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
-		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
 		_u pushBack 'CUP_B_M1133_MEV_Woodland';
 		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
 		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2Bradley_USA_W';
 		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
-		_u pushBack 'CUP_B_M6LineBacker_USA_W';
 		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
 		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
 		_u pushBack 'CUP_B_FV510_GB_W';
@@ -819,19 +807,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 		//NATO Winter CUP
 		/*_u pushBack 'OFPS_S_M2';
 		_u pushBack 'OFPS_S_M1A1'; 
-		_u pushBack 'OFPS_S_M1129_SPG';	
-		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
-		_u pushBack 'CUP_B_M6LineBacker_USA_W';
-		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
-		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
-		_u pushBack 'CUP_B_FV510_GB_W';
-		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army'; 
-	 	_u pushBack 'CUP_B_Challenger2_Snow_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CS_BAF';*/		
+		_u pushBack 'OFPS_S_M1129_SPG';*/		
 };
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
@@ -985,12 +961,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_F35B_AA_USMC';	
 		_u pushBack 'CUP_B_AV8B_GBU12_USMC';
 		_u pushBack 'CUP_B_AV8B_CAP_USMC';
-		_u pushBack 'CUP_B_AV8B_MK82_USMC';	
+		_u pushBack 'CUP_B_AV8B_MK82_USMC';
+		_u pushBack 'CUP_B_AV8B_AGM_USMC';
 		_u pushBack 'CUP_B_MV22_USMC_RAMPGUN';  
+		_u pushBack 'CUP_B_MV22_VIV_USMC';
 		_u pushBack 'CUP_B_AC47_Spooky_USA';	
 		_u pushBack 'CUP_C_DC3_TanoAir_CIV';
 		_u pushBack 'CUP_B_AW159_Cannon_RN_Grey';
 		_u pushBack 'CUP_B_F35B_LGB_USMC';
+		_u pushBack 'CUP_B_F35B_CAS_USMC';
 		_u pushBack 'CUP_B_AH6J_Escort_USA';
 		_u pushBack 'CUP_B_AH6J_Escort19_USA';
 		_u pushBack 'CUP_B_MH6J_USA';
@@ -1315,6 +1294,7 @@ if (CTI_VANILLA_ADDON >= 2) then {
 
 		_u pushBack 'B_G_Boat_Transport_02_F';
 		_u pushBack 'B_SDV_01_F';
+		_u pushBack "C_Boat_Civil_01_F";
 
 		_u pushBack "C_Boat_Civil_01_F";
 		_u pushBack 'C_Boat_Civil_01_police_F';
@@ -1360,7 +1340,8 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Arid)*********************
 		_u pushBack "CUP_B_RHIB_USMC";
 		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+		_u pushBack "CUP_B_Zodiac_USMC";	
+		_u pushBack "CUP_B_Seafox_USMC";
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------

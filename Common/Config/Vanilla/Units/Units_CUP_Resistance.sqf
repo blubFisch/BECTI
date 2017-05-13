@@ -658,17 +658,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'CUP_I_TK_GUE_Soldier_AK_47S';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 75;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_I_TK_GUE_Sniper';
 _p pushBack '';
 _n pushBack '';

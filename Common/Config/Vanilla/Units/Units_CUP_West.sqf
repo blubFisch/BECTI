@@ -1587,6 +1587,17 @@ _g pushBack "Woodland";
 
 //--- Light Vehicles
 
+_c pushBack 'CUP_B_HMMWV_Avenger_USA';
+_p pushBack '';
+_n pushBack 'HMMV AA';
+_o pushBack 6000;
+_t pushBack 10;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
 _c pushBack 'CUP_B_HMMWV_Transport_USA';
 _p pushBack '';
 _n pushBack 'HMMV Transport';
@@ -1695,7 +1706,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_Crows_M2_USA';
 _p pushBack '';
@@ -2115,17 +2126,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
 
-_c pushBack 'CUP_B_MTVR_Ammo_USA';
-_p pushBack '';
-_n pushBack 'MTVR Ammo Truck';
-_o pushBack 800;
-_t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Desert";
-
 _c pushBack 'CUP_B_MTVR_Refuel_USA';
 _p pushBack '';
 _n pushBack 'MTVR Fuel Truck';
@@ -2333,7 +2333,40 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_LAV25M240_desert_USMC';
+_p pushBack '';
+_n pushBack 'LAV25 MG (Pacific)';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_LAV25_HQ_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_LAV25_HQ_desert_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_RG31_M2_USMC';
 _p pushBack '';
@@ -2383,14 +2416,25 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Desert';
 _p pushBack '';
-_n pushBack 'Stryker Motar/GMG (Arid)';
+_n pushBack 'Stryker Motar/GMG (Desert)';
 _o pushBack 25000;
 _t pushBack 10;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1129_MC_MK19_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker Motar/GMG Slat (Desert)';
+_o pushBack 25000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Woodland';
 _p pushBack '';
@@ -2401,7 +2445,18 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1129_MC_MK19_Woodland_Slat';
+_p pushBack '';
+_n pushBack 'Stryker Mortar/GMG Slat (Pacific)';
+_o pushBack 15000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'OFPS_S_M1129_SPG';
 _p pushBack '';
@@ -2544,7 +2599,40 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_AAV_Unarmed_USMC';
+_p pushBack '';
+_n pushBack 'AAV';
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_LAV25_USMC';
+_p pushBack '';
+_n pushBack 'AAV';
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_LAV25_desert_USMC';
+_p pushBack '';
+_n pushBack 'AAV';
+_o pushBack 5000;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M113_USA';
 _p pushBack '';
@@ -2578,17 +2666,6 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "Woodland";
-
-_c pushBack 'CUP_B_M163_USA';
-_p pushBack '';
-_n pushBack 'M163 VADS';
-_o pushBack 6000;
-_t pushBack 20;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'CUP_B_M1A1_NATO_T';
 _p pushBack '';
@@ -2678,17 +2755,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'CUP_B_M270_DPICM_USMC';
-_p pushBack '';
-_n pushBack 'M270 MLRS (DPICM)';
-_o pushBack 180000;
-_t pushBack 20;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_FV510_GB_W';
 _p pushBack '';
 _n pushBack 'FV510 Warrior';
@@ -2698,7 +2764,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M2A3Bradley_USA_W';
 _p pushBack '';
@@ -2761,28 +2827,6 @@ _n pushBack '';
 _o pushBack 8300;
 _t pushBack 20;
 _u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_B_M6LineBacker_USA_W';
-_p pushBack '';
-_n pushBack 'M6 Linebacker';
-_o pushBack 11100;
-_t pushBack 20;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_B_M6LineBacker_USA_D';
-_p pushBack '';
-_n pushBack 'M6 Linebacker';
-_o pushBack 11100;
-_t pushBack 20;
-_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
@@ -2887,17 +2931,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'CUP_B_FV510_GB_W';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 8000;
-_t pushBack 20;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_Challenger2_NATO';
 _p pushBack '';
 _n pushBack ["%1 (NATO)"];
@@ -2975,6 +3008,87 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
+//--- Artillery
+
+_c pushBack 'CUP_B_M270_DPICM_USA';
+_p pushBack '';
+_n pushBack 'M270 MLRS (DPICM)';
+_o pushBack 180000;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M270_HE_USA';
+_p pushBack '';
+_n pushBack 'M270 MLRS (HE)';
+_o pushBack 180000;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M270_HE_USMC';
+_p pushBack '';
+_n pushBack 'M270 MLRS (HE)';
+_o pushBack 180000;
+_t pushBack 20;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M270_DPICM_USMC';
+_p pushBack '';
+_n pushBack 'M270 MLRS (DPICM)';
+_o pushBack 180000;
+_t pushBack 20;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+//--- Anti Air
+
+_c pushBack 'CUP_B_M6LineBacker_USA_W';
+_p pushBack '';
+_n pushBack 'M6 Linebacker';
+_o pushBack 11100;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M6LineBacker_USA_D';
+_p pushBack '';
+_n pushBack 'M6 Linebacker';
+_o pushBack 11100;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M163_USA';
+_p pushBack '';
+_n pushBack 'M163 VADS';
+_o pushBack 6000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
 //--- Repair Vehicles
 
 _c pushBack 'CUP_B_MTVR_Repair_USA';
@@ -3033,6 +3147,17 @@ _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
+
+_c pushBack 'CUP_B_MTVR_Ammo_USA';
+_p pushBack '';
+_n pushBack 'MTVR Ammo Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 //--- Air Vehicles
 
@@ -3287,11 +3412,22 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_F35B_AA_USMC';
 _p pushBack '';
 _n pushBack 'F35 (AA)';
+_o pushBack 35000;
+_t pushBack 20;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'CUP_B_F35B_CAS_USMC';
+_p pushBack '';
+_n pushBack 'F35 (CAS)';
 _o pushBack 35000;
 _t pushBack 20;
 _u pushBack 4;
@@ -3344,6 +3480,17 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
+_c pushBack 'CUP_B_MV22_VIV_USMC';
+_p pushBack '';
+_n pushBack 'MV-22 Osprey';
+_o pushBack 6900;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
 _c pushBack 'CUP_B_C47_USA';
 _p pushBack '';
 _n pushBack '';
@@ -3353,7 +3500,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_AC47_Spooky_USA';
 _p pushBack '';
@@ -3364,7 +3511,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_C130J_USMC';
 _p pushBack '';
@@ -3465,6 +3612,17 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
+_c pushBack 'CUP_B_AV8B_AGM_USMC';
+_p pushBack '';
+_n pushBack 'AV8B Harrier (AGM)';
+_o pushBack 40000;
+_t pushBack 50;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
 _c pushBack 'CUP_C_DC3_TanoAir_CIV';
 _p pushBack '';
 _n pushBack 'DC3 Transport';
@@ -3501,6 +3659,17 @@ _d pushBack 0;
 _g pushBack "";
 
 _c pushBack 'CUP_B_RHIB2Turret_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 2000;
+_t pushBack 25;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_NAVAL;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'CUP_B_Seafox_USMC';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 2000;
