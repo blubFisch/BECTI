@@ -1587,17 +1587,6 @@ _g pushBack "Woodland";
 
 //--- Light Vehicles
 
-_c pushBack 'CUP_B_HMMWV_Unarmed_USMC';
-_p pushBack '';
-_n pushBack 'HMMV Unarmed';
-_o pushBack 750;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_HMMWV_Transport_USA';
 _p pushBack '';
 _n pushBack 'HMMV Transport';
@@ -1607,7 +1596,40 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_Unarmed_USA';
+_p pushBack '';
+_n pushBack 'HMMV Transport';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_Ambulance_USA';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 1000;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_Unarmed_USMC';
+_p pushBack '';
+_n pushBack 'HMMV Unarmed';
+_o pushBack 750;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_I_SUV_Armored_ION';
 _p pushBack '';
@@ -1662,7 +1684,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_Avenger_USMC';
 _p pushBack '';
@@ -1684,7 +1706,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_HMMWV_Crows_MK19_USA';
 _p pushBack '';
@@ -1695,7 +1717,18 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_RG31_Mk19_OD_USMC';
+_p pushBack '';
+_n pushBack 'HMMWV Crows MK19';
+_o pushBack 3050;
+_t pushBack 10;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
 _p pushBack '';
@@ -1728,7 +1761,40 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_M2_USA';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1350;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_MK19_USA';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1350;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_SOV_M2_USA';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1350;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_HMMWV_M2_USMC';
 _p pushBack '';
@@ -1739,7 +1805,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_M1114_USMC';
 _p pushBack '';
@@ -1750,7 +1816,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_MK19_USMC';
 _p pushBack '';
@@ -1761,7 +1827,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_SOV_USA';
 _p pushBack '';
@@ -1772,7 +1838,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_HMMWV_TOW_USA';
+_p pushBack '';
+_n pushBack 'HMMWV GMG/HMG';
+_o pushBack 1700;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_HMMWV_TOW_USMC';
 _p pushBack '';
@@ -1783,18 +1860,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_B_HMMWV_Transport_USA';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 100;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_HMMWV_Terminal_USA';
 _p pushBack '';
@@ -1805,7 +1871,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_Jackal2_GMG_GB_D';
 _p pushBack '';
@@ -2029,14 +2095,58 @@ _g pushBack "";
 
 _c pushBack 'CUP_B_MTVR_USA';
 _p pushBack '';
-_n pushBack 'MTVR Transport';
+_n pushBack 'MTVR Transport Truck';
 _o pushBack 800;
 _t pushBack 10;
 _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_MTVR_USMC';
+_p pushBack '';
+_n pushBack 'MTVR Transport Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_MTVR_Ammo_USA';
+_p pushBack '';
+_n pushBack 'MTVR Ammo Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_MTVR_Refuel_USA';
+_p pushBack '';
+_n pushBack 'MTVR Fuel Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_MTVR_Refuel_USMC';
+_p pushBack '';
+_n pushBack 'MTVR Fuel Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_LR_Special_CZ_W';
 _p pushBack '';
@@ -2051,14 +2161,25 @@ _g pushBack "";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Desert';
 _p pushBack '';
-_n pushBack 'Stryker MG (Arid)';
+_n pushBack 'Stryker MG (Desert)';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1126_ICV_M2_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker MG Slat (Desert)';
+_o pushBack 2000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 _p pushBack '';
@@ -2069,7 +2190,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
+_p pushBack '';
+_n pushBack 'Stryker MG Slat (Pacific)';
+_o pushBack 2000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'OFPS_S_M1126_HMG';
 _p pushBack '';
@@ -2091,7 +2223,18 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1126_ICV_MK19_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker GMG Slat (Arid)';
+_o pushBack 2200;
+_t pushBack 10;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 _p pushBack '';
@@ -2102,7 +2245,18 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
+_p pushBack '';
+_n pushBack 'Stryker GMG Slat (Pacific)';
+_o pushBack 2200;
+_t pushBack 10;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'OFPS_S_M1126_GMG';
 _p pushBack '';
@@ -2124,7 +2278,29 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1133_MEV_Desert_Slat';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1133_MEV_Woodland_Slat';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1133_MEV_Woodland';
 _p pushBack '';
@@ -2135,7 +2311,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'OFPS_S_M1133_MEV';
 _p pushBack '';
@@ -2158,6 +2334,50 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
+
+_c pushBack 'CUP_B_RG31_M2_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_RG31_M2_GC_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_RG31_Mk19_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_RG31E_M2_USMC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8000;
+_t pushBack 10;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 //--- Heavy Vehicles
 
@@ -2203,7 +2423,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker ATGM Slat (Arid)';
+_o pushBack 6700;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Woodland';
 _p pushBack '';
@@ -2214,7 +2445,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
+_p pushBack '';
+_n pushBack 'Stryker ATGM (Pacific)';
+_o pushBack 6700;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1128_MGS_Desert';
 _p pushBack '';
@@ -2227,6 +2469,17 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
+_c pushBack 'CUP_B_M1128_MGS_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker MGS Slat (Arid)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
 _c pushBack 'CUP_B_M1128_MGS_Woodland';
 _p pushBack '';
 _n pushBack 'Stryker MGS (Pacific)';
@@ -2236,7 +2489,51 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
+_p pushBack '';
+_n pushBack 'Stryker MGS Slat (Pacific)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M1130_CV_M2_Desert_Slat';
+_p pushBack '';
+_n pushBack 'Stryker MGS M2 Slat (Pacific)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1130_CV_M2_Desert';
+_p pushBack '';
+_n pushBack 'Stryker MGS M2 (Pacific)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M1130_CV_M2_Woodland';
+_p pushBack '';
+_n pushBack 'Stryker MGS M2 (Pacific)';
+_o pushBack 21800;
+_t pushBack 20;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_AAV_USMC';
 _p pushBack '';
@@ -2258,7 +2555,18 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M113_desert_USA';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 1000;
+_t pushBack 20;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M113_Med_USA';
 _p pushBack '';
@@ -2269,7 +2577,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M163_USA';
 _p pushBack '';
@@ -2401,7 +2709,18 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
+
+_c pushBack 'CUP_B_M7Bradley_USA_D';
+_p pushBack '';
+_n pushBack 'M7 Bradley';
+_o pushBack 12300;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M2A3Bradley_USA_D';
 _p pushBack '';
@@ -2412,7 +2731,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
 
 _c pushBack 'CUP_B_M2Bradley_USA_D';
 _p pushBack '';
@@ -2423,7 +2742,18 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_M2Bradley_USA_W';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8300;
+_t pushBack 20;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 _c pushBack 'OFPS_S_M2';
 _p pushBack '';
@@ -2647,6 +2977,28 @@ _g pushBack "";
 
 //--- Repair Vehicles
 
+_c pushBack 'CUP_B_MTVR_Repair_USA';
+_p pushBack '';
+_n pushBack 'MTVR Repair Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Desert";
+
+_c pushBack 'CUP_B_MTVR_Repair_USMC';
+_p pushBack '';
+_n pushBack 'MTVR Repair Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_REPAIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
+
 //--- Ammo Vehicles
 
 _c pushBack "Box_NATO_Wps_F";
@@ -2670,6 +3022,17 @@ _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "service-gear";
 _d pushBack 0;
 _g pushBack "";
+
+_c pushBack 'CUP_B_MTVR_Ammo_USMC';
+_p pushBack '';
+_n pushBack 'MTVR Ammo Truck';
+_o pushBack 800;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AMMO;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Woodland";
 
 //--- Air Vehicles
 

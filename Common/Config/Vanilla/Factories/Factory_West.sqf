@@ -484,7 +484,7 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
-		//USMC CUP (Arid)*********************
+		//USMC CUP (Desert)*********************
 		_u pushBack 'CUP_C_SUV_CIV';			
 		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
 		_u pushBack 'CUP_B_HMMWV_M2_USMC';		
@@ -532,7 +532,23 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_RG31_Mk19';
 		_u pushBack 'CUP_RG31_M2';
 		_u pushBack 'CUP_RG31_M2_GC';
-		_u pushBack 'CUP_RG31E_M2';		
+		_u pushBack 'CUP_RG31E_M2';
+		_u pushBack 'CUP_B_HMMWV_Unarmed_USA';
+		_u pushBack 'CUP_B_HMMWV_Ambulance_USA';
+		_u pushBack 'CUP_B_HMMWV_M2_USA';
+		_u pushBack 'CUP_B_HMMWV_MK19_USA';
+		_u pushBack 'CUP_B_HMMWV_SOV_M2_USA';
+		_u pushBack 'CUP_B_HMMWV_TOW_USA';
+		_u pushBack 'CUP_B_RG31_M2_USMC';
+		_u pushBack 'CUP_B_RG31_M2_GC_USMC';
+		_u pushBack 'CUP_B_RG31_Mk19_USMC';
+		_u pushBack 'CUP_B_M1126_ICV_M2_Desert_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Desert_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Desert';
+		_u pushBack 'CUP_B_M1133_MEV_Desert_Slat';
+		_u pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
+		_u pushBack 'CUP_B_M1128_MGS_Desert_Slat';
+
 		//USMC CUP (woodland)*********************	
 		_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
 		_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
@@ -542,7 +558,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_RG31_M2_OD';
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1133_MEV_Woodland';		
+		_u pushBack 'CUP_B_M1133_MEV_Woodland';
+		_u pushBack 'CUP_B_RG31_Mk19_OD_USMC';
+		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
+		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
+		_u pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
+		_u pushBack 'CUP_B_M1133_MEV_Woodland_Slat';
+		_u pushBack 'CUP_B_M1133_MEV_Woodland';
+		_u pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -749,7 +773,8 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_M1A1_DES_US_Army';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_DES_US_Army'; 
 		_u pushBack 'CUP_B_Challenger2_Desert_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CD_BAF';		
+		_u pushBack 'CUP_B_Challenger2_2CD_BAF';
+		_u pushBack 'CUP_B_M7Bradley_USA_D';
 		//USMC CUP (woodland)*********************	
 		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
@@ -783,7 +808,9 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_M1A1_Woodland_US_Army';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    
 		_u pushBack 'CUP_B_Challenger2_Woodland_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CW_BAF';			
+		_u pushBack 'CUP_B_Challenger2_2CW_BAF';
+		_u pushBack 'CUP_B_M2Bradley_USA_W';
+		
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -1136,8 +1163,12 @@ if (CTI_TANKS_ADDON >= 2) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		//Russia CUP (Arid)*********************			
+		_u pushBack 'CUP_B_MTVR_Refuel_USA';
+		_u pushBack 'CUP_B_MTVR_Repair_USA';
+		//Russia CUP (Woodland)*********************
+		_u pushBack 'CUP_B_MTVR_Refuel_USMC';
+		_u pushBack 'CUP_B_MTVR_Repair_USMC';
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
@@ -1226,7 +1257,9 @@ if (CTI_TANKS_ADDON >= 2) then {
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
 		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		_u pushBack 'CUP_B_MTVR_Ammo_USA';
+		//Russia CUP (Woodland)*********************	
+		_u pushBack 'CUP_B_MTVR_Ammo_USMC';
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
