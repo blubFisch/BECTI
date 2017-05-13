@@ -2183,7 +2183,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker MG (Pacific)';
+_n pushBack 'Stryker MG';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 2;
@@ -2194,7 +2194,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
 _p pushBack '';
-_n pushBack 'Stryker MG Slat (Pacific)';
+_n pushBack 'Stryker MG Slat';
 _o pushBack 2000;
 _t pushBack 10;
 _u pushBack 2;
@@ -2216,7 +2216,7 @@ _g pushBack "";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert';
 _p pushBack '';
-_n pushBack 'Stryker GMG (Arid)';
+_n pushBack 'Stryker GMG';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 3;
@@ -2227,7 +2227,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert_Slat';
 _p pushBack '';
-_n pushBack 'Stryker GMG Slat (Arid)';
+_n pushBack 'Stryker GMG Slat';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 3;
@@ -2238,7 +2238,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker GMG (Pacific)';
+_n pushBack 'Stryker GMG';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 3;
@@ -2249,7 +2249,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
 _p pushBack '';
-_n pushBack 'Stryker GMG Slat (Pacific)';
+_n pushBack 'Stryker GMG Slat';
 _o pushBack 2200;
 _t pushBack 10;
 _u pushBack 3;
@@ -2257,17 +2257,6 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
-
-_c pushBack 'OFPS_S_M1126_GMG';
-_p pushBack '';
-_n pushBack 'Stryker GMG (Snow)';
-_o pushBack 2200;
-_t pushBack 10;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'CUP_B_M1133_MEV_Desert';
 _p pushBack '';
@@ -2326,7 +2315,7 @@ _g pushBack "";
 
 _c pushBack 'CUP_B_LAV25M240_USMC';
 _p pushBack '';
-_n pushBack 'LAV25 MG (Pacific)';
+_n pushBack 'LAV25 MG';
 _o pushBack 8000;
 _t pushBack 10;
 _u pushBack 4;
@@ -2337,7 +2326,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_LAV25M240_desert_USMC';
 _p pushBack '';
-_n pushBack 'LAV25 MG (Pacific)';
+_n pushBack 'LAV25 MG';
 _o pushBack 8000;
 _t pushBack 10;
 _u pushBack 4;
@@ -2438,7 +2427,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker Mortar/GMG (Pacific)';
+_n pushBack 'Stryker Mortar/GMG';
 _o pushBack 15000;
 _t pushBack 10;
 _u pushBack 4;
@@ -2449,7 +2438,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Woodland_Slat';
 _p pushBack '';
-_n pushBack 'Stryker Mortar/GMG Slat (Pacific)';
+_n pushBack 'Stryker Mortar/GMG Slat';
 _o pushBack 15000;
 _t pushBack 10;
 _u pushBack 4;
@@ -2458,20 +2447,9 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
 
-_c pushBack 'OFPS_S_M1129_SPG';
-_p pushBack '';
-_n pushBack 'Stryker Motar/GMG (snow)';
-_o pushBack 25000;
-_t pushBack 10;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_M1135_ATGMV_Desert';
 _p pushBack '';
-_n pushBack 'Stryker ATGM (Arid)';
+_n pushBack 'Stryker ATGM';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -2482,7 +2460,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
 _p pushBack '';
-_n pushBack 'Stryker ATGM Slat (Arid)';
+_n pushBack 'Stryker ATGM Slat';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -2493,7 +2471,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker ATGM (Pacific)';
+_n pushBack 'Stryker ATGM';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -2504,7 +2482,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
 _p pushBack '';
-_n pushBack 'Stryker ATGM (Pacific)';
+_n pushBack 'Stryker ATGM';
 _o pushBack 6700;
 _t pushBack 10;
 _u pushBack 2;
@@ -2515,7 +2493,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1128_MGS_Desert';
 _p pushBack '';
-_n pushBack 'Stryker MGS (Arid)';
+_n pushBack 'Stryker MGS';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2526,7 +2504,7 @@ _g pushBack "";
 
 _c pushBack 'CUP_B_M1128_MGS_Desert_Slat';
 _p pushBack '';
-_n pushBack 'Stryker MGS Slat (Arid)';
+_n pushBack 'Stryker MGS Slat';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2537,7 +2515,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1128_MGS_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker MGS (Pacific)';
+_n pushBack 'Stryker MGS';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2548,7 +2526,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
 _p pushBack '';
-_n pushBack 'Stryker MGS Slat (Pacific)';
+_n pushBack 'Stryker MGS Slat';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2559,7 +2537,7 @@ _g pushBack "Woodland";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Desert_Slat';
 _p pushBack '';
-_n pushBack 'Stryker MGS M2 Slat (Pacific)';
+_n pushBack 'Stryker MGS M2 Slat';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2570,7 +2548,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Desert';
 _p pushBack '';
-_n pushBack 'Stryker MGS M2 (Pacific)';
+_n pushBack 'Stryker MGS M2';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
@@ -2581,7 +2559,7 @@ _g pushBack "Desert";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Woodland';
 _p pushBack '';
-_n pushBack 'Stryker MGS M2 (Pacific)';
+_n pushBack 'Stryker MGS M2';
 _o pushBack 21800;
 _t pushBack 20;
 _u pushBack 3;
