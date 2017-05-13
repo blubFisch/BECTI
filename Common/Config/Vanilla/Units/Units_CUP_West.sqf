@@ -53,7 +53,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_ACOG';
 _p pushBack '';
@@ -75,7 +75,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_Light';
 _p pushBack '';
@@ -86,7 +86,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_Backpack';
 _p pushBack '';
@@ -97,7 +97,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_Engineer_Sapper';
 _p pushBack '';
@@ -108,7 +108,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AA';
 _p pushBack '';
@@ -119,7 +119,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AHAT';
 _p pushBack '';
@@ -130,7 +130,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AAT';
 _p pushBack '';
@@ -141,7 +141,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AAR';
 _p pushBack '';
@@ -152,7 +152,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AMG';
 _p pushBack '';
@@ -174,7 +174,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Crew';
 _p pushBack '';
@@ -185,7 +185,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Engineer';
 _p pushBack '';
@@ -196,7 +196,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_Engineer_EOD';
 _p pushBack '';
@@ -207,7 +207,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AT';
 _p pushBack '';
@@ -218,7 +218,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_HAT';
 _p pushBack '';
@@ -229,7 +229,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_AR';
 _p pushBack '';
@@ -240,7 +240,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_GL';
 _p pushBack '';
@@ -251,7 +251,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_MG';
 _p pushBack '';
@@ -262,7 +262,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_Marksman';
 _p pushBack '';
@@ -273,7 +273,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_USMC_Spotter';
 _p pushBack '';
@@ -284,7 +284,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Medic';
 _p pushBack '';
@@ -295,7 +295,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Officer';
 _p pushBack '';
@@ -306,7 +306,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Pilot';
 _p pushBack '';
@@ -328,7 +328,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Sniper_M107';
 _p pushBack '';
@@ -339,7 +339,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Sniper_M110_TWS';
 _p pushBack '';
@@ -350,7 +350,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Spotter';
 _p pushBack '';
@@ -361,7 +361,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_SL';
 _p pushBack '';
@@ -372,7 +372,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_TL';
 _p pushBack '';
@@ -383,7 +383,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 _c pushBack 'CUP_B_US_Soldier_UAV';
 _p pushBack '';
@@ -394,7 +394,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "ACU";
 
 //--- USA Man Special Forces
 

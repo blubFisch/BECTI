@@ -174,7 +174,7 @@ if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3 ) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//USA CUP (Desert)*********************
+		//USA CUP (ACU)*********************
 		_u pushBack 'CUP_B_US_Soldier';
 		_u pushBack 'CUP_B_US_Soldier_AA';
 		_u pushBack 'CUP_B_US_Crew';
@@ -308,7 +308,7 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_FR_Story_Sykes';
 		_u pushBack 'CUP_B_FR_Soldier_TL';
 		_u pushBack 'CUP_B_FR_Soldier_UAV';
-		//--- USA MAN SF
+		//--- USA MAN SF (Desert)*********************
 		_u pushBack 'CUP_B_US_SpecOps_AR';
 		_u pushBack 'CUP_B_US_SpecOps_JTAC';
 		_u pushBack 'CUP_B_US_SpecOps_MG';
