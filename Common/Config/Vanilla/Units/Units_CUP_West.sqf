@@ -1627,7 +1627,7 @@ _o pushBack 1000;
 _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
+_s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "Desert";
 
@@ -2192,17 +2192,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
 
-_c pushBack 'OFPS_S_M1126_HMG';
-_p pushBack '';
-_n pushBack 'Stryker MG (Snow)';
-_o pushBack 2000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert';
 _p pushBack '';
 _n pushBack 'Stryker GMG';
@@ -2290,17 +2279,6 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "Woodland";
-
-_c pushBack 'OFPS_S_M1133_MEV';
-_p pushBack '';
-_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 5000;
-_t pushBack 10;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "service-medic";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'CUP_B_LAV25M240_USMC';
 _p pushBack '';
@@ -2689,17 +2667,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'OFPS_S_M1A1';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 20000;
-_t pushBack 20;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';
 _p pushBack '';
 _n pushBack 'M1A2 Abrams';
@@ -2787,17 +2754,6 @@ _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
-
-_c pushBack 'OFPS_S_M2';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 8300;
-_t pushBack 20;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'CUP_B_FV432_Bulldog_GB_D_RWS';
 _p pushBack '';
@@ -3063,7 +3019,7 @@ _p pushBack '';
 _n pushBack 'MTVR Repair Truck';
 _o pushBack 800;
 _t pushBack 10;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
@@ -3074,7 +3030,7 @@ _p pushBack '';
 _n pushBack 'MTVR Repair Truck';
 _o pushBack 800;
 _t pushBack 10;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
@@ -3082,7 +3038,7 @@ _g pushBack "Woodland";
 
 //--- Ammo Vehicles
 
-_c pushBack "Box_NATO_Wps_F";
+_c pushBack 'Box_NATO_Wps_F';
 _p pushBack '';
 _n pushBack 'Empty Crate';
 _o pushBack 5;
@@ -3093,7 +3049,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "B_supplyCrate_F";
+_c pushBack 'B_supplyCrate_F';
 _p pushBack '';
 _n pushBack 'Mobile Gear access Crate';
 _o pushBack 2000;
@@ -3109,7 +3065,7 @@ _p pushBack '';
 _n pushBack 'MTVR Ammo Truck';
 _o pushBack 800;
 _t pushBack 10;
-_u pushBack 1;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
 _d pushBack 0;

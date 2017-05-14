@@ -1239,7 +1239,7 @@ _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_re
 _n pushBack 'Repair POD';
 _o pushBack 4000;
 _t pushBack 25;
-_u pushBack 2;
+_u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
