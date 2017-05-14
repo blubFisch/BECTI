@@ -935,6 +935,7 @@ _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "nuke-truck";
 _d pushBack 0; 
+_g pushBack "";
 
 _c pushBack 'B_APC_Wheeled_01_cannon_F'; //Marshall
 _p pushBack '';
