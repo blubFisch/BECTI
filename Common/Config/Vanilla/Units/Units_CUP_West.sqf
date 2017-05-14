@@ -1642,17 +1642,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Woodland";
 
-_c pushBack 'CUP_I_SUV_Armored_ION';
-_p pushBack '';
-_n pushBack 'SUV Minigun';
-_o pushBack 1650;
-_t pushBack 10;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_C_SUV_CIV';
 _p pushBack '';
 _n pushBack 'Civil SUV';

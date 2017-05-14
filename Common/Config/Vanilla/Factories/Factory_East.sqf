@@ -486,57 +486,60 @@ if (CTI_TANKS_ADDON >= 2) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then { 
 		//Russia CUP (Arid)*********************
-		_u pushBack 'CUP_B_Dingo_GER_Wdl';		
-		_u pushBack 'CUP_B_Dingo_GL_GER_Wdl';		
 		_u pushBack 'CUP_O_Ural_RU';			
-		_u pushBack 'CUP_O_BRDM2_ATGM_RUS';  
-		_u pushBack 'CUP_O_BTR60_CSAT';   		
+		_u pushBack 'CUP_O_BRDM2_ATGM_RUS'; 
+		_u pushBack 'CUP_O_BRDM2_HQ_RUS'; 		
 		_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';		
 		_u pushBack 'CUP_O_UAZ_METIS_RU';		
 		_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';		
 		_u pushBack 'CUP_O_Ural_ZU23_RU';		
-		_u pushBack 'CUP_O_GAZ_Vodnik_MedEvac_RU';	
-		_u pushBack 'CUP_B_UAZ_MG_CDF';			
-		_u pushBack 'CUP_I_BTR40_MG_TKG';		
+		_u pushBack 'CUP_O_GAZ_Vodnik_MedEvac_RU';		
 		_u pushBack 'CUP_O_UAZ_AGS30_RU';		
-		_u pushBack 'CUP_I_SUV_Armored_ION';  
-		_u pushBack 'CUP_B_UAZ_Unarmed_CDF';		
 		_u pushBack 'CUP_O_Ural_Refuel_RU';		
 		_u pushBack 'CUP_O_BTR90_RU';	
 		_u pushBack 'CUP_O_LR_SPG9_TKA';
 		_u pushBack 'CUP_M1030';
-		_u pushBack 'CUP_B_TowingTractor_USMC';
 		_u pushBack 'CUP_C_Skoda_White_CIV';
 		_u pushBack 'CUP_C_SUV_TK';
-		_u pushBack 'CUP_I_SUV_Armored_ION';
 		_u pushBack 'CUP_C_Datsun';
 		_u pushBack 'CUP_O_Datsun_PK_Random';
 		_u pushBack 'CUP_O_BTR90_RU';
 		_u pushBack 'CUP_O_BTR90_HQ_RU';
-		_u pushBack 'CUP_B_LR_Ambulance_CZ_W';
 		_u pushBack 'CUP_C_LR_Transport_CTK';
-		_u pushBack 'CUP_B_UAZ_Unarmed_CDF';
-		_u pushBack 'CUP_O_UAZ_AGS30_CSAT';
-		_u pushBack 'CUP_O_UAZ_MG_CSAT';
-		_u pushBack 'CUP_O_UAZ_METIS_CSAT';
-		_u pushBack 'CUP_O_UAZ_Open_CSAT';
-		_u pushBack 'CUP_O_UAZ_SPG9_CSAT';
 		_u pushBack 'CUP_O_Ural_RU';
 		_u pushBack 'CUP_O_Ural_Empty_RU';
 		_u pushBack 'CUP_O_Ural_Open_RU';
-		_u pushBack 'CUP_O_Ural_ZU23_RU';
 		_u pushBack 'CUP_O_BTR40_TKA';
 		_u pushBack 'CUP_O_BTR40_MG_TKA';
 		_u pushBack 'CUP_O_GAZ_Vodnik_PK_RU';
 		_u pushBack 'CUP_O_GAZ_Vodnik_AGS_RU';
 		_u pushBack 'CUP_O_GAZ_Vodnik_BPPU_RU';
 		_u pushBack 'CUP_O_GAZ_Vodnik_MedEvac_RU';
-		_u pushBack 'CUP_I_Datsun_PK';	
+
+		//Russia CUP Cars  (Woodland)******************************************
+		_u pushBack 'CUP_O_UAZ_Unarmed_RU';	
+		_u pushBack 'CUP_O_UAZ_AGS30_RU';	
+		_u pushBack 'CUP_O_UAZ_MG_RU';	
+		_u pushBack 'CUP_O_UAZ_AMB_RU';	
+		_u pushBack 'CUP_O_UAZ_METIS_RU';	
+		_u pushBack 'CUP_O_UAZ_Open_RU';	
+		_u pushBack 'CUP_O_UAZ_SPG9_RU';	
+		_u pushBack 'CUP_O_Ural_RU';	
+		_u pushBack 'CUP_O_Ural_Open_RU';
+		//Russia CUP Apcs (Woodland)******************************************
+
+		//Russia CUP CSAT (Arid)*********************
+		_u pushBack 'CUP_O_UAZ_SPG9_CSAT';
+		_u pushBack 'CUP_O_UAZ_Open_CSAT';
+		_u pushBack 'CUP_O_UAZ_AGS30_CSAT';
+		_u pushBack 'CUP_O_UAZ_MG_CSAT';
+		_u pushBack 'CUP_O_UAZ_METIS_CSAT';
+		_u pushBack 'CUP_O_UAZ_Unarmed_CSAT';
+		_u pushBack 'CUP_O_UAZ_Militia_CSAT';
+		_u pushBack 'CUP_O_BTR60_CSAT';
 		_u pushBack 'CUP_O_BRDM2_CSAT';
 		_u pushBack 'CUP_O_BRDM2_ATGM_CSAT';
 		_u pushBack 'CUP_O_BRDM2_HQ_CSAT';
-		_u pushBack 'CUP_O_BTR60_CSAT';		
-		//Russia CUP (Woodland)******************************************
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -678,29 +681,36 @@ if (CTI_TANKS_ADDON >= 2) then {
 if (CTI_CUP_VEHICLES_ADDON > 0) then { 
 		//Russia CUP (Arid)*********************
 		_u pushBack 'CUP_O_BMP1P_TKA';		
-		_u pushBack 'CUP_O_BMP2_RU';			
+		_u pushBack 'CUP_O_BMP2_RU';
+		_u pushBack 'CUP_O_BMP_HQ_RU';		
 		_u pushBack 'CUP_O_BMP2_AMB_RU';	
-		_u pushBack 'CUP_O_BMP3_RU';	
+		_u pushBack 'CUP_O_BMP3_RU';
+		_u pushBack 'CUP_O_BRDM2_RUS';
 		_u pushBack 'CUP_O_ZSU23_SLA';		
 		_u pushBack 'CUP_O_2S6_RU';
 		_u pushBack 'CUP_O_2S6M_RU';	
-		_u pushBack 'CUP_B_T72_CZ';		
 		_u pushBack 'CUP_O_BM21_RU';
-		_u pushBack 'CUP_O_T90_RU'; 
+		//Russia (CSAT)*********************
 		_u pushBack 'CUP_O_BMP1_CSAT';
 		_u pushBack 'CUP_O_BMP2_CSAT';
 		_u pushBack 'CUP_O_BMP_HQ_CSAT';
 		_u pushBack 'CUP_O_BMP2_AMB_CSAT';
 		_u pushBack 'CUP_O_BMP2_ZU_CSAT';
 		_u pushBack 'CUP_O_T55_CSAT';
-		_u pushBack 'CUP_O_ZSU23_CSAT';		
+		_u pushBack 'CUP_O_ZSU23_CSAT';
+		_u pushBack 'CUP_O_BMP1P_CSAT';
+		_u pushBack 'CUP_O_T72_CSAT';
 		//Russia CUP (Woodland)*********************
+		_u pushBack 'CUP_O_T72_RU';
+		_u pushBack 'CUP_O_T90_RU';
+		//Russia CUP (Pasific)*********************
+		_u pushBack 'CUP_O_T55_CSAT_T';
+		_u pushBack 'CUP_O_T72_CSAT_T';
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
 		//Russia CUP (Arid)*********************
 		_u pushBack 'OFPS_BMP1';
-		_u pushBack 'CUP_O_BMP1P_CSAT';
 		_u pushBack 'OFPS_BMP1P';
 		_u pushBack 'OFPS_BMP2';
 		_u pushBack 'OFPS_BMP2_M';
@@ -717,8 +727,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 		_u pushBack 'OFPS_BMP2_HQ_T';
 		_u pushBack 'OFPS_BMP2_M_T';
 		_u pushBack 'OFPS_BMP2_ZSU_T';
-		_u pushBack 'OFPS_BMP3_T';			
-		_u pushBack 'CUP_O_2S6M_RU';		
+		_u pushBack 'OFPS_BMP3_T';
 		
 		//CSAT CUP (Winter)*********************
 		/*_u pushBack 'OFPS_S_BMP1';
@@ -874,53 +883,55 @@ if (CTI_TANKS_ADDON >= 2) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//Russia CUP (Arid)*********************
-		_u pushBack 'CUP_B_AW159_Cannon_RN_Grey';	
 		_u pushBack 'CUP_O_Ka52_GreyCamo_RU';		
-		_u pushBack 'CUP_B_Mi171Sh_ACR';
-		_u pushBack 'CUP_O_Mi8_SLA_1';
-		_u pushBack 'CUP_I_Ka60_GL_Blk_ION';		
+		_u pushBack 'CUP_O_Mi8_SLA_1';	
 		_u pushBack 'CUP_O_Su25_RU_3';	
 		_u pushBack 'CUP_O_Su25_RU_1';
 		_u pushBack 'CUP_O_C130J_TKA';
 		_u pushBack 'CUP_O_C130J_Cargo_TKA';
-		_u pushBack 'CUP_O_Su25_RU_2';	
-		_u pushBack 'CUP_B_L39_BMB_CZ';			
-		_u pushBack 'CUP_O_SU34_LGB_CSAT';	
-		_u pushBack 'CUP_O_SU34_AGM_CSAT';	
+		_u pushBack 'CUP_O_Su25_RU_2';		
 		_u pushBack 'CUP_O_AN2_TK';
 		_u pushBack 'CUP_RU_Pchela1T';
 		_u pushBack 'CUP_O_UH1H_TKA';
 		_u pushBack 'CUP_O_Mi8_CHDKZ';
 		_u pushBack 'CUP_O_Mi8_SLA_2';
-		_u pushBack 'CUP_B_MI6T_CDF';
 		_u pushBack 'CUP_C_Mi17_Civilian_RU';
-		_u pushBack 'CUP_B_Mi24_D_CDF';
+		_u pushBack 'CUP_O_Ka50_SLA';
+		_u pushBack 'CUP_C_DC3_CIV';	
+		_u pushBack 'CUP_O_MI6T_TKA';				
+		_u pushBack 'CUP_O_MI6T_TKA';			
+		//Russia CUP (Woodland)*********************
+		_u pushBack 'CUP_O_Mi8_medevac_RU';
+		_u pushBack 'CUP_O_Ka52_RU';
 		_u pushBack 'CUP_O_Mi24_P_RU';
 		_u pushBack 'CUP_O_Mi24_V_RU';
-		_u pushBack 'CUP_I_Mi24_Mk3_AT_ION';
-		_u pushBack 'CUP_O_Ka50_SLA';
-		_u pushBack 'CUP_O_Ka52_RU';
-		_u pushBack 'CUP_O_Ka60_Hex_CSAT';
+		_u pushBack 'CUP_O_Mi8_VIV_RU';
+		_u pushBack 'CUP_O_Mi8_RU';
+		//Russia CUP (CSAT)*********************
 		_u pushBack 'CUP_O_Ka60_GL_Hex_CSAT';
-		_u pushBack 'CUP_C_DC3_CIV';	
-		_u pushBack 'CUP_O_MI6T_TKA';			
-		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';			
-		_u pushBack 'CUP_O_Mi24_V_RU';
-		_u pushBack 'CUP_I_Mi24_Mk4_Empty_ION';		
-		_u pushBack 'CUP_I_Mi24_Mk4_ION';		
-		_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';
-		_u pushBack 'CUP_O_MI6T_TKA';			
-		_u pushBack 'CUP_B_Mi24_D_MEV_CDF';			
-		_u pushBack 'CUP_O_Mi24_V_RU';			
-		_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';		
-		//Russia CUP (Woodland)*********************
+		_u pushBack 'CUP_O_SU34_LGB_CSAT';	
+		_u pushBack 'CUP_O_SU34_AGM_CSAT';	
+		_u pushBack 'CUP_O_Ka60_Hex_CSAT';
+		//Russia CUP (Pasific)*********************
+		_u pushBack 'CUP_O_Su25_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk3_AT_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk3_FAB_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk3_Empty_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk3_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk3_S8_GSh_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk4_AT_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk4_FAB_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk4_Empty_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk4_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_Mk4_S8_GSh_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_D_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_P_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_V_CSAT_T';
+		_u pushBack 'CUP_O_MI6A_CSAT_T';
+		_u pushBack 'CUP_O_MI6T_CSAT_T';
+
 		//Russia CUP (Winter)*********************		
-		/*_u pushBack 'CUP_B_Mi24_D_MEV_CDF';		
-		_u pushBack 'CUP_O_Mi24_P_RU';		
-		_u pushBack 'CUP_O_Mi24_V_RU';
-		_u pushBack 'CUP_I_Mi24_Mk4_Empty_ION';		
-		_u pushBack 'CUP_I_Mi24_Mk4_ION';		
-		_u pushBack 'CUP_I_Mi24_Mk4_AT_ION';*/		
+	
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then {
@@ -935,11 +946,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 		_u pushBack 'OFPS_MI24Mk4_AT';
 		_u pushBack 'OFPS_SU25T';	
 		_u pushBack 'OFPS_SU25';
-		//Russia CUP (Winter)*********************
-		//_u pushBack 'OFPS_MI6S';			
-		/*_u pushBack 'OFPS_S_SU25';
-		_u pushBack 'OFPS_S_SU34_AGM';
-		_u pushBack 'OFPS_S_SU34_LGB';*/		
+	
 };
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_AFRF_ADDON >= 2) then {
@@ -1238,9 +1245,7 @@ if (CTI_TANKS_ADDON >= 2) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//Russia CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+	
 		//Russia CUP (Woodland)*********************
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1373,9 +1378,6 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON >= 2) then {
 		//Russia CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";
 		_u pushBack "CUP_C_Ikarus_TKC";			
 		//Russia CUP (Woodland)*********************
 };
@@ -1506,9 +1508,7 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//Russia CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+		
 		//Russia CUP (Woodland)*********************
 };
 //------------------------------ OFPS CUP ------------------------------

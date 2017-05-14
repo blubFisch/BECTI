@@ -489,7 +489,6 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_HMMWV_M2_USMC';		
 		_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';	
 		_u pushBack 'CUP_B_HMMWV_MK19_USMC';		
-		_u pushBack 'CUP_I_SUV_Armored_ION';	
 		_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';		
 		_u pushBack 'CUP_B_Jackal2_GMG_GB_W';
 		_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';		
