@@ -898,17 +898,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'I_C_Offroad_02_unarmed_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 300;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'O_T_LSV_02_unarmed_F';
 _p pushBack '';
 _n pushBack '';
@@ -1362,17 +1351,6 @@ _g pushBack "";
 _c pushBack 'C_Scooter_Transport_01_F';
 _p pushBack '';
 _n pushBack 'Scooter';
-_o pushBack 300;
-_t pushBack 25;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'I_C_Boat_Transport_02_F';
-_p pushBack '';
-_n pushBack '';
 _o pushBack 300;
 _t pushBack 25;
 _u pushBack 0;

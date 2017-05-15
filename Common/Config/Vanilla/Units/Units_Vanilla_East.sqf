@@ -1458,17 +1458,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Boat_Armed_01_minigun_F';
-_p pushBack '';
-_n pushBack 'Speedboat GMG, GAU';
-_o pushBack 4400;
-_t pushBack 25;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'O_SDV_01_F';
 _p pushBack '';
 _n pushBack 'Sub Transport';

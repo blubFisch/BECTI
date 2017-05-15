@@ -414,9 +414,7 @@ if (CTI_VANILLA_ADDON >= 2) then {
 
 		_u pushBack 'C_Quadbike_01_F';	
 		_u pushBack "C_Van_01_transport_F";
-
-		_u pushback 'I_C_Offroad_02_unarmed_F';
-				
+	
 		_u pushBack "B_Truck_01_medical_F";
 		_u pushBack 'B_Slingload_01_Medevac_F';
 		_u pushBack "B_APC_Wheeled_01_cannon_F";
@@ -1310,7 +1308,6 @@ if (CTI_HELI_ADDON >= 2) then {
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'C_Scooter_Transport_01_F';
-		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 		_u pushBack 'B_T_Boat_Armed_01_minigun_F';
@@ -1436,7 +1433,6 @@ if (CTI_APEX_ADDON >= 2) then {
 		_u pushBack 'B_T_LSV_01_unarmed_F';
 		_u pushBack 'B_T_LSV_01_armed_F';
 		_u pushBack 'C_Scooter_Transport_01_F';
-		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************		
 };
@@ -1566,7 +1562,6 @@ if (CTI_HELI_ADDON >= 2) then {
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'C_Scooter_Transport_01_F';
-		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 };

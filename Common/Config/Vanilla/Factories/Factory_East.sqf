@@ -397,9 +397,6 @@ if (CTI_VANILLA_ADDON >= 2) then {
 		_u pushBack 'O_Truck_02_covered_F';
 		_u pushBack 'O_Truck_02_transport_F';
 		_u pushBack 'O_Truck_03_transport_F';
-	
-
-		_u pushBack 'I_C_Offroad_02_unarmed_F';
 		_u pushBack 'C_Van_01_transport_F';
 		_u pushBack 'O_G_Offroad_01_F';	
 		_u pushBack "O_G_Offroad_01_armed_F";
@@ -1204,7 +1201,6 @@ if (CTI_VANILLA_ADDON >= 2) then {
 		_u pushBack 'C_Boat_Civil_01_rescue_F';
 		_u pushBack 'O_SDV_01_F';
 		_u pushBack 'O_Boat_Armed_01_hmg_F';
-		_u pushBack 'B_Boat_Armed_01_minigun_F';	
 		//CSAT Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1219,7 +1215,6 @@ if (CTI_HELI_ADDON >= 2) then {
 if (CTI_APEX_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
 		_u pushBack 'O_G_Boat_Transport_01_F';
@@ -1295,7 +1290,6 @@ if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 //---Vehicles
 if (CTI_VANILLA_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
-		_u pushBack 'B_Quadbike_01_F';
 		_u pushBack 'O_G_Offroad_01_F';
 		_u pushBack 'O_G_Offroad_01_armed_F';
 		_u pushBack 'C_Van_01_transport_F';
@@ -1335,8 +1329,7 @@ if (CTI_APEX_ADDON  >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		_u pushBack 'O_T_LSV_02_armed_F';		
 		_u pushBack 'O_T_LSV_02_unarmed_F';	
-		_u pushBack 'C_Scooter_Transport_01_F';
-		_u pushBack 'I_C_Boat_Transport_02_F';		
+		_u pushBack 'C_Scooter_Transport_01_F';	
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
 		_u pushBack 'O_T_Truck_03_transport_ghex_F';
@@ -1460,9 +1453,6 @@ if (CTI_VANILLA_ADDON  >= 2) then {
 		_u pushBack 'O_Lifeboat';
 		_u pushBack 'O_SDV_01_F';
 		_u pushBack 'C_Boat_Civil_01_F';
-
-
-		_u pushBack 'B_Boat_Armed_01_minigun_F';
 		_u pushBack 'C_Boat_Civil_01_rescue_F';	
 		//CSAT Vanilla (woodland)*********************		
 };
@@ -1484,7 +1474,6 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 if (CTI_APEX_ADDON  >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		_u pushBack 'C_Scooter_Transport_01_F';
-		_u pushBack 'I_C_Boat_Transport_02_F';	
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
 };
@@ -1553,7 +1542,6 @@ if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 //---Vehicles
 if (CTI_VANILLA_ADDON  >= 2) then { 
 		//CSAT Vanilla (arid)*********************
-		_u pushBack 'B_Quadbike_01_F';
 		_u pushBack 'O_G_Offroad_01_F';
 		_u pushBack 'O_G_Offroad_01_armed_F';
 		_u pushBack 'C_Van_01_transport_F';

@@ -277,16 +277,6 @@ _g pushBack "";
 
 
 //--- Light Vehicles
-_c pushBack 'I_C_Offroad_02_unarmed_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 300;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'I_C_Offroad_02_unarmed_brown_F';
 _p pushBack '';
