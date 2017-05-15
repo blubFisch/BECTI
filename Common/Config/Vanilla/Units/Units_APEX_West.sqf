@@ -954,7 +954,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_T_Truck_01_medical_F';   
+_c pushBack 'B_T_Truck_01_medical_F';
 _p pushBack '';
 _n pushBack (format ["0- Medical Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6800;

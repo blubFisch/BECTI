@@ -977,7 +977,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'C_Van_01_transport_F'; 
+_c pushBack 'C_Van_01_transport_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -1009,8 +1009,8 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
-
-_c pushBack 'O_MRAP_02_F'; //Ifrit
+//Ifrit
+_c pushBack 'O_MRAP_02_F';
 _p pushBack '';
 _n pushBack '1- Ifrit (Unarmed)';
 _o pushBack 1250;
@@ -1065,7 +1065,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Land_Pod_Heli_Transport_04_medevac_F";
+_c pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_medevac_F.jpg';
 _n pushBack (format ["3- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 7500;
@@ -1097,8 +1097,8 @@ _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "";
-
-_c pushBack 'O_APC_Wheeled_02_rcws_F'; //Marid
+//Marid
+_c pushBack 'O_APC_Wheeled_02_rcws_F';
 _p pushBack '';
 _n pushBack '3- MSE3 Marid';
 _o pushBack 3500;
@@ -1234,7 +1234,7 @@ _s pushBack ["O_Truck_02_covered_F","salvager-independent"];
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Land_Pod_Heli_Transport_04_repair_F";
+_c pushBack 'Land_Pod_Heli_Transport_04_repair_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_repair_F.jpg';
 _n pushBack 'Repair POD';
 _o pushBack 4000;
@@ -1247,7 +1247,7 @@ _g pushBack "";
 
 //--- Ammo Vehicles
 
-_c pushBack "Box_East_Wps_F";
+_c pushBack 'Box_East_Wps_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_East_Wps_F.jpg';
 _n pushBack 'Empty Crate';
 _o pushBack 50;
@@ -1258,7 +1258,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "O_supplyCrate_F";
+_c pushBack 'O_supplyCrate_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\O_supplyCrate_F.jpg';
 _n pushBack 'Gear POD';
 _o pushBack 2500;
@@ -1269,7 +1269,7 @@ _s pushBack "service-gear";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Land_Pod_Heli_Transport_04_ammo_F";
+_c pushBack 'Land_Pod_Heli_Transport_04_ammo_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_ammo_F.jpg';
 _n pushBack 'Vehicle Ammo POD';
 _o pushBack 2500;
@@ -1291,7 +1291,7 @@ _s pushBack "service-ammotruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Land_Pod_Heli_Transport_04_fuel_F";
+_c pushBack 'Land_Pod_Heli_Transport_04_fuel_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Land_Pod_Heli_Transport_04_fuel_F.jpg';
 _n pushBack 'Fuel POD';
 _o pushBack 2500;
@@ -1358,7 +1358,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Land_Pod_Heli_Transport_04_bench_F";
+_c pushBack 'Land_Pod_Heli_Transport_04_bench_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;

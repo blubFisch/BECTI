@@ -852,14 +852,14 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//NATO (woodland)*********************
 		_u pushBack 'OFPS_M1A1';
         _u pushBack 'OFPS_M2';
-		_u pushBack "OFPS_MARSHALL";
-		_u pushBack "OFPS_PANTHER";
-		_u pushBack "OFPS_CHEETAH";
-		_u pushBack "OFPS_SLAMMER";
-		_u pushback "OFPS_SLAMMER_TUSK";
-		_u pushBack "OFPS_SCORCHER";
-		_u pushBack "OFPS_SANDSTORM";
-		_u pushBack "OFPS_BOBCAT";	
+		_u pushBack 'OFPS_MARSHALL';
+		_u pushBack 'OFPS_PANTHER';
+		_u pushBack 'OFPS_CHEETAH';
+		_u pushBack 'OFPS_SLAMMER';
+		_u pushback 'OFPS_SLAMMER_TUSK';
+		_u pushBack 'OFPS_SCORCHER';
+		_u pushBack 'OFPS_SANDSTORM';
+		_u pushBack 'OFPS_BOBCAT';	
 		//NATO Winter OFPS
 		/*_u pushBack 'Meaty_Marshall_Sn';		
 		_u pushBack 'Meaty_cheetah_Sn';	
@@ -1105,9 +1105,9 @@ if (CTI_VANILLA_ADDON >= 2) then {
 		_u pushBack 'B_G_Offroad_01_repair_F';
 		_u pushBack 'B_Truck_01_Repair_F';
 
-		_u pushBack "B_Truck_01_mover_F";//FOB
-		_u pushBack "B_Truck_01_box_F";//FOB LARGE
-		_u pushBack "CTI_Salvager_West";
+		_u pushBack 'B_Truck_01_mover_F';//FOB
+		_u pushBack 'B_Truck_01_box_F';//FOB LARGE
+		_u pushBack 'CTI_Salvager_West';
 		_u pushBack 'B_Slingload_01_Repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
@@ -1196,14 +1196,14 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Truck_01_ammo_F";
+		_u pushBack 'B_Truck_01_ammo_F';
 		_u pushBack 'B_Slingload_01_Ammo_F';
 		_u pushBack 'B_Truck_01_fuel_F';
 		_u pushBack 'B_G_Van_01_fuel_F';	
-		_u pushBack "B_Truck_01_fuel_F";
+		_u pushBack 'B_Truck_01_fuel_F';
 		_u pushBack 'B_Slingload_01_Fuel_F';			
 		/*_u pushBack "Box_NATO_Wps_F";*/
-		_u pushBack "B_supplyCrate_F";		
+		_u pushBack 'B_supplyCrate_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1293,9 +1293,9 @@ if (CTI_VANILLA_ADDON >= 2) then {
 
 		_u pushBack 'B_G_Boat_Transport_02_F';
 		_u pushBack 'B_SDV_01_F';
-		_u pushBack "C_Boat_Civil_01_F";
+		_u pushBack 'C_Boat_Civil_01_F';
 
-		_u pushBack "C_Boat_Civil_01_F";
+		_u pushBack 'C_Boat_Civil_01_F';
 		_u pushBack 'C_Boat_Civil_01_police_F';
 		
 		//NATO Vanilla (woodland)*********************		
@@ -1309,8 +1309,8 @@ if (CTI_HELI_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
+		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 		_u pushBack 'B_T_Boat_Armed_01_minigun_F';
@@ -1337,10 +1337,10 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";	
-		_u pushBack "CUP_B_Seafox_USMC";
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';	
+		_u pushBack 'CUP_B_Seafox_USMC';
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1351,7 +1351,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
 		//USAF RHS (Arid)*********************
-		_u pushBack "rhsusf_mkvsoc";		
+		_u pushBack 'rhsusf_mkvsoc';		
 		//USAF RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -1382,24 +1382,24 @@ _u = [];
 //---Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Soldier_F";
-		_u pushBack "B_crew_F";		
+		_u pushBack 'B_Soldier_F';
+		_u pushBack 'B_crew_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
 };
 //---Vehicles
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Quadbike_01_F";
-		_u pushBack "B_G_Offroad_01_F";
-		_u pushBack "B_G_Offroad_01_armed_F";
-		_u pushBack "C_Van_01_transport_F";
-		_u pushBack "B_Truck_01_transport_F";
-		_u pushBack "C_Boat_Civil_01_F";
-		_u pushBack "B_Boat_Transport_01_F";
-		_u pushBack "B_MRAP_01_F";
-		_u pushBack "B_MRAP_01_hmg_F";
-		_u pushBack "B_G_Offroad_01_repair_F";		
+		_u pushBack 'B_Quadbike_01_F';
+		_u pushBack 'B_G_Offroad_01_F';
+		_u pushBack 'B_G_Offroad_01_armed_F';
+		_u pushBack 'C_Van_01_transport_F';
+		_u pushBack 'B_Truck_01_transport_F';
+		_u pushBack 'C_Boat_Civil_01_F';
+		_u pushBack 'B_Boat_Transport_01_F';
+		_u pushBack 'B_MRAP_01_F';
+		_u pushBack 'B_MRAP_01_hmg_F';
+		_u pushBack 'B_G_Offroad_01_repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1427,16 +1427,16 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
-		_u pushBack "B_T_Soldier_F";
-		_u pushBack "B_T_crew_F";		
+		_u pushBack 'B_T_Soldier_F';
+		_u pushBack 'B_T_crew_F';		
 };
 //---Vehicles
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'B_T_LSV_01_unarmed_F';
 		_u pushBack 'B_T_LSV_01_armed_F';
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
+		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************		
 };
@@ -1464,10 +1464,10 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
 		_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
 		_u pushBack 'CUP_B_HMMWV_MK19_USMC';	
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";
-		_u pushBack "CUP_C_Ikarus_Chernarus";		
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';
+		_u pushBack 'CUP_C_Ikarus_Chernarus';		
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1531,8 +1531,8 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//_u pushBack 'usaf_police_car2';
 		//_u pushBack 'usaf_police_offroad';	
 		//NATO (woodland)*********************
-		_u pushBack "OFPS_HUNTER";
-		_u pushBack "OFPS_HUNTER_HMG";		
+		_u pushBack 'OFPS_HUNTER';
+		_u pushBack 'OFPS_HUNTER_HMG';		
 		//NATO Winter OFPS
 		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
@@ -1549,11 +1549,11 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then {  
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Boat_Civil_01_F";
-		_u pushBack "B_Boat_Transport_01_F";
-		_u pushBack "B_Boat_Armed_01_minigun_F";
+		_u pushBack 'C_Boat_Civil_01_F';
+		_u pushBack 'B_Boat_Transport_01_F';
+		_u pushBack 'B_Boat_Armed_01_minigun_F';
 		_u pushBack 'C_Boat_Civil_01_police_F';
-		_u pushBack "B_SDV_01_F";		
+		_u pushBack 'B_SDV_01_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1565,8 +1565,8 @@ if (CTI_HELI_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
+		_u pushBack 'I_C_Boat_Transport_02_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 };
@@ -1590,9 +1590,9 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';		
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1630,22 +1630,22 @@ _u = [];
 //---Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Soldier_F";
-		_u pushBack "B_crew_F";		
+		_u pushBack 'B_Soldier_F';
+		_u pushBack 'B_crew_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
 };
 //---Vehicles
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Quadbike_01_F";
-		_u pushBack "B_G_Offroad_01_F";
-		_u pushBack "B_G_Offroad_01_armed_F";
-		_u pushBack "C_Van_01_transport_F";
-		_u pushBack "B_Truck_01_transport_F";	
-	    _u pushBack "B_MRAP_01_F";
-		_u pushBack "B_MRAP_01_hmg_F";
-		_u pushBack "B_G_Offroad_01_repair_F";		
+		_u pushBack 'B_Quadbike_01_F';
+		_u pushBack 'B_G_Offroad_01_F';
+		_u pushBack 'B_G_Offroad_01_armed_F';
+		_u pushBack 'C_Van_01_transport_F';
+		_u pushBack 'B_Truck_01_transport_F';	
+	    _u pushBack 'B_MRAP_01_F';
+		_u pushBack 'B_MRAP_01_hmg_F';
+		_u pushBack 'B_G_Offroad_01_repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1672,7 +1672,7 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
 //---Vehicles
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 		_u pushBack 'B_T_LSV_01_unarmed_F';

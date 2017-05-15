@@ -513,7 +513,7 @@ _g pushBack "";
 //--- CSAT Viper Team (Pacific)
 _c pushBack 'O_V_Soldier_hex_F';
 _p pushBack '';
-_n pushBack ["%1 (Pacific Viper)"]; 
+_n pushBack ["%1 (Pacific Viper)"];
 _o pushBack 2500;
 _t pushBack 5;
 _u pushBack 3;
@@ -1053,7 +1053,7 @@ _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F'; //Marid
+_c pushBack 'O_T_APC_Wheeled_02_rcws_ghex_F';
 _p pushBack '';
 _n pushBack '3- MSE-3 Marid (Pacific)'; 
 _o pushBack 3500;
@@ -1064,7 +1064,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_T_Truck_03_device_ghex_F'; //Nuke Truck
+_c pushBack 'O_T_Truck_03_device_ghex_F';
 _p pushBack '';
 _n pushBack '5- Nuke Truck';
 _o pushBack 80000;
@@ -1077,7 +1077,7 @@ _g pushBack "";
 
 //--- Heavy Vehicles
 
-_c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F'; //Kamysh
+_c pushBack 'O_T_APC_Tracked_02_cannon_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"];
 _o pushBack 13475;
@@ -1088,7 +1088,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_T_MBT_02_cannon_ghex_F'; //T-100
+_c pushBack 'O_T_MBT_02_cannon_ghex_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"];
 _o pushBack 28000;

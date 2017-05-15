@@ -805,7 +805,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'C_Van_01_transport_F'; 
+_c pushBack 'C_Van_01_transport_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -816,7 +816,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_G_Van_01_transport_F'; 
+_c pushBack 'B_G_Van_01_transport_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -827,7 +827,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Truck_01_covered_F'; 
+_c pushBack 'B_Truck_01_covered_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -849,7 +849,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_MRAP_01_F'; //Hunter
+_c pushBack 'B_MRAP_01_F';
 _p pushBack '';
 _n pushBack '1- Hunter (Unarmed)';
 _o pushBack 1250;
@@ -893,7 +893,7 @@ _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Slingload_01_Medevac_F';   
+_c pushBack 'B_Slingload_01_Medevac_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Medevac_F.jpg';
 _n pushBack (format ["0- Slingload Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6800;
@@ -926,7 +926,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Truck_03_device_F'; //Nuke Truck
+_c pushBack 'O_Truck_03_device_F';
 _p pushBack '';
 _n pushBack '5- Nuke Truck';
 _o pushBack 80000;
@@ -937,7 +937,7 @@ _s pushBack "nuke-truck";
 _d pushBack 0; 
 _g pushBack "";
 
-_c pushBack 'B_APC_Wheeled_01_cannon_F'; //Marshall
+_c pushBack 'B_APC_Wheeled_01_cannon_F';
 _p pushBack '';
 _n pushBack '4- AMV-7 Marshall';
 _o pushBack 7500;
@@ -950,8 +950,8 @@ _g pushBack "";
 
 
 //--- Heavy Vehicles
-
-_c pushBack 'B_APC_Tracked_01_rcws_F'; //Panther
+//Panther
+_c pushBack 'B_APC_Tracked_01_rcws_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 7150;
@@ -963,7 +963,7 @@ _d pushBack 0;
 _g pushBack "";
 
 //Slammer UP
-_c pushBack 'B_MBT_01_TUSK_F';  
+_c pushBack 'B_MBT_01_TUSK_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 30000;
@@ -1077,7 +1077,7 @@ _s pushBack "deployable-fob-large";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Slingload_01_Repair_F';  
+_c pushBack 'B_Slingload_01_Repair_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Repair_F.jpg';
 _n pushBack 'Repair POD';
 _o pushBack 4000;
@@ -1134,7 +1134,7 @@ _s pushBack "service-ammotruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "Box_NATO_Wps_F";
+_c pushBack 'Box_NATO_Wps_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_Wps_F.jpg';
 _n pushBack 'Empty Crate';
 _o pushBack 50;
@@ -1145,7 +1145,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack "B_supplyCrate_F";
+_c pushBack 'B_supplyCrate_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_supplyCrate_F.jpg';
 _n pushBack 'Gear POD';
 _o pushBack 2500;
@@ -1156,7 +1156,7 @@ _s pushBack "service-gear";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Slingload_01_Fuel_F';  
+_c pushBack 'B_Slingload_01_Fuel_F';
 _p pushBack '\A3\EditorPreviews_F\Data\CfgVehicles\B_Slingload_01_Fuel_F.jpg';
 _n pushBack 'Fuel POD';
 _o pushBack 2500;
@@ -1212,7 +1212,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Heli_Light_01_stripped_F'; 
+_c pushBack 'B_Heli_Light_01_stripped_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 5000;
@@ -1222,8 +1222,8 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
-
-_c pushBack 'B_Heli_Light_01_F'; //Hummingbird
+//Hummingbird
+_c pushBack 'B_Heli_Light_01_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 10200;
@@ -1233,8 +1233,8 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
-
-_c pushBack 'B_Heli_Transport_01_F'; //Ghosthawk
+//Ghosthawk
+_c pushBack 'B_Heli_Transport_01_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 29750;
@@ -1245,7 +1245,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Heli_Transport_01_camo_F'; 
+_c pushBack 'B_Heli_Transport_01_camo_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 29750;
@@ -1277,8 +1277,8 @@ _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
-
-_c pushBack 'B_Plane_CAS_01_F'; //A-10 Wipeout
+//A-10 Wipeout
+_c pushBack 'B_Plane_CAS_01_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 67500;
