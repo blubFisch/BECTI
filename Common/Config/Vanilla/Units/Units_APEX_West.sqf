@@ -701,17 +701,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'I_C_Offroad_02_unarmed_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 300;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'B_T_LSV_01_armed_F';
 _p pushBack '';
 _n pushBack '';
@@ -954,7 +943,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_T_Truck_01_medical_F';   
+_c pushBack 'B_T_Truck_01_medical_F';
 _p pushBack '';
 _n pushBack (format ["0- Medical Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6800;
@@ -1058,7 +1047,7 @@ _g pushBack "";
 
 _c pushBack 'B_T_APC_Tracked_01_CRV_F';
 _p pushBack '';
-_n pushBack 'HEMTT Repair';
+_n pushBack 'Bobcat Repair';
 _o pushBack 8000;
 _t pushBack 25;
 _u pushBack 0;
@@ -1250,17 +1239,6 @@ _d pushBack 0;
 _g pushBack "";
 
 _c pushBack 'B_T_Boat_Transport_01_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 300;
-_t pushBack 25;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'I_C_Boat_Transport_02_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 300;

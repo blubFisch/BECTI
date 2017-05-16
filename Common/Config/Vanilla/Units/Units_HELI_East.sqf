@@ -119,7 +119,7 @@ _g pushBack "";
 
 //--- Air Vehicles
 
-_c pushBack 'O_Heli_Transport_04_F'; 
+_c pushBack 'O_Heli_Transport_04_F';
 _p pushBack '';
 _n pushBack 'Taru Lift';
 _o pushBack 9000;
@@ -130,7 +130,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_black_F'; 
+_c pushBack 'O_Heli_Transport_04_black_F';
 _p pushBack '';
 _n pushBack 'Taru Lift (Black)';
 _o pushBack 9000;
@@ -141,7 +141,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_ammo_F'; 
+_c pushBack 'O_Heli_Transport_04_ammo_F';
 _p pushBack '';
 _n pushBack 'Taru Ammo';
 _o pushBack 29750;
@@ -152,7 +152,7 @@ _s pushBack "service-ammotruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_ammo_black_F'; 
+_c pushBack 'O_Heli_Transport_04_ammo_black_F';
 _p pushBack '';
 _n pushBack 'Taru Ammo (Black)';
 _o pushBack 29750;
@@ -185,7 +185,7 @@ _s pushBack "service-fueltruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_bench_F'; 
+_c pushBack 'O_Heli_Transport_04_bench_F';
 _p pushBack '';
 _n pushBack 'Taru Unit Transport';
 _o pushBack 12750;
@@ -196,7 +196,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_bench_black_F'; 
+_c pushBack 'O_Heli_Transport_04_bench_black_F';
 _p pushBack '';
 _n pushBack 'Taru Unit Transport';
 _o pushBack 12750;
@@ -207,7 +207,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_covered_F'; 
+_c pushBack 'O_Heli_Transport_04_covered_F';
 _p pushBack '';
 _n pushBack (format ["Covered Trans(DLC ONLY)"]);
 _o pushBack 12750;
@@ -218,7 +218,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_covered_black_F'; 
+_c pushBack 'O_Heli_Transport_04_covered_black_F';
 _p pushBack '';
 _n pushBack (format ["Covered Trans(DLC ONLY)"]);
 _o pushBack 12750;
@@ -229,7 +229,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_medevac_F'; 
+_c pushBack 'O_Heli_Transport_04_medevac_F';
 _p pushBack '';
 _n pushBack (format ["AirRspwn(DLC ONLY)- Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 30000;
@@ -240,7 +240,7 @@ _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_medevac_black_F'; 
+_c pushBack 'O_Heli_Transport_04_medevac_black_F';
 _p pushBack '';
 _n pushBack (format ["AirRspwn(DLC ONLY)- Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 30000;
@@ -251,7 +251,7 @@ _s pushBack "service-medic";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_repair_F'; 
+_c pushBack 'O_Heli_Transport_04_repair_F';
 _p pushBack '';
 _n pushBack (format ["TaruRepr(DLC ONLY)"]);
 _o pushBack 55000;
@@ -262,7 +262,7 @@ _s pushBack "service-repairtruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_repair_black_F'; 
+_c pushBack 'O_Heli_Transport_04_repair_black_F';
 _p pushBack '';
 _n pushBack (format ["TaruRepr(DLC ONLY)"]);
 _o pushBack 55000;
@@ -273,7 +273,7 @@ _s pushBack "service-repairtruck";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_box_F'; 
+_c pushBack 'O_Heli_Transport_04_box_F';
 _p pushBack '';
 _n pushBack 'Taru Lift Box';
 _o pushBack 9000;
@@ -284,7 +284,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'O_Heli_Transport_04_box_black_F'; 
+_c pushBack 'O_Heli_Transport_04_box_black_F';
 _p pushBack '';
 _n pushBack 'Taru Lift Box (Black)';
 _o pushBack 9000;
