@@ -146,6 +146,7 @@ switch (_action) do {
 		_selected = _this select 1;
 		
 		(lnbData [70108, [_selected,0]]) call CTI_UI_Gear_UpdateLinkedItems;
+		(lnbData [70108, [_selected,0]]) call CTI_UI_Gear_UpdateDescription;
 	};
 	case "onShoppingListMouseUp": {
 		{

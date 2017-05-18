@@ -222,9 +222,60 @@ CTI_UI_Purchase_UpdateCost = {
 			};
 		};
 	};
-	
+	(_classname) call CTI_UI_Purchase_UpdateDescription;
 	uiNamespace setVariable ["cti_dialog_ui_purchasemenu_unitcost", _cost];
 	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110014) ctrlSetStructuredText (parseText format["<t align='left'>Cost: <t color='#F56363'>$%1</t></t>", _cost]);
+};
+CTI_UI_Purchase_UpdateDescription = {
+	_classname = _this;
+	_description = "";
+	_isInfantry = if (_classname isKindOf 'Man') then {true} else {false};
+	if (_classname != "") then {
+		_var = missionNamespace getVariable _classname;
+		_description = _var select 2;
+	};
+	_weapons = (getArray (configFile >> 'CfgVehicles' >> _classname >> 'weapons')) - ['Put','Throw'];
+	_magazines = getArray (configFile >> 'CfgVehicles' >> _classname >> 'magazines');	
+	//Update large Image - idc - 111014
+	//_isPreview = isClass (configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
+	//_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "picture");
+	_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
+	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111014) ctrlSetStructuredText (parseText format["<img image='%1'  size='5'/>", _pic]);
+	
+	//Update Stat rows - 110020
+	lnbClear 110020;
+	if !(_isInfantry) then {
+		lnbAddRow [110020, ["Faction: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'faction')]]];
+		lnbAddRow [110020, ["Capacity: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'transportSoldier'))]];
+		lnbAddRow [110020, ["Max speed: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'maxSpeed'))]];
+		lnbAddRow [110020, ["Brake Dist: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'brakeDistance'))]];
+		lnbAddRow [110020, ["Max load: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'maximumLoad'))]];
+		lnbAddRow [110020, ["Armor: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armor'))]];
+		lnbAddRow [110020, ["Armor St: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armorStructural'))]];
+		lnbAddRow [110020, ["Weapons: ", _weapons joinString " | "]];
+		lnbAddRow [110020, ["Magazines: ", _magazines joinString " | "]];
+	} else {
+		lnbAddRow [110020, ["Faction: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'faction')]]];
+		lnbAddRow [110020, ["SKill: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'displayName')]]];
+		lnbAddRow [110020, ["Role: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'role')]]];
+		lnbAddRow [110020, ["Accuracy: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'accuracy'))]];
+		lnbAddRow [110020, ["Armor: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armor'))]];
+		lnbAddRow [110020, ["Audible: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'audible'))]];
+		lnbAddRow [110020, ["Weapons: ", _weapons joinString " | "]];
+		lnbAddRow [110020, ["Magazines: ", _magazines joinString " | "]];
+	};
+	//update Descriptions - idc - 110019
+	//--- Long description.
+	if !(_isInfantry) then {
+		if (isClass (configFile >> 'CfgVehicles' >> _classname >> 'Library')) then {
+			_txt = getText (configFile >> 'CfgVehicles' >> _classname >> 'Library' >> 'libTextDesc');
+			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText _txt);
+		} else {
+			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText '');
+		};
+	} else {
+		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText '');
+	};
 };
 
 CTI_UI_Purchase_HideVehicleIcons = {

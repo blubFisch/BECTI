@@ -1412,7 +1412,48 @@ CTI_UI_Gear_GetGearCostDelta = {
 	
 	round _cost
 };
-
+CTI_UI_Gear_UpdateDescription = {
+	_classname = _this;
+	_description = "";
+	_isWeapon = isClass (configFile >> "CfgWeapons" >> _classname);
+	_isMagazine = isClass (configFile >> "CfgMagazines" >> _classname);
+	_isUniform = _classname isKindof "uniform";
+	_isVest = _classname isKindof "vest";
+	_isPack = _classname isKindof "backpack";
+	if (_classname != "") then {
+		_var = missionNamespace getVariable _classname;
+		_cost = _var select 2;
+	};
+	//Update large Image - idc - 71111
+	_pic = getText(configFile >> "CfgWeapons" >> _classname >> "picture");
+	if (_isMagazine) then {
+		_pic = getText(configFile >> "CfgMagazines" >> _classname >> "picture");
+	};
+	//_pic = getText(configFile >> "CfgWeapons" >> _classname >> "overviewPicture");
+	//_pic = getText(configFile >> "CfgWeapons" >> _classname >> "UiPicture");
+	((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 71111) ctrlSetStructuredText (parseText format["<img image='%1' size='6'/>", _pic]);
+	//Update Stat rows
+	lnbClear 71112;
+	if (_isWeapon) then {
+		//update Descriptions - idc - 71112
+		lnbAddRow [71112, [format ["%1", getText(configFile >> "CfgWeapons" >> _classname >> "displayName")], "Name: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "aiRateOfFire")], "ROF: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "dispersion")], "Dispersion: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "maxRange")], "MaxRange: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "distanceZoomMax")], "ZoomMax: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "reloadTime")], "ReloadTime: " ]];
+		lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgWeapons" >> _classname >> "inertia")], "Impact: " ]];
+	} else {
+		if (_isMagazine) then {
+			lnbAddRow [71112, [format ["%1", getText(configFile >> "CfgMagazines" >> _classname >> "ammo")], "Ammo: " ]];
+			lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgMagazines" >> _classname >> "count")], "Count: " ]];
+			lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgMagazines" >> _classname >> "initSpeed")], "Speed: " ]];
+			lnbAddRow [71112, [format ["%1", getNumber(configFile >> "CfgMagazines" >> _classname >> "mass")], "Mass: " ]];
+		} else {
+			lnbAddRow [71112, ["Coming soon"]];
+		};
+	};
+};
 CTI_UI_Gear_UpdatePrice = {
 	private ["_coloration", "_trade_in"];
 	_trade_in = [uiNamespace getVariable "cti_dialog_ui_gear_target_staticgear", uiNamespace getVariable "cti_dialog_ui_gear_target_gear"] call CTI_UI_Gear_GetGearCostDelta;
