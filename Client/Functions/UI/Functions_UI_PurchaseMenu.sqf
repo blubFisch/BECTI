@@ -238,7 +238,7 @@ CTI_UI_Purchase_UpdateDescription = {
 	//_isPreview = isClass (configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
 	//_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "picture");
 	_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
-	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111014) ctrlSetStructuredText (parseText format["<img image='%1'  size='5'/>", _pic]);
+	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111014) ctrlSetStructuredText (parseText format["<img image='%1'  size='4'/>", _pic]);
 	
 	//Update Stat rows - 110020
 	lnbClear 110020;

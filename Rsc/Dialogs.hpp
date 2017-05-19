@@ -715,7 +715,7 @@ class CTI_RscPurchaseMenu {
 		class CTI_Menu_StatList: RscListNBox
 		{
 			idc = 110020;
-			rowHeight = "1.4 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			itemBackground[] = {1,1,1,0.1};
 			columns[] = {0.001,0.35};
 
@@ -724,7 +724,7 @@ class CTI_RscPurchaseMenu {
 			w = 0.143207 * safezoneW;
 			h = 0.176 * safezoneH;
 			colorBackground[] = {0,0,0,0};
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
 			class Attributes {
 				font = "PuristaMedium";
 				color = "#E8F0FF";
@@ -744,7 +744,7 @@ class CTI_RscPurchaseMenu {
 			y = 0.555 * safezoneH + safezoneY;
 			w = 0.120294 * safezoneW;
 			h = 0.176 * safezoneH;
-			colorBackground[] = {0,0,0,0};
+			colorBackground[] = {0,0,0,0};		
 		};
 	};
 };
@@ -2003,7 +2003,7 @@ class CTI_RscGearMenu
 		class CTI_Menu_Stats_list: RscListNBox
 		{
 			idc = 71112;
-			rowHeight = "1.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			itemBackground[] = {1,1,1,0.1};
 			columns[] = {0.26,0.001};
 			canDrag = 1;
@@ -2013,7 +2013,7 @@ class CTI_RscGearMenu
 			w = 0.182133 * safezoneW;
 			h = 0.19075 * safezoneH;
 			colorBackground[] = {0,0,0,0};
-			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 			
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 			
 		};
 	};
 };
