@@ -26,7 +26,7 @@ class CfgFunctions
 disableChannels[] = { {0,false,true}, {2,true,true}, {6,true,true} };
 
 // For Headless Client
-//joinUnassigned = 0; -commenting out to see if issues goes away when players join they get locked to a slot
+joinUnassigned = 0;
 
 // Debug Enable
 enableDebugConsole = 1;
