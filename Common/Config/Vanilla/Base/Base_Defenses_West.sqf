@@ -662,7 +662,35 @@ if (CTI_JETS_ADDON > 0) then {
 	//******************************BASE DEFENSE 2******************************
 
 	//******************************BASE DEFENSE 3******************************
+		_headers pushBack 		"Praetorian 1C";
+		_classes pushBack 		"B_AAA_System_01_F";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
+		
+		_headers pushBack 		"Mk49 Spartan";
+		_classes pushBack 		"B_SAM_System_01_F";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];
 
+		_headers pushBack 		"Mk21 Centurion";
+		_classes pushBack 		"B_SAM_System_02_F";
+		_prices pushBack 		40000;
+		_placements pushBack 	[180, 15];
+		_categories pushBack 	"Defense";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		3;	
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]];		
 	//******************************BASE DEFENSE 4******************************
 
 };	
