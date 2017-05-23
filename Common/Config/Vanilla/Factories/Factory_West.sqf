@@ -919,6 +919,9 @@ if (CTI_JETS_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_Heli_Light_01_dynamicLoadout_F';
+		_u pushBack 'B_Heli_Attack_01_dynamicLoadout_F';
+		_u pushBack 'B_Plane_CAS_01_dynamicLoadout_F';	
 		_u pushBack 'B_Plane_Fighter_01_F';
 		_u pushBack 'B_Plane_Fighter_01_Stealth_F';
 };	

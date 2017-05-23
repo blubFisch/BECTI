@@ -868,6 +868,11 @@ if (CTI_JETS_ADDON >= 2) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
+		_u pushBack 'O_Heli_Light_02_dynamicLoadout_F';
+		_u pushBack 'O_Heli_Attack_02_dynamicLoadout_F';
+		_u pushBack 'O_T_VTOL_02_infantry_dynamicLoadout_F';
+		_u pushBack 'O_T_VTOL_02_vehicle_dynamicLoadout_F';
+		_u pushBack 'O_Plane_CAS_02_dynamicLoadout_F';
 		_u pushBack 'O_Plane_Fighter_02_F';
 		_u pushBack 'O_Plane_Fighter_02_Stealth_F';	
 };	

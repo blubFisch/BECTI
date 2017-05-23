@@ -1,7 +1,7 @@
 private ["_faction", "_g", "_i", "_p", "_side", "_u"];
 
 _side = _this;
-_faction = "West";
+_faction = "East";
 
 _i = []; //Gear Classname
 _u = []; //Upgrade Level
@@ -20,99 +20,99 @@ _g pushBack "";
 _i pushBack "hgun_Rook40_F";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "hgun_ACPC2_F";  //ACP
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "hgun_Pistol_heavy_02_F";
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "hgun_Pistol_Signal_F";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 //--- SMG
 _i pushBack "hgun_PDW2000_F";
 _u pushBack 0;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "SMG_01_F";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "SMG_02_F";  //Sting
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_SDAR_F";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 //--- ASSAULT RIFLES
 
 _i pushBack "arifle_Katiba_F";
 _u pushBack 2;
 _p pushBack 1050;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_Katiba_C_F";
 _u pushBack 2;
 _p pushBack 1050;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_Katiba_GL_F";
 _u pushBack 2;
 _p pushBack 1500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_TRG21_F";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_TRG20_F";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "arifle_TRG21_GL_F";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 //--- Machine Guns
 _i pushBack "LMG_Zafir_F";
 _u pushBack 3;
 _p pushBack 1800;
-_g pushBack "";
+_g pushBack "Khaki";
 
 
 //--- SNIPERS	
 _i pushBack "srifle_GM6_F";
 _u pushBack 4;
 _p pushBack 3000;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "srifle_GM6_camo_F";
 _u pushBack 4;
 _p pushBack 3000;
-_g pushBack "";
+_g pushBack "Hex";
 
 //--- DMR
 _i pushBack "srifle_DMR_01_F";  //Rahim 7.62
 _u pushBack 2;
 _p pushBack 1500;
-_g pushBack "";
+_g pushBack "Hex";
 
 
 //------------------------------ LAUNCHERS	------------------------------
@@ -120,22 +120,22 @@ _g pushBack "";
 _i pushBack "launch_RPG32_F";
 _u pushBack 1;
 _p pushBack 1200;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "launch_RPG32_ghex_F";
 _u pushBack 2;
 _p pushBack 1200;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "launch_O_Titan_F"; //AA
 _u pushBack 4;
 _p pushBack 5000;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "launch_O_Titan_short_F"; //Takes AT and AP rounds only
 _u pushBack 3;
 _p pushBack 3000;
-_g pushBack "";
+_g pushBack "Hex";
 
 
 
@@ -233,138 +233,138 @@ _g pushBack "";
 _i pushBack "optic_arco";
 _u pushBack 2;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Hamr";
 _u pushBack 2;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Holosight";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "optic_MRCO";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Aco";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_ACO_grn";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "optic_SOS";
 _u pushBack 4;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_LRPS";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_NVS";
 _u pushBack 4;
 _p pushBack 1000;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Nightstalker";
 _u pushBack 4;
 _p pushBack 2000;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "optic_tws";
 _u pushBack 4;
 _p pushBack 1600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_tws_mg";
 _u pushBack 4;
 _p pushBack 1600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_MRD";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Yorris";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "opitc_ACO_grn_smg";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "optic_Aco_smg";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Holosight_smg";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_Arco_F";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "optic_Arco_blk_F";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_DMS";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_KHS_blk";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_KHS_hex";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "optic_KHS_old";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "optic_KHS_tan";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Khaki";
 
 //--- ITEMS 
 _i pushBack "NVGoggles";
 _u pushBack 0;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "NVGoggles_OPFOR";
 _u pushBack 0;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "NVGoggles_INDEP";
 _u pushBack 0;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "Binocular";
 _u pushBack 0;
@@ -419,12 +419,12 @@ _g pushBack "";
 _i pushBack "Laserdesignator";
 _u pushBack 3;
 _p pushBack 1000;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "Rangefinder";
 _u pushBack 3;
 _p pushBack 1000;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "MineDetector";
 _u pushBack 3;
@@ -435,425 +435,425 @@ _g pushBack "";
 _i pushBack "muzzle_snds_acp";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_H";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_H_MG";
 _u pushBack 4;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_B";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_L";
 _u pushBack 4;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_M";
 _u pushBack 4;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "muzzle_snds_H_SW";
 _u pushBack 3;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Black";
 //------------------------------ UNIFORMS------------------------------
 //--- UNIFORMS	
 _i pushBack "U_O_CombatUniform_ocamo";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_O_OfficerUniform_ocamo";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_O_CombatUniform_oucamo";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_O_GhillieSuit";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_O_PilotCoveralls";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "U_O_SpecopsUniform_ocamo";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_O_Wetsuit";
 _u pushBack 4;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "U_O_SpecopsUniform_blk";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "U_OG_Guerilla1_1";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerilla2_1";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerilla2_2";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerilla2_3";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerilla3_1";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerilla3_2";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "U_OG_Guerrilla_6_1";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Digi";
 
 //--- VESTS
 _i pushBack "V_Rangemaster_belt";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_PlateCarrier1_blk";
 _u pushBack 2;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_PlateCarrier1_rgr";
 _u pushBack 2;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Digi";
  
 _i pushBack "V_PlateCarrier2_blk";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_PlateCarrier2_rgr";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "V_Chestrig_blk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_Chestrig_rgr";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_Chestrig_khk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_Chestrig_oli";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_BandollierB_khk";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_BandollierB_cbr";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "V_TacVest_brn";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_HarnessO_brn";
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_HarnessOGL_brn";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_HarnessOSpec_brn";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_HarnessO_gry";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_HarnessOGL_gry";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_HarnessOSpec_gry";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_RebreatherIR";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_BandollierB_blk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_BandollierB_cbr";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "V_BandollierB_rgr";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_BandollierB_khk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_BandollierB_oli";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_TacVest_blk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_TacVest_brn";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "V_TacVest_camo";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "V_TacVest_khk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "V_TacVest_oli";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_TacVest_blk_POLICE";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_TacVestIR_blk";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "V_I_G_resistanceLeader_F";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_PlateCarrier_Kerry";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "V_PlateCarrierIA1_dgtl";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "V_PlateCarrierIA2_dgtl";
 _u pushBack 1;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "Vest_V_RebreatherIR";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 //--- BACKPACKS
 _i pushBack "B_AssaultPack_blk";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "B_AssaultPack_cbr";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "B_AssaultPack_dgtl";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "B_AssaultPack_rgr";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_AssaultPack_ocamo";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_AssaultPack_khk";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "B_AssaultPack_mcamo";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_AssaultPack_sgg";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_AssaultPack_tna_f";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "B_AssaultPack_Kerry";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_FieldPack_blk";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "B_FieldPack_cbr";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "B_FieldPack_ocamo";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "B_FieldPack_khk";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "B_FieldPack_oli";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_FieldPack_oucamo";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "B_TacticalPack_blk";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "B_TacticalPack_rgr";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_TacticalPack_ocamo";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "B_TacticalPack_mcamo";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_TacticalPack_oli";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_Kitbag_cbr";
 _u pushBack 0;
 _p pushBack 20;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "B_Kitbag_rgr";
 _u pushBack 0;
 _p pushBack 20;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_Kitbag_mcamo";
 _u pushBack 0;
 _p pushBack 20;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_Kitbag_sgg";
 _u pushBack 0;
 _p pushBack 20;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_Bergen_sgg";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_Carryall_ocamo";
 _u pushBack 4;
@@ -863,37 +863,37 @@ _g pushBack "";
 _i pushBack "B_Carryall_mcamo";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "B_Carryall_cbr";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "B_Carryall_khk";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "B_Carryall_oli";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "B_Carryall_oucamo";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "B_Carryall_ghex_F";
 _u pushBack 4;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "B_Parachute";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 
 
@@ -901,7 +901,7 @@ _g pushBack "";
 _i pushBack "O_UAV_01_backpack_F";
 _u pushBack 3;
 _p pushBack 2000;
-_g pushBack "";
+_g pushBack "Green";
 
 //--- DISMANTLED WEAPONS
 _i pushBack "O_Static_Designator_02_weapon_F";
@@ -974,70 +974,70 @@ _g pushBack "";
 _i pushBack "H_HelmetO_ocamo";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetO_oucamo";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetSpecO_ocamo";
 _u pushBack 3;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetSpecO_blk";
 _u pushBack 3;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_HelmetLeaderO_ocamo";
 _u pushBack 3;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetLeaderO_oucamo";
 _u pushBack 3;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 
 _i pushBack "H_PilotHelmetHeli_O";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_CrewHelmetHeli_O";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetCrew_O";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_PilotHelmetFighter_O";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_HelmetLeader0_ocamo";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 _i pushBack "H_HelmetLeader0_oucamo";
 _u pushBack 1;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Hex";
 
 
 //--- HATS	
 _i pushBack "H_Bandanna_gry";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Bandanna_blu";
 _u pushBack 0;
@@ -1047,132 +1047,132 @@ _g pushBack "";
 _i pushBack "H_Bandanna_cbr";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Bandanna_khk_hs";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Bandanna_khk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Bandanna_mcamo";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "H_Bandanna_sgg";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Bandanna_sand";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Bandanna_camo";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Watchcap_blk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Watchcap_cbr";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "H_Watchcap_camo";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "H_Watchcap_khk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Beret_blk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Beret_02";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Beret_Colonel";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Booniehat_khk_hs";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Booniehat_khk_hs";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Booniehat_mcamo";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "H_Booniehat_oli";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Booniehat_tan";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Booniehat_dgt1";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "H_Cap_grn_BI";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Cap_blk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Cap_blk_CMMG";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Cap_grn";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Cap_oli";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Cap_oli_hs";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Cap_police";
 _u pushBack 0;
@@ -1182,32 +1182,32 @@ _g pushBack "";
 _i pushBack "H_Cap_tan";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
-_i pushBack "H_Cap_khaki_specops_UK";
+_i pushBack "H_Cap_Khaki_specops_UK";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Cap_usblack";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "H_Cap_tan_specops_US";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_Cap_brn_SPECOPS";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "H_Hat_camo";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "H_MilCap_blue";
 _u pushBack 0;
@@ -1222,27 +1222,27 @@ _g pushBack "";
 _i pushBack "H_Shemag_olive";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_Shemag_olive_hs";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "H_ShemagOpen_tan";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_ShemagOpen_khk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "H_ShemagOpen_khk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 //--- FACE
 _i pushBack "G_Aviator";
@@ -1253,7 +1253,7 @@ _g pushBack "";
 _i pushBack "G_Balaclava_blk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "G_Balaclava_combat";
 _u pushBack 0;
@@ -1268,7 +1268,7 @@ _g pushBack "";
 _i pushBack "G_Balaclava_oli";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "G_Bandanna_aviator";
 _u pushBack 0;
@@ -1278,27 +1278,27 @@ _g pushBack "";
 _i pushBack "G_Bandanna_beast";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "G_Bandanna_blk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "G_Bandanna_khk";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "G_Bandanna_oli";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "G_Bandanna_shades";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "G_Bandanna_sport";
 _u pushBack 0;
@@ -1308,7 +1308,7 @@ _g pushBack "";
 _i pushBack "G_Bandanna_tan";
 _u pushBack 0;
 _p pushBack 5;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "G_Combat";
 _u pushBack 0;

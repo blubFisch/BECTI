@@ -35,7 +35,7 @@ switch (_action) do {
 		// Cleanup Gear Cam
 		CTI_Gear_cam cameraEffect["TERMINATE","BACK"];
 		camDestroy CTI_Gear_cam;
-		showCinemaBorder true;
+		showCinemaBorder false;
 	};
 	case "onShoppingTabClicked": { //--- A shopping tab was clicked upon
 		//--- New tab

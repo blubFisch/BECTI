@@ -53,11 +53,66 @@ _g = []; //--- Filter by Camo
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+_c pushBack 'O_Heli_Light_02_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "";
+
+_c pushBack 'O_Heli_Attack_02_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "";
+
+_c pushBack 'O_Plane_CAS_02_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "";
+
+_c pushBack 'O_T_VTOL_02_infantry_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "";
+
+_c pushBack 'O_T_VTOL_02_vehicle_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "";
+
 _c pushBack 'O_Plane_Fighter_02_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
 _o pushBack 67500;
-_t pushBack 50;
+_t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
@@ -66,9 +121,9 @@ _g pushBack "";
 
 _c pushBack 'O_Plane_Fighter_02_Stealth_F';
 _p pushBack '';
-_n pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
 _o pushBack 67500;
-_t pushBack 50;
+_t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
