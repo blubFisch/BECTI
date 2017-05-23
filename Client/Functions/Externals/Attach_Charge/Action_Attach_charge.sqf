@@ -161,8 +161,8 @@ EtV_Actions =
 	private ["_unit"];
 	_unit = _this select 0;
 	_unit addAction ["<t color=""#FFE496"">" +"Attach C4 Charge", EtV_AttachCharge, ["DemoCharge_Remote_Mag",_unit], 1, true, true, "","['DemoCharge_Remote_Mag',_target] call EtV_ChargeCheck"];
-	if (CTI_RHS_ADDON > 0) then { 
-	_unit addAction ["<t color=""#FFE496"">" +"Attach M112 Charge", EtV_AttachCharge, ["rhsusf_m112_mag",_unit], 1, true, true, "","['rhsusf_m112_mag',_target] call EtV_ChargeCheck"];
+	if (CTI_RHS_USAF_ADDON > 0) then { 
+		_unit addAction ["<t color=""#FFE496"">" +"Attach M112 Charge", EtV_AttachCharge, ["rhsusf_m112_mag",_unit], 1, true, true, "","['rhsusf_m112_mag',_target] call EtV_ChargeCheck"];
 	};
 	_unit addAction ["<t color=""#FFE496"">" +"Touch-Off Explosives", EtV_TouchOff, [_unit], 1, true, true, "","[_target] call EtV_UnitCheck"];
 	_unit addAction ["<t color=""#FFE496"">" +"+30Secs to Timer", EtV_Timer, [_unit], 1, true, true, "","[_target] call EtV_UnitCheckTimer"];
