@@ -62,7 +62,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Green";
 
 _c pushBack 'B_Heli_Attack_01_dynamicLoadout_F';
 _p pushBack '';
@@ -73,7 +73,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Green";
 
 _c pushBack 'B_Plane_CAS_01_dynamicLoadout_F';
 _p pushBack '';
@@ -84,7 +84,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Grey";
 
 _c pushBack 'B_Plane_Fighter_01_F';
 _p pushBack '';
@@ -95,7 +95,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Grey";
 
 _c pushBack 'B_Plane_Fighter_01_Stealth_F';
 _p pushBack '';
@@ -106,7 +106,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Grey";
 
 
 //--- Naval Vehicles

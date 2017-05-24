@@ -63,7 +63,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'B_Heli_Transport_03_black_F';
 _p pushBack '';
@@ -74,7 +74,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'B_Heli_Transport_03_unarmed_green_F';
 _p pushBack '';
@@ -85,7 +85,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Green";
 
 _c pushBack 'B_Heli_Transport_03_F';
 _p pushBack '';
@@ -96,7 +96,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Green";
 
 //--- Naval Vehicles
 

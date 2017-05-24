@@ -54,7 +54,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'Land_Pod_Heli_Transport_04_covered_F';
 _p pushBack '';
@@ -65,7 +65,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'Land_Pod_Heli_Transport_04_medevac_F';
 _p pushBack '';
@@ -76,7 +76,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'Land_Pod_Heli_Transport_04_bench_black_F';
 _p pushBack '';
@@ -87,7 +87,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'Land_Pod_Heli_Transport_04_covered_black_F';
 _p pushBack '';
@@ -98,7 +98,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'Land_Pod_Heli_Transport_04_medevac_black_F';
 _p pushBack '';
@@ -109,7 +109,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 //--- Heavy Vehicles
 
@@ -128,7 +128,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_black_F';
 _p pushBack '';
@@ -139,7 +139,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_ammo_F';
 _p pushBack '';
@@ -150,7 +150,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_ammo_black_F';
 _p pushBack '';
@@ -161,7 +161,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-ammotruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_fuel_F';
 _p pushBack '';
@@ -172,7 +172,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-fueltruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_fuel_black_F';
 _p pushBack '';
@@ -183,7 +183,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-fueltruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_bench_F';
 _p pushBack '';
@@ -194,7 +194,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_bench_black_F';
 _p pushBack '';
@@ -205,7 +205,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_covered_F';
 _p pushBack '';
@@ -216,7 +216,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_covered_black_F';
 _p pushBack '';
@@ -227,7 +227,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_medevac_F';
 _p pushBack '';
@@ -238,7 +238,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_medevac_black_F';
 _p pushBack '';
@@ -249,7 +249,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_repair_F';
 _p pushBack '';
@@ -260,7 +260,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_repair_black_F';
 _p pushBack '';
@@ -271,7 +271,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "service-repairtruck";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Transport_04_box_F';
 _p pushBack '';
@@ -282,7 +282,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Heli_Transport_04_box_black_F';
 _p pushBack '';
@@ -293,7 +293,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 
 //--- Naval Vehicles

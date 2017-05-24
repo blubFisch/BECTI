@@ -62,7 +62,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'O_Heli_Attack_02_dynamicLoadout_F';
 _p pushBack '';
@@ -73,7 +73,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Plane_CAS_02_dynamicLoadout_F';
 _p pushBack '';
@@ -84,7 +84,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_T_VTOL_02_infantry_dynamicLoadout_F';
 _p pushBack '';
@@ -95,7 +95,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_T_VTOL_02_vehicle_dynamicLoadout_F';
 _p pushBack '';
@@ -106,7 +106,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Plane_Fighter_02_F';
 _p pushBack '';
@@ -117,7 +117,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 _c pushBack 'O_Plane_Fighter_02_Stealth_F';
 _p pushBack '';
@@ -128,7 +128,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Hex";
 
 
 //--- Naval Vehicles
