@@ -57,7 +57,7 @@ _completion_ratio = _structure getVariable "cti_completion_ratio";
 _completion_last = _completion;
 
 _var = missionNamespace getVariable _variable;
-_time_build = _var select 3;
+_time_build = _var select CTI_STRUCTURE_TIME;
 
 switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 	case 0: { //--- Timed Based
@@ -111,18 +111,18 @@ _logic setVariable ["cti_structures_wip", (_logic getVariable "cti_structures_wi
 deleteVehicle _structure;
 
 if (_completion >= 100) then { //--- The structure is complete
-	_structure = ((_var select 1) select 0) createVehicle _position;
+	_structure = ((_var select CTI_STRUCTURE_CLASSES) select 0) createVehicle _position;
 	_structure setDir _direction;
 	_structure setPos _position;
 	_structure setDir _direction;
 	_structure setVectorUp [0,0,0];
-	_structure setVariable ["cti_structure_type", ((_var select 0) select 0)];
+	_structure setVariable ["cti_structure_type", ((_var select CTI_STRUCTURE_LABELS) select 0)];
 
 	//--- Do we use our alternative damage system to prevent some bisteries from happening?
 	_alternative_damages = false;
 	_reduce_damages = 0;
 	_multiply_damages = 0;
-	{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select 5);
+	{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 	if (_alternative_damages) then {
 		_structure setVariable ["cti_altdmg", 0];
 		_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages, _multiply_damages]];
@@ -140,7 +140,7 @@ if (_completion >= 100) then { //--- The structure is complete
 	[_structure, _var, _side] call CTI_SE_FNC_InitializeStructure;
 	
 	if (CTI_Log_Level >= CTI_Log_Information) then {
-		["INFORMATION", "FILE: Server\Functions\Server_HandleStructureConstruction.sqf", format["A [%1] from side [%2] Construction has been completed on position [%3], was it destroyed? [%4]", (_var select 0) select 1, _side, _position, _isDestroyed]] call CTI_CO_FNC_Log;
+		["INFORMATION", "FILE: Server\Functions\Server_HandleStructureConstruction.sqf", format["A [%1] from side [%2] Construction has been completed on position [%3], was it destroyed? [%4]", (_var select CTI_STRUCTURE_LABELS) select 1, _side, _position, _isDestroyed]] call CTI_CO_FNC_Log;
 	};
 
 	[_structure, _variable] remoteExec ["CTI_PVF_CLT_OnStructureConstructed", _side];
@@ -178,7 +178,7 @@ if (_completion >= 100) then { //--- The structure is complete
 	};
 	
 	if (CTI_Log_Level >= CTI_Log_Information) then {
-		["INFORMATION", "FILE: Server\Functions\Server_HandleStructureConstruction.sqf", format["A [%1] from side [%2] Construction has expired at position [%3], was it destroyed? [%4]", (_var select 0) select 1, _side, _position, _isDestroyed]] call CTI_CO_FNC_Log;
+		["INFORMATION", "FILE: Server\Functions\Server_HandleStructureConstruction.sqf", format["A [%1] from side [%2] Construction has expired at position [%3], was it destroyed? [%4]", (_var select CTI_STRUCTURE_LABELS) select 1, _side, _position, _isDestroyed]] call CTI_CO_FNC_Log;
 	};
 
 	//todo: add message bout structure expiration

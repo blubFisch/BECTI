@@ -320,12 +320,12 @@ class FSM
        "			_var = missionNamespace getVariable format [""CTI_%1_%2"", _side, _selected_param];" \n
        "			" \n
        "			if !(isNil '_var') then {" \n
-       "				if (_supply >= (_var select 2)) then {" \n
+       "				if (_supply >= (_var select CTI_STRUCTURE_PRICE)) then {" \n
        "					_index = -1;" \n
-       "					{if ((_x select 0) == ((_var select 0) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
+       "					{if ((_x select 0) == ((_var select CTI_STRUCTURE_LABELS) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
        "					if (_index != -1) then {" \n
        "						_emplacement = [_side, _var, _template select _index] call CTI_FSM_UpdateCommander_GetStructureEmplacement;" \n
-       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select 0) select 0, _var select 2, _emplacement]};" \n
+       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select CTI_STRUCTURE_LABELS) select 0, _var select CTI_STRUCTURE_PRICE, _emplacement]};" \n
        "					} else {" \n
        "						_increment = true; //--- We can't do it, what's next?" \n
        "					};" \n
@@ -350,12 +350,12 @@ class FSM
        "	if (_supply >= (_build select 1)) then {" \n
        "		_position = _build select 2;" \n
        "		_var = missionNamespace getVariable format [""CTI_%1_%2"", _side, _build select 0];" \n
-       "		_distance_structure = (_var select 4) select 1;" \n
+       "		_distance_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 1;" \n
        "		_dir_to = [_hq, _position] call CTI_CO_FNC_GetDirTo;" \n
        "		_goto = [(_position select 0) - ((sin _dir_to) * _distance_structure), (_position select 1) - ((cos _dir_to) * _distance_structure), 0];" \n
        "" \n
        "		//--- Construct" \n
-       "		_direction_structure = (_var select 4) select 0;" \n
+       "		_direction_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 0;" \n
        "		_direction = 0 + ((_build select 2) select 1) + _direction_structure; //todo template defines that (0)" \n
        "		[format [""CTI_%1_%2"", _side, _build select 0], _side, (_build select 2), _direction] call CTI_SE_FNC_BuildStructure;" \n
        "		" \n

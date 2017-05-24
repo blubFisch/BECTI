@@ -63,6 +63,14 @@ _unit addEventHandler ["killed", format["[_this select 0, _this select 1, %1] sp
 //-- Deleted EH
 _unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [[_unit], true];
+	} else {
+		[ADMIN_ZEUS, _unit] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+
 //Check Barrack Upgrade and set default skills
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_logic = (_side) call CTI_CO_FNC_GetSideLogic;

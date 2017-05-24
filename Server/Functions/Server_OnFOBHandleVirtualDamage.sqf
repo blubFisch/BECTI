@@ -114,8 +114,7 @@ if (_reduce_damages > 0 ) then {
 	};
 };
 
-_virtual_damages = _damaged getVariable "cti_altdmg";
-if (isNil '_virtual_damages') then {_virtual_damages = 0};
+_virtual_damages = _damaged getVariable ["cti_altdmg", 0];
 _virtual_damages = _virtual_damages + _damage;
 if (_virtual_damages > 1) then { _virtual_damages = 1 };
 
