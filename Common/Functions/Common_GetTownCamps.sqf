@@ -5,7 +5,7 @@
 	Description:	Get the camps of a town if available
 	Author: 		Benny
 	Creation Date:	26-04-2016
-	Revision Date:	15-03-2017
+	Revision Date:	26-04-2016
 	
   # PARAMETERS #
     0	[Object]: The town
@@ -21,4 +21,10 @@
 	  -> Assuming St Pierre has 2 camps -> [Camp0, Camp1]
 */
 
-(_this getVariable ["cti_town_camps", []])
+private ["_camps"];
+
+_camps = _this getVariable "cti_town_camps";
+
+if (isNil '_camps') then {_camps = []};
+
++_camps

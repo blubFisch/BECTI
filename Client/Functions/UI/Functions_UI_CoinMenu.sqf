@@ -51,9 +51,9 @@ CTI_Coin_LoadSubMenu = {
 		
 		{
 			_info = missionNamespace getVariable _x;
-			if (call (_info select CTI_STRUCTURE_CONDITION)) then { //--- Make sure that the structure match it's present condition
-				_items pushBack format["%1  -  S%2", (_info select CTI_STRUCTURE_LABELS) select 1, _info select CTI_STRUCTURE_PRICE];
-				_itemEnabled pushBack (if (_supply >= _info select CTI_STRUCTURE_PRICE) then {1} else {0});
+			if (call (_info select 6)) then { //--- Make sure that the structure match it's present condition
+				_items pushBack format["%1  -  S%2", (_info select 0) select 1, _info select 2];
+				_itemEnabled pushBack (if (_supply >= _info select 2) then {1} else {0});
 				_itemVariable pushBack _x;
 			};
 		} forEach (missionNamespace getVariable format ["CTI_%1_STRUCTURES", CTI_P_SideJoined]);
@@ -87,13 +87,13 @@ CTI_Coin_LoadSubMenu = {
 				_info = missionNamespace getVariable _x;
 				_upgrade = _info select 8;
 				if (_upgrade_defense >= _upgrade) then {
-					if ((missionNamespace getVariable "CTI_COIN_SOURCE") in (_info select CTI_DEFENSE_COINMENU)) then {
+					if ((missionNamespace getVariable "CTI_COIN_SOURCE") in (_info select 6)) then {
 						_price = "";
 						_price = (_info select 2);
-						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select CTI_DEFENSE_PRICE) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)};
-						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select CTI_DEFENSE_PRICE) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)};
-						_sub_items pushBack format["%1  -  $%2", _info select CTI_DEFENSE_LABEL, _info select CTI_DEFENSE_PRICE];
-						_sub_itemEnabled pushBack (if (_funds >= _info select CTI_DEFENSE_PRICE) then {1} else {0});
+						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)};
+						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)};
+						_sub_items pushBack format["%1  -  $%2", _info select 0, _price];
+						_sub_itemEnabled pushBack (if (_funds >= _price) then {1} else {0});
 						_sub_itemVariable pushBack _x;
 					};
 				};
@@ -132,10 +132,10 @@ CTI_Coin_DefenseCanBePlaced = {
 	
 	_valid = true;
 	
-	if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- Check if the defense can be placed according to the blacklist
+	if !((CTI_COIN_PARAM select 7) isEqualTo []) then { //--- Check if the defense can be placed according to the blacklist
 		{
 			if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
-		} forEach (CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST);
+		} forEach (CTI_COIN_PARAM select 7);
 	};
 	
 	_valid
@@ -157,8 +157,8 @@ CTI_Coin_UpdatePreview = {
 				_color = CTI_COIN_COLOR_INVALID;
 			} else {
 				if (CTI_COIN_PARAM_KIND == "DEFENSES") then {
-					if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- A blacklist is specified
-						if ((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo ["*"]) then { //--- If a wildcard is specified, treat the defense as a structure
+					if !((CTI_COIN_PARAM select 7) isEqualTo []) then { //--- A blacklist is specified
+						if ((CTI_COIN_PARAM select 7) isEqualTo ["*"]) then { //--- If a wildcard is specified, treat the defense as a structure
 							if !(_preview call CTI_Coin_PreviewSurfaceIsValid) then {_color = CTI_COIN_COLOR_INVALID};
 						} else { //--- A Grain-based blacklist is specified
 							if !(_preview call CTI_Coin_DefenseCanBePlaced) then {_color = CTI_COIN_COLOR_INVALID};
@@ -318,7 +318,7 @@ CTI_Coin_OnPreviewPlacement = {
 			case 'DEFENSES': {
 				_item = CTI_COIN_PARAM select 1;
 				
-				if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- A blacklist is specified
+				if !((CTI_COIN_PARAM select 7) isEqualTo []) then { //--- A blacklist is specified
 					if !((CTI_COIN_PARAM select 7) isEqualTo ["*"]) then { _defense_pos_valid = CTI_COIN_PREVIEW call CTI_Coin_DefenseCanBePlaced };
 				};
 			};

@@ -55,14 +55,7 @@ if !(_process) exitWith {[_req_seed, _req_classname, _req_target, _factory] call
 _sideID = (_req_side) call CTI_CO_FNC_GetSideID;
 _model = _req_classname;
 _var_classname = missionNamespace getVariable _req_classname;
-
-//--- Abort this script if a nil classname is specified
-if (isNil '_var_classname') exitWith {
-	if (CTI_Log_Level >= CTI_Log_Information) then { ["ERROR", "FILE: Server\Functions\Server_HandleAIPurchase.sqf", format["An AI request from group [%1] to group [%2] using the seed [%3] could not be processed in the factory [%4 (%5)], classname [%6] is not defined", _req_buyer, _req_target, _req_seed, _factory, _factory getVariable "cti_structure_type", _req_classname]] call CTI_CO_FNC_Log };
-	[_req_seed, _req_classname, _req_target, _factory] call CTI_SE_FNC_OnClientPurchaseComplete;
-};
-
-_req_time_out = time + (_var_classname select CTI_UNIT_TIME);
+_req_time_out = if !(isNil '_var_classname') then {time + (_var_classname select CTI_UNIT_TIME)} else {5};
 
 //--- Custom vehicle?
 _script = _var_classname select CTI_UNIT_SCRIPT;
@@ -92,8 +85,8 @@ if !(isNil {_factory getVariable "cti_large_fob"}) then {
 };
 _var = missionNamespace getVariable [format ["CTI_%1_%2", _req_side, _factory getVariable ["cti_structure_type", ""]], []];
 if (count _var > 0) then {
-	_direction = 360 - ((_var select CTI_STRUCTURE_PLACEMENT) select 0);
-	_distance = ((_var select CTI_STRUCTURE_PLACEMENT) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
+	_direction = 360 - ((_var select 4) select 0);
+	_distance = ((_var select 4) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
 };
 
 _position = _factory modelToWorld [(sin _direction * _distance), (cos _direction * _distance), 0];

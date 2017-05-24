@@ -100,10 +100,7 @@ class FSM
        "	if (_pool_income_commander > 0) then {[_side, _pool_income_commander] call CTI_CO_FNC_ChangeFundsCommander};" \n
        "	" \n
        "	//--- Last, we deal with the supply" \n
-       "	if (_supply > 0) then {" \n
-       "		_supply =  _supply + (_supply * (CTI_UPGRADE_CST_SUPPLY_COEF select ([_side, CTI_UPGRADE_SUPPLY_RATE] call CTI_CO_FNC_GetUpgrade)));" \n
-       "		[_side, _supply] call CTI_CO_FNC_ChangeSideSupply;" \n
-       "	};" \n
+       "	if (_supply > 0) then {[_side, _supply] call CTI_CO_FNC_ChangeSideSupply};" \n
        "	" \n
        "	if (CTI_Log_Level >= CTI_Log_Information) then {" \n
        "		[""INFORMATION"", ""FILE: Server\FSM\update_resources.fsm"", format[""Income dispatching for side [%1] with Award percentage [%2], Resources percentage [%3] resulting in a Commander Pool of [$%4] and a Player Pool of [$%5] for a total pool size of [$%6] and a supply income of [%7S]"", _side, _percent_award, _percent_resources, _pool_income_commander, _pool_income_players, _pool_income_total, _supply]] call CTI_CO_FNC_Log;" \n

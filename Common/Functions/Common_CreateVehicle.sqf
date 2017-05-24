@@ -110,14 +110,6 @@ if (getNumber(configFile >> "CfgVehicles" >> _type >> "artilleryScanner") > 0 &&
 	(_vehicle) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 };
 
-//--- ZEUS Curator Editable
-if !(isNil "ADMIN_ZEUS") then {
-	if (CTI_IsServer) then {
-		ADMIN_ZEUS addCuratorEditableObjects [[_vehicle], true];
-	} else {
-		[ADMIN_ZEUS, _vehicle] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
-	};
-
 if (getAmmoCargo _vehicle > 0) then {_vehicle setAmmoCargo  0};
 
 //--- Clear out the cargo of the vehicle

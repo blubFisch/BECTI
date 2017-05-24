@@ -584,10 +584,6 @@ if (isNil {_town getVariable "cti_naval"}) then {
 	if (_totalGroups < 1) then {_totalGroups = 1};
 };
 
-if (CTI_Log_Level >= CTI_Log_Information) then { 
- 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["A Resistance Pool of [%1] squads template is about to be parsed for town [%2] based on the town SV [%3]", count _pool_units, _town getVariable "cti_town_name", _value]] call CTI_CO_FNC_Log;
-};
-
 //--- Flatten the pool
 _pool = [];
 {
@@ -627,14 +623,10 @@ _pool = [];
 } forEach _pool_units;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { 
-	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved an effective Resistance Pool of [%1] squad(s) for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
+	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved a Resistance Pool count of [%1] for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
 };
 
-if (count _pool < 1) exitWith {
-	if (CTI_Log_Level >= CTI_Log_Error) then { ["ERROR", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", Format["There are no Units Pools available for town [%1]. Units will not be spawned", _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log };
-	
-	[[],[],[]]
-};
+if (count _pool < 1) exitWith {[[],[],[]]};
 
 //--- Shuffle the pool
 _pool = _pool call CTI_CO_FNC_ArrayShuffle;

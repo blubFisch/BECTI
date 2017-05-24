@@ -116,7 +116,8 @@ if (_reduce_damages > 0 ) then {
 	};
 };
 
-_virtual_damages = _damaged getVariable ["cti_altdmg", 0];
+_virtual_damages = _damaged getVariable "cti_altdmg";
+if (isNil '_virtual_damages') then {_virtual_damages = 0};
 _virtual_damages = _virtual_damages + _damage;
 if (_virtual_damages > 1) then { _virtual_damages = 1 };
 
@@ -127,14 +128,14 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	_damaged setDammage 1;
 	
 	_var = missionNamespace getVariable _variable;
-		if (((_var select CTI_STRUCTURE_LABELS) select 0) == CTI_HQ_DEPLOY) then {
+		if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then {
 			if (CTI_Log_Level >= CTI_Log_Information) then {
 				["INFORMATION", "FILE: Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf", format["HQ [%1] from side [%2] has been destroyed (virtual damages) by [%3]", _damaged, _side, _shooter]] call CTI_CO_FNC_Log;
 			};
 			[_damaged, _shooter, _sideID] spawn CTI_SE_FNC_OnHQDestroyed;
 		} else {
 			if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FILE: Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", ((_var select CTI_STRUCTURE_LABELS) select 1), _side, _shooter]] call CTI_CO_FNC_Log;
+				["INFORMATION", "FILE: Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", ((_var select 0) select 1), _side, _shooter]] call CTI_CO_FNC_Log;
 			};
 			[_damaged, _shooter, _variable, _sideID, _position, _direction, _completion_ratio] spawn CTI_SE_FNC_OnBuildingDestroyed;
 		};
