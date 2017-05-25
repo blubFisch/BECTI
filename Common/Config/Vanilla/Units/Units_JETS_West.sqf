@@ -108,6 +108,17 @@ _s pushBack "";
 _d pushBack 30;
 _g pushBack "Grey";
 
+_c pushBack 'B_UAV_05_F';
+_p pushBack '';
+_n pushBack ["%1 (Dynamic Loadout)"];
+_o pushBack 40000;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Grey";
+
 
 //--- Naval Vehicles
 

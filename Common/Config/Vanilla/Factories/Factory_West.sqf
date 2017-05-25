@@ -924,6 +924,7 @@ if (CTI_JETS_ADDON >= 2) then {
 		_u pushBack 'B_Plane_CAS_01_dynamicLoadout_F';	
 		_u pushBack 'B_Plane_Fighter_01_F';
 		_u pushBack 'B_Plane_Fighter_01_Stealth_F';
+		_u pushBack 'B_UAV_05_F';
 };	
 //--------------------------------- TANKS ------------------------------
 if (CTI_TANKS_ADDON >= 2) then { 
