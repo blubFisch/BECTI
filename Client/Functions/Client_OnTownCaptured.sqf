@@ -30,7 +30,7 @@
 	[_structure, _variable] call CTI_CL_FNC_OnTownCaptured
 */
 
-private ["_color", "_in_range", "_last_capture", "_score", "_side_new", "_sideID_new", "_sideID_old", "_town", "_town_camps", "_value"];
+private ["_color", "_in_range", "_last_capture", "_score", "_side_new", "_sideID_new", "_sideID_old", "_town", "_value"];
 
 _town = _this select 0;
 _sideID_new = _this select 1;
@@ -55,6 +55,7 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 		};
 		
 		_score = round(_value / CTI_SCORE_TOWN_VALUE_PERPOINT);
+		
 		if (CTI_Log_Level >= CTI_Log_Debug) then {
 			["DEBUG", "FILE: Client\Functions\Client_OnTownCaptured.sqf", format ["Town [%1] capture did award the player's [%2] with [$%3] along with a score bonus of [%4]", _town getVariable "cti_town_name", group player, _value, _score]] call CTI_CO_FNC_Log;
 		};
@@ -80,10 +81,7 @@ _color = (_side_new) call CTI_CO_FNC_GetSideColoration;
 (format ["cti_town_marker_%1", _town]) setMarkerColorLocal _color;
 
 //--- Update the camps if needed
-_town_camps = _town getVariable "cti_town_camps";
-if !(isNil "_town_camps") then {
-	{(_x getVariable "cti_camp_marker") setMarkerColorLocal _color} forEach _town_camps;
-};
+{(_x getVariable "cti_camp_marker") setMarkerColorLocal _color} forEach (_town getVariable ["cti_town_camps", []]);
 
 //--- Update the territorial markers if enabled
 if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) then {CTI_P_TerritorialUpdate = true};
