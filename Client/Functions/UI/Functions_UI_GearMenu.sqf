@@ -1431,7 +1431,7 @@ CTI_UI_Gear_UpdateDescription = {
 	};
 	//_pic = getText(configFile >> "CfgWeapons" >> _classname >> "overviewPicture");
 	//_pic = getText(configFile >> "CfgWeapons" >> _classname >> "UiPicture");
-	((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 71111) ctrlSetStructuredText (parseText format["<img image='%1' size='6'/>", _pic]);
+	((uiNamespace getVariable "cti_dialog_ui_gear") displayCtrl 71111) ctrlSetStructuredText (parseText format["<img image='%1' size='5'/>", _pic]);
 	//Update Stat rows
 	lnbClear 71112;
 	if (_isWeapon) then {

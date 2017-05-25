@@ -189,6 +189,13 @@ if (CTI_VEHICLES_ERA == 1) then {
 		};
 	};
 };
+
+//-- Radar Support to all for now
+/*_vehicle setVehicleRadar 1; //AI radar Usage : 0 - automatic, 1 - forced on, 2 - forced off
+_vehicle setVehicleReportRemoteTargets true; //Sets that the vehicle will share targets that were acquired by its own sensors via datalink to the Side center.
+_vehicle ssetVehicleReceiveRemoteTargets true; //Sets that the vehicle will be able to receive targets acquired by someone else via datalink from the Side center.
+_vehicle setVehicleReportOwnPosition true; // Sets that the vehicle will share its own position via datalink to the Side center.
+*/
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle

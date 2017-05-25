@@ -4,7 +4,7 @@ _action = _this select 0;
 switch (_action) do {
 	case "onLoad": {
 		// execVM "Client\GUI\GUI_OptionsMenu.sqf";
-		{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable false} forEach [230001, 230002, 230003, 230004];
+		{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable false} forEach [230001, 230002, 230003, 230004, 230006];
 		
 		_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 		_repair_depots = [CTI_REPAIR, _structures, player] call CTI_CO_FNC_GetSideStructuresByType;
@@ -139,7 +139,8 @@ switch (_action) do {
 				if (count (_selected_content select 1) > 0) then {_enables pushBack 230002};
 				if (count (_selected_content select 2) > 0) then {_enables pushBack 230003};
 				if (count (_selected_content select 3) > 0) then {_enables pushBack 230004};
-				{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable false} forEach ([230001, 230002, 230003, 230004] - _enables);
+				if (count (_selected_content select 1) > 0) then {_enables pushBack 230006};
+				{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable false} forEach ([230001, 230002, 230003, 230004, 230006] - _enables);
 				{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable true} forEach (_enables);
 				
 				{
@@ -313,4 +314,15 @@ switch (_action) do {
 			};
 		};
 	};
+	case "onLoadoutPressed": {
+		_chosen = _this select 1;
+		if (_chosen > -1) then {
+			_selected = (uiNamespace getVariable "cti_dialog_ui_servicemenu_list") select _chosen;
+			uiNamespace setVariable ["cti_dialog_ui_servicemenu_loadoutunit", _selected];
+		};
+		closeDialog 0;
+		CTI_P_LastRootMenu = "CTI_RscServiceMenu";
+		createDialog "CTI_RscLoadoutMenu";
+		
+	};	
 };
