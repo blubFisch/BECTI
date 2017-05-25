@@ -46,26 +46,6 @@ _max_squad = CTI_TOWNS_OCCUPATION_LEVEL_RESISTANCE;
 _max_squad_random = 4;
 _max_sv = CTI_TOWNS_SPAWN_SV_MAX;
 
-/*//--- If the dynamic mode is enabled, the server FPS are then used to determine the amount of spawning groups
-if (CTI_TOWNS_RESISTANCE_LEVEL_DYNAMIC > 0) then {
-	_fps = diag_fps;
-	
-	//--- Only proc if the overall FPS are below 30
-	if (_fps <= 30) then {
-		_coef = switch (true) do {
-			case (_fps > 25): {.85};
-			case (_fps > 20): {.70};
-			case (_fps > 15): {.50};
-			case (_fps > 10): {.25};
-			case (_fps > 5): {.20};
-			default {.20};
-		};
-		
-		_max_squad = ceil(_max_squad * _coef);
-		_max_squad_random = ceil(_max_squad_random * _coef);
-	};
-};*/
-
 _randomGroups = (_value / _max_sv) * _max_squad_random;
 _fixedGroups = (_value / _max_sv) * _max_squad;
 _totalGroups = round(_fixedGroups + random _randomGroups - random _randomGroups);
@@ -86,6 +66,15 @@ if (isNil {_town getVariable "cti_naval"}) then {
 			switch (true) do { 
 
 			//--- Normal Town Values
+				case (_value < 20) : { //--- 0-20 SV towns
+					_pool_units = [
+						["TOWNS_SQUAD_RIFLEMEN1", 2, 99],
+						["TOWNS_SQUAD_SNIPER", 1, 60],
+						[
+							["TOWNS_SQUAD_LIGHT1", 1, 60]
+						]
+					];
+				};
 				case (_value >= 20 && _value < 30) : { //--- 20-25 SV towns
 					_pool_units = [
 						["GUER_TOWNS_SQUAD_RIFLEMEN1", 3, 99],
@@ -584,6 +573,10 @@ if (isNil {_town getVariable "cti_naval"}) then {
 	if (_totalGroups < 1) then {_totalGroups = 1};
 };
 
+if (CTI_Log_Level >= CTI_Log_Information) then { 
+	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["A Resistance Pool of [%1] squads template is about to be parsed for town [%2] based on the town SV [%3]", count _pool_units, _town getVariable "cti_town_name", _value]] call CTI_CO_FNC_Log;
+};
+
 //--- Flatten the pool
 _pool = [];
 {
@@ -626,7 +619,11 @@ if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved a Resistance Pool count of [%1] for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
 };
 
-if (count _pool < 1) exitWith {[[],[],[]]};
+if (count _pool < 1) exitWith {
+	if (CTI_Log_Level >= CTI_Log_Error) then { ["ERROR", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", Format["There are no Units Pools available for town [%1]. Units will not be spawned", _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log };
+	
+	[[],[],[]]
+};
 
 //--- Shuffle the pool
 _pool = _pool call CTI_CO_FNC_ArrayShuffle;
@@ -669,7 +666,7 @@ _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
 	
 	//--- A group may spawn close to a camp or somewhere in the town
 	if (isNil {_town getVariable "cti_naval"}) then {
-		if (count _camps > 0 && random 100 > 30) then {
+		if (count _camps > 0 && random 100 > 50) then {
 			_camp_index = floor(random count _camps);
 			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS, _tries] call CTI_CO_FNC_GetRandomPosition;
 			_position = [_position, 30, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
@@ -684,11 +681,13 @@ _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
 	
 	_positions pushBack _position;
 
-	/*//--- Paint Spawning Positions on map, used for debug
-	_marker = createMarker [(format ["safepos%1", ([0, 350] call BIS_fnc_randomInt)]), _position];
-	_marker setMarkerShape "ICON";
-	_marker setMarkerType "hd_dot";
-	_marker setMarkerColor "ColorRed";*/
+	if (CTI_DEV_MODE > 0) then {
+	//--- Paint Spawning Positions on map, used for debug
+		_marker = createMarker [(format ["safepos%1", ([0, 350] call BIS_fnc_randomInt)]), _position];
+		_marker setMarkerShape "ICON";
+		_marker setMarkerType "hd_dot";
+		_marker setMarkerColor "ColorRed";
+	};
 
 	_group = createGroup resistance;
 	_group setGroupIdGlobal [format["(%1) %2", _town, _group]];

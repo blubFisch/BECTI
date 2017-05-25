@@ -96,17 +96,7 @@ if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngi
 
 if (isMultiplayer) then {
 	//--- Can I join?
-	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.
-	/* missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this spawn CTI_CL_FNC_JoinRequestAnswer}]; //--- Early PVF, do not spoil the game with the others.
-
-	//--- Enable the player again (sim + visu) in case of no-ai settings
-	if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" < 1) then {
-		player enableSimulationGlobal true;
-		player hideObjectGlobal false;
-	};*/
-	
-	//--- Delay the client start for the server to complete it's part
-	//sleep 1;
+	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.	
 	
 	player setDammage 0;
 	
@@ -121,12 +111,6 @@ if (isMultiplayer) then {
 		if (CTI_Log_Level >= CTI_Log_Debug) then {["DEBUG", "FILE: Client\Init\Init_Client.sqf", "Awaiting for the Join ticket answer from the server..."] call CTI_CO_FNC_Log};
 		CTI_P_CanJoin
 	};
-	
-	/*_last_req = -100;
-	while {!CTI_P_CanJoin} do {
-		if (time - _last_req > 15) then { _last_req = time; [player, CTI_P_SideJoined] remoteExec ["CTI_PVF_SRV_RequestJoin", CTI_PV_SERVER]};
-		sleep 1;
-	};*/
 	
 	12452 cutText ["Receiving mission intel...", "BLACK IN", 5];
 	
@@ -573,14 +557,11 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 
 		_spawn_at = _hq;
 		if (count _structures > 0) then { _spawn_at = [_hq, _structures] call CTI_CO_FNC_GetClosestEntity };
-		//--- Adding sleep in hopes to fix player spawning in empty object on first join
-		 sleep 1;
+
 		_spawn_at = [_spawn_at, 8, 30] call CTI_CO_FNC_GetRandomPosition;
 		_spawn_cam = [_spawn_at, 8, 200] call CTI_CO_FNC_GetRandomPosition;
 		player setPos _spawn_at;
 			
-		//--- Adding sleep in hopes to fix player spawning in empty object on first join
-		sleep 1;
 	};
 };
 
