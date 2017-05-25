@@ -35,7 +35,7 @@ switch (_action) do {
 		// Cleanup Gear Cam
 		CTI_Gear_cam cameraEffect["TERMINATE","BACK"];
 		camDestroy CTI_Gear_cam;
-		showCinemaBorder true;
+		showCinemaBorder false;
 	};
 	case "onShoppingTabClicked": { //--- A shopping tab was clicked upon
 		//--- New tab
@@ -146,6 +146,7 @@ switch (_action) do {
 		_selected = _this select 1;
 		
 		(lnbData [70108, [_selected,0]]) call CTI_UI_Gear_UpdateLinkedItems;
+		(lnbData [70108, [_selected,0]]) call CTI_UI_Gear_UpdateDescription;
 	};
 	case "onShoppingListMouseUp": {
 		{
@@ -511,5 +512,16 @@ switch (_action) do {
 				call CTI_UI_Gear_UpdatePrice;
 			};
 		};
+	};
+		
+	case "onFilterLBSelChanged": {
+		_selected = _this select 1;
+		
+		//--- Reload the shopping list (skip templates) to apply the new filter
+		if (!((uiNamespace getVariable "cti_dialog_ui_gear_shop_tab") isEqualTo CTI_GEAR_TAB_TEMPLATES) && (uiNamespace getVariable ["cti_dialog_ui_gear_filter_reload", true])) then {
+			(uiNamespace getVariable "cti_dialog_ui_gear_shop_tab") call CTI_UI_Gear_DisplayShoppingItems;
+		};
+		
+		uiNamespace setVariable ["cti_dialog_ui_gear_filter_reload", true];
 	};
 };

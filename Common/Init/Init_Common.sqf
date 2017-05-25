@@ -113,55 +113,386 @@ CTI_CO_CustomIterator = 0;
 //--- Which sides are playable
 CTI_PLAYABLE_SIDES = [west, east];
 
-call compile preprocessFileLineNumbers "Common\Config\Artillery\Artillery.sqf";
-call compile preprocessFileLineNumbers "Common\Config\Towns\Towns_Resistance.sqf";
-call compile preprocessFileLineNumbers "Common\Config\Towns\Towns_West.sqf";
-call compile preprocessFileLineNumbers "Common\Config\Towns\Towns_East.sqf";
-call compile preprocessFileLineNumbers "Common\Config\Towns\Towns_Camps.sqf";
+call compile preprocessFileLineNumbers "Common\Config\Common\Artillery\Artillery.sqf";
+call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_Camps.sqf";
+call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_Resistance.sqf";
+call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_West.sqf";
+call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_East.sqf";
 
-//--- Upgrade goes before the base definition so that we may construct the commander's logical path
-(west) call compile preprocessFileLineNumbers "Common\Config\Upgrades\Upgrades_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Upgrades\Upgrades_East.sqf";
-
-(west) call compile preprocessFileLineNumbers "Common\Config\Base\Base_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Base\Base_East.sqf";
-
-(resistance) call compile preprocessFileLineNumbers "Common\Config\Units\Units_Resistance.sqf";
-(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_East.sqf";
-
-//--- APEX UNITS
-if (CTI_APEX_ADDON > 0) then { 
-(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_APEX_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_APEX_East.sqf";
+//--- VANILLA MODE
+if (CTI_FACTION_MODE == 0) then { 
+	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_East.sqf";
+	//--- Base Defenses
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_Defenses_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_Defenses_East.sqf";
+	//--- VANILLA UNITS
+	if (CTI_VANILLA_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_Vanilla_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_Vanilla_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_Vanilla_East.sqf";
+	};
+	//--- HELI UNITS
+	if (CTI_HELI_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_HELI_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_HELI_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_HELI_East.sqf";
+	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_MARKSMEN_East.sqf";
+	};	
+	//--- APEX UNITS
+	if (CTI_APEX_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_APEX_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_APEX_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_APEX_East.sqf";
+	};
+	//--- JETS UNITS
+	if (CTI_JETS_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_JETS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_JETS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_JETS_East.sqf";
+	};
+	//--- TANKS UNITS
+	if (CTI_TANKS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_TANKS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_TANKS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_TANKS_East.sqf";
+	};
+	//--- CUP UNITS
+	if (CTI_CUP_VEHICLES_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_CUP_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_CUP_East.sqf";
+	};
+	//--- RHS UNITS
+	if (CTI_RHS_AFRF_ADDON > 0) then { 
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_RHS_AFRF_East.sqf";
+	};
+	if (CTI_RHS_GREF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_RHS_GREF_Resistance.sqf";
+	};
+	if (CTI_RHS_SAF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_RHS_SAF_Resistance.sqf";
+	};
+	if (CTI_RHS_USAF_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_RHS_USAF_West.sqf";
+	};
+	//--- OFPS UNITS
+	if (CTI_OFPS_UNITS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_East.sqf";
+	};
+	//--- OFPS RHS UNITS
+	if (CTI_OFPS_RHS_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_RHS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_RHS_East.sqf";
+	};
+	//--- OFPS CUP UNITS
+	if (CTI_OFPS_CUP_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_CUP_East.sqf";
+	};	
+	//Mode Factories
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_East.sqf";
+	//--- All modes use common base structures
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_East.sqf";
+	//Defaults - default infantry and starting vehicles/gear
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Default_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Default_East.sqf";
+	//Squads
+	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Squads\Squad_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Squads\Squad_East.sqf";	
 };
-//--- CUP UNITS
-if (CTI_CUP_ADDON > 0) then { 
-	(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_CUP_West.sqf";
-	(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_CUP_East.sqf";
+//CUP MODE
+if (CTI_FACTION_MODE == 1) then { 
+	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_East.sqf";
+	//--- Base Defenses
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Base\Base_Defenses_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Base\Base_Defenses_East.sqf";
+	//--- VANILLA UNITS
+	if (CTI_VANILLA_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_Vanilla_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_Vanilla_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_Vanilla_East.sqf";
+	};
+	//--- HELI UNITS
+	if (CTI_HELI_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_HELI_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_HELI_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_HELI_East.sqf";
+	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_MARKSMEN_East.sqf";
+	};		
+	//--- APEX UNITS
+	if (CTI_APEX_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_APEX_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_APEX_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_APEX_East.sqf";
+	};
+	//--- JETS UNITS
+	if (CTI_JETS_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_JETS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_JETS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_JETS_East.sqf";
+	};
+	//--- TANKS UNITS
+	if (CTI_TANKS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_TANKS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_TANKS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_TANKS_East.sqf";
+	};
+	//--- CUP UNITS
+	if (CTI_CUP_VEHICLES_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_CUP_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_CUP_East.sqf";
+	};
+	//--- RHS UNITS
+	if (CTI_RHS_AFRF_ADDON > 0) then { 
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_RHS_AFRF_East.sqf";
+	};
+	if (CTI_RHS_GREF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_RHS_GREF_Resistance.sqf";
+	};
+	if (CTI_RHS_SAF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_RHS_SAF_Resistance.sqf";
+	};
+	if (CTI_RHS_USAF_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_RHS_USAF_West.sqf";
+	};
+	//--- OFPS UNITS
+	if (CTI_OFPS_UNITS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_East.sqf";
+	};
+	//--- OFPS RHS UNITS
+	if (CTI_OFPS_RHS_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_RHS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_RHS_East.sqf";
+	};
+	//--- OFPS CUP UNITS
+	if (CTI_OFPS_CUP_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_CUP_East.sqf";
+	};	
+	//Mode Factories
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Factory_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Factory_East.sqf";
+	//--- All modes use common base structures
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Base\Base_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Base\Base_East.sqf";
+	//Defaults - default infantry and starting vehicles/gear
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Default_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Default_East.sqf";	
+	//Squads
+	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Squads\Squad_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Squads\Squad_East.sqf";
 };
-//--- OFPS UNITS
-if (CTI_OFPS_ADDON > 0) then { 
-	(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_OFPS_West.sqf";
-	(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_OFPS_East.sqf";
+//RHS MODE
+if (CTI_FACTION_MODE == 2) then { 
+	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_East.sqf";
+	//--- Base Defenses
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_Defenses_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_Defenses_East.sqf";
+	//--- VANILLA UNITS
+	if (CTI_VANILLA_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_Vanilla_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_Vanilla_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_Vanilla_East.sqf";
+	};
+	//--- HELI UNITS
+	if (CTI_HELI_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_HELI_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_HELI_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_HELI_East.sqf";
+	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_MARKSMEN_East.sqf";
+	};		
+	//--- APEX UNITS
+	if (CTI_APEX_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_APEX_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_APEX_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_APEX_East.sqf";
+	};
+	//--- JETS UNITS
+	if (CTI_JETS_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_JETS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_JETS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_JETS_East.sqf";
+	};
+	//--- TANKS UNITS
+	if (CTI_TANKS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_TANKS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_TANKS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_TANKS_East.sqf";
+	};
+	//--- CUP UNITS
+	if (CTI_CUP_VEHICLES_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_CUP_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_CUP_East.sqf";
+	};
+	//--- RHS UNITS
+	if (CTI_RHS_AFRF_ADDON > 0) then { 
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_AFRF_East.sqf";
+	};
+	if (CTI_RHS_GREF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_GREF_Resistance.sqf";
+	};
+	if (CTI_RHS_SAF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_SAF_Resistance.sqf";
+	};
+	if (CTI_RHS_USAF_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_RHS_USAF_West.sqf";
+	};
+	//--- OFPS UNITS
+	if (CTI_OFPS_UNITS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_East.sqf";
+	};
+	//--- OFPS RHS UNITS
+	if (CTI_OFPS_RHS_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_RHS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_RHS_East.sqf";
+	};
+	//--- OFPS CUP UNITS
+	if (CTI_OFPS_CUP_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_CUP_East.sqf";
+	};		
+	//Mode Factories
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_East.sqf";		
+	//--- All modes use common base structures
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_East.sqf";
+	//Defaults - default infantry and starting vehicles/gear
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Default_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Default_East.sqf";
+	//Squads
+	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Squads\Squad_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Squads\Squad_East.sqf";
 };
-//--- RHS UNITS
-if (CTI_RHS_ADDON > 0) then { 
-	(west) call compile preprocessFileLineNumbers "Common\Config\Units\Units_RHS_West.sqf";
-	(east) call compile preprocessFileLineNumbers "Common\Config\Units\Units_RHS_East.sqf";
+//OFPS MODE
+if (CTI_FACTION_MODE == 3) then { 
+	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_East.sqf";
+	//--- Base Defenses
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Base\Base_Defenses_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Base\Base_Defenses_East.sqf";
+	//--- VANILLA UNITS
+	if (CTI_VANILLA_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_Vanilla_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_Vanilla_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_Vanilla_East.sqf";
+	};
+	//--- HELI UNITS
+	if (CTI_HELI_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_HELI_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_HELI_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_HELI_East.sqf";
+	};
+	//--- Load Marksmen Gear
+	if (CTI_MARKSMEN_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_MARKSMEN_East.sqf";
+	};		
+	//--- APEX UNITS
+	if (CTI_APEX_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_APEX_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_APEX_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_APEX_East.sqf";
+	};
+	//--- JETS UNITS
+	if (CTI_JETS_ADDON > 0) then {
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_JETS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_JETS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_JETS_East.sqf";
+	};
+	//--- TANKS UNITS
+	if (CTI_TANKS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_TANKS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_TANKS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_TANKS_East.sqf";
+	};
+	//--- CUP UNITS
+	if (CTI_CUP_VEHICLES_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_CUP_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_CUP_East.sqf";
+	};
+	//--- RHS UNITS
+	if (CTI_RHS_AFRF_ADDON > 0) then { 
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_RHS_AFRF_East.sqf";
+	};
+	if (CTI_RHS_GREF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_RHS_GREF_Resistance.sqf";
+	};
+	if (CTI_RHS_SAF_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_RHS_SAF_Resistance.sqf";
+	};
+	if (CTI_RHS_USAF_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_RHS_USAF_West.sqf";
+	};
+	//--- OFPS UNITS
+	if (CTI_OFPS_UNITS_ADDON > 0) then { 
+		(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_Resistance.sqf";
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_East.sqf";
+	};
+	//--- OFPS RHS UNITS
+	if (CTI_OFPS_RHS_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_RHS_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_RHS_East.sqf";
+	};
+	//--- OFPS CUP UNITS
+	if (CTI_OFPS_CUP_ADDON > 0) then { 
+		(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_CUP_West.sqf";
+		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_CUP_East.sqf";
+	};	
+	//Mode Factories
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Factory_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Factory_East.sqf";
+	//--- All modes use common base structures
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Base\Base_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Base\Base_East.sqf";
+	//Defaults - default infantry and starting vehicles/gear
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Default_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Default_East.sqf";	
+	//Squads
+	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Squads\Squad_West.sqf";
+	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Squads\Squad_East.sqf";
 };
-
-(west) call compile preprocessFileLineNumbers "Common\Config\Factories\Factory_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Factories\Factory_East.sqf";
-
-(west) call compile preprocessFileLineNumbers "Common\Config\Squads\Squad_West.sqf";
-(east) call compile preprocessFileLineNumbers "Common\Config\Squads\Squad_East.sqf";
 
 //--- External Functions/Modules
 (east) call compile preprocessFileLineNumbers "Common\Functions\External\Functions_SHK.sqf";
-
+//---Trophy 
 call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
-
+//---CRAM tracking
 call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
 
 //--- Respawn markers
@@ -177,145 +508,3 @@ createMarkerLocal ["respawn_west",getMarkerPos "CTI_WestRespawn"];
 "respawn_west" setMarkerBrushLocal "BORDER";
 "respawn_west" setMarkerSizeLocal [10,10];
 "respawn_west" setMarkerAlphaLocal 0;
-
-//--- AI/Players Loadouts, to prevent any bisteries, DO NOT give them a pistol.
-if (CTI_FACTION_WEST == 0) then {
-	//NATO Arid
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["CUP_smg_MP5A5",["","","",""],["CUP_30Rnd_9x19_MP5"]],["CUP_launch_M136",["","","",""],["CUP_M136_M"]],["CUP_hgun_M9",["","","",""],["CUP_15Rnd_9x19_M9"]]],
-			[["CUP_U_B_USMC_MARPAT_WDL_RolledUp",["firstaidkit","firstaidkit","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5"]],["CUP_V_C_Police_Holster",["CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","",""]],["B_AssaultPack_rgr",["CUP_HandGrenade_M67","CUP_HandGrenade_M67",""]]],
-			["CUP_H_USMC_Headset_GoggleW_HelmetWDL",""],[["nvgoggles","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_05_f",["","acc_flashlight","optic_aco_grn",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["u_b_combatuniform_mcam_vest",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["",[]],["b_assaultpack_mcamo",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","firstaidkit","firstaidkit"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-
-		};
-	}
-};
-if (CTI_FACTION_WEST == 1) then {
-	//NATO Tropic
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["CUP_smg_MP5A5",["","","",""],["CUP_30Rnd_9x19_MP5"]],["CUP_launch_M136",["","","",""],["CUP_M136_M"]],["CUP_hgun_M9",["","","",""],["CUP_15Rnd_9x19_M9"]]],
-			[["CUP_U_B_USMC_MARPAT_WDL_RolledUp",["firstaidkit","firstaidkit","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5"]],["CUP_V_C_Police_Holster",["CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","",""]],["B_AssaultPack_rgr",["CUP_HandGrenade_M67","CUP_HandGrenade_M67",""]]],
-			["CUP_H_USMC_Headset_GoggleW_HelmetWDL",""],[["nvgoggles","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_05_f",["","acc_flashlight","optic_aco_grn",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["u_b_combatuniform_mcam_vest",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["",[]],["b_assaultpack_mcamo",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","firstaidkit","firstaidkit"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-	}
-};
-if (CTI_FACTION_WEST == 2) then {
-	//NATO Winter
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_01_f",["","","optic_aco_grn",""],[]],["",["","","",""],[]],["hgun_p07_f",["","","",""],["16rnd_9x21_mag"]]],[["u_b_combatuniform_mcam",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01"]],["",[]],["b_assaultpack_cbr",["30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","30rnd_45acp_mag_smg_01","firstaidkit","firstaidkit","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["CUP_smg_MP5A5",["","","",""],["CUP_30Rnd_9x19_MP5"]],["CUP_launch_M136",["","","",""],["CUP_M136_M"]],["CUP_hgun_M9",["","","",""],["CUP_15Rnd_9x19_M9"]]],
-			[["sfp_m90s_uniform",["firstaidkit","firstaidkit","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5"]],["CUP_V_C_Police_Holster",["CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","CUP_30Rnd_9x19_MP5","",""]],["B_AssaultPack_rgr",["CUP_HandGrenade_M67","CUP_HandGrenade_M67",""]]],
-			["CUP_H_USMC_Headset_GoggleW_HelmetWDL",""],[["nvgoggles","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_WEST_DEFAULT_GEAR", [
-			[["smg_05_f",["","acc_flashlight","optic_aco_grn",""],["30rnd_9x21_mag_smg_02"]],["rhs_weap_m72a7",["","","",""],[]],["rhsusf_weap_m9",["","","",""],["rhsusf_mag_15rnd_9x19_jhp"]]],[["u_b_combatuniform_mcam_vest",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02"]],["",[]],["b_assaultpack_mcamo",["30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","30rnd_9x21_mag_smg_02","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","rhs_mag_m67","firstaidkit","firstaidkit"]]],["h_milcap_mcamo",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-	}
-};
-
-if (CTI_FACTION_EAST == 0) then {
-	//CSAT Arid
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_PDW2000_F",["","","",""],["30Rnd_9x21_Mag"]],["CUP_launch_RPG18",["","","",""],["CUP_RPG18_M"]],["CUP_hgun_Makarov",["","","",""],["CUP_8Rnd_9x18_Makarov_M"]]],
-			[["CUP_U_O_RUS_EMR_1_VDV",["firstaidkit","firstaidkit","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag"]],["CUP_V_C_Police_Holster",["30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","",""]],["B_FieldPack_oli",["CUP_HandGrenade_RGD5","CUP_HandGrenade_RGD5"]]],
-			["CUP_H_RUS_6B27_NVG_olive",""],[["CUP_NVG_PVS7","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["rhs_weap_rpg26",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["rhs_uniform_flora_patchless",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_tna_f",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo"]]],["rhs_fieldcap_helm_digi",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-	}
-};
-if (CTI_FACTION_EAST == 1) then {
-	//CSAT Tropic
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_PDW2000_F",["","","",""],["30Rnd_9x21_Mag"]],["CUP_launch_RPG18",["","","",""],["CUP_RPG18_M"]],["CUP_hgun_Makarov",["","","",""],["CUP_8Rnd_9x18_Makarov_M"]]],
-			[["CUP_U_O_RUS_EMR_1_VDV",["firstaidkit","firstaidkit","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag"]],["CUP_V_C_Police_Holster",["30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","",""]],["B_FieldPack_oli",["CUP_HandGrenade_RGD5","CUP_HandGrenade_RGD5"]]],
-			["CUP_H_RUS_6B27_NVG_olive",""],[["CUP_NVG_PVS7","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["rhs_weap_rpg26",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["rhs_uniform_flora_patchless",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_tna_f",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo"]]],["rhs_fieldcap_helm_digi",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-	}
-};
-if (CTI_FACTION_EAST == 2) then {
-	//CSAT Winter
-	switch (CTI_FACTION_DEFAULT_GEAR) do {
-		case 0: {//Vanilla
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 1: {//Apex
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["u_o_specopsuniform_blk",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_kerry",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","handgrenade","handgrenade","handgrenade","handgrenade"]]],["","g_combat"],[["","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 2: {//CUP
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_PDW2000_F",["","","",""],["30Rnd_9x21_Mag"]],["CUP_launch_RPG18",["","","",""],["CUP_RPG18_M"]],["CUP_hgun_Makarov",["","","",""],["CUP_8Rnd_9x18_Makarov_M"]]],
-			[["IP_U_O_CombatUniform_SnowHex",["firstaidkit","firstaidkit","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag"]],["CUP_V_C_Police_Holster",["30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","",""]],["B_FieldPack_oli",["CUP_HandGrenade_RGD5","CUP_HandGrenade_RGD5"]]],
-			["CUP_H_RUS_6B27_NVG_olive",""],[["CUP_NVG_PVS7","binocular"],["itemmap","","itemradio","itemcompass","itemwatch"]]]];
-		};
-		case 3: {//RHS
-			missionNamespace setVariable ["CTI_AI_EAST_DEFAULT_GEAR", [
-			[["hgun_pdw2000_f",["","","optic_aco",""],["30rnd_9x21_mag"]],["rhs_weap_rpg26",["","","",""],[]],["hgun_rook40_f",["","","",""],["16rnd_9x21_mag"]]],[["rhs_uniform_flora_patchless",["30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag"]],["",[]],["b_assaultpack_tna_f",["firstaidkit","firstaidkit","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","30rnd_9x21_mag","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo","rhs_mag_rgo"]]],["rhs_fieldcap_helm_digi",""],[["","binocular"],["itemmap","itemgps","itemradio","itemcompass","itemwatch"]]]];
-		};
-	}
-};

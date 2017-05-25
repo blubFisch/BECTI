@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=473;
+		nextID=474;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,11 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1750.6115,229.94383,3325.3528};
-		dir[]={0.7377544,-0.348544,0.57815725};
-		up[]={0.27434722,0.93728971,0.21499833};
-		aside[]={0.61683637,-2.4374458e-007,-0.78711033};
+		pos[]={6601.8008,238.64067,1929.5909};
+		dir[]={-0.31519386,-0.59240586,0.74142468};
+		up[]={-0.23176934,0.80563873,0.545187};
+		aside[]={0.92029327,5.113543e-008,0.39123407};
+
 	};
 };
 binarizationWanted=0;
@@ -64,13 +65,14 @@ addons[]=
 	"A3_Structures_F_Heli_Ind_Machines",
 	"A3_Structures_F_Bootcamp_Items_Electronics",
 	"A3_Structures_F_Households_WIP",
-	"A3_Structures_F_Ind_ConcreteMixingPlant"
+	"A3_Structures_F_Ind_ConcreteMixingPlant",
+	"A3_Boat_F_Jets_Carrier_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=14;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -169,6 +171,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item14
+		{
+			className="A3_Boat_F_Jets";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=13186954;
@@ -205,7 +214,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=330;
+		items=331;
 		class Item0
 		{
 			dataType="Marker";
@@ -12828,6 +12837,45 @@ class Mission
 			id=472;
 			type="Land_Shed_Big_F";
 			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item330
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6549.9619,0.00011444092,2174.4451};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=473;
+			type="Land_Carrier_01_base_F";
+			atlOffset=118.327;
 			class CustomAttributes
 			{
 				class Attribute0

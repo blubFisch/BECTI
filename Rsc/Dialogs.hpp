@@ -180,434 +180,571 @@ class CTI_RscBuildMenu {
 };
 class CTI_RscPurchaseMenu {
 	movingEnable = 0;
+	type = CT_COMBO;
 	idd = 110000;
 	onLoad = "uiNamespace setVariable ['cti_dialog_ui_purchasemenu', _this select 0];['onLoad'] execVM 'Client\Events\Events_UI_PurchaseMenu.sqf'";
 	onUnload = "uiNamespace setVariable ['cti_dialog_ui_purchasemenu', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
 	
 	class controlsBackground {
-		class CTI_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.175)";
-			w = "SafeZoneW * 0.615";
-			h = "SafeZoneH * 0.705";
-			colorBackground[] = {0, 0, 0, 0.7};
+		class CTI_Background: RscText
+		{
 			moving = 1;
+
+			x = 0.209461 * safezoneW + safezoneX;
+			y = 0.17396 * safezoneH + safezoneY;
+			w = 0.61514 * safezoneW;
+			h = 0.709999 * safezoneH;
+			colorBackground[] = {0,0,0,0.7};
 		};
-		class CTI_Background_Header : CTI_Background {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.175)";
-			w = "SafeZoneW * 0.615";
-			h = "SafeZoneH * 0.05"; //0.06 stock
-			colorBackground[] = {0, 0, 0, 0.4};
+		class CTI_Background_Header: CTI_Background
+		{
+
+			x = 0.210034 * safezoneW + safezoneX;
+			y = 0.17506 * safezoneH + safezoneY;
+			w = 0.615 * safezoneW;
+			h = 0.0500001 * safezoneH;
+			colorBackground[] = {0,0,0,0.4};
 		};
-		class CTI_Menu_Title : RscText {
+		class CTI_Menu_Title: RscText
+		{
 			style = ST_LEFT;
-			x = "SafeZoneX + (SafeZoneW * 0.23)";
-			y = "SafeZoneY + (SafezoneH * 0.180)";
-			w = "SafeZoneW * 0.595";
-			h = "SafeZoneH * 0.037";
-			
-			text = "Factory Menu";
-			colorText[] = {0.258823529, 0.713725490, 1, 1};
-			
+			text = "Factory Menu"; //--- ToDo: Localize;
+			x = 0.229969 * safezoneW + safezoneX;
+			y = 0.1799 * safezoneH + safezoneY;
+			w = 0.595 * safezoneW;
+			h = 0.037 * safezoneH;
+			colorText[] = {0.258824,0.713726,1,1};
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 		};
-		
-		class CTI_Menu_UnitsListFrame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.415)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.398";
+		class CTI_Menu_UnitsListFrame: RscFrame
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.264 * safezoneH;
 		};
-		class CTI_Menu_Info : CTI_Menu_UnitsListFrame {
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			h = "SafeZoneH * 0.060";
+		class CTI_Menu_Info: CTI_Menu_UnitsListFrame
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.24502 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.0599999 * safezoneH;
 		};
-		class CTI_Menu_Info_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.060";
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		class CTI_Menu_Info_Background: RscText
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.24502 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.0599999 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		class CTI_Menu_ResourcesInfo_Background : CTI_Menu_Info_Background {
-			y = "SafeZoneY + (SafezoneH * 0.369)";
-			h = "SafeZoneH * 0.030";
+		class CTI_Menu_ResourcesInfo_Background: CTI_Menu_Info_Background
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.3691 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		
-		class CTI_Menu_SubInfo : CTI_Menu_Info {
-			y = "SafeZoneY + (SafezoneH * 0.321)";
-			h = "SafeZoneH * 0.078";
+		class CTI_Menu_SubInfo: CTI_Menu_Info
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.0779999 * safezoneH;
 		};
-		
-		class CTI_Menu_ComboFrame : CTI_Menu_Info {
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			h = "SafeZoneH * 0.1";
+		class CTI_Menu_ComboFrame: CTI_Menu_Info
+		{
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.247 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.088 * safezoneH;
 		};
-		
-		class CTI_Menu_TeamComboLabel : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.54)";
-			y = "SafeZoneY + (SafezoneH * 0.257)";
-			w = "SafeZoneW * 0.1";
-			h = "SafeZoneH * 0.035";
-			
-			text = "Team :";
-			// colorText[] = {0.258823529, 0.713725490, 1, 1};
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		class CTI_Menu_TeamComboLabel: RscText
+		{
+
+			text = "Team :"; //--- ToDo: Localize;
+			x = 0.538838 * safezoneW + safezoneX;
+			y = 0.25184 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.035 * safezoneH;
+			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)"; 		
 		};
-		
-		class CTI_Menu_FactoryComboLabel : CTI_Menu_TeamComboLabel {
-			y = "SafeZoneY + (SafezoneH * 0.3)";
-			
-			text = "Factory :";
+		class CTI_Menu_FactoryComboLabel: CTI_Menu_TeamComboLabel
+		{
+
+			text = "Factory :"; //--- ToDo: Localize;
+			x = 0.539983 * safezoneW + safezoneX;
+			y = 0.29122 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.035 * safezoneH;
+
 		};
-		
-		class CTI_Menu_MapFrame : CTI_Menu_ComboFrame {
-			y = "SafeZoneY + (SafezoneH * 0.361)";
-			h = "SafeZoneH * 0.235";
+		class CTI_Menu_MapFrame: CTI_Menu_ComboFrame
+		{
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.198 * safezoneH;
 		};
-		class CTI_Menu_Info_MapIntel : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			y = "SafeZoneY + (SafezoneH * 0.361)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.2";
-			
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		class CTI_Menu_Info_MapIntel: RscText
+		{
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.198 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		
-		class CTI_Menu_QueueFrame : CTI_Menu_MapFrame {
-			y = "SafeZoneY + (SafezoneH * 0.612)";
-			h = "SafeZoneH * 0.143";
+		class CTI_Menu_QueueFrame: CTI_Menu_MapFrame
+		{
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.742 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.066 * safezoneH;
 		};
+		class CTI_Menu_UnitsStatsFrame: RscFrame
+		{
+			idc = 110018;
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.176 * safezoneH;
+		};
+		class CTI_Menu_DescriptionFrame: RscText
+		{
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.742 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.066 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+		class CTI_Menu_UnitsDescriptionFrame: RscFrame
+		{
+			idc = 1807;
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.742 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.066 * safezoneH;
+		};		
 	};
 	
 	class controls {
-		class CTI_Menu_Map : RscMapControl {
+
+		class CTI_Menu_Map: RscMapControl
+		{
 			idc = 110010;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			y = "SafeZoneY + (SafezoneH * 0.391)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.205";
-			
 			showCountourInterval = 1;
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.198 * safezoneH;
 		};
-		class CTI_Menu_Map_Info : RscStructuredText {
+		class CTI_Menu_Map_Info: RscStructuredText
+		{
 			idc = 110901;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			y = "SafeZoneY + (SafezoneH * 0.361)";
-			w = "SafeZoneW * 0.1375";
-			h = "SafeZoneH * 0.03";
-			
 			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-			
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#ffffff";
-				align = "left";
-				shadow = 1;
-			};
+
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.137499 * safezoneW;
+			h = 0.0300001 * safezoneH;
 		};
-		class CTI_Menu_Group_Info : CTI_Menu_Map_Info {
+		class CTI_Menu_Group_Info: CTI_Menu_Map_Info
+		{
 			idc = 110902;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.6725)";
+
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.137499 * safezoneW;
+			h = 0.0300001 * safezoneH;
 		};
-		/*class CTI_Icon_Barracks : RscActiveText {
+		class CTI_Icon_Barracks: RscActiveText
+		{
 			idc = 110001;
 			style = ST_KEEP_ASPECT_RATIO;
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			w = "SafeZoneW * 0.035";
-			h = "SafeZoneH * 0.064";
-			
 			color[] = {0.75,0.75,0.75,0.7};
-			colorActive[] = {1,1,1,0.7};
-			colorBackground[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorBackgroundSelected[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorFocused[] = {0.0, 0.0, 0.0, 0};
-			
-			text = "Rsc\Pictures\icon_wf_building_barracks.paa";
+			colorBackgroundSelected[] = {0.6,0.8392,0.4706,0.7};
+			colorFocused[] = {0,0,0,0};
+			text = "Rsc\Pictures\icon_wf_building_barracks.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 0, CTI_BARRACKS] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Light : CTI_Icon_Barracks {
-			idc = 110002;
-			x = "SafeZoneX + (SafeZoneW * 0.26)";
-			
-			text = "Rsc\Pictures\icon_wf_building_lvs.paa";
-			action = "['onIconSet', 1, CTI_LIGHT] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Heavy : CTI_Icon_Barracks {
-			idc = 110003;
-			x = "SafeZoneX + (SafeZoneW * 0.295)";
-			
-			text = "Rsc\Pictures\icon_wf_building_hvs.paa";
-			action = "['onIconSet', 2, CTI_HEAVY] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Air : CTI_Icon_Barracks {
-			idc = 110004;
-			x = "SafeZoneX + (SafeZoneW * 0.33)";
-			
-			text = "Rsc\Pictures\icon_wf_building_air.paa";
-			action = "['onIconSet', 3, CTI_AIR] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Repair : CTI_Icon_Barracks {
-			idc = 110005;
-			x = "SafeZoneX + (SafeZoneW * 0.365)";
-			
-			text = "Rsc\Pictures\icon_wf_building_repair.paa";
-			action = "['onIconSet', 4, CTI_REPAIR] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Ammo : CTI_Icon_Barracks {
-			idc = 110006;
-			x = "SafeZoneX + (SafeZoneW * 0.4)";
-			
-			text = "Rsc\Pictures\icon_wf_building_ammo.paa";
-			action = "['onIconSet', 5, CTI_AMMO] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Naval : CTI_Icon_Barracks {
-			idc = 110007;
-			x = "SafeZoneX + (SafeZoneW * 0.435)";
-			
-			text = "Rsc\Pictures\icon_wf_building_naval.paa";
-			action = "['onIconSet', 6, CTI_NAVAL] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Depot : CTI_Icon_Barracks {
-			idc = 110008;
-			x = "SafeZoneX + (SafeZoneW * 0.47)";
-			
-			text = "Rsc\Pictures\icon_wf_building_depot.paa";
-			action = "['onIconSet', 7, CTI_FACTORY_DEPOT] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};*/
-		class CTI_Icon_Barracks : RscActiveText {
-			idc = 110001;
-			style = ST_KEEP_ASPECT_RATIO;
-			x = "SafeZoneX + (SafeZoneW * 0.226)";
-			y = "SafeZoneY + (SafezoneH * 0.243)";
-			w = "SafeZoneW * 0.034";
-			h = "SafeZoneH * 0.064";
-			
-			color[] = {0.75,0.75,0.75,0.7};
+			x = 0.225959 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
 			colorActive[] = {1,1,1,0.7};
-			colorBackground[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorBackgroundSelected[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorFocused[] = {0.0, 0.0, 0.0, 0};
-			
-			text = "Rsc\Pictures\icon_wf_building_barracks.paa";
-			action = "['onIconSet', 0, CTI_BARRACKS] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
 		};
-		class CTI_Icon_Light : CTI_Icon_Barracks {
+		class CTI_Icon_Light: CTI_Icon_Barracks
+		{
 			idc = 110002;
-			x = "SafeZoneX + (SafeZoneW * 0.26)";
-			
-			text = "Rsc\Pictures\icon_wf_building_lvs.paa";
+			text = "Rsc\Pictures\icon_wf_building_lvs.paa"; //--- ToDo: Localize;	
 			action = "['onIconSet', 1, CTI_LIGHT] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			x = 0.259985 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Heavy : CTI_Icon_Barracks {
+		class CTI_Icon_Heavy: CTI_Icon_Barracks
+		{
 			idc = 110003;
-			x = "SafeZoneX + (SafeZoneW * 0.294)";
-			
-			text = "Rsc\Pictures\icon_wf_building_hvs.paa";
+			text = "Rsc\Pictures\icon_wf_building_hvs.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 2, CTI_HEAVY] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.294011 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Air : CTI_Icon_Barracks {
+		class CTI_Icon_Air: CTI_Icon_Barracks
+		{
 			idc = 110004;
-			x = "SafeZoneX + (SafeZoneW * 0.328)";
-			
-			text = "Rsc\Pictures\icon_wf_building_air.paa";
+			text = "Rsc\Pictures\icon_wf_building_air.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 3, CTI_AIR] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.328037 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Repair : CTI_Icon_Barracks {
+		class CTI_Icon_Repair: CTI_Icon_Barracks
+		{
 			idc = 110005;
-			x = "SafeZoneX + (SafeZoneW * 0.362)";
-			
-			text = "Rsc\Pictures\icon_wf_building_repair.paa";
+			text = "Rsc\Pictures\icon_wf_building_repair.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 4, CTI_REPAIR] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.361948 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Ammo : CTI_Icon_Barracks {
+		class CTI_Icon_Ammo: CTI_Icon_Barracks
+		{
 			idc = 110006;
-			x = "SafeZoneX + (SafeZoneW * 0.396)";
-			
-			text = "Rsc\Pictures\icon_wf_building_ammo.paa";
+			text = "Rsc\Pictures\icon_wf_building_ammo.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 5, CTI_AMMO] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.395974 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Naval : CTI_Icon_Barracks {
+		class CTI_Icon_Naval: CTI_Icon_Barracks
+		{
 			idc = 110007;
-			x = "SafeZoneX + (SafeZoneW * 0.43)";
-			
-			text = "Rsc\Pictures\icon_wf_building_naval.paa";
+			text = "Rsc\Pictures\icon_wf_building_naval.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 6, CTI_NAVAL] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Icon_Depot : CTI_Icon_Barracks {
-			idc = 110008;
-			x = "SafeZoneX + (SafeZoneW * 0.464)";
+
 			
-			text = "Rsc\Pictures\icon_wf_building_depot.paa";
+			x = 0.43 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
+		};
+		class CTI_Icon_Depot: CTI_Icon_Barracks
+		{
+			idc = 110008;
+			text = "Rsc\Pictures\icon_wf_building_depot.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 7, CTI_DEPOT] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		
-		class CTI_Icon_Driver : CTI_Icon_Barracks {
-			idc = 110100;
-			x = "SafeZoneX + (SafeZoneW * 0.34)";
-			y = "SafeZoneY + (SafezoneH * 0.321)";
-			w = "SafeZoneW * 0.03";
-			h = "SafeZoneH * 0.048";
+
 			
-			color[] = {0.258823529, 0.713725490, 1, 1};
+			x = 0.464026 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.034 * safezoneW;
+			h = 0.064 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
 			colorActive[] = {1,1,1,0.7};
-			colorBackground[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorBackgroundSelected[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorFocused[] = {0.0, 0.0, 0.0, 0};
-			
-			text = "Rsc\Pictures\i_driver.paa";
+		};
+		class CTI_Icon_Driver: CTI_Icon_Barracks
+		{
+			idc = 110100;
+			color[] = {0.258824,0.713726,1,1};
+			colorBackgroundSelected[] = {0.6,0.8392,0.4706,0.7};
+			colorFocused[] = {0,0,0,0};
+			text = "Rsc\Pictures\i_driver.paa"; //--- ToDo: Localize;
 			action = "['onVehicleIconClicked', 'driver', 110100] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.339952 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.0299999 * safezoneW;
+			h = 0.048 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Gunner : CTI_Icon_Driver {
+		class CTI_Icon_Gunner: CTI_Icon_Driver
+		{
 			idc = 110101;
-			x = "SafeZoneX + (SafeZoneW * 0.37)";
-			
-			text = "Rsc\Pictures\i_gunner.paa";
+			text = "Rsc\Pictures\i_gunner.paa"; //--- ToDo: Localize;
 			action = "['onVehicleIconClicked', 'gunner', 110101] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.369968 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.0299999 * safezoneW;
+			h = 0.048 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Commander : CTI_Icon_Driver {
+		class CTI_Icon_Commander: CTI_Icon_Driver
+		{
 			idc = 110102;
-			x = "SafeZoneX + (SafeZoneW * 0.4)";
-			
-			text = "Rsc\Pictures\i_commander.paa";
+			text = "Rsc\Pictures\i_commander.paa"; //--- ToDo: Localize;
 			action = "['onVehicleIconClicked', 'commander', 110102] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.399984 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.0299999 * safezoneW;
+			h = 0.048 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Turrets : CTI_Icon_Driver {
+		class CTI_Icon_Turrets: CTI_Icon_Driver
+		{
 			idc = 110103;
-			x = "SafeZoneX + (SafeZoneW * 0.43)";
-			
-			text = "Rsc\Pictures\i_turrets.paa";
+			text = "Rsc\Pictures\i_turrets.paa"; //--- ToDo: Localize;
 			action = "['onVehicleIconClicked', 'turrets', 110103] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.43 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.0299999 * safezoneW;
+			h = 0.048 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Lock : CTI_Icon_Driver {
+		class CTI_Icon_Lock: CTI_Icon_Driver
+		{
 			idc = 110104;
-			x = "SafeZoneX + (SafeZoneW * 0.47)";
-			
-			color[] = {1, 0.22745098, 0.22745098, 1};
-			
-			text = "Rsc\Pictures\i_lock.paa";
+			color[] = {1,0.227451,0.227451,1};
+			text = "Rsc\Pictures\i_lock.paa"; //--- ToDo: Localize;
 			action = "['onVehicleLockClicked'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			
+			x = 0.469984 * safezoneW + safezoneX;
+			y = 0.32092 * safezoneH + safezoneY;
+			w = 0.0299999 * safezoneW;
+			h = 0.048 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		
-		
-		class CTI_Menu_Control_UnitsList : RscListNBox {
+		class CTI_Menu_Control_UnitsList: RscListNBox
+		{
 			idc = 111007;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.415)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.398";
-			
-			// rowHeight = "1.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			// rowHeight = "1.35 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			rowHeight = "1.4 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
 			itemBackground[] = {1,1,1,0.1};
-			// columns[] = {0.001, 0.26};
-			columns[] = {0.001, 0.35};
-			
+			columns[] = {0.001,0.35};
 			onLBSelChanged = "['onUnitsLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
 			onLBDblClick = "['onPurchase', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		
-		class CTI_Menu_ComboTeam : RscCombo {
-			idc = 110016;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.6075)";
-			y = "SafeZoneY + (SafezoneH * 0.257)";
-			w = "SafeZoneW * 0.195";
-			h = "SafeZoneH * 0.035";
-			
-			sizeEx = "0.8 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-			onLBSelChanged = "['onGroupLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Menu_ComboFactory : CTI_Menu_ComboTeam {
-			idc = 110009;
-			
-			y = "SafeZoneY + (SafezoneH * 0.3)";
-			onLBSelChanged = "['onFactoryLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		
-		class CTI_Menu_Control_Purchase : RscButton {
-			idc = 100011;
-			
-			// x = "SafeZoneX + (SafeZoneW * 0.535)";
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafeZoneH * 0.825)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.04";
-			
-			text = "Purchase";
-			action = "['onPurchase', lnbCurSelRow 111007] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Menu_Control_CancelQueu : CTI_Menu_Control_Purchase {
-			idc = 100012;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			y = "SafeZoneY + (SafeZoneH * 0.77)";
-			
-			text = "Cancel Queue";
-			action = "['onQueueCancel', lbCurSel 110013] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Menu_Control_IndependentSalvager : CTI_Menu_Control_CancelQueu {
-			idc = 100016;
-			
-			y = "SafeZoneY + (SafeZoneH * 3.825)";
-			
-			text = "Buy Independent Salvager";
-			action = "['onIndependentSalvagerPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
-		};
-		class CTI_Menu_Control_QueueList : RscListBox {
-			idc = 110013;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.535)";
-			y = "SafeZoneY + (SafezoneH * 0.612)";
-			h = "SafeZoneH * 0.143";
-			w = "SafeZoneW * 0.275";
-			
-			rowHeight = "1.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.264 * safezoneH;
 			colorBackground[] = {0,0,0,0};
-			
-			// onLBSelChanged = "['onUnitsLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		};
+		class CTI_Menu_ComboTeam: RscCombo
+		{
+			idc = 110016;
+			onLBSelChanged = "['onGroupLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			x = 0.609066 * safezoneW + safezoneX;
+			y = 0.25184 * safezoneH + safezoneY;
+			w = 0.195 * safezoneW;
+			h = 0.035 * safezoneH;
+			sizeEx = "0.8 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)"; 			
+		};
+		class CTI_Menu_ComboFactory: CTI_Menu_ComboTeam
+		{
+			idc = 110009;
+			onLBSelChanged = "['onFactoryLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			x = 0.608608 * safezoneW + safezoneX;
+			y = 0.29254 * safezoneH + safezoneY;
+			w = 0.195 * safezoneW;
+			h = 0.035 * safezoneH;
+			sizeEx = "0.8 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)"; 			
+		};
+		class CTI_Menu_Control_Purchase: RscButton
+		{
+			idc = 100011;
+			action = "['onPurchase', lnbCurSelRow 111007] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			text = "Purchase"; //--- ToDo: Localize;
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.82494 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_Control_CancelQueu: CTI_Menu_Control_Purchase
+		{
+			idc = 100012;
+			action = "['onQueueCancel', lbCurSel 110013] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			text = "Cancel Queue"; //--- ToDo: Localize;
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.82428 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_Control_IndependentSalvager: CTI_Menu_Control_CancelQueu
+		{
+			idc = 100016;
+			action = "['onIndependentSalvagerPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			text = "Buy Independent Salvager"; //--- ToDo: Localize;
+			x = 0.535057 * safezoneW + safezoneX;
+			y = 3.82508 * safezoneH + safezoneY;
+			w = 0.275 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_Control_QueueList: RscListBox
+		{
+			idc = 110013;
+			rowHeight = "1.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			onLBDblClick = "['onQueueCancel', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.742 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.066 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 			
 		};
-		class CTI_Menu_Control_Cost : RscStructuredText {
+		class CTI_Menu_Control_Cost: RscStructuredText
+		{
 			idc = 110014;
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.369)";
-			w = "SafeZoneW * 0.1375";
-			h = "SafeZoneH * 0.03";
-			
 			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.3691 * safezoneH + safezoneY;
+			w = 0.137499 * safezoneW;
+			h = 0.0300001 * safezoneH;
 		};
-		class CTI_Menu_Control_Resources : CTI_Menu_Control_Cost {
+		class CTI_Menu_Control_Resources: CTI_Menu_Control_Cost
+		{
 			idc = 110015;
-			x = "SafeZoneX + (SafeZoneW * 0.3625)";
-			
 			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.362521 * safezoneW + safezoneX;
+			y = 0.3691 * safezoneH + safezoneY;
+			w = 0.137499 * safezoneW;
+			h = 0.0300001 * safezoneH;
 		};
-		class CTI_Control_Exit : RscButton {
+		class CTI_Control_Exit: RscButton
+		{
 			idc = 22555;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.77)";
-			y = "SafeZoneY + (SafezoneH * 0.18)";
-			w = "SafeZoneW * 0.04";
-			h = "SafeZoneH * 0.04";
-			
-			text = "X";
 			action = "closeDialog 0";
+
+			text = "X"; //--- ToDo: Localize;
+			x = 0.770031 * safezoneW + safezoneX;
+			y = 0.1799 * safezoneH + safezoneY;
+			w = 0.04 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_UnitsFilterFrame: RscFrame
+		{
+			idc = 1806;
+
+			x = 0.225042 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class CTI_Menu_ComboFilter: CTI_Menu_ComboTeam
+		{
+			idc = 110017;
+			onLBSelChanged = "['onFilterLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+
+			x = 0.230083 * safezoneW + safezoneX;
+			y = 0.41948 * safezoneH + safezoneY;
+			w = 0.265064 * safezoneW;
+			h = 0.030125 * safezoneH;
+			sizeEx = "0.8 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)"; 			
+		};
+		class CTI_Menu_UnitsDescription: RscStructuredText
+		{
+			idc = 110019;
+			type = CT_STRUCTURED_TEXT;
+			style = ST_MULTI;
+			lineSpacing = 1;
+			text = " "; 
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.742 * safezoneH + safezoneY;
+			w = 0.274958 * safezoneW;
+			h = 0.066 * safezoneH;
+			canDrag = 1;
+			size = 0.03; 
+			sizeEx = "0.4 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};			
+		};
+		class CTI_Menu_StatList: RscListNBox
+		{
+			idc = 110020;
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			columns[] = {0.001,0.35};
+
+			x = 0.66612 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.143207 * safezoneW;
+			h = 0.176 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};				
+		};
+		class CTI_Menu_StatPic: RscStructuredText
+		{
+			idc = 111014;
+			type = CT_STRUCTURED_TEXT;
+			style = ST_MULTI;
+			//itemBackground[] = {1,1,1,0.1};
+			//text = ""; //--- ToDo: Localize;
+			text = ""; //--- ToDo: Localize;
+			x = 0.53437 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.120294 * safezoneW;
+			h = 0.176 * safezoneH;
+			colorBackground[] = {0,0,0,0};		
 		};
 	};
 };
@@ -621,847 +758,1262 @@ class CTI_RscGearMenu
 	onUnload = "uiNamespace setVariable ['CTI_dialog_ui_gear', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 	
 	class controlsBackground {
-		class CTI_Background : RscText {
-			x = "SafeZoneX";
-			y = "SafeZoneY";
-			w = "SafeZoneW";
-			h = "SafeZoneH";
-			
-			colorBackground[] = {0, 0, 0, 0.7};
+		class CTI_Background: RscText
+		{
 			moving = 0;
+
+			x = 3.52904e-005 * safezoneW + safezoneX;
+			y = -5.99921e-005 * safezoneH + safezoneY;
+			w = 1 * safezoneW;
+			h = 0.999999 * safezoneH;
+			colorBackground[] = {0,0,0,0.5};
 		};
-		class CTI_Background_Header : CTI_Background {
-			x = "SafeZoneX";
-			y = "SafeZoneY";
-			w = "SafeZoneW";
-			h = "SafeZoneH * 0.06";
-			
-			colorBackground[] = {0, 0, 0, 0.4};
+		class CTI_Background_Header: CTI_Background
+		{
+			x = 0.000837247 * safezoneW + safezoneX;
+			y = 0.00126 * safezoneH + safezoneY;
+			w = 1 * safezoneW;
+			h = 0.0599999 * safezoneH;
+			colorBackground[] = {0,0,0,0.4};
 		};
-		class CTI_Background_Footer : CTI_Background {
-			x = "SafeZoneX";
-			y = "SafeZoneY + (SafezoneH * 0.96)";
-			w = "SafeZoneW";
-			h = "SafeZoneH * 0.04";
-			
-			colorBackground[] = {0, 0, 0, 0.3};
+		class CTI_Background_Footer: CTI_Background
+		{
+			x = 0.000264405 * safezoneW + safezoneX;
+			y = 0.9554 * safezoneH + safezoneY;
+			w = 0.996722 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorBackground[] = {0,0,0,0.3};
 		};
-		class CTI_Menu_Title : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.007)";
-			y = "SafeZoneY + (SafezoneH * 0.01)";
-			w = "SafeZoneW * 0.5";
-			h = "SafeZoneH * 0.037";
-			
-			text = "Gear Purchase Menu :";
-			colorText[] = {0.258823529, 0.713725490, 1, 1};
-			
+		class CTI_Menu_Title: RscText
+		{
+			text = "Gear Purchase Menu :"; //--- ToDo: Localize;
+			x = 0.00702378 * safezoneW + safezoneX;
+			y = 0.01006 * safezoneH + safezoneY;
+			w = 0.5 * safezoneW;
+			h = 0.037 * safezoneH;
+			colorText[] = {0.258824,0.713726,1,1};
 			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 		};
-		class CTI_Background_Gear : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.4)";
-			y = "SafeZoneY + (SafezoneH * 0.06)";
-			w = "SafeZoneW * 0.6";
-			h = "SafeZoneH * 0.9";
-			
-			colorBackground[] = {0.5, 0.5, 0.5, 0.15};
+		class CTI_Background_Gear: RscText
+		{
+			x = 0.404223 * safezoneW + safezoneX;
+			y = 0.0655 * safezoneH + safezoneY;
+			w = 0.596876 * safezoneW;
+			h = 0.885001 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.0};//BG
 		};
-		class CTI_Menu_Icons_Frame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			// x = "SafeZoneX + (SafeZoneW * 0.028)";
-			y = "SafeZoneY + (SafezoneH * 0.07)";
-			// w = "SafeZoneW * 0.344";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.08";
+		class CTI_Menu_Icons_Frame: RscFrame
+		{
+			x = 0.0100025 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.38 * safezoneW;
+			h = 0.0799999 * safezoneH;
 		};
-		class CTI_Menu_Icons_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.07)";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.08";
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		class CTI_Menu_Icons_Background: RscText
+		{
+			x = 0.0100025 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.38 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		
-		class CTI_Menu_ComboTarget_Frame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.17)";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.055";
+		class CTI_Menu_ComboTarget_Frame: RscFrame
+		{
+			x = 0.0100025 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.38 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
-		class CTI_Menu_ComboTarget_Background : CTI_Menu_Icons_Background {
-			y = "SafeZoneY + (SafezoneH * 0.17)";
-			h = "SafeZoneH * 0.055";
+		class CTI_Menu_ComboTarget_Background: CTI_Menu_Icons_Background
+		{
+			x = 0.0100025 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.38 * safezoneW;
+			h = 0.055 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		class CTI_Menu_ComboTarget_Label : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.02)";
-			y = "SafeZoneY + (SafezoneH * 0.18)";
-			w = "SafeZoneW * 0.1";
-			h = "SafeZoneH * 0.035";
-			
-			text = "Target :";
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		class CTI_Menu_ShopList_Frame: RscFrame
+		{
+			x = 0.0122938 * safezoneW + safezoneX;
+			y = 0.4571 * safezoneH + safezoneY;
+			w = 0.378067 * safezoneW;
+			h = 0.484 * safezoneH;
 		};
-		
-		class CTI_Menu_ShopList_Frame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.48";
+		class CTI_Menu_Stats_Frame: RscFrame
+		{
+			x = 0.0104608 * safezoneW + safezoneX;
+			y = 0.23798 * safezoneH + safezoneY;
+			w = 0.38 * safezoneW;
+			h = 0.2 * safezoneH;
 		};
-		class CTI_Menu_LinkedList_Frame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.745)";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.2";
+		class CTI_Menu_ShopList_Background: CTI_Menu_ComboTarget_Background
+		{
+			x = 0.0130958 * safezoneW + safezoneX;
+			y = 0.456 * safezoneH + safezoneY;
+			w = 0.378067 * safezoneW;
+			h = 0.484 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		class CTI_Menu_ShopList_Background : CTI_Menu_ComboTarget_Background {
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			h = "SafeZoneH * 0.48";
-		};
-		class CTI_Menu_MagsList_Background : CTI_Menu_ComboTarget_Background {
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.545)";
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.395";
+		class CTI_Menu_MagsList_Background: CTI_Menu_ComboTarget_Background
+		{
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.5451 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.394999 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
 	};
 	
 	class controls {
 		//--- Interactive background controls
-		class CTI_Gear_Container_Uniform : RscText {
+		class CTI_Gear_Container_Uniform: RscText
+		{
 			idc = 77001;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.07)";
-			w = "SafeZoneW * 0.09";
-			h = "SafeZoneH * 0.112";
-			
-			colorBackground[] = {1, 1, 1, 0.15};
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Vest : CTI_Gear_Container_Uniform {
+		class CTI_Gear_Container_Vest: CTI_Gear_Container_Uniform
+		{
 			idc = 77002;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.505)";
+
+			x = 0.505041 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Backpack : CTI_Gear_Container_Uniform {
+		class CTI_Gear_Container_Backpack: CTI_Gear_Container_Uniform
+		{
 			idc = 77003;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.60)";
+
+			x = 0.600016 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Helm : CTI_Gear_Container_Uniform {
+		class CTI_Gear_Container_Helm: CTI_Gear_Container_Uniform
+		{
 			idc = 77004;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			w = "SafeZoneW * 0.07";
-			h = "SafeZoneH * 0.09";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Glasses : CTI_Gear_Container_Helm {
+		class CTI_Gear_Container_Glasses: CTI_Gear_Container_Helm
+		{
 			idc = 77005;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.774)";
+
+			x = 0.774041 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_NVGoggles : CTI_Gear_Container_Helm {
+		class CTI_Gear_Container_NVGoggles: CTI_Gear_Container_Helm
+		{
 			idc = 77006;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.847)";
+
+			x = 0.847019 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Binoculars : CTI_Gear_Container_Helm {
+		class CTI_Gear_Container_Binoculars: CTI_Gear_Container_Helm
+		{
 			idc = 77007;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.921)";
+
+			x = 0.921029 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Map : CTI_Gear_Container_Uniform {
+		class CTI_Gear_Container_Map: CTI_Gear_Container_Uniform
+		{
 			idc = 77008;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.17)";
-			w = "SafeZoneW * 0.056";
-			h = "SafeZoneH * 0.07";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_GPS : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_GPS: CTI_Gear_Container_Map
+		{
 			idc = 77009;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.759)";
+
+			x = 0.759033 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Radio : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_Radio: CTI_Gear_Container_Map
+		{
 			idc = 77010;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.818)";
+
+			x = 0.818034 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Compass : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_Compass: CTI_Gear_Container_Map
+		{
 			idc = 77011;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.877)";
+
+			x = 0.877036 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Clock : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_Clock: CTI_Gear_Container_Map
+		{
 			idc = 77012;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.936)";
+
+			x = 0.936037 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		
-		class CTI_Gear_Container_Primary : CTI_Gear_Container_Uniform {
+		class CTI_Gear_Container_Primary: CTI_Gear_Container_Uniform
+		{
 			idc = 77013;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.25)";
-			w = "SafeZoneW * 0.29";
-			h = "SafeZoneH * 0.09";
-		};		
-		class CTI_Gear_Container_Primary_Muzzle : CTI_Gear_Container_Map {
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.25008 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
+		};
+		class CTI_Gear_Container_Primary_Muzzle: CTI_Gear_Container_Map
+		{
 			idc = 77014;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.345)";
-			w = "SafeZoneW * 0.054";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Primary_Flashlight : CTI_Gear_Container_Primary_Muzzle {
+		class CTI_Gear_Container_Primary_Flashlight: CTI_Gear_Container_Primary_Muzzle
+		{
 			idc = 77015;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.7565)";
+
+			x = 0.756513 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Primary_Optics : CTI_Gear_Container_Primary_Muzzle {
+		class CTI_Gear_Container_Primary_Optics: CTI_Gear_Container_Primary_Muzzle
+		{
 			idc = 77016;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.813)";
-			w = "SafeZoneW * 0.064";
+
+			x = 0.812993 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.0639999 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-                class CTI_Gear_Container_Primary_Bipod : CTI_Gear_Container_Primary_Muzzle {
+		class CTI_Gear_Container_Primary_Bipod: CTI_Gear_Container_Primary_Muzzle
+		{
 			idc = 77017;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.8795)";
+
+			x = 0.879556 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Primary_CurrentMagazine : CTI_Gear_Container_Primary_Muzzle {
+		class CTI_Gear_Container_Primary_CurrentMagazine: CTI_Gear_Container_Primary_Muzzle
+		{
 			idc = 77901;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.936)";
+
+			x = 0.936037 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		
-		class CTI_Gear_Container_Secondary : CTI_Gear_Container_Primary {
+		class CTI_Gear_Container_Secondary: CTI_Gear_Container_Primary
+		{
 			idc = 77018;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.42)";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.41992 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Secondary_Muzzle : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_Secondary_Muzzle: CTI_Gear_Container_Map
+		{
 			idc = 77019;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.515)";
-			w = "SafeZoneW * 0.06775";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.51496 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Secondary_Flashlight : CTI_Gear_Container_Secondary_Muzzle {
+		class CTI_Gear_Container_Secondary_Flashlight: CTI_Gear_Container_Secondary_Muzzle
+		{
 			idc = 77020;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.77375)";
+
+			x = 0.773697 * safezoneW + safezoneX;
+			y = 0.51496 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Secondary_Optics : CTI_Gear_Container_Secondary_Muzzle {
+		class CTI_Gear_Container_Secondary_Optics: CTI_Gear_Container_Secondary_Muzzle
+		{
 			idc = 77021;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.848)";
+
+			x = 0.848051 * safezoneW + safezoneX;
+			y = 0.51496 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-        class CTI_Gear_Container_Secondary_Bipod : CTI_Gear_Container_Secondary_Muzzle {
+		class CTI_Gear_Container_Secondary_Bipod: CTI_Gear_Container_Secondary_Muzzle
+		{
 			idc = 77022;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.8515)+100";
+
+			x = 46.6778 * safezoneW + safezoneX;
+			y = 0.51496 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Secondary_CurrentMagazine : CTI_Gear_Container_Secondary_Muzzle {
+		class CTI_Gear_Container_Secondary_CurrentMagazine: CTI_Gear_Container_Secondary_Muzzle
+		{
 			idc = 77902;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.92225)";
+
+			x = 0.922289 * safezoneW + safezoneX;
+			y = 0.51496 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		
-		class CTI_Gear_Container_Pistol : CTI_Gear_Container_Primary {
+		class CTI_Gear_Container_Pistol: CTI_Gear_Container_Primary
+		{
 			idc = 77023;
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.595)";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.59504 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Pistol_Muzzle : CTI_Gear_Container_Map {
+		class CTI_Gear_Container_Pistol_Muzzle: CTI_Gear_Container_Map
+		{
 			idc = 77024;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.695)";
-			w = "SafeZoneW * 0.06775";
+
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Pistol_Flashlight : CTI_Gear_Container_Pistol_Muzzle {
+		class CTI_Gear_Container_Pistol_Flashlight: CTI_Gear_Container_Pistol_Muzzle
+		{
 			idc = 77025;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.77375)";
+
+			x = 0.773697 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Pistol_Optics : CTI_Gear_Container_Pistol_Muzzle {
+		class CTI_Gear_Container_Pistol_Optics: CTI_Gear_Container_Pistol_Muzzle
+		{
 			idc = 77026;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.848)";
+
+			x = 0.848051 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-                class CTI_Gear_Container_Pistol_Bipod : CTI_Gear_Container_Pistol_Muzzle {
+		class CTI_Gear_Container_Pistol_Bipod: CTI_Gear_Container_Pistol_Muzzle
+		{
 			idc = 77027;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.8515)+100";
+
+			x = 46.6778 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		class CTI_Gear_Container_Pistol_CurrentMagazine : CTI_Gear_Container_Pistol_Muzzle {
+		class CTI_Gear_Container_Pistol_CurrentMagazine: CTI_Gear_Container_Pistol_Muzzle
+		{
 			idc = 77903;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.92225)";
+
+			x = 0.922289 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		
-		
-		class CTI_Gear_Container_Items_Unit : CTI_Gear_Container_Pistol_Muzzle {
+		class CTI_Gear_Container_Items_Unit: CTI_Gear_Container_Pistol_Muzzle
+		{
 			idc = 77109;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.25)";
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.28";
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.25008 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.280001 * safezoneH;
+			colorBackground[] = {1,1,1,0.15};
 		};
-		
-		//--- Actual controls
-		class CTI_Gear_Control_Items_Purchase : RscListNBox {
+		class CTI_Gear_Control_Items_Purchase: RscListNBox
+		{
 			idc = 70108;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.245)";
-			w = "SafeZoneW * 0.38";
-			h = "SafeZoneH * 0.48";
-			
 			rowHeight = "1.5 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
 			itemBackground[] = {1,1,1,0.1};
-			columns[] = {0.26, 0.001};
-			
+			columns[] = {0.26,0.001};
 			canDrag = 1;
-			
 			onLBDblClick = "['onShoppingListLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrag = "['onShoppingListLBDrag', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBSelChanged = "['onShoppingListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			x = 0.0146997 * safezoneW + safezoneX;
+			y = 0.46106 * safezoneH + safezoneY;
+			w = 0.37375 * safezoneW;
+			h = 0.474375 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		};
-		class CTI_Gear_Control_Linked_Items : CTI_Gear_Control_Items_Purchase {
+		class CTI_Gear_Control_Linked_Items: CTI_Gear_Control_Items_Purchase
+		{
 			idc = 70601;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.545)";
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.395";
-			
 			onLBDblClick = "['onLinkedListLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrag = "['onShoppingListLBDrag', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBSelChanged = "";
-		};
-		
-		class CTI_Gear_Control_Items_Unit : RscListNBox {
-			idc = 70109;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.25)";
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.28";
-			
-			rowHeight = "1.65 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.5451 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.394999 * safezoneH;
 			colorBackground[] = {0,0,0,0};
+		};
+		class CTI_Gear_Control_Items_Unit: RscListNBox
+		{
+			idc = 70109;
+			rowHeight = "1.65 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			itemBackground[] = {1,1,1,0.1};
 			itemSpacing = 0.001;
-			columns[] = {0.01, 0.4};
-			
+			columns[] = {0.01,0.4};
 			onLBDblClick = "['onUnitItemsLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'ListItems', 77109, ((_this select 4) select 0) select 2, -1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.25008 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.280001 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 			
 		};
-		
-		class CTI_Gear_Control_Uniform: RscActiveText {
+		class CTI_Gear_Control_Uniform: RscActiveText
+		{
 			idc = 70001;
-			
 			style = ST_KEEP_ASPECT_RATIO;
 			soundDoubleClick[] = {"",0.1,1};
-			
-			colorBackground[] = {0.6, 0.83, 0.47, 1};
-			colorBackgroundSelected[] = {0.6, 0.83, 0.47, 1};
-			colorFocused[] = {0, 0, 0, 0};
-			color[] = {0.85, 0.85, 0.85, 1};
-			colorText[] = {0.85, 0.85, 0.85, 1};
-			colorActive[] = {1, 1, 1, 1};
-			colorDisabled[] = {1,1,1,0.3};
-			
+			colorBackgroundSelected[] = {0.6,0.83,0.47,1};
+			colorFocused[] = {0,0,0,0};
+			color[] = {0.85,0.85,0.85,1};
 			canDrag = 1;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.07)";
-			w = "SafeZoneW * 0.09";
-			h = "SafeZoneH * 0.112";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_uniform_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_uniform_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemContainerClicked', 0, 77001] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "['onItemContainerMouseClicked', 0, 70001, _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDblClick = "['onItemContainerMouseDblClicked', 0] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Container', 77001, ((_this select 4) select 0) select 2, 0] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Vest: CTI_Gear_Control_Uniform {
+		class CTI_Gear_Control_Vest: CTI_Gear_Control_Uniform
+		{
 			idc = 70002;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.505)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_vest_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_vest_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemContainerClicked', 1, 77002] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "['onItemContainerMouseClicked', 1, 70002, _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDblClick = "['onItemContainerMouseDblClicked', 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Container', 77002, ((_this select 4) select 0) select 2, 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.505041 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Backpack: CTI_Gear_Control_Uniform {
+		class CTI_Gear_Control_Backpack: CTI_Gear_Control_Uniform
+		{
 			idc = 70003;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.60)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_backpack_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_backpack_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemContainerClicked', 2, 77003] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "['onItemContainerMouseClicked', 2, 70003, _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDblClick = "['onItemContainerMouseDblClicked', 2] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Container', 77003, ((_this select 4) select 0) select 2, 2] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.600016 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.112 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Helm: CTI_Gear_Control_Uniform {
+		class CTI_Gear_Control_Helm: CTI_Gear_Control_Uniform
+		{
 			idc = 70004;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			w = "SafeZoneW * 0.07";
-			h = "SafeZoneH * 0.09";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_helmet_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_helmet_gs.paa"; //--- ToDo: Localize;
 			action = "['onAccessoryClicked', 0, 70004, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_helmet_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'HeadAsset', 77004, ((_this select 4) select 0) select 2, [2,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "";
 			onMouseButtonDblClick = "";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Glasses: CTI_Gear_Control_Helm {
+		class CTI_Gear_Control_Glasses: CTI_Gear_Control_Helm
+		{
 			idc = 70005;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.774)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_glasses_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_glasses_gs.paa"; //--- ToDo: Localize;
 			action = "['onAccessoryClicked', 1, 70005, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_glasses_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'HeadAsset', 77005, ((_this select 4) select 0) select 2, [2,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.774041 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_NVGoggles: CTI_Gear_Control_Helm {
+		class CTI_Gear_Control_NVGoggles: CTI_Gear_Control_Helm
+		{
 			idc = 70006;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.847)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_nvg_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_nvg_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [0,0], 70006, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_nvg_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77006, ((_this select 4) select 0) select 2, [3,0,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.847019 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Binoculars: CTI_Gear_Control_Helm {
+		class CTI_Gear_Control_Binoculars: CTI_Gear_Control_Helm
+		{
 			idc = 70007;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.921)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_binocular_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_binocular_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [0,1], 70007, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_binocular_gs.paa', [3,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77007, ((_this select 4) select 0) select 2, [3,0,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.921029 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.07 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Map: CTI_Gear_Control_Uniform {
+		class CTI_Gear_Control_Map: CTI_Gear_Control_Uniform
+		{
 			idc = 70008;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.17)";
-			w = "SafeZoneW * 0.056";
-			h = "SafeZoneH * 0.07";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_map_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_map_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [1,0], 70008, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_map_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77008, ((_this select 4) select 0) select 2, [3,1,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "";
 			onMouseButtonDblClick = "";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_GPS: CTI_Gear_Control_Map {
+		class CTI_Gear_Control_GPS: CTI_Gear_Control_Map
+		{
 			idc = 70009;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.759)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_gps_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_gps_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [1,1], 70009, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_gps_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77009, ((_this select 4) select 0) select 2, [3,1,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Radio: CTI_Gear_Control_Map {
-			idc = 70010;
+
 			
-			x = "SafeZoneX + (SafeZoneW * 0.818)";
-		
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_radio_gs.paa";
+			x = 0.759033 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Radio: CTI_Gear_Control_Map
+		{
+			idc = 70010;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_radio_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [1,2], 70010, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_radio_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77010, ((_this select 4) select 0) select 2, [3,1,2]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Compass: CTI_Gear_Control_Map {
-			idc = 70011;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.877)";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_compass_gs.paa";
+			
+			x = 0.818034 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Compass: CTI_Gear_Control_Map
+		{
+			idc = 70011;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_compass_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [1,3], 70011, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_compass_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77011, ((_this select 4) select 0) select 2, [3,1,3]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Clock: CTI_Gear_Control_Map {
-			idc = 70012;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.936)";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_watch_gs.paa";
+			
+			x = 0.877036 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Clock: CTI_Gear_Control_Map
+		{
+			idc = 70012;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_watch_gs.paa"; //--- ToDo: Localize;
 			action = "['onItemClicked', [1,4], 70012, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_watch_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Item', 77012, ((_this select 4) select 0) select 2, [3,1,4]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		
-		class CTI_Gear_Control_Primary: CTI_Gear_Control_Uniform {
-			idc = 70013;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.71)";
-			y = "SafeZoneY + (SafezoneH * 0.25)";
-			
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.09";
-			colorDisabled[] = {1,1,1,0.3};
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_primary_gs.paa";
+			
+			x = 0.936037 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
+			w = 0.0560001 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Primary: CTI_Gear_Control_Uniform
+		{
+			idc = 70013;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_primary_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponClicked', 0] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Weapon', 77013, ((_this select 4) select 0) select 2, 0] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onMouseButtonDown = "";
 			onMouseButtonDblClick = "";
-		};
-		class CTI_Gear_Control_Primary_Muzzle: CTI_Gear_Control_Map {
-			idc = 70014;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.345)";
-			w = "SafeZoneW * 0.054";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa";
+			
+			x = 0.709999 * safezoneW + safezoneX;
+			y = 0.25008 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Primary_Muzzle: CTI_Gear_Control_Map
+		{
+			idc = 70014;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 0, 0, 70014, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77014, ((_this select 4) select 0) select 2, [0,0,1,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Primary_Side: CTI_Gear_Control_Primary_Muzzle {
+		class CTI_Gear_Control_Primary_Side: CTI_Gear_Control_Primary_Muzzle
+		{
 			idc = 70015;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.7565)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 0, 1, 70015, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77015, ((_this select 4) select 0) select 2, [0,0,1,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.756513 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Primary_Optics: CTI_Gear_Control_Primary_Muzzle {
+		class CTI_Gear_Control_Primary_Optics: CTI_Gear_Control_Primary_Muzzle
+		{
 			idc = 70016;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.82)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 0, 2, 70016, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77016, ((_this select 4) select 0) select 2, [0,0,1,2]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.819982 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-        class CTI_Gear_Control_Primary_Bipod: CTI_Gear_Control_Primary_Muzzle {
+		class CTI_Gear_Control_Primary_Bipod: CTI_Gear_Control_Primary_Muzzle
+		{
 			idc = 70017;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.8795)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 0, 3, 70017, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77017, ((_this select 4) select 0) select 2, [0,0,1,3]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.879556 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Primary_CurrentMagazine: CTI_Gear_Control_Primary_Muzzle {
+		class CTI_Gear_Control_Primary_CurrentMagazine: CTI_Gear_Control_Primary_Muzzle
+		{
 			idc = 70901;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.936)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponCurrentMagazineClicked', 0, 70901] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'CurrentMagazine', 77901, ((_this select 4) select 0) select 2, 0] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.936037 * safezoneW + safezoneX;
+			y = 0.3449 * safezoneH + safezoneY;
+			w = 0.054 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		
-		class CTI_Gear_Control_Secondary: CTI_Gear_Control_Primary {
+		class CTI_Gear_Control_Secondary: CTI_Gear_Control_Primary
+		{
 			idc = 70018;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.71)";
-			y = "SafeZoneY + (SafezoneH * 0.42)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_secondary_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_secondary_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponClicked', 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Weapon', 77018, ((_this select 4) select 0) select 2, 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Secondary_Muzzle: CTI_Gear_Control_Map {
-			idc = 70019;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.705)";
-			y = "SafeZoneY + (SafezoneH * 0.52)";
-			w = "SafeZoneW * 0.06775";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa";
+			
+			x = 0.709999 * safezoneW + safezoneX;
+			y = 0.41992 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Secondary_Muzzle: CTI_Gear_Control_Map
+		{
+			idc = 70019;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 1, 0, 70019, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77019, ((_this select 4) select 0) select 2, [0,1,1,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.704958 * safezoneW + safezoneX;
+			y = 0.52002 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Secondary_Side: CTI_Gear_Control_Secondary_Muzzle {
+		class CTI_Gear_Control_Secondary_Side: CTI_Gear_Control_Secondary_Muzzle
+		{
 			idc = 70020;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.775)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 1, 1, 70020, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77020, ((_this select 4) select 0) select 2, [0,1,1,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.774958 * safezoneW + safezoneX;
+			y = 0.52002 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Secondary_Optics: CTI_Gear_Control_Secondary_Muzzle {
+		class CTI_Gear_Control_Secondary_Optics: CTI_Gear_Control_Secondary_Muzzle
+		{
 			idc = 70021;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.845)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 1, 2, 70021, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77021, ((_this select 4) select 0) select 2, [0,1,1,2]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.844957 * safezoneW + safezoneX;
+			y = 0.52002 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-        class CTI_Gear_Control_Secondary_Bipod: CTI_Gear_Control_Secondary_Muzzle {
+		class CTI_Gear_Control_Secondary_Bipod: CTI_Gear_Control_Secondary_Muzzle
+		{
 			idc = 70022;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.845)+100";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 1, 3, 70022, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77022, ((_this select 4) select 0) select 2, [0,1,1,3]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 46.6712 * safezoneW + safezoneX;
+			y = 0.52002 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Secondary_CurrentMagazine: CTI_Gear_Control_Secondary_Muzzle {
+		class CTI_Gear_Control_Secondary_CurrentMagazine: CTI_Gear_Control_Secondary_Muzzle
+		{
 			idc = 70902;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.92)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponCurrentMagazineClicked', 1, 70902] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'CurrentMagazine', 77902, ((_this select 4) select 0) select 2, 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		
-		class CTI_Gear_Control_Pistol: CTI_Gear_Control_Primary {
-			idc = 70023;
-					
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.595)";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_hgun_gs.paa";
+			
+			x = 0.919998 * safezoneW + safezoneX;
+			y = 0.52002 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Pistol: CTI_Gear_Control_Primary
+		{
+			idc = 70023;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_hgun_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponClicked', 2] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Weapon', 77023, ((_this select 4) select 0) select 2, 2] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Pistol_Muzzle: CTI_Gear_Control_Map {
-			idc = 70024;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.705)";
-			y = "SafeZoneY + (SafezoneH * 0.695)";
-			w = "SafeZoneW * 0.06775";
 
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa";
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.59504 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.09 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class CTI_Gear_Control_Pistol_Muzzle: CTI_Gear_Control_Map
+		{
+			idc = 70024;
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 2, 0, 70024, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_muzzle_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77024, ((_this select 4) select 0) select 2, [0,2,1,0]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.704958 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Pistol_Side: CTI_Gear_Control_Pistol_Muzzle {
+		class CTI_Gear_Control_Pistol_Side: CTI_Gear_Control_Pistol_Muzzle
+		{
 			idc = 70025;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.775)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 2, 1, 70025, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_side_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77025, ((_this select 4) select 0) select 2, [0,2,1,1]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.774958 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Pistol_Optics: CTI_Gear_Control_Pistol_Muzzle {
+		class CTI_Gear_Control_Pistol_Optics: CTI_Gear_Control_Pistol_Muzzle
+		{
 			idc = 70026;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.845)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 2, 2, 70026, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_top_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77026, ((_this select 4) select 0) select 2, [0,2,1,2]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.844957 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-                class CTI_Gear_Control_Pistol_Bipod: CTI_Gear_Control_Pistol_Muzzle {
+		class CTI_Gear_Control_Pistol_Bipod: CTI_Gear_Control_Pistol_Muzzle
+		{
 			idc = 70027;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.845)+100";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponAccessoryClicked', 2, 3, 70027, '\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_bipod_gs.paa'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'Accessory', 77027, ((_this select 4) select 0) select 2, [0,2,1,3]] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 46.6712 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		class CTI_Gear_Control_Pistol_CurrentMagazine: CTI_Gear_Control_Pistol_Muzzle {
+		class CTI_Gear_Control_Pistol_CurrentMagazine: CTI_Gear_Control_Pistol_Muzzle
+		{
 			idc = 70903;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.92)";
-			
-			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa";
+			text = "\A3\Ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_magazine_gs.paa"; //--- ToDo: Localize;
 			action = "['onWeaponCurrentMagazineClicked', 2, 70903] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
 			onLBDrop = "['onShoppingListLBDrop', 'CurrentMagazine', 77903, ((_this select 4) select 0) select 2, 2] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
-		};
-		class CTI_Gear_Control_Combo_Target : RscCombo {
-			idc = 70201;
 
-			x = "SafeZoneX + (SafeZoneW * 0.15)";
-			y = "SafeZoneY + (SafezoneH * 0.18)";
-			w = "SafeZoneW * 0.235";
-			h = "SafeZoneH * 0.037";
 			
-			onLBSelChanged = "['onUnitLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+			x = 0.919998 * safezoneW + safezoneX;
+			y = 0.69492 * safezoneH + safezoneY;
+			w = 0.06775 * safezoneW;
+			h = 0.07 * safezoneH;
+			colorText[] = {0.85,0.85,0.85,1};
+			colorBackground[] = {0.6,0.83,0.47,1};
+			colorActive[] = {1,1,1,1};
 		};
-		
-		class CTI_Gear_Uniform_Progress_Load : RscProgress {
+		class CTI_Gear_Control_Combo_Target: RscCombo
+		{
+			idc = 70201;
+			onLBSelChanged = "['onUnitLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			x = 0.206254 * safezoneW + safezoneX;
+			y = 0.18144 * safezoneH + safezoneY;
+			w = 0.177577 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class CTI_Gear_Control_Combo_Filter: CTI_Gear_Control_Combo_Target
+		{
+			idc = 70202;
+			onLBSelChanged = "['onFilterLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			x = 0.0166473 * safezoneW + safezoneX;
+			y = 0.1821 * safezoneH + safezoneY;
+			w = 0.183305 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class CTI_Gear_Uniform_Progress_Load: RscProgress
+		{
 			idc = 70301;
-			
-			style = 0;
 			texture = "";
 			textureExt = "";
 			colorBar[] = {0.9,0.9,0.9,0.9};
 			colorExtBar[] = {1,1,1,1};
 			colorFrame[] = {1,1,1,1};
-			
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.183)";
-			w = "SafeZoneW * 0.09";
-			h = "SafeZoneH * 0.016";
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.18298 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.016 * safezoneH;
 		};
-		class CTI_Gear_Vest_Progress_Load : CTI_Gear_Uniform_Progress_Load {
+		class CTI_Gear_Vest_Progress_Load: CTI_Gear_Uniform_Progress_Load
+		{
 			idc = 70302;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.505)";
+
+			x = 0.505041 * safezoneW + safezoneX;
+			y = 0.18298 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.016 * safezoneH;
 		};
-		class CTI_Gear_Backpack_Progress_Load : CTI_Gear_Uniform_Progress_Load {
+		class CTI_Gear_Backpack_Progress_Load: CTI_Gear_Uniform_Progress_Load
+		{
 			idc = 70303;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.60)";
+
+			x = 0.600016 * safezoneW + safezoneX;
+			y = 0.18298 * safezoneH + safezoneY;
+			w = 0.0899999 * safezoneW;
+			h = 0.016 * safezoneH;
 		};
-		
-		class CTI_Icon_Primary : RscActiveText {
+		class CTI_Icon_Primary: RscActiveText
+		{
 			idc = 70501;
 			style = ST_KEEP_ASPECT_RATIO;
-			x = "SafeZoneX + (SafeZoneW * 0.028)";
-			y = "SafeZoneY + (SafezoneH * 0.07)";
-			w = "SafeZoneW * 0.043";
-			h = "SafeZoneH * 0.08";
-			
 			color[] = {0.75,0.75,0.75,0.7};
-			colorActive[] = {1,1,1,0.7};
-			colorBackground[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorBackgroundSelected[] = {0.6, 0.8392, 0.4706, 0.7};
-			colorFocused[] = {0.0, 0.0, 0.0, 0};
-			colorDisabled[] = {1,1,1,0.3};
-			
-			text = "Rsc\Pictures\icon_wf_gear_primary.paa";
+			colorBackgroundSelected[] = {0.6,0.8392,0.4706,0.7};
+			colorFocused[] = {0,0,0,0};
+			text = "Rsc\Pictures\icon_wf_gear_primary.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_PRIMARY] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.0279893 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Secondary : CTI_Icon_Primary {
+		class CTI_Icon_Secondary: CTI_Icon_Primary
+		{
 			idc = 70502;
-			x = "SafeZoneX + (SafeZoneW * 0.071)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_secondary.paa";
+			text = "Rsc\Pictures\icon_wf_gear_secondary.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_SECONDARY] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.0709514 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Handgun : CTI_Icon_Primary {
+		class CTI_Icon_Handgun: CTI_Icon_Primary
+		{
 			idc = 70503;
-			x = "SafeZoneX + (SafeZoneW * 0.114)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_handgun.paa";
+			text = "Rsc\Pictures\icon_wf_gear_handgun.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_HANDGUN] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.114028 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Accessories : CTI_Icon_Primary {
+		class CTI_Icon_Accessories: CTI_Icon_Primary
+		{
 			idc = 70504;
-			x = "SafeZoneX + (SafeZoneW * 0.157)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_accessories.paa";
+			text = "Rsc\Pictures\icon_wf_gear_accessories.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_ACCESSORIES] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.15699 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Ammunitions : CTI_Icon_Primary {
+		class CTI_Icon_Ammunitions: CTI_Icon_Primary
+		{
 			idc = 70505;
-			x = "SafeZoneX + (SafeZoneW * 0.2)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_ammunition.paa";
+			text = "Rsc\Pictures\icon_wf_gear_ammunition.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_AMMO] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.199952 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Misc : CTI_Icon_Primary {
+		class CTI_Icon_Misc: CTI_Icon_Primary
+		{
 			idc = 70506;
-			x = "SafeZoneX + (SafeZoneW * 0.243)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_miscellaneous.paa";
+			text = "Rsc\Pictures\icon_wf_gear_miscellaneous.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_MISC] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.243029 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Equipment : CTI_Icon_Primary {
+		class CTI_Icon_Equipment: CTI_Icon_Primary
+		{
 			idc = 70507;
-			x = "SafeZoneX + (SafeZoneW * 0.286)";
-			
-			text = "Rsc\Pictures\icon_wf_gear_equipment.paa";
+			text = "Rsc\Pictures\icon_wf_gear_equipment.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_EQUIPMENT] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.285991 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		class CTI_Icon_Template : CTI_Icon_Primary {
+		class CTI_Icon_Template: CTI_Icon_Primary
+		{
 			idc = 70508;
-			x = "SafeZoneX + (SafeZoneW * 0.329)";
-			
-			text = "Rsc\Pictures\icon_wf_building_barracks.paa";
+			text = "Rsc\Pictures\icon_wf_building_barracks.paa"; //--- ToDo: Localize;
 			action = "['onShoppingTabClicked', CTI_GEAR_TAB_TEMPLATES] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.328953 * safezoneW + safezoneX;
+			y = 0.0699 * safezoneH + safezoneY;
+			w = 0.0430001 * safezoneW;
+			h = 0.0799999 * safezoneH;
+			colorBackground[] = {0.6,0.8392,0.4706,0.7};
+			colorActive[] = {1,1,1,0.7};
 		};
-		
-		class CTI_Gear_Control_CreateTemplate : RscButton {
+		class CTI_Gear_Control_CreateTemplate: RscButton
+		{
 			idc = 70401;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.70)";
-			y = "SafeZoneY + (SafezoneH * 0.80)";
-			w = "SafeZoneW * 0.29";
-			h = "SafeZoneH * 0.04";
-			
-			text = "Create Template";
-			tooltip = "Create a template of the current gear setup";
+			text = "Create Template"; //--- ToDo: Localize;
 			action = "['onTemplateCreation'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.80008 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.04 * safezoneH;
+			tooltip = "Create a template of the current gear setup"; //--- ToDo: Localize;
 		};
-		class CTI_Gear_Control_DeleteTemplate : CTI_Gear_Control_CreateTemplate {
+		class CTI_Gear_Control_DeleteTemplate: CTI_Gear_Control_CreateTemplate
+		{
 			idc = 70402;
-			
-			y = "SafeZoneY + (SafezoneH * 0.851)";
-			
-			text = "Delete Template";
-			tooltip = "Remove an existing template";
+			text = "Delete Template"; //--- ToDo: Localize;
 			action = "['onTemplateDeletion', lnbCurSelRow 70108] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.8509 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.04 * safezoneH;
+			tooltip = "Remove an existing template"; //--- ToDo: Localize;
 		};
-		class CTI_Gear_Control_Buy : CTI_Gear_Control_CreateTemplate {
+		class CTI_Gear_Control_Buy: CTI_Gear_Control_CreateTemplate
+		{
 			idc = 70403;
-			
-			y = "SafeZoneY + (SafezoneH * 0.903)";
-			
-			text = "Buy";
-			tooltip = "Purchase the current gear setup";
+			text = "Buy"; //--- ToDo: Localize;
 			action = "['onPurchase'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.90304 * safezoneH + safezoneY;
+			w = 0.29 * safezoneW;
+			h = 0.04 * safezoneH;
+			tooltip = "Purchase the current gear setup"; //--- ToDo: Localize;
 		};
-		class CTI_Menu_Control_Info : RscStructuredText {
+		class CTI_Menu_Control_Info: RscStructuredText
+		{
 			idc = 70028;
-			x = "SafeZoneX + (SafeZoneW * 0.41)";
-			y = "SafeZoneY + (SafezoneH * 0.21)";
-			w = "SafeZoneW * 0.28";
-			h = "SafeZoneH * 0.03";
-			
 			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.409951 * safezoneW + safezoneX;
+			y = 0.21004 * safezoneH + safezoneY;
+			w = 0.28 * safezoneW;
+			h = 0.0300001 * safezoneH;
 		};
-		class CTI_Gear_Control_Clear : RscButton_Lesser {
+		class CTI_Gear_Control_Clear: RscButton_Lesser
+		{
 			idc = 70029;
-			x = "SafeZoneX + (SafeZoneW * 0.01)";
-			y = "SafeZoneY + (SafezoneH * 0.96)";
-			w = "SafeZoneW * 0.185";
-			h = "SafeZoneH * 0.04";
-			
-			text = "Clear";
-			tooltip = "Clear the gear of the existing target";
+			text = "Clear"; //--- ToDo: Localize;
 			action = "['onInventoryClear'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.0130958 * safezoneW + safezoneX;
+			y = 0.9543 * safezoneH + safezoneY;
+			w = 0.185 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorBackground[] = {0.768627,1,0.137255,0.7};
+			tooltip = "Clear the gear of the existing target"; //--- ToDo: Localize;
 		};
-		class CTI_Gear_Control_Reload : CTI_Gear_Control_Clear {
+		class CTI_Gear_Control_Reload: CTI_Gear_Control_Clear
+		{
 			idc = 70030;
-			x = "SafeZoneX + (SafeZoneW * 0.205)";
-			
-			text = "Reload";
-			tooltip = "Reload the last purchased gear for this target";
+			text = "Reload"; //--- ToDo: Localize;
 			action = "['onInventoryReload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'";
+
+			
+			x = 0.205337 * safezoneW + safezoneX;
+			y = 0.95386 * safezoneH + safezoneY;
+			w = 0.185 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorBackground[] = {0.768627,1,0.137255,0.7};
+			tooltip = "Reload the last purchased gear for this target"; //--- ToDo: Localize;
 		};
-		class CTI_Control_Exit : RscButton {
+		class CTI_Control_Exit: RscButton
+		{
 			idc = 22555;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.95)";
-			y = "SafeZoneY + (SafezoneH * 0.01)";
-			w = "SafeZoneW * 0.04";
-			h = "SafeZoneH * 0.04";
-			
-			text = "X";
+			text = "X"; //--- ToDo: Localize;
 			action = "closeDialog 0";
+
+			
+			x = 0.950014 * safezoneW + safezoneX;
+			y = 0.01006 * safezoneH + safezoneY;
+			w = 0.04 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_Stats_background: RscText
+		{
+			idc = 1007;
+			x = 0.0113773 * safezoneW + safezoneX;
+			y = 0.23886 * safezoneH + safezoneY;
+			w = 0.378067 * safezoneW;
+			h = 0.198 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
+		};
+		class CTI_Menu_Stats_img: RscStructuredText
+		{
+			idc = 71111;
+			type = CT_STRUCTURED_TEXT;
+			style = ST_MULTI;
+			text = ""; //--- ToDo: Localize;
+			x = 0.0136686 * safezoneW + safezoneX;
+			y = 0.24194 * safezoneH + safezoneY;
+			w = 0.182133 * safezoneW;
+			h = 0.19075 * safezoneH;
+			colorBackground[] = {0,0,0,0};		
+		};
+		class CTI_Menu_Stats_list: RscListNBox
+		{
+			idc = 71112;
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			columns[] = {0.26,0.001};
+			canDrag = 1;
+
+			x = 0.204764 * safezoneW + safezoneX;
+			y = 0.24304 * safezoneH + safezoneY;
+			w = 0.182133 * safezoneW;
+			h = 0.19075 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 			
 		};
 	};
 };
@@ -3610,202 +4162,252 @@ class CTI_RscServiceMenu {
 	onUnload = "uiNamespace setVariable ['cti_dialog_ui_servicemenu', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
 	
 	class controlsBackground {
-		class CTI_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.2)";
-			y = "SafeZoneY + (SafezoneH * 0.205)";
-			w = "SafeZoneW * 0.55";
-			h = "SafeZoneH * 0.48";
-			colorBackground[] = {0, 0, 0, 0.7};
+		class CTI_Background: RscText
+		{
 			moving = 1;
+			x = 0.19915 * safezoneW + safezoneX;
+			y = 0.20366 * safezoneH + safezoneY;
+			w = 0.55 * safezoneW;
+			h = 0.48 * safezoneH;
+			colorBackground[] = {0,0,0,0.7};
 		};
-		class CTI_Background_Header : CTI_Background {
-			x = "SafeZoneX + (SafeZoneW * 0.2)";
-			y = "SafeZoneY + (SafezoneH * 0.205)";
-			w = "SafeZoneW * 0.55";
-			h = "SafeZoneH * 0.05"; //0.06 stock
-			colorBackground[] = {0, 0, 0, 0.4};
+		class CTI_Background_Header: CTI_Background
+		{
+			x = 0.199952 * safezoneW + safezoneX;
+			y = 0.20498 * safezoneH + safezoneY;
+			w = 0.55 * safezoneW;
+			h = 0.0500001 * safezoneH;
+			colorBackground[] = {0,0,0,0.4};
 		};
-		class CTI_Menu_Title : RscText {
-			style = ST_LEFT;
-			x = "SafeZoneX + (SafeZoneW * 0.22)";
-			y = "SafeZoneY + (SafezoneH * 0.21)";
-			w = "SafeZoneW * 0.53";
-			h = "SafeZoneH * 0.037";
-			
-			text = "Service Menu";
-			colorText[] = {0.258823529, 0.713725490, 1, 1};
-			
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		class CTI_Menu_Title: RscText
+		{
+			text = "Service Menu"; //--- ToDo: Localize;
+			x = 0.220001 * safezoneW + safezoneX;
+			y = 0.21004 * safezoneH + safezoneY;
+			w = 0.53 * safezoneW;
+			h = 0.037 * safezoneH;
+			colorText[] = {0.258824,0.713726,1,1};
+			sizeEx = (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
-		class CTI_Menu_ListFrame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.27)";
-			w = "SafeZoneW * 0.53";
-			h = "SafeZoneH * 0.3";
+		class CTI_Menu_ListFrame: RscFrame
+		{
+			x = 0.210263 * safezoneW + safezoneX;
+			y = 0.26746 * safezoneH + safezoneY;
+			w = 0.527002 * safezoneW;
+			h = 0.248624 * safezoneH;
 		};
-		class CTI_Menu_ListHeaders_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.27)";
-			w = "SafeZoneW * 0.53";
-			h = "SafeZoneH * 0.04";
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		class CTI_Menu_ListHeaders_Background: RscText
+		{
+			x = 0.210034 * safezoneW + safezoneX;
+			y = 0.2701 * safezoneH + safezoneY;
+			w = 0.53 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		class CTI_Menu_Repair_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafeZoneH * 0.58)";
-			h = "SafeZoneH * 0.04";
-			w = "SafeZoneW * 0.26";
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
+		class CTI_Menu_Repair_Background: RscText
+		{
+			x = 0.210034 * safezoneW + safezoneX;
+			y = 0.58008 * safezoneH + safezoneY;
+			w = 0.26 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.25};
 		};
-		class CTI_Menu_Rearm_Background : CTI_Menu_Repair_Background {
-			y = "SafeZoneY + (SafeZoneH * 0.63)";
+		class CTI_Menu_Rearm_Background: CTI_Menu_Repair_Background
+		{
+			y = 0.63002 * safezoneH + safezoneY;
 		};
-		class CTI_Menu_Refuel_Background : CTI_Menu_Repair_Background {
-			x = "SafeZoneX + (SafeZoneW * 0.48)";
-			y = "SafeZoneY + (SafeZoneH * 0.58)";
+		class CTI_Menu_Refuel_Background: CTI_Menu_Repair_Background
+		{
+			x = 0.479951 * safezoneW + safezoneX;
+			y = 0.58008 * safezoneH + safezoneY;
 		};
-		class CTI_Menu_Heal_Background : CTI_Menu_Refuel_Background {
-			y = "SafeZoneY + (SafeZoneH * 0.63)";
+		class CTI_Menu_Heal_Background: CTI_Menu_Refuel_Background
+		{
+			y = 0.63002 * safezoneH + safezoneY;
 		};
-		
-		class CTI_Menu_Header_Unit : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.215)";
-			y = "SafeZoneY + (SafezoneH * 0.27)";
-			w = "SafeZoneW * 0.1";
-			h = "SafeZoneH * 0.04";
-			
-			colorText[] = {0.678431373, 0.815686275, 1};
-			text = "Unit";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		class CTI_Menu_Header_Unit: RscText
+		{
+			text = "Unit"; //--- ToDo: Localize;
+			x = 0.214961 * safezoneW + safezoneX;
+			y = 0.2701 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorText[] = {0.678431,0.815686,1};
+			sizeEx = 0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
-		class CTI_Menu_Header_Damage : CTI_Menu_Header_Unit {
-			x = "SafeZoneX + (SafeZoneW * 0.48)";
-			
-			text = "Damage";
+		class CTI_Menu_Header_Damage: CTI_Menu_Header_Unit
+		{
+			text = "Damage"; //--- ToDo: Localize;
+			x = 0.479951 * safezoneW + safezoneX;
+			y = 0.2701 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorText[] = {0.678431,0.815686,1};
+			sizeEx = 0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
-		class CTI_Menu_Header_Fuel : CTI_Menu_Header_Unit {
-			x = "SafeZoneX + (SafeZoneW * 0.558)";
-			
-			text = "Fuel";
+		class CTI_Menu_Header_Fuel: CTI_Menu_Header_Unit
+		{
+			text = "Fuel"; //--- ToDo: Localize;
+			x = 0.55797 * safezoneW + safezoneX;
+			y = 0.2701 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorText[] = {0.678431,0.815686,1};
+			sizeEx = 0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
-		class CTI_Menu_Header_Health : CTI_Menu_Header_Unit {
-			x = "SafeZoneX + (SafeZoneW * 0.638)";
-			
-			text = "Health";
+		class CTI_Menu_Header_Health: CTI_Menu_Header_Unit
+		{
+			text = "Health"; //--- ToDo: Localize;
+			x = 0.638052 * safezoneW + safezoneX;
+			y = 0.2701 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.04 * safezoneH;
+			colorText[] = {0.678431,0.815686,1};
+			sizeEx = 0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
 	};
 	
 	class controls {
-		class CTI_Menu_Control_Repair : RscButton {
+		class CTI_Menu_Control_Repair: RscButton
+		{
 			idc = 230001;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafeZoneH * 0.58)";
-			h = "SafeZoneH * 0.04";
-			w = "SafeZoneW * 0.16";
-			
-			text = "Repair";
 			action = "['onRepairPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
+
+			text = "Repair"; //--- ToDo: Localize;
+			x = 0.210034 * safezoneW + safezoneX;
+			y = 0.58008 * safezoneH + safezoneY;
+			w = 0.16 * safezoneW;
+			h = 0.04 * safezoneH;
 		};
-		class CTI_Menu_Control_Rearm : CTI_Menu_Control_Repair {
+		class CTI_Menu_Control_Rearm: CTI_Menu_Control_Repair
+		{
 			idc = 230002;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.63)";
-			
-			text = "Rearm";
 			action = "['onRearmPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
+
+			text = "Rearm"; //--- ToDo: Localize;
+			x = 0.210034 * safezoneW + safezoneX;
+			y = 0.63002 * safezoneH + safezoneY;
+			w = 0.16 * safezoneW;
+			h = 0.04 * safezoneH;
 		};
-		class CTI_Menu_Control_Refuel : CTI_Menu_Control_Repair {
+		class CTI_Menu_Control_Refuel: CTI_Menu_Control_Repair
+		{
 			idc = 230003;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.48)";
-			y = "SafeZoneY + (SafeZoneH * 0.58)";
-			
-			text = "Refuel";
 			action = "['onRefuelPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
+
+			text = "Refuel"; //--- ToDo: Localize;
+			x = 0.479951 * safezoneW + safezoneX;
+			y = 0.58008 * safezoneH + safezoneY;
+			w = 0.16 * safezoneW;
+			h = 0.04 * safezoneH;
 		};
-		class CTI_Menu_Control_Heal : CTI_Menu_Control_Refuel {
+		class CTI_Menu_Control_Heal: CTI_Menu_Control_Refuel
+		{
 			idc = 230004;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.63)";
-			
-			text = "Heal";
 			action = "['onHealPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
+
+			text = "Heal"; //--- ToDo: Localize;
+			x = 0.479951 * safezoneW + safezoneX;
+			y = 0.63002 * safezoneH + safezoneY;
+			w = 0.16 * safezoneW;
+			h = 0.04 * safezoneH;
 		};
-		
-		class CTI_Menu_RepairCost : RscStructuredText {
+		class CTI_Menu_RepairCost: RscStructuredText
+		{
 			idc = 230011;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.37)";
-			y = "SafeZoneY + (SafeZoneH * 0.585)";
-			h = "SafeZoneH * 0.03";
-			w = "SafeZoneW * 0.1";
-			
-			text = "";
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		};		
-		class CTI_Menu_Rearm : CTI_Menu_RepairCost {
+
+			x = 0.369968 * safezoneW + safezoneX;
+			y = 0.58492 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			sizeEx = 0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+		};
+		class CTI_Menu_Rearm: CTI_Menu_RepairCost
+		{
 			idc = 230012;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.635)";
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.369968 * safezoneW + safezoneX;
+			y = 0.63508 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			sizeEx = 0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
-		class CTI_Menu_Refuel : CTI_Menu_RepairCost {
+		class CTI_Menu_Refuel: CTI_Menu_RepairCost
+		{
 			idc = 230013;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.64)";
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.639999 * safezoneW + safezoneX;
+			y = 0.58492 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			sizeEx = 0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
-		class CTI_Menu_Heal : CTI_Menu_RepairCost {
+		class CTI_Menu_Heal: CTI_Menu_RepairCost
+		{
 			idc = 230014;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.635)";
-			x = "SafeZoneX + (SafeZoneW * 0.64)";
-			
-			sizeEx = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+
+			x = 0.639999 * safezoneW + safezoneX;
+			y = 0.63508 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			sizeEx = 0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
-		
-		class CTI_Menu_Control_EntityList : RscListNBox {
+		class CTI_Menu_Control_EntityList: RscListNBox
+		{
 			idc = 230005;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.31)";
-			w = "SafeZoneW * 0.53";
-			h = "SafeZoneH * 0.26";
-			
 			rowHeight = "1.3 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
 			itemBackground[] = {1,1,1,0.1};
-			columns[] = {0.001, 0.50, 0.65, 0.80};
-			
+			columns[] = {0.001,0.5,0.65,0.8};
 			onLBSelChanged = "['onEntityListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
-			// onLBDblClick = "['onBuildStructure', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'";
+
+			x = 0.212555 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.522315 * safezoneW;
+			h = 0.197375 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+			sizeEx = 0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
-		
-		class CTI_Control_Exit : RscButton {
+		class CTI_Control_Exit: RscButton
+		{
 			idc = 22555;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.7)";
-			y = "SafeZoneY + (SafeZoneH * 0.21)";
-			w = "SafeZoneW * 0.04";
-			h = "SafeZoneH * 0.04";
-			
-			text = "X";
 			action = "closeDialog 0";
+
+			text = "X"; //--- ToDo: Localize;
+			x = 0.700032 * safezoneW + safezoneX;
+			y = 0.21004 * safezoneH + safezoneY;
+			w = 0.04 * safezoneW;
+			h = 0.04 * safezoneH;
 		};
-		class CTI_Control_Back : CTI_Control_Exit {
+		class CTI_Control_Back: CTI_Control_Exit
+		{
 			idc = 22555;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.655)";
-			
-			text = "<<";
 			action = "closeDialog 0; createDialog 'CTI_RscOptionsMenu';";
+
+			text = "<<"; //--- ToDo: Localize;
+			x = 0.655007 * safezoneW + safezoneX;
+			y = 0.21004 * safezoneH + safezoneY;
+			w = 0.04 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_Control_Loadout: RscButton
+		{
+			idc = 230006;
+			action = "['onLoadoutPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ServiceMenu.sqf'";
+
+			text = "Loadout"; //--- ToDo: Localize;
+			x = 0.210378 * safezoneW + safezoneX;
+			y = 0.5286 * safezoneH + safezoneY;
+			w = 0.16 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+		class CTI_Menu_LoadoutCost: CTI_Menu_RepairCost //---not in use yet...may do single fee to open loadout menu
+		{
+			idc = 230007;
+			x = 0.369853 * safezoneW + safezoneX;
+			y = 0.53366 * safezoneH + safezoneY;
+			w = 0.1 * safezoneW;
+			h = 0.0300001 * safezoneH;
+			sizeEx = 0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
 	};
 };
@@ -5902,3 +6504,284 @@ class CTI_RscTabletCommandMenu
 
 };
 };
+class CTI_RscLoadoutMenu
+{
+	idd=790000;
+	movingEnable=true;
+	enableSimulation=true;
+	onLoad = "uiNamespace setVariable ['cti_dialog_ui_loadoutmenu', _this select 0];['onLoad'] execVM 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+	onUnload = "uiNamespace setVariable ['cti_dialog_ui_loadoutmenu', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+	class controls 
+	{
+		class CTI_RscLoadoutMenu_bg: RscTabletScreen
+		{
+			idc = 790001;
+
+			x = -0.00408858 * safezoneW + safezoneX;
+			y = 0.716 * safezoneH + safezoneY;
+			w = 1.00245 * safezoneW;
+			h = 0.297 * safezoneH;
+			colorBackground[] = {0.063,0.063,0.063,0.5};
+		};
+		class CTI_RscLoadoutMenu_UnitTitle: RscStructuredText
+		{
+			idc = 790002;
+			x = 0.73486 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.257773 * safezoneW;
+			h = 0.088 * safezoneH;
+			type = CT_STRUCTURED_TEXT;
+			style = ST_MULTI;
+			lineSpacing = 1;
+			text = " "; 
+			canDrag = 1;
+			size = "1.4 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			sizeEx = "1.4 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};
+
+
+		};		
+		class CTI_RscLoadoutMenu_UnitInfo: RscListNBox
+		{
+			idc = 790003;
+			x = 0.73486 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
+			w = 0.257773 * safezoneW;
+			h = 0.374 * safezoneH;
+
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			columns[] = {0.001,0.35};
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "1.0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};
+		};
+		class CTI_RscLoadoutMenu_PylonTitle: RscStructuredText
+		{
+			idc = 790004;//NOT IN USE ATM
+			text = ""; //--- ToDo: Localize;
+			x = 0.190673 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};	
+			
+		class CTI_RscLoadoutMenu_PylonTitle2: RscStructuredText
+		{
+			idc = 790104;
+			text = "Pylons"; //--- ToDo: Localize;
+			x = 0.0302806 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};		
+		class CTI_RscLoadoutMenu_PylonList: RscListNBox
+		{
+			idc = 790005;
+			x = 0.0302806 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.297871 * safezoneW;
+			h = 0.231 * safezoneH;
+
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			//columns[] = {0.001,0.35};
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};
+			onLBSelChanged = "['onPylonListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+		};
+		class CTI_RscLoadoutMenu_AmmoListTitle: RscStructuredText
+		{
+			idc = 790006;
+
+			text = "Compatible Mags"; //--- ToDo: Localize;
+			x = 0.351065 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};		
+		class CTI_RscLoadoutMenu_AmmoList: RscListNBox
+		{
+			idc = 790007;
+			x = 0.351065 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.231 * safezoneH;
+
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			//columns[] = {0.001,0.35};
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};
+			onLBSelChanged = "['onMagListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+		};
+		class CTI_RscLoadoutMenu_AmmoStatTitle: RscStructuredText
+		{
+			idc = 790008;
+			text = "Mag Stats"; //--- ToDo: Localize;
+			x = 0.511457 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};		
+		class CTI_RscLoadoutMenu_AmmoStatList: RscListNBox
+		{
+			idc = 790009;
+			x = 0.511457 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.132 * safezoneH;
+
+			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+			itemBackground[] = {1,1,1,0.1};
+			columns[] = {0.001,0.35};
+			colorBackground[] = {0,0,0,0};
+			sizeEx = "0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"; 		
+			class Attributes {
+				font = "PuristaMedium";
+				color = "#E8F0FF";
+				align = "left";
+				shadow = false;
+			};
+
+		};
+		class CTI_RscLoadoutMenu_Qty: RscEdit
+		{
+			idc = 790010;
+
+			//text = "Qty"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CTI_RscLoadoutMenu_Flares: RscCombo
+		{
+			idc = 790011;
+			text = "Flares"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.775 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+
+			onLBSelChanged = "['onFlaresLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+		};
+		class CTI_RscLoadoutMenu_Camo: RscCombo
+		{
+			idc = 790111;
+			text = "Camo"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+
+			onLBSelChanged = "['onCamoLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+		};		
+		class CTI_RscLoadoutMenu_RearmPrice: RscStructuredText
+		{
+			idc = 790012;
+			style = 16;
+			lineSpacing = 1;
+
+			text = "ReArmPrice"; //--- ToDo: Localize;
+			x = 0.511457 * safezoneW + safezoneX;
+			y = 0.896 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.033 * safezoneH;
+			sizeEx = 0.8 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15);
+		};		
+		class CTI_RscLoadoutMenu_Price: RscStructuredText
+		{
+			idc = 790013;
+			style = 16;
+			lineSpacing = 1;
+
+			text = "Price"; //--- ToDo: Localize;
+			x = 0.511457 * safezoneW + safezoneX;
+			y = 0.94 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.033 * safezoneH;
+			sizeEx = 0.8 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15);
+		};
+		class CTI_RscLoadoutMenu_Clear: RscButton
+		{
+			idc = 790014;
+			action = "['onClearPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+
+			text = "Clear Mounts"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.841 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CTI_RscLoadoutMenu_Rearm: RscButton
+		{
+			idc = 790015;
+			action = "['onRearmPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+
+			text = "Rearm All"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.874 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CTI_RscLoadoutMenu_Purchase: RscButton
+		{
+			idc = 790016;
+			action = "['onPurchasePressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+
+			text = "Purchase Magazines"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.907 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class CTI_RscLoadoutMenu_Exit: RscButton
+		{
+			idc = 790017;
+			action = "['onExitPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+
+			text = "Back"; //--- ToDo: Localize;
+			x = 0.671849 * safezoneW + safezoneX;
+			y = 0.94 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CTI_RscLoadoutMenu_Music: RscButton
+		{
+			idc = 790018;
+			action = "['onMusicPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
+
+			text = "Toggle Tunes (off)"; //--- ToDo: Localize;
+			x = 0.826512 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.137479 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+	
+	};
+};
+
