@@ -52,7 +52,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_helipilot_F';
 _p pushBack '';
@@ -63,7 +63,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_helicrew_F';
 _p pushBack '';
@@ -74,7 +74,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Story_Colonel_F';
 _p pushBack '';
@@ -85,7 +85,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_soldier_UAV_F';
 _p pushBack '';
@@ -96,7 +96,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Survivor_F';
 _p pushBack '';
@@ -107,7 +107,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_unarmed_F';
 _p pushBack '';
@@ -118,7 +118,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AAR_F';
 _p pushBack '';
@@ -129,7 +129,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AAT_F';
 _p pushBack '';
@@ -140,7 +140,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AAA_F';
 _p pushBack '';
@@ -151,7 +151,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_support_MG_F';
 _p pushBack '';
@@ -162,7 +162,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_support_GMG_F';
 _p pushBack '';
@@ -173,7 +173,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_support_Mort_F';
 _p pushBack '';
@@ -184,7 +184,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_support_AMG_F';
 _p pushBack '';
@@ -195,7 +195,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_support_AMort_F';
 _p pushBack '';
@@ -206,7 +206,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //--- GUER FIA (Woodland)
@@ -219,7 +219,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'I_G_Soldier_A_F';
 _p pushBack '';
@@ -230,7 +230,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'I_G_Soldier_unarmed_F';
 _p pushBack '';
@@ -241,7 +241,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 _c pushBack 'I_G_Survivor_F';
 _p pushBack '';
@@ -252,7 +252,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Woodland";
 
 
 //--- GUER Special Forces
@@ -265,7 +265,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
 _c pushBack 'I_Spotter_F';
 _p pushBack '';
@@ -276,7 +276,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 //--- GUER Syndikat Paramilitary
 
@@ -292,7 +292,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_soldier_exp_F';
 _p pushBack '';
@@ -303,7 +303,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_soldier_M_F';
 _p pushBack '';
@@ -314,7 +314,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_officer_F';
 _p pushBack '';
@@ -325,7 +325,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_soldier_repair_F';
 _p pushBack '';
@@ -336,7 +336,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 //-------------- AAF
 //--- Infantry
@@ -349,7 +349,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AA_F';
 _p pushBack '';
@@ -360,7 +360,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AR_F';
 _p pushBack '';
@@ -371,7 +371,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_AT_F';
 _p pushBack '';
@@ -382,7 +382,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_crew_F';
 _p pushBack '';
@@ -393,7 +393,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_LAT_F';
 _p pushBack '';
@@ -404,7 +404,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_engineer_F';
 _p pushBack '';
@@ -415,7 +415,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_GL_F';
 _p pushBack '';
@@ -426,7 +426,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_medic_F';
 _p pushBack '';
@@ -437,7 +437,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_pilot_F';
 _p pushBack '';
@@ -448,7 +448,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Sniper_F';
 _p pushBack '';
@@ -459,7 +459,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_TL_F';
 _p pushBack '';
@@ -470,7 +470,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Soldier_SL_F';
 _p pushBack '';
@@ -481,7 +481,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_diver_TL_F';
 _p pushBack '';
@@ -492,7 +492,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_diver_F';
 _p pushBack '';
@@ -503,7 +503,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //-------------- FIA
@@ -517,7 +517,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_AR_F';
 _p pushBack '';
@@ -528,7 +528,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_LAT_F';
 _p pushBack '';
@@ -539,7 +539,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_engineer_F';
 _p pushBack '';
@@ -550,7 +550,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_exp_F';
 _p pushBack '';
@@ -561,7 +561,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_GL_F';
 _p pushBack '';
@@ -572,7 +572,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_medic_F';
 _p pushBack '';
@@ -583,7 +583,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_officer_F';
 _p pushBack '';
@@ -594,7 +594,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_M_F';
 _p pushBack '';
@@ -605,7 +605,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_TL_F';
 _p pushBack '';
@@ -616,7 +616,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Soldier_SL_F';
 _p pushBack '';
@@ -627,7 +627,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //--- Light
@@ -641,7 +641,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Quadbike_01_F';
 _p pushBack '';
@@ -652,7 +652,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Quadbike_01_F';
 _p pushBack '';
@@ -663,7 +663,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Offroad_01_armed_F';
 _p pushBack '';
@@ -674,7 +674,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_MRAP_03_F';
 _p pushBack '';
@@ -685,7 +685,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_MRAP_03_hmg_F';
 _p pushBack '';
@@ -696,7 +696,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_MRAP_03_gmg_F';
 _p pushBack '';
@@ -707,7 +707,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_covered_F';
 _p pushBack '';
@@ -718,7 +718,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_transport_F';
 _p pushBack '';
@@ -729,7 +729,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Van_01_transport_F';
 _p pushBack '';
@@ -740,7 +740,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //---Autonomous
@@ -753,7 +753,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_UGV_01_rcws_F';
 _p pushBack '';
@@ -764,7 +764,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //--- Heavy
@@ -777,7 +777,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_APC_tracked_03_cannon_F';
 _p pushBack '';
@@ -788,7 +788,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_MBT_03_cannon_F';
 _p pushBack '';
@@ -799,7 +799,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 //--- Air
 _c pushBack 'I_Heli_Transport_02_F';
@@ -811,7 +811,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Plane_Fighter_03_CAS_F';
 _p pushBack '';
@@ -822,7 +822,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Plane_Fighter_03_AA_F';
 _p pushBack '';
@@ -833,7 +833,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Heli_light_03_F';
 _p pushBack '';
@@ -844,7 +844,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Heli_light_03_unarmed_F';
 _p pushBack '';
@@ -855,7 +855,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //---Autonomous
@@ -868,7 +868,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_UAV_02_F';
 _p pushBack '';
@@ -879,7 +879,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_UAV_02_CAS_F';
 _p pushBack '';
@@ -890,7 +890,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //--- Repair
@@ -903,7 +903,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_ammo_F';
 _p pushBack '';
@@ -914,7 +914,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_box_F';
 _p pushBack '';
@@ -925,7 +925,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_medical_F';
 _p pushBack '';
@@ -936,7 +936,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Truck_02_fuel_F';
 _p pushBack '';
@@ -947,7 +947,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Van_01_fuel_F';
 _p pushBack '';
@@ -958,7 +958,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 //--- Naval
 _c pushBack 'I_Boat_Armed_01_minigun_F';
@@ -970,7 +970,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Boat_Transport_01_F';
 _p pushBack '';
@@ -981,7 +981,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Boat_Transport_01_F';
 _p pushBack '';
@@ -992,7 +992,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_G_Boat_Transport_02_F';
 _p pushBack '';
@@ -1003,7 +1003,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_SDV_01_F';
 _p pushBack '';
@@ -1014,7 +1014,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Boat_Armed_01_minigun_F';
 _p pushBack '';
@@ -1025,7 +1025,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_NAVAL;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

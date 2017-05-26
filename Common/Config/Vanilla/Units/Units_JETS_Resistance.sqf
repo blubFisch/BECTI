@@ -62,7 +62,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Plane_Fighter_03_dynamicLoadout_F';
 _p pushBack '';
@@ -73,7 +73,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Digital";
 
 _c pushBack 'I_Plane_Fighter_04_F';
 _p pushBack '';
@@ -84,7 +84,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Digital";
 
 
 //--- Naval Vehicles
