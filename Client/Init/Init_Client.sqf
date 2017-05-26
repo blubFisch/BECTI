@@ -1,3 +1,5 @@
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 20%", "BLACK FADED", 50000];
 
 CTI_P_SideJoined = side player;
 CTI_P_SideID = CTI_P_SideJoined call CTI_CO_FNC_GetSideID;
@@ -94,11 +96,12 @@ CTI_P_fob_currently_deploying = false;
 //--- Artillery Computer is only enabled on demand
 if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngineArtillery false};
 
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 30%", "BLACK FADED", 50000];
+
 if (isMultiplayer) then {
 	//--- Can I join?
-	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.	
-	
-	player setDammage 0;
+	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.
 	
 	//--- Wait for the server to be initialized before requesting a Join ticket
 	waitUntil {sleep .5; !(isNil 'CTI_InitServer')};
@@ -112,13 +115,12 @@ if (isMultiplayer) then {
 		CTI_P_CanJoin
 	};
 	
-	12452 cutText ["Receiving mission intel...", "BLACK IN", 5];
-	
 	if (CTI_P_Jailed) then {
 		hintSilent "The ride never ends!";
 		0 spawn CTI_CL_FNC_OnJailed;
 	};
 };
+
 
 //--- Initialize the client PV
 call compile preprocessFile "Client\Init\Init_PublicVariables.sqf";
@@ -139,6 +141,9 @@ call compile preprocessFile "Client\Functions\UI\Functions_UI_ServiceMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_LoadoutMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_UnitsCamera.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_UpgradeMenu.sqf";
+
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 40%", "BLACK FADED", 50000];
 
 //--- VANILLA MODE
 if (CTI_FACTION_MODE == 0) then { 
@@ -231,6 +236,9 @@ if (CTI_FACTION_MODE == 0) then {
 	};
 };
 
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 50%", "BLACK FADED", 50000];
+
 //--- CUP MODE
 if (CTI_FACTION_MODE == 1) then { 
 	//--Load Vanilla
@@ -322,6 +330,9 @@ if (CTI_FACTION_MODE == 1) then {
 	};
 };
 
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 60%", "BLACK FADED", 50000];
+
 //--- RHS MODE
 if (CTI_FACTION_MODE == 2) then { 
 	//--Load Vanilla
@@ -412,6 +423,10 @@ if (CTI_FACTION_MODE == 2) then {
 		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_East.sqf"};
 	};	
 };
+
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 70%", "BLACK FADED", 50000];
+
 //--- OFPS MODE
 if (CTI_FACTION_MODE == 3) then { 
 	//--Load Vanilla
@@ -503,7 +518,11 @@ if (CTI_FACTION_MODE == 3) then {
 	};	
 };
 
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 80%", "BLACK FADED", 50000];
+
 CTI_InitClient = true;
+
 
 //--- Wait for a proper overall init (disabled slot?)
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
@@ -520,6 +539,9 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 	execFSM "Client\FSM\update_markers_team.fsm";
 	execFSM "Client\FSM\update_netunits_team.fsm";
 };
+
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 90%", "BLACK FADED", 50000];
 
 //--- Town init thread
 0 spawn {
@@ -582,10 +604,12 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 		};
 	};
 
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 100%", "BLACK IN", 5];
+
 	waitUntil {time > 0};
 			MissionIntro = [] spawn {				
 				playMusic "EventTrack02a_F_EPB";
-				cutText ["Welcome", "BLACK IN", 3];
 				//Gather game settings
 				_mapname = worldName;
 				_startyear = date select 0;
