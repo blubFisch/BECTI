@@ -1250,6 +1250,11 @@ _g pushBack "";
 
 //--- BACKPACKS
 
+_i pushBack "rhsusf_falconii_mc";
+_u pushBack 0;
+_p pushBack 250;
+_g pushBack "MTP";
+
 _i pushBack "rhs_medic_bag";
 _u pushBack 0;
 _p pushBack 250;
@@ -1258,27 +1263,32 @@ _g pushBack "";
 _i pushBack "rhsusf_falconii";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhsusf_assault_eagleaiii_coy";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Coyote";
+
+_i pushBack "rhsusf_falconii_coy";
+_u pushBack 0;
+_p pushBack 200;
+_g pushBack "Coyote";
 
 _i pushBack "rhsusf_assault_eagleaiii_ocp";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhsusf_assault_eagleaiii_ucp";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "UCP";
 
 _i pushBack "B_rhsusf_B_BACKPACK";
 _u pushBack 4;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "RHS_M2_Gun_Bag";
 _u pushBack 1;
