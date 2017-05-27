@@ -105,7 +105,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_ak74m_2mag_camo";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_weap_ak74m_fullplum";
 _u pushBack 1;
@@ -130,12 +130,12 @@ _g pushBack "";
 _i pushBack "rhs_weap_ak74m_desert";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Desert";
 
 _i pushBack "rhs_weap_ak74m_desert_npz";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Desert";
 
 _i pushBack "rhs_weap_ak74m_fullplum_npz";
 _u pushBack 1;
@@ -171,6 +171,11 @@ _i pushBack "rhs_weap_ak74m_zenitco01_b33";
 _u pushBack 1;
 _p pushBack 500;
 _g pushBack "";
+
+_i pushBack "rhs_weap_ak74_3";
+_u pushBack 1;
+_p pushBack 500;
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_ak74m_zenitco01_b33_afg";
 _u pushBack 1;
@@ -1028,87 +1033,87 @@ _g pushBack "";
 _i pushBack "rhs_uniform_df15";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Blue";
 
 _i pushBack "rhs_uniform_df15_tan";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "rhs_uniform_flora";
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_flora_patchless";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_flora_patchless_alt";
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_uniform_gorka_r_g";
 _u pushBack 3;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_uniform_gorka_r_y";
 _u pushBack 3;
 _p pushBack 900;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "rhs_uniform_m88_patchless";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "rhs_uniform_mflora_patchless";
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_uniform_mvd_izlom";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_rva_flora";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_vdv_emr_des";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_vdv_flora";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_vdv_mflora";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_uniform_vmf_flora";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_vmf_flora_subdued";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_emr_des_patchless";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_emr_patchless";
 _u pushBack 1;
@@ -1118,12 +1123,12 @@ _g pushBack "";
 _i pushBack "rhs_uniform_msv_emr";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_uniform_vdv_emr";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Green";
 
 //--- VESTS
 _i pushBack "rhs_6sh46";
@@ -1134,27 +1139,27 @@ _g pushBack "";
 _i pushBack "rhs_6sh92";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6sh92_digi";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6sh92_digi_radio";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6sh92_digi_vog";
 _u pushBack 0;
 _p pushBack 225;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6sh92_digi_vog_headset";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6sh92_headset";
 _u pushBack 0;
@@ -1179,27 +1184,27 @@ _g pushBack "";
 _i pushBack "rhs_6sh92_vsr";
 _u pushBack 0;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6sh92_vsr_headset";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6sh92_vsr_radio";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6sh92_vsr_vog";
 _u pushBack 0;
 _p pushBack 225;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6sh92_vsr_vog_headset";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_vest_commander";
 _u pushBack 0;
@@ -1214,7 +1219,7 @@ _g pushBack "";
 _i pushBack "rhs_vydra_3m";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23";
 _u pushBack 1;
@@ -1465,7 +1470,7 @@ _i pushBack "rhs_6b23_sniper";
 _u pushBack 1;
 _p pushBack 200;
 _g pushBack "";
-
+                                                      
 _i pushBack "rhs_6b23_vydra_3m";
 _u pushBack 1;
 _p pushBack 200;
@@ -1677,6 +1682,27 @@ _g pushBack "";
 
 //--- HeadGear	
 
+_i pushBack "rhs_tsh4";
+_u pushBack 0;
+_p pushBack 25;
+_g pushBack "Black";
+
+_i pushBack "rhs_tsh4_ess";
+_u pushBack 0;
+_p pushBack 25;
+_g pushBack "Black";
+
+_i pushBack "rhs_tsh4_bala";
+_u pushBack 0;
+_p pushBack 25;
+_g pushBack "Black";
+
+
+_i pushBack "rhs_tsh4_ess_bala";
+_u pushBack 0;
+_p pushBack 25;
+_g pushBack "Black";
+
 _i pushBack "rhs_balaclava";
 _u pushBack 0;
 _p pushBack 25;
@@ -1690,12 +1716,12 @@ _g pushBack "";
 _i pushBack "rhs_beanie";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_beanie_green";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_beret_milp";
 _u pushBack 0;
@@ -1730,22 +1756,22 @@ _g pushBack "";
 _i pushBack "rhs_Booniehat_digi";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_Booniehat_flora";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_fieldcap";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_fieldcap_digi";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_fieldcap_digi2";
 _u pushBack 0;
@@ -1755,7 +1781,7 @@ _g pushBack "";
 _i pushBack "rhs_fieldcap_digi_des";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_fieldcap_helm";
 _u pushBack 0;
@@ -1765,12 +1791,12 @@ _g pushBack "";
 _i pushBack "rhs_fieldcap_helm_digi";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_fieldcap_helm_ml";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_fieldcap_khk";
 _u pushBack 0;
@@ -1780,7 +1806,7 @@ _g pushBack "";
 _i pushBack "rhs_fieldcap_ml";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_fieldcap_vsr";
 _u pushBack 0;
@@ -1790,72 +1816,72 @@ _g pushBack "";
 _i pushBack "rhs_6b26";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_6b26_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_6b26_bala_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b26_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_6b26_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_6b26_ess_bala_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b26_ess_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b26_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b27m";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b27m_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b27m_digi";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b27m_digi_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b27m_digi_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b27m_digi_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b27m_ess";
 _u pushBack 1;
@@ -1870,102 +1896,102 @@ _g pushBack "";
 _i pushBack "rhs_6b27m_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b27m_green_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b27m_green_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b27m_green_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b27m_ml";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b27m_ml_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b27m_ml_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b27m_ML_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b28";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b28_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b28_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b28_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b28_flora";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b28_flora_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b28_flora_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b28_flora_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b28_green";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "rhs_6b28_green_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "rhs_6b28_green_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Khaki";
 
 _i pushBack "rhs_6b28_green_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b47";
 _u pushBack 0;
