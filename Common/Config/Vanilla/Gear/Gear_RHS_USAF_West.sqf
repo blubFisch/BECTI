@@ -61,12 +61,12 @@ _g pushBack "";
 _i pushBack "rhsusf_weap_MP7A2_winter";
 _u pushBack 0;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Winter";
 
 _i pushBack "rhsusf_weap_MP7A2_desert";
 _u pushBack 0;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "coyote";
 
 //Shotgun
 _i pushBack "rhs_weap_M590_5RD";
@@ -108,7 +108,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_m4a1_blockII_KAC";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_mk18";
 _u pushBack 1;
@@ -148,22 +148,22 @@ _g pushBack "";
 _i pushBack "rhs_weap_m4a1_blockII_d";
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m4a1_blockII_KAC_d";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m4a1_blockII_KAC_wd";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_m4a1_blockII_wd";
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_m4a1_carryhandle_mstock";
 _u pushBack 1;
@@ -173,12 +173,12 @@ _g pushBack "";
 _i pushBack "rhs_weap_m4a1_d";
 _u pushBack 1;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m4a1_d_mstock";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "coyote";
 
 _i pushBack "rhs_weap_m4a1_mstock";
 _u pushBack 1;
@@ -193,7 +193,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_mk18_d";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_mk18_bk";
 _u pushBack 1;
@@ -203,7 +203,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_mk18_wd";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_mk18_KAC_wd";
 _u pushBack 1;
@@ -213,7 +213,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_mk18_KAC_d";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_mk18_KAC_bk";
 _u pushBack 1;
@@ -259,7 +259,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_m4a1_m203s_d";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m4a1_m203s_sa";
 _u pushBack 2;
@@ -291,6 +291,16 @@ _u pushBack 2;
 _p pushBack 500;
 _g pushBack "";
 
+_i pushBack "rhs_weap_hk416d10_LMT_d";
+_u pushBack 2;
+_p pushBack 500;
+_g pushBack "Coyote";
+
+_i pushBack "rhs_weap_hk416d10_LMT_wd";
+_u pushBack 2;
+_p pushBack 500;
+_g pushBack "Green";
+
 _i pushBack "rhs_weap_hk416d145_m320";
 _u pushBack 2;
 _p pushBack 600;
@@ -309,12 +319,12 @@ _g pushBack "";
 _i pushBack "rhs_weap_m4a1_blockII_M203_d";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m4a1_blockII_M203_wd";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tropic";
 
 
 //--- GRENADE LAUNCHERS
@@ -406,33 +416,33 @@ _g pushBack "";
 _i pushBack "rhs_weap_sr25_d";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_sr25_ec_d";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Coyote";
 
-_i pushBack "rhs_weap_sr25_ec_wd";
+_i pushBack "rhs_weap_sr25_wd";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Tropic";
 
 
 _i pushBack "rhs_weap_XM2010";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_weap_XM2010_d";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_XM2010_wd";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_XM2010_sa";
 _u pushBack 3;
@@ -447,27 +457,27 @@ _g pushBack "";
 _i pushBack "rhs_weap_m24sws_blk";
 _u pushBack 3;
 _p pushBack 2100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_weap_m24sws_ghillie";
 _u pushBack 3;
 _p pushBack 2100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_m40a5";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_weap_m40a5_d";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_m40a5_wd";
 _u pushBack 3;
 _p pushBack 800;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_m110";
 _u pushBack 3;
@@ -483,12 +493,12 @@ _g pushBack "";
 _i pushBack "rhs_weap_M107_d";
 _u pushBack 4;
 _p pushBack 3000;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_weap_M107_w";
 _u pushBack 4;
 _p pushBack 3000;
-_g pushBack "";
+_g pushBack "Khaki";
 
 
 //------------------------------ LAUNCHERS	------------------------------
@@ -517,7 +527,7 @@ _g pushBack "";
 _i pushBack "rhs_weap_m32";
 _u pushBack 3;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 
 _i pushBack "rhs_weap_smaw";
@@ -843,12 +853,12 @@ _g pushBack "";
 _i pushBack "rhsusf_acc_ACOG_wd";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhsusf_acc_ACOG_wd_pip";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhsusf_acc_M2A1";
 _u pushBack 1;
@@ -1013,42 +1023,42 @@ _g pushBack "";
 _i pushBack "rhs_uniform_cu_ocp";
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_cu_ucp";
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "UCP";
 
 _i pushBack "rhs_uniform_g3_blk";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_uniform_g3_m81";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_g3_mc";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "UCP";
 
 _i pushBack "rhs_uniform_g3_rgr";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_uniform_g3_tan";
 _u pushBack 1;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_FROG01_wd";
 _u pushBack 2;
 _p pushBack 700;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_FROG01_d";
 _u pushBack 2;
@@ -1059,42 +1069,42 @@ _g pushBack "";
 _i pushBack "rhs_uniform_cu_ocp_101st";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_cu_ocp_10th";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_cu_ocp_82nd";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_FROG01_wd";
 _u pushBack 1;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_uniform_FROG01_d";
 _u pushBack 1;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _i pushBack "rhs_uniform_cu_ucp_101st";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "UCP";
 
 _i pushBack "rhs_uniform_cu_ucp_10th";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "UCP";
 
 _i pushBack "rhs_uniform_cu_ucp_82nd";
 _u pushBack 1;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "UCP";
 
 
 //--- VESTS
@@ -1351,7 +1361,7 @@ _g pushBack "";
 _i pushBack "rhs_booniehat2_marpatwd";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_Booniehat_ocp";
 _u pushBack 0;
@@ -1582,7 +1592,7 @@ _g pushBack "";
 _i pushBack "rhsusf_lwh_helmet_marpatwd_blk_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhsusf_lwh_helmet_marpatwd_ess";
 _u pushBack 1;
@@ -1597,7 +1607,7 @@ _g pushBack "";
 _i pushBack "rhsusf_lwh_helmet_marpatwd_headset_blk";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhsusf_mich_bare";
 _u pushBack 0;

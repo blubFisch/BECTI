@@ -583,12 +583,12 @@ _g pushBack "";
 _i pushBack "rhs_weap_svdp_wd";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_svdp_wd_npz";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_weap_svds";
 _u pushBack 3;
@@ -1680,7 +1680,12 @@ _g pushBack "";
 
 //--- DISMANTLED WEAPONS
 
-//--- HeadGear	
+//--- HeadGear
+
+_i pushBack "rhs_scarf";
+_u pushBack 0;
+_p pushBack 25;
+_g pushBack "Desert";
 
 _i pushBack "rhs_tsh4";
 _u pushBack 0;
@@ -1706,12 +1711,12 @@ _g pushBack "Black";
 _i pushBack "rhs_balaclava";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_balaclava1_olive";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_beanie";
 _u pushBack 0;
@@ -1731,7 +1736,7 @@ _g pushBack "";
 _i pushBack "rhs_beret_mp1";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_beret_mp2";
 _u pushBack 0;
@@ -2106,32 +2111,32 @@ _g pushBack "";
 _i pushBack "rhs_altyn_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_altyn_novisor";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_altyn_novisor_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_altyn_novisor_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_altyn_novisor_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_altyn_visordown";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_ssh68";
 _u pushBack 0;
