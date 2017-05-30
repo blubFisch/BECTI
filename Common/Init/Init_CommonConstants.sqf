@@ -707,10 +707,10 @@ CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
 CTI_BOUNTY_COEF_PVP = 1; //--- Bounty coefficient multiplicator based on the killed unit score
 
-CTI_COIN_AREA_DEFAULT = [30, 10];
-CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
-CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- To incrase build area when mobile
-CTI_COIN_AREA_REPAIR = [45, 10];
+CTI_COIN_AREA_DEFAULT = [30, 10];  //--- Default Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25]; //--- Deployed HQ Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- Mobilized HQ Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_REPAIR = [45, 10]; //--- Repair Truck Construction Interface area parameters [Radius, Height]
 CTI_COIN_AREA_DEFENSE = [30, 6];
 
 CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 40; //--- Keep values of 10
@@ -724,17 +724,17 @@ CTI_PLAYER_DEFAULT_ALIAS = "Soldier";
 
 CTI_RESPAWN_AI_RANGE = 600;
 CTI_RESPAWN_BASE_MODE = 1; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
+CTI_RESPAWN_BASE_SAFE_RANGE = 20; //--- A base structure is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
 CTI_RESPAWN_CAMPS_MODE = 1; //--- Determine where the client should respawn at camps (0: Near the camp, 1: Use listed camp buildingPos)
 CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2000; //--- Determine the range needed to respawn at a town's camps (from the town center)
 CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to respawn at a town's camps (from a camp)
-CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- A camp is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
 CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
 CTI_RESPAWN_MOBILE_SAFE_RANGE = 40; //--- Disable respawn if enemies are within this range
-CTI_RESPAWN_MOBILE_RANGE = 500;
+CTI_RESPAWN_MOBILE_RANGE = 500; //--- A mobile respawn such as an ambulance may be used if the client died within it's range
 
 CTI_SATCAM_ZOOM_MIN = 50;
 CTI_SATCAM_ZOOM_MAX = 800;
