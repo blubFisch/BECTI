@@ -724,7 +724,7 @@ CTI_PLAYER_DEFAULT_ALIAS = "Soldier";
 
 CTI_RESPAWN_AI_RANGE = 600;
 CTI_RESPAWN_BASE_MODE = 1; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
-CTI_RESPAWN_BASE_SAFE_RANGE = 0; //--- A base structure is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
+CTI_RESPAWN_BASE_SAFE_RANGE = 20; //--- A base structure is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
