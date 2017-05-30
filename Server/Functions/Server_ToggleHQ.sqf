@@ -48,6 +48,10 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_structure setPos _position;
 		_structure setDir _direction;
 		_structure setVectorUp [0,0,0];
+		
+		//--- Transfer the previous damages to the new HQ if enabled
+		if (missionNamespace getVariable "CTI_BASE_HQ_DAMAGES_TRANSFER" > 0) then {_structure setDammage (getDammage _current_hq)};
+		
 		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
 		_alternative_damages = false;
@@ -89,6 +93,10 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 			_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 			(_hq) remoteExec ["CTI_PVF_CLT_AddHQDamagerHandler", _side];
 		};
+		
+		//--- Transfer the previous damages to the new HQ if enabled
+		if (missionNamespace getVariable "CTI_BASE_HQ_DAMAGES_TRANSFER" > 0) then {_hq setDammage (getDammage _current_hq)};
+		
 		_hq addItemCargoGlobal ["ToolKit",1];
 		_logic setVariable ["cti_hq", _hq, true];
 		deleteVehicle _current_hq;
