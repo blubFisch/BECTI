@@ -50,7 +50,7 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_structure setVectorUp [0,0,0];
 		
 		//--- Transfer the previous damages to the new HQ if enabled
-		if (missionNamespace getVariable "CTI_BASE_HQ_DAMAGES_TRANSFER" > 0) then {_structure setDammage (getDammage _current_hq)};
+		if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_structure setDammage (getDammage _current_hq)};
 		
 		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
@@ -95,7 +95,7 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		};
 		
 		//--- Transfer the previous damages to the new HQ if enabled
-		if (missionNamespace getVariable "CTI_BASE_HQ_DAMAGES_TRANSFER" > 0) then {_hq setDammage (getDammage _current_hq)};
+		if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_hq setDammage (getDammage _current_hq)};
 		
 		_hq addItemCargoGlobal ["ToolKit",1];
 		_logic setVariable ["cti_hq", _hq, true];
