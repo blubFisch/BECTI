@@ -1003,37 +1003,37 @@ _g pushBack "Black";
 _i pushBack "rhs_chdkz_uniform_1";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_chdkz_uniform_2";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_chdkz_uniform_3";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Green";
 
 _i pushBack "rhs_chdkz_uniform_4";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_chdkz_uniform_5";
 _u pushBack 0;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_insurgent_uniform_1"; //3 entries missing below by mistake
 _u pushBack 0;
 _p pushBack 250;
-_g pushBack "";
+_g pushBack "MTP";
 
 _i pushBack "rhs_uniform_df15";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "Blue";
+_g pushBack "Special";
 
 _i pushBack "rhs_uniform_df15_tan";
 _u pushBack 2;
@@ -1118,7 +1118,7 @@ _g pushBack "Coyote";
 _i pushBack "rhs_uniform_emr_patchless";
 _u pushBack 1;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_uniform_msv_emr";
 _u pushBack 1;
@@ -1131,10 +1131,10 @@ _p pushBack 400;
 _g pushBack "Green";
 
 //--- VESTS
-_i pushBack "rhs_6sh46";
+/*_i pushBack "rhs_6sh46"; //--- Does not work. doesnt show up
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "77";
+_g pushBack "";*/
 
 _i pushBack "rhs_6sh92";
 _u pushBack 0;
@@ -1164,22 +1164,22 @@ _g pushBack "Digi";
 _i pushBack "rhs_6sh92_headset";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "98";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6sh92_radio";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "37";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6sh92_vog";
 _u pushBack 0;
 _p pushBack 225;
-_g pushBack "69";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6sh92_vog_headset";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "45";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6sh92_vsr";
 _u pushBack 0;
@@ -1209,12 +1209,12 @@ _g pushBack "Mountain Flora";
 _i pushBack "rhs_vest_commander";
 _u pushBack 0;
 _p pushBack 150;
-_g pushBack "4543";
+_g pushBack "Special";
 
 _i pushBack "rhs_vest_pistol_holster";
 _u pushBack 0;
 _p pushBack 100;
-_g pushBack "876";
+_g pushBack "Special";
 
 _i pushBack "rhs_vydra_3m";
 _u pushBack 0;
@@ -1224,347 +1224,347 @@ _g pushBack "Tropic";
 _i pushBack "rhs_6b23";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "76543";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh116";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "098";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh116_flora";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "3432";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh116_od";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "22";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b23_6sh116_vog";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "33";
+_g pushBack "MTP";
 
 _i pushBack "rhs_6b23_6sh116_vog_flora";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "44";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh116_vog_od";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "55";
+_g pushBack "Green";
 
 _i pushBack "rhs_6b23_6sh92";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "66";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh92_headset";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "77";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh92_headset_mapcase";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh92_radio";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh92_vog";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_6sh92_vog_headset";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_crew";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_crewofficer";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_digi";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_headset";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_headset_mapcase";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_headset_spetsnaz";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_radio";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_Spetsnaz";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_vog";
 _u pushBack 2;
 _p pushBack 400;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_vog_headset";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz";
 _u pushBack 2;
 _p pushBack 450;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_crew";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_crewofficer";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_engineer";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_medic";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_rifleman";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_sniper";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_digi_vydra_3m";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b23_engineer";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_medic";
 _u pushBack 1;
 _p pushBack 350;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_ML";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92_headset";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92_headset_mapcase";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92_radio";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92_vog";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_6sh92_vog_headset";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_crew";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_crewofficer";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_engineer";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_medic";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_rifleman";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_sniper";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_ML_vydra_3m";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Mountain Flora";
 
 _i pushBack "rhs_6b23_rifleman";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b23_sniper";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
                                                       
 _i pushBack "rhs_6b23_vydra_3m";
 _u pushBack 1;
 _p pushBack 200;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b43";
 _u pushBack 3;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13";
 _u pushBack 3;
 _p pushBack 550;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_6sh92";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_6sh92_headset_mapcase";
 _u pushBack 4;
 _p pushBack 700;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_6sh92_radio";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_6sh92_vog";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_crewofficer";
 _u pushBack 2;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_EMR";
 _u pushBack 3;
 _p pushBack 550;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_EMR_6sh92";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_EMR_6sh92_headset_mapcase";
 _u pushBack 4;
 _p pushBack 700;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_EMR_6sh92_radio";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_EMR_6sh92_vog";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_Flora";
 _u pushBack 3;
 _p pushBack 550;
-_g pushBack "";
+_g pushBack "Digi";
 
 _i pushBack "rhs_6b13_Flora_6sh92";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_Flora_6sh92_headset_mapcase";
 _u pushBack 4;
 _p pushBack 700;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_Flora_6sh92_radio";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_Flora_6sh92_vog";
 _u pushBack 4;
 _p pushBack 650;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b13_Flora_crewofficer";
 _u pushBack 2;
 _p pushBack 300;
-_g pushBack "";
+_g pushBack "Tropic";
 
 //--- BACKPACKS
 _i pushBack "rhs_rpg_empty";
@@ -1595,87 +1595,87 @@ _g pushBack "Khaki";
 _i pushBack "RHS_SPG9_Gun_Bag";
 _u pushBack 3;
 _p pushBack 1500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_SPG9_Tripod_Bag";
 _u pushBack 3;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Podnos_Bipod_Bag";
 _u pushBack 4;
 _p pushBack 2500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Podnos_Gun_Bag";
 _u pushBack 4;
 _p pushBack 5000;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Metis_Gun_Bag";
 _u pushBack 4;
 _p pushBack 2000;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Metis_Tripod_Bag";
 _u pushBack 4;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Kornet_Gun_Bag";
 _u pushBack 4;
 _p pushBack 2500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Kornet_Tripod_Bag";
 _u pushBack 4;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_AGS30_Tripod_Bag";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_AGS30_Gun_Bag";
 _u pushBack 2;
 _p pushBack 1000;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_DShkM_Gun_Bag";
 _u pushBack 2;
 _p pushBack 1000;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_DShkM_TripodHigh_Bag";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_DShkM_TripodLow_Bag";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Kord_Tripod_Bag";
 _u pushBack 2;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_Kord_Gun_Bag";
 _u pushBack 3;
 _p pushBack 120;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_NSV_Tripod_Bag";
 _u pushBack 3;
 _p pushBack 1500;
-_g pushBack "";
+_g pushBack "Tan";
 
 _i pushBack "RHS_NSV_Gun_Bag";
 _u pushBack 3;
 _p pushBack 500;
-_g pushBack "";
+_g pushBack "Tan";
 
 
 //--- DISMANTLED WEAPONS
@@ -1766,17 +1766,17 @@ _g pushBack "Black";
 _i pushBack "rhs_beret_vdv1";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "Blue";
+_g pushBack "Special";
 
 _i pushBack "rhs_beret_vdv2";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "Blue";
+_g pushBack "Special";
 
 _i pushBack "rhs_beret_vdv3";
 _u pushBack 0;
 _p pushBack 25;
-_g pushBack "Blue";
+_g pushBack "Special";
 
 _i pushBack "rhs_Booniehat_digi";
 _u pushBack 0;
@@ -1911,12 +1911,12 @@ _g pushBack "Digi";
 _i pushBack "rhs_6b27m_ess";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b27m_ess_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b27m_green";
 _u pushBack 1;
@@ -2056,7 +2056,7 @@ _g pushBack "MTP";
 _i pushBack "rhs_6b7_1m_bala1_flora";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _i pushBack "rhs_6b7_1m_bala1_olive";
 _u pushBack 1;
@@ -2166,17 +2166,17 @@ _g pushBack "Tropic";
 _i pushBack "rhs_zsh12";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_zsh12_bala";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "black";
 
 _i pushBack "rhs_zsh12_black";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Black";
 
 _i pushBack "rhs_zsh7a";
 _u pushBack 1;
@@ -2186,7 +2186,7 @@ _g pushBack "Winter";
 _i pushBack "rhs_zsh7a_alt";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Winter";
 
 _i pushBack "rhs_zsh7a_mike";
 _u pushBack 0;
@@ -2206,7 +2206,7 @@ _g pushBack "Tropic";
 _i pushBack "rhs_zsh7a_mike_green_alt";
 _u pushBack 1;
 _p pushBack 100;
-_g pushBack "";
+_g pushBack "Green";
 
 //--- HATS	
 
