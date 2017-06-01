@@ -24,7 +24,7 @@ _s pushBack ""; //-- Special / Script blank will do nothing special
 _s pushBack "service-medic"; //---  Special / Script service-medic will mark vehicles as medical respawn truck
 
 _d pushBack 0; //--- Distance unit will spawn from factory in meters
-_g pushBack "Woodland"; //--- Filter by Camo
+_g pushBack "Tropic"; //--- Filter by Camo
 
 */
 
@@ -64,7 +64,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_Soldier_LAT';
 _p pushBack '';
@@ -163,7 +163,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_MG';
 _p pushBack '';
@@ -317,7 +317,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_Pilot_Light';
 _p pushBack '';
@@ -407,7 +407,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_JTAC';
 _p pushBack '';
@@ -418,7 +418,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_MG';
 _p pushBack '';
@@ -429,7 +429,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_M';
 _p pushBack '';
@@ -440,7 +440,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_Medic';
 _p pushBack '';
@@ -451,7 +451,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps';
 _p pushBack '';
@@ -462,7 +462,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_Assault';
 _p pushBack '';
@@ -473,7 +473,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_M14';
 _p pushBack '';
@@ -484,7 +484,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_Night';
 _p pushBack '';
@@ -495,7 +495,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_SD';
 _p pushBack '';
@@ -506,7 +506,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_TL';
 _p pushBack '';
@@ -517,7 +517,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_US_SpecOps_UAV';
 _p pushBack '';
@@ -528,7 +528,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 //--- USMC Woodland Man
 
@@ -541,7 +541,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Crew';
 _p pushBack '';
@@ -552,7 +552,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier';
 _p pushBack '';
@@ -563,7 +563,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_GL';
 _p pushBack '';
@@ -574,7 +574,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Medic';
 _p pushBack '';
@@ -585,7 +585,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Engineer';
 _p pushBack '';
@@ -596,7 +596,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_Marksman';
 _p pushBack '';
@@ -607,7 +607,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Sniper_M107';
 _p pushBack '';
@@ -618,7 +618,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_AA';
 _p pushBack '';
@@ -629,7 +629,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_AT';
 _p pushBack '';
@@ -640,7 +640,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_HAT';
 _p pushBack '';
@@ -651,7 +651,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_AR';
 _p pushBack '';
@@ -662,7 +662,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_TL';
 _p pushBack '';
@@ -673,7 +673,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Officer';
 _p pushBack '';
@@ -684,7 +684,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_SpecOps_SD';
 _p pushBack '';
@@ -695,7 +695,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_LAT';
 _p pushBack '';
@@ -706,7 +706,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_SpecOps';
 _p pushBack '';
@@ -717,7 +717,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Sniper_M40A3';
 _p pushBack '';
@@ -728,7 +728,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_Light';
 _p pushBack '';
@@ -739,7 +739,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_SL';
 _p pushBack '';
@@ -750,7 +750,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_USMC_Soldier_UAV';
 _p pushBack '';
@@ -761,7 +761,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 //--- FROG Man Arid
 
@@ -985,7 +985,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_SpecOps_FROG_DES';
 _p pushBack '';
@@ -996,7 +996,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_HAT_FROG_DES';
 _p pushBack '';
@@ -1007,7 +1007,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_AT_FROG_DES';
 _p pushBack '';
@@ -1018,7 +1018,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Medic_FROG_DES';
 _p pushBack '';
@@ -1029,7 +1029,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Engineer_FROG_DES';
 _p pushBack '';
@@ -1040,7 +1040,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_TL_FROG_DES';
 _p pushBack '';
@@ -1051,7 +1051,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_AR_FROG_DES';
 _p pushBack '';
@@ -1062,7 +1062,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Crewman_FROG_DES';
 _p pushBack '';
@@ -1073,7 +1073,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_Marksman_FROG_DES';
 _p pushBack '';
@@ -1084,7 +1084,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_GL_FROG_DES';
 _p pushBack '';
@@ -1095,7 +1095,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_Light_FROG_DES';
 _p pushBack '';
@@ -1106,7 +1106,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_MG_FROG_DES';
 _p pushBack '';
@@ -1117,7 +1117,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_LAT_FROG_DES';
 _p pushBack '';
@@ -1128,7 +1128,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Officer_FROG_DES';
 _p pushBack '';
@@ -1139,7 +1139,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_RTO_FROG_DES';
 _p pushBack '';
@@ -1150,7 +1150,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_FROG_DES';
 _p pushBack '';
@@ -1161,7 +1161,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_SL_FROG_DES';
 _p pushBack '';
@@ -1172,7 +1172,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_USMC_Soldier_UAV_FROG_DES';
 _p pushBack '';
@@ -1183,7 +1183,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 //--- Force Rcon Deser
 
@@ -1196,7 +1196,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_Assault_DES';
 _p pushBack '';
@@ -1207,7 +1207,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Commander_DES';
 _p pushBack '';
@@ -1218,7 +1218,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Story_Cooper_DES';
 _p pushBack '';
@@ -1229,7 +1229,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Medic_DES';
 _p pushBack '';
@@ -1240,7 +1240,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_Exp_DES';
 _p pushBack '';
@@ -1251,7 +1251,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_Operator_DES';
 _p pushBack '';
@@ -1262,7 +1262,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_Light_DES';
 _p pushBack '';
@@ -1273,7 +1273,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_GL_DES';
 _p pushBack '';
@@ -1284,7 +1284,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_AR_DES';
 _p pushBack '';
@@ -1295,7 +1295,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_Marksman_DES';
 _p pushBack '';
@@ -1306,7 +1306,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Story_Miles_DES';
 _p pushBack '';
@@ -1317,7 +1317,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Story_OHara_DES';
 _p pushBack '';
@@ -1328,7 +1328,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Story_Rodriguez_DES';
 _p pushBack '';
@@ -1339,7 +1339,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Saboteur_DES';
 _p pushBack '';
@@ -1350,7 +1350,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Story_Sykes_DES';
 _p pushBack '';
@@ -1361,7 +1361,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_TL_DES';
 _p pushBack '';
@@ -1372,7 +1372,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FR_Soldier_UAV_DES';
 _p pushBack '';
@@ -1383,7 +1383,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 //--- Man Force Recon Woodland
 
@@ -1396,7 +1396,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_Assault';
 _p pushBack '';
@@ -1407,7 +1407,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Commander';
 _p pushBack '';
@@ -1418,7 +1418,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Story_Cooper';
 _p pushBack '';
@@ -1429,7 +1429,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Medic';
 _p pushBack '';
@@ -1440,7 +1440,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_Exp';
 _p pushBack '';
@@ -1451,7 +1451,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_Operator';
 _p pushBack '';
@@ -1462,7 +1462,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_Light';
 _p pushBack '';
@@ -1473,7 +1473,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_GL';
 _p pushBack '';
@@ -1484,7 +1484,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_AR';
 _p pushBack '';
@@ -1495,7 +1495,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_Marksman';
 _p pushBack '';
@@ -1506,7 +1506,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Story_Miles';
 _p pushBack '';
@@ -1517,7 +1517,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Story_OHara';
 _p pushBack '';
@@ -1528,7 +1528,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Story_Rodriguez';
 _p pushBack '';
@@ -1539,7 +1539,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Saboteur';
 _p pushBack '';
@@ -1550,7 +1550,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Story_Sykes';
 _p pushBack '';
@@ -1561,7 +1561,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_TL';
 _p pushBack '';
@@ -1572,7 +1572,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FR_Soldier_UAV';
 _p pushBack '';
@@ -1583,7 +1583,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 //--- Light Vehicles
 
@@ -1596,7 +1596,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_Transport_USA';
 _p pushBack '';
@@ -1607,7 +1607,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_Unarmed_USA';
 _p pushBack '';
@@ -1618,7 +1618,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_Ambulance_USA';
 _p pushBack '';
@@ -1629,7 +1629,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_Unarmed_USMC';
 _p pushBack '';
@@ -1640,7 +1640,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_C_SUV_CIV';
 _p pushBack '';
@@ -1651,7 +1651,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Civilian";
 
 _c pushBack 'CUP_B_Dingo_GL_CZ_Wdl';
 _p pushBack '';
@@ -1662,7 +1662,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_Dingo_CZ_Wdl';
 _p pushBack '';
@@ -1673,7 +1673,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_Ambulance_USMC';
 _p pushBack '';
@@ -1684,7 +1684,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_Avenger_USMC';
 _p pushBack '';
@@ -1695,7 +1695,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_Crows_M2_USA';
 _p pushBack '';
@@ -1706,7 +1706,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_Crows_MK19_USA';
 _p pushBack '';
@@ -1717,7 +1717,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_RG31_Mk19_OD_USMC';
 _p pushBack '';
@@ -1728,7 +1728,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
 _p pushBack '';
@@ -1739,7 +1739,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';
 _p pushBack '';
@@ -1750,7 +1750,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_M2_GPK_USA';
 _p pushBack '';
@@ -1761,7 +1761,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_M2_USA';
 _p pushBack '';
@@ -1772,7 +1772,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_MK19_USA';
 _p pushBack '';
@@ -1783,7 +1783,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_SOV_M2_USA';
 _p pushBack '';
@@ -1794,7 +1794,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_M2_USMC';
 _p pushBack '';
@@ -1805,7 +1805,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_M1114_USMC';
 _p pushBack '';
@@ -1816,7 +1816,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_MK19_USMC';
 _p pushBack '';
@@ -1827,7 +1827,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_SOV_USA';
 _p pushBack '';
@@ -1838,7 +1838,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_TOW_USA';
 _p pushBack '';
@@ -1849,7 +1849,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_HMMWV_TOW_USMC';
 _p pushBack '';
@@ -1860,7 +1860,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_HMMWV_Terminal_USA';
 _p pushBack '';
@@ -1871,7 +1871,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Jackal2_GMG_GB_D';
 _p pushBack '';
@@ -1882,7 +1882,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Jackal2_GMG_GB_W';
 _p pushBack '';
@@ -1893,7 +1893,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_Jackal2_L2A1_GB_D';
 _p pushBack '';
@@ -1904,7 +1904,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Jackal2_L2A1_GB_W';
 _p pushBack '';
@@ -1915,7 +1915,29 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
+
+_c pushBack 'CUP_B_LR_Transport_GB_W';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 400;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'CUP_B_LR_Transport_GB_D';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 400;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_RG31_M2';
 _p pushBack '';
@@ -1926,7 +1948,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_RG31_M2_GC';
 _p pushBack '';
@@ -1937,7 +1959,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_RG31_M2_OD';
 _p pushBack '';
@@ -1948,7 +1970,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_RG31_Mk19';
 _p pushBack '';
@@ -1959,7 +1981,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_RG31_Mk19_OD';
 _p pushBack '';
@@ -1970,7 +1992,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_RG31E_M2';
 _p pushBack '';
@@ -1981,7 +2003,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_TowingTractor_USMC';
 _p pushBack '';
@@ -1992,7 +2014,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Civilian";
 
 _c pushBack 'CUP_B_BAF_Coyote_GMG_D';
 _p pushBack '';
@@ -2003,7 +2025,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_BAF_Coyote_L2A1_D';
 _p pushBack '';
@@ -2014,7 +2036,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Mastiff_GMG_GB_D';
 _p pushBack '';
@@ -2025,7 +2047,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Mastiff_HMG_GB_D';
 _p pushBack '';
@@ -2036,7 +2058,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Wolfhound_GMG_GB_W';
 _p pushBack '';
@@ -2047,7 +2069,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_Wolfhound_HMG_GB_W';
 _p pushBack '';
@@ -2058,7 +2080,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_Ridgback_GMG_GB_D';
 _p pushBack '';
@@ -2069,7 +2091,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Ridgback_HMG_GB_D';
 _p pushBack '';
@@ -2080,7 +2102,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'C_Quadbike_01_F';
 _p pushBack '';
@@ -2091,7 +2113,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Civilian";
 
 _c pushBack 'CUP_B_MTVR_USA';
 _p pushBack '';
@@ -2102,7 +2124,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_MTVR_USMC';
 _p pushBack '';
@@ -2113,7 +2135,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_MTVR_Refuel_USA';
 _p pushBack '';
@@ -2124,7 +2146,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_MTVR_Refuel_USMC';
 _p pushBack '';
@@ -2135,7 +2157,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LR_Special_CZ_W';
 _p pushBack '';
@@ -2146,7 +2168,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Desert';
 _p pushBack '';
@@ -2157,7 +2179,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Desert_Slat';
 _p pushBack '';
@@ -2168,7 +2190,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 _p pushBack '';
@@ -2179,7 +2201,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
 _p pushBack '';
@@ -2190,7 +2212,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert';
 _p pushBack '';
@@ -2201,7 +2223,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Desert_Slat';
 _p pushBack '';
@@ -2212,7 +2234,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
 _p pushBack '';
@@ -2223,7 +2245,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
 _p pushBack '';
@@ -2234,7 +2256,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1133_MEV_Desert';
 _p pushBack '';
@@ -2245,7 +2267,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1133_MEV_Desert_Slat';
 _p pushBack '';
@@ -2256,7 +2278,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1133_MEV_Woodland_Slat';
 _p pushBack '';
@@ -2267,7 +2289,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1133_MEV_Woodland';
 _p pushBack '';
@@ -2278,7 +2300,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LAV25M240_USMC';
 _p pushBack '';
@@ -2289,7 +2311,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LAV25M240_desert_USMC';
 _p pushBack '';
@@ -2300,7 +2322,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_LAV25_HQ_USMC';
 _p pushBack '';
@@ -2311,7 +2333,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LAV25_HQ_desert_USMC';
 _p pushBack '';
@@ -2322,7 +2344,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_RG31_M2_USMC';
 _p pushBack '';
@@ -2333,7 +2355,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_RG31_M2_GC_USMC';
 _p pushBack '';
@@ -2344,7 +2366,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_RG31_Mk19_USMC';
 _p pushBack '';
@@ -2355,7 +2377,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_RG31E_M2_USMC';
 _p pushBack '';
@@ -2366,7 +2388,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 //--- Heavy Vehicles
 
@@ -2379,7 +2401,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Desert_Slat';
 _p pushBack '';
@@ -2390,7 +2412,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Woodland';
 _p pushBack '';
@@ -2401,7 +2423,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1129_MC_MK19_Woodland_Slat';
 _p pushBack '';
@@ -2412,7 +2434,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Desert';
 _p pushBack '';
@@ -2423,7 +2445,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
 _p pushBack '';
@@ -2434,7 +2456,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Woodland';
 _p pushBack '';
@@ -2445,7 +2467,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
 _p pushBack '';
@@ -2456,7 +2478,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1128_MGS_Desert';
 _p pushBack '';
@@ -2467,7 +2489,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1128_MGS_Desert_Slat';
 _p pushBack '';
@@ -2478,7 +2500,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1128_MGS_Woodland';
 _p pushBack '';
@@ -2489,7 +2511,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
 _p pushBack '';
@@ -2500,7 +2522,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Desert_Slat';
 _p pushBack '';
@@ -2511,7 +2533,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Desert';
 _p pushBack '';
@@ -2522,7 +2544,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1130_CV_M2_Woodland';
 _p pushBack '';
@@ -2533,7 +2555,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_AAV_USMC';
 _p pushBack '';
@@ -2544,7 +2566,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_AAV_Unarmed_USMC';
 _p pushBack '';
@@ -2555,7 +2577,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LAV25_USMC';
 _p pushBack '';
@@ -2566,7 +2588,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_LAV25_desert_USMC';
 _p pushBack '';
@@ -2577,7 +2599,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M113_USA';
 _p pushBack '';
@@ -2588,7 +2610,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M113_desert_USA';
 _p pushBack '';
@@ -2599,7 +2621,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M113_Med_USA';
 _p pushBack '';
@@ -2610,7 +2632,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "service-medic";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1A1_NATO_T';
 _p pushBack '';
@@ -2621,7 +2643,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1A1_DES_US_Army';
 _p pushBack '';
@@ -2632,7 +2654,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1A1_Woodland_US_Army';
 _p pushBack '';
@@ -2643,7 +2665,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1A1_DES_USMC';
 _p pushBack '';
@@ -2654,7 +2676,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M1A1_Woodland_USMC';
 _p pushBack '';
@@ -2665,7 +2687,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';
 _p pushBack '';
@@ -2676,7 +2698,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M1A2_TUSK_MG_DES_US_Army';
 _p pushBack '';
@@ -2687,18 +2709,18 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FV510_GB_W';
 _p pushBack '';
 _n pushBack 'FV510 Warrior';
 _o pushBack 7900;
 _t pushBack 20;
-_u pushBack 0;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M2A3Bradley_USA_W';
 _p pushBack '';
@@ -2709,7 +2731,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M7Bradley_USA_D';
 _p pushBack '';
@@ -2720,7 +2742,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M2A3Bradley_USA_D';
 _p pushBack '';
@@ -2731,7 +2753,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M2Bradley_USA_D';
 _p pushBack '';
@@ -2742,7 +2764,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M2Bradley_USA_W';
 _p pushBack '';
@@ -2753,7 +2775,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FV432_Bulldog_GB_D_RWS';
 _p pushBack '';
@@ -2764,7 +2786,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FV432_Bulldog_GB_D';
 _p pushBack '';
@@ -2775,7 +2797,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
 _p pushBack '';
@@ -2786,7 +2808,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FV432_Bulldog_GB_W';
 _p pushBack '';
@@ -2797,7 +2819,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_MCV80_GB_W_SLAT';
 _p pushBack '';
@@ -2808,7 +2830,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_MCV80_GB_D_SLAT';
 _p pushBack '';
@@ -2819,7 +2841,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FV510_GB_D_SLAT';
 _p pushBack '';
@@ -2830,7 +2852,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_FV510_GB_W_SLAT';
 _p pushBack '';
@@ -2841,7 +2863,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_FV510_GB_D';
 _p pushBack '';
@@ -2852,7 +2874,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Challenger2_NATO';
 _p pushBack '';
@@ -2863,7 +2885,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Challenger2_Desert_BAF';
 _p pushBack '';
@@ -2874,7 +2896,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Challenger2_Snow_BAF';
 _p pushBack '';
@@ -2885,7 +2907,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Snow";
 
 _c pushBack 'CUP_B_Challenger2_2CS_BAF';
 _p pushBack '';
@@ -2896,7 +2918,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Snow";
 
 _c pushBack 'CUP_B_Challenger2_2CW_BAF';
 _p pushBack '';
@@ -2907,7 +2929,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_Challenger2_2CD_BAF';
 _p pushBack '';
@@ -2918,7 +2940,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_Challenger2_Woodland_BAF';
 _p pushBack '';
@@ -2929,7 +2951,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Tropic";
 
 //--- Artillery
 
@@ -2942,7 +2964,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M270_HE_USA';
 _p pushBack '';
@@ -2953,7 +2975,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M270_HE_USMC';
 _p pushBack '';
@@ -2964,7 +2986,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M270_DPICM_USMC';
 _p pushBack '';
@@ -2975,7 +2997,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 //--- Anti Air
 
@@ -2988,7 +3010,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_M6LineBacker_USA_D';
 _p pushBack '';
@@ -2999,7 +3021,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_M163_USA';
 _p pushBack '';
@@ -3010,7 +3032,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 //--- Repair Vehicles
 
@@ -3023,7 +3045,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 _c pushBack 'CUP_B_MTVR_Repair_USMC';
 _p pushBack '';
@@ -3034,7 +3056,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_REPAIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 //--- Ammo Vehicles
 
@@ -3069,7 +3091,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AMMO;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_MTVR_Ammo_USA';
 _p pushBack '';
@@ -3080,7 +3102,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Desert";
+_g pushBack "Coyote";
 
 //--- Air Vehicles
 
@@ -3335,7 +3357,7 @@ _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_F35B_AA_USMC';
 _p pushBack '';
@@ -3423,7 +3445,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_AC47_Spooky_USA';
 _p pushBack '';
@@ -3434,7 +3456,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "Woodland";
+_g pushBack "Tropic";
 
 _c pushBack 'CUP_B_C130J_USMC';
 _p pushBack '';

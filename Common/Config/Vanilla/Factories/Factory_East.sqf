@@ -537,6 +537,12 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_BRDM2_CSAT';
 		_u pushBack 'CUP_O_BRDM2_ATGM_CSAT';
 		_u pushBack 'CUP_O_BRDM2_HQ_CSAT';
+
+		//Civ CUP
+		_u pushBack 'CUP_C_Skoda_Red_CIV';
+		_u pushBack 'CUP_C_SUV_TK';
+		_u pushBack 'CUP_C_UAZ_Unarmed_TK_CIV';
+
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -901,14 +907,16 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Ka50_SLA';
 		_u pushBack 'CUP_C_DC3_CIV';	
 		_u pushBack 'CUP_O_MI6T_TKA';				
-		_u pushBack 'CUP_O_MI6T_TKA';			
+		_u pushBack 'CUP_O_MI6T_TKA';		
 		//Russia CUP (Woodland)*********************
 		_u pushBack 'CUP_O_Mi8_medevac_RU';
 		_u pushBack 'CUP_O_Ka52_RU';
+		_u pushBack 'CUP_O_Ka52_Blk_RU';
 		_u pushBack 'CUP_O_Mi24_P_RU';
 		_u pushBack 'CUP_O_Mi24_V_RU';
 		_u pushBack 'CUP_O_Mi8_VIV_RU';
 		_u pushBack 'CUP_O_Mi8_RU';
+		_u pushBack 'CUP_O_Ka50_AA_SLA';
 		//Russia CUP (CSAT)*********************
 		_u pushBack 'CUP_O_Ka60_GL_Hex_CSAT';
 		_u pushBack 'CUP_O_SU34_LGB_CSAT';	
@@ -926,12 +934,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Mi24_Mk4_Empty_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_Mk4_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_Mk4_S8_GSh_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_D_SLA';
 		_u pushBack 'CUP_O_Mi24_D_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_P_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_V_CSAT_T';
 		_u pushBack 'CUP_O_MI6A_CSAT_T';
 		_u pushBack 'CUP_O_MI6T_CSAT_T';
-
+		_u pushBack 'CUP_O_MI6T_CHDKZ';
+		// CUP Civilian
+		_u pushBack 'CUP_C_AN2_AEROSCHROT_TK_CIV';
 		//Russia CUP (Winter)*********************		
 	
 };
