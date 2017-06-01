@@ -2716,7 +2716,7 @@ _p pushBack '';
 _n pushBack 'FV510 Warrior';
 _o pushBack 7900;
 _t pushBack 20;
-_u pushBack 0;
+_u pushBack 2;
 _f pushBack CTI_FACTORY_HEAVY;
 _s pushBack "";
 _d pushBack 0;

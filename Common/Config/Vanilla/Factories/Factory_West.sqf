@@ -476,33 +476,25 @@ if (CTI_TANKS_ADDON >= 2) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		//Russia CUP (Arid)*********************
+		//Russia CUP (Woodland)*********************
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Desert)*********************
 		_u pushBack 'CUP_C_SUV_CIV';			
-		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
-		_u pushBack 'CUP_B_HMMWV_M2_USMC';		
-		_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';	
-		_u pushBack 'CUP_B_HMMWV_MK19_USMC';		
+		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';					
 		_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';		
 		_u pushBack 'CUP_B_Jackal2_GMG_GB_W';
 		_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';		
 		_u pushBack 'CUP_B_HMMWV_Crows_MK19_USA';	
 		_u pushBack 'CUP_B_MTVR_USA';				
-		_u pushBack 'CUP_B_LR_Special_CZ_W';		
-		_u pushBack 'CUP_B_HMMWV_TOW_USMC';		
+		_u pushBack 'CUP_B_LR_Special_CZ_W';			
 		_u pushBack 'CUP_B_HMMWV_Avenger_USMC';						
 		_u pushBack 'CUP_B_M1030';
 		_u pushBack 'CUP_B_TowingTractor_USMC';
 		_u pushBack 'CUP_B_Dingo_GL_CZ_Wdl';
 		_u pushBack 'CUP_B_Dingo_CZ_Wdl';
-		_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';
-		_u pushBack 'CUP_B_HMMWV_Avenger_USMC';
-		_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';
-		_u pushBack 'CUP_B_HMMWV_Crows_MK19_USA';
 		_u pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
 		_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';
 		_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
@@ -553,6 +545,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_AAV_Unarmed_USMC';
 		_u pushBack 'CUP_B_LAV25_USMC';
 		_u pushBack 'CUP_B_LAV25_desert_USMC';
+		_u pushBack 'CUP_B_RG31E_M2_USMC';
 		//USMC CUP (woodland)*********************	
 		_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
 		_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
@@ -756,7 +749,6 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_Challenger2_NATO';		
 		_u pushBack 'CUP_B_M1128_MGS_Desert';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Desert';
-		_u pushBack 'CUP_B_M1130_CV_M2_Desert';
 		_u pushBack 'CUP_B_M1135_ATGMV_Desert';
 		_u pushBack 'CUP_B_M1128_MGS_Desert'; 
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_D';
