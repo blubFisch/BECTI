@@ -27,11 +27,6 @@ _u pushBack 0;
 _p pushBack 300;
 _g pushBack "Coyote";
 
-_i pushBack "hgun_P07_khk_F";
-_u pushBack 0;
-_p pushBack 300;
-_g pushBack "Khaki";
-
 _i pushBack "hgun_Pistol_heavy_01_F"; //4-Five .45
 _u pushBack 1;
 _p pushBack 450;
