@@ -1534,17 +1534,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Coyote";
 
-_c pushBack 'CUP_O_Ural_RU';
-_p pushBack '';
-_n pushBack 'Ural Transport';
-_o pushBack 800;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Tropic";
-
 _c pushBack 'CUP_O_Ural_ZU23_RU';
 _p pushBack '';
 _n pushBack 'Ural ZU23';
@@ -1748,30 +1737,6 @@ _d pushBack 0;
 _g pushBack "Arid";
 
 //--- Heavy Vehicles
-
-//--- Tropic
-
-_c pushBack 'CUP_O_T55_CSAT';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 5000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Tropic";
-
-_c pushBack 'CUP_O_T72_CSAT';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 7000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Tropic";
 
 //--- Arid
 

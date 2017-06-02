@@ -629,17 +629,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Coyote";
 
-_c pushBack 'rhsusf_m998_d_2dr_fulltop';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Coyote";
-
 _c pushBack 'rhsusf_m998_d_4dr_fulltop';
 _p pushBack '';
 _n pushBack '';
@@ -893,17 +882,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Tropic";
 
-_c pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Coyote";
-
 _c pushBack 'rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy';
 _p pushBack '';
 _n pushBack '';
@@ -916,17 +894,6 @@ _d pushBack 10;
 _g pushBack "Tropic";
 
 _c pushBack 'rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Tropic";
-
-_c pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;
@@ -1102,17 +1069,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Coyote";
 
-_c pushBack 'rhsusf_rg33_usmc_d';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Coyote";
-
 _c pushBack 'rhsusf_M1237_M2_usarmy_d';
 _p pushBack '';
 _n pushBack '1- M1237 Desert (M2)';
@@ -1190,17 +1146,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Coyote";
 
-_c pushBack 'rhsusf_M1232_MK19_usarmy_d';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Coyote";
-
 _c pushBack 'rhsusf_M1083A1P2_B_M2_d_open_fmtv_usarmy';
 _p pushBack '';
 _n pushBack '';
@@ -1229,28 +1174,6 @@ _n pushBack 'M1078A1P2-B (M2) Desert';
 _o pushBack 600;
 _t pushBack 30;
 _u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Coyote";
-
-_c pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
-_p pushBack '';
-_n pushBack 'M1078A1P2-B (M2) Woodland';
-_o pushBack 600;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Tropic";
-
-_c pushBack 'rhsusf_M1078A1P2_B_M2_wd_fmtv_usarmy';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 2;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "";
 _d pushBack 10;

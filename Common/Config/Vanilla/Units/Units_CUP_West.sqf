@@ -3557,17 +3557,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'B_Heli_Attack_01_F';
-_p pushBack '';
-_n pushBack 'AH-99 Blackfoot';
-_o pushBack 55000;
-_t pushBack 20;
-_u pushBack 5;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 //--- Naval Vehicles
 
 _c pushBack 'CUP_B_RHIB_USMC';

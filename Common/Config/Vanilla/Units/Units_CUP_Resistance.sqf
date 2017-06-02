@@ -66,17 +66,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'I_Soldier_AA_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_I_PMC_Soldier_MG';
 _p pushBack '';
 _n pushBack '';
@@ -205,17 +194,6 @@ _c pushBack 'CUP_I_GUE_Soldier_AA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 120;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'I_Soldier_AA_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -380,28 +358,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'I_Soldier_AA_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'CUP_I_RACS_MMG';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 120;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_I_RACS_Soldier_MAT';
 _p pushBack '';
 _n pushBack '';
@@ -541,17 +497,6 @@ _c pushBack 'CUP_I_TK_GUE_Soldier_AA';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 120;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'I_Soldier_AA_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -1229,16 +1174,5 @@ _d pushBack 0;
 _g pushBack "";
 
 //--- Naval
-
-_c pushBack 'CUP_B_RHIB2Turret_USMC';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 800;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

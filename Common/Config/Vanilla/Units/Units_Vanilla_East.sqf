@@ -944,32 +944,10 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Civilian";
 
-_c pushBack 'O_G_Offroad_01_F';
-_p pushBack '';
-_n pushBack '0- Offroad (can load statics)';
-_o pushBack 500;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Civilian";
-
 _c pushBack 'C_SUV_01_F';
 _p pushBack '';
 _n pushBack 'Civil SUV';
 _o pushBack 550;
-_t pushBack 10;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Civilian";
-
-_c pushBack 'O_G_Offroad_01_armed_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 400;
 _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;

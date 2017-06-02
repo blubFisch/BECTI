@@ -142,17 +142,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'rhsgref_nat_machinegunner';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 400;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'rhsgref_cdf_air_pilot';
 _p pushBack '';
 _n pushBack '';
