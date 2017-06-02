@@ -2122,17 +2122,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'rhs_an2';
-_p pushBack '';
-_n pushBack 'An-2 Antonov (Unarmed)';
-_o pushBack 14000;
-_t pushBack 30;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
 //--- Naval Vehicles
 
 _c pushBack 'rhsusf_mkvsoc';
