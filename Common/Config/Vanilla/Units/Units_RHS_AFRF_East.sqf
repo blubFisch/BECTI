@@ -1627,17 +1627,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'RHS_BM21_MSV_01';
-_p pushBack '';
-_n pushBack 'BM-21';
-_o pushBack 140000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
 _c pushBack 'rhs_9k79';
 _p pushBack '';
 _n pushBack '9P129-1M (HE Warhead)';
@@ -2368,16 +2357,5 @@ _g pushBack "";
 
 
 //--- Naval Vehicles
-//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
-_c pushBack 'rhsusf_mkvsoc';
-_p pushBack '';
-_n pushBack 'Sppedboat - GMG, HMG, GAU';
-_o pushBack 5000;
-_t pushBack 25;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 5;
-_g pushBack "";
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

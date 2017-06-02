@@ -52,7 +52,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_rifleman_m4';
 _p pushBack '';
@@ -63,18 +63,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
-
-_c pushBack 'rhsusf_army_ocp_aa';
-_p pushBack '';
-_n pushBack '3- AA Rifleman (FIM-92F)'; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_autorifleman';
 _p pushBack '';
@@ -85,7 +74,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_riflemanat';
 _p pushBack '';
@@ -96,29 +85,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
-
-_c pushBack 'rhsusf_army_ocp_combatcrewman';
-_p pushBack '';
-_n pushBack '0- Crewman (Combat)'; 
-_o pushBack 200;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "UCP";
-
-_c pushBack 'rhsusf_army_ocp_javelin';
-_p pushBack '';
-_n pushBack '3- AT Specialist (Javelin)'; 
-_o pushBack 2000;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_engineer';
 _p pushBack '';
@@ -129,7 +96,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_explosives';
 _p pushBack '';
@@ -140,7 +107,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_grenadier';
 _p pushBack '';
@@ -151,7 +118,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_medic';
 _p pushBack '';
@@ -162,7 +129,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_machinegunner';
 _p pushBack '';
@@ -173,7 +140,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_helipilot';
 _p pushBack '';
@@ -184,7 +151,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_marksman';
 _p pushBack '';
@@ -195,7 +162,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_sniper_m24sws';
 _p pushBack '';
@@ -206,7 +173,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_sniper_m107';
 _p pushBack '';
@@ -217,7 +184,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_teamleader';
 _p pushBack '';
@@ -228,7 +195,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_squadleader';
 _p pushBack '';
@@ -239,7 +206,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_officer';
 _p pushBack '';
@@ -250,7 +217,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "UCP";
+_g pushBack "MTP";
 
 //--- Army D OEF/CP
 
@@ -301,7 +268,7 @@ _g pushBack "MTP";
 _c pushBack 'rhsusf_army_ocp_javelin';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 750;
+_o pushBack 1500;
 _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -334,7 +301,7 @@ _g pushBack "MTP";
 _c pushBack 'rhsusf_army_ocp_combatcrewman';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 750;
+_o pushBack 200;
 _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -343,28 +310,6 @@ _d pushBack 0;
 _g pushBack "MTP";
 
 _c pushBack 'rhsusf_army_ocp_driver';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_machinegunnera';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_marksman';
 _p pushBack '';
 _n pushBack ''; 
 _o pushBack 750;
@@ -386,73 +331,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "MTP";
 
-_c pushBack 'rhsusf_army_ocp_riflemanat';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_rifleman_m16';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
 _c pushBack 'rhsusf_army_ocp_uav';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_autorifleman';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_autoriflemana';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_medic';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_engineer';
 _p pushBack '';
 _n pushBack ''; 
 _o pushBack 750;
@@ -485,40 +364,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "MTP";
 
-_c pushBack 'rhsusf_army_ocp_explosives';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
 _c pushBack 'rhsusf_army_ocp_fso';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_grenadier';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_helipilot';
 _p pushBack '';
 _n pushBack ''; 
 _o pushBack 750;
@@ -540,40 +386,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "MTP";
 
-_c pushBack 'rhsusf_army_ocp_machinegunner';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_officer';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
 _c pushBack 'rhsusf_army_ocp_rifleman';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_rifleman_m4';
 _p pushBack '';
 _n pushBack ''; 
 _o pushBack 750;
@@ -594,51 +407,6 @@ _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
 _g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_sniper_m107';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_sniper_m24sws';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_squadleader';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
-_c pushBack 'rhsusf_army_ocp_teamleader';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 750;
-_t pushBack 5;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "MTP";
-
 
 //--- Light Vehicles
 _c pushBack 'rhsusf_mrzr4_d';
@@ -1181,17 +949,6 @@ _d pushBack 10;
 _g pushBack "Tropic";
 
 _c pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Tropic";
-
-_c pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 1000;

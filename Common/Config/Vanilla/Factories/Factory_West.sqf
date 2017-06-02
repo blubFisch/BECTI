@@ -329,31 +329,6 @@ if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {
 };
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {  
-		//USAF RHS (Arid)*********************
-		_u pushBack 'rhsusf_army_ocp_rifleman';
-		_u pushBack 'rhsusf_army_ocp_rifleman_m16';
-		_u pushBack 'rhsusf_army_ocp_rifleman_m4';
-		_u pushBack 'rhsusf_army_ocp_aa';
-		_u pushBack 'rhsusf_army_ocp_autorifleman';
-		_u pushBack 'rhsusf_army_ocp_combatcrewman';
-		_u pushBack 'rhsusf_army_ocp_riflemanat';
-		_u pushBack 'rhsusf_usmc_marpat_d_javelin';
-		_u pushBack 'rhsusf_army_ocp_javelin';
-		_u pushBack 'rhsusf_army_ocp_engineer';
-		_u pushBack 'rhsusf_army_ocp_explosives';
-		_u pushBack 'rhsusf_army_ocp_grenadier';
-		_u pushBack 'rhsusf_army_ocp_medic';
-		_u pushBack 'rhsusf_army_ocp_machinegunner';
-		_u pushBack 'rhsusf_army_ocp_helipilot';
-		_u pushBack 'rhsusf_army_ocp_sniper';
-		_u pushBack 'rhsusf_army_ocp_sniper_m24sws';
-		_u pushBack 'rhsusf_army_ocp_sniper_m107';
-		_u pushBack 'rhsusf_army_ocp_marksman';
-		_u pushBack 'rhsusf_army_ocp_teamleader';
-		_u pushBack 'rhsusf_army_ocp_squadleader';
-		_u pushBack 'rhsusf_army_ocp_officer';		
-		//USAF RHS (Woodland)*********************
-
 		//--- Army D OEF/CP
 		_u PushBack 'rhsusf_army_ocp_rifleman_10th';
 		_u PushBack 'rhsusf_army_ocp_rifleman_1stcav';
@@ -390,7 +365,8 @@ if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {
 		_u PushBack 'rhsusf_army_ocp_sniper_m24sws';
 		_u PushBack 'rhsusf_army_ocp_squadleader';
 		_u PushBack 'rhsusf_army_ocp_teamleader';
-
+		//USAF RHS (Woodland)*********************
+		
 
 };
 //------------------------------ OFPS RHS ------------------------------

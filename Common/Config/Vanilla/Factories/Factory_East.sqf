@@ -1371,8 +1371,6 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_AFRF_ADDON >= 2) then {
 		//Russia RHS (Arid)*********************
-		//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
-		_u pushBack 'rhsusf_mkvsoc';		
 		//Russia RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------

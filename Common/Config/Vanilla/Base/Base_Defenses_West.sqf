@@ -746,14 +746,6 @@ if (CTI_CUP_WEAPONS_ADDON > 0) then {
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		"M2 Mini";
-		_classes pushBack 		"CUP_B_M2StaticMG_USMC";
-		_prices pushBack 		2000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_upgrade pushBack		0;	
-		_specials pushBack 		[];
 	//******************************BASE DEFENSE 1******************************
 		_headers pushBack 		"ZU-23";
 		_classes pushBack 		"CUP_B_ZU23_CDF";

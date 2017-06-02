@@ -3060,28 +3060,6 @@ _g pushBack "Tropic";
 
 //--- Ammo Vehicles
 
-_c pushBack 'Box_NATO_Wps_F';
-_p pushBack '';
-_n pushBack 'Empty Crate';
-_o pushBack 5;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_AMMO;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'B_supplyCrate_F';
-_p pushBack '';
-_n pushBack 'Mobile Gear access Crate';
-_o pushBack 2000;
-_t pushBack 15;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_AMMO;
-_s pushBack "service-gear";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'CUP_B_MTVR_Ammo_USMC';
 _p pushBack '';
 _n pushBack 'MTVR Ammo Truck';
