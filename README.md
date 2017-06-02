@@ -1,14 +1,20 @@
-<img alt="Banner" style="border-width:0" src="http://i273.photobucket.com/albums/jj219/johnsmm/banner.jpg" />
-## Created by Benny and OFPS Team
-<br>
-Main repo, for Stratis only and also used for DEV testing.
+<p style="text-align: center;"><img src="http://i1164.photobucket.com/albums/q563/BennyBoy66/15c18b34.png" alt="" width="600" height="187" /></p>
 
-Mission if fully vanilla compatible turn off addons in parameters!
+<h1 style="text-align: left; padding-left: 150px;"><span style="text-align: left; color: #0000ff;"><span style="color: #000000;">Created by Benny and OFPS Team</span></span></h1>
+<p style="text-align: left; padding-left: 150px;">Main repo is stratis and is used for DEV testing</p>
+<p style="text-align: left; padding-left: 150px;">Mission has been restructured to accept wide variety of mods and can be ran in full vanilla mode via parameters</p>
 
-## Please read following rules before doing any work here.
+## Workflow
+Please read following rules before contributing - [Repo Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/repo-workflow)
 
-## - [Repo Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/repo-workflow)
-
-## - [Mission Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/mission-workflow)
+Also please check feature flow chart - [Mission Workflow](http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/wikis/mission-workflow)
 
 
+## Issues
+<p style="text-align: left; padding-left: 150px;"><a href="http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/issues">Submit bugs and issues here</a></p>
+
+## Development Discord Server
+<p><a href="https://discord.gg/HkK93GN">Dark Council</a></p>
+
+## Versions
+<p><a href="http://gitlab.ofps.net/ofps/BECTI-Benny-Warfare-OFPS.Stratis/tags">Stable Releases&nbsp;</a></p>
