@@ -408,6 +408,415 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "MTP";
 
+// UCP
+_c pushBack 'rhsusf_army_ucp_rifleman_101st';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_10th';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_1stcav';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_82nd';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_aa';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_javelin_assistant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_javelin';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_autorifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_autoriflemana';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_m590';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_medic';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_crewman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_combatcrewman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_driver';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_driver_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_engineer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_explosives';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_fso';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_grenadier';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_helicrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_helipilot';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_jfo';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_machinegunner';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_machinegunnera';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_officer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_m16';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_sniper_m24sws';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_teamleader';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_uav';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_riflemanlv';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_riflemanat';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_rifleman_m4';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_sniper';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_sniper_m107';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+_c pushBack 'rhsusf_army_ucp_squadleader';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "UCP";
+
+
 //--- Light Vehicles
 _c pushBack 'rhsusf_mrzr4_d';
 _p pushBack '';
@@ -1357,7 +1766,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Tropic";
 
-//---Duplicate
 _c pushBack 'rhsusf_M1A1FEP_D';
 _p pushBack '';
 _n pushBack '';

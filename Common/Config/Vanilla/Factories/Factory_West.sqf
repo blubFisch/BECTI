@@ -365,9 +365,44 @@ if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {
 		_u PushBack 'rhsusf_army_ocp_sniper_m24sws';
 		_u PushBack 'rhsusf_army_ocp_squadleader';
 		_u PushBack 'rhsusf_army_ocp_teamleader';
-		//USAF RHS (Woodland)*********************
-		
-
+		//UCP
+		_u PushBack 'rhsusf_army_ucp_rifleman_101st';
+		_u PushBack 'rhsusf_army_ucp_rifleman_10th';
+		_u PushBack 'rhsusf_army_ucp_rifleman_1stcav';
+		_u PushBack 'rhsusf_army_ucp_rifleman_82nd';
+		_u PushBack 'rhsusf_army_ucp_aa';
+		_u PushBack 'rhsusf_army_ucp_javelin_assistant';
+		_u PushBack 'rhsusf_army_ucp_javelin';
+		_u PushBack 'rhsusf_army_ucp_autorifleman';
+		_u PushBack 'rhsusf_army_ucp_autoriflemana';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m590';
+		_u PushBack 'rhsusf_army_ucp_medic';
+		_u PushBack 'rhsusf_army_ucp_crewman';
+		_u PushBack 'rhsusf_army_ucp_combatcrewman';
+		_u PushBack 'rhsusf_army_ucp_driver';
+		_u PushBack 'rhsusf_army_ucp_driver_armored';
+		_u PushBack 'rhsusf_army_ucp_engineer';
+		_u PushBack 'rhsusf_army_ucp_explosives';
+		_u PushBack 'rhsusf_army_ucp_fso';
+		_u PushBack 'rhsusf_army_ucp_grenadier';
+		_u PushBack 'rhsusf_army_ucp_helicrew';
+		_u PushBack 'rhsusf_army_ucp_helipilot';
+		_u PushBack 'rhsusf_army_ucp_jfo';
+		_u PushBack 'rhsusf_army_ucp_machinegunner';
+		_u PushBack 'rhsusf_army_ucp_machinegunnera';
+		_u PushBack 'rhsusf_army_ucp_marksman';
+		_u PushBack 'rhsusf_army_ucp_officer';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m16';
+		_u PushBack 'rhsusf_army_ucp_sniper_m24sws';
+		_u PushBack 'rhsusf_army_ucp_teamleader';
+		_u PushBack 'rhsusf_army_ucp_uav';
+		_u PushBack 'rhsusf_army_ucp_rifleman';
+		_u PushBack 'rhsusf_army_ucp_riflemanlv';
+		_u PushBack 'rhsusf_army_ucp_riflemanat';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m4';
+		_u PushBack 'rhsusf_army_ucp_sniper';
+		_u PushBack 'rhsusf_army_ucp_sniper_m107';
+		_u PushBack 'rhsusf_army_ucp_squadleader';
 };
 //------------------------------ OFPS RHS ------------------------------
 if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {  
