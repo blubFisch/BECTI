@@ -63,6 +63,7 @@ CTI_CO_FNC_GetTownCampsOnSide = compileFinal preprocessFileLineNumbers "Common\F
 CTI_CO_FNC_GetTownGroups = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroups.sqf";
 CTI_CO_FNC_GetTownGroupsAlive = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroupsAlive.sqf";
 CTI_CO_FNC_GetTownGroupsUnitsAlive = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroupsUnitsAlive.sqf";
+CTI_CO_FNC_GetTownSpawnBuilding = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownSpawnBuilding.sqf";
 CTI_CO_FNC_GetTownsResources = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownsResources.sqf";
 CTI_CO_FNC_GetUnitLoadout = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetUnitLoadout.sqf";
 CTI_CO_FNC_GetUnitsScore = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetUnitsScore.sqf";
@@ -494,6 +495,15 @@ if (CTI_FACTION_MODE == 3) then {
 call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
 //---CRAM tracking
 call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
+
+//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
+if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
+	0 spawn {
+		waitUntil {!isNil 'CTI_InitTowns'};
+		
+		execVM "Common\Init\Init_TownsPositions.sqf";
+	};
+};
 
 //--- Respawn markers
 createMarkerLocal ["respawn_east",getMarkerPos "CTI_EastRespawn"];
