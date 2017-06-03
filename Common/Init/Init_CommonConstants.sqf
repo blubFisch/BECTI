@@ -450,6 +450,9 @@ CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units m
 CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
+CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE = 80; //--- Determine the chance over 100 that infantry may spawn in a building (requires CTI_TOWNS_SPAWN_MODE on 1)
+CTI_TOWNS_SPAWN_MODE = 1; //--- Determine how units are spawned in town (0: Spawn on the fly, 1: Cache asset on start and spawn infantry units in building)
+CTI_TOWNS_SPAWN_PRIORITY = 1; //--- Determine the priority for spawning units (0: Random, 1: Vehicles first)
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
 CTI_TOWNS_SPAWN_SV_MIN = 20; //--- Determine the min SV used for a town as a reference for AI units spawning (min max scaling)
 CTI_TOWNS_DYNAMIC_FPS_MODE = 1; //---Determine whether the host FPS should be used to define the amount of units spawning in towns (0: Disabled, 1: Use Server FPS)
