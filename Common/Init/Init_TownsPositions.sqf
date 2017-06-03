@@ -1,6 +1,6 @@
 _range = (CTI_TOWNS_RESISTANCE_SPAWN_RANGE + CTI_TOWNS_OCCUPATION_SPAWN_RANGE) / 2;
 
-if (CTI_Log_Level >= CTI_Log_Information) then {
+if (CTI_Log_Level >= CTI_Log_Debug) then {
 	["INFORMATION", "FILE: Common\Init\Init_TownsPositions.sqf", format["Scanning all [%1] towns for valid position and structures within [%2] meters", count CTI_Towns, _range]] call CTI_CO_FNC_Log;
 };
 
@@ -15,7 +15,7 @@ if (CTI_Log_Level >= CTI_Log_Information) then {
 	
 	if (count _town_buildings > 0) then {_x setVariable ["cti_town_spawn_building", _town_buildings]};
 	
-	if (CTI_Log_Level >= CTI_Log_Information) then {
+	if (CTI_Log_Level >= CTI_Log_Debug) then {
 		["INFORMATION", "FILE: Common\Init\Init_TownsPositions.sqf", format["Scanned town [%1] and found [%2] valid building", _x getVariable "cti_town_name", count _town_buildings]] call CTI_CO_FNC_Log;
 	};
 	

@@ -433,7 +433,7 @@ CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 50;  //--- Determine the max occupation AI c
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 25; //--- Determine the min occupation AI count to present in a town
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Resistance
 
@@ -447,10 +447,10 @@ CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 50; //--- Determine the max resistance AI co
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 25; //--- Determine the min resistance AI count to present in a town
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
-CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE = 80; //--- Determine the chance over 100 that infantry may spawn in a building (requires CTI_TOWNS_SPAWN_MODE on 1)
+CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE = 100; //--- Determine the chance over 100 that infantry may spawn in a building (requires CTI_TOWNS_SPAWN_MODE on 1)
 CTI_TOWNS_SPAWN_MODE = 1; //--- Determine how units are spawned in town (0: Spawn on the fly, 1: Cache asset on start and spawn infantry units in building)
 CTI_TOWNS_SPAWN_PRIORITY = 1; //--- Determine the priority for spawning units (0: Random, 1: Vehicles first)
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
@@ -809,8 +809,8 @@ if (CTI_DEV_MODE > 0) then {
 };
 
 //--- SHK Specific
-CTI_SHK_BUILDING_ENABLED = true;
-CTI_SHK_BUILDING_PLACEMENT_CHANCE = 80; //--- An AI Group has x% of chance to be placed in a building
+CTI_SHK_BUILDING_ENABLED = True;
+CTI_SHK_BUILDING_PLACEMENT_CHANCE = 100; //--- An AI Group has x% of chance to be placed in a building
 CTI_SHK_BUILDING_SAFE_RANGE = 80; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
 CTI_SHK_BUILDING_SCAN_RANGE = 120; //--- The range used to search for building from the town's center
 CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)

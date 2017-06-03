@@ -501,7 +501,7 @@ if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
 	0 spawn {
 		waitUntil {!isNil 'CTI_InitTowns'};
 		
-		execVM "Common\Init\Init_LocationsPositions.sqf";
+		execVM "Common\Init\Init_TownsPositions.sqf";
 	};
 };
 

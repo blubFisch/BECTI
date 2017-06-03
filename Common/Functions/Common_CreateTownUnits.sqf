@@ -169,9 +169,9 @@ while {true} do {
 			};
 		};
 		
-		//--- Man the nearby structures if needed
+		//--- Man the Naval positions
 		if (CTI_SHK_BUILDING_ENABLED) then {
-			if (count _vehicles < 1 && ((CTI_SHK_BUILDING_PLACEMENT_CHANCE > random 100 && count _men <= CTI_SHK_GROUP_SIZE_MAX) || !isNil {_town getVariable "cti_naval"})) then {
+			if !(isNil {_town getVariable "cti_naval"}) then {
 				if (CTI_Log_Level >= CTI_Log_Information) then {
 					["INFORMATION", "FILE: Common\Functions\Common_CreateTownUnits.sqf", format["Group [%1] members in town [%2] will be placed in nearby building if possible via SHK", _group, _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log;
 				};
