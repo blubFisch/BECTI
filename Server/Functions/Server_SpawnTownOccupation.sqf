@@ -675,7 +675,7 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 	
 	//--- A group may spawn close to a camp or somewhere in the town
 	if (isNil {_town getVariable "cti_naval"}) then {
-		if (count _camps > 0 && random 100 > 50) then {
+		if (count _camps > 0 && random 100 > 40) then {
 			_camp_index = floor(random count _camps);
 			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS, _tries] call CTI_CO_FNC_GetRandomPosition;
 			_position = [_position, 30, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
