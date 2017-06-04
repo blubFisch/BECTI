@@ -571,7 +571,7 @@ _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Black";
 
-_i pushBack "optic_Arco_F";
+_i pushBack "optic_Arco";
 _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Khaki";
@@ -919,7 +919,7 @@ _u pushBack 0;
 _p pushBack 30;
 _g pushBack "Green";
 
-_i pushBack "V_ChestrigB_rgr";
+_i pushBack "V_Chestrig_rgr";
 _u pushBack 0;
 _p pushBack 300;
 _g pushBack "Green";
@@ -1509,7 +1509,7 @@ _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Khaki";
 
-_i pushBack "H_Booniehat_dgt1";
+_i pushBack "H_Booniehat_dgt";
 _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Digi";

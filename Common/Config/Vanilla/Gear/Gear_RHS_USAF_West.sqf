@@ -2313,7 +2313,7 @@ _u pushBack 3;
 _p pushBack 300;
 _g pushBack "Black";
 
-_i pushBack "rhs_mag_M397_HE-T";
+_i pushBack "rhs_mag_M397_HET";
 _u pushBack 2;
 _p pushBack 50;
 _g pushBack "Black";
