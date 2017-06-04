@@ -1033,17 +1033,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Mountain Flora";
 
-_c pushBack 'pilotka';
-_p pushBack '';
-_n pushBack ''; 
-_o pushBack 100;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Mountain Flora";
-
 _c pushBack 'CUP_O_RU_Soldier_AT_VDV';
 _p pushBack '';
 _n pushBack ''; 
@@ -1457,17 +1446,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Arid";
 
-_c pushBack 'CUP_O_BRDM2_TK';
-_p pushBack '';
-_n pushBack 'BRDM HMG';
-_o pushBack 2000;
-_t pushBack 30;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Mountain Flora";
-
 _c pushBack 'CUP_O_BRDM2_HQ_CSAT';
 _p pushBack '';
 _n pushBack '';
@@ -1512,7 +1490,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Civilian";
 
-_c pushBack 'CUP_C_SUV_TK ';
+_c pushBack 'CUP_C_SUV_TK';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -1523,7 +1501,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Civilian";
 
-_c pushBack 'CUP_C_UAZ_Unarmed_TK_CIV ';
+_c pushBack 'CUP_C_UAZ_Unarmed_TK_CIV';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -2184,7 +2162,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Civilian";
 
-_c pushBack 'CUP_RU_Pchela1T';
+_c pushBack 'CUP_O_Pchela1T_RU';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 5000;

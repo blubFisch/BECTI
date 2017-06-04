@@ -750,9 +750,9 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "UCP";
 
-_c pushBack 'rhsusf_army_ucp_riflemanlv';
+_c pushBack 'rhsusf_army_ucp_riflemanl';
 _p pushBack '';
-_n pushBack ''; 
+_n pushBack '';
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 3;

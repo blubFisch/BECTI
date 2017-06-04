@@ -43,7 +43,7 @@ _d = []; //--- Extra Distance (From Factory)
 _g = []; //--- Filter by Camo
 
 //--- Infantry
-_c pushBack 'rhsgref_nat_reg_rifleman_akms';
+_c pushBack 'rhsgref_nat_rifleman_akms';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -98,18 +98,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'rhsgref_nat_sabeteur';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_nat_sabeteur';
+_c pushBack 'rhsgref_nat_saboteur';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;

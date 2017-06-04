@@ -232,9 +232,9 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Digi";
 
-_c pushBack 'rhs_msv_emr_crew_commande';
+_c pushBack 'rhs_msv_emr_crew_commander';
 _p pushBack '';
-_n pushBack '3- Crew Commande'; 
+_n pushBack '3- Crew Commander'; 
 _o pushBack 750;
 _t pushBack 5;
 _u pushBack 3;
@@ -2256,7 +2256,7 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'RHS_T50_vvs_055';
+_c pushBack 'RHS_T50_vvs_blueonblue';
 _p pushBack '';
 _n pushBack 'Sukhoi T-50 (obr 2013)';
 _o pushBack 90000;
