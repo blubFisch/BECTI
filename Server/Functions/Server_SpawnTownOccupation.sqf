@@ -189,7 +189,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC1", 2, 33],
-							["TOWNS_SQUAD_APC2", 3, 66]
+							["TOWNS_SQUAD_APC2", 2, 66]
 						],
 						[
 							["TOWNS_SQUAD_VEHICLE_AA1", 1, 33]
@@ -211,7 +211,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC2", 2, 99],
-							["TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC3", 1, 66]
 						],
 						[
 							["TOWNS_SQUAD_ARMORED1", 2, 33]
@@ -249,7 +249,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["TOWNS_SQUAD_ARMORED2", 1, 66],
@@ -262,7 +262,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC3", 1, 66]
 						],
 						[
 							["TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -288,7 +288,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -300,7 +300,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["TOWNS_SQUAD_APC2", 2, 33],
-							["TOWNS_SQUAD_APC3", 3, 66]
+							["TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["TOWNS_SQUAD_ARMORED2", 2, 33],

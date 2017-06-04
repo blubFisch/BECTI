@@ -1,4 +1,3 @@
-@@ -0,0 +1,58 @@
 /*
   # HEADER #
 	Script: 		Common\Functions\Common_GetSafePosition.sqf
@@ -57,4 +56,3 @@ if (_center isEqualTo _position) then {
 };
 
 _position
-\ No newline at end of file

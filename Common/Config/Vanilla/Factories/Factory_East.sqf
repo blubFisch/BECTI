@@ -344,7 +344,7 @@ if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
 		_u pushBack 'rhs_msv_emr_officer';
 		_u PushBack 'rhs_msv_emr_crew';
 		_u PushBack 'rhs_msv_emr_armoredcrew';
-		_u PushBack 'rhs_msv_emr_crew_commande';
+		_u PushBack 'rhs_msv_emr_crew_commander';
 		_u PushBack 'rhs_msv_emr_driver';
 		_u PushBack 'rhs_msv_emr_driver_armored';
 		_u PushBack 'rhs_msv_emr_efreitor';
@@ -1003,7 +1003,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_C130J_Cargo_TKA';
 		_u pushBack 'CUP_O_Su25_RU_2';		
 		_u pushBack 'CUP_O_AN2_TK';
-		_u pushBack 'CUP_RU_Pchela1T';
+		_u pushBack 'CUP_O_Pchela1T_RU';
 		_u pushBack 'CUP_O_UH1H_TKA';
 		_u pushBack 'CUP_O_Mi8_CHDKZ';
 		_u pushBack 'CUP_O_Mi8_SLA_2';
@@ -1089,7 +1089,7 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 		_u pushBack 'RHS_Ka52_vvsc';
 		_u pushBack 'RHS_Ka52_UPK23_vvsc';
 		_u pushBack 'RHS_Su25SM_KH29_vvs';
-		_u pushBack 'RHS_T50_vvs_055';
+		_u pushBack 'RHS_T50_vvs_blueonblue';
 		_u pushBack 'RHS_TU95MS_vvs_tambov';
 		_u pushBack 'RHS_TU95MS_vvs_old';
 		_u pushBack 'rhs_mi28n_vvsc';

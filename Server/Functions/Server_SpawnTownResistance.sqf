@@ -207,7 +207,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 99],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED1", 2, 33]
@@ -219,7 +219,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 66],
-							["GUER_TOWNS_SQUAD_APC3", 2, 66]
+							["GUER_TOWNS_SQUAD_APC3", 1, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED1", 1, 33]
@@ -245,7 +245,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 1, 66],
@@ -258,7 +258,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -284,7 +284,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -296,7 +296,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
