@@ -556,7 +556,7 @@ _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Black";
 
-_i pushBack "opitc_ACO_grn_smg";
+_i pushBack "optic_ACO_grn_smg";
 _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Green";
@@ -1509,7 +1509,7 @@ _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Khaki";
 
-_i pushBack "H_Booniehat_dgt";
+_i pushBack "H_Booniehat_dgtl";
 _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Digi";

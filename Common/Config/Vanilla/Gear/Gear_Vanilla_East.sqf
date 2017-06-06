@@ -1139,7 +1139,7 @@ _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Khaki";
 
-_i pushBack "H_Booniehat_dgt";
+_i pushBack "H_Booniehat_dgtl";
 _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Digi";
