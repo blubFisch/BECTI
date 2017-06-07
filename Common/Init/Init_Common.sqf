@@ -490,8 +490,6 @@ if (CTI_FACTION_MODE == 3) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Squads\Squad_East.sqf";
 };
 
-//--- External Functions/Modules
-(east) call compile preprocessFileLineNumbers "Common\Functions\External\Functions_SHK.sqf";
 //---Trophy 
 call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
 //---CRAM tracking

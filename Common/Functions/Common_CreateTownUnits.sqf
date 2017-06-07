@@ -176,18 +176,6 @@ while {true} do {
 			};
 		};
 		
-		//--- Man the Naval positions
-		if (CTI_SHK_BUILDING_ENABLED) then {
-			if !(isNil {_town getVariable "cti_naval"}) then {
-				if (CTI_Log_Level >= CTI_Log_Information) then {
-					["INFORMATION", "FILE: Common\Functions\Common_CreateTownUnits.sqf", format["Group [%1] members in town [%2] will be placed in nearby building if possible via SHK", _group, _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log;
-				};
-				
-				_scan_range = if (isNil {_town getVariable "cti_naval"}) then {CTI_SHK_BUILDING_SCAN_RANGE} else {CTI_SHK_BUILDING_SCAN_RANGE * 1.75};
-				[ASLToAGL getPosASL _town, _men, (_scan_range + random(CTI_SHK_BUILDING_SCAN_RANGE_RAN) - random(CTI_SHK_BUILDING_SCAN_RANGE_RAN)), 0, [], true, true, _side] Call SHK_BuildingPosExec; 
-			};
-		};
-		
 		//--- ZEUS Curator Editable
 		if !(isNil "ADMIN_ZEUS") then {
 			if (CTI_IsServer) then {
