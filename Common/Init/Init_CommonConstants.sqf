@@ -808,14 +808,6 @@ if (CTI_DEV_MODE > 0) then {
 	CTI_VOTE_TIME = 8;
 };
 
-//--- SHK Specific
-CTI_SHK_BUILDING_ENABLED = True;
-CTI_SHK_BUILDING_PLACEMENT_CHANCE = 100; //--- An AI Group has x% of chance to be placed in a building
-CTI_SHK_BUILDING_SAFE_RANGE = 80; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
-CTI_SHK_BUILDING_SCAN_RANGE = 120; //--- The range used to search for building from the town's center
-CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)
-CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
-
 //---  OFPS Core Pack Check --- SET ALL EXTERNAL SOUND FILE CLASSNAMES HERE----------------------------------------------------------
 if (OFPS_Core_Loaded) then {
 	CTI_SOUND_nosound = "nosound";//Silent Mod No Sound External Class
