@@ -1544,7 +1544,7 @@ _p pushBack '';
 _n pushBack (format ["0- GAZ-66-AP-2 Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6000;
 _t pushBack 30;
-_u pushBack 0;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 10;
