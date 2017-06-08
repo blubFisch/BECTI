@@ -374,7 +374,7 @@ class Params {
 	class CTI_GAMEPLAY_3P {
 		title = "GAMEPLAY: 3P view";
 		values[] = {-1,0,1,2,3};
-		texts[] = {"All","Drivers and Holstered","All Vehicles","Infrantry","None"};
+		texts[] = {"All","Drivers and Holstered","Vehicles","Infrantry","None"};
 		default = 0;
 	};
 	class CTI_WEAPON_SWAY {
