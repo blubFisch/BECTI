@@ -195,7 +195,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Grey";
 
-_c pushBack 'OFPS_BUZAA_B';
+_c pushBack 'OFPS_BUZZA_B';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 15000;
@@ -206,7 +206,7 @@ _s pushBack "";
 _d pushBack 30;
 _g pushBack "Grey";
 
-_c pushBack 'OFPS_BUZAA_B_DYNAMIC';
+_c pushBack 'OFPS_BUZZA_B_DYNAMIC';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 20000;

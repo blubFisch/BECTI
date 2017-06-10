@@ -1129,8 +1129,8 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack "OFPS_MOHAWK_O";
 		_u pushBack "OFPS_HELLCAT_O";
 		_u pushBack "OFPS_HELLCAT_O_DYNAMIC";
-		_u pushBack "OFPS_BUZZA_O";
-		_u pushBack "OFPS_BUZZA_O_DYNAMIC";
+		_u pushBack "OFPS_BUZAA_O";
+		_u pushBack "OFPS_BUZAA_O_DYNAMIC";
 		_u pushBack "OFPS_GRYPHON_O";			
 		/*_u pushBack 'O_T_UAV_04_CAS_F';		
 		_u pushBack 'O_UCSV_01';
