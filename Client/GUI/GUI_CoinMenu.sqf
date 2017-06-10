@@ -87,7 +87,7 @@ with missionNamespace do {
 	CTI_COIN_CAMCONSTRUCT camConstuctionSetParams ([_startPos] + _areaSize);
 	
 	//--- Apply NVG or not depending on the daytime
-	_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+	_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 	camUseNVG _nvgstate;
 	CTI_COIN_CAMUSENVG = _nvgstate;
 	

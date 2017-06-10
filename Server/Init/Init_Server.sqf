@@ -252,7 +252,7 @@ if (CTI_ZOMBIE_MODE == 0) then {
 		_day_ratio = 14/CTI_WEATHER_FAST;
 		_night_ratio = 10/CTI_WEATHER_FAST_NIGHT;
 		while {!CTI_Gameover} do {
-			if (daytime > 5 && daytime <19 ) then {
+			if (daytime > 4 && daytime < 18.5 ) then {
 				if (timeMultiplier != _day_ratio) then  {setTimeMultiplier _day_ratio ; };
 			} else {
 				if (timeMultiplier !=  _night_ratio) then {setTimeMultiplier _night_ratio ; };

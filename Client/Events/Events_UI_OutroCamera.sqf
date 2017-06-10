@@ -52,7 +52,7 @@ if (_cam_attached) then {
 	_camera camPrepareFOV _zoom_level1;
 	_camera camCommitPrepared _camera_duration;
 	
-	_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+	_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 	camUseNVG _nvgstate;
 
 	sleep 3;
@@ -80,7 +80,7 @@ _camera camPrepareTarget _targetcam;
 _camera camPrepareFOV _zoom_level2;
 _camera camCommitPrepared _camera_duration;
 
-_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 camUseNVG _nvgstate;
 
 sleep 3;
