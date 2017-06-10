@@ -688,6 +688,7 @@ CTI_VEHICLES_ERA_COOLDOWN_TIME = 150; //--- Max cooldown time between ERA charge
 
 //--- Vehicles: Parameter
 with missionNamespace do {
+	if (isNil 'CTI_VEHICLES_LOADOUTS') then {CTI_VEHICLES_LOADOUTS = 1}; //-- Enable Custom Loadouts - air loadout menu
 	if (isNil 'CTI_VEHICLES_FUEL_CONSUMPTION') then {CTI_VEHICLES_FUEL_CONSUMPTION = 1}; //-- Enable advanced fuel consumption
 	if (isNil 'CTI_VEHICLES_LVOSS') then {CTI_VEHICLES_LVOSS = 1}; //-- Enable lvoss on wheeled vehicles
 	if (isNil 'CTI_VEHICLES_ERA') then {CTI_VEHICLES_ERA = 1}; //-- Enable era on tracked vehicles
@@ -832,6 +833,7 @@ if (OFPS_Core_Loaded) then {
 	CTI_SOUND_Para = "Para";
 	CTI_SOUND_valkyries = "valkyries";
 	CTI_SOUND_valkyries_loud = "valkyries_loud";
+	CTI_SOUND_radiodanger = "radiodanger";
 	CTI_SOUND_joytotheworld = "joytotheworld";
 	CTI_SOUND_jinglebellrocks = "jinglebellrocks";
 	CTI_SOUND_herecomessantaclaus = "herecomessantaclaus";
@@ -896,6 +898,7 @@ if (OFPS_Core_Loaded) then {
 	CTI_SOUND_Para = "nomodsound";
 	CTI_SOUND_valkyries = "nomodsound";
 	CTI_SOUND_valkyries_loud = "nomodsound";
+	CTI_SOUND_radiodanger = "nomodsound";
 	CTI_SOUND_joytotheworld = "nomodsound";
 	CTI_SOUND_jinglebellrocks = "nomodsound";
 	CTI_SOUND_herecomessantaclaus = "nomodsound";

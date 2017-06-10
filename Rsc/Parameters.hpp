@@ -305,6 +305,12 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
+	class CTI_VEHICLES_LOADOUTS {
+		title = "VEHICLES: Loadouts";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Realistic","Unlocked"};
+		default = 1;
+	};
 	class CTI_VEHICLES_AIR_FFAR {
 		title = "VEHICLES: Aircraft FFAR";
 		values[] = {0,1,2};

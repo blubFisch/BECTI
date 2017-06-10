@@ -1082,20 +1082,9 @@ _g pushBack "Tropic";
 
 //--- Air Vehicles
 
-_c pushBack 'C_Plane_Civil_01_racing_F';
-_p pushBack '';
-_n pushBack 'Scout Plane';
-_o pushBack 14000;
-_t pushBack 50;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Civilian";
-
 _c pushBack 'B_CTRG_Heli_Transport_01_sand_F';
 _p pushBack '';
-_n pushBack 'Scout Plane';
+_n pushBack '';
 _o pushBack 14000;
 _t pushBack 50;
 _u pushBack 2;
@@ -1106,7 +1095,7 @@ _g pushBack "CTRG";
 
 _c pushBack 'B_CTRG_Heli_Transport_01_tropic_F';
 _p pushBack '';
-_n pushBack 'Scout Plane';
+_n pushBack '';
 _o pushBack 14000;
 _t pushBack 50;
 _u pushBack 2;

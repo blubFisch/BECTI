@@ -676,11 +676,16 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//_u pushBack 'dbo_CIV_new_bike';
 		//_u pushBack 'dbo_CIV_ol_bike';
 		//NATO (arid)*********************
-
+		_u pushBack "OFPS_4WD_B";
+		_u pushBack "OFPS_STRIDER_B";
+		_u pushBack "OFPS_STRIDER_HMG_B";
+		_u pushBack "OFPS_STRIDER_GMG_B";
+		_u pushBack "OFPS_B_Truck_03_device_F";
 		//NATO (woodland)*********************
 		_u pushBack "OFPS_HUNTER";
 		_u pushBack "OFPS_HUNTER_HMG";
 		_u pushBack "OFPS_HUNTER_GMG";	
+		
 		//NATO (Winter)*********************
 		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
@@ -847,6 +852,11 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
 		//NATO (arid)*********************
+		_u pushBack "OFPS_GORGON_B";
+		_u pushBack "OFPS_MORA_B";
+		_u pushBack "OFPS_KUMA_B";
+		_u pushBack "ofps_B_MBT_01_mlrs_base_F";
+	
 		//NATO (woodland)*********************
 		_u pushBack 'OFPS_M1A1';
         _u pushBack 'OFPS_M2';
@@ -1064,7 +1074,13 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack 'bwi_a3_at6b_3';
 		_u pushBack 'sab_alphajet';
 		_u pushBack 'sab_alphajet2';*/
-		_u pushBack 'OFPS_BUZZA_B';
+		_u pushBack "OFPS_CAESAR_B";
+		_u pushBack "OFPS_MOHAWK_B";
+		_u pushBack "OFPS_HELLCAT_B";
+		_u pushBack "OFPS_HELLCAT_B_DYNAMIC";
+		_u pushBack "OFPS_BUZZA_B";
+		_u pushBack "OFPS_BUZZA_B_DYNAMIC";
+		_u pushBack "OFPS_GRYPHON_B";	
 		/*_u pushBack 'pook_tu953M80_CDF';
 		_u pushBack 'pook_tu95ms_CDF';
 		_u pushBack 'pook_tu95ms16_CDF';

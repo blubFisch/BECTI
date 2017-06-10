@@ -83,7 +83,9 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 
 //--- Radio - only helis
 if (_vehicle isKindOf "Helicopter") then {
-	_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#1)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,1],0,false,true,"","driver _target == player"];
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#2)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,2],0,false,true,"","driver _target == player"];
+
 };
 
 //--- Taxi Reverse
