@@ -42,6 +42,7 @@ CTI_CO_FNC_GetPositionFrom = compileFinal preprocessFileLineNumbers "Common\Func
 CTI_CO_FNC_GetRandomBestPlaces = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetRandomBestPlaces.sqf";
 CTI_CO_FNC_GetRandomPosition = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetRandomPosition.sqf";
 CTI_CO_FNC_GetRespawnCamps = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetRespawnCamps.sqf";
+CTI_CO_FNC_GetSafePosition = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSafePosition.sqf";
 CTI_CO_FNC_GetSideColoration = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSideColoration.sqf";
 CTI_CO_FNC_GetSideCommanderTeam = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSideCommanderTeam.sqf";
 CTI_CO_FNC_GetSideFromID = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetSideFromID.sqf";
@@ -63,6 +64,7 @@ CTI_CO_FNC_GetTownCampsOnSide = compileFinal preprocessFileLineNumbers "Common\F
 CTI_CO_FNC_GetTownGroups = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroups.sqf";
 CTI_CO_FNC_GetTownGroupsAlive = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroupsAlive.sqf";
 CTI_CO_FNC_GetTownGroupsUnitsAlive = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownGroupsUnitsAlive.sqf";
+CTI_CO_FNC_GetTownSpawnBuilding = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownSpawnBuilding.sqf";
 CTI_CO_FNC_GetTownsResources = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetTownsResources.sqf";
 CTI_CO_FNC_GetUnitLoadout = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetUnitLoadout.sqf";
 CTI_CO_FNC_GetUnitsScore = compileFinal preprocessFileLineNumbers "Common\Functions\Common_GetUnitsScore.sqf";
@@ -488,12 +490,19 @@ if (CTI_FACTION_MODE == 3) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Squads\Squad_East.sqf";
 };
 
-//--- External Functions/Modules
-(east) call compile preprocessFileLineNumbers "Common\Functions\External\Functions_SHK.sqf";
 //---Trophy 
 call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.sqf";
 //---CRAM tracking
 call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
+
+//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
+if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
+	0 spawn {
+		waitUntil {!isNil 'CTI_InitTowns'};
+		
+		execVM "Common\Init\Init_TownsPositions.sqf";
+	};
+};
 
 //--- Respawn markers
 createMarkerLocal ["respawn_east",getMarkerPos "CTI_EastRespawn"];

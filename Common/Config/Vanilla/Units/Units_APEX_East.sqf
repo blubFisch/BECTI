@@ -879,7 +879,7 @@ _g pushBack "Civilian";
 _c pushBack 'O_G_Offroad_01_armed_F';
 _p pushBack '';
 _n pushBack '';
-_o pushBack 300;
+_o pushBack 400;
 _t pushBack 10;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -1020,17 +1020,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Tropic";
 
-_c pushBack 'O_Truck_03_medical_F';
-_p pushBack '';
-_n pushBack (format ["1- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
-_o pushBack 4000;
-_t pushBack 20;
-_u pushBack 1;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "service-medic";
-_d pushBack 0;
-_g pushBack "Tropic";
-
 _c pushBack 'O_T_Truck_03_medical_ghex_F';
 _p pushBack '';
 _n pushBack (format ["1- Wheeled Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
@@ -1111,16 +1100,6 @@ _d pushBack 0;
 _g pushBack "Tropic";
 
 //--- Repair Vehicles
-_c pushBack 'O_Truck_03_repair_F';
-_p pushBack '';
-_n pushBack ["%1 (Pacific)"];
-_o pushBack 8000;
-_t pushBack 25;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_REPAIR;
-_s pushBack "service-repairtruck";
-_d pushBack 0;
-_g pushBack "Hex";
 
 _c pushBack 'O_T_Truck_03_repair_ghex_F';
 _p pushBack '';

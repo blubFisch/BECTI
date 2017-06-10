@@ -433,7 +433,7 @@ CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 50;  //--- Determine the max occupation AI c
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 25; //--- Determine the min occupation AI count to present in a town
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Resistance
 
@@ -447,9 +447,12 @@ CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 50; //--- Determine the max resistance AI co
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 25; //--- Determine the min resistance AI count to present in a town
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 250; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
+CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE = 100; //--- Determine the chance over 100 that infantry may spawn in a building (requires CTI_TOWNS_SPAWN_MODE on 1)
+CTI_TOWNS_SPAWN_MODE = 1; //--- Determine how units are spawned in town (0: Spawn on the fly, 1: Cache asset on start and spawn infantry units in building)
+CTI_TOWNS_SPAWN_PRIORITY = 1; //--- Determine the priority for spawning units (0: Random, 1: Vehicles first)
 CTI_TOWNS_SPAWN_SV_MAX = 120; //--- Determine the max SV used for a town as a reference for AI units spawning (min max scaling)
 CTI_TOWNS_SPAWN_SV_MIN = 20; //--- Determine the min SV used for a town as a reference for AI units spawning (min max scaling)
 CTI_TOWNS_DYNAMIC_FPS_MODE = 1; //---Determine whether the host FPS should be used to define the amount of units spawning in towns (0: Disabled, 1: Use Server FPS)
@@ -708,10 +711,10 @@ CTI_ARTILLERY_TIMEOUT = 380; //--- Delay between each fire mission
 CTI_BOUNTY_COEF = 0.30; //--- Bounty coefficient multiplicator based on the unit original cost
 CTI_BOUNTY_COEF_PVP = 1; //--- Bounty coefficient multiplicator based on the killed unit score
 
-CTI_COIN_AREA_DEFAULT = [30, 10];
-CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25];
-CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- To incrase build area when mobile
-CTI_COIN_AREA_REPAIR = [45, 10];
+CTI_COIN_AREA_DEFAULT = [30, 10];  //--- Default Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_HQ_DEPLOYED = [CTI_BASE_AREA_RANGE, 25]; //--- Deployed HQ Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_HQ_MOBILIZED = [80, 10]; //--- Mobilized HQ Construction Interface area parameters [Radius, Height]
+CTI_COIN_AREA_REPAIR = [45, 10]; //--- Repair Truck Construction Interface area parameters [Radius, Height]
 CTI_COIN_AREA_DEFENSE = [30, 6];
 
 CTI_ECONOMY_POOL_RESOURCES_PERCENTAGE_MIN = 40; //--- Keep values of 10
@@ -725,17 +728,17 @@ CTI_PLAYER_DEFAULT_ALIAS = "Soldier";
 
 CTI_RESPAWN_AI_RANGE = 600;
 CTI_RESPAWN_BASE_MODE = 1; //--- Determine where the client should respawn in base (0: Near a structure, 1: Use listed structure buildingPos)
+CTI_RESPAWN_BASE_SAFE_RANGE = 20; //--- A base structure is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
 CTI_RESPAWN_CAMPS_CONDITION_LIMITED = 10; //--- With this condition, a unit may only spawn x times on a camp during a capture cycle
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY = 5; //--- Coefficient applied upon camp fee on enemy held town respawn
 CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY = 5; //--- Coefficient applied upon camp fee on friendly held town respawn
 CTI_RESPAWN_CAMPS_MODE = 1; //--- Determine where the client should respawn at camps (0: Near the camp, 1: Use listed camp buildingPos)
 CTI_RESPAWN_CAMPS_RANGE_CLASSIC = 2000; //--- Determine the range needed to respawn at a town's camps (from the town center)
 CTI_RESPAWN_CAMPS_RANGE_ENHANCED = 2000; //--- Determine the range needed to respawn at a town's camps (from a camp)
-CTI_RESPAWN_CAMPS_SAFE = 1; //--- Disable a camp's respawn if enemies are around it
-CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- Disable respawn if enemies are within this range
+CTI_RESPAWN_CAMPS_SAFE_RANGE = 25; //--- A camp is considered safe for respawn if no enemies are within that range (0: Disabled, X: The safe distance)
 CTI_RESPAWN_MOBILE_SAFE = 1; //--- Disable a mobile respawn's respawn if enemies are around it
 CTI_RESPAWN_MOBILE_SAFE_RANGE = 40; //--- Disable respawn if enemies are within this range
-CTI_RESPAWN_MOBILE_RANGE = 500;
+CTI_RESPAWN_MOBILE_RANGE = 500; //--- A mobile respawn such as an ambulance may be used if the client died within it's range
 
 CTI_SATCAM_ZOOM_MIN = 50;
 CTI_SATCAM_ZOOM_MAX = 800;
@@ -805,14 +808,6 @@ CTI_VOTE_TIME = 60; //--- Commander Vote time
 if (CTI_DEV_MODE > 0) then {
 	CTI_VOTE_TIME = 8;
 };
-
-//--- SHK Specific
-CTI_SHK_BUILDING_ENABLED = true;
-CTI_SHK_BUILDING_PLACEMENT_CHANCE = 80; //--- An AI Group has x% of chance to be placed in a building
-CTI_SHK_BUILDING_SAFE_RANGE = 80; //--- Determine whether a building should be used for unit positioning or not if units are present within this range
-CTI_SHK_BUILDING_SCAN_RANGE = 120; //--- The range used to search for building from the town's center
-CTI_SHK_BUILDING_SCAN_RANGE_RAN = 50; //--- Add a random range, works as min max -> RANGE + (random value - random value)
-CTI_SHK_GROUP_SIZE_MAX = 12; //--- If the group has more than x members, skip it
 
 //---  OFPS Core Pack Check --- SET ALL EXTERNAL SOUND FILE CLASSNAMES HERE----------------------------------------------------------
 if (OFPS_Core_Loaded) then {

@@ -1,5 +1,12 @@
 **Upcomming release**
 Tweaked: Damage for defenses
+Added: New AI building placement system
+Added: Vehicles will have higher priority to spawn one’s town is active
+Added: Base building respawn will not work if enemy is near 30m, for exception of MHQ
+Added: Complete mod support restructure, with ability to mix and match on fly
+Added: Vehicle Loadouts, both Air and Land
+Added: Filters based by Camo for both Gear and Vehicles
+Fixed: Vehicles will spawn in houses
 
 **1.07.2**
 Fixed: Altis naval camp

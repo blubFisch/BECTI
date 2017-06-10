@@ -66,7 +66,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 	_b pushBack [2, 3, 6];
 	_r pushBack [[800,1000], [800,2000], [800,3000], [800,4000]];
 
-	_c pushBack "CUP_O_BM21_RU ";
+	_c pushBack "CUP_O_BM21_RU";
 	_m pushBack ["CUP_40Rnd_GRAD_HE"];
 	_b pushBack [2, 3, 6];
 	_r pushBack [[800,1000], [800,2000], [800,3000], [800,4000]];

@@ -1126,17 +1126,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "Green";
 
-_c pushBack 'B_T_VTOL_01_infantry_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 40000;
-_t pushBack 50;
-_u pushBack 3;
-_f pushBack CTI_FACTORY_AIR;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "Green";
-
 _c pushBack 'B_T_VTOL_01_infantry_blue_F';
 _p pushBack '';
 _n pushBack '';
