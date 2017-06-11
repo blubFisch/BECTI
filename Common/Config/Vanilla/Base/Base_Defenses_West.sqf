@@ -189,7 +189,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		//MALDEN OBJECTS 
 	
 		//Barricades
-		_headers pushBack 		["Barricade 4m",[["CanAutoAlign", 4, 0]]];
+		/*_headers pushBack 		["Barricade 4m",[["CanAutoAlign", 4, 0]]];
 		_classes pushBack 		"Land_Barricade_01_4m_F";
 		_prices pushBack 		200;
 		_placements pushBack 	[0, 7];
@@ -318,7 +318,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;		
-		_specials pushBack 		[["DMG_Explosion", 0.34]];	
+		_specials pushBack 		[["DMG_Explosion", 0.34]];	*/
 		
 	//******************************BASE DEFENSE 0******************************
 		_headers pushBack 		"Bunker (Small)";
