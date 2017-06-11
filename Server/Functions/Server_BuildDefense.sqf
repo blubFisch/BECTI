@@ -210,6 +210,15 @@ if (_iscomposition) then {
 			_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
 		};
 	};
+	//handler for invinsible objects
+	_explosionalt = false;
+	_damage_explosion = 0;
+	{
+		if ("DMG_Explosion" in _x) then {_explosionalt = true;_damage_explosion = _x select 1;}; 
+	} forEach (_var select 9);
+	if (_explosionalt) then {
+		_defense addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
+	};
 
 	//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 	_ruins = "";
