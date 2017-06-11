@@ -6518,7 +6518,7 @@ class CTI_RscLoadoutMenu
 			idc = 790001;
 
 			x = -0.00408908 * safezoneW + safezoneX;
-			y = 0.71604 * safezoneH + safezoneY;
+			y = 0.709 * safezoneH + safezoneY;
 			w = 1.00245 * safezoneW;
 			h = 0.297 * safezoneH;
 			colorBackground[] = {0.063,0.063,0.063,0.5};
@@ -6556,32 +6556,33 @@ class CTI_RscLoadoutMenu
 		{
 			idc = 790004;
 
+			text = "OFPS Unit Loadout System"; //--- ToDo: Localize;
 			x = 0.0360089 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
 			w = 0.137479 * safezoneW;
 			h = 0.022 * safezoneH;
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#2b76a5";
-				align = "left";
-				shadow = false;
-			};			
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 			
 		};
 		class CTI_RscLoadoutMenu_PylonTitle2: RscStructuredText
 		{
 			idc = 790104;
 
 			text = "Loadout"; //--- ToDo: Localize;
-			x = 0.351065 * safezoneW + safezoneX;
+			x = 0.293782 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#2b76a5";
-				align = "left";
-				shadow = false;
-			};			
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 			
 		};
 		class CTI_RscLoadoutMenu_PylonList: RscListNBox
 		{
@@ -6590,9 +6591,9 @@ class CTI_RscLoadoutMenu
 			itemBackground[] = {1,1,1,0.1};
 			onLBSelChanged = "['onPylonListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
-			x = 0.351065 * safezoneW + safezoneX;
+			x = 0.293782 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.231 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 			sizeEx = 0.8 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
@@ -6602,16 +6603,16 @@ class CTI_RscLoadoutMenu
 			idc = 790006;
 
 			text = "Compatible Mags"; //--- ToDo: Localize;
-			x = 0.511457 * safezoneW + safezoneX;
+			x = 0.46563 * safezoneW + safezoneX;
 			y = 0.786 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#2b76a5";
-				align = "left";
-				shadow = false;
-			};			
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 			
 		};
 		class CTI_RscLoadoutMenu_AmmoList: RscListNBox
 		{
@@ -6620,9 +6621,9 @@ class CTI_RscLoadoutMenu
 			itemBackground[] = {1,1,1,0.1};
 			onLBSelChanged = "['onMagListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
-			x = 0.511457 * safezoneW + safezoneX;
+			x = 0.46563 * safezoneW + safezoneX;
 			y = 0.808 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.176 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 			sizeEx = 0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
@@ -6632,16 +6633,16 @@ class CTI_RscLoadoutMenu
 			idc = 790008;
 
 			text = "Mag Stats"; //--- ToDo: Localize;
-			x = 0.671849 * safezoneW + safezoneX;
+			x = 0.637479 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#2b76a5";
-				align = "left";
-				shadow = false;
-			};			
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            };            			
 		};
 		class CTI_RscLoadoutMenu_AmmoStatList: RscListNBox
 		{
@@ -6650,9 +6651,9 @@ class CTI_RscLoadoutMenu
 			itemBackground[] = {1,1,1,0.1};
 			columns[] = {0.001,0.35};
 
-			x = 0.671849 * safezoneW + safezoneX;
+			x = 0.637479 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.132 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 			sizeEx = 0.6 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
@@ -6662,9 +6663,9 @@ class CTI_RscLoadoutMenu
 			idc = 790010;
 			onKeyUp = "['onQtyChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
-			x = 0.83224 * safezoneW + safezoneX;
+			x = 0.809327 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_Camo: RscCombo
@@ -6673,9 +6674,9 @@ class CTI_RscLoadoutMenu
 			onLBSelChanged = "['onCamoLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			text = "Camo"; //--- ToDo: Localize;
-			x = 0.83224 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.775 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_RearmPrice: RscStructuredText
@@ -6685,9 +6686,9 @@ class CTI_RscLoadoutMenu
 			lineSpacing = 1;
 
 			text = "ReArmAllPrice"; //--- ToDo: Localize;
-			x = 0.671849 * safezoneW + safezoneX;
+			x = 0.637479 * safezoneW + safezoneX;
 			y = 0.896 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.033 * safezoneH;
 			sizeEx = 0.8 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15);
 		};
@@ -6698,9 +6699,9 @@ class CTI_RscLoadoutMenu
 			lineSpacing = 1;
 
 			text = "Price"; //--- ToDo: Localize;
-			x = 0.671849 * safezoneW + safezoneX;
+			x = 0.637479 * safezoneW + safezoneX;
 			y = 0.94 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.033 * safezoneH;
 			sizeEx = 0.8 * 			(			(			((safezoneW / safezoneH) min 1.1) / 1.1) / 15);
 		};
@@ -6710,9 +6711,9 @@ class CTI_RscLoadoutMenu
 			action = "['onClearPressed', lnbCurSelRow 230005] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			text = "Clear Mounts"; //--- ToDo: Localize;
-			x = 0.83224 * safezoneW + safezoneX;
-			y = 0.841 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.819 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_Rearm: RscButton
@@ -6721,9 +6722,9 @@ class CTI_RscLoadoutMenu
 			action = "['onRearmPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			text = "Rearm All"; //--- ToDo: Localize;
-			x = 0.83224 * safezoneW + safezoneX;
-			y = 0.874 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.863 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_Purchase: RscButton
@@ -6732,9 +6733,9 @@ class CTI_RscLoadoutMenu
 			action = "['onPurchasePressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			text = "Purchase Magazines"; //--- ToDo: Localize;
-			x = 0.83224 * safezoneW + safezoneX;
+			x = 0.809327 * safezoneW + safezoneX;
 			y = 0.907 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_Exit: RscButton
@@ -6743,9 +6744,9 @@ class CTI_RscLoadoutMenu
 			action = "['onExitPressed'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			text = "Back"; //--- ToDo: Localize;
-			x = 0.83224 * safezoneW + safezoneX;
-			y = 0.94 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.951 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class CTI_RscLoadoutMenu_CurrentMagTitle: RscStructuredText
@@ -6753,28 +6754,27 @@ class CTI_RscLoadoutMenu
 			idc = 790019;
 
 			text = "Current Mag"; //--- ToDo: Localize;
-			x = 0.511457 * safezoneW + safezoneX;
+			x = 0.46563 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
-			class Attributes {
-				font = "PuristaMedium";
-				color = "#2b76a5";
-				align = "left";
-				shadow = false;
-			};			
-		};		
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 			
+		};
 		class CTI_RscLoadoutMenu_CurrentMag: RscListNBox
 		{
 			idc = 790020;
-			//text = "insert mag name"; //--- ToDo: Localize;
-			x = 0.511457 * safezoneW + safezoneX;
-			y = 0.753 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
-			h = 0.022 * safezoneH;
 			rowHeight = "1.1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			itemBackground[] = {1,1,1,0.1};
-			//columns[] = {0.001,0.35};
+
+			x = 0.46563 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 			sizeEx = 0.9 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
@@ -6782,14 +6782,10 @@ class CTI_RscLoadoutMenu
 		{
 			idc = 790021;
 
-
-			//text = "status here"; //--- ToDo: Localize;
 			x = 0.73486 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
 			w = 0.257773 * safezoneW;
 			h = 0.088 * safezoneH;
-			//colorBackground[] = {0,0,0,0};
-			//sizeEx = 1.0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
 
 	};
