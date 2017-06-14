@@ -1,50 +1,61 @@
-//--- No loop need, if third person view is not enabled in server profile
-//--- TO DO: rewrite using PlayerViewChanged EH with out loops
-if ((difficultyOption "thirdPersonView") isEqualTo 1) then
+//--- TO DO: rewrite using PlayerViewChanged EH without loops
+
+switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
 {
-    switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
-    {
-        case 1://--- Vehicles only
+    case 0: { //--- 3rd Person for Drivers and Pilots and for players on foot with guns on their backs
+        while {true} do 
         {
-            while {(true)} do
+            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
+            if (((vehicle player) == player) && (currentWeapon player != '')) then
             {
-                if (!(cameraView in ["GUNNER","INTERNAL"]) && cameraOn == vehicle (player)) then
+                player switchCamera "INTERNAL";
+            }
+            else
+            {
+                if (player != driver (vehicle player)) then 
                 {
-                    if ((vehicle player) == player) then
-                    {
-                        player switchCamera "Internal";
-                    };
+                    player switchCamera "INTERNAL";
                 };
-                sleep 1;
             };
+            sleep 0.1;
         };
-        case 2://--- Infantry only
+    };
+   
+    case 1: { //--- 3rd Person for any vehicles only
+        while {true} do 
         {
-            while {(true)} do
+            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
+            if (((vehicle player) == player) && (currentWeapon player != '')) then
             {
-                if (cameraView == "External") then
-                {
-                    if ((vehicle player) != player) then
-                    {
-                        (vehicle player) switchCamera "Internal";
-                    };
-                };
-                sleep 1;
+                player switchCamera "INTERNAL";
             };
+            sleep 0.1;
         };
-        case 3://--- Disabled
+    };
+
+    case 2:  //--- 3rd Person for players on foot only
+    {    
+        while {true} do 
         {
-            while {(true)} do
+            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
+            if ((vehicle player) != player) then 
             {
-                if (cameraView == "External") then
-                {
-                    if ((vehicle player) == cameraOn) then
-                    {
-                        (vehicle player) switchCamera "Internal";
-                    };
-                };
-                sleep 1;
+                player switchCamera "INTERNAL";
             };
+            sleep 0.1;
+        };
+    };
+
+    case 3:  //--- 3rd Person disabled for everything
+    {    
+        while {true} do 
+        {
+            waitUntil {cameraView != "GUNNER" || cameraView != "INTERNAL"};
+            if (cameraOn == vehicle (player)) then 
+            {
+                player switchCamera "INTERNAL";
+            };
+            sleep 0.1;
         };
     };
 };
