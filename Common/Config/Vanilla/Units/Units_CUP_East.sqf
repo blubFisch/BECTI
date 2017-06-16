@@ -1091,7 +1091,7 @@ _g pushBack "Mountain Flora";
 _c pushBack 'CUP_O_RU_Spotter_VDV';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 350
+_o pushBack 350;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -1102,7 +1102,7 @@ _g pushBack "Mountain Flora";
 _c pushBack 'CUP_O_RU_Soldier_SL_VDV';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 350
+_o pushBack 350;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -1113,7 +1113,7 @@ _g pushBack "Mountain Flora";
 _c pushBack 'CUP_O_RU_Soldier_TL_VDV';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 350
+_o pushBack 350;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
