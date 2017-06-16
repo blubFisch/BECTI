@@ -27,6 +27,7 @@
 	Common Function: CTI_CO_FNC_GetRandomBestPlaces
 	Common Function: CTI_CO_FNC_GetRandomPosition
 	Common Function: CTI_CO_FNC_GetTownCamps
+	Common Function: CTI_CO_FNC_GetTownSpawnBuilding
 	Common Function: CTI_CO_FNC_ManVehicle
 	Server Function: CTI_SE_FNC_HandleEmptyVehicle
 	
@@ -628,7 +629,7 @@ _pool = [];
 } forEach _pool_units;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { 
-	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved a Resistance Pool count of [%1] for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
+	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved an effective Resistance Pool of [%1] squad(s) for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
 };
 
 if (count _pool < 1) exitWith {
@@ -682,14 +683,14 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 	{if !(_x isKindOf "Man") exitWith {_has_vehicles = true}} forEach _x;
 	
 	//--- A group may spawn close to a camp or somewhere in the town
-	if (isNil {_town getVariable "cti_naval"}) then {
-		if (count _camps > 0 && random 100 > 40) then {
+	if (isNil {_town getVariable "cti_naval"}) then { //--- The town is on the ground
+		if (count _camps > 0 && random 100 > 40) then { //--- A camp can be selected for spawning units
 			_camp_index = floor(random count _camps);
 			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS, 10, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
 			_camps deleteAt _camp_index;
-		} else {
+		} else { //--- Pick a random position
 			_use_default = true;
-			if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then {
+			if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
 				if (CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE >= random 100 && count _positions_building > 0) then {
 					_building = [_positions_building, resistance] call CTI_CO_FNC_GetTownSpawnBuilding;
 					if !(_building select 1 isEqualTo -1) then {
@@ -700,11 +701,11 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 				};
 			};
 			
-			if (_use_default) then {
-    			_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE, 15, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
+			if (_use_default) then { //--- Default spawn area, pick a safe area around the town
+				_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE, 15, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
 			};
 		};
-	} else {
+	} else { //--- The town is naval
 		_use_default = true;
 		if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
 			if (count _positions_building > 0) then { //--- Naval AI squads will always spawn in buildings
@@ -747,9 +748,6 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 		["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format["Composing Resistance Team for town [%1] using group [%2] at position [%3] with units [%4]", _town getVariable "cti_town_name", _group, _position, _x]] call CTI_CO_FNC_Log;
 	};
 } forEach _teams;
-
-//--- Update the town with the groups
-_town setVariable ["cti_town_resistance_groups", _groups, true];
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format["Composed [%1] Resistance Teams for town [%2] having a max SV of [%3]", count _teams, _town getVariable "cti_town_name", _value]] call CTI_CO_FNC_Log;

@@ -30,6 +30,7 @@
 	Common Function: CTI_CO_FNC_GetSideID
 	Common Function: CTI_CO_FNC_GetSideUpgrades
 	Common Function: CTI_CO_FNC_GetTownCamps
+	Common Function: CTI_CO_FNC_GetTownSpawnBuilding
 	Common Function: CTI_CO_FNC_ManVehicle
 	Server Function: CTI_SE_FNC_HandleEmptyVehicle
 	
@@ -686,14 +687,14 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 	{if !(_x isKindOf "Man") exitWith {_has_vehicles = true}} forEach _x;
 	
 	//--- A group may spawn close to a camp or somewhere in the town
-	if (isNil {_town getVariable "cti_naval"}) then {
-		if (count _camps > 0 && random 100 > 40) then {
+	if (isNil {_town getVariable "cti_naval"}) then { //--- The town is on the ground
+		if (count _camps > 0 && random 100 > 40) then { //--- A camp can be selected for spawning units
 			_camp_index = floor(random count _camps);
 			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS, 10, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
 			_camps deleteAt _camp_index;
-		} else {
+		} else { //--- Pick a random position
 			_use_default = true;
-			if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then {
+			if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
 				if (CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE >= random 100 && count _positions_building > 0) then {
 					_building = [_positions_building, _side] call CTI_CO_FNC_GetTownSpawnBuilding;
 					if !(_building select 1 isEqualTo -1) then {
@@ -704,11 +705,11 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 				};
 			};
 			
-			if (_use_default) then {
-                _position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, 15, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
+			if (_use_default) then { //--- Default spawn area, pick a safe area around the town
+				_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_OCCUPATION_SPAWN_RANGE, 15, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
 			};
 		};
-	} else {
+	} else { //--- The town is naval
 		_use_default = true;
 		if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
 			if (count _positions_building > 0) then { //--- Naval AI squads will always spawn in buildings
@@ -750,9 +751,6 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 		["INFORMATION", "FILE: Server\Functions\Server_SpawnTownOccupation.sqf", format["Composing Occupation Team for town [%1] on side [%2] using group [%3] at position [%4] with units [%5]", _town getVariable "cti_town_name", _side, _group, _position, _x]] call CTI_CO_FNC_Log;
 	};
 } forEach _teams;
-
-//--- Update the town with the groups
-_town setVariable ["cti_town_occupation_groups", _groups, true];
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownOccupation.sqf", format["Composed [%1] Occupation Teams for town [%2] on side [%3] with the current SV [%4]", count _teams, _town getVariable "cti_town_name", _side, _value]] call CTI_CO_FNC_Log;

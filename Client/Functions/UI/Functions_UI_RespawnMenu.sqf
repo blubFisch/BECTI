@@ -119,7 +119,7 @@ CTI_UI_Respawn_GetRespawnLabel = {
 		};
 		case (!isNil {_location getVariable "cti_structure_type"}): { 
 			_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _location getVariable "cti_structure_type"];
-			_value = (_var select 0) select 1;
+			_value = (_var select CTI_STRUCTURE_LABELS) select 1;
 		};
 		case (!isNil {_location getVariable "cti_large_fob"}): { 
 			_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _location getVariable "cti_large_fob"];

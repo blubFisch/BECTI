@@ -92,8 +92,8 @@ if !(isNil {_factory getVariable "cti_large_fob"}) then {
 };
 _var = missionNamespace getVariable [format ["CTI_%1_%2", _req_side, _factory getVariable ["cti_structure_type", ""]], []];
 if (count _var > 0) then {
-	_direction = 360 - ((_var select 4) select 0);
-	_distance = ((_var select 4) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
+	_direction = 360 - ((_var select CTI_STRUCTURE_PLACEMENT) select 0);
+	_distance = ((_var select CTI_STRUCTURE_PLACEMENT) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
 };
 
 _position = _factory modelToWorld [(sin _direction * _distance), (cos _direction * _distance), 0];

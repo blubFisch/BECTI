@@ -88,10 +88,10 @@ if !(_model isKindOf "Man") then { //--- Add the vehicle crew cost if applicable
 	
 	_var_crew_classname = missionNamespace getVariable _crew;
 	if !(isNil '_var_crew_classname') then {
-		for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select 2) } };
+		for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select CTI_UNIT_PRICE) } };
 		
 		if (_veh_infos select 3) then { //--- Turrets
-			{ if (count _x == 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var_classname select CTI_UNIT_TURRETS);
+			{ if (count _x == 1) then { _cost = _cost + (_var_crew_classname select CTI_UNIT_PRICE) } } forEach (_var_classname select CTI_UNIT_TURRETS);
 		};
 	};
 };
@@ -129,9 +129,9 @@ if !(isNil {_factory getVariable "cti_large_fob"}) then {
 
 _var = missionNamespace getVariable [format ["CTI_%1_%2", CTI_P_SideJoined, _factory getVariable ["cti_structure_type", ""]], []];
 if (count _var > 0) then {
-	_direction = 360 - ((_var select 4) select 0);
-	_distance = ((_var select 4) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
-	_factory_label = (_var select 0) select 1;
+	_direction = 360 - ((_var select CTI_STRUCTURE_PLACEMENT) select 0);
+	_distance = ((_var select CTI_STRUCTURE_PLACEMENT) select 1) + (_var_classname select CTI_UNIT_DISTANCE);
+	_factory_label = (_var select CTI_STRUCTURE_LABELS) select 1;
 };
 
 _position = _factory modelToWorld [(sin _direction * _distance), (cos _direction * _distance), 0];
@@ -144,10 +144,6 @@ _units = [];
 if (_model isKindOf "Man") then {
 	_vehicle = [_model, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit;
 	_units pushBack _vehicle;
-	if (_model == missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, "Crew"] || 
-		_model == missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, "Pilot"]) then {
-		//_vehicle call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
-	};
 } else {
 	_vehicle = [_model, _position, _direction + getDir _factory, CTI_P_SideID, (_veh_infos select 4), true, true] call CTI_CO_FNC_CreateVehicle;
 	
@@ -162,7 +158,6 @@ if (_model isKindOf "Man") then {
 		
 		if (_veh_infos select 0) then {
 			_unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit;
-			//_unit call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
 			_unit moveInDriver _vehicle;
 			_units pushBack _unit;
 		};
@@ -170,7 +165,6 @@ if (_model isKindOf "Man") then {
 		{
 			if (count _x == 1 && _veh_infos select 3) then {
 				_unit = [_crew, group player, _position, CTI_P_SideID, _net] call CTI_CO_FNC_CreateUnit;
-				//_unit call FNC_AdjustPlayerCrewSkill; skill now adjusted via barracks
 				_unit moveInTurret [_vehicle, (_x select 0)];
 				_units pushBack _unit;
 			}; //--- Turret
@@ -203,6 +197,15 @@ if (_model isKindOf "Man") then {
 	_x setVariable ["cti_ai_order", CTI_ORDER_CLIENT_NONE];
 	_x setVariable ["cti_ai_order_pos", [0,0]];
 } forEach _units;
+
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [_units, true];
+	} else {
+		[ADMIN_ZEUS, _units] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+};
 
 if (_script != "" && alive _vehicle) then {
 	[_vehicle, CTI_P_SideJoined, _script] spawn CTI_CO_FNC_InitializeCustomVehicle;

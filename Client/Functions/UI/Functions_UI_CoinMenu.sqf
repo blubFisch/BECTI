@@ -51,9 +51,9 @@ CTI_Coin_LoadSubMenu = {
 		
 		{
 			_info = missionNamespace getVariable _x;
-			if (call (_info select 6)) then { //--- Make sure that the structure match it's present condition
-				_items pushBack format["%1  -  S%2", (_info select 0) select 1, _info select 2];
-				_itemEnabled pushBack (if (_supply >= _info select 2) then {1} else {0});
+			if (call (_info select CTI_STRUCTURE_CONDITION)) then { //--- Make sure that the structure match it's present condition
+				_items pushBack format["%1  -  S%2", (_info select CTI_STRUCTURE_LABELS) select 1, _info select CTI_STRUCTURE_PRICE];
+				_itemEnabled pushBack (if (_supply >= _info select CTI_STRUCTURE_PRICE) then {1} else {0});
 				_itemVariable pushBack _x;
 			};
 		} forEach (missionNamespace getVariable format ["CTI_%1_STRUCTURES", CTI_P_SideJoined]);
@@ -92,8 +92,8 @@ CTI_Coin_LoadSubMenu = {
 						_price = (_info select 2);
 						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'RepairTruck') then {_price = ((_info select 2) * CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT)};
 						if ((missionNamespace getVariable "CTI_COIN_SOURCE") == 'DefenseTruck') then {_price = ((_info select 2) * CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT)};
-						_sub_items pushBack format["%1  -  $%2", _info select 0, _price];
-						_sub_itemEnabled pushBack (if (_funds >= _price) then {1} else {0});
+						_sub_items pushBack format["%1  -  $%2", _info select CTI_DEFENSE_LABEL, _info select CTI_DEFENSE_PRICE];
+						_sub_itemEnabled pushBack (if (_funds >= _info select CTI_DEFENSE_PRICE) then {1} else {0});
 						_sub_itemVariable pushBack _x;
 					};
 				};
@@ -127,15 +127,16 @@ CTI_Coin_UpdateItemLabel = {
 	};
 };
 
+//--- Check if a defense may be placed at it's given position
 CTI_Coin_DefenseCanBePlaced = {
 	_preview = _this;
 	
 	_valid = true;
 	
-	if !((CTI_COIN_PARAM select 7) isEqualTo []) then { //--- Check if the defense can be placed according to the blacklist
+	if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- Check if the defense can be placed according to the blacklist
 		{
 			if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
-		} forEach (CTI_COIN_PARAM select 7);
+		} forEach (CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST);
 	};
 	
 	_valid
@@ -157,8 +158,8 @@ CTI_Coin_UpdatePreview = {
 				_color = CTI_COIN_COLOR_INVALID;
 			} else {
 				if (CTI_COIN_PARAM_KIND == "DEFENSES") then {
-					if !((CTI_COIN_PARAM select 7) isEqualTo []) then { //--- A blacklist is specified
-						if ((CTI_COIN_PARAM select 7) isEqualTo ["*"]) then { //--- If a wildcard is specified, treat the defense as a structure
+					if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- A blacklist is specified
+						if ((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo ["*"]) then { //--- If a wildcard is specified, treat the defense as a structure
 							if !(_preview call CTI_Coin_PreviewSurfaceIsValid) then {_color = CTI_COIN_COLOR_INVALID};
 						} else { //--- A Grain-based blacklist is specified
 							if !(_preview call CTI_Coin_DefenseCanBePlaced) then {_color = CTI_COIN_COLOR_INVALID};
@@ -187,6 +188,8 @@ CTI_Coin_UpdatePreview = {
 		(_color) call CTI_Coin_UpdateItemLabel;
 	};
 };
+
+//--- Check if the preview's surface is valid
 CTI_Coin_PreviewSurfaceIsValid = {
 	private ["_isValid", "_preview"];
 	
@@ -281,6 +284,7 @@ CTI_Coin_OnMouseButtonDown = {
 	};
 };
 
+//--- Update the base area limits for CoIn menu
 CTI_Coin_UpdateBaseAreaLimits = {
 	private ["_position", "_valid"];
 	_position = _this;
@@ -506,9 +510,9 @@ CTI_Coin_OnBuildingSold = {
 
 				_var = missionNamespace getVariable [format["CTI_%1_%2", CTI_P_SideJoined, typeOf _nearest], []];
 				if !(_var isEqualTo []) then {
-					_refund = round((_var select 2) * CTI_BASE_DEFENSES_SOLD_COEF);
+					_refund = round((_var select CTI_STRUCTURE_PRICE) * CTI_BASE_DEFENSES_SOLD_COEF);
 					(_refund) call CTI_CL_FNC_ChangePlayerFunds;
-					["defense-sold", [_var select 0, _refund]] call CTI_CL_FNC_DisplayMessage
+					["defense-sold", [_var select CTI_STRUCTURE_LABELS, _refund]] call CTI_CL_FNC_DisplayMessage;
 				};
 				
 				//--- TODO: if !local, delete where the owner matches

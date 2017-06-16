@@ -29,7 +29,7 @@ _structure = _this select 0;
 _var = _this select 1;
 _side = _this select 2;
 
-switch ((_var select 0) select 0) do {
+switch ((_var select CTI_STRUCTURE_LABELS) select 0) do {
 	case CTI_BARRACKS: {
 		//--- Handle the nearby statics
 		if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {
