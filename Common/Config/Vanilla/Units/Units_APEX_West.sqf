@@ -1013,7 +1013,7 @@ _g pushBack "Tropic";
 _c pushBack 'B_T_MBT_01_arty_F';
 _p pushBack '';
 _n pushBack ["%1 (Pacific)"];
-_o pushBack 1750000;
+_o pushBack 175000;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
