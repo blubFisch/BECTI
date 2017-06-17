@@ -44,6 +44,7 @@ _g = []; //--- Filter by Camo
 
 //--- Infantry R - Theme: Cost 200+(BLx100)+500(GL/Auto/AA/ATGM)
 
+//--- MSV EMR
 _c pushBack 'rhs_msv_emr_rifleman';
 _p pushBack '';
 _n pushBack '0- Rifleman (AK74M)'; 
@@ -53,7 +54,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_aa';
 _p pushBack '';
@@ -64,7 +65,7 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_arifleman';
 _p pushBack '';
@@ -75,7 +76,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_at';
 _p pushBack '';
@@ -86,7 +87,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_combatcrew';
 _p pushBack '';
@@ -97,7 +98,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_LAT';
 _p pushBack '';
@@ -108,7 +109,7 @@ _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_RShG2';
 _p pushBack '';
@@ -119,7 +120,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_engineer';
 _p pushBack '';
@@ -130,7 +131,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_grenadier';
 _p pushBack '';
@@ -141,7 +142,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_medic';
 _p pushBack '';
@@ -152,7 +153,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_pilot';
 _p pushBack '';
@@ -163,7 +164,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_marksman';
 _p pushBack '';
@@ -174,7 +175,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_junior_sergeant';
 _p pushBack '';
@@ -185,7 +186,7 @@ _u pushBack 1;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_sergeant';
 _p pushBack '';
@@ -196,7 +197,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
 
 _c pushBack 'rhs_msv_emr_officer';
 _p pushBack '';
@@ -207,7 +208,1191 @@ _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_crew';
+_p pushBack '';
+_n pushBack '3- Crew'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_armoredcrew';
+_p pushBack '';
+_n pushBack '3- Armored Crew'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_crew_commander';
+_p pushBack '';
+_n pushBack '3- Crew Commander'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_driver';
+_p pushBack '';
+_n pushBack '3- Driver'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_driver_armored';
+_p pushBack '';
+_n pushBack '3- Armored Driver'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_efreitor';
+_p pushBack '';
+_n pushBack '3- Efreitor'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_grenadier_rpg';
+_p pushBack '';
+_n pushBack '3- Grenadier RPG'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_strelok_rpg_assist';
+_p pushBack '';
+_n pushBack '3- RPG Assist'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_machinegunner';
+_p pushBack '';
+_n pushBack '3- Machinegunner'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_machinegunner_assistant';
+_p pushBack '';
+_n pushBack '3- Machinegunner Assist'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+_c pushBack 'rhs_msv_emr_officer_armored';
+_p pushBack '';
+_n pushBack '3- Officer Armored'; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Digi";
+
+// MSV Flora
+
+_c pushBack 'rhs_msv_aa';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_at';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_arifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_driver';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_crew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_armoredcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_machinegunner_assistant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_officer_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_combatcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_grenadier';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_crew_commander';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_driver_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_RShG2';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_efreitor';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_LAT';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_engineer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_grenadier_rpg';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_strelok_rpg_assist';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_junior_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_machinegunner';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_medic';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_officer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_rifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+_c pushBack 'rhs_msv_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Tropic";
+
+// EMR Desert
+
+_c pushBack 'rhs_vdv_des_aa';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_at';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_arifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_crew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_armoredcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_combatcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_crew_commander';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_driver';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_driver_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_efreitor';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_engineer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_machinegunner';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_marksman_asval';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_officer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_officer_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_rifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_rifleman_lite';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_LAT';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_RShG2';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_grenadier_rpg';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_strelok_rpg_assist';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_junior_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_machinegunner_assistant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_medic';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_grenadier';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+_c pushBack 'rhs_vdv_des_rifleman_asval';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Coyote";
+
+// VDV Mountain Flora
+
+_c pushBack 'rhs_vdv_mflora_aa';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_at';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_crew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_efreitor';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_machinegunner_assistant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_armoredcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_combatcrew';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_crew_commander';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_driver_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_driver';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_engineer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 600;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_grenadier_rpg';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_strelok_rpg_assist';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_junior_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_machinegunner';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_medic';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_officer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_officer_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_rifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_rifleman_lite';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_LAT';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_RShG2';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vdv_mflora_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 250;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Mountain Flora";
+
+_c pushBack 'rhs_vmf_recon_arifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_efreitor';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_machinegunner_assistant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_marksman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 1000;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_marksman_vss';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_medic';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_officer';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_officer_armored';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 750;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 200;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_akms';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_l';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_asval';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_grenadier';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_lat';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_scout_akm';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_rifleman_scout';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 400;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_grenadier_scout';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_arifleman_scout';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 350;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
+_c pushBack 'rhs_vmf_recon_sergeant';
+_p pushBack '';
+_n pushBack ''; 
+_o pushBack 300;
+_t pushBack 5;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_BARRACKS;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Green";
+
 
 //--- Light Vehicles Theme: 500+(LFLx250)+500(WpnSys/Armored)
 
@@ -359,7 +1544,7 @@ _p pushBack '';
 _n pushBack (format ["0- GAZ-66-AP-2 Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
 _o pushBack 6000;
 _t pushBack 30;
-_u pushBack 0;
+_u pushBack 1;
 _f pushBack CTI_FACTORY_LIGHT;
 _s pushBack "service-medic";
 _d pushBack 10;
@@ -398,17 +1583,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'rhs_btr80_msv';
-_p pushBack '';
-_n pushBack 'BTR-80';
-_o pushBack 2500;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
 _c pushBack 'rhs_gaz66_zu23_msv';
 _p pushBack '';
 _n pushBack '2- GAZ-66 (Zu-23)';
@@ -442,32 +1616,10 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'RHS_BM21_MSV_01';
-_p pushBack '';
-_n pushBack 'BM-21';
-_o pushBack 140000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
 _c pushBack 'rhs_9k79';
 _p pushBack '';
 _n pushBack '9P129-1M (HE Warhead)';
 _o pushBack 120000;
-_t pushBack 30;
-_u pushBack 5;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
-_c pushBack 'rhs_9k79_K';
-_p pushBack '';
-_n pushBack '9P129-1M (Cluster Warhead)';
-_o pushBack 150000;
 _t pushBack 30;
 _u pushBack 5;
 _f pushBack CTI_FACTORY_LIGHT;
@@ -781,17 +1933,6 @@ _c pushBack 'RHS_BM21_MSV_01';
 _p pushBack '';
 _n pushBack 'BM-21 (MLRS)';
 _o pushBack 175000;
-_t pushBack 30;
-_u pushBack 4;
-_f pushBack CTI_FACTORY_HEAVY;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
-
-_c pushBack 'rhs_9k79';
-_p pushBack '';
-_n pushBack '9P129-1M (HE Warhead)';
-_o pushBack 125000;
 _t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_HEAVY;
@@ -1115,7 +2256,7 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'RHS_T50_vvs_055';
+_c pushBack 'RHS_T50_vvs_blueonblue';
 _p pushBack '';
 _n pushBack 'Sukhoi T-50 (obr 2013)';
 _o pushBack 90000;
@@ -1183,16 +2324,5 @@ _g pushBack "";
 
 
 //--- Naval Vehicles
-//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
-_c pushBack 'rhsusf_mkvsoc';
-_p pushBack '';
-_n pushBack 'Sppedboat - GMG, HMG, GAU';
-_o pushBack 5000;
-_t pushBack 25;
-_u pushBack 2;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 5;
-_g pushBack "";
 
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

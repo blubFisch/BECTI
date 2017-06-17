@@ -54,7 +54,7 @@ _g = []; //--- Filter by Camo
 
 //--- Air Vehicles
 
-_c pushBack 'B_Heli_Transport_03_unarmed_F'; 
+_c pushBack 'B_Heli_Transport_03_unarmed_F';
 _p pushBack '';
 _n pushBack (format ["HURON Heavy Airlift (unarmed)"]);
 _o pushBack 12750;
@@ -63,9 +63,9 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
-_c pushBack 'B_Heli_Transport_03_black_F'; 
+_c pushBack 'B_Heli_Transport_03_black_F';
 _p pushBack '';
 _n pushBack (format ["HURON Heavy Airlift (black)"]);
 _o pushBack 12750;
@@ -74,9 +74,9 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Black";
 
-_c pushBack 'B_Heli_Transport_03_unarmed_green_F'; 
+_c pushBack 'B_Heli_Transport_03_unarmed_green_F';
 _p pushBack '';
 _n pushBack (format ["HURON Heavy Airlift (green)"]);
 _o pushBack 12750;
@@ -85,9 +85,9 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Green";
 
-_c pushBack 'B_Heli_Transport_03_F'; 
+_c pushBack 'B_Heli_Transport_03_F';
 _p pushBack '';
 _n pushBack (format ["HURON Heavy Airlift"]);
 _o pushBack 12750;
@@ -96,7 +96,7 @@ _u pushBack 2;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 0;
-_g pushBack "";
+_g pushBack "Green";
 
 //--- Naval Vehicles
 

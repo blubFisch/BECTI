@@ -43,7 +43,8 @@ _d = []; //--- Extra Distance (From Factory)
 _g = []; //--- Filter by Camo
 
 //--- Infantry
-
+			
+			
 //--- Light Vehicles
 
 //--- Heavy Vehicles
@@ -80,11 +81,67 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
+_c pushBack 'ofps_rhs_t80um';	
+_p pushBack '';
+_n pushBack 'T-80UM-1 (ofps)';  
+_o pushBack 26500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'ofps_rhs_t90_tv';	
+_p pushBack '';
+_n pushBack 'T-90 (ofps)';  
+_o pushBack 26500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'ofps_rhs_t90a_tv';	
+_p pushBack '';
+_n pushBack 'T-90a (ofps)';  
+_o pushBack 26500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
 //--- Repair Vehicles
 
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+
+_c pushBack 'ofps_rhs_mi28n_vvs';
+_p pushBack '';
+_n pushBack 'Mi-28 ';
+_o pushBack 27500;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+_g pushBack "";
+
+_c pushBack 'ofps_rhs_mi28n_s13_vvsc';
+_p pushBack '';
+_n pushBack 'Mi-28 s13';
+_o pushBack 27500;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 10;
+_g pushBack "";
+			
 _c pushBack 'ofps_RHS_Mi24V_vvsc';
 _p pushBack '';
 _n pushBack 'Mi-24 (CAS)';

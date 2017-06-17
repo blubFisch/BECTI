@@ -46,7 +46,51 @@ _g = []; //--- Filter by Camo
 
 //--- Light Vehicles
 
+_c pushBack 'OFPS_S_M1133_MEV';
+_p pushBack '';
+_n pushBack (format ["Mobile Respawn - Range %1 m",CTI_RESPAWN_MOBILE_RANGE]);
+_o pushBack 5000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "service-medic";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'OFPS_S_M1126_HMG';
+_p pushBack '';
+_n pushBack 'Stryker MG (Snow)';
+_o pushBack 2000;
+_t pushBack 10;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
 //--- Heavy Vehicles
+
+_c pushBack 'OFPS_S_M1A1';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 20000;
+_t pushBack 20;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
+
+_c pushBack 'OFPS_S_M2';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 8300;
+_t pushBack 20;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "";
 
 //--- Repair Vehicles
 

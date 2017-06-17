@@ -174,7 +174,7 @@ if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3 ) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************
+		//USA CUP (ACU)*********************
 		_u pushBack 'CUP_B_US_Soldier';
 		_u pushBack 'CUP_B_US_Soldier_AA';
 		_u pushBack 'CUP_B_US_Crew';
@@ -183,8 +183,30 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_US_Soldier_GL';
 		_u pushBack 'CUP_B_US_Medic';
 		_u pushBack 'CUP_B_US_Pilot';
-		_u pushBack 'CUP_B_US_Sniper_M107';		
-		//Russia CUP (Woodland)*********************	
+		_u pushBack 'CUP_B_US_Sniper_M107';
+		_u pushBack 'CUP_B_US_Soldier_AAT';
+		_u pushBack 'CUP_B_US_Soldier_AHAT';
+		_u pushBack 'CUP_B_US_Soldier_AAR';
+		_u pushBack 'CUP_B_US_Soldier_AMG';
+		_u pushBack 'CUP_B_US_Soldier_AR';
+		_u pushBack 'CUP_B_US_Engineer';
+		_u pushBack 'CUP_B_US_Soldier_Engineer_EOD';
+		_u pushBack 'CUP_B_US_Soldier_MG';
+		_u pushBack 'CUP_B_US_Soldier_Marksman';
+		_u pushBack 'CUP_B_US_Medic';
+		_u pushBack 'CUP_B_US_Officer';
+		_u pushBack 'CUP_B_US_Pilot_Light';
+		_u pushBack 'CUP_B_US_Soldier_ACOG';
+		_u pushBack 'CUP_B_US_Soldier_LAT';
+		_u pushBack 'CUP_B_US_Soldier_Light';
+		_u pushBack 'CUP_B_US_Soldier_Backpack';
+		_u pushBack 'CUP_B_US_Soldier_Engineer_Sapper';
+		_u pushBack 'CUP_B_US_Sniper_M110_TWS';
+		_u pushBack 'CUP_B_US_Spotter';
+		_u pushBack 'CUP_B_US_Soldier_SL';
+		_u pushBack 'CUP_B_US_Soldier_TL';
+		_u pushBack 'CUP_B_US_Soldier_UAV';
+		//USMC CUP (Woodland)*********************	
 		_u pushBack 'CUP_B_USMC_Soldier';
 		_u pushBack 'CUP_B_USMC_Soldier_MG';
 		_u pushBack 'CUP_B_USMC_Crew';
@@ -196,8 +218,109 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_USMC_Soldier_Marksman';
 		_u pushBack 'CUP_B_USMC_Sniper_M107';
 		_u pushBack 'CUP_B_USMC_Soldier_AA';
-		_u pushBack 'CUP_B_USMC_Soldier_AT';		
-		_u pushBack 'CUP_B_USMC_Soldier_HAT';		
+		_u pushBack 'CUP_B_USMC_Soldier_AT';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT';
+		_u pushBack 'CUP_B_USMC_Soldier_AR';
+		_u pushBack 'CUP_B_USMC_Soldier_TL';
+		_u pushBack 'CUP_B_USMC_Officer';
+		_u pushBack 'CUP_B_USMC_SpecOps_SD';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT';
+		_u pushBack 'CUP_B_USMC_SpecOps';
+		_u pushBack 'CUP_B_USMC_Sniper_M40A3';
+		_u pushBack 'CUP_B_USMC_Soldier_Light';
+		_u pushBack 'CUP_B_USMC_Soldier_SL';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV';
+		//FROG Man Woodland (Arid)*********************
+		_u pushBack 'CUP_B_USMC_Soldier_AA_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_AT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_AR_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Engineer_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_TL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_GL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_MG_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_RTO_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_Light_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_SpecOps_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_SL_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Medic_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Crewman_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Soldier_Marksman_FROG_WDL';
+		_u pushBack 'CUP_B_USMC_Officer_FROG_WDL';
+		//FROG man (Desert)*********************
+		_u pushBack 'CUP_B_USMC_Soldier_AA_FROG_DES';
+		_u pushBack 'CUP_B_USMC_SpecOps_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_HAT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_AT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Medic_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Engineer_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_TL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_AR_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Crewman_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_Marksman_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_GL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_Light_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_MG_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_LAT_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Officer_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_RTO_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_SL_FROG_DES';
+		_u pushBack 'CUP_B_USMC_Soldier_UAV_FROG_DES';
+		//Force Rcon (Desert)*********************
+		_u pushBack 'CUP_B_FR_Soldier_Assault_GL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Assault_DES';
+		_u pushBack 'CUP_B_FR_Commander_DES';
+		_u pushBack 'CUP_B_FR_Story_Cooper_DES';
+		_u pushBack 'CUP_B_FR_Medic_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Exp_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Operator_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Light_DES';
+		_u pushBack 'CUP_B_FR_Soldier_GL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_AR_DES';
+		_u pushBack 'CUP_B_FR_Soldier_Marksman_DES';
+		_u pushBack 'CUP_B_FR_Story_Miles_DES';
+		_u pushBack 'CUP_B_FR_Story_OHara_DES';
+		_u pushBack 'CUP_B_FR_Story_Rodriguez_DES';
+		_u pushBack 'CUP_B_FR_Saboteur_DES';
+		_u pushBack 'CUP_B_FR_Story_Sykes_DES';
+		_u pushBack 'CUP_B_FR_Soldier_TL_DES';
+		_u pushBack 'CUP_B_FR_Soldier_UAV_DES';
+		//Force Recon (Woodland)*********************
+		_u pushBack 'CUP_B_FR_Soldier_Assault_GL';
+		_u pushBack 'CUP_B_FR_Soldier_Assault';
+		_u pushBack 'CUP_B_FR_Commander';
+		_u pushBack 'CUP_B_FR_Story_Cooper';
+		_u pushBack 'CUP_B_FR_Medic';
+		_u pushBack 'CUP_B_FR_Soldier_Exp';
+		_u pushBack 'CUP_B_FR_Soldier_Operator';
+		_u pushBack 'CUP_B_FR_Soldier_Light';
+		_u pushBack 'CUP_B_FR_Soldier_GL';
+		_u pushBack 'CUP_B_FR_Soldier_AR';
+		_u pushBack 'CUP_B_FR_Soldier_Marksman';
+		_u pushBack 'CUP_B_FR_Story_Miles';
+		_u pushBack 'CUP_B_FR_Story_OHara';
+		_u pushBack 'CUP_B_FR_Story_Rodriguez';
+		_u pushBack 'CUP_B_FR_Saboteur';
+		_u pushBack 'CUP_B_FR_Story_Sykes';
+		_u pushBack 'CUP_B_FR_Soldier_TL';
+		_u pushBack 'CUP_B_FR_Soldier_UAV';
+		//--- USA MAN SF (Desert)*********************
+		_u pushBack 'CUP_B_US_SpecOps_AR';
+		_u pushBack 'CUP_B_US_SpecOps_JTAC';
+		_u pushBack 'CUP_B_US_SpecOps_MG';
+		_u pushBack 'CUP_B_US_SpecOps_M';
+		_u pushBack 'CUP_B_US_SpecOps_Medic';
+		_u pushBack 'CUP_B_US_SpecOps';
+		_u pushBack 'CUP_B_US_SpecOps_Assault';
+		_u pushBack 'CUP_B_US_SpecOps_M14';
+		_u pushBack 'CUP_B_US_SpecOps_Night';
+		_u pushBack 'CUP_B_US_SpecOps_SD';
+		_u pushBack 'CUP_B_US_SpecOps_TL';
+		_u pushBack 'CUP_B_US_SpecOps_UAV';
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {  
@@ -206,31 +329,80 @@ if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {
 };
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {  
-		//USAF RHS (Arid)*********************
-		_u pushBack 'rhsusf_army_ocp_rifleman';
-		_u pushBack 'rhsusf_army_ocp_rifleman_m16';
-		_u pushBack 'rhsusf_army_ocp_rifleman_m4';
-		_u pushBack 'rhsusf_army_ocp_aa';
-		_u pushBack 'rhsusf_army_ocp_autorifleman';
-		_u pushBack 'rhsusf_army_ocp_riflemanat';
-		_u pushBack 'rhsusf_army_ocp_combatcrewman';
-		_u pushBack 'rhsusf_army_ocp_riflemanat';
-		_u pushBack 'rhsusf_usmc_marpat_d_javelin';
-		_u pushBack 'rhsusf_army_ocp_javelin';
-		_u pushBack 'rhsusf_army_ocp_engineer';
-		_u pushBack 'rhsusf_army_ocp_explosives';
-		_u pushBack 'rhsusf_army_ocp_grenadier';
-		_u pushBack 'rhsusf_army_ocp_medic';
-		_u pushBack 'rhsusf_army_ocp_machinegunner';
-		_u pushBack 'rhsusf_army_ocp_helipilot';
-		_u pushBack 'rhsusf_army_ocp_sniper';
-		_u pushBack 'rhsusf_army_ocp_sniper_m24sws';
-		_u pushBack 'rhsusf_army_ocp_sniper_m107';
-		_u pushBack 'rhsusf_army_ocp_marksman';
-		_u pushBack 'rhsusf_army_ocp_teamleader';
-		_u pushBack 'rhsusf_army_ocp_squadleader';
-		_u pushBack 'rhsusf_army_ocp_officer';		
-		//USAF RHS (Woodland)*********************		
+		//--- Army D OEF/CP
+		_u PushBack 'rhsusf_army_ocp_rifleman_10th';
+		_u PushBack 'rhsusf_army_ocp_rifleman_1stcav';
+		_u PushBack 'rhsusf_army_ocp_aa';
+		_u PushBack 'rhsusf_army_ocp_javelin_assistant';
+		_u PushBack 'rhsusf_army_ocp_javelin';
+		_u PushBack 'rhsusf_army_ocp_rifleman_m590';
+		_u PushBack 'rhsusf_army_ocp_crewman';
+		_u PushBack 'rhsusf_army_ocp_combatcrewman';
+		_u PushBack 'rhsusf_army_ocp_driver';
+		_u PushBack 'rhsusf_army_ocp_machinegunnera';
+		_u PushBack 'rhsusf_army_ocp_marksman';
+		_u PushBack 'rhsusf_army_ocp_riflemanl';
+		_u PushBack 'rhsusf_army_ocp_riflemanat';
+		_u PushBack 'rhsusf_army_ocp_rifleman_m16';
+		_u PushBack 'rhsusf_army_ocp_uav';
+		_u PushBack 'rhsusf_army_ocp_autorifleman';
+		_u PushBack 'rhsusf_army_ocp_autoriflemana';
+		_u PushBack 'rhsusf_army_ocp_medic';
+		_u PushBack 'rhsusf_army_ocp_engineer';
+		_u PushBack 'rhsusf_army_ocp_driver_armored';
+		_u PushBack 'rhsusf_army_ocp_helicrew';
+		_u PushBack 'rhsusf_army_ocp_explosives';
+		_u PushBack 'rhsusf_army_ocp_fso';
+		_u PushBack 'rhsusf_army_ocp_grenadier';
+		_u PushBack 'rhsusf_army_ocp_helipilot';
+		_u PushBack 'rhsusf_army_ocp_jfo';
+		_u PushBack 'rhsusf_army_ocp_machinegunner';
+		_u PushBack 'rhsusf_army_ocp_officer';
+		_u PushBack 'rhsusf_army_ocp_rifleman';
+		_u PushBack 'rhsusf_army_ocp_rifleman_m4';
+		_u PushBack 'rhsusf_army_ocp_sniper';
+		_u PushBack 'rhsusf_army_ocp_sniper_m107';
+		_u PushBack 'rhsusf_army_ocp_sniper_m24sws';
+		_u PushBack 'rhsusf_army_ocp_squadleader';
+		_u PushBack 'rhsusf_army_ocp_teamleader';
+		//UCP
+		_u PushBack 'rhsusf_army_ucp_rifleman_101st';
+		_u PushBack 'rhsusf_army_ucp_rifleman_10th';
+		_u PushBack 'rhsusf_army_ucp_rifleman_1stcav';
+		_u PushBack 'rhsusf_army_ucp_rifleman_82nd';
+		_u PushBack 'rhsusf_army_ucp_aa';
+		_u PushBack 'rhsusf_army_ucp_javelin_assistant';
+		_u PushBack 'rhsusf_army_ucp_javelin';
+		_u PushBack 'rhsusf_army_ucp_autorifleman';
+		_u PushBack 'rhsusf_army_ucp_autoriflemana';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m590';
+		_u PushBack 'rhsusf_army_ucp_medic';
+		_u PushBack 'rhsusf_army_ucp_crewman';
+		_u PushBack 'rhsusf_army_ucp_combatcrewman';
+		_u PushBack 'rhsusf_army_ucp_driver';
+		_u PushBack 'rhsusf_army_ucp_driver_armored';
+		_u PushBack 'rhsusf_army_ucp_engineer';
+		_u PushBack 'rhsusf_army_ucp_explosives';
+		_u PushBack 'rhsusf_army_ucp_fso';
+		_u PushBack 'rhsusf_army_ucp_grenadier';
+		_u PushBack 'rhsusf_army_ucp_helicrew';
+		_u PushBack 'rhsusf_army_ucp_helipilot';
+		_u PushBack 'rhsusf_army_ucp_jfo';
+		_u PushBack 'rhsusf_army_ucp_machinegunner';
+		_u PushBack 'rhsusf_army_ucp_machinegunnera';
+		_u PushBack 'rhsusf_army_ucp_marksman';
+		_u PushBack 'rhsusf_army_ucp_officer';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m16';
+		_u PushBack 'rhsusf_army_ucp_sniper_m24sws';
+		_u PushBack 'rhsusf_army_ucp_teamleader';
+		_u PushBack 'rhsusf_army_ucp_uav';
+		_u PushBack 'rhsusf_army_ucp_rifleman';
+		_u PushBack 'rhsusf_army_ucp_riflemanlv';
+		_u PushBack 'rhsusf_army_ucp_riflemanat';
+		_u PushBack 'rhsusf_army_ucp_rifleman_m4';
+		_u PushBack 'rhsusf_army_ucp_sniper';
+		_u PushBack 'rhsusf_army_ucp_sniper_m107';
+		_u PushBack 'rhsusf_army_ucp_squadleader';
 };
 //------------------------------ OFPS RHS ------------------------------
 if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {  
@@ -292,9 +464,7 @@ if (CTI_VANILLA_ADDON >= 2) then {
 
 		_u pushBack 'C_Quadbike_01_F';	
 		_u pushBack "C_Van_01_transport_F";
-
-		_u pushback 'I_C_Offroad_02_unarmed_F';
-				
+	
 		_u pushBack "B_Truck_01_medical_F";
 		_u pushBack 'B_Slingload_01_Medevac_F';
 		_u pushBack "B_APC_Wheeled_01_cannon_F";
@@ -356,34 +526,25 @@ if (CTI_TANKS_ADDON >= 2) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		//Russia CUP (Arid)*********************
+		//Russia CUP (Woodland)*********************
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
-		//USMC CUP (Arid)*********************
+		//USMC CUP (Desert)*********************
 		_u pushBack 'CUP_C_SUV_CIV';			
-		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
-		_u pushBack 'CUP_B_HMMWV_M2_USMC';		
-		_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';	
-		_u pushBack 'CUP_B_HMMWV_MK19_USMC';		
-		_u pushBack 'CUP_I_SUV_Armored_ION';	
+		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';					
 		_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';		
 		_u pushBack 'CUP_B_Jackal2_GMG_GB_W';
 		_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';		
 		_u pushBack 'CUP_B_HMMWV_Crows_MK19_USA';	
 		_u pushBack 'CUP_B_MTVR_USA';				
-		_u pushBack 'CUP_B_LR_Special_CZ_W';		
-		_u pushBack 'CUP_B_HMMWV_TOW_USMC';		
+		_u pushBack 'CUP_B_LR_Special_CZ_W';			
 		_u pushBack 'CUP_B_HMMWV_Avenger_USMC';						
 		_u pushBack 'CUP_B_M1030';
 		_u pushBack 'CUP_B_TowingTractor_USMC';
 		_u pushBack 'CUP_B_Dingo_GL_CZ_Wdl';
 		_u pushBack 'CUP_B_Dingo_CZ_Wdl';
-		_u pushBack 'CUP_B_HMMWV_Ambulance_USMC';
-		_u pushBack 'CUP_B_HMMWV_Avenger_USMC';
-		_u pushBack 'CUP_B_HMMWV_Crows_M2_USA';
-		_u pushBack 'CUP_B_HMMWV_Crows_MK19_USA';
 		_u pushBack 'CUP_B_HMMWV_AGS_GPK_ACR';
 		_u pushBack 'CUP_B_HMMWV_DSHKM_GPK_ACR';
 		_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
@@ -409,7 +570,32 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_RG31_Mk19';
 		_u pushBack 'CUP_RG31_M2';
 		_u pushBack 'CUP_RG31_M2_GC';
-		_u pushBack 'CUP_RG31E_M2';		
+		_u pushBack 'CUP_RG31E_M2';
+		_u pushBack 'CUP_B_HMMWV_Unarmed_USA';
+		_u pushBack 'CUP_B_HMMWV_Ambulance_USA';
+		_u pushBack 'CUP_B_HMMWV_M2_USA';
+		_u pushBack 'CUP_B_HMMWV_MK19_USA';
+		_u pushBack 'CUP_B_HMMWV_SOV_M2_USA';
+		_u pushBack 'CUP_B_HMMWV_TOW_USA';
+		_u pushBack 'CUP_B_RG31_M2_USMC';
+		_u pushBack 'CUP_B_RG31_M2_GC_USMC';
+		_u pushBack 'CUP_B_RG31_Mk19_USMC';
+		_u pushBack 'CUP_B_M1126_ICV_M2_Desert_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Desert_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Desert';
+		_u pushBack 'CUP_B_M1133_MEV_Desert_Slat';
+		_u pushBack 'CUP_B_M1135_ATGMV_Desert_Slat';
+		_u pushBack 'CUP_B_M1128_MGS_Desert_Slat';
+		_u pushBack 'CUP_B_HMMWV_Avenger_USA';
+		_u pushBack 'CUP_B_LAV25M240_desert_USMC';
+		_u pushBack 'CUP_B_LAV25_HQ_USMC';
+		_u pushBack 'CUP_B_LAV25_HQ_desert_USMC';
+		_u pushBack 'CUP_B_M1129_MC_MK19_Desert_Slat';
+		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland_Slat';
+		_u pushBack 'CUP_B_AAV_Unarmed_USMC';
+		_u pushBack 'CUP_B_LAV25_USMC';
+		_u pushBack 'CUP_B_LAV25_desert_USMC';
+		_u pushBack 'CUP_B_RG31E_M2_USMC';
 		//USMC CUP (woodland)*********************	
 		_u pushBack 'CUP_B_Wolfhound_GMG_GB_W';
 		_u pushBack 'CUP_B_Wolfhound_HMG_GB_W';
@@ -419,7 +605,13 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_RG31_M2_OD';
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1133_MEV_Woodland';		
+		_u pushBack 'CUP_B_RG31_Mk19_OD_USMC';
+		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland_Slat';
+		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland_Slat';
+		_u pushBack 'CUP_B_M1128_MGS_Woodland_Slat';
+		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
+		_u pushBack 'CUP_B_M1133_MEV_Woodland_Slat';
+		_u pushBack 'CUP_B_M1135_ATGMV_Woodland_Slat';
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -440,7 +632,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_mrzr4_d';
 		_u pushBack 'rhsusf_m998_w_2dr';
 		_u pushBack 'rhsusf_m1025_w';
-		_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_rg33_usmc_d';
 		_u pushBack 'rhsusf_rg33_usmc_wd';
 		_u pushBack 'rhsusf_m1025_d';
@@ -454,7 +645,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_rg33_m2_usmc_wd';
 		_u pushBack 'rhsusf_M1232_M2_usarmy_wd';
 		_u pushBack 'rhsusf_M1232_Mk19_usarmy_wd';
-		_u pushBack 'rhsusf_m998_d_2dr_fulltop';
 		_u pushBack 'rhsusf_m1025_d_m2';
 		_u pushBack 'rhsusf_m1025_d_Mk19';
 		_u pushBack 'rhsusf_m998_d_2dr_fulltop';
@@ -465,7 +655,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_M1083A1P2_B_M2_d_Medical_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_d_open_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1232_usarmy_d';
-		_u pushBack 'rhsusf_M1232_usarmy_wd';
 		_u pushBack 'rhsusf_M1078A1P2_d_open_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_d_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_d_flatbed_fmtv_usarmy';
@@ -484,8 +673,6 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1078A1P2_B_wd_open_fmtv_usarmy';
-		_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
-		_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_flatbed_fmtv_usarmy';
 		_u pushBack 'rhsusf_M1083A1P2_wd_open_fmtv_usarmy';
@@ -532,11 +719,16 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//_u pushBack 'dbo_CIV_new_bike';
 		//_u pushBack 'dbo_CIV_ol_bike';
 		//NATO (arid)*********************
-
+		_u pushBack "OFPS_4WD_B";
+		_u pushBack "OFPS_STRIDER_B";
+		_u pushBack "OFPS_STRIDER_HMG_B";
+		_u pushBack "OFPS_STRIDER_GMG_B";
+		_u pushBack "OFPS_B_Truck_03_device_F";
 		//NATO (woodland)*********************
 		_u pushBack "OFPS_HUNTER";
 		_u pushBack "OFPS_HUNTER_HMG";
 		_u pushBack "OFPS_HUNTER_GMG";	
+		
 		//NATO (Winter)*********************
 		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
@@ -612,7 +804,6 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_Challenger2_NATO';		
 		_u pushBack 'CUP_B_M1128_MGS_Desert';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Desert';
-		_u pushBack 'CUP_B_M1130_CV_M2_Desert';
 		_u pushBack 'CUP_B_M1135_ATGMV_Desert';
 		_u pushBack 'CUP_B_M1128_MGS_Desert'; 
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_D';
@@ -626,41 +817,32 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_M1A1_DES_US_Army';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_DES_US_Army'; 
 		_u pushBack 'CUP_B_Challenger2_Desert_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CD_BAF';		
+		_u pushBack 'CUP_B_Challenger2_2CD_BAF';
+		_u pushBack 'CUP_B_M7Bradley_USA_D';
+		_u pushBack 'CUP_B_M270_DPICM_USA';
+		_u pushBack 'CUP_B_M270_HE_USA';
 		//USMC CUP (woodland)*********************	
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
-		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
-		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2Bradley_USA_W';
-		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
 		_u pushBack 'CUP_B_M6LineBacker_USA_W';
-		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
-		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
-		_u pushBack 'CUP_B_FV510_GB_W';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    	
 		_u pushBack 'CUP_B_M1126_ICV_M2_Woodland';
 		_u pushBack 'CUP_B_M1126_ICV_MK19_Woodland';
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_M1129_MC_MK19_Woodland';
-		_u pushBack 'CUP_B_M1130_CV_M2_Woodland';
 		_u pushBack 'CUP_B_M1133_MEV_Woodland';
 		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
 		_u pushBack 'CUP_B_M1128_MGS_Woodland';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
 		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2Bradley_USA_W';
 		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
-		_u pushBack 'CUP_B_M6LineBacker_USA_W';
 		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
 		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
 		_u pushBack 'CUP_B_FV510_GB_W';
 		_u pushBack 'CUP_B_M1A1_Woodland_US_Army';
 		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army';    
 		_u pushBack 'CUP_B_Challenger2_Woodland_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CW_BAF';			
+		_u pushBack 'CUP_B_Challenger2_2CW_BAF';
+		_u pushBack 'CUP_B_M2Bradley_USA_W';
+		
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -669,19 +851,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 		//NATO Winter CUP
 		/*_u pushBack 'OFPS_S_M2';
 		_u pushBack 'OFPS_S_M1A1'; 
-		_u pushBack 'OFPS_S_M1129_SPG';	
-		_u pushBack 'CUP_B_M1135_ATGMV_Woodland';
-		_u pushBack 'CUP_B_M1128_MGS_Woodland';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W';
-		_u pushBack 'CUP_B_FV432_Bulldog_GB_W_RWS';
-		_u pushBack 'CUP_B_M2A3Bradley_USA_W';
-		_u pushBack 'CUP_B_M6LineBacker_USA_W';
-		_u pushBack 'CUP_B_FV510_GB_W_SLAT';
-		_u pushBack 'CUP_B_MCV80_GB_W_SLAT';
-		_u pushBack 'CUP_B_FV510_GB_W';
-		_u pushBack 'CUP_B_M1A2_TUSK_MG_US_Army'; 
-	 	_u pushBack 'CUP_B_Challenger2_Snow_BAF';
-		_u pushBack 'CUP_B_Challenger2_2CS_BAF';*/		
+		_u pushBack 'OFPS_S_M1129_SPG';*/		
 };
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
@@ -724,17 +894,22 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
 		//NATO (arid)*********************
+		_u pushBack "OFPS_GORGON_B";
+		_u pushBack "OFPS_MORA_B";
+		_u pushBack "OFPS_KUMA_B";
+		_u pushBack "ofps_B_MBT_01_mlrs_base_F";
+	
 		//NATO (woodland)*********************
 		_u pushBack 'OFPS_M1A1';
         _u pushBack 'OFPS_M2';
-		_u pushBack "OFPS_MARSHALL";
-		_u pushBack "OFPS_PANTHER";
-		_u pushBack "OFPS_CHEETAH";
-		_u pushBack "OFPS_SLAMMER";
-		_u pushback "OFPS_SLAMMER_TUSK";
-		_u pushBack "OFPS_SCORCHER";
-		_u pushBack "OFPS_SANDSTORM";
-		_u pushBack "OFPS_BOBCAT";	
+		_u pushBack 'OFPS_MARSHALL';
+		_u pushBack 'OFPS_PANTHER';
+		_u pushBack 'OFPS_CHEETAH';
+		_u pushBack 'OFPS_SLAMMER';
+		_u pushback 'OFPS_SLAMMER_TUSK';
+		_u pushBack 'OFPS_SCORCHER';
+		_u pushBack 'OFPS_SANDSTORM';
+		_u pushBack 'OFPS_BOBCAT';	
 		//NATO Winter OFPS
 		/*_u pushBack 'Meaty_Marshall_Sn';		
 		_u pushBack 'Meaty_cheetah_Sn';	
@@ -796,8 +971,12 @@ if (CTI_JETS_ADDON >= 2) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
+		_u pushBack 'B_Heli_Light_01_dynamicLoadout_F';
+		_u pushBack 'B_Heli_Attack_01_dynamicLoadout_F';
+		_u pushBack 'B_Plane_CAS_01_dynamicLoadout_F';	
 		_u pushBack 'B_Plane_Fighter_01_F';
 		_u pushBack 'B_Plane_Fighter_01_Stealth_F';
+		_u pushBack 'B_UAV_05_F';
 };	
 //--------------------------------- TANKS ------------------------------
 if (CTI_TANKS_ADDON >= 2) then { 
@@ -835,12 +1014,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_F35B_AA_USMC';	
 		_u pushBack 'CUP_B_AV8B_GBU12_USMC';
 		_u pushBack 'CUP_B_AV8B_CAP_USMC';
-		_u pushBack 'CUP_B_AV8B_MK82_USMC';	
+		_u pushBack 'CUP_B_AV8B_MK82_USMC';
+		_u pushBack 'CUP_B_AV8B_AGM_USMC';
 		_u pushBack 'CUP_B_MV22_USMC_RAMPGUN';  
+		_u pushBack 'CUP_B_MV22_VIV_USMC';
 		_u pushBack 'CUP_B_AC47_Spooky_USA';	
 		_u pushBack 'CUP_C_DC3_TanoAir_CIV';
 		_u pushBack 'CUP_B_AW159_Cannon_RN_Grey';
 		_u pushBack 'CUP_B_F35B_LGB_USMC';
+		_u pushBack 'CUP_B_F35B_CAS_USMC';
 		_u pushBack 'CUP_B_AH6J_Escort_USA';
 		_u pushBack 'CUP_B_AH6J_Escort19_USA';
 		_u pushBack 'CUP_B_MH6J_USA';
@@ -934,7 +1116,13 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack 'bwi_a3_at6b_3';
 		_u pushBack 'sab_alphajet';
 		_u pushBack 'sab_alphajet2';*/
-		_u pushBack 'OFPS_BUZZA_B';
+		_u pushBack "OFPS_CAESAR_B";
+		_u pushBack "OFPS_MOHAWK_B";
+		_u pushBack "OFPS_HELLCAT_B";
+		_u pushBack "OFPS_HELLCAT_B_DYNAMIC";
+		_u pushBack "OFPS_BUZZA_B";
+		_u pushBack "OFPS_BUZZA_B_DYNAMIC";
+		_u pushBack "OFPS_GRYPHON_B";	
 		/*_u pushBack 'pook_tu953M80_CDF';
 		_u pushBack 'pook_tu95ms_CDF';
 		_u pushBack 'pook_tu95ms16_CDF';
@@ -977,9 +1165,9 @@ if (CTI_VANILLA_ADDON >= 2) then {
 		_u pushBack 'B_G_Offroad_01_repair_F';
 		_u pushBack 'B_Truck_01_Repair_F';
 
-		_u pushBack "B_Truck_01_mover_F";//FOB
-		_u pushBack "B_Truck_01_box_F";//FOB LARGE
-		_u pushBack "CTI_Salvager_West";
+		_u pushBack 'B_Truck_01_mover_F';//FOB
+		_u pushBack 'B_Truck_01_box_F';//FOB LARGE
+		_u pushBack 'CTI_Salvager_West';
 		_u pushBack 'B_Slingload_01_Repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
@@ -1013,8 +1201,12 @@ if (CTI_TANKS_ADDON >= 2) then {
 };
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
-		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		//Russia CUP (Arid)*********************			
+		_u pushBack 'CUP_B_MTVR_Refuel_USA';
+		_u pushBack 'CUP_B_MTVR_Repair_USA';
+		//Russia CUP (Woodland)*********************
+		_u pushBack 'CUP_B_MTVR_Refuel_USMC';
+		_u pushBack 'CUP_B_MTVR_Repair_USMC';
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
@@ -1064,14 +1256,14 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Truck_01_ammo_F";
+		_u pushBack 'B_Truck_01_ammo_F';
 		_u pushBack 'B_Slingload_01_Ammo_F';
 		_u pushBack 'B_Truck_01_fuel_F';
 		_u pushBack 'B_G_Van_01_fuel_F';	
-		_u pushBack "B_Truck_01_fuel_F";
+		_u pushBack 'B_Truck_01_fuel_F';
 		_u pushBack 'B_Slingload_01_Fuel_F';			
 		/*_u pushBack "Box_NATO_Wps_F";*/
-		_u pushBack "B_supplyCrate_F";		
+		_u pushBack 'B_supplyCrate_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1103,7 +1295,9 @@ if (CTI_TANKS_ADDON >= 2) then {
 //------------------------------ CUP Infantry ------------------------------
 if (CTI_CUP_UNITS_ADDON > 0) then {
 		//Russia CUP (Arid)*********************	
-		//Russia CUP (Woodland)*********************		
+		_u pushBack 'CUP_B_MTVR_Ammo_USA';
+		//Russia CUP (Woodland)*********************	
+		_u pushBack 'CUP_B_MTVR_Ammo_USMC';
 };
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
@@ -1159,8 +1353,9 @@ if (CTI_VANILLA_ADDON >= 2) then {
 
 		_u pushBack 'B_G_Boat_Transport_02_F';
 		_u pushBack 'B_SDV_01_F';
+		_u pushBack 'C_Boat_Civil_01_F';
 
-		_u pushBack "C_Boat_Civil_01_F";
+		_u pushBack 'C_Boat_Civil_01_F';
 		_u pushBack 'C_Boat_Civil_01_police_F';
 		
 		//NATO Vanilla (woodland)*********************		
@@ -1174,8 +1369,7 @@ if (CTI_HELI_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 		_u pushBack 'B_T_Boat_Armed_01_minigun_F';
@@ -1202,9 +1396,10 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';	
+		_u pushBack 'CUP_B_Seafox_USMC';
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1215,7 +1410,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
 		//USAF RHS (Arid)*********************
-		_u pushBack "rhsusf_mkvsoc";		
+		_u pushBack 'rhsusf_mkvsoc';		
 		//USAF RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -1246,24 +1441,24 @@ _u = [];
 //---Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Soldier_F";
-		_u pushBack "B_crew_F";		
+		_u pushBack 'B_Soldier_F';
+		_u pushBack 'B_crew_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
 };
 //---Vehicles
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Quadbike_01_F";
-		_u pushBack "B_G_Offroad_01_F";
-		_u pushBack "B_G_Offroad_01_armed_F";
-		_u pushBack "C_Van_01_transport_F";
-		_u pushBack "B_Truck_01_transport_F";
-		_u pushBack "C_Boat_Civil_01_F";
-		_u pushBack "B_Boat_Transport_01_F";
-		_u pushBack "B_MRAP_01_F";
-		_u pushBack "B_MRAP_01_hmg_F";
-		_u pushBack "B_G_Offroad_01_repair_F";		
+		_u pushBack 'B_Quadbike_01_F';
+		_u pushBack 'B_G_Offroad_01_F';
+		_u pushBack 'B_G_Offroad_01_armed_F';
+		_u pushBack 'C_Van_01_transport_F';
+		_u pushBack 'B_Truck_01_transport_F';
+		_u pushBack 'C_Boat_Civil_01_F';
+		_u pushBack 'B_Boat_Transport_01_F';
+		_u pushBack 'B_MRAP_01_F';
+		_u pushBack 'B_MRAP_01_hmg_F';
+		_u pushBack 'B_G_Offroad_01_repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1291,16 +1486,15 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
-		_u pushBack "B_T_Soldier_F";
-		_u pushBack "B_T_crew_F";		
+		_u pushBack 'B_T_Soldier_F';
+		_u pushBack 'B_T_crew_F';		
 };
 //---Vehicles
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'B_T_LSV_01_unarmed_F';
 		_u pushBack 'B_T_LSV_01_armed_F';
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************		
 };
@@ -1328,10 +1522,10 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_B_HMMWV_Unarmed_USMC';		
 		_u pushBack 'CUP_B_HMMWV_M2_GPK_USA';
 		_u pushBack 'CUP_B_HMMWV_MK19_USMC';	
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";
-		_u pushBack "CUP_C_Ikarus_Chernarus";		
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';
+		_u pushBack 'CUP_C_Ikarus_Chernarus';		
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1395,8 +1589,8 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//_u pushBack 'usaf_police_car2';
 		//_u pushBack 'usaf_police_offroad';	
 		//NATO (woodland)*********************
-		_u pushBack "OFPS_HUNTER";
-		_u pushBack "OFPS_HUNTER_HMG";		
+		_u pushBack 'OFPS_HUNTER';
+		_u pushBack 'OFPS_HUNTER_HMG';		
 		//NATO Winter OFPS
 		/*_u pushBack 'sfp_bv206_winter';
 		_u pushBack 'Meaty_Hunter_Sn';		
@@ -1413,11 +1607,11 @@ _u = [];
 //------------------------------ Vanilla ------------------------------
 if (CTI_VANILLA_ADDON >= 2) then {  
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Boat_Civil_01_F";
-		_u pushBack "B_Boat_Transport_01_F";
-		_u pushBack "B_Boat_Armed_01_minigun_F";
+		_u pushBack 'C_Boat_Civil_01_F';
+		_u pushBack 'B_Boat_Transport_01_F';
+		_u pushBack 'B_Boat_Armed_01_minigun_F';
 		_u pushBack 'C_Boat_Civil_01_police_F';
-		_u pushBack "B_SDV_01_F";		
+		_u pushBack 'B_SDV_01_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1429,8 +1623,7 @@ if (CTI_HELI_ADDON >= 2) then {
 //------------------------------ APEX ------------------------------
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";
-		_u pushBack "I_C_Boat_Transport_02_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 };
@@ -1454,9 +1647,9 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 //------------------------------ CUP Vehicles ------------------------------
 if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		//USMC CUP (Arid)*********************
-		_u pushBack "CUP_B_RHIB_USMC";
-		_u pushBack "CUP_B_RHIB2Turret_USMC";
-		_u pushBack "CUP_B_Zodiac_USMC";		
+		_u pushBack 'CUP_B_RHIB_USMC';
+		_u pushBack 'CUP_B_RHIB2Turret_USMC';
+		_u pushBack 'CUP_B_Zodiac_USMC';		
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ OFPS CUP ------------------------------
@@ -1494,22 +1687,22 @@ _u = [];
 //---Infantry
 if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Soldier_F";
-		_u pushBack "B_crew_F";		
+		_u pushBack 'B_Soldier_F';
+		_u pushBack 'B_crew_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
 };
 //---Vehicles
 if (CTI_VANILLA_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "B_Quadbike_01_F";
-		_u pushBack "B_G_Offroad_01_F";
-		_u pushBack "B_G_Offroad_01_armed_F";
-		_u pushBack "C_Van_01_transport_F";
-		_u pushBack "B_Truck_01_transport_F";	
-	    _u pushBack "B_MRAP_01_F";
-		_u pushBack "B_MRAP_01_hmg_F";
-		_u pushBack "B_G_Offroad_01_repair_F";		
+		_u pushBack 'B_Quadbike_01_F';
+		_u pushBack 'B_G_Offroad_01_F';
+		_u pushBack 'B_G_Offroad_01_armed_F';
+		_u pushBack 'C_Van_01_transport_F';
+		_u pushBack 'B_Truck_01_transport_F';	
+	    _u pushBack 'B_MRAP_01_F';
+		_u pushBack 'B_MRAP_01_hmg_F';
+		_u pushBack 'B_G_Offroad_01_repair_F';		
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
@@ -1536,7 +1729,7 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
 //---Vehicles
 if (CTI_APEX_ADDON >= 2) then { 
 		//NATO Vanilla (arid)*********************
-		_u pushBack "C_Scooter_Transport_01_F";		
+		_u pushBack 'C_Scooter_Transport_01_F';		
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 		_u pushBack 'B_T_LSV_01_unarmed_F';

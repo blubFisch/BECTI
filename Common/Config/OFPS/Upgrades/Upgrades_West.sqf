@@ -55,33 +55,6 @@ if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 		[500, 1000, 1500] //--- Base Defense
 	]];
 } else {
-<<<<<<< HEAD:Common/Config/Upgrades/Upgrades_East.sqf
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-    [1000,1500,3000,3500], //--- Gear
-	[1000,1500,3000,4000], //--- Barracks
-	[2000,2250,3500,4500,20000], //--- Light
-	[3500,4500,6000,8000], //--- Heavy
-	[1500,3000], //--- Naval
-	[4000,6000,8000,11000,14000], //--- Air
-	[10], //--- Air FFAR
-	[10], //--- Air DAR
-	[10], //--- Air AT
-	[10], //--- Air AA
-	[10], //--- Air CM
-	[1500,3000,4500], //--- Forward Logistics
-	[1000,2000], //--- Halo
-	[1000,1500,2000], //--- Air Radar
-	[1000,1500,2000], //--- Art Radar
-	[1000,1500,2500], //--- Respawn Range
-	[1500,2000], //--- LVOSS System
-	[2000,4000,6000,8000], //--- ERA System
-	[4000,20000], //--- Satellite
-	[40000], //--- Nuke
-	[3000,5500,8000], //--- Supply Rate
-	[3000,6000,9000,12000], //--- Base Health
-	[500,1000,5000] //--- Base Defense
-]];
-=======
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 		[1000,1500,3000,3500], //--- Gear
@@ -108,7 +81,6 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 		[3000,6000,9000,12000], //--- Base Health
 		[500,1000,5000] //--- Base Defense
 	]];
->>>>>>> Restructure:Common/Config/OFPS/Upgrades/Upgrades_West.sqf
 };
 
 if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
@@ -195,33 +167,6 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[]] //--- Base Defense
 ]];
 } else {
-<<<<<<< HEAD:Common/Config/Upgrades/Upgrades_East.sqf
-missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-	[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
-	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
-	[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
-	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2]], //--- Naval
-	[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
-	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AT
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AA
-	[[CTI_UPGRADE_AIR, 1]], //--- Air CM
-	[[CTI_UPGRADE_BARRACKS,2],[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- Towns Depots
-	[[],[CTI_UPGRADE_AIR, 1]], //--- Halo
-	[[],[],[]], //--- Air Radar
-	[[],[],[]], //--- Art Radar
-	[[],[],[]], //--- Respawn Range
-	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
-	[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
-	[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 3]], //--- Satellite
-	[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
-	[[],[],[]], //--- Supply Rate
-	[[],[],[],[]], //--- Base Health
-	[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[CTI_UPGRADE_BARRACKS, 3]] //--- Base Defense
-]];
-=======
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 		[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
@@ -248,7 +193,6 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 		[[],[],[],[]], //--- Base Health
 		[[],[],[]] //--- Base Defense
 	]];
->>>>>>> Restructure:Common/Config/OFPS/Upgrades/Upgrades_West.sqf
 };
 
 if (CTI_DEV_MODE > 0) then { 
@@ -386,10 +330,10 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
 	["LVOSS System", "<t>Enables Light Vehicle Obscuration Smoke System (LVOSS), Full 360 degree coverage.<br /><t color='#ffff00'>LVL 1</t> - Ammo 1 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 2</t> - Ammo 2 per side, Cooldown 90s </t>"], //--- LVOSS System
 	["ERA System", "<t>Enable Explosive Reactive Armor system (ERA) or Arena System for Heavy Vehicles, Tanks still vulnerable from the rear.<br /><t color='#ffff00'>LVL 1</t> - ERA Mode Ammo 1 per side, Cooldown 150s<br /><t color='#ffff00'>LVL 2</t> - ERA Mode Ammo 2 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 3</t> - ARENA Mode Ammo 3 per side, Cooldown 90s<br /><t color='#ffff00'>LVL 4</t> - ARENA Mode Ammo 4 per side, Cooldown 60s</t>"], //--- ERA System
 	["Satellite Uplink", "<t>Allows the use of the satellite camera and access to advanced intel reports. <br /><t color='#ffff00'>LVL 0</t> - Satellite Uplink building enables enemy detection near base.<br /><t color='#ffff00'>LVL 1</t> - Unlocks Base Satellite Cam and town intel.<br /><t color='#ffff00'>LVL 2</t> - Unlocks Full Satellite Cam </t>"], //--- Satellite
-	["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br />Factory Damage Range - <t color='#ffff00'>1500m</t><br />Units, Statics, Vehicles Range - <t color='#ffff00'>2000m</t><br />Air Range - <t color='#ffff00'>2500m</t><br />EMP Range - <t color='#ffff00'>2500m</t> </t>"], //--- Nuke
-	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 1.25 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 1.50 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 1.85 SV per Interval</t>"], //--- Supply Rate
+	["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br /><t color='#ffff00'>Unlocks Light 5 Upgrade which unlocks the Nuke Truck.</t></t>"], //--- Nuke
+	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 2 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 3 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 4 SV per Interval</t>"], //--- Supply Rate
 	["Base Health", "<t>Improves base structures health<br /><t color='#ffff00'>LVL 1</t> - 25% Boost </t><br /><t color='#ffff00'>LVL 2</t> - 50% Boost<br /><t color='#ffff00'>LVL 3</t> - 75% Boost <br /><t color='#ffff00'>LVL 4</t> - 100% Boost </t>"], //--- Base Health
-	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and MG.<br /><t color='#ffff00'>LVL 2</t> - Unlocks D30 and AA.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and Titan."] //--- Base defense
+	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more."] //--- Base defense
 ]];
 
 //--- Check potential missing definition.

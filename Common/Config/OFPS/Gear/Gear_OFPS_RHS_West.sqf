@@ -32,6 +32,15 @@ _g pushBack "";
 
 //------------------------------ LAUNCHERS	------------------------------
 //--- LAUNCHERS	
+_i pushBack "ofps_rhs_weap_fgm148";
+_u pushBack 3;
+_p pushBack 3000;
+_g pushBack "";
+
+_i pushBack "ofps_launch_B_Titan_short_F";
+_u pushBack 3;
+_p pushBack 3000;
+_g pushBack "";
 
 //------------------------------ EXPLOSIVES	------------------------------
 //--- EXPLOSIVES	

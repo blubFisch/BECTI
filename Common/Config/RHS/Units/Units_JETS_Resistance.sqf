@@ -53,16 +53,38 @@ _g = []; //--- Filter by Camo
 //--- Ammo Vehicles
 
 //--- Air Vehicles
-_c pushBack 'I_Plane_Fighter_04_F';
+_c pushBack 'I_Heli_light_03_dynamicLoadout_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 10500;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Digital";
+
+_c pushBack 'I_Plane_Fighter_03_dynamicLoadout_F';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 67500;
-_t pushBack 50;
+_t pushBack 30;
 _u pushBack 4;
 _f pushBack CTI_FACTORY_AIR;
 _s pushBack "";
 _d pushBack 30;
-_g pushBack "";
+_g pushBack "Digital";
+
+_c pushBack 'I_Plane_Fighter_04_F';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 67500;
+_t pushBack 30;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Digital";
 
 
 //--- Naval Vehicles

@@ -45,14 +45,188 @@ _g = []; //--- Filter by Camo
 //--- Infantry
 
 //--- Light Vehicles
+_c pushBack 'OFPS_4WD_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 300;
+_t pushBack 10;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_STRIDER_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 600;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_STRIDER_HMG_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 900;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_STRIDER_GMG_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 900;
+_t pushBack 10;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_B_Truck_03_device_F';
+_p pushBack '';
+_n pushBack '5- Nuke Truck';
+_o pushBack 80000;
+_t pushBack 25;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "nuke-truck";
+_d pushBack 0; 
+_g pushBack "Khaki";
 
 //--- Heavy Vehicles
+
+_c pushBack 'OFPS_GORGON_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 10900;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_MORA_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 10900;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'OFPS_KUMA_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 25000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
+
+_c pushBack 'ofps_B_MBT_01_mlrs_base_F';
+_p pushBack '';
+_n pushBack 'Mobile SAM';
+_o pushBack 25000;
+_t pushBack 30;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_HEAVY;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Khaki";
 
 //--- Repair Vehicles
 
 //--- Ammo Vehicles
 
 //--- Air Vehicles
+_c pushBack 'OFPS_CAESAR_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 5000;
+_t pushBack 35;
+_u pushBack 0;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_MOHAWK_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 10000;
+_t pushBack 35;
+_u pushBack 1;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_HELLCAT_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 5000;
+_t pushBack 50;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_HELLCAT_B_DYNAMIC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 20000;
+_t pushBack 50;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 0;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_BUZZA_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 15000;
+_t pushBack 50;
+_u pushBack 2;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_BUZZA_B_DYNAMIC';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 20000;
+_t pushBack 50;
+_u pushBack 3;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Grey";
+
+_c pushBack 'OFPS_GRYPHON_B';
+_p pushBack '';
+_n pushBack '';
+_o pushBack 67500;
+_t pushBack 50;
+_u pushBack 4;
+_f pushBack CTI_FACTORY_AIR;
+_s pushBack "";
+_d pushBack 30;
+_g pushBack "Grey";
 
 //--- Naval Vehicles
 

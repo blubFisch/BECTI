@@ -1220,7 +1220,7 @@ _g pushBack "Green";
 _c pushBack 'rhs_vmf_recon_marksman';
 _p pushBack '';
 _n pushBack ''; 
-_o pushBack 2000;
+_o pushBack 1000;
 _t pushBack 5;
 _u pushBack 3;
 _f pushBack CTI_FACTORY_BARRACKS;

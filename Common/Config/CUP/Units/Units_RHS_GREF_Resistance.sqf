@@ -43,7 +43,7 @@ _d = []; //--- Extra Distance (From Factory)
 _g = []; //--- Filter by Camo
 
 //--- Infantry
-_c pushBack 'rhsgref_nat_reg_rifleman_akms';
+_c pushBack 'rhsgref_nat_rifleman_akms';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 200;
@@ -98,40 +98,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'rhsgref_nat_grenadier_rpg';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 650;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_nat_grenadier_rpg';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 650;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_nat_sabeteur';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 500;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_nat_sabeteur';
+_c pushBack 'rhsgref_nat_saboteur';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 500;
@@ -164,17 +131,6 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'rhsgref_nat_machinegunner';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 400;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'rhsgref_cdf_air_pilot';
 _p pushBack '';
 _n pushBack '';
@@ -190,17 +146,6 @@ _c pushBack 'rhsgref_nat_scout';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 400;
-_t pushBack 5;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_BARRACKS;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_nat_commander';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 350;
 _t pushBack 5;
 _u pushBack 0;
 _f pushBack CTI_FACTORY_BARRACKS;
@@ -287,40 +232,7 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "";
 
-_c pushBack 'rhsgref_ins_g_ural_Zu23';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1200;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
 _c pushBack 'rhsgref_ins_g_bmd1';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 5000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_ins_g_bmd1p';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 5000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
-
-_c pushBack 'rhsgref_ins_g_bmd2';
 _p pushBack '';
 _n pushBack '';
 _o pushBack 5000;
@@ -343,17 +255,6 @@ _d pushBack 0;
 _g pushBack "";
 
 //--- APCs
-
-_c pushBack 'rhsgref_ins_g_bmd1';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 5000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "";
 
 _c pushBack 'rhsgref_ins_g_bmd1p';
 _p pushBack '';
