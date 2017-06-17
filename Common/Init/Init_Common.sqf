@@ -203,6 +203,7 @@ if (CTI_FACTION_MODE == 0) then {
 	//Mode Factories
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_East.sqf";
+	(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_Resistance.sqf";
 	//--- All modes use common base structures
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_East.sqf";
