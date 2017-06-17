@@ -5,10 +5,12 @@ Added: New AI building placement system
 Added: Vehicles will have higher priority to spawn one’s town is active
 Added: Base building respawn will not work if enemy is near 30m, for exception of MHQ
 Added: Town defence statics
-Added: MHQ damage transfer ones deployed or mobilized 
+Added: MHQ damage transfers ones deployed or mobilized 
 Added: Complete mod support restructure, with ability to mix and match on fly
 Added: Vehicle Loadouts, both Air and Land
+Added: Ability to re-texture on fly any vehicle
 Added: Filters based by camo for both Gear and Vehicles
+Added: Vanilla Revive System
 Fixed: Vehicles will not spawn in houses
 
 **1.07.2**

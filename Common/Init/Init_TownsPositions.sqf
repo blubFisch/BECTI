@@ -7,10 +7,11 @@ if (CTI_Log_Level >= CTI_Log_Debug) then {
 //--- Scan all towns
 {
 	_town_buildings = [];
-	
+	_buildings_blacklist = CTI_TOWNS_SPAWN_BUILDING_BLACKLIST;
+
 	{
 		_bpos = _x buildingPos -1;
-		if (count _bpos > 0) then {_town_buildings pushBack _x};
+		if ((count _bpos > 0) && !(typeOf _x in _buildings_blacklist)) then {_town_buildings pushBack _x};
 	} forEach (nearestObjects [_x, ["Building"], _range]);
 	
 	if (count _town_buildings > 0) then {_x setVariable ["cti_town_spawn_building", _town_buildings]};
