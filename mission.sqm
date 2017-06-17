@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=74;
 	class ItemIDProvider
 	{
-		nextID=474;
+		nextID=509;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6461.7559,238.64067,1958.5543};
-		dir[]={-0.31519386,-0.59240586,0.74142468};
-		up[]={-0.23176934,0.80563873,0.545187};
-		aside[]={0.92029327,5.113543e-008,0.39123407};
+		pos[]={2371.2141,25,4551.373};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -64,14 +64,13 @@ addons[]=
 	"A3_Structures_F_Heli_Ind_Machines",
 	"A3_Structures_F_Bootcamp_Items_Electronics",
 	"A3_Structures_F_Households_WIP",
-	"A3_Structures_F_Ind_ConcreteMixingPlant",
-	"A3_Boat_F_Jets_Carrier_01"
+	"A3_Structures_F_Ind_ConcreteMixingPlant"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=14;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -170,13 +169,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
-		{
-			className="A3_Boat_F_Jets";
-			name="Arma 3 Jets - Boats and Submersibles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 randomSeed=13186954;
@@ -213,7 +205,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=331;
+		items=363;
 		class Item0
 		{
 			dataType="Marker";
@@ -1813,7 +1805,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2015,19.225,2610};
+				position[]={2009.8849,18.936495,2616.2256};
 				angles[]={0,3.817838,0};
 			};
 			side="Empty";
@@ -1825,6 +1817,7 @@ class Mission
 			};
 			id=166;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.00018501282;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1902,7 +1895,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [LZConnor,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [LZConnor,this,[[""LZConnor_defence_0"",[""TOWN_MG""]],[""LZConnor_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=169;
@@ -1943,7 +1936,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [JayCove,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [JayCove,this,[""JayCove_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=170;
@@ -1985,7 +1978,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Girna,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Girna,this,[[""Girna_defence_0"",[""TOWN_MG""]],[""Girna_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=171;
@@ -2060,18 +2053,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3621.8799,163.77716,2862.822};
+				position[]={3621.8799,163.77715,2862.822};
 				angles[]={6.1784654,4.0419383,6.2681928};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [CampMaxwell,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [CampMaxwell,this,[[""CampMaxwell_defence_0"",[""TOWN_MG""]],[""CampMaxwell_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=173;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2108,7 +2102,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [CampTempest,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [CampTempest,this,[""CampTempest_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=177;
@@ -2306,14 +2300,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3328.3521,182.8432,4935.3496};
+				position[]={3328.3521,182.8432,4935.3501};
 				angles[]={0,1.5632739,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [TransmissionTowerBrit,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [TransmissionTowerBrit,this,[[""TransmissionTowerBrit_defence_0"",[""TOWN_MG""]],[""TransmissionTowerBrit_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=185;
@@ -2347,14 +2341,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5434.4585,81.912941,3998.7751};
-				angles[]={0,1.2323923,0};
+				position[]={5434.458,81.912933,3998.7749};
+				angles[]={0,1.2323945,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [LimeriBay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [LimeriBay,this,[""LimeriBay_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=186;
@@ -2388,14 +2382,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5093.4868,197.81723,4837.8887};
-				angles[]={0,1.1011441,0.20699136};
+				position[]={5093.4868,197.81723,4837.8892};
+				angles[]={0,1.1011456,0.20699604};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [RadioControl,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [RadioControl,this,[[""RadioControl_defence_0"",[""TOWN_MG""]],[""RadioControl_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=188;
@@ -2470,14 +2464,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4801.3818,175.95293,5901.7754};
-				angles[]={6.2432065,1.5769669,0.14154871};
+				position[]={4801.3818,175.95291,5901.7749};
+				angles[]={6.2431998,1.5769747,0.14154619};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [CampRogain,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [CampRogain,this,[[""CampRogain_defence_0"",[""TOWN_MG""]],[""CampRogain_defence_1"",[""TOWN_MG""]]]]  execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=190;
@@ -2593,18 +2587,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6387.9561,32.003674,5209.6714};
-				angles[]={0,0.92366874,0};
+				position[]={6387.9561,32.003674,5209.6709};
+				angles[]={0,0.92366314,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [KaminoFiringRange,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [KaminoFiringRange,this,[[""KaminoFiringRange_defence_0"",[""TOWN_MG""]],[""KaminoFiringRange_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=194;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.8146973e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2676,13 +2671,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4321,142.995,6843};
-				angles[]={0,5.4256186,0};
+				angles[]={0,5.4256177,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [KillFarm,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [KillFarm,this,[[""KillFarm_defence_0"",[""TOWN_MG""]],[""KillFarm_defence_1"",[""TOWN_MG""]]]]  execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=196;
@@ -2723,7 +2718,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [OutpostNorth,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [OutpostNorth,this,[""OutpostNorth_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=199;
@@ -2758,13 +2753,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4022,35.029999,5472};
-				angles[]={0,4.8001623,0};
+				angles[]={0,4.8001614,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [StorageDump,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [StorageDump,this,[""StorageDump_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=201;
@@ -2841,14 +2836,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2970.9072,33.266094,6218.4897};
-				angles[]={0,1.3963792,0};
+				position[]={2970.907,33.266098,6218.4902};
+				angles[]={0,1.3963857,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [AgiaMarina,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [AgiaMarina,this,[[""AgiaMarina_defence_0"",[""TOWN_MG""]],[""AgiaMarina_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=205;
@@ -2926,13 +2921,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2350.6851,27.077372,4584.1851};
-				angles[]={0,3.3696549,6.195919};
+				angles[]={0,3.3696549,6.1959186};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [OysterBay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [OysterBay,this,[""OysterBay_defence_0"",[""TOWN_MG""]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=209;
@@ -2967,18 +2962,17 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2181,10.23,5793};
-				angles[]={0,4.954586,0};
+				angles[]={0,4.9545884,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [AirBase,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [AirBase,this,[[""AirBase_defence_0"",[""TOWN_MG""]],[""AirBase_defence_1"",[""TOWN_MG""]],[""AirBase_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=212;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3091,14 +3085,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4225.1831,212.08533,4016.1743};
-				angles[]={0,1.3656775,0};
+				position[]={4225.1831,212.08531,4016.1741};
+				angles[]={0,1.3656852,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [AirStationMike,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [AirStationMike,this,[[""AirStationMike_defence_0"",[""TOWN_MG""]],[""AirStationMike_defence_1"",[""TOWN_MG""]],[""AirStationMike_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=216;
@@ -3133,13 +3127,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4194,213.375,4538};
-				angles[]={0,1.5432919,0};
+				angles[]={0,1.54329,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [OldOutpost,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [OldOutpost,this,[[""OldOutpost_defence_0"",[""TOWN_MG""]],[""OldOutpost_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=217;
@@ -3448,7 +3442,7 @@ class Mission
 			};
 			id=169;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030441284;
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3490,7 +3484,7 @@ class Mission
 			};
 			id=170;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430555;
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3532,7 +3526,7 @@ class Mission
 			};
 			id=172;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430317;
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3574,7 +3568,7 @@ class Mission
 			};
 			id=173;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.23042297;
+			atlOffset=0.19999695;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3616,7 +3610,6 @@ class Mission
 			};
 			id=175;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3658,7 +3651,6 @@ class Mission
 			};
 			id=178;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430794;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3700,7 +3692,6 @@ class Mission
 			};
 			id=180;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3742,7 +3733,6 @@ class Mission
 			};
 			id=182;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3784,7 +3774,6 @@ class Mission
 			};
 			id=184;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430794;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3826,7 +3815,7 @@ class Mission
 			};
 			id=186;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430555;
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3868,7 +3857,6 @@ class Mission
 			};
 			id=188;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.03042984;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3910,7 +3898,6 @@ class Mission
 			};
 			id=189;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3952,7 +3939,7 @@ class Mission
 			};
 			id=191;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430317;
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3994,7 +3981,6 @@ class Mission
 			};
 			id=193;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4036,7 +4022,6 @@ class Mission
 			};
 			id=195;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.03042984;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4078,7 +4063,7 @@ class Mission
 			};
 			id=196;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030418396;
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5077,7 +5062,7 @@ class Mission
 			};
 			id=243;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430555;
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5119,7 +5104,7 @@ class Mission
 			};
 			id=244;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.030430555;
+			atlOffset=-2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5160,7 +5145,7 @@ class Mission
 			};
 			id=245;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.37941408;
+			atlOffset=0.34898329;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5190,14 +5175,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4162.6704,46.489956,2867.144};
-				angles[]={6.134295,2.3894081,0.0049914722};
+				position[]={4162.6699,46.489956,2867.144};
+				angles[]={6.1342912,2.3894081,0.0049916417};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Tsoukalia,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Tsoukalia,this,[""Tsoukalia_defence_0"",[""TOWN_MG""]]]  execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=248;
@@ -6238,7 +6223,7 @@ class Mission
 			};
 			id=313;
 			type="Land_MilOffices_V1_F";
-			atlOffset=0.11689377;
+			atlOffset=0.035772324;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12871,42 +12856,366 @@ class Mission
 		};
 		class Item330
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6549.9619,0.00011444092,2174.4451};
-			};
-			side="Empty";
-			class Attributes
-			{
-				dynamicSimulation=1;
-			};
-			id=473;
-			type="Land_Carrier_01_base_F";
-			atlOffset=118.327;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
+			dataType="Marker";
+			position[]={3786.8889,0,7525.8369};
+			name="OutpostNorth_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=146.31599;
+			id=474;
+			atlOffset=-51.598995;
+		};
+		class Item331
+		{
+			dataType="Marker";
+			position[]={4319.499,0,6829.3159};
+			name="KillFarm_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=263.46487;
+			id=475;
+			atlOffset=-136.95232;
+		};
+		class Item332
+		{
+			dataType="Marker";
+			position[]={4344.6528,0,6584.104};
+			name="KillFarm_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=476;
+			atlOffset=-136.5589;
+		};
+		class Item333
+		{
+			dataType="Marker";
+			position[]={2868.3059,0,5820.041};
+			name="AgiaMarina_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=81.632767;
+			id=478;
+			atlOffset=-30.086109;
+		};
+		class Item334
+		{
+			dataType="Marker";
+			position[]={2995.6121,0,6220.2148};
+			name="AgiaMarina_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=173.35327;
+			id=479;
+			atlOffset=-27.48181;
+		};
+		class Item335
+		{
+			dataType="Marker";
+			position[]={2145.7971,0,5436.814};
+			name="AirBase_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=4.1009574;
+			id=480;
+			atlOffset=-7.7600555;
+		};
+		class Item336
+		{
+			dataType="Marker";
+			position[]={2216.4551,5.5848846,5804.3887};
+			name="AirBase_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=109.42149;
+			id=481;
+			atlOffset=-4.196167e-005;
+		};
+		class Item337
+		{
+			dataType="Marker";
+			position[]={1862.249,5.4999514,5592.0781};
+			name="AirBase_Defence_2";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=88.198845;
+			id=482;
+			atlOffset=-4.863739e-005;
+		};
+		class Item338
+		{
+			dataType="Marker";
+			position[]={3273.3579,0,4947.563};
+			name="TransmissionTowerBrit_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=483;
+			atlOffset=-180.30519;
+		};
+		class Item339
+		{
+			dataType="Marker";
+			position[]={3756.8667,213.4957,4892.0854};
+			name="TransmissionTowerBrit_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.93988;
+			id=484;
+			atlOffset=-0.00019836426;
+		};
+		class Item340
+		{
+			dataType="Marker";
+			position[]={4783.918,0,5898.9741};
+			name="CampRogain_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=272.21793;
+			id=485;
+			atlOffset=-167.81464;
+		};
+		class Item341
+		{
+			dataType="Marker";
+			position[]={5174.9316,162.78769,5776.6519};
+			name="CampRogain_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=76.094536;
+			id=486;
+			atlOffset=-6.1035156e-005;
+		};
+		class Item342
+		{
+			dataType="Marker";
+			position[]={6376.6929,0,5201.9399};
+			name="KaminoFiringRange_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=487;
+			atlOffset=-26.818083;
+		};
+		class Item343
+		{
+			dataType="Marker";
+			position[]={6540.2466,22.907499,5323.6377};
+			name="KaminoFiringRange_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.93988;
+			id=488;
+			atlOffset=-3.4332275e-005;
+		};
+		class Item344
+		{
+			dataType="Marker";
+			position[]={5333.75,0,5203.4048};
+			name="RadioControl_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=345.93402;
+			id=489;
+			atlOffset=-224.36757;
+		};
+		class Item345
+		{
+			dataType="Marker";
+			position[]={5072.0874,187.87091,4833.2632};
+			name="RadioControl_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=185.4164;
+			id=490;
+			atlOffset=-0.00015258789;
+		};
+		class Item346
+		{
+			dataType="Marker";
+			position[]={4472.271,0,4330.4458};
+			name="OldOutpost_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=491;
+			atlOffset=-192.86389;
+		};
+		class Item347
+		{
+			dataType="Marker";
+			position[]={4207.7515,208.07964,4512.9307};
+			name="OldOutpost_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.93988;
+			id=492;
+			atlOffset=-4.5776367e-005;
+		};
+		class Item348
+		{
+			dataType="Marker";
+			position[]={4216.7671,0,4009.644};
+			name="AirStationMike_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=80.962814;
+			id=493;
+			atlOffset=-205.92424;
+		};
+		class Item349
+		{
+			dataType="Marker";
+			position[]={4345.8018,227.58034,3644.8064};
+			name="AirStationMike_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=243.32376;
+			id=495;
+			atlOffset=-0.00019836426;
+		};
+		class Item350
+		{
+			dataType="Marker";
+			position[]={4430.6982,221.22325,3951.3479};
+			name="AirStationMike_Defence_2";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=18.799387;
+			id=496;
+			atlOffset=1.5258789e-005;
+		};
+		class Item351
+		{
+			dataType="Marker";
+			position[]={4197.2261,0,2878.874};
+			name="Tsoukalia_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=252.21893;
+			id=497;
+			atlOffset=-52.617653;
+		};
+		class Item352
+		{
+			dataType="Marker";
+			position[]={5421.4009,0,3984.47};
+			name="LimeriBay_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=498;
+			atlOffset=-74.654457;
+		};
+		class Item353
+		{
+			dataType="Marker";
+			position[]={4036.2119,0,5494.835};
+			name="StorageDump_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=226.9399;
+			id=499;
+			atlOffset=-35.61834;
+		};
+		class Item354
+		{
+			dataType="Marker";
+			position[]={2371.2141,0,4576.373};
+			name="OysterBay_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=103.633;
+			id=500;
+			atlOffset=-19.430529;
+		};
+		class Item355
+		{
+			dataType="Marker";
+			position[]={2288.292,0,3668.0901};
+			name="CampTempest_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=83.942955;
+			id=501;
+			atlOffset=-23.055256;
+		};
+		class Item356
+		{
+			dataType="Marker";
+			position[]={1991.202,0,2595.0439};
+			name="Girna_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=180.58174;
+			id=502;
+			atlOffset=-15.825592;
+		};
+		class Item357
+		{
+			dataType="Marker";
+			position[]={1990.0811,0,2838.7561};
+			name="Girna_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=127.997;
+			id=503;
+			atlOffset=-24.825211;
+		};
+		class Item358
+		{
+			dataType="Marker";
+			position[]={3650.6411,0,2872.01};
+			name="CampMaxwell_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=46.524994;
+			id=504;
+			atlOffset=-156.88814;
+		};
+		class Item359
+		{
+			dataType="Marker";
+			position[]={3218.4087,203.76953,2718.6567};
+			name="CampMaxwell_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=153.59351;
+			id=505;
+			atlOffset=3.2595367;
+		};
+		class Item360
+		{
+			dataType="Marker";
+			position[]={3045.4309,0,2124.2451};
+			name="LZConnor_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=56.811974;
+			id=506;
+			atlOffset=-167.21246;
+		};
+		class Item361
+		{
+			dataType="Marker";
+			position[]={2778.342,145.21562,1775.4937};
+			name="LZConnor_Defence_1";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=56.81197;
+			id=507;
+			atlOffset=1.5258789e-005;
+		};
+		class Item362
+		{
+			dataType="Marker";
+			position[]={2645.7151,0,1219.665};
+			name="JayCove_Defence_0";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=56.81197;
+			id=508;
+			atlOffset=-10.770875;
 		};
 	};
 	class Connections
