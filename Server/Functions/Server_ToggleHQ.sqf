@@ -52,15 +52,16 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) == CTI_HQ_DEPLOY) then { //---
 		//--- Transfer the previous damages to the new HQ if enabled
 		_damages = if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_current_hq getVariable ["cti_altdmg", getDammage _current_hq]} else {0};
 		
+		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
 		_alternative_damages = false;
 		_reduce_damages = 0;
 		{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		if (_alternative_damages) then {
 			_structure setVariable ["cti_altdmg", _damages];
-			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, 100, _reduce_damages]];
+			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, 100, _reduce_damages]];
 		} else {
-			if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_structure setDammage _damages};
+		    if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_structure setDammage _damages};
 			_structure addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
 			if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
 				_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
@@ -99,6 +100,7 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) == CTI_HQ_DEPLOY) then { //---
 			_hq setDammage (_current_hq getVariable ["cti_altdmg", getDammage _current_hq]);
 		};
 		
+		_hq addItemCargoGlobal ["ToolKit",1];
 		_logic setVariable ["cti_hq", _hq, true];
 		deleteVehicle _current_hq;
 		
