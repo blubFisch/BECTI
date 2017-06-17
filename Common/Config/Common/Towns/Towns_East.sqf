@@ -1,6 +1,45 @@
 with missionNamespace do {
 	EAST_TOWNS_FLAG_TEXTURE = "\A3\Data_F\Flags\Flag_red_CO.paa";
+
+	//--- Town Defenses
+	EAST_TOWN_MG = ["O_HMG_01_High_F"];
+	EAST_TOWN_GL = ["O_GMG_01_high_F"];
+	EAST_TOWN_AT = ["O_static_AT_F"];
+	EAST_TOWN_AA = ["O_static_AA_F"];
 	
+	/*
+	// Custom composition: 
+	//  Parameters :
+	//    0: Center (the marker)
+	//    1: Direction (the marker dir)
+	//  Returns :
+	//    [the mannable defenses, the composition objects]
+	
+	EAST_TOWN_BUNKER = [{
+		_t_center = _this select 0;
+		_t_direction = _this select 1;
+		
+		_t_defenses = [];
+		_t_composition = [];
+		
+		_t_pos = [_t_center, 5, _t_direction] call CTI_CO_FNC_GetPositionFrom;
+		_object = createVehicle ["Land_HBarrier_1_F", _t_pos, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object enableSimulationGlobal false;
+		_t_composition pushBack _object;
+		
+		_object = createVehicle ["O_HMG_01_High_F", _t_center, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object setVectorUp surfaceNormal position _object;
+		_t_defenses pushBack _object;
+		
+		//--- Return the defenses objects and the composition
+		[_t_defenses, _t_composition]
+	}]
+	*/
+
 if (CTI_TOWNS_OCCUPATION_EAST == 0) then { 
 //--- VANILLA TOWN OCCUPATION
 	//--- Infantry
@@ -56,114 +95,6 @@ if (CTI_TOWNS_OCCUPATION_EAST == 0) then {
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
 if (CTI_TOWNS_OCCUPATION_EAST == 1) then { 
-//--- CUP - Russians TOWN OCCUPATION
-	//--- Infantry
-	EAST_SOLDIER = "CUP_O_RU_Soldier";
-	EAST_SOLDIER_AA = "CUP_O_RU_Soldier_AA";
-	EAST_SOLDIER_AR = "CUP_O_RU_Soldier_AR";
-	EAST_SOLDIER_AT = "CUP_O_RU_Soldier_AT";
-	EAST_SOLDIER_CREW = "CUP_O_RU_Crew";
-	EAST_SOLDIER_LAT = "CUP_O_RU_Soldier_AT";
-	EAST_SOLDIER_HAT = "CUP_O_RU_Soldier_HAT";
-	EAST_SOLDIER_ENGINEER = "CUP_O_RU_Engineer";
-	EAST_SOLDIER_EXP = "CUP_O_RU_Explosive_Specialist";
-	EAST_SOLDIER_GL = "CUP_O_RU_Soldier_TL";
-	EAST_SOLDIER_MEDIC = "CUP_O_RU_Medic";
-	EAST_SOLDIER_MG = "CUP_O_RU_Soldier_AR";
-	EAST_SOLDIER_PILOT = "CUP_O_RU_Pilot";
-	EAST_SOLDIER_SNIPER = "CUP_O_RU_Sniper_KSVK";
-	EAST_SOLDIER_TEAMLEADER = "CUP_O_RU_Commander";
-	EAST_SOLDIER_SQUADLEADER = "CUP_O_RU_Commander";
-	//--- Naval Infantry
-	EAST_SOLDIER_NAVAL_INFANTRY = "O_diver_F";
-	EAST_SOLDIER_NAVAL_SQUADLEADER = "O_diver_TL_F";
-	//--- Light Vehicles
-	EAST_VEHICLE_LIGHT1 = ["CUP_O_UAZ_MG_CSAT"];
-	EAST_VEHICLE_LIGHT2 = ["OFPS_LR_MG"];
-	EAST_VEHICLE_LIGHT3 = ["CUP_O_BTR40_MG_TKA"];
-	EAST_VEHICLE_LIGHT4 = ["CUP_O_GAZ_Vodnik_AGS_RU"];
-	EAST_VEHICLE_LIGHT5 = ["CUP_O_BRDM2_CSAT"];
-	EAST_VEHICLE_LIGHT6 = ["CUP_O_BTR60_CSAT"];
-	EAST_VEHICLE_LIGHT7 = ["CUP_O_BTR90_RU"];
-	//--- APCs
-	EAST_VEHICLE_APC1 = ["CUP_O_BMP1_CSAT"];
-	EAST_VEHICLE_APC2 = ["CUP_O_BMP2_CSAT"];
-	EAST_VEHICLE_APC3 = ["OFPS_BMP3"];
-	//--- Tanks
-	EAST_VEHICLE_ARMORED1 = ["CUP_O_BMP2_ZU_TKA"];	
-	EAST_VEHICLE_ARMORED2 = ["CUP_O_T55_CSAT"];
-	EAST_VEHICLE_ARMORED3 = ["CUP_O_T72_CSAT"];
-	//--- AA Vehicles
-	EAST_VEHICLE_AA1 = ["CUP_O_BMP2_ZU_CSAT"];
-	EAST_VEHICLE_AA2 = ["CUP_O_ZSU23_CSAT"];
-	EAST_VEHICLE_AA3 = ["CUP_O_2S6M_RU"];
-	//--- Air
-	EAST_AIR_HELI1 = ["CUP_O_UH1H_TKA"];
-	EAST_AIR_HELI2 = [""];
-	EAST_AIR_HELI_ATTACK = [""];
-	EAST_AIR_AA = ["OFPS_SU25"];
-	EAST_AIR_CAS = ["CUP_O_SU34_AGM_CSAT"];
-	//--- Boats
-	EAST_NAVAL_ASSAULT_BOAT1 = ["CUP_B_RHIB2Turret_USMC"];
-	EAST_NAVAL_ASSAULT_BOAT2 = ["O_Boat_Armed_01_hmg_F"];
-	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
-	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
-};
-if (CTI_TOWNS_OCCUPATION_EAST == 2) then { 
-//--- MIXED TOWN OCCUPATION - vanilla/cup/ofps/etc..
-	//--- Infantry
-	EAST_SOLDIER = "CUP_O_RU_Soldier";
-	EAST_SOLDIER_AA = "CUP_O_RU_Soldier_AA";
-	EAST_SOLDIER_AR = "CUP_O_RU_Soldier_AR";
-	EAST_SOLDIER_AT = "CUP_O_RU_Soldier_AT";
-	EAST_SOLDIER_CREW = "CUP_O_RU_Crew";
-	EAST_SOLDIER_LAT = "CUP_O_RU_Soldier_AT";
-	EAST_SOLDIER_HAT = "CUP_O_RU_Soldier_HAT";
-	EAST_SOLDIER_ENGINEER = "CUP_O_RU_Engineer";
-	EAST_SOLDIER_EXP = "CUP_O_RU_Explosive_Specialist";
-	EAST_SOLDIER_GL = "CUP_O_RU_Soldier_TL";
-	EAST_SOLDIER_MEDIC = "CUP_O_RU_Medic";
-	EAST_SOLDIER_MG = "CUP_O_RU_Soldier_AR";
-	EAST_SOLDIER_PILOT = "CUP_O_RU_Pilot";
-	EAST_SOLDIER_SNIPER = "CUP_O_RU_Sniper_KSVK";
-	EAST_SOLDIER_TEAMLEADER = "O_Soldier_TL_F";
-	EAST_SOLDIER_SQUADLEADER = "O_Soldier_SL_F";
-	//--- Naval Infantry
-	EAST_SOLDIER_NAVAL_INFANTRY = "O_diver_F";
-	EAST_SOLDIER_NAVAL_SQUADLEADER = "O_diver_TL_F";
-	//--- Light Vehicles
-	EAST_VEHICLE_LIGHT1 = ["CUP_O_UAZ_MG_CSAT"];
-	EAST_VEHICLE_LIGHT2 = ["OFPS_LR_MG"];
-	EAST_VEHICLE_LIGHT3 = ["CUP_O_BTR40_MG_TKA"];
-	EAST_VEHICLE_LIGHT4 = ["CUP_O_GAZ_Vodnik_AGS_RU"];
-	EAST_VEHICLE_LIGHT5 = ["CUP_O_BRDM2_CSAT"];
-	EAST_VEHICLE_LIGHT6 = ["CUP_O_BTR60_CSAT"];
-	EAST_VEHICLE_LIGHT7 = ["CUP_O_BTR90_RU"];
-	//--- APCs
-	EAST_VEHICLE_APC1 = ["CUP_O_BMP1_CSAT"];
-	EAST_VEHICLE_APC2 = ["CUP_O_BMP2_CSAT"];
-	EAST_VEHICLE_APC3 = ["OFPS_BMP3"];
-	//--- Tanks
-	EAST_VEHICLE_ARMORED1 = ["CUP_O_T55_CSAT"];	
-	EAST_VEHICLE_ARMORED2 = ["CUP_O_T72_CSAT"];
-	EAST_VEHICLE_ARMORED3 = ["O_MBT_02_cannon_F"];
-	//--- AA Vehicles
-	EAST_VEHICLE_AA1 = ["CUP_O_BMP2_ZU_CSAT"];
-	EAST_VEHICLE_AA2 = ["CUP_O_ZSU23_CSAT"];
-	EAST_VEHICLE_AA3 = ["CUP_O_2S6M_RU"];
-	//--- Air
-	EAST_AIR_HELI1 = ["CUP_O_UH1H_TKA"];
-	EAST_AIR_HELI2 = [""];
-	EAST_AIR_HELI_ATTACK = [""];
-	EAST_AIR_AA = ["OFPS_SU25"];
-	EAST_AIR_CAS = ["CUP_O_SU34_AGM_CSAT"];
-	//--- Boats
-	EAST_NAVAL_ASSAULT_BOAT1 = ["CUP_B_RHIB2Turret_USMC"];
-	EAST_NAVAL_ASSAULT_BOAT2 = ["O_Boat_Armed_01_hmg_F"];
-	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
-	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["sfp_rbb_norrkoping"];
-};
-if (CTI_TOWNS_OCCUPATION_EAST == 3) then { 
 //--- Pacific TOWN OCCUPATION - tanoa forces
 	//--- Infantry
 	EAST_SOLDIER = "O_T_Soldier_F";
@@ -217,61 +148,61 @@ if (CTI_TOWNS_OCCUPATION_EAST == 3) then {
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
-if (CTI_TOWNS_OCCUPATION_EAST == 4) then { 
-//--- WINTER TOWN OCCUPATION
+if (CTI_TOWNS_OCCUPATION_EAST == 2) then { 
+//--- CUP - Russians TOWN OCCUPATION
 	//--- Infantry
-	EAST_SOLDIER = "IP_O_Soldier_FST";
-	EAST_SOLDIER_AA = "IP_O_Soldier_AA_FST";
-	EAST_SOLDIER_AR = "IP_O_HeavyGunner_FST";
-	EAST_SOLDIER_AT = "IP_O_Soldier_AT_FST";
-	EAST_SOLDIER_CREW = "IP_O_crew_FST";
-	EAST_SOLDIER_LAT = "IP_O_Soldier_LAT_FST";
-	EAST_SOLDIER_HAT = "IP_O_Soldier_AT_FST";
-	EAST_SOLDIER_ENGINEER = "IP_O_Engineer_FST";
-	EAST_SOLDIER_EXP = "IP_O_Soldier_exp_FST";
-	EAST_SOLDIER_GL = "IP_O_Soldier_GL_FST";
-	EAST_SOLDIER_MEDIC = "IP_O_Medic_FST";
-	EAST_SOLDIER_MG = "IP_O_HeavyGunner_FST";
-	EAST_SOLDIER_PILOT = "IP_O_HeliCrew_FST";
-	EAST_SOLDIER_SNIPER = "IP_O_Sharpshooter_FST";
-	EAST_SOLDIER_TEAMLEADER = "IP_O_recon_TL_FST";
-	EAST_SOLDIER_SQUADLEADER = "IP_O_pathfinder_FST";
+	EAST_SOLDIER = "CUP_O_RU_Soldier";
+	EAST_SOLDIER_AA = "CUP_O_RU_Soldier_AA";
+	EAST_SOLDIER_AR = "CUP_O_RU_Soldier_AR";
+	EAST_SOLDIER_AT = "CUP_O_RU_Soldier_AT";
+	EAST_SOLDIER_CREW = "CUP_O_RU_Crew";
+	EAST_SOLDIER_LAT = "CUP_O_RU_Soldier_AT";
+	EAST_SOLDIER_HAT = "CUP_O_RU_Soldier_HAT";
+	EAST_SOLDIER_ENGINEER = "CUP_O_RU_Engineer";
+	EAST_SOLDIER_EXP = "CUP_O_RU_Explosive_Specialist";
+	EAST_SOLDIER_GL = "CUP_O_RU_Soldier_TL";
+	EAST_SOLDIER_MEDIC = "CUP_O_RU_Medic";
+	EAST_SOLDIER_MG = "CUP_O_RU_Soldier_AR";
+	EAST_SOLDIER_PILOT = "CUP_O_RU_Pilot";
+	EAST_SOLDIER_SNIPER = "CUP_O_RU_Sniper_KSVK";
+	EAST_SOLDIER_TEAMLEADER = "CUP_O_RU_Commander";
+	EAST_SOLDIER_SQUADLEADER = "CUP_O_RU_Commander";
 	//--- Naval Infantry
 	EAST_SOLDIER_NAVAL_INFANTRY = "O_diver_F";
 	EAST_SOLDIER_NAVAL_SQUADLEADER = "O_diver_TL_F";
 	//--- Light Vehicles
-	EAST_VEHICLE_LIGHT1 = ["AAF_D_MRAP_03_F"];
-	EAST_VEHICLE_LIGHT2 = ["AAF_D_MRAP_03_hmg_F"];
-	EAST_VEHICLE_LIGHT3 = ["AAF_D_MRAP_03_hmg_F"];
-	EAST_VEHICLE_LIGHT4 = ["AAF_D_MRAP_03_hmg_F"];
-	EAST_VEHICLE_LIGHT5 = ["AAF_D_MRAP_03_gmg_F"];
-	EAST_VEHICLE_LIGHT6 = ["AAF_D_MRAP_03_gmg_F"];
-	EAST_VEHICLE_LIGHT7 = ["AAF_D_MRAP_03_gmg_F"];
+	EAST_VEHICLE_LIGHT1 = ["CUP_O_UAZ_MG_CSAT"];
+	EAST_VEHICLE_LIGHT2 = ["OFPS_LR_MG"];
+	EAST_VEHICLE_LIGHT3 = ["CUP_O_BTR40_MG_TKA"];
+	EAST_VEHICLE_LIGHT4 = ["CUP_O_GAZ_Vodnik_AGS_RU"];
+	EAST_VEHICLE_LIGHT5 = ["CUP_O_BRDM2_CSAT"];
+	EAST_VEHICLE_LIGHT6 = ["CUP_O_BTR60_CSAT"];
+	EAST_VEHICLE_LIGHT7 = ["CUP_O_BTR90_RU"];
 	//--- APCs
-	EAST_VEHICLE_APC1 = ["AAF_D_APC_Wheeled_03_cannon_F"];
-	EAST_VEHICLE_APC2 = ["AAF_D_APC_Wheeled_03_cannon_F"];
-	EAST_VEHICLE_APC3 = ["AAF_D_APC_Wheeled_03_cannon_F"];
+	EAST_VEHICLE_APC1 = ["CUP_O_BMP1_CSAT"];
+	EAST_VEHICLE_APC2 = ["CUP_O_BMP2_CSAT"];
+	EAST_VEHICLE_APC3 = ["OFPS_BMP3"];
 	//--- Tanks
-	EAST_VEHICLE_ARMORED1 = ["AAF_D_APC_tracked_03_cannon_F"];	
-	EAST_VEHICLE_ARMORED2 = ["AAF_D_APC_tracked_03_cannon_F"];
-	EAST_VEHICLE_ARMORED3 = ["AAF_D_MBT_03_cannon_F"];
+	EAST_VEHICLE_ARMORED1 = ["CUP_O_BMP2_ZU_TKA"];	
+	EAST_VEHICLE_ARMORED2 = ["CUP_O_T55_CSAT"];
+	EAST_VEHICLE_ARMORED3 = ["CUP_O_T72_CSAT"];
 	//--- AA Vehicles
-	EAST_VEHICLE_AA1 = ["OFPS_BMP2_ZSU"];
-	EAST_VEHICLE_AA2 = ["OFPS_BMP2_ZSU"];
-	EAST_VEHICLE_AA3 = ["OFPS_BMP2_ZSU"];
+	EAST_VEHICLE_AA1 = ["CUP_O_BMP2_ZU_CSAT"];
+	EAST_VEHICLE_AA2 = ["CUP_O_ZSU23_CSAT"];
+	EAST_VEHICLE_AA3 = ["CUP_O_2S6M_RU"];
 	//--- Air
-	EAST_AIR_HELI1 = [""];
+	EAST_AIR_HELI1 = ["CUP_O_UH1H_TKA"];
 	EAST_AIR_HELI2 = [""];
 	EAST_AIR_HELI_ATTACK = [""];
-	EAST_AIR_AA = [""];
-	EAST_AIR_CAS = [""];
+	EAST_AIR_AA = ["OFPS_SU25"];
+	EAST_AIR_CAS = ["CUP_O_SU34_AGM_CSAT"];
 	//--- Boats
-	EAST_NAVAL_ASSAULT_BOAT1 = ["O_Boat_Armed_01_hmg_F"];
+	EAST_NAVAL_ASSAULT_BOAT1 = ["CUP_B_RHIB2Turret_USMC"];
 	EAST_NAVAL_ASSAULT_BOAT2 = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
-if (CTI_TOWNS_OCCUPATION_EAST == 5) then { 
+if (CTI_TOWNS_OCCUPATION_EAST == 3) then { 
 //--- RHS TOWN OCCUPATION
 	//--- Infantry
 	EAST_SOLDIER = "rhs_msv_emr_rifleman";

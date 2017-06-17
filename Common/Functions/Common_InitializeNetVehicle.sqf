@@ -81,9 +81,13 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 	_vehicle addAction ["<t color='#2E9AFE'>Eject With Parachute</t>", "Client\Actions\Action_Eject.sqs",[],0,false,true,"","player in _target && getPos _target select 2 >80"];
 };
 
-//--- Radio - only helis
+//--- Radio - only helis - Valkyries
 if (_vehicle isKindOf "Helicopter") then {
-	_vehicle addAction ["<t color='#2E9AFE'>Radio on</t>", "Client\Functions\Client_VehicleRadio.sqf",1,0,false,true,"","driver _target == player"];
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#1)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,1],0,false,true,"","driver _target == player"];
+};
+//--- Radio - only jets - DangerZONE
+if (_vehicle isKindOf "Plane") then {
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#2)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,2],0,false,true,"","driver _target == player"];
 };
 
 //--- Taxi Reverse

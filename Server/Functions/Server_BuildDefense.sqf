@@ -47,38 +47,38 @@ _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
-	["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["Received Defense build request [%1] from side [%2] for a [%3] structure at position [%4], manned? [%5]", _seed, _side, _var select 1, _position, _manned]] call CTI_CO_FNC_Log;
+	["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["Received Defense build request [%1] from side [%2] for a [%3] structure at position [%4], manned? [%5]", _seed, _side, _var select CTI_DEFENSE_CLASS, _position, _manned]] call CTI_CO_FNC_Log;
 };
 
 //--- Is it a fob?
 _fob = false;
 _limit = false;
-{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
+{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select CTI_DEFENSE_SPECIALS);
 if (_fob) then {if (count(_logic getVariable "cti_fobs") >= CTI_BASE_FOB_MAX) then {_limit = true}};
 if (_limit) exitWith {};
 
 //--- Is it a large fob?
 _large_fob = false;
 _limit_large = false;
-{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
+{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 if (_large_fob) then {if (count(_logic getVariable "cti_large_fobs") >= CTI_BASE_LARGE_FOB_MAX) then {_limit_large = true}};
 if (_limit_large) exitWith {};
 
 _defense = nil;
 _iscomposition = false;
 _isarray = false;
-switch (typeName (_var select 5)) do {
+switch (typeName (_var select CTI_STRUCTURE_SPECIALS)) do {
 	case "STRING": { _iscomposition = false; };
 	case "ARRAY": { 
 		_isarray = true;
-		//if ("Composition" in (_var select 5)) then {_iscomposition = true;};
+		//if ("Composition" in (_var select CTI_STRUCTURE_SPECIALS)) then {_iscomposition = true;};
 	};
 };
 //--- Is it a composition?
 _iscomposition = false;
-{if (_x select 0 == "Composition") exitWith {_iscomposition = true}} forEach (_var select 5);
+{if (_x select 0 == "Composition") exitWith {_iscomposition = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 if (_iscomposition) then {
-	_composition = [ (((_var select 5) select 0) select 1), _position, [0,0,0], _direction, (((_var select 5) select 0) select 2), false, false ] call LARs_fnc_spawnComp;
+	_composition = [ (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 1), _position, [0,0,0], _direction, (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 2), false, false ] call LARs_fnc_spawnComp;
 	_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
 	{	
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense
@@ -91,16 +91,16 @@ if (_iscomposition) then {
 } else {
 	_position set [2, 0];
 
-	_defense = (_var select 1) createVehicle _position;
+	_defense = (_var select CTI_DEFENSE_CLASS) createVehicle _position;
 	_defense setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 
-	_direction_structure = (_var select 4) select 0;
+	_direction_structure = (_var select CTI_DEFENSE_PLACEMENT) select 0;
 
 	if (_defense isKindOf "Building") then {
 		if (_autoalign) then {
 			private ["_autoSupport", "_correction", "_offsetZ", "_width"];
 			_autoSupport = [];
-			{if (_x select 0 == "CanAutoAlign") exitWith {_autoSupport = _x}} forEach (_var select 5);
+			{if (_x select 0 == "CanAutoAlign") exitWith {_autoSupport = _x}} forEach (_var select CTI_DEFENSE_SPECIALS);
 			
 			if (count _autoSupport > 0) then {
 				_width = _autoSupport select 1;
@@ -114,7 +114,7 @@ if (_iscomposition) then {
 
 	if (_fob) then {
     	if (CTI_Log_Level >= CTI_Log_Information) then {
-    		["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["A FOB [%1] has been added to side [%2] following defense request [%3]", _var select 1, _side, _seed]] call CTI_CO_FNC_Log;
+    		["INFORMATION", "FILE: Server\Functions\Server_BuildDefense.sqf", format["A FOB [%1] has been added to side [%2] following defense request [%3]", _var select CTI_DEFENSE_CLASS, _side, _seed]] call CTI_CO_FNC_Log;
     	};
 
 		(_defense) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
@@ -136,9 +136,9 @@ if (_iscomposition) then {
 	//Check for Armed Versions - This is an alternative to using compositions
 	//Manually check for primary classname object, then manually place each static - examples below
 	if (_isarray) then {
-		if ("Armed" in ((_var select 5) select 0)) then {
+		if ("Armed" in ((_var select CTI_STRUCTURE_SPECIALS) select 0)) then {
 			//--- Armed Bunker - MG
-			if ((_var select 1) == "Land_BagBunker_Small_F") then {
+			if ((_var select CTI_STRUCTURE_CLASSES) == "Land_BagBunker_Small_F") then {
 				_static1 = "O_HMG_01_High_F" createVehicle _position;
 				_static1 attachTo [_defense, [0, 0, 0.7]]; 
 				_static1 setVectorDirAndUp [[0,-1,0],[0,0,1]];
@@ -149,7 +149,7 @@ if (_iscomposition) then {
 				_static1 call CTI_CO_FNC_UnitCreated;
 			};
 			//--- Armed Tower - MG x2
-			if ((_var select 1) == "Land_Cargo_Patrol_V3_F") then {
+			if ((_var select CTI_STRUCTURE_CLASSES) == "Land_Cargo_Patrol_V3_F") then {
 				_static1 = "O_HMG_01_High_F" createVehicle _position;
 				_static1 attachTo [_defense, [1.5, -1.5, 1.1]]; 
 				_static2 = "O_HMG_01_High_F" createVehicle _position;
@@ -167,7 +167,7 @@ if (_iscomposition) then {
 				_static2 call CTI_CO_FNC_UnitCreated;
 			};
 			//--- Armed Cargo Tower - AA x3
-			if ((_var select 1) == "Land_Cargo_Tower_V1_No1_F") then {
+			if ((_var select CTI_STRUCTURE_CLASSES) == "Land_Cargo_Tower_V1_No1_F") then {
 				_static1 = "O_static_AA_F" createVehicle _position;
 				_static1 attachTo [_defense, [-3.5, 4.9, 5.9]];  
 				_static2 = "O_static_AA_F" createVehicle _position;
@@ -196,7 +196,7 @@ if (_iscomposition) then {
 
 	//--- Make the defense stronger?
 	//_stronger = -1;
-	//{if (_x select 0 == "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select 5);
+	//{if (_x select 0 == "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 	//if (_stronger != -1) then {_defense addEventHandler ["handleDamage", format["getDammage (_this select 0)+(_this select 2)/%1",_stronger]]};
 	//["test-var", [_variable]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 	_alternative_damages = false;
@@ -210,10 +210,19 @@ if (_iscomposition) then {
 			_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
 		};
 	};
+	//handler for invinsible objects
+	_explosionalt = false;
+	_damage_explosion = 0;
+	{
+		if ("DMG_Explosion" in _x) then {_explosionalt = true;_damage_explosion = _x select 1;}; 
+	} forEach (_var select 9);
+	if (_explosionalt) then {
+		_defense addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
+	};
 
 	//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 	_ruins = "";
-	{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
+	{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_DEFENSE_SPECIALS);
 
 	_defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]];
 
@@ -228,7 +237,7 @@ if (_iscomposition) then {
 		if (_manned && CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_defense setVariable ["cti_aman_enabled", true]};
 		
 		//--- The defense may be an artillery piece, if so we track it
-		if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select 1) >> "artilleryScanner") > 0) then {
+		if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select CTI_DEFENSE_CLASS) >> "artilleryScanner") > 0) then {
 			(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 		};
 		
@@ -239,5 +248,8 @@ if (_iscomposition) then {
 	_defense setVariable ["cti_static_properly_created", true, true]; //-- set cti_static_properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers and variables
 	_defense call CTI_CO_FNC_UnitCreated;
 };
+
+//AdminZeus
+if !( isNil "ADMIN_ZEUS") then { ADMIN_ZEUS addCuratorEditableObjects [[_defense],true] };
 
 _defense

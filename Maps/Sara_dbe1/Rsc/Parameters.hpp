@@ -1,34 +1,28 @@
 class Params {
+	class CTI_FACTION_MODE {
+		title = "FACTION: Main Mod Mode";
+		values[] = {0,1,2,3,4};
+		texts[] = {"Vanilla/DLC", "CUP Mode", "RHS Mode", "OFPS Mode (everything unlocked)", "Database Mode"};
+		default = 0;
+	};
 	class CTI_FACTION_WEST {
-		title = "FACTION: West Forces";
-		values[] = {0,1,2};
-		texts[] = {"NATO Arid","NATO Tropic","NATO Winter"};
+		title = "FACTION: Default West Faction";
+		values[] = {0,1,2,3};
+		texts[] = {"NATO Vanilla (arid)","NATO Pacific APEX (woodland)","USMC CUP (Arid)", "USAF RHS (Arid)"};
 		default = 0;
 	};
 	class CTI_FACTION_EAST {
-		title = "FACTION: East Forces";
-		values[] = {0,1,2};
-		texts[] = {"CSAT Arid","CSAT Tropic","CSAT Winter"};
+		title = "FACTION: Default East Faction";
+		values[] = {0,1,2,3};
+		texts[] = {"CSAT Vanilla (arid)","CSAT Pacific APEX (woodland)","Russia CUP (Arid)","Russia RHS (Arid)"};
 		default = 0;
 	};
-	class CTI_FACTION_DEFAULT_VEHICLES {
-		title = "FACTION: Starting vehicles and mhq";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 3;
-	};
-	class CTI_FACTION_DEFAULT_GEAR {
-		title = "FACTION: Starting gear";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 3;
-	};
-	class CTI_FACTION_DEFAULT_TROOPS {
-		title = "FACTION: Default infantry";
-		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Apex","CUP","RHS"};
-		default = 3;
-	};
+	class CTI_FACTION_DEFAULT_BASE {
+		title = "FACTION: Default Base Factories/Objects";
+		values[] = {0,1,2};
+		texts[] = {"Vanilla","CUP","RHS"};
+		default = 1;
+	};	
 	class SEPARATOR0 {
 		title = "========================== BASES ============================";
 		values[] = {1};
@@ -58,7 +52,7 @@ class Params {
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
-	};
+	};		
 	class CTI_BASE_FOB_MAX {
 		title = "BASE: FOB Limit";
 		values[] = {0,1,2,3,4,5,6,7,8,9,10};
@@ -75,7 +69,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 8000;
+		default = 20000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -93,25 +87,25 @@ class Params {
 		title = "INCOME: Starting Funds (East Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 45000;
+		default = 50000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_EAST {
 		title = "INCOME: Starting Funds (East Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 15000;
+		default = 10000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST_COMMANDER {
 		title = "INCOME: Starting Funds (West Commander)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 45000;
+		default = 50000;
 	};
 	class CTI_ECONOMY_STARTUP_FUNDS_WEST {
 		title = "INCOME: Starting Funds (West Players)";
 		values[] = {900,1500,2400,3200,6000,8000,10000,12500,15000,20000,100000000};
 		texts[] = {"$900","$1500","$2400","$3200","$6000","$8000","$10000","$12500","$15000","$20000","$100000000"};
-		default = 15000;
+		default = 10000;
 	};
 	class CTI_ECONOMY_TOWNS_OCCUPATION {
 		title = "INCOME: Towns Occupation";
@@ -123,13 +117,13 @@ class Params {
 		title = "SUPPLY: Starting Supply (East Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 15000;
+		default = 25000;
 	};
 	class CTI_ECONOMY_STARTUP_SUPPLY_WEST {
 		title = "SUPPLY: Starting Supply (West Team)";
 		values[] = {9000,15000,20000,25000,30000,35000,40000,45000,50000,60000,100000000};
 		texts[] = {"$9000","$15000","$20000","$25000","$30000","$35000","$40000","$45000","$50000","$60000","$100000000"};
-		default = 15000;
+		default = 25000;
 	};
 	class SEPARATOR2 {
 		title = "========================== TOWNS ============================";
@@ -163,21 +157,21 @@ class Params {
 	};
 	class CTI_TOWNS_OCCUPATION_RESISTANCE {
 		title = "TOWNS: Resistance Occupation Forces";
-		values[] = {0,1,2,3,4,5,6,7,8,9};
-		texts[] = {"Vanilla - AAF","Vanilla - FIA","CUP - ION PMC","CUP - NAPA Chernarus","CUP - Royal Army Corp Of Sahrani","CUP - Takistani Military","Mixed","Syndikat Paramilitary","AAF/Swedish Winter","RHS GREF"};
-		default = 9;
+		values[] = {0,1,2,3,4,5,6,7};
+		texts[] = {"Vanilla - AAF","Vanilla - FIA","Syndikat Paramilitary - APEX","ION PMC - CUP","NAPA Chernarus - CUP","Royal Army Corp Of Sahrani - CUP","Takistani Military - CUP","GREF - RHS"};
+		default = 0;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
-		values[] = {0,1,2,3,4,5};
-		texts[] = {"Vanilla","CUP - US Army","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 5;
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","Russians - RHS"};
+		default = 0;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
-		values[] = {0,1,2,3,4,5};
-		texts[] = {"Vanilla","CUP - Russians","Mixed","Pacific Special Forces","Winter","RHS"};
-		default = 5;
+		values[] = {0,1,2,3};
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","Russians - CUP","Russians - RHS"};
+		default = 0;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -309,6 +303,12 @@ class Params {
 		title = "=========================== VEHICLES ============================";
 		values[] = {1};
 		texts[] = {""};
+		default = 1;
+	};
+	class CTI_VEHICLES_LOADOUTS {
+		title = "VEHICLES: Loadouts";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Realistic","Unlocked"};
 		default = 1;
 	};
 	class CTI_VEHICLES_AIR_FFAR {
@@ -447,7 +447,7 @@ class Params {
 		title = "WEATHER: Inital Time";
 		values[] = {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		texts[] = {"12 AM","1 AM","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM","9 AM","10 AM","11 AM","12 PM","1 PM","2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM","Random"};
-		default = -1;
+		default = 0;
 	};
 	class CTI_WEATHER_RAIN {
 		title = "WEATHER: Rain (Rain Requires Overcast Greater High)";
@@ -519,7 +519,7 @@ class Params {
 		title = "WEATHER: Fog Variance";
 		values[] = {-1,0,0.1,0.25,0.5,0.75,1};
 		texts[] = {"Random","None","10%","25%","50%","75%","Chaos"};
-		default = 0;
+		default = -1;
 	};
 	class CTI_WEATHER_FOG_DECAY {
 		title = "WEATHER: Fog decay level";
@@ -599,36 +599,120 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
+	class CTI_VANILLA_ADDON {
+		title = "ADDON: Vanilla Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_HELI_ADDON {
+		title = "ADDON: HELI DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_MARKSMEN_ADDON {
+		title = "ADDON: MARKSMEN DLC Support";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};
 	class CTI_APEX_ADDON {
 		title = "ADDON: APEX DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_JETS_ADDON {
+		title = "ADDON: JETS DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_TANKS_ADDON {
+		title = "ADDON: TANKS DLC Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};	
+	class CTI_CUP_UNITS_ADDON {
+		title = "ADDON: CUP Units";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_CUP_ADDON {
-		title = "ADDON: CUP Support, Units, Vehicles, Weapons";
+	class CTI_CUP_VEHICLES_ADDON {
+		title = "ADDON: CUP Vehicles";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
+	class CTI_CUP_WEAPONS_ADDON {
+		title = "ADDON: CUP Weapons";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};	
 	class CTI_CUP_CORE_ADDON {
-		title = "ADDON: CUP CORE and CUP Terrains";
+		title = "ADDON: CUP CORE";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_OFPS_ADDON {
-		title = "ADDON: OFPS MOD Pack Support";
+	class CTI_CUP_TERRAINS_ADDON {
+		title = "ADDON: CUP Terrains";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
-	class CTI_RHS_ADDON {
-		title = "ADDON: RHS AFRF, RHS GREF, RHS SAF, RHS USAF Support";
+	class CTI_RHS_AFRF_ADDON {
+		title = "ADDON: RHS AFRF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_GREF_ADDON {
+		title = "ADDON: RHS GREF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_SAF_ADDON {
+		title = "ADDON: RHS SAF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_RHS_USAF_ADDON {
+		title = "ADDON: RHS USAF Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_CORE_ADDON {
+		title = "ADDON: OFPS Core Pack Support";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
 		default = 1;
 	};
+	class CTI_OFPS_UNITS_ADDON {
+		title = "ADDON: OFPS Units Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_RHS_ADDON {
+		title = "ADDON: OFPS RHS Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};
+	class CTI_OFPS_CUP_ADDON {
+		title = "ADDON: OFPS CUP Pack Support";
+		values[] = {0,1,2,3};
+		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
+		default = 3;
+	};	
 	class SEPARATOR10 {
 		title = "========================= GAMEMODES ===========================";
 		values[] = {1};
@@ -648,6 +732,18 @@ class Params {
 		default = 0;
 	};
 	class SEPARATOR11 {
+		title = "========================== DATABASE ===========================";
+		values[] = {1};
+		texts[] = {""};
+		default = 1;
+	};
+	class CTI_DATABASE_ENABLED {
+		title = "DATABASE: Enable Database Connection";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 0;
+	};
+	class SEPARATOR12 {
 		title = "========================== DEV MODE ===========================";
 		values[] = {1};
 		texts[] = {""};

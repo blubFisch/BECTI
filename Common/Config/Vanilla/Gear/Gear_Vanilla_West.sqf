@@ -27,11 +27,6 @@ _u pushBack 0;
 _p pushBack 300;
 _g pushBack "Coyote";
 
-_i pushBack "hgun_P07_khk_F";
-_u pushBack 0;
-_p pushBack 300;
-_g pushBack "Khaki";
-
 _i pushBack "hgun_Pistol_heavy_01_F"; //4-Five .45
 _u pushBack 1;
 _p pushBack 450;
@@ -561,7 +556,7 @@ _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Black";
 
-_i pushBack "opitc_ACO_grn_smg";
+_i pushBack "optic_ACO_grn_smg";
 _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Green";
@@ -576,7 +571,7 @@ _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Black";
 
-_i pushBack "optic_Arco_F";
+_i pushBack "optic_Arco";
 _u pushBack 0;
 _p pushBack 200;
 _g pushBack "Khaki";
@@ -924,7 +919,7 @@ _u pushBack 0;
 _p pushBack 30;
 _g pushBack "Green";
 
-_i pushBack "V_ChestrigB_rgr";
+_i pushBack "V_Chestrig_rgr";
 _u pushBack 0;
 _p pushBack 300;
 _g pushBack "Green";
@@ -1514,7 +1509,7 @@ _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Khaki";
 
-_i pushBack "H_Booniehat_dgt1";
+_i pushBack "H_Booniehat_dgtl";
 _u pushBack 0;
 _p pushBack 5;
 _g pushBack "Digi";

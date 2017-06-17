@@ -149,7 +149,7 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	_damaged removeAllEventHandlers "handleDamage";
 	_damaged setDammage 1;
 	if (CTI_Log_Level >= CTI_Log_Information) then {
-		["INFORMATION", "FILE: Server\Functions\Server_OnFOBHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select 0, _side, _shooter]] call CTI_CO_FNC_Log;
+		["INFORMATION", "FILE: Server\Functions\Server_OnFOBHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select CTI_STRUCTURE_LABELS, _side, _shooter]] call CTI_CO_FNC_Log;
 	};
 	[_damaged, _shooter, _sideID, _ruins, _variable, _fobtype] spawn CTI_SE_FNC_OnFOBDestroyed;
 };

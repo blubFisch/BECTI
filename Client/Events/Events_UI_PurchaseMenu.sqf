@@ -224,7 +224,7 @@ switch (_action) do {
 			};
 		};
 	};
-		case "onFilterLBSelChanged": {
+	case "onFilterLBSelChanged": {
 		_selected = _this select 1;
 		
 		if (uiNamespace getVariable ["cti_dialog_ui_purchasemenu_filter_reload", true]) then {

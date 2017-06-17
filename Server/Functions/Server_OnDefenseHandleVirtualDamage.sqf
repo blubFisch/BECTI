@@ -153,11 +153,11 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	
 	_var = missionNamespace getVariable _variable;
 		if (CTI_Log_Level >= CTI_Log_Information) then {
-			["INFORMATION", "FILE: Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select 0, _side, _shooter]] call CTI_CO_FNC_Log;
+			["INFORMATION", "FILE: Server\Functions\Server_OnDefenseHandleVirtualDamage.sqf", format["A [%1] structure from side [%2] has been destroyed (virtual damages) by [%3]", _var select CTI_STRUCTURE_LABELS, _side, _shooter]] call CTI_CO_FNC_Log;
 		};
 		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 		_ruins = "";
-		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select 5);
+		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
 if (CTI_BASE_DISPLAY_HINT == 1) then {

@@ -305,6 +305,12 @@ class Params {
 		texts[] = {""};
 		default = 1;
 	};
+	class CTI_VEHICLES_LOADOUTS {
+		title = "VEHICLES: Loadouts";
+		values[] = {0,1,2};
+		texts[] = {"Disabled","Realistic","Unlocked"};
+		default = 1;
+	};
 	class CTI_VEHICLES_AIR_FFAR {
 		title = "VEHICLES: Aircraft FFAR";
 		values[] = {0,1,2};
@@ -373,9 +379,9 @@ class Params {
 	};
 	class CTI_GAMEPLAY_3P {
 		title = "GAMEPLAY: 3P view";
-		values[] = {1,2,3};
-		texts[] = {"Vehicles","Infrantry","None"};
-		default = 1;
+		values[] = {-1,0,1,2,3};
+		texts[] = {"All","Drivers and Holstered","Vehicles","Infrantry","None"};
+		default = 0;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";

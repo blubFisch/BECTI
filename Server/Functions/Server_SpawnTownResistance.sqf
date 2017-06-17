@@ -27,6 +27,7 @@
 	Common Function: CTI_CO_FNC_GetRandomBestPlaces
 	Common Function: CTI_CO_FNC_GetRandomPosition
 	Common Function: CTI_CO_FNC_GetTownCamps
+	Common Function: CTI_CO_FNC_GetTownSpawnBuilding
 	Common Function: CTI_CO_FNC_ManVehicle
 	Server Function: CTI_SE_FNC_HandleEmptyVehicle
 	
@@ -207,7 +208,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 99],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED1", 2, 33]
@@ -219,7 +220,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 66],
-							["GUER_TOWNS_SQUAD_APC3", 2, 66]
+							["GUER_TOWNS_SQUAD_APC3", 1, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED1", 1, 33]
@@ -245,7 +246,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 1, 66],
@@ -258,7 +259,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -284,7 +285,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -296,7 +297,7 @@ if (isNil {_town getVariable "cti_naval"}) then {
 						],
 						[
 							["GUER_TOWNS_SQUAD_APC2", 2, 33],
-							["GUER_TOWNS_SQUAD_APC3", 3, 66]
+							["GUER_TOWNS_SQUAD_APC3", 2, 66]
 						],
 						[
 							["GUER_TOWNS_SQUAD_ARMORED2", 2, 33],
@@ -584,10 +585,16 @@ _pool = [];
 		//--- Only one element is present, check for the force and probability and add it to our current pool
 		case "STRING": {
 			if (!isNil{missionNamespace getVariable (_x select 0)}) then {
-				_force = if (count _x > 1) then {_x select 1} else {1};
-				_probability = if (count _x > 2) then {_x select 2} else {100};
-				
-				for '_i' from 1 to _force do {_pool pushBack [_x select 0, _probability]};
+				if (count (missionNamespace getVariable (_x select 0)) > 0) then {
+					_force = if (count _x > 1) then {_x select 1} else {1};
+					_probability = if (count _x > 2) then {_x select 2} else {100};
+					
+					for '_i' from 1 to _force do {_pool pushBack [_x select 0, _probability]};
+				} else {
+					if (CTI_Log_Level >= CTI_Log_Warning) then { 
+						["WARNING", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Town unit pool [%1] has no units defined and will be skipped", _x select 0]] call CTI_CO_FNC_Log;
+					};
+				};
 			} else {
 				if (CTI_Log_Level >= CTI_Log_Error) then { 
 					["ERROR", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Attempting to use an undefined Resistance Team Template [%1] for town [%2]", _x select 0, _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log;
@@ -599,10 +606,16 @@ _pool = [];
 			_pool_nest = [];
 			{
 				if (!isNil{missionNamespace getVariable (_x select 0)}) then {
-					_force = if (count _x > 1) then {_x select 1} else {1};
-					_probability = if (count _x > 2) then {_x select 2} else {100};
-					
-					for '_i' from 1 to _force do {_pool_nest pushBack [_x select 0, _probability]};
+					if (count (missionNamespace getVariable (_x select 0)) > 0) then {
+						_force = if (count _x > 1) then {_x select 1} else {1};
+						_probability = if (count _x > 2) then {_x select 2} else {100};
+						
+						for '_i' from 1 to _force do {_pool_nest pushBack [_x select 0, _probability]};
+					} else {
+						if (CTI_Log_Level >= CTI_Log_Warning) then { 
+							["WARNING", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Town unit pool [%1] has no units defined and will be skipped", _x select 0]] call CTI_CO_FNC_Log;
+						};
+					};
 				} else {
 					if (CTI_Log_Level >= CTI_Log_Error) then { 
 						["ERROR", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Attempting to use an undefined Resistance Team Template [%1] for town [%2]", _x select 0, _town getVariable "cti_town_name"]] call CTI_CO_FNC_Log;
@@ -610,13 +623,13 @@ _pool = [];
 				};
 			} forEach _x;
 			
-			_pool pushBack _pool_nest;
+			if (count _pool_nest > 0) then {_pool pushBack _pool_nest};
 		};
 	};
 } forEach _pool_units;
 
 if (CTI_Log_Level >= CTI_Log_Information) then { 
-	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved a Resistance Pool count of [%1] for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
+	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format ["Retrieved an effective Resistance Pool of [%1] squad(s) for town [%2]. Total groups is set to [%3]", _town getVariable "cti_town_name", count _pool, _totalGroups]] call CTI_CO_FNC_Log;
 };
 
 if (count _pool < 1) exitWith {
@@ -661,22 +674,53 @@ while {_totalGroups > 0} do {
 _groups = [];
 _positions = [];
 _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
+
+_positions_building = _town getVariable ["cti_town_spawn_building", []];
+if (count _positions_building > 0) then {_positions_building = _positions_building call CTI_CO_FNC_ArrayShuffle};
 {
 	_position = [];
+	_has_vehicles = false;
+	{if !(_x isKindOf "Man") exitWith {_has_vehicles = true}} forEach _x;
 	
 	//--- A group may spawn close to a camp or somewhere in the town
-	if (isNil {_town getVariable "cti_naval"}) then {
-		if (count _camps > 0 && random 100 > 50) then {
+	if (isNil {_town getVariable "cti_naval"}) then { //--- The town is on the ground
+		if (count _camps > 0 && random 100 > 40) then { //--- A camp can be selected for spawning units
 			_camp_index = floor(random count _camps);
-			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS, _tries] call CTI_CO_FNC_GetRandomPosition;
-			_position = [_position, 30, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+			_position = [ASLToAGL getPosASL(_camps select _camp_index), 10, CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS, 10, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
 			_camps deleteAt _camp_index;
-		} else {
-			//_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE, _tries] call CTI_CO_FNC_GetRandomPosition;
-			_position = [ASLToAGL getPosASL _town, CTI_TOWNS_RESISTANCE_SPAWN_RANGE, "(1 - sea) * (1 - forest)", 8, 5, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+		} else { //--- Pick a random position
+			_use_default = true;
+			if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
+				if (CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE >= random 100 && count _positions_building > 0) then {
+					_building = [_positions_building, resistance] call CTI_CO_FNC_GetTownSpawnBuilding;
+					if !(_building select 1 isEqualTo -1) then {
+						_position = _building select 0;
+						_use_default = false;
+						_positions_building deleteAt (_building select 1);
+					};
+				};
+			};
+			
+			if (_use_default) then { //--- Default spawn area, pick a safe area around the town
+				_position = [ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE, 15, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
+			};
 		};
-	} else {
-		_position = [[ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE/1.5, 0] call CTI_CO_FNC_GetRandomPosition, 200, "sea", 8, 3, 1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+	} else { //--- The town is naval
+		_use_default = true;
+		if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && !_has_vehicles) then { //--- Check if Infantry should spawn in buildings or not
+			if (count _positions_building > 0) then { //--- Naval AI squads will always spawn in buildings
+				_building = [_positions_building, resistance] call CTI_CO_FNC_GetTownSpawnBuilding;
+				if !(_building select 1 isEqualTo -1) then {
+					_position = _building select 0;
+					_use_default = false;
+					_positions_building deleteAt (_building select 1);
+				};
+			};
+		};
+		
+		if (_use_default) then { //--- Default spawn area, pick a sea area
+			_position = [[ASLToAGL getPosASL _town, 25, CTI_TOWNS_RESISTANCE_SPAWN_RANGE/1.5, 0] call CTI_CO_FNC_GetRandomPosition, 200, "sea", 8, 3, 1, true] call CTI_CO_FNC_GetRandomBestPlaces;
+		};
 	};
 	
 	_positions pushBack _position;
@@ -704,9 +748,6 @@ _camps = (_town) Call CTI_CO_FNC_GetTownCamps;
 		["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format["Composing Resistance Team for town [%1] using group [%2] at position [%3] with units [%4]", _town getVariable "cti_town_name", _group, _position, _x]] call CTI_CO_FNC_Log;
 	};
 } forEach _teams;
-
-//--- Update the town with the groups
-_town setVariable ["cti_town_resistance_groups", _groups, true];
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format["Composed [%1] Resistance Teams for town [%2] having a max SV of [%3]", count _teams, _town getVariable "cti_town_name", _value]] call CTI_CO_FNC_Log;

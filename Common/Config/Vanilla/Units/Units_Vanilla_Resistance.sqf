@@ -1016,16 +1016,4 @@ _s pushBack "";
 _d pushBack 0;
 _g pushBack "Digital";
 
-_c pushBack 'I_Boat_Armed_01_minigun_F';
-_p pushBack '';
-_n pushBack '';
-_o pushBack 1000;
-_t pushBack 30;
-_u pushBack 0;
-_f pushBack CTI_FACTORY_NAVAL;
-_s pushBack "";
-_d pushBack 0;
-_g pushBack "Digital";
-
-
 [_side, _faction, _c, _p, _n, _o, _t, _u, _f, _s, _d, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Units\Set_Units.sqf";

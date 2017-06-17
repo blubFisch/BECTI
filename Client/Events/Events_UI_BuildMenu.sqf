@@ -11,8 +11,8 @@ switch (_action) do {
 		//--- Structures
 		{
 			_var = missionNamespace getVariable _x;
-			if (call (_var select 6)) then { //--- If the item's condition is met, we can append it to the listbox
-				_row = ((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100006) lnbAddRow [format ["S%1", _var select 2], (_var select 0) select 1];
+			if (call (_var select CTI_STRUCTURE_CONDITION)) then { //--- If the item's condition is met, we can append it to the listbox
+				_row = ((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100006) lnbAddRow [format ["S%1", _var select CTI_STRUCTURE_PRICE], (_var select CTI_STRUCTURE_LABELS) select 1];
 				((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100006) lnbSetData [[_row, 0], _x];
 			};
 		} forEach (missionNamespace getVariable format ["CTI_%1_STRUCTURES", CTI_P_SideJoined]);
@@ -24,10 +24,10 @@ switch (_action) do {
 			_var = missionNamespace getVariable _x;
 			
 			_condition = {true};
-			{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select 5);
+			{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 			
 			if (call _condition) then {
-				_row = ((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100007) lnbAddRow [format ["$%1", _var select 2], _var select 0];
+				_row = ((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100007) lnbAddRow [format ["$%1", _var select CTI_STRUCTURE_PRICE], _var select CTI_STRUCTURE_LABELS];
 				((uiNamespace getVariable "cti_dialog_ui_buildmenu") displayCtrl 100007) lnbSetData [[_row, 0], _x];
 			};
 		} forEach (missionNamespace getVariable format ["CTI_%1_DEFENSES", CTI_P_SideJoined]);
@@ -50,10 +50,10 @@ switch (_action) do {
 			
 			//--- Check if we're dealing with HQ mobilize or a normal structure
 			
-			if (_supply >= (_var select 2)) then { //--- Check if we have enough supply to go in the construction mode.
+			if (_supply >= (_var select CTI_STRUCTURE_PRICE)) then { //--- Check if we have enough supply to go in the construction mode.
 				
 				
-				if (((_var select 0) select 0) != CTI_HQ_MOBILIZE) then {
+				if (((_var select CTI_STRUCTURE_LABELS) select 0) != CTI_HQ_MOBILIZE) then {
 					CTI_VAR_StructurePlaced = false;
 					[_selected, CTI_P_SideJoined call CTI_CO_FNC_GetSideHQ, CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingBuilding;
 					closeDialog 0;
@@ -80,12 +80,12 @@ switch (_action) do {
 			_var = missionNamespace getVariable _selected;
 			_funds = call CTI_CL_FNC_GetPlayerFunds;
 
-			if (_funds >= (_var select 2)) then { //--- Check if we have enough funds to go in the construction mode.
+			if (_funds >= (_var select CTI_STRUCTURE_PRICE)) then { //--- Check if we have enough funds to go in the construction mode.
 				CTI_P_RapidDefence=_selected;
 				CTI_VAR_StructurePlaced = false;
 				{player removeAction _x;true}count CTI_P_RapidDefence_Actions;
 				[_selected, CTI_P_SideJoined call CTI_CO_FNC_GetSideHQ, CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingDefense;
-				_rdb= player addAction [format ["<t color='#ff9900'>Build %1<t>",_var select 0],"['onBuildDefense', (_this select 3)] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'",CTI_P_RapidDefence,10001,false,false,"","_target == player && !CTI_P_PreBuilding && CTI_Base_HQInRange && _this == player"];
+				_rdb= player addAction [format ["<t color='#ff9900'>Build %1<t>",_var select CTI_STRUCTURE_LABELS],"['onBuildDefense', (_this select 3)] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'",CTI_P_RapidDefence,10001,false,false,"","_target == player && !CTI_P_PreBuilding && CTI_Base_HQInRange && _this == player"];
 				CTI_P_RapidDefence_Actions set [count CTI_P_RapidDefence_Actions,_rdb];
 				_rdc= player addAction ["<t color='#ff9900'>Cancel Fast building<t>","{player removeAction _x;true}count CTI_P_RapidDefence_Actions;",CTI_P_RapidDefence,10000,false,false,"","_target == player && !CTI_P_PreBuilding && CTI_Base_HQInRange && _this == player"];
 				CTI_P_RapidDefence_Actions set [count CTI_P_RapidDefence_Actions,_rdc];

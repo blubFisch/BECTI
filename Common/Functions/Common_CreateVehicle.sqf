@@ -13,7 +13,7 @@
   # PARAMETERS #
     0	[String]: The type of vehicle to create
     1	[Array/Object]: The 2D/3D position where the vehicle should be created at
-    2	[Integer]: The Azimuth direction (0-360Â°) of the vehicle
+    2	[Integer]: The Azimuth direction (0-360°) of the vehicle
     3	[Side/Integer]: The Side or Side ID of the vehicle
     4	{Optionnal} [Boolean]: Determine if the vehicle should be created locked or not
     5	{Optionnal} [Boolean]: Determine if the vehicle should be "public" or not
@@ -196,6 +196,16 @@ _vehicle setVehicleReportRemoteTargets true; //Sets that the vehicle will share 
 _vehicle ssetVehicleReceiveRemoteTargets true; //Sets that the vehicle will be able to receive targets acquired by someone else via datalink from the Side center.
 _vehicle setVehicleReportOwnPosition true; // Sets that the vehicle will share its own position via datalink to the Side center.
 */
+
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [[_vehicle], true];
+	} else {
+		[ADMIN_ZEUS, _vehicle] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+};
+
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle

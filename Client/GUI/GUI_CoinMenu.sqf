@@ -87,7 +87,7 @@ with missionNamespace do {
 	CTI_COIN_CAMCONSTRUCT camConstuctionSetParams ([_startPos] + _areaSize);
 	
 	//--- Apply NVG or not depending on the daytime
-	_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+	_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 	camUseNVG _nvgstate;
 	CTI_COIN_CAMUSENVG = _nvgstate;
 	
@@ -135,14 +135,14 @@ with missionNamespace do {
 			if (_position distance _nearest < 10) then {
 				_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
 				_nearest_var = missionNamespace getVariable [format["CTI_%1_%2", CTI_P_SideJoined, typeOf _nearest], []];
-				_nearest_title = _nearest_var select 0;
+				_nearest_title = _nearest_var select CTI_STRUCTURE_LABELS;
 				switch (typeName _nearest_title) do {
 					case "STRING": { _nearest_title = _nearest_title; };
 					case "ARRAY": {
 						_nearest_title = _nearest_title select 0;
 					};
 				};
-				_nearest_refund = round((_nearest_var select 2) * CTI_BASE_DEFENSES_SOLD_COEF);
+				_nearest_refund = round((_nearest_var select CTI_STRUCTURE_PRICE) * CTI_BASE_DEFENSES_SOLD_COEF);
 				//update bottom ui with text
 				_sellText = format ["<t color='#42b6ff' shadow='2' size='1' align='center' valign='top'>%1 - <t color='#30fd07'>$%2</t> | Press O to Sell</t>", _nearest_title, _nearest_refund];
 				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _sellText);

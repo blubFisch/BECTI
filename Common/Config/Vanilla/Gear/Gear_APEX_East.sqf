@@ -347,22 +347,7 @@ _u pushBack 0;
 _p pushBack 600;
 _g pushBack "Tropic";
 
-_i pushBack "U_O_FullGhillie_ard";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
 _i pushBack "U_O_T_FullGhillie_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_O_FullGhillie_lsh";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_O_FullGhillie_sard";
 _u pushBack 0;
 _p pushBack 600;
 _g pushBack "Tropic";
@@ -388,65 +373,6 @@ _p pushBack 600;
 _g pushBack "Hex";
 
 //--- VESTS
-_i pushBack "V_PlateCarrierGL_blk";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Black";
-
-_i pushBack "V_PlateCarrierGL_rgr";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PlateCarrierGL_mtp";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "MTP";
-
-_i pushBack "V_PlateCarrierGL_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "V_PlateCarrier1_rgr_noflag_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PlateCarrier1_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "V_PlateCarrier2_tna_F";
-_u pushBack 1;
-_p pushBack 300;
-_g pushBack "Tropic";
-
-_i pushBack "V_PlateCarrier2_rgr_noflag_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PLateCarrierSpec_blk";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Black";
-
-_i pushBack "V_PLateCarrierSpec_rgr";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PLateCarrierSpec_mtp";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "MTP";
-
-_i pushBack "V_PLateCarrierSpec_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
 
 _i pushBack "V_TacVest_gen_F";
 _u pushBack 0;

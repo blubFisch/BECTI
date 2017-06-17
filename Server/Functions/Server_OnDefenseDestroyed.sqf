@@ -41,14 +41,14 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _var = missionNamespace getVariable _varname;
 _fob = false;
-{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
+{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 _large_fob = false;
-{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
+{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 if (_fob) then { //--- Erase this FOB upon destruction
 	if (CTI_Log_Level >= CTI_Log_Information) then {
-		["INFORMATION", "FILE: Server\Functions\Server_OnDefenseDestroyed.sqf", format["FOB [%1 (%2)] is destroyed and will be removed from side [%3]", _killed, _var select 1, _side]] call CTI_CO_FNC_Log;
+		["INFORMATION", "FILE: Server\Functions\Server_OnDefenseDestroyed.sqf", format["FOB [%1 (%2)] is destroyed and will be removed from side [%3]", _killed, _var select CTI_STRUCTURE_CLASSES, _side]] call CTI_CO_FNC_Log;
 	};
 
 	_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") - [objNull, _killed], true];
@@ -63,8 +63,8 @@ sleep 5;
 if !(isNull _killer) then {
 	if (side _killer != sideEnemy && side _killer != _side && (group _killer) call CTI_CO_FNC_IsGroupPlayable) then {
 		if (isPlayer _killer) then {
-			_label = ((_var select 0));
-			_award = round((_var select 2) * CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY);
+			_label = ((_var select CTI_STRUCTURE_LABELS));
+			_award = round((_var select CTI_STRUCTURE_PRICE) * CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY);
 				
 			[_label, _award] remoteExec ["CTI_PVF_CLT_OnBountyDefense", _killer];
 			["award-bounty-defense", [_award, _label]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _killer];

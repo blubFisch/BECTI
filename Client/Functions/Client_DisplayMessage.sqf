@@ -53,7 +53,7 @@ switch (_message_var) do {
 	};
 	case "build-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
-		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];
+		(_parameters select 0) groupChat format ["Constructing %1... %2%3", (_var select CTI_STRUCTURE_LABELS) select 1, _parameters select 2, "%"];
 	};
 	case "building-hit": { // see CTI_BASE_DISPLAY_HINT to disable hint.
 	// commented line below has support to display a hint to the shooter the enemy structure's base health upgrade
@@ -67,15 +67,15 @@ switch (_message_var) do {
 		_damage_value = _parameters select 2;
 		if (_damage_value >= 70) then { // displays damage as green text
 
-				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#0ECF0E'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1,mapGridPosition (_parameters select 1), _damage_value, "%"];
+				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#0ECF0E'><t align='center'>Current Health: %3%4</t></t>", (_var select CTI_STRUCTURE_LABELS) select 1,mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
 		if (_damage_value < 70 && _damage_value >= 30 ) then { // displays damage as orange text
 
-				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#FF7E00'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
+				hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#FF7E00'><t align='center'>Current Health: %3%4</t></t>", (_var select CTI_STRUCTURE_LABELS) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
 		if (_damage_value < 30) then {// displays damage as red text
 
-		hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#ff0000'><t align='center'>Current Health: %3%4</t></t>", (_var select 0) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
+		hint parseText format ["<t color='#ff0000'><t align='center'>%1 Damaged</t></t><br /><t align='center'>At Grid: %2</t><br /><t color='#ff0000'><t align='center'>Current Health: %3%4</t></t>", (_var select CTI_STRUCTURE_LABELS) select 1, mapGridPosition (_parameters select 1), _damage_value, "%"];
 		};
 
 		sleep 10;
@@ -105,7 +105,7 @@ switch (_message_var) do {
 	};//--- Todo, popup system with helper on/off
 	case "defense-destroyed": {
 		_var = missionNamespace getVariable (_parameters select 0);
-		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select 0), mapGridPosition (_parameters select 1)];
+		CTI_P_ChatID commandChat format ["A %1 has been destroyed at %2!", (_var select CTI_STRUCTURE_LABELS), mapGridPosition (_parameters select 1)];
 	};
     case "defense-sold": {CTI_P_ChatID commandChat format ["A %1 defense has been sold for $%2", _parameters select 0, _parameters select 1]};
 	case "fob-destroyed": {
@@ -150,7 +150,7 @@ switch (_message_var) do {
 	};
 	case "repair-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
-		(_parameters select 0) groupChat format ["Repairing %1... %2%3", (_var select 0) select 1, _parameters select 2, "%"];
+		(_parameters select 0) groupChat format ["Repairing %1... %2%3", (_var select CTI_STRUCTURE_LABELS) select 1, _parameters select 2, "%"];
 	};
 	case "salvage": {
 		_value = if (call CTI_CL_FNC_IsPlayerCommander) then {_parameters select 2} else {_parameters select 1};
@@ -165,11 +165,11 @@ switch (_message_var) do {
 	case "spot-unit": {(_parameters select 0) sideChat format ["Enemy presence spotted near %1", mapGridPosition(_parameters select 1)]};
 	case "structure-preplaced": {
 		_var = missionNamespace getVariable (_parameters select 0);
-		CTI_P_ChatID commandChat format ["%1 is ready for construction at grid %2", (_var select 0) select 1, mapGridPosition (_parameters select 1)];
+		CTI_P_ChatID commandChat format ["%1 is ready for construction at grid %2", (_var select CTI_STRUCTURE_LABELS) select 1, mapGridPosition (_parameters select 1)];
 	};
 	case "structure-attacked": {
 		_var = missionNamespace getVariable (_parameters select 0);
-		CTI_P_ChatID commandChat format ["%1 is under attack at grid %2!", (_var select 0) select 1, mapGridPosition (_parameters select 1)];
+		CTI_P_ChatID commandChat format ["%1 is under attack at grid %2!", (_var select CTI_STRUCTURE_LABELS) select 1, mapGridPosition (_parameters select 1)];
 		playsound "air_raid";
 	};
 	case "structure-destroyed": {

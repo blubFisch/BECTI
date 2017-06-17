@@ -341,7 +341,111 @@ if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
 		_u pushBack 'rhs_msv_emr_marksman';
 		_u pushBack 'rhs_msv_emr_sergeant';
 		_u pushBack 'rhs_msv_emr_jumior_sergeant';
-		_u pushBack 'rhs_msv_emr_officer';		
+		_u pushBack 'rhs_msv_emr_officer';
+		_u PushBack 'rhs_msv_emr_crew';
+		_u PushBack 'rhs_msv_emr_armoredcrew';
+		_u PushBack 'rhs_msv_emr_crew_commander';
+		_u PushBack 'rhs_msv_emr_driver';
+		_u PushBack 'rhs_msv_emr_driver_armored';
+		_u PushBack 'rhs_msv_emr_efreitor';
+		_u PushBack 'rhs_msv_emr_grenadier_rpg';
+		_u PushBack 'rhs_msv_emr_strelok_rpg_assist';
+		_u PushBack 'rhs_msv_emr_machinegunner';
+		_u PushBack 'rhs_msv_emr_machinegunner_assistant';
+		_u PushBack 'rhs_msv_emr_officer_armored';
+		_u PushBack 'rhs_msv_aa';
+		_u PushBack 'rhs_msv_at';
+		_u PushBack 'rhs_msv_arifleman';
+		_u PushBack 'rhs_msv_driver';
+		_u PushBack 'rhs_msv_crew';
+		_u PushBack 'rhs_msv_armoredcrew';
+		_u PushBack 'rhs_msv_machinegunner_assistant';
+		_u PushBack 'rhs_msv_efreitor';
+		_u PushBack 'rhs_msv_LAT';
+		_u PushBack 'rhs_msv_engineer';
+		_u PushBack 'rhs_msv_grenadier_rpg';
+		_u PushBack 'rhs_msv_strelok_rpg_assist';
+		_u PushBack 'rhs_msv_junior_sergeant';
+		_u PushBack 'rhs_msv_machinegunner';
+		_u PushBack 'rhs_msv_medic';
+		_u PushBack 'rhs_msv_marksman';
+		_u PushBack 'rhs_msv_officer';
+		_u PushBack 'rhs_msv_rifleman';
+		_u PushBack 'rhs_msv_sergeant';
+		_u PushBack 'rhs_vdv_des_aa';
+		_u PushBack 'rhs_vdv_des_at';
+		_u PushBack 'rhs_vdv_des_arifleman';
+		_u PushBack 'rhs_vdv_des_crew';
+		_u PushBack 'rhs_vdv_des_armoredcrew';
+		_u PushBack 'rhs_vdv_des_combatcrew';
+		_u PushBack 'rhs_vdv_des_crew_commander';
+		_u PushBack 'rhs_vdv_des_driver';
+		_u PushBack 'rhs_vdv_des_driver_armored';
+		_u PushBack 'rhs_vdv_des_efreitor';
+		_u PushBack 'rhs_vdv_des_engineer';
+		_u PushBack 'rhs_vdv_des_machinegunner';
+		_u PushBack 'rhs_vdv_des_marksman';
+		_u PushBack 'rhs_vdv_des_marksman_asval';
+		_u PushBack 'rhs_vdv_des_officer';
+		_u PushBack 'rhs_vdv_des_officer_armored';
+		_u PushBack 'rhs_vdv_des_rifleman';
+		_u PushBack 'rhs_vdv_des_rifleman_lite';
+		_u PushBack 'rhs_vdv_des_LAT';
+		_u PushBack 'rhs_vdv_des_RShG2';
+		_u PushBack 'rhs_vdv_des_sergeant';
+		_u PushBack 'rhs_vdv_des_grenadier_rpg';
+		_u PushBack 'rhs_vdv_des_strelok_rpg_assist';
+		_u PushBack 'rhs_vdv_des_junior_sergeant';
+		_u PushBack 'rhs_vdv_des_machinegunner_assistant';
+		_u PushBack 'rhs_vdv_des_medic';
+		_u PushBack 'rhs_vdv_des_grenadier';
+		_u PushBack 'rhs_vdv_des_rifleman_asval';
+		_u PushBack 'rhs_vdv_mflora_aa';
+		_u PushBack 'rhs_vdv_mflora_at';
+		_u PushBack 'rhs_vdv_mflora_crew';
+		_u PushBack 'rhs_vdv_mflora_efreitor';
+		_u PushBack 'rhs_vdv_mflora_machinegunner_assistant';
+		_u PushBack 'rhs_vdv_mflora_armoredcrew';
+		_u PushBack 'rhs_vdv_mflora_combatcrew';
+		_u PushBack 'rhs_vdv_mflora_crew_commander';
+		_u PushBack 'rhs_vdv_mflora_driver_armored';
+		_u PushBack 'rhs_vdv_mflora_driver';
+		_u PushBack 'rhs_vdv_mflora_engineer';
+		_u PushBack 'rhs_vdv_mflora_grenadier_rpg';
+		_u PushBack 'rhs_vdv_mflora_strelok_rpg_assist';
+		_u PushBack 'rhs_vdv_mflora_junior_sergeant';
+		_u PushBack 'rhs_vdv_mflora_machinegunner';
+		_u PushBack 'rhs_vdv_mflora_marksman';
+		_u PushBack 'rhs_vdv_mflora_medic';
+		_u PushBack 'rhs_vdv_mflora_officer';
+		_u PushBack 'rhs_vdv_mflora_officer_armored';
+		_u PushBack 'rhs_vdv_mflora_rifleman';
+		_u PushBack 'rhs_vdv_mflora_rifleman_lite';
+		_u PushBack 'rhs_vdv_mflora_LAT';
+		_u PushBack 'rhs_vdv_mflora_RShG2';
+		_u PushBack 'rhs_vdv_mflora_sergeant';
+		_u PushBack 'rhs_vmf_recon_arifleman';
+		_u PushBack 'rhs_vmf_recon_efreitor';
+		_u PushBack 'rhs_vmf_recon_machinegunner_assistant';
+		_u PushBack 'rhs_vmf_recon_marksman';
+		_u PushBack 'rhs_vmf_recon_marksman_vss';
+		_u PushBack 'rhs_vmf_recon_medic';
+		_u PushBack 'rhs_vmf_recon_officer';
+		_u PushBack 'rhs_vmf_recon_officer_armored';
+		_u PushBack 'rhs_vmf_recon_rifleman';
+		_u PushBack 'rhs_vmf_recon_rifleman_akms';
+		_u PushBack 'rhs_vmf_recon_rifleman_l';
+		_u PushBack 'rhs_vmf_recon_rifleman_asval';
+		_u PushBack 'rhs_vmf_recon_grenadier';
+		_u PushBack 'rhs_vmf_recon_rifleman_lat';
+		_u PushBack 'rhs_vmf_recon_rifleman_scout_akm';
+		_u PushBack 'rhs_vmf_recon_rifleman_scout';
+		_u PushBack 'rhs_vmf_recon_grenadier_scout';
+		_u PushBack 'rhs_vmf_recon_arifleman_scout';
+		_u PushBack 'rhs_vmf_recon_sergeant';
+
+
+
 		//Russia RHS (Woodland)******************************************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -537,6 +641,12 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_BRDM2_CSAT';
 		_u pushBack 'CUP_O_BRDM2_ATGM_CSAT';
 		_u pushBack 'CUP_O_BRDM2_HQ_CSAT';
+
+		//Civ CUP
+		_u pushBack 'CUP_C_Skoda_Red_CIV';
+		_u pushBack 'CUP_C_SUV_TK';
+		_u pushBack 'CUP_C_UAZ_Unarmed_TK_CIV';
+
 };
 //------------------------------ OFPS CUP ------------------------------
 if (CTI_OFPS_CUP_ADDON >= 2) then { 
@@ -614,7 +724,12 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//_u pushBack 'dbo_CIV_new_bike';
 		//_u pushBack 'sfp_dakota';
 		//_u pushBack 'sfp_mercedes';
-		//_u pushBack 'dbo_CIV_ol_bike';		
+		//_u pushBack 'dbo_CIV_ol_bike';
+		_u pushBack "OFPS_4WD_O";
+		_u pushBack "OFPS_STRIDER_O";
+		_u pushBack "OFPS_STRIDER_HMG_O";
+		_u pushBack "OFPS_STRIDER_GMG_O";
+		_u pushBack "OFPS_O_Truck_03_device_F";		
 		//CSAT (woodland)******************************************
 		//CSAT (Winter)******************************************NOT READY
 		/*_u pushBack 'sfp_bv206_winter';
@@ -786,6 +901,10 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//CSAT (arid)*********************
+		_u pushBack "OFPS_GORGON_O";
+		_u pushBack "OFPS_MORA_O";
+		_u pushBack "OFPS_KUMA_O";
+		_u pushBack "ofps_O_MBT_01_mlrs_base_F";		
 		//CSAT (woodland)*********************
 		//CSAT (Winter)*********************NOT READY
 		/*	_u pushBack "AAF_D_APC_tracked_03_cannon_F";
@@ -893,7 +1012,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_C130J_Cargo_TKA';
 		_u pushBack 'CUP_O_Su25_RU_2';		
 		_u pushBack 'CUP_O_AN2_TK';
-		_u pushBack 'CUP_RU_Pchela1T';
+		_u pushBack 'CUP_O_Pchela1T_RU';
 		_u pushBack 'CUP_O_UH1H_TKA';
 		_u pushBack 'CUP_O_Mi8_CHDKZ';
 		_u pushBack 'CUP_O_Mi8_SLA_2';
@@ -901,14 +1020,16 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Ka50_SLA';
 		_u pushBack 'CUP_C_DC3_CIV';	
 		_u pushBack 'CUP_O_MI6T_TKA';				
-		_u pushBack 'CUP_O_MI6T_TKA';			
+		_u pushBack 'CUP_O_MI6T_TKA';		
 		//Russia CUP (Woodland)*********************
 		_u pushBack 'CUP_O_Mi8_medevac_RU';
 		_u pushBack 'CUP_O_Ka52_RU';
+		_u pushBack 'CUP_O_Ka52_Blk_RU';
 		_u pushBack 'CUP_O_Mi24_P_RU';
 		_u pushBack 'CUP_O_Mi24_V_RU';
 		_u pushBack 'CUP_O_Mi8_VIV_RU';
 		_u pushBack 'CUP_O_Mi8_RU';
+		_u pushBack 'CUP_O_Ka50_AA_SLA';
 		//Russia CUP (CSAT)*********************
 		_u pushBack 'CUP_O_Ka60_GL_Hex_CSAT';
 		_u pushBack 'CUP_O_SU34_LGB_CSAT';	
@@ -926,12 +1047,15 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 		_u pushBack 'CUP_O_Mi24_Mk4_Empty_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_Mk4_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_Mk4_S8_GSh_CSAT_T';
+		_u pushBack 'CUP_O_Mi24_D_SLA';
 		_u pushBack 'CUP_O_Mi24_D_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_P_CSAT_T';
 		_u pushBack 'CUP_O_Mi24_V_CSAT_T';
 		_u pushBack 'CUP_O_MI6A_CSAT_T';
 		_u pushBack 'CUP_O_MI6T_CSAT_T';
-
+		_u pushBack 'CUP_O_MI6T_CHDKZ';
+		// CUP Civilian
+		_u pushBack 'CUP_C_AN2_AEROSCHROT_TK_CIV';
 		//Russia CUP (Winter)*********************		
 	
 };
@@ -974,7 +1098,7 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 		_u pushBack 'RHS_Ka52_vvsc';
 		_u pushBack 'RHS_Ka52_UPK23_vvsc';
 		_u pushBack 'RHS_Su25SM_KH29_vvs';
-		_u pushBack 'RHS_T50_vvs_055';
+		_u pushBack 'RHS_T50_vvs_blueonblue';
 		_u pushBack 'RHS_TU95MS_vvs_tambov';
 		_u pushBack 'RHS_TU95MS_vvs_old';
 		_u pushBack 'rhs_mi28n_vvsc';
@@ -985,6 +1109,8 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 //------------------------------ OFPS RHS ------------------------------
 if (CTI_OFPS_RHS_ADDON >= 2) then {
 		//Russia RHS (Arid)*********************
+		_u pushBack 'ofps_rhs_mi28n_vvs';
+		_u pushBack 'ofps_rhs_mi28n_s13_vvsc';
 		_u pushBack 'ofps_RHS_Mi24V_vvsc';
 		_u pushBack 'ofps_RHS_Mi24V_FAB_vvsc';
 		_u pushBack 'ofps_RHS_Mi24V_AT_vvsc';
@@ -999,6 +1125,13 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//CSAT (arid)*********************
+		_u pushBack "OFPS_CAESAR_O";
+		_u pushBack "OFPS_MOHAWK_O";
+		_u pushBack "OFPS_HELLCAT_O";
+		_u pushBack "OFPS_HELLCAT_O_DYNAMIC";
+		_u pushBack "OFPS_BUZAA_O";
+		_u pushBack "OFPS_BUZAA_O_DYNAMIC";
+		_u pushBack "OFPS_GRYPHON_O";			
 		/*_u pushBack 'O_T_UAV_04_CAS_F';		
 		_u pushBack 'O_UCSV_01';
 		_u pushBack 'sfp_bo105_unarmed';
@@ -1014,7 +1147,6 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack 'sfp_j12';
 		_u pushBack 'sfp_j12_rb15';
 		_u pushBack 'sfp_j12_cap';
-		_u pushBack 'OFPS_BUZAA_O';
 		_u pushBack 'usaf_b1b';
 		_u pushBack 'pook_tu953M80';
 		_u pushBack 'pook_tu95ms';
@@ -1256,8 +1388,6 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_AFRF_ADDON >= 2) then {
 		//Russia RHS (Arid)*********************
-		//--- WARNING - this boat is a blufor!!! adding in here as a temp unit!
-		_u pushBack 'rhsusf_mkvsoc';		
 		//Russia RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------

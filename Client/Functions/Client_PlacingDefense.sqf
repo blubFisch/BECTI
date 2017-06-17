@@ -59,17 +59,17 @@ CTI_P_KeyDistance_Max = 20;
 _deh = (findDisplay 46) displayAddEventHandler ["KeyDown", "nullReturn = _this spawn CTI_UI_KeyHandler_BuildMenu"];
 
 _var = missionNamespace getVariable _variable;
-_classname = _var select 1;
+_classname = _var select CTI_STRUCTURE_CLASSES;
 _local = _classname createVehicleLocal getPos player;
 _local allowDamage false;
-_direction_structure = (_var select 4) select 0;
-_distance_structure = (_var select 4) select 1;
+_direction_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 0;
+_distance_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 1;
 
 // {_local disableCollisionWith _x} forEach (_center nearEntities (_center_distance+500));
 
 _last_collision_update = -600;
 _condition = {true};
-{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select 5);
+{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 
 _action = player addAction ["<t color='#9CF863'>Place Defense</t>", "Client\Actions\Action_BuildingPlace.sqf"];
 _action2 = player addAction ["<t color='#F86363'>Cancel Defense</t>", "Client\Actions\Action_BuildingPlace_Cancel.sqf"];
@@ -102,18 +102,18 @@ deleteVehicle _local;
 if !(CTI_VAR_StructureCanceled) then {
 	if (call _condition) then {
 		_funds = call CTI_CL_FNC_GetPlayerFunds;
-		if (_funds >= (_var select 2)) then {
-			-(_var select 2) call CTI_CL_FNC_ChangePlayerFunds;
+		if (_funds >= (_var select CTI_STRUCTURE_PRICE)) then {
+			-(_var select CTI_STRUCTURE_PRICE) call CTI_CL_FNC_ChangePlayerFunds;
 			[_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir, player, CTI_P_WallsAutoAlign, CTI_P_DefensesAutoManning] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 		} else {
 			hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />You do not have enough funds to place that defense.";
 		};
 		
 		_fob = false;
-		{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select 5);
+		{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		if (_fob) then {CTI_P_TeamsRequests_FOB = 0};
 		_large_fob = false;
-		{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select 5);
+		{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		if (_large_fob) then {CTI_P_TeamsRequests_FOB = 0};
 	} else {
 		hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Not all conditions are met to construct this defense.";

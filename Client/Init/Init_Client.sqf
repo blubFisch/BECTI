@@ -941,4 +941,8 @@ _uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_
 //--- Spawn init calls tablet
 0 spawn { call CTI_CL_FNC_Spawn; };
 
+//--- TODO: Organize all keybinds in one location
+//--- Holster weapon Keybind (Key 5)
+holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 0x05) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
+
 CTI_Init_Client = true;
