@@ -26,6 +26,7 @@
 _killed = _this select 0;
 _killer = _this select 1;
 _sideID_killed = _this select 2;
+_is_defense = if (count _this > 3) then {_this select 3} else {false};
 _side_killed = (_sideID_killed) call CTI_CO_FNC_GetSideFromID;
 _side_killed_original = _side_killed;
 
@@ -69,15 +70,21 @@ if (_renegade_killer) then { //--- Make sure the killer is not renegade, if so, 
 	_side_killer = switch (getNumber(configFile >> "CfgVehicles" >> _type_killer >> "side")) do {case 0: {east}; case 1: {west}; case 2: {resistance}; default {civilian}};
 };
 
-_var_name = if (isNil {_killed getVariable "cti_customid"}) then {_type_killed} else {missionNamespace getVariable format["CTI_CUSTOM_ENTITY_%1", _killed getVariable "cti_customid"]};
+_var_name = _type_killed;
+if !(_is_defense) then {
+	if !(isNil {_killed getVariable "cti_customid"}) then {missionNamespace getVariable format["CTI_CUSTOM_ENTITY_%1", _killed getVariable "cti_customid"]};
+} else {
+	_var_name = format ["CTI_%1_%2", _side_killed, _type_killed];
+};
+// _var_name = if (isNil {_killed getVariable "cti_customid"}) then {_type_killed} else {missionNamespace getVariable format["CTI_CUSTOM_ENTITY_%1", _killed getVariable "cti_customid"]};
 _var = missionNamespace getVariable _var_name;
 
 //todo check what happens when crew bails out. side become civ?!
 // this addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", 0]];this addEventHandler ["hit", {_this spawn CTI_CO_FNC_OnUnitHit}];
 // this addEventHandler ["getIn", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; this addEventHandler ["getOut", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; this setVariable ["cti_occupant", west call CTI_CO_FNC_GetSideFromID];
 // player sidechat format ["killed:%1 (%2)    killer:%3 (%4)",_killed, _side_killed,_killer, _side_killer];
-if (!isNil '_var') then {
-	_cost = _var select CTI_UNIT_PRICE;
+if (!isNil '_var' && _isplayable_killer) then {
+	_cost = if !(_is_defense) then {_var select CTI_UNIT_PRICE} else {_var select CTI_DEFENSE_PRICE};
 	
 	if (_side_killer != _side_killed) then { //--- Kill
 		if (_side_killed != civilian) then {
@@ -101,7 +108,7 @@ if (!isNil '_var') then {
 
 				//--- PVP Leader Reward for AI/Players
 				_killed_pname = "";
-				if (_isplayable_killed) then { 
+				if (_isplayable_killed && _isplayable_killer) then { 
 					_bounty = _bounty + round(score _killed * CTI_BOUNTY_COEF_PVP);
 					_killed_pname = name _killed;
 				};
@@ -111,7 +118,7 @@ if (!isNil '_var') then {
 				//--- Award
 				{
 					if (_x call CTI_CO_FNC_IsGroupPlayable) then {
-						if (isPlayer leader _x) then {[_var_name, _bounty, _killed_pname] remoteExec ["CTI_PVF_CLT_OnBountyUnit", leader _x]} else {[_x, _bounty] call CTI_CO_FNC_ChangeFunds};
+						if (isPlayer leader _x) then {[_var_name, _bounty, _killed_pname, _is_defense] remoteExec ["CTI_PVF_CLT_OnBountyUnit", leader _x]} else {[_x, _bounty] call CTI_CO_FNC_ChangeFunds};
 					} else {
 						// Award kills of base defense team to commander
 						_logic = (side _x) call CTI_CO_FNC_GetSideLogic;
@@ -144,7 +151,7 @@ if (!isNil '_var') then {
 						if (_isplayable_killer) then { //--- If the killer unit belong to a playable group, then we penalize that group.
 							[_group_killer, -_penalty] call CTI_CO_FNC_ChangeFunds;
 							_show_local = if (CTI_IsHostedServer || CTI_IsClient) then {true} else {false};
-							["penalty", [_var_name, _group_leader, _penalty]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side_killed];
+							["penalty", [_var_name, _group_killer, _penalty, _is_defense]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side_killed];
 							remoteExec ["CTI_PVF_CLT_OnTeamkill", _killer];
 						};
 					};

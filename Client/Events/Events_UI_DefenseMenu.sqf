@@ -11,10 +11,10 @@ switch (_action) do {
 			_var = missionNamespace getVariable _x;
 			
 			_condition = {true};
-			{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select 5);
+			{if (_x select 0 == "Condition") exitWith {_condition = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 			
 			if (call _condition) then {
-				_row = ((uiNamespace getVariable "cti_dialog_ui_defensemenu") displayCtrl 200007) lnbAddRow [format ["$%1", _var select 2], _var select 0];
+				_row = ((uiNamespace getVariable "cti_dialog_ui_defensemenu") displayCtrl 200007) lnbAddRow [format ["$%1", _var select CTI_STRUCTURE_PRICE], _var select CTI_STRUCTURE_LABELS];
 				((uiNamespace getVariable "cti_dialog_ui_defensemenu") displayCtrl 200007) lnbSetData [[_row, 0], _x];
 			};
 		} forEach (missionNamespace getVariable format ["CTI_%1_DEFENSES", CTI_P_SideJoined]);
@@ -30,12 +30,12 @@ switch (_action) do {
 			_var = missionNamespace getVariable _selected;
 			_funds = call CTI_CL_FNC_GetPlayerFunds;
 
-			if (_funds >= (_var select 2)) then { //--- Check if we have enough funds to go in the construction mode.
+			if (_funds >= (_var select CTI_STRUCTURE_PRICE)) then { //--- Check if we have enough funds to go in the construction mode.
 				CTI_VAR_StructurePlaced = false;
 				CTI_P_RapidDefence=_selected;
 				{player removeAction _x;true}count CTI_P_RapidDefence_Actions;
 				[_selected, uiNamespace getVariable "cti_dialog_ui_defensemenu_target", CTI_BASE_CONSTRUCTION_RANGE] spawn CTI_CL_FNC_PlacingDefense;
-				_rdb= player addAction [format ["<t color='#ff9900'>Build %1<t>",_var select 0],"['onBuildDefense', (_this select 3)] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'",CTI_P_RapidDefence,10001,false,false,"","_target == player && !CTI_P_PreBuilding  && _this == player"];
+				_rdb= player addAction [format ["<t color='#ff9900'>Build %1<t>",_var select CTI_STRUCTURE_LABELS],"['onBuildDefense', (_this select 3)] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'",CTI_P_RapidDefence,10001,false,false,"","_target == player && !CTI_P_PreBuilding  && _this == player"];
 				CTI_P_RapidDefence_Actions set [count CTI_P_RapidDefence_Actions,_rdb];
 				_rdc= player addAction ["<t color='#ff9900'>Cancel Fast building<t>","{player removeAction _x;true}count CTI_P_RapidDefence_Actions;",CTI_P_RapidDefence,10000,false,false,"","_target == player && !CTI_P_PreBuilding &&  _this == player"];
 				CTI_P_RapidDefence_Actions set [count CTI_P_RapidDefence_Actions,_rdc];

@@ -62,10 +62,10 @@ CTI_P_KeyDistance_Max = 20;
 _deh = (findDisplay 46) displayAddEventHandler ["KeyDown", "nullReturn = _this spawn CTI_UI_KeyHandler_BuildMenu"];
 
 _var = missionNamespace getVariable _variable;
-_local = ((_var select 1) select 0) createVehicleLocal getPos player;
+_local = ((_var select CTI_STRUCTURE_CLASSES) select 0) createVehicleLocal getPos player;
 _local allowDamage false;
-_direction_structure = (_var select 4) select 0;
-_distance_structure = (_var select 4) select 1;
+_direction_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 0;
+_distance_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 1;
 _last_collision_update = -600;
 
 _action = player addAction ["<t color='#9CF863'>Place Structure</t>", "Client\Actions\Action_BuildingPlace.sqf","", 96, false, true, "", "CTI_P_PreBuilding_SafePlace"];
@@ -74,7 +74,7 @@ _action2 = player addAction ["<t color='#F86363'>Cancel Structure</t>", "Client\
 _pos = [];
 _dir = 0;
 
-_helper = if (count(_var select 4) < 3) then {"Sign_Arrow_Large_Blue_F" createVehicleLocal getPos player} else {objNull};
+_helper = if (count(_var select CTI_STRUCTURE_PLACEMENT) < 3) then {"Sign_Arrow_Large_Blue_F" createVehicleLocal getPos player} else {objNull};
 
 while {!CTI_VAR_StructurePlaced && !CTI_VAR_StructureCanceled} do {
 	_pos = player modelToWorld [0, _distance_structure + CTI_P_KeyDistance + 5, 0];
@@ -132,11 +132,11 @@ if !(_in_area) then {
 
 //--- If there's no problems then we place it.
 if !(CTI_VAR_StructureCanceled) then {
-	if (((CTI_P_SideJoined) call CTI_CO_FNC_GetSideSupply) >= (_var select 2)) then {
-		[CTI_P_SideJoined, -(_var select 2)] call CTI_CO_FNC_ChangeSideSupply;
+	if (((CTI_P_SideJoined) call CTI_CO_FNC_GetSideSupply) >= (_var select CTI_STRUCTURE_PRICE)) then {
+		[CTI_P_SideJoined, -(_var select CTI_STRUCTURE_PRICE)] call CTI_CO_FNC_ChangeSideSupply;
 		
 		//--- Check whether we're dealing with the HQ or a normal structure
-		if !(((_var select 0) select 0) in [CTI_HQ_DEPLOY, CTI_HQ_MOBILIZE]) then {
+		if !(((_var select CTI_STRUCTURE_LABELS) select 0) in [CTI_HQ_DEPLOY, CTI_HQ_MOBILIZE]) then {
 			[_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir, player] remoteExec ["CTI_PVF_SRV_RequestBuilding", CTI_PV_SERVER];
 		} else {
 			[_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir] remoteExec ["CTI_PVF_SRV_RequestHQToggle", CTI_PV_SERVER];

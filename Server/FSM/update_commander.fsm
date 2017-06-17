@@ -322,10 +322,10 @@ class FSM
        "			if !(isNil '_var') then {" \n
        "				if (_supply >= (_var select 2)) then {" \n
        "					_index = -1;" \n
-       "					{if ((_x select 0) == ((_var select 0) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
+       "					{if ((_x select 0) == ((_var select CTI_STRUCTURE_LABELS) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
        "					if (_index != -1) then {" \n
        "						_emplacement = [_side, _var, _template select _index] call CTI_FSM_UpdateCommander_GetStructureEmplacement;" \n
-       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select 0) select 0, _var select 2, _emplacement]};" \n
+       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select CTI_STRUCTURE_LABELS) select 0, _var select 2, _emplacement]};" \n
        "					} else {" \n
        "						_increment = true; //--- We can't do it, what's next?" \n
        "					};" \n
@@ -511,7 +511,7 @@ class FSM
        "				//--- The factory is alive and we're lucky enough!" \n
        "				if (alive _factory && random 100 <= (([CTI_AI_COMMANDER_BUYTO_INFANTRY, CTI_AI_COMMANDER_BUYTO_LIGHT, CTI_AI_COMMANDER_BUYTO_HEAVY, CTI_AI_COMMANDER_BUYTO_AIR] select _id) * _modifier)) then {" \n
        "					_var = missionNamespace getVariable format [""CTI_SQUAD_%1_%2"", _side, _role];" \n
-       "					_cost = _var select 1;" \n
+       "					_cost = _var select CTI_STRUCTURE_CLASSES;" \n
        "					" \n
        "					//--- We have enough cash to purchase the template" \n
        "					if (_funds >= _cost) then {" \n

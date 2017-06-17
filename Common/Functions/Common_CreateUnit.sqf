@@ -84,6 +84,15 @@ if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_unit setSkill ["general", _unit_skill_val]; //Sets all above
 };
 
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [[_unit], true];
+	} else {
+		[ADMIN_ZEUS, _unit] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+};
+
 _unit call CTI_CO_FNC_UnitCreated;
 
 _unit

@@ -47,6 +47,15 @@ CTI_STRUCTURE_SPECIALS = 5;
 CTI_STRUCTURE_CONDITION = 6;
 CTI_STRUCTURE_RESPAWNBPOS = 7;
 
+CTI_DEFENSE_LABEL = 0;
+CTI_DEFENSE_CLASS = 1;
+CTI_DEFENSE_PRICE = 2;
+CTI_DEFENSE_CATEGORY = 3;
+CTI_DEFENSE_PLACEMENT = 4;
+CTI_DEFENSE_SPECIALS = 5;
+CTI_DEFENSE_COINMENU = 6;
+CTI_DEFENSE_COINBLACKLIST = 7;
+
 CTI_CAMP_RESPAWNBPOS = 0;
 
 CTI_GEAR_PROPERTIES = 0;
@@ -338,7 +347,7 @@ CTI_SUBTYPE_UNIFORM = 801;
 CTI_SUBTYPE_BACKPACK = 901;
 
 //--- Gear: Parameters
-CTI_GEAR_RESELL_TAX = 0.6; //--- Owned items are traded for: <item price> * <tax>
+CTI_GEAR_RESELL_TAX = 0.5; //--- Owned items are traded for: <item price> * <tax>
 CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respawn with his last known gear or not
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -554,6 +563,7 @@ CTI_BASE_DEFENSES_AUTO_REARM_DELAY = 60; //--- Time delay between auto reloads
 
 //--- Base: HQ
 CTI_BASE_HQ_BOUNTY = 2.50; //--- The bounty awarded upon HQ destruction
+CTI_BASE_HQ_DAMAGES_TRANSFER = 1; //--- Determine whether the damage should be transfered when the HQ get deployed or mobilized
 CTI_BASE_HQ_REPAIR_PRICE = 40000; //--- The cost needed to repair the HQ
 CTI_BASE_HQ_REPAIR_RANGE = 100; //--- The range needed between the HQ wreck and the Repair Truck
 CTI_BASE_HQ_REPAIR_TIME = 60; //--- The time needed to repair the HQ
@@ -782,7 +792,7 @@ CTI_SCORE_SALVAGE_VALUE_PERPOINT = 2000; //--- Unit value / x
 CTI_SCORE_TOWN_VALUE_PERPOINT = 100; //--- Town value / x
 CTI_SCORE_CAMP_VALUE_PERPOINT = 50; //--- Camp value / x
 
-CTI_UI_TOWNS_PROGRESSBAR_DISTANCE = 320;
+CTI_UI_TOWNS_PROGRESSBAR_DISTANCE = 550;
 
 CTI_GC_DELAY = 90;
 CTI_GC_DELAY_AIR = 360;

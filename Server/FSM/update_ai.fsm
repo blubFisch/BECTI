@@ -241,7 +241,7 @@ class FSM
        "_purchase = false;" \n
        "_remoting = false;" \n
        "if (!isNil '_var' && (_group getVariable ""cti_independent"")) then {//--- The role is set, it is independent, there is at least 1 structure, we have the min funds, the group is not buying or heading to a factory." \n
-       "	if (count _structures > 0 && _funds >= (_var select 1)) then {" \n
+       "	if (count _structures > 0 && _funds >= (_var select CTI_STRUCTURE_CLASSES)) then {" \n
        "		_factories = [_var select 3, _structures, leader _group] call CTI_CO_FNC_GetSideStructuresByType;" \n
        "		_factory_nearest = objNull;" \n
        "		" \n

@@ -8,9 +8,11 @@ CTI_SE_FNC_AddScore = compileFinal preprocessFileLineNumbers "Server\Functions\S
 CTI_SE_FNC_AI_PurchaseSquad = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AI_PurchaseSquad.sqf";
 CTI_SE_FNC_AttemptDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptDefenseDelegation.sqf";
 CTI_SE_FNC_AttemptTownDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptTownDelegation.sqf";
+CTI_SE_FNC_AttemptTownDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptTownDefenseDelegation.sqf";
 CTI_SE_FNC_BuildStructure = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildStructure.sqf";
 CTI_SE_FNC_BuildDefense = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildDefense.sqf";
 CTI_SE_FNC_CanCaptureTerritorialTown = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CanCaptureTerritorialTown.sqf";
+CTI_SE_FNC_CreateTownDefenses = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CreateTownDefenses.sqf";
 CTI_SE_FNC_CreateWorker = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CreateWorker.sqf";
 CTI_SE_FNC_HandleAIPurchase = compileFinal preprocessFileLineNumbers "Server\Functions\Server_HandleAIPurchase.sqf";
 CTI_SE_FNC_HandleEmptyVehicle = compileFinal preprocessFileLineNumbers "Server\Functions\Server_HandleEmptyVehicle.sqf";
@@ -37,6 +39,7 @@ CTI_SE_FNC_OnFOBHandleVirtualDamage = compileFinal preprocessFileLineNumbers "Se
 CTI_SE_FNC_OnDefenseDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseDestroyed.sqf";
 CTI_SE_FNC_OnFOBDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnFOBDestroyed.sqf";
 CTI_SE_FNC_OnHQDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnHQDestroyed.sqf";
+CTI_SE_FNC_OnTownActivation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownActivation.sqf";
 CTI_SE_FNC_OnTownCaptured = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownCaptured.sqf";
 CTI_SE_FNC_OnTownDeactivation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownDeactivation.sqf";
 CTI_SE_FNC_RepairHQ = compileFinal preprocessFileLineNumbers "Server\Functions\Server_RepairHQ.sqf";
@@ -219,6 +222,7 @@ if (_attempts >= 500) then {
 0 spawn {
 	waitUntil {!isNil 'CTI_InitTowns'};
 	
+	//--- Initialize the game FSM after that the towns are initialized
 	execFSM "Server\FSM\update_ai_defensive.fsm";
 	execFSM "Server\FSM\update_garbage_collector.fsm";
 	execFSM "Server\FSM\update_resources.fsm";

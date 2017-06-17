@@ -117,7 +117,7 @@ while {true} do {
 		if (isNil {_town getVariable "cti_naval"}) then {
 			if (([_position nearEntities _safe_range, _side] call CTI_CO_FNC_GetAreaEnemiesCount) > 0) then {
 				_use_default = true;
-				if (typeName _position isEqualTo "OBJECT") then { //--- If the position was meant to be a building, we try to find a new valid one, only applies to CTI_TOWNS_SPAWN_MODE with a value of 1
+				if (typeName _position isEqualTo "OBJECT") then { //--- If the position was meant to be a building, we try to find a new valid building one, only applies to CTI_TOWNS_SPAWN_MODE with a value of 1
 					_positions_building = _town getVariable ["cti_town_spawn_building", []];
 					if (count _positions_building > 0) then {
 						_positions_building = _positions_building call CTI_CO_FNC_ArrayShuffle;
@@ -126,6 +126,7 @@ while {true} do {
 					};
 				};
 				
+				//--- If the position is not in a building, we do attempt to find a new safe position around the given area
 				if (_use_default) then {
 					_has_vehicles = false;
 					{if !(_x isKindOf "Man") exitWith {_has_vehicles = true}} forEach _team;
