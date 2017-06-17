@@ -201,9 +201,9 @@ if (CTI_FACTION_MODE == 0) then {
 		(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Units\Units_OFPS_CUP_East.sqf";
 	};	
 	//Mode Factories
+	(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_Resistance.sqf";
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_East.sqf";
-	(resistance) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Factories\Factory_Resistance.sqf";
 	//--- All modes use common base structures
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Base\Base_East.sqf";
@@ -294,6 +294,7 @@ if (CTI_FACTION_MODE == 1) then {
 		(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Units\Units_OFPS_CUP_East.sqf";
 	};	
 	//Mode Factories
+	(resistance) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Factory_Resistance.sqf";
 	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Factory_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Factories\Factory_East.sqf";
 	//--- All modes use common base structures
@@ -386,8 +387,9 @@ if (CTI_FACTION_MODE == 2) then {
 		(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Units\Units_OFPS_CUP_East.sqf";
 	};		
 	//Mode Factories
+	(resistance) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_Resistance.sqf";	
 	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_West.sqf";
-	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_East.sqf";		
+	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Factories\Factory_East.sqf";
 	//--- All modes use common base structures
 	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Base\Base_East.sqf";
@@ -478,6 +480,7 @@ if (CTI_FACTION_MODE == 3) then {
 		(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Units\Units_OFPS_CUP_East.sqf";
 	};	
 	//Mode Factories
+	(resistance) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Factory_Resistance.sqf";
 	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Factory_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Factories\Factory_East.sqf";
 	//--- All modes use common base structures

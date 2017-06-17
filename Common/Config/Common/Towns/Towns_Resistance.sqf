@@ -7,7 +7,7 @@ with missionNamespace do {
 	GUER_TOWN_AT = ["I_static_AT_F"];
 	GUER_TOWN_AA = ["I_static_AA_F"];
 	
-	/*
+
 	// Custom composition: 
 	//  Parameters :
 	//    0: Center (the marker)
@@ -37,8 +37,7 @@ with missionNamespace do {
 		
 		//--- Return the defenses objects and the composition
 		[_t_defenses, _t_composition]
-	}]
-	*/
+	}];
 
 if (CTI_TOWNS_OCCUPATION_RESISTANCE == 0) then { 
 //--- VANILLA - AAF TOWN OCCUPATION
