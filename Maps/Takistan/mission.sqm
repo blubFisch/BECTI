@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=414;
+		nextID=518;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5927.2832,160.70094,7051.7954};
-		dir[]={0.25233415,-0.13144855,0.95868719};
-		up[]={0.033461362,0.99132144,0.127129};
-		aside[]={0.96707821,-5.3221083e-007,-0.25454459};
+		pos[]={8758.5234,351.72064,2470.6711};
+		dir[]={-0.74735135,-0.58781296,0.30975938};
+		up[]={-0.54301846,0.8089965,0.22506812};
+		aside[]={0.38289234,-2.0721927e-008,0.92379797};
 	};
 };
 binarizationWanted=0;
@@ -136,24 +136,23 @@ class Mission
 	};
 	class Entities
 	{
-		items=209;
+		items=307;
 		class Item0
 		{
 			dataType="Marker";
-			position[]={2508,155.35498,11088};
+			position[]={2173.2231,-15.324707,12692.883};
 			name="cti-spawn0";
 			type="Empty";
 			id=0;
-			atlOffset=-71.050629;
+			atlOffset=-49.773579;
 		};
 		class Item1
 		{
 			dataType="Marker";
-			position[]={9251,140.43457,9772};
+			position[]={3714.479,24.575123,13189.617};
 			name="cti-spawn1";
 			type="Empty";
 			id=1;
-			atlOffset=-43.906937;
 		};
 		class Item2
 		{
@@ -184,7 +183,7 @@ class Mission
 		class Item5
 		{
 			dataType="Marker";
-			position[]={2905,361.1308,481};
+			position[]={3560.0664,359.94031,-462.16937};
 			name="cti-spawn5";
 			type="Empty";
 			id=5;
@@ -192,20 +191,20 @@ class Mission
 		class Item6
 		{
 			dataType="Marker";
-			position[]={2123.2085,265.34473,3066.7344};
+			position[]={-624.94537,320.62744,1570.2996};
 			name="cti-spawn6";
 			type="Empty";
 			id=6;
-			atlOffset=-11.799622;
+			atlOffset=-81.639832;
 		};
 		class Item7
 		{
 			dataType="Marker";
-			position[]={8756,313.33789,1448};
+			position[]={8490.4453,313.33789,1022.1111};
 			name="cti-spawn7";
 			type="Empty";
 			id=7;
-			atlOffset=-69.682983;
+			atlOffset=-166.298;
 		};
 		class Item8
 		{
@@ -2401,13 +2400,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2426,201.00139,4848};
-				angles[]={0,3.6036985,0};
+				angles[]={0,3.6037035,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Jilavur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Jilavur,this,[[""Jilavur_defence_0"",[""TOWN_MG""]],[""Jilavur_defence_1"",[""TOWN_MG""]],[""Jilavur_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=234;
@@ -2615,7 +2614,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [FeruzAbad,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [FeruzAbad,this,[[""FeruzAbad_defence_0"",[""TOWN_GL""]],[""FeruzAbad_defence_1"",[""TOWN_GL""]],[""FeruzAbad_defence_2"",[""TOWN_GL""]],[""FeruzAbad_defence_3"",[""TOWN_AA""]],[""FeruzAbad_defence_4"",[""TOWN_AT""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=245;
@@ -2693,14 +2692,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5958.2456,285.8645,5866.4912};
-				angles[]={0,0.18202509,0};
+				position[]={5958.2461,285.86456,5866.4912};
+				angles[]={0,0.18202038,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Anar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Anar,this,[[""Anar_defence_0"",[""TOWN_MG""]],[""Anar_defence_1"",[""TOWN_MG""]],[""Anar_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=247;
@@ -3031,7 +3030,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Falar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Falar,this,[[""Falar_defence_0"",[""TOWN_MG""]],[""Falar_defence_1"",[""TOWN_MG""]],[""Falar_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=255;
@@ -3239,7 +3238,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Shukurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Shukurkalay,this,[[""Shukurkalay_defence_0"",[""TOWN_MG""]],[""Shukurkalay_defence_1"",[""TOWN_MG""]],[""Shukurkalay_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=260;
@@ -3365,7 +3364,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Chaman,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Chaman,this,[[""Chaman_defence_0"",[""TOWN_MG""]],[""Chaman_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=264;
@@ -3533,7 +3532,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Kakaru,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Kakaru,this,[[""Kakaru_defence_0"",[""TOWN_MG""]],[""Kakaru_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=269;
@@ -3778,13 +3777,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3519,240.04901,4183};
-				angles[]={0,1.4625248,0};
+				angles[]={0,1.4625161,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Sakhe,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Sakhe,this,[[""Sakhe_defence_0"",[""TOWN_GL""]],[""Sakhe_defence_1"",[""TOWN_MG""]],[""Sakhe_defence_2"",[""TOWN_MG""]],[""Sakhe_defence_3"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=275;
@@ -3869,7 +3868,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [ChakChak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [ChakChak,this,[[""ChakChak_defence_0"",[""TOWN_MG""]],[""ChakChak_defence_1"",[""TOWN_MG""]],[""ChakChak_defence_2"",[""TOWN_MG""]],[""ChakChak_defence_3"",[""TOWN_GL""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=277;
@@ -4077,7 +4076,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Huzrutimam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Huzrutimam,this,[[""Huzrutimam_defence_0"",[""TOWN_MG""]],[""Huzrutimam_defence_1"",[""TOWN_MG""]],[""Huzrutimam_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=282;
@@ -4370,7 +4369,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Sultansafe,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Sultansafe,this,[[""Sultansafe_defence_0"",[""TOWN_MG""]],[""Sultansafe_defence_1"",[""TOWN_MG""]],[""Sultansafe_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=290;
@@ -4498,7 +4497,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Landay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Landay,this,[[""Landay_defence_0"",[""TOWN_MG""]],[""Landay_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=294;
@@ -4706,7 +4705,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [LoyManara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [LoyManara,this,[[""LoyManara_defence_0"",[""TOWN_MG""]],[""LoyManara_defence_1"",[""TOWN_MG""]],[""LoyManara_defence_2"",[""TOWN_MG""]],[""LoyManara_defence_3"",[""TOWN_AT""]],[""LoyManara_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=300;
@@ -4874,7 +4873,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Chardarakht,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Chardarakht,this,[[""Chardarakht_defence_0"",[""TOWN_MG""]],[""Chardarakht_defence_1"",[""TOWN_MG""]],[""Chardarakht_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=305;
@@ -4952,18 +4951,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11691,384.7594,2560};
+				position[]={11691,384.75937,2560};
 				angles[]={0,1.217402,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [HazarBagh,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [HazarBagh,this,[[""HazarBagh_defence_0"",[""TOWN_MG""]],[""HazarBagh_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=307;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5085,7 +5085,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Jaza,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Jaza,this,[[""Jaza_defence_0"",[""TOWN_MG""]],[""Jaza_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=314;
@@ -5206,14 +5206,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8764.7666,277.11447,5176.5786};
-				angles[]={0,5.6004829,0};
+				position[]={8764.7666,277.11444,5176.5791};
+				angles[]={0,5.6004825,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Timurkalay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Timurkalay,this,[[""Timurkalay_defence_0"",[""TOWN_MG""]],[""Timurkalay_defence_1"",[""TOWN_MG""]],[""Timurkalay_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=317;
@@ -5540,13 +5540,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9133,214.05702,6480};
-				angles[]={0,4.6132436,0};
+				angles[]={0,4.6132369,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Garmarud,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Garmarud,this,[[""Garmarud_defence_0"",[""TOWN_GL""]],[""Garmarud_defence_1"",[""TOWN_GL""]],[""Garmarud_defence_2"",[""TOWN_GL""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=325;
@@ -5713,7 +5713,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Garmsar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Garmsar,this,[[""Garmsar_defence_0"",[""TOWN_AT""]],[""Garmsar_defence_1"",[""TOWN_GL""]],[""Garmsar_defence_2"",[""TOWN_GL""]],[""Garmsar_defence_3"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=329;
@@ -5914,18 +5914,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8376,183.3094,7612};
+				position[]={8376,183.30942,7612};
 				angles[]={0.052359879,3.9723868,0.052359879};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Imarat,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Imarat,this,[[""Imarat_defence_0"",[""TOWN_MG""]],[""Imarat_defence_1"",[""TOWN_MG""]],[""Imarat_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=335;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6123,18 +6124,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9829,127.6658,11280};
-				angles[]={0,3.3498189,0};
+				position[]={9829,127.66581,11280};
+				angles[]={0,3.3498104,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Zavarak,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Zavarak,this,[[""Zavarak_defence_0"",[""TOWN_MG""]],[""Zavarak_defence_1"",[""TOWN_MG""]],[""Zavarak_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=340;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6291,13 +6293,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12427,173.25656,10175};
-				angles[]={0,6.0657377,0};
+				angles[]={0,6.0657344,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Karachinar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Karachinar,this,[[""Karachinar_defence_0"",[""TOWN_MG""]],[""Karachinar_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=346;
@@ -6499,14 +6501,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6108.3057,71.425652,10866.605};
-				angles[]={0,5.1047277,0};
+				position[]={6108.3062,71.425667,10866.605};
+				angles[]={0,5.1047215,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Rasman,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Rasman,this,[[""Rasman_defence_0"",[""TOWN_GL""]],[""Rasman_defence_1"",[""TOWN_GL""]],[""Rasman_defence_2"",[""TOWN_GL""]],[""Rasman_defence_3"",[""TOWN_AT""]],[""Rasman_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=352;
@@ -6709,13 +6711,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5738,100.53578,8765};
-				angles[]={0,4.2977576,0};
+				angles[]={0,4.2977509,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Bastam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Bastam,this,[[""Bastam_defence_0"",[""TOWN_MG""]],[""Bastam_defence_1"",[""TOWN_MG""]],[""Bastam_defence_2"",[""TOWN_GL""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=357;
@@ -6795,13 +6797,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4162,30.450602,11599};
-				angles[]={0,4.586937,0};
+				angles[]={0,4.586935,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Shamali,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Shamali,this,[[""Shamali_defence_0"",[""TOWN_MG""]],[""Shamali_defence_1"",[""TOWN_MG""]],[""Shamali_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=361;
@@ -7085,19 +7087,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3014,117.17619,10224};
+				position[]={3014,117.17618,10224};
 				angles[]={6.2308254,2.2920885,6.2308254};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Nagara,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Nagara,this,[[""Nagara_defence_0"",[""TOWN_GL""]],[""Nagara_defence_1"",[""TOWN_GL""]],[""Nagara_defence_2"",[""TOWN_GL""]],[""Nagara_defence_3"",[""TOWN_AA""]],[""Nagara_defence_4"",[""TOWN_AT""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=368;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=7.6293945e-006;
+			atlOffset=-7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7171,14 +7173,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1959.2715,149.20575,11748.227};
-				angles[]={0,3.5431006,0};
+				position[]={1959.271,149.20575,11748.227};
+				angles[]={0,3.5431056,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Nur,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Nur,this,[[""Nur_defence_0"",[""TOWN_MG""]],[""Nur_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=370;
@@ -7386,7 +7388,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Gospandi,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Gospandi,this,[[""Gospandi_defence_0"",[""TOWN_MG""]],[""Gospandi_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=377;
@@ -7547,13 +7549,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2311,250.52861,7742};
-				angles[]={0,2.9388533,0};
+				angles[]={0,2.9388552,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Mulladost,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Mulladost,this,[[""Mulladost_defence_0"",[""TOWN_MG""]],[""Mulladost_defence_1"",[""TOWN_MG""]],[""Mulladost_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=382;
@@ -7673,18 +7675,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11581,264.64462,8622};
-				angles[]={0,1.6666836,0};
+				position[]={11581,264.64459,8622};
+				angles[]={0,1.6666847,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Ravanay,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Ravanay,this,[[""Ravanay_defence_0"",[""TOWN_MG""]],[""Ravanay_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=391;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7772,11 +7775,11 @@ class Mission
 		class Item200
 		{
 			dataType="Marker";
-			position[]={13024.257,584.69116,4499.5361};
+			position[]={12000.876,643.98193,4539.0352};
 			name="cti-spawn16";
 			type="Empty";
 			id=399;
-			atlOffset=-188.4881;
+			atlOffset=-172.70898;
 		};
 		class Item201
 		{
@@ -7790,7 +7793,7 @@ class Mission
 		class Item202
 		{
 			dataType="Marker";
-			position[]={-468.3071,7.1320011e+016,2444.8582};
+			position[]={-618.10632,7.1320011e+016,2606.8035};
 			name="cti-spawn18";
 			type="Empty";
 			id=401;
@@ -7799,10 +7802,11 @@ class Mission
 		class Item203
 		{
 			dataType="Marker";
-			position[]={12519,429.71109,2682};
+			position[]={12870.894,440.71436,2747.1086};
 			name="cti-spawn19";
 			type="Empty";
 			id=402;
+			atlOffset=-4.9266968;
 		};
 		class Item204
 		{
@@ -8038,6 +8042,1146 @@ class Mission
 			};
 			id=412;
 			atlOffset=0.92126465;
+		};
+		class Item209
+		{
+			dataType="Marker";
+			position[]={9826.0303,0,11257.666};
+			name="Zavarak_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=190.28526;
+			id=414;
+			atlOffset=-123.85059;
+		};
+		class Item210
+		{
+			dataType="Marker";
+			position[]={10055.621,0.40177917,11380.517};
+			name="Zavarak_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=120.19804;
+			id=415;
+			atlOffset=-123.84418;
+		};
+		class Item211
+		{
+			dataType="Marker";
+			position[]={9640.2158,-16.712738,11686.624};
+			name="Zavarak_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=308.83383;
+			id=416;
+			atlOffset=-123.8618;
+		};
+		class Item212
+		{
+			dataType="Marker";
+			position[]={12426.406,0,10157.447};
+			name="Karachinar_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=190.28497;
+			id=417;
+			atlOffset=-170.13091;
+		};
+		class Item213
+		{
+			dataType="Marker";
+			position[]={12254.979,-36.226257,10601.185};
+			name="Karachinar_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=352.27411;
+			id=418;
+			atlOffset=-170.15718;
+		};
+		class Item214
+		{
+			dataType="Marker";
+			position[]={11585.224,0,8649.8281};
+			name="Ravanay_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=3.3924806;
+			id=419;
+			atlOffset=-259.26434;
+		};
+		class Item215
+		{
+			dataType="Marker";
+			position[]={11355.365,50.473358,8246.4053};
+			name="Ravanay_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=84.359947;
+			id=420;
+			atlOffset=-259.27234;
+		};
+		class Item216
+		{
+			dataType="Marker";
+			position[]={8391.7148,0,7585.353};
+			name="Imarat_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=133.15199;
+			id=421;
+			atlOffset=-181.53159;
+		};
+		class Item217
+		{
+			dataType="Marker";
+			position[]={7979.5562,-24.23172,7972.874};
+			name="Imarat_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=291.75699;
+			id=422;
+			atlOffset=-181.534;
+		};
+		class Item218
+		{
+			dataType="Marker";
+			position[]={8304.1094,39.598831,8003.4038};
+			name="Imarat_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=49.595501;
+			id=423;
+			atlOffset=-181.43155;
+		};
+		class Item219
+		{
+			dataType="Marker";
+			position[]={8974.2832,0,6949.6831};
+			name="Garmarud_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=324.43893;
+			id=424;
+			atlOffset=-201.38968;
+		};
+		class Item220
+		{
+			dataType="Marker";
+			position[]={9162.8096,0,6459.6421};
+			name="Garmarud_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=179.37799;
+			id=425;
+			atlOffset=-209.64638;
+		};
+		class Item221
+		{
+			dataType="Marker";
+			position[]={9340.2461,0,6635.3218};
+			name="Garmarud_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=118.55799;
+			id=426;
+			atlOffset=-224.66975;
+		};
+		class Item222
+		{
+			dataType="Marker";
+			position[]={5615.2441,0,8644.0117};
+			name="Bastam_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.35597;
+			id=427;
+			atlOffset=-90.360573;
+		};
+		class Item223
+		{
+			dataType="Marker";
+			position[]={6266.3208,13.989899,8955.4785};
+			name="Bastam_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=88.92881;
+			id=429;
+			atlOffset=-90.368568;
+		};
+		class Item224
+		{
+			dataType="Marker";
+			position[]={5642.584,-11.684647,9101.4258};
+			name="Bastam_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=351.01083;
+			id=430;
+			atlOffset=-90.306953;
+		};
+		class Item225
+		{
+			dataType="Marker";
+			position[]={6072.8511,0,10872.367};
+			name="Rasman_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=208.12798;
+			id=432;
+			atlOffset=-65.517609;
+		};
+		class Item226
+		{
+			dataType="Marker";
+			position[]={6123.2588,0,11406.444};
+			name="Rasman_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=127.02198;
+			id=433;
+			atlOffset=-76.839333;
+		};
+		class Item227
+		{
+			dataType="Marker";
+			position[]={6436.6479,0,11265.46};
+			name="Rasman_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=137.30898;
+			id=434;
+			atlOffset=-60.498528;
+		};
+		class Item228
+		{
+			dataType="Marker";
+			position[]={6390.5659,0,11727.708};
+			name="Rasman_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.35597;
+			id=435;
+			atlOffset=-101.29922;
+		};
+		class Item229
+		{
+			dataType="Marker";
+			position[]={6512.0767,-5.0391388,11109.46};
+			name="Rasman_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.35596;
+			id=436;
+			atlOffset=-101.32945;
+		};
+		class Item230
+		{
+			dataType="Marker";
+			position[]={11143.071,0,6376.02};
+			name="Garmsar_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=265.55502;
+			id=437;
+			atlOffset=-353.72858;
+		};
+		class Item231
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10973.773,315.04639,6510.7324};
+				angles[]={0,3.7733574,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Garmsar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=438;
+			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=0.032409668;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item232
+		{
+			dataType="Marker";
+			position[]={10950.971,-44.347931,6520.1074};
+			name="Garmsar_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=208.51941;
+			id=439;
+			atlOffset=-353.61023;
+		};
+		class Item233
+		{
+			dataType="Marker";
+			position[]={10387.461,-96.660248,6377.6992};
+			name="Garmsar_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=277.04657;
+			id=440;
+			atlOffset=-353.74844;
+		};
+		class Item234
+		{
+			dataType="Marker";
+			position[]={10774.527,-72.636597,6399.0918};
+			name="Garmsar_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=265.55502;
+			id=441;
+			atlOffset=-353.66415;
+		};
+		class Item235
+		{
+			dataType="Marker";
+			position[]={8703.6211,0,5166.7681};
+			name="Timurkalay_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=179.37799;
+			id=442;
+			atlOffset=-274.70334;
+		};
+		class Item236
+		{
+			dataType="Marker";
+			position[]={8744.4277,31.944122,5430.252};
+			name="Timurkalay_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=274.99405;
+			id=443;
+			atlOffset=-274.85699;
+		};
+		class Item237
+		{
+			dataType="Marker";
+			position[]={8968.3818,-28.981476,5629.7822};
+			name="Timurkalay_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=357.95822;
+			id=444;
+			atlOffset=-274.78949;
+		};
+		class Item238
+		{
+			dataType="Marker";
+			position[]={5990.6841,0,7009.3682};
+			name="Falar_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=196.02296;
+			id=445;
+			atlOffset=-130.9729;
+		};
+		class Item239
+		{
+			dataType="Marker";
+			position[]={5950.7876,-14.986641,7606.0977};
+			name="Falar_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=4.4716458;
+			id=446;
+			atlOffset=-131.02374;
+		};
+		class Item240
+		{
+			dataType="Marker";
+			position[]={6189.8335,0.42674255,7334.6621};
+			name="Falar_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=80.968391;
+			id=447;
+			atlOffset=-130.94884;
+		};
+		class Item241
+		{
+			dataType="Marker";
+			position[]={6169.4658,0,6039.7002};
+			name="Anar_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=76.765991;
+			id=448;
+			atlOffset=-330.14102;
+		};
+		class Item242
+		{
+			dataType="Marker";
+			position[]={6128.9863,-23.327454,5460.689};
+			name="Anar_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.70073;
+			id=449;
+			atlOffset=-330.08987;
+		};
+		class Item243
+		{
+			dataType="Marker";
+			position[]={5813.8071,-78.250946,5899.0884};
+			name="Anar_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=4.9748173;
+			id=450;
+			atlOffset=-330.16263;
+		};
+		class Item244
+		{
+			dataType="Marker";
+			position[]={5336.4521,0,4504.0269};
+			name="Kakaru_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.701;
+			id=451;
+			atlOffset=-265.43665;
+		};
+		class Item245
+		{
+			dataType="Marker";
+			position[]={5303.5835,-46.665573,5047.7505};
+			name="Kakaru_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=334.57559;
+			id=452;
+			atlOffset=-265.3631;
+		};
+		class Item246
+		{
+			dataType="Marker";
+			position[]={3448.6741,0,4352.0928};
+			name="Sakhe_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.701;
+			id=453;
+			atlOffset=-312.06723;
+		};
+		class Item247
+		{
+			dataType="Marker";
+			position[]={3892.5962,-85.212418,4401.229};
+			name="Sakhe_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=327.1586;
+			id=454;
+			atlOffset=-312.10083;
+		};
+		class Item248
+		{
+			dataType="Marker";
+			position[]={3620.9958,-91.372055,4655.71};
+			name="Sakhe_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=3.9810572;
+			id=455;
+			atlOffset=-312.11041;
+		};
+		class Item249
+		{
+			dataType="Marker";
+			position[]={3519.7441,-63.799606,4084.385};
+			name="Sakhe_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=155.701;
+			id=456;
+			atlOffset=-312.15686;
+		};
+		class Item250
+		{
+			dataType="Marker";
+			position[]={1767.6541,0,3739.4089};
+			name="Shukurkalay_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=43.151287;
+			id=457;
+			atlOffset=-210.38564;
+		};
+		class Item251
+		{
+			dataType="Marker";
+			position[]={1274.0812,8.4741821,3405.626};
+			name="Shukurkalay_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=226.28503;
+			id=458;
+			atlOffset=-210.37123;
+		};
+		class Item252
+		{
+			dataType="Marker";
+			position[]={1302.3104,49.38472,3775.7446};
+			name="Shukurkalay_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=326.77533;
+			id=459;
+			atlOffset=-210.37929;
+		};
+		class Item253
+		{
+			dataType="Marker";
+			position[]={786.85303,0,3037.8511};
+			name="Chaman_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=56.327995;
+			id=460;
+			atlOffset=-236.27336;
+		};
+		class Item254
+		{
+			dataType="Marker";
+			position[]={345.37033,15.511032,2844.1191};
+			name="Chaman_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=97.339104;
+			id=461;
+			atlOffset=-236.31335;
+		};
+		class Item255
+		{
+			dataType="Marker";
+			position[]={4989.7388,0,6106.2612};
+			name="FeruzAbad_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=229.41498;
+			id=463;
+			atlOffset=-149.04756;
+		};
+		class Item256
+		{
+			dataType="Marker";
+			position[]={5073.4253,26.060059,6341.6021};
+			name="FeruzAbad_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=349.69809;
+			id=464;
+			atlOffset=-149.07712;
+		};
+		class Item257
+		{
+			dataType="Marker";
+			position[]={5455.9443,-8.1433563,6270.3745};
+			name="FeruzAbad_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=72.677406;
+			id=465;
+			atlOffset=-149.04556;
+		};
+		class Item258
+		{
+			dataType="Marker";
+			position[]={5012.9536,56.681732,6249.353};
+			name="FeruzAbad_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=119.91224;
+			id=466;
+			atlOffset=-148.93025;
+		};
+		class Item259
+		{
+			dataType="Marker";
+			position[]={5405.7773,66.230728,5935.7695};
+			name="FeruzAbad_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=229.41498;
+			id=467;
+			atlOffset=-149.06725;
+		};
+		class Item260
+		{
+			dataType="Marker";
+			position[]={4262.0088,0,11861.729};
+			name="Shamali_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=74.488991;
+			id=469;
+			atlOffset=-44.816204;
+		};
+		class Item261
+		{
+			dataType="Marker";
+			position[]={4136.7031,-19.52264,11586.357};
+			name="Shamali_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=176.67863;
+			id=470;
+			atlOffset=-44.813797;
+		};
+		class Item262
+		{
+			dataType="Marker";
+			position[]={3986.6362,6.7160416,11549.925};
+			name="Shamali_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=74.488991;
+			id=471;
+			atlOffset=-44.961037;
+		};
+		class Item263
+		{
+			dataType="Marker";
+			position[]={2041.228,0,11699.327};
+			name="Nur_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=114.785;
+			id=472;
+			atlOffset=-144.00711;
+		};
+		class Item264
+		{
+			dataType="Marker";
+			position[]={1681.6152,28.907196,11788.226};
+			name="Nur_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=79.528297;
+			id=473;
+			atlOffset=-144.17265;
+		};
+		class Item265
+		{
+			dataType="Marker";
+			position[]={3202.2939,0,9699.8086};
+			name="Nagara_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=110.9402;
+			id=474;
+			atlOffset=-87.191826;
+		};
+		class Item266
+		{
+			dataType="Marker";
+			position[]={2989.071,26.622276,10249.097};
+			name="Nagara_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=311.40176;
+			id=475;
+			atlOffset=-87.264633;
+		};
+		class Item267
+		{
+			dataType="Marker";
+			position[]={3379.6858,-35.621864,10144.864};
+			name="Nagara_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=46.788101;
+			id=476;
+			atlOffset=-87.182083;
+		};
+		class Item268
+		{
+			dataType="Marker";
+			position[]={2905.29,-27.662586,9876.583};
+			name="Nagara_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=110.94019;
+			id=477;
+			atlOffset=-87.169434;
+		};
+		class Item269
+		{
+			dataType="Marker";
+			position[]={3080.208,-0.96350098,10085.242};
+			name="Nagara_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=110.94019;
+			id=478;
+			atlOffset=-87.166939;
+		};
+		class Item270
+		{
+			dataType="Marker";
+			position[]={3720.3569,0,8823.2461};
+			name="Gospandi_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=26.805998;
+			id=479;
+			atlOffset=-142.64328;
+		};
+		class Item271
+		{
+			dataType="Marker";
+			position[]={3544.9314,17.632385,8385.1895};
+			name="Gospandi_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=230.59464;
+			id=480;
+			atlOffset=-142.68489;
+		};
+		class Item272
+		{
+			dataType="Marker";
+			position[]={2341.511,0,7742.606};
+			name="Mulladost_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=79.758003;
+			id=481;
+			atlOffset=-242.16148;
+		};
+		class Item273
+		{
+			dataType="Marker";
+			position[]={1941.2155,70.666458,7469.3188};
+			name="Mulladost_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=223.09763;
+			id=482;
+			atlOffset=-242.29674;
+		};
+		class Item274
+		{
+			dataType="Marker";
+			position[]={1727.3687,111.77327,7908.2373};
+			name="Mulladost_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=262.69141;
+			id=483;
+			atlOffset=-242.18788;
+		};
+		class Item275
+		{
+			dataType="Marker";
+			position[]={1482.194,0,5965.8779};
+			name="Khushab_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=1.443;
+			id=484;
+			atlOffset=-258.94257;
+		};
+		class Item276
+		{
+			dataType="Marker";
+			position[]={1862.4871,-36.95578,5600.1016};
+			name="Khushab_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=108.65694;
+			id=485;
+			atlOffset=-258.93933;
+		};
+		class Item277
+		{
+			dataType="Marker";
+			position[]={1613.764,-27.599167,5588.0698};
+			name="Khushab_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=1.443;
+			id=486;
+			atlOffset=-259.02097;
+		};
+		class Item278
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1493.218,255.01178,5503.958};
+				angles[]={0,3.7994595,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{nullreturn = [Khushab,this,[[""Khushab_defence_0"",[""TOWN_MG""]],[""Khushab_defence_1"",[""TOWN_MG""]],[""Khushab_defence_2"",[""TOWN_AA""]],[""Khushab_defence_3"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
+				disableSimulation=1;
+			};
+			id=487;
+			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.052017212;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item279
+		{
+			dataType="Marker";
+			position[]={1471.6124,-4.0155945,5477.2847};
+			name="Khushab_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=234.27739;
+			id=489;
+			atlOffset=-259.10736;
+		};
+		class Item280
+		{
+			dataType="Marker";
+			position[]={2354.2041,0,5316.6948};
+			name="Jilavur_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=325.73196;
+			id=490;
+			atlOffset=-201.21712;
+		};
+		class Item281
+		{
+			dataType="Marker";
+			position[]={2754.5613,-8.3349304,5189.959};
+			name="Jilavur_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=48.260441;
+			id=491;
+			atlOffset=-201.27071;
+		};
+		class Item282
+		{
+			dataType="Marker";
+			position[]={2389.7888,-6.7449036,4861.7749};
+			name="Jilavur_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=205.993;
+			id=492;
+			atlOffset=-201.18193;
+		};
+		class Item283
+		{
+			dataType="Marker";
+			position[]={2207.1809,0,440.892};
+			name="Landay_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=36.521996;
+			id=493;
+			atlOffset=-367.51019;
+		};
+		class Item284
+		{
+			dataType="Marker";
+			position[]={2010.6899,0.60427856,243.45047};
+			name="Landay_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=36.521992;
+			id=495;
+			atlOffset=-367.58859;
+		};
+		class Item285
+		{
+			dataType="Marker";
+			position[]={4315.6069,0,1070.5291};
+			name="ChakChak_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=354.90097;
+			id=496;
+			atlOffset=-396.05722;
+		};
+		class Item286
+		{
+			dataType="Marker";
+			position[]={4730.915,0,765.49701};
+			name="ChakChak_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=73.624001;
+			id=497;
+			atlOffset=-317.34143;
+		};
+		class Item287
+		{
+			dataType="Marker";
+			position[]={4162.8472,0,553.84998};
+			name="ChakChak_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=264.66498;
+			id=498;
+			atlOffset=-324.69125;
+		};
+		class Item288
+		{
+			dataType="Marker";
+			position[]={4741.2329,0,546.68903};
+			name="ChakChak_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=300.30698;
+			id=499;
+			atlOffset=-341.43976;
+		};
+		class Item289
+		{
+			dataType="Marker";
+			position[]={5899.1001,0,1034.976};
+			name="Huzrutimam_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=218.37999;
+			id=500;
+			atlOffset=-303.14804;
+		};
+		class Item290
+		{
+			dataType="Marker";
+			position[]={6019.5781,28.804871,1366.9349};
+			name="Huzrutimam_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=31.51347;
+			id=501;
+			atlOffset=-303.0481;
+		};
+		class Item291
+		{
+			dataType="Marker";
+			position[]={6342.4927,-11.370758,1216.5442};
+			name="Huzrutimam_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=75.864929;
+			id=502;
+			atlOffset=-303.01288;
+		};
+		class Item292
+		{
+			dataType="Marker";
+			position[]={6325.7681,0,1916.816};
+			name="Sultansafe_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=202.60199;
+			id=503;
+			atlOffset=-349.88718;
+		};
+		class Item293
+		{
+			dataType="Marker";
+			position[]={6693.7783,-33.828217,1968.6921};
+			name="Sultansafe_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=104.21964;
+			id=504;
+			atlOffset=-349.87442;
+		};
+		class Item294
+		{
+			dataType="Marker";
+			position[]={6492.0596,10.081482,2174.8169};
+			name="Sultansafe_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=109.98019;
+			id=505;
+			atlOffset=-349.81552;
+		};
+		class Item295
+		{
+			dataType="Marker";
+			position[]={9852.249,0,2358.1331};
+			name="Chardarakht_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=284.86798;
+			id=506;
+			atlOffset=-341.02719;
+		};
+		class Item296
+		{
+			dataType="Marker";
+			position[]={10418.686,15.782593,2368.6431};
+			name="Chardarakht_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=91.994202;
+			id=507;
+			atlOffset=-341.02618;
+		};
+		class Item297
+		{
+			dataType="Marker";
+			position[]={10103.767,42.076324,2560.6335};
+			name="Chardarakht_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=157.4247;
+			id=508;
+			atlOffset=-340.92395;
+		};
+		class Item298
+		{
+			dataType="Marker";
+			position[]={9100.5811,0,1993.153};
+			name="Jaza_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=346.30396;
+			id=509;
+			atlOffset=-318.52649;
+		};
+		class Item299
+		{
+			dataType="Marker";
+			position[]={9369.2842,29.153442,1667.1403};
+			name="Chardarakht_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=338.44827;
+			id=510;
+			atlOffset=-341.04239;
+		};
+		class Item300
+		{
+			dataType="Marker";
+			position[]={11663.978,0,2558.6909};
+			name="HazarBagh_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=256.68097;
+			id=511;
+			atlOffset=-379.63629;
+		};
+		class Item301
+		{
+			dataType="Marker";
+			position[]={11990.476,-6.3891296,2531.5667};
+			name="HazarBagh_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=322.65213;
+			id=512;
+			atlOffset=-379.57953;
+		};
+		class Item302
+		{
+			dataType="Marker";
+			position[]={8250.6699,0,2289.561};
+			name="LoyManara_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=259.276;
+			id=513;
+			atlOffset=-304.77597;
+		};
+		class Item303
+		{
+			dataType="Marker";
+			position[]={8770.0986,29.144501,2584.3574};
+			name="LoyManara_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=66.93045;
+			id=514;
+			atlOffset=-304.70471;
+		};
+		class Item304
+		{
+			dataType="Marker";
+			position[]={8711.7617,-3.5564575,2183.2554};
+			name="LoyManara_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=94.728279;
+			id=515;
+			atlOffset=-304.76318;
+		};
+		class Item305
+		{
+			dataType="Marker";
+			position[]={8688.8291,19.503601,2415.4258};
+			name="LoyManara_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=259.276;
+			id=516;
+			atlOffset=-304.69833;
+		};
+		class Item306
+		{
+			dataType="Marker";
+			position[]={8736.1846,21.755432,2474.2891};
+			name="LoyManara_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=284.00531;
+			id=517;
+			atlOffset=-304.74637;
 		};
 	};
 	class Connections
