@@ -12,6 +12,7 @@ Added: Ability to re-texture on fly any vehicle
 Added: Filters based by camo for both Gear and Vehicles
 Added: Vanilla Revive System
 Fixed: Vehicles will not spawn in houses
+Fixed: Empty town vehicles will not despawn after town deactivation
 
 **1.07.2**
 Fixed: Altis naval camp
