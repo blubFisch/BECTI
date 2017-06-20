@@ -4,10 +4,10 @@ true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": {
 		//--- Gear available?
-		//((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot) && !CTI_P_PreBuilding) then {true} else {false});
+		//((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then {true} else {false});
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_ControlCenterInRange || CTI_Base_GearInRange_Depot ||CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB )) then {true} else {false}); //gear available everywhere. if cc destroyed then cannot access equipment unless near depot or barracks
 		//--- Factory available?
-		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777102) ctrlEnable (if (!CTI_P_PreBuilding && (CTI_Base_BarracksInRange || CTI_Base_LightInRange || CTI_Base_HeavyInRange || CTI_Base_AirInRange || CTI_Base_AmmoInRange || CTI_Base_RepairInRange || CTI_Base_NavalInRange || CTI_Base_DepotInRange || CTI_Base_LargeFOBInRange)) then {true} else {false});
+		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777102) ctrlEnable (if ((CTI_Base_BarracksInRange || CTI_Base_LightInRange || CTI_Base_HeavyInRange || CTI_Base_AirInRange || CTI_Base_AmmoInRange || CTI_Base_RepairInRange || CTI_Base_NavalInRange || CTI_Base_DepotInRange || CTI_Base_LargeFOBInRange)) then {true} else {false});
 		//--- Build available?
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777103) ctrlEnable (if ((call CTI_CL_FNC_IsPlayerCommander && CTI_Base_HQInRange && (CTI_P_SideLogic getVariable ['cti_hq_ready', true])) || CTI_Base_RepairInRange_Mobile || CTI_Base_DefenseTruckInRange_Mobile) then {true} else {false});
 		//--- Halo available?
@@ -22,7 +22,7 @@ switch (_action) do {
 			((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl (777106)) ctrlSetTooltip format ["HALO Jump (%1s)",floor((CTI_HALO_COOLDOWN-(time - CTI_HALO_LASTTIME)))];
 		};
 		//--- Sat cam available?
-		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 779104) ctrlEnable (if (!CTI_P_PreBuilding && (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
+		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 779104) ctrlEnable (if ((CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
 		//CommandingMenu
 		if !(CTI_Base_ControlCenterInRange) then {
 			{((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl _x) ctrlEnable false} forEach [780106,780102,780101,780108];

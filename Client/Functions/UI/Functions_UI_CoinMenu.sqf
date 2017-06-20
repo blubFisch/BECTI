@@ -365,7 +365,7 @@ CTI_Coin_OnPreviewPlacement = {
 						
 						//--- Check whether we're dealing with the HQ or a normal structure
 						if !(((CTI_COIN_PARAM select CTI_STRUCTURE_LABELS) select 0) == CTI_HQ_DEPLOY) then {
-							[_variable, CTI_P_SideJoined, _position, _direction, player] remoteExec ["CTI_PVF_SRV_RequestBuilding", CTI_PV_SERVER];
+							[_variable, CTI_P_SideJoined, _position, _direction] remoteExec ["CTI_PVF_SRV_RequestBuilding", CTI_PV_SERVER];
 						} else {
 							//--- When the HQ is being deployed or mobilized, the commanding menu must be reloaded
 							_reload_expression = CTI_Coin_OnHQToggle;
@@ -403,7 +403,7 @@ CTI_Coin_OnPreviewPlacement = {
 					};
 					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, _classname];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
-					[_variable, CTI_P_SideJoined, _position, _direction, player, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
+					[_variable, CTI_P_SideJoined, _position, _direction, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
 			};
 			

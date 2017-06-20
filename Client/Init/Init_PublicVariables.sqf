@@ -121,10 +121,7 @@ with missionNamespace do {
 	
 	//--- The client receives a Camp Capture notification
 	CTI_PVF_CLT_OnCampCaptured = { _this spawn CTI_CL_FNC_OnCampCaptured };
-	
-	//--- The client receives a Defense notification
-	CTI_PVF_CLT_OnDefensePlaced = { CTI_P_LastDefenseBuilt = _this };
-	
+
 	//--- The client receives a FOB deployment notification
 	CTI_PVF_CLT_OnFOBDeployment = {
 		_fob = _this;
@@ -134,11 +131,9 @@ with missionNamespace do {
 		_marker setMarkerColorLocal CTI_P_SideColor;
 		_marker setMarkerSizeLocal [0.75, 0.75]; 
 		_marker setMarkerTextLocal "FOB";
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Bike (50$)</t>","Client\Actions\Action_Buy_Town.sqf", ["dbo_CIV_new_bike",50,true], 99, false, true, "", " !CTI_P_PreBuilding && vehicle player == player"];
-		//_fob addAction ["<t color='#e67b09'>FOB: Buy Motorcycle (150$)</t>","Client\Actions\Action_Buy_Town.sqf", ["CUP_M1030",150,true], 99, false, true, "", " !CTI_P_PreBuilding && vehicle player == player"];
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Quadbike (250$)</t>","Client\Actions\Action_Buy_Town.sqf", ["C_Quadbike_01_F",250,true], 99, false, true, "", " !CTI_P_PreBuilding && vehicle player == player"];
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Scooter (150$)</t>","Client\Actions\Action_Buy_Town.sqf", ["sfp_dakota",150,true], 99, false, true, "", " !CTI_P_PreBuilding && vehicle player == player"];
-		//_fob addAction ["<t color='#e67b09'>FOB: Buy Mercedes Benz (500$)</t>","Client\Actions\Action_Buy_Town.sqf", ["sfp_mercedes",500,true], 99, false, true, "", " !CTI_P_PreBuilding && vehicle player == player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Bike (50$)</t>","Client\Actions\Action_Buy_Town.sqf", ["dbo_CIV_new_bike",50,true], 99, false, true, "", "vehicle player == player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Quadbike (250$)</t>","Client\Actions\Action_Buy_Town.sqf", ["C_Quadbike_01_F",250,true], 99, false, true, "", "vehicle player == player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Scooter (150$)</t>","Client\Actions\Action_Buy_Town.sqf", ["sfp_dakota",150,true], 99, false, true, "", "vehicle player == player"];
 		
 		[_fob, _marker] spawn {
 			_structure = _this select 0;
@@ -270,9 +265,6 @@ with missionNamespace do {
 	
 	//--- The client receives a structure completion notification
 	CTI_PVF_CLT_OnStructureConstructed = { _this spawn CTI_CL_FNC_OnStructureConstructed };
-	
-	//--- The client receives a structure placement notification
-	CTI_PVF_CLT_OnStructurePlaced = { CTI_P_LastStructurePreBuilt = _this };
 
 	//--- The client receives a teamkill penalty
 	CTI_PVF_CLT_OnTeamkill = {

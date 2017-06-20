@@ -21,8 +21,6 @@ CTI_CL_FNC_GetMissionTime = compileFinal preprocessFile "Client\Functions\Client
 CTI_CL_FNC_HasAIOrderChanged = compileFinal preprocessFile "Client\Functions\Client_HasAIOrderChanged.sqf";
 CTI_CL_FNC_IsPlayerCommander = compileFinal preprocessFile "Client\Functions\Client_IsPlayerCommander.sqf";
 CTI_CL_FNC_InitializeStructure = compileFinal preprocessFile "Client\Functions\Client_InitializeStructure.sqf";
-CTI_CL_FNC_PlacingBuilding = compileFinal preprocessFile "Client\Functions\Client_PlacingBuilding.sqf";
-CTI_CL_FNC_PlacingDefense = compileFinal preprocessFile "Client\Functions\Client_PlacingDefense.sqf";
 CTI_CL_FNC_OnArtilleryFired = compileFinal preprocessFile "Client\Functions\Client_OnArtilleryFired.sqf";
 CTI_CL_FNC_OnCampCaptured = compileFinal preprocessFile "Client\Functions\Client_OnCampCaptured.sqf";
 CTI_CL_FNC_OnExplosivePlaced = compileFinal preprocessFile "Client\Functions\Client_OnExplosivePlaced.sqf";
@@ -62,9 +60,6 @@ CTI_P_TeamsRequests = [];
 CTI_P_TeamsRequests_FOB = 0;
 CTI_P_TeamsRequests_FOB_Dismantle = 0;
 CTI_P_TeamsRequests_Last = -5000;
-CTI_P_PreBuilding = false;
-CTI_P_LastDefenseBuilt = objNull;
-CTI_P_LastStructurePreBuilt = objNull;
 CTI_P_Respawning = false;
 CTI_P_CurrentTasks = [];
 CTI_P_CanJoin = false;
@@ -76,8 +71,6 @@ CTI_P_LastRepairTime = -600;
 CTI_P_WallsAutoAlign = true;
 CTI_P_DefensesAutoManning = true;
 CTI_P_ServerFPS = -1;
-CTI_P_RapidDefence_Actions=[];
-CTI_P_RapidDefence=-1;
 
 //--- Actions (skills)
 CTI_P_ActionLockPick = false;
