@@ -735,6 +735,7 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 
 	_group = createGroup resistance;
 	_group setGroupIdGlobal [format["(%1) %2", _town, _group]];
+	_group deleteGroupWhenEmpty true;
 	_groups pushBack _group;
 	
 	//--- Set AI to Combat mode

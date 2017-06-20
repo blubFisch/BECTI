@@ -1,11 +1,13 @@
-**Upcomming release**
+**Upcoming release**
 Tweaked: Damage for defenses
-Tweaked: Code optimizations 
+Tweaked: Code optimizations
+Tweaked: Initial spawn vehicle placement
 Added: New AI building placement system
 Added: Vehicles will have higher priority to spawn one’s town is active
 Added: Base building respawn will not work if enemy is near 30m, for exception of MHQ
-Added: Town defence statics
+Added: Town defense statics
 Added: MHQ damage transfers ones deployed or mobilized 
+Added: MHQ deploy and mobilization will take time now
 Added: Complete mod support restructure, with ability to mix and match on fly
 Added: Vehicle Loadouts, both Air and Land
 Added: Ability to re-texture on fly any vehicle

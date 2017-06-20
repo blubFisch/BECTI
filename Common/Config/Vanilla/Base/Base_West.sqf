@@ -64,10 +64,10 @@ _respawnBPos = []; //--- Set -1 for all positions, or list them as  [1, 3, 5]
 _headers pushBack 		[CTI_HQ_DEPLOY, "Headquarters (Deploy)", "HQ"];
 _classes pushBack		["Land_Research_house_V1_F", "Land_Research_house_V1_ruins_F"];
 _prices pushBack 		500;
-_times pushBack			0;
+_times pushBack			10;
 _placements pushBack 	[180, 15, false];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 8]];
-_conditions pushBack 	(compile format["!(%1 call CTI_CO_FNC_IsHQDeployed)", _side]);
+_conditions pushBack 	(compile format["!(%1 call CTI_CO_FNC_IsHQDeployed) && (CTI_P_SideLogic getVariable ['cti_hq_ready', true])", _side]);
 _respawnBPos pushBack	-1;
 
 _headers pushBack 		[CTI_CONTROLCENTER, "Control Center", "CC"];
@@ -231,10 +231,10 @@ _respawnBPos pushBack	-1;
 _headers pushBack 		[CTI_HQ_MOBILIZE, "Headquarters (Mobilize)", "HQ"];
 _classes pushBack		[missionNamespace getVariable format["CTI_%1_HQ", _side], ""];
 _prices pushBack 		500;
-_times pushBack			10;
+_times pushBack			30;
 _placements pushBack 	[0, 15, false];
 _specials pushBack 		[];
-_conditions pushBack 	(compile format["%1 call CTI_CO_FNC_IsHQDeployed", _side]);
+_conditions pushBack 	(compile format["%1 call CTI_CO_FNC_IsHQDeployed && (CTI_P_SideLogic getVariable ['cti_hq_ready', true])", _side]);
 _respawnBPos pushBack	-1;
 
 [_side, _headers, _classes, _prices, _times, _placements, _specials, _conditions, _respawnBPos] call compile preprocessFileLineNumbers "Common\Config\Common\Base\Set_Structures.sqf";
