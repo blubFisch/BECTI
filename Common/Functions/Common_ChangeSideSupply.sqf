@@ -28,10 +28,8 @@
 	  -> Assuming west had 1000 before: 950
 */
 
-private ["_side", "_supply", "_value", "_structures", "_supply_depots", "_supply_depots_count", "_supply_limit"];
-
-_side = _this select 0;
-_value = _this select 1;
+params ["_side", "_value"];
+private ["_logic","_supply","_structures", "_supply_depots", "_supply_depots_count", "_supply_limit"];
 
 if (isNil '_value') exitWith {["ERROR", "FILE: Common\Functions\Common_ChangeSideSupply.sqf", format["A nil supply value has been specified for side [%1]", _side]] call CTI_CO_FNC_Log};
 if (typeName _value != "SCALAR") exitWith {["ERROR", "FILE: Common\Functions\Common_ChangeSideSupply.sqf", format["A non-scalar value has been specified for side [%1]", _side]] call CTI_CO_FNC_Log};

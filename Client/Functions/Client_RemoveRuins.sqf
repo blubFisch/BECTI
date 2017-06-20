@@ -22,10 +22,9 @@
     [_position, _ruins] call CTI_CL_FNC_RemoveRuins
 */
 
-private ["_classnames", "_position", "_var", "_variable"];
+params ["_position", "_variable"];
+private ["_classnames", "_var"];
 
-_position = _this select 0;
-_variable = _this select 1;
 _classnames = [];
 if (typeName _variable == "ARRAY") then {
 _var = missionNamespace getVariable _variable;

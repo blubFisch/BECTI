@@ -27,10 +27,8 @@
 	  -> This function be triggered everytime the player dies
 */
 
-private ["_killed", "_killer"];
+params ["_killed", "_killer"];
 
-_killed = _this select 0;
-_killer = _this select 1;
 _isvehicle_killed = if (_killed isKindOf "Man") then {false} else {true};
 CTI_DeathPosition = getPos _killed;
 
