@@ -13,6 +13,7 @@ Added: Vehicle Loadouts, both Air and Land
 Added: Ability to re-texture on fly any vehicle
 Added: Filters based by camo for both Gear and Vehicles
 Added: Vanilla Revive System
+Added: UAV Terminal Support for Persistent gear
 Fixed: Vehicles will not spawn in houses
 Fixed: Empty town vehicles will not despawn after town deactivation
 
