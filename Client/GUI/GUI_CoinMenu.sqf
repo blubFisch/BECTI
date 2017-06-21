@@ -315,7 +315,7 @@ with missionNamespace do {
 			
 			if (isNil 'CTI_COIN_PREVIEW') then { //--- Menu browsing
 				_textAlign = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Align:<t align='right'>%1</t></t><br />", actionKeysNames ["Diary", 1]];
-				_textAlignTerrain = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Terrain:<t align='right'>%1</t></t><br />", "T"];//Letter T
+				_textAlignTerrain = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Level:<t align='right'>%1</t></t><br />", "T"];//Letter T
 				_textAutoDefense = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Defense:<t align='right'>%1</t></t><br />", actionKeysNames ["Gear", 1]];
 				_textControls = format ["%1%2%3", _textAutoDefense, _textAlign, _textAlignTerrain];
 				if (commandingMenu == "#USER:CTI_COIN_Categories_0") then {
