@@ -911,16 +911,6 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];
 
-		_headers pushBack 		"AT Defense";
-		_classes pushBack 		"B_static_AT_F";
-		_prices pushBack 		3000;
-		_placements pushBack 	[180, 5];
-		_categories pushBack 	"Defense";
-		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack [];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[];
-
 		_headers pushBack 		"AA Defense";
 		_classes pushBack 		"B_static_AA_F";
 		_prices pushBack 		2000;
