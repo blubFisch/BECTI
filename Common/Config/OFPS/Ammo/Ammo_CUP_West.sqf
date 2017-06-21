@@ -30,6 +30,914 @@ _t pushBack 2;
 
 
 //------------------------------ Bombs ------------------------------
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_40mmGPR_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_40mmAPFSDS_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_30mmGPR_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_30mmAPFSDS_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+_i pushBack "CUP_8Rnd_GBU12_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_GBU_G";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+_i pushBack "CUP_48Rnd_40mm_MK19_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_96Rnd_40mm_MK19_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_32Rnd_40mm_MK19_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_4Rnd_Stinger_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_Stinger_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_2Rnd_AGM114L_Hellfire_II_M";
+_o pushBack "Air";
+_u pushBack 3;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_AGM114L_Hellfire_II_M";
+_o pushBack "Air";
+_u pushBack 3;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Red_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Green_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Yellow_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_White_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_Mk82_M";
+_o pushBack "Air";
+_u pushBack 4;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_Mk82_G";
+_o pushBack "Air";
+_u pushBack 4;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_Sidewinder_G";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+
+
+_i pushBack "CUP_30Rnd_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_White_Tracer_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Subsonic_545x39_AK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_762x39_AK47_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Sa58_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Sa58_M_TracerG";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10x_303_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_556x45_Stanag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_556x45_Stanag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_556x45_G36";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Green_Tracer_556x45_G36";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_556x45_BetaCMag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_FNFAL_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_L129_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_B_SCAR";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_SCAR";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_CZ805B";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Green_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Yellow_Tracer_762x51_Belt_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Yellow_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Green_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Green_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_50Rnd_UK59_762x54R_Tracer";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_HE_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareWhite_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareGreen_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareRed_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareYellow_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareWhite_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareRed_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareGreen_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SMOKE_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeRed_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeGreen_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeYellow_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_6Rnd_HE_GP25_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_9x19_Bizon_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Green_Tracer_9x19_Bizon_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Red_Tracer_9x19_Bizon_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_White_Tracer_9x19_Bizon_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_MP5";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_B_765x17_Ball_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_765x17_Ball_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_EVO";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_UZI";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_127x108_KSVK_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x54_SVD_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_9x39_SP5_VSS_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_9x39_SP5_VSS_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_127x99_as50_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_762x51_M24";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_B_M110";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_M110";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_M110";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_M110";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_127x99_M107";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x51_CZ750";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x51_CZ750_Tracer";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_86x70_L115A1";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_762x67_G22";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5x_22_LR_17_HMR_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Saiga12_74Slug_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Saiga12_74Pellets_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_Pellets";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_74Slug";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_HE";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Beneli_74Slug";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Beneli_74Pellets";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_9x18_Makarov_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_9x18_MakarovSD_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_6Rnd_45ACP_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_17Rnd_9x19_glock17";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_7Rnd_45ACP_1911";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_9x19_Compact";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_18Rnd_9x19_Phantom";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_15Rnd_9x19_M9";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
 
 _i pushBack "M_RIM_116";
 _o pushBack "Air";
@@ -4523,8 +5431,911 @@ _u pushBack 0;
 _p pushBack 100;
 _t pushBack 1;
 
+_i pushBack "CUP_30Rnd_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
 
 
+_i pushBack "CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_White_Tracer_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Subsonic_545x39_AK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_762x39_AK47_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Sa58_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_Sa58_M_TracerG";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10x_303_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_556x45_Stanag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_556x45_Stanag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_556x45_G36";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Green_Tracer_556x45_G36";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_TE1_Yellow_Tracer_556x45_G36";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_556x45_BetaCMag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_FNFAL_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_L129_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_B_SCAR";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_SCAR";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_SCAR";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_SCAR";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_SCAR";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_CZ805B";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_CZ805B";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_CZ805B";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_CZ805B";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_CZ805B";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_75Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_LRT4_Red_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Green_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_Yellow_Tracer_762x51_Belt_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Yellow_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Green_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Yellow_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Green_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_100Rnd_TE4_Yellow_Tracer_556x45_M249";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Green_Tracer_556x45_L110A1";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Red_Tracer_556x45_L110A1";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE4_Yellow_Tracer_556x45_L110A1";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_50Rnd_UK59_762x54R_Tracer";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_HE_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareWhite_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareGreen_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareRed_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_FlareYellow_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareWhite_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareRed_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_IlumFlareGreen_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SMOKE_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeRed_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeGreen_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_SmokeYellow_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_6Rnd_HE_GP25_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_9x19_Bizon_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Green_Tracer_9x19_Bizon_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Red_Tracer_9x19_Bizon_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_White_Tracer_9x19_Bizon_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_64Rnd_Yellow_Tracer_9x19_Bizon_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_MP5";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_B_765x17_Ball_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_765x17_Ball_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_EVO";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_30Rnd_9x19_UZI";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_127x108_KSVK_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x54_SVD_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_9x39_SP5_VSS_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_9x39_SP5_VSS_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_127x99_as50_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_762x51_M24";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_762x51_B_M110";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Yellow_Tracer_762x51_M110";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Red_Tracer_762x51_M110";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_Green_Tracer_762x51_M110";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_TE1_White_Tracer_762x51_M110";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_127x99_M107";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x51_CZ750";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_762x51_CZ750_Tracer";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_86x70_L115A1";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5Rnd_762x67_G22";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_5x_22_LR_17_HMR_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Saiga12_74Slug_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Saiga12_74Pellets_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_Pellets";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_74Slug";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_20Rnd_B_AA12_HE";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Beneli_74Slug";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_B_Beneli_74Pellets";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_9x18_Makarov_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_9x18_MakarovSD_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_6Rnd_45ACP_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_17Rnd_9x19_glock17";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_7Rnd_45ACP_1911";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_10Rnd_9x19_Compact";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_18Rnd_9x19_Phantom";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+
+_i pushBack "CUP_15Rnd_9x19_M9";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 2;
+_t pushBack 1;
+
+_i pushBack "CUP_48Rnd_40mm_MK19_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_96Rnd_40mm_MK19_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_32Rnd_40mm_MK19_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_4Rnd_Stinger_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_Stinger_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_2Rnd_AGM114L_Hellfire_II_M";
+_o pushBack "Land";
+_u pushBack 3;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1Rnd_AGM114L_Hellfire_II_M";
+_o pushBack "Land";
+_u pushBack 3;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Red_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Green_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_Yellow_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_1200Rnd_TE1_White_Tracer_30x113mm_M789_HEDP_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_8Rnd_Mk82_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_Mk82_G";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_Sidewinder_G";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_40mmGPR_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_40mmAPFSDS_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_30mmGPR_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_200Rnd_TE1_Red_Tracer_30mmAPFSDS_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
+
+_i pushBack "CUP_8Rnd_GBU12_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 50;
+_t pushBack 1;
+
+
+_i pushBack "CUP_GBU_G";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 50;
+_t pushBack 1;
 
 
 [_faction, _i, _o, _u, _p, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";
