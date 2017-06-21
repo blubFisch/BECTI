@@ -294,6 +294,7 @@ if (_iscomposition) then {
 };
 
 //AdminZeus
-if !( isNil "ADMIN_ZEUS") then { ADMIN_ZEUS addCuratorEditableObjects [[_defense],true] };
-
+if !( (typeName _defense) isEqualto "STRING") then {
+	if !( isNil "ADMIN_ZEUS") then { ADMIN_ZEUS addCuratorEditableObjects [[_defense],true] };
+};
 _defense

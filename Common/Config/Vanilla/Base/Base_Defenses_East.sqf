@@ -117,7 +117,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 
 		_headers pushBack 		["Tower AT", [["Composition","tower_at",true]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
-		_prices pushBack 		35-00;
+		_prices pushBack 		3500;
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Composition";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
