@@ -28,7 +28,8 @@
 	  -> Rearm the player vehicle of the player
 */
 
-private ["_side", "_type", "_vehicle", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
+params ["_vehicle", "_side"];
+private ["_type","_upgrades", "_upgrade_lvoss", "_upgrade_era"];
 
 _vehicle = _this select 0;
 _side = _this select 1;

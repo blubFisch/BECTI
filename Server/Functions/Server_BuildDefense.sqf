@@ -127,6 +127,7 @@ if (_iscomposition) then {
 
 	_defense setDir _direction;
 	_defense setPos _position;
+	if !(_defense isKindOf "Building") then {_defense setVectorUp surfaceNormal position _defense};
 	if (_defense emptyPositions "gunner" < 1 && !_fob && !_large_fob) then { //--- Soft defense
 		_defense setDir _direction;
 	};

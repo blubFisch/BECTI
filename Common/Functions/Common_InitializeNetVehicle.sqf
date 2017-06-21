@@ -28,10 +28,8 @@
 	  -> This will initialize the vehicle of the player with his own Side ID
 */
 
-private ["_marker_dead_color", "_marker_dead_size", "_marker_dead_type", "_marker_color", "_marker_label", "_marker_name", "_marker_size", "_marker_type", "_side", "_sideID", "_vehicle"];
-
-_vehicle = _this select 0;
-_sideID = _this select 1;
+params ["_vehicle", "_sideID"];
+private ["_marker_dead_color", "_marker_dead_size", "_marker_dead_type", "_marker_color", "_marker_label", "_marker_name", "_marker_size", "_marker_type", "_side"];
 
 _side = _sideID call CTI_CO_FNC_GetSideFromID;
 _classname = typeOf _vehicle;
@@ -48,11 +46,11 @@ if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
 	_marker_size = [0.75,0.75];
 	_marker_type = CTI_P_MarkerPrefix+"maint"; //type is ok? b_support ?
 	
-	//_vehicle addAction ["<t color='#a5c4ff'>MENU: Construction (Repair Truck)</t>", "Client\Actions\Action_CoinBuild.sqf", "RepairTruck", 93, false, true, "", "_this == player"];
+	//_vehicle addAction ["<t color='#a5c4ff'>MENU: Construction (Repair Truck)</t>", "Client\Actions\Action_CoinBuild.sqf", "RepairTruck", 93, false, true, "", "_this isEqualTo player"];
 	
 	//--- HQ can be repaired if fubarized
 	if ((missionNamespace getVariable "CTI_BASE_HQ_REPAIR") > 0) then {
-		_vehicle addAction ["<t color='#efb377'>Repair HQ</t>","Client\Actions\Action_RepairHQ.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && !alive(CTI_P_SideJoined call CTI_CO_FNC_GetSideHQ) && time - CTI_P_LastRepairTime > 10'];
+		_vehicle addAction ["<t color='#efb377'>Repair HQ</t>","Client\Actions\Action_RepairHQ.sqf", [], 99, false, true, "", 'driver _target isEqualTo _this && alive _target && !alive(CTI_P_SideJoined call CTI_CO_FNC_GetSideHQ) && time - CTI_P_LastRepairTime > 10'];
 	};
 };
 if (CTI_SPECIAL_AMMOTRUCK in _special) then { //--- Ammo truck.
@@ -72,7 +70,7 @@ if (CTI_SPECIAL_MEDICALVEHICLE in _special) then { //--- Medical vehicle.
 
 if (CTI_SPECIAL_NUKETRUCK in _special) then { //--- Nuke vehicle.
 	_vehicle call {[_this, 30] execvm "Common\Functions\External\nuclear\geiger.sqf"};
-	_vehicle addAction ["<t color='#ff0000'>ARM NUCLEAR DEVICE <t color='#ffffff'> (10min timer)</t></t>", "Common\Functions\External\nuclear\functions\fn_bombArm.sqf", [], 93, false, true, "", "_this == player"];
+	_vehicle addAction ["<t color='#ff0000'>ARM NUCLEAR DEVICE <t color='#ffffff'> (10min timer)</t></t>", "Common\Functions\External\nuclear\functions\fn_bombArm.sqf", [], 93, false, true, "", "_this isEqualTo player"];
 	//[[[_vehicle], "Common\Functions\External\nuclear\functions\fn_bombTimer.sqf"], "BIS_fnc_execVM", true] call BIS_fnc_MP;
 };
 
@@ -83,15 +81,15 @@ if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {
 
 //--- Radio - only helis - Valkyries
 if (_vehicle isKindOf "Helicopter") then {
-	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#1)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,1],0,false,true,"","driver _target == player"];
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#1)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,1],0,false,true,"","driver _target isEqualTo player"];
 };
 //--- Radio - only jets - DangerZONE
 if (_vehicle isKindOf "Plane") then {
-	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#2)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,2],0,false,true,"","driver _target == player"];
+	_vehicle addAction ["<t color='#2E9AFE'>Radio on (#2)</t>", "Client\Functions\Client_VehicleRadio.sqf",[1,2],0,false,true,"","driver _target isEqualTo player"];
 };
 
 //--- Taxi Reverse
-if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {_vehicle addAction ["<t color='#86F078'>Taxi Reverse</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target == _this && alive _target && speed _target < 4 && speed _target > -4 && getPos _target select 2 < 4']};
+if (_vehicle isKindOf "Plane" || _vehicle isKindOf "Helicopter") then {_vehicle addAction ["<t color='#86F078'>Taxi Reverse</t>","Client\Actions\Action_TaxiReverse.sqf", [], 99, false, true, "", 'driver _target isEqualTo _this && alive _target && speed _target < 4 && speed _target > -4 && getPos _target select 2 < 4']};
 
 //--- Perform side-speficic operations
 if (_sideID != CTI_P_SideID) exitWith {};
@@ -99,9 +97,9 @@ if (_sideID != CTI_P_SideID) exitWith {};
 if (CTI_SPECIAL_REPAIRTRUCK in _special) then { //--- Repair truck.
 //--- Removed old Actions.
 /*	if (CTI_BASE_FOB_MAX > 0) then {
-		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
-		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Dismantle Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB_DISMANTLE, []], 92, false, true, "", "_this == player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB_Dismantle < 1"];
-		_vehicle addAction ["<t color='#eac6ff'>ACTION: Dismantle Nearest FOB</t>", "Client\Actions\Action_DismantleFOB.sqf", "", 92, false, true, "", "_this == player && (CTI_P_TeamsRequests_FOB_Dismantle > 0 || call CTI_CL_FNC_IsPlayerCommander)"];
+		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Build Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB, []], 92, false, true, "", "_this isEqualTo player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB < 1"];
+		_vehicle addAction ["<t color='#eac6ff'>ACTION: Request FOB Dismantle Permission</t>", "Client\Actions\Action_RequestAction.sqf", [CTI_REQUEST_FOB_DISMANTLE, []], 92, false, true, "", "_this isEqualTo player && time - CTI_P_TeamsRequests_Last > 30 && !(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB_Dismantle < 1"];
+		_vehicle addAction ["<t color='#eac6ff'>ACTION: Dismantle Nearest FOB</t>", "Client\Actions\Action_DismantleFOB.sqf", "", 92, false, true, "", "_this isEqualTo player && (CTI_P_TeamsRequests_FOB_Dismantle > 0 || call CTI_CL_FNC_IsPlayerCommander)"];
 	};*/
 };
 
@@ -112,14 +110,14 @@ if (CTI_SPECIAL_DEFENSETRUCK in _special) then { //--- Defense truck.
 };
 
 if (CTI_SPECIAL_DEPLOYABLEFOB in _special) then { //--- FOB vehicle.
-	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["small"], 10, false, true, "", "(player==driver _target) && !(CTI_P_fob_currently_deploying)"];
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["small"], 10, false, true, "", "(playerisEqualTodriver _target) && !(CTI_P_fob_currently_deploying)"];
 };
 if (CTI_SPECIAL_DEPLOYABLEFOBLARGE in _special) then { //--- LARGE FOB vehicle.
-	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(player==driver _target) && !(CTI_P_fob_currently_deploying)"];
+	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(playerisEqualTodriver _target) && !(CTI_P_fob_currently_deploying)"];
 };
 
 //--- Get a proper icon
-if (_marker_type == "") then {
+if (_marker_type isEqualTo "") then {
 	_marker_size = [0.75,0.75];
 	switch (true) do {
 		case (_classname isKindOf "Man"): { _marker_type = CTI_P_MarkerPrefix+"inf"; _marker_size = [0.4, 0.4]; _marker_color = "ColorYellow"; };
@@ -132,10 +130,10 @@ if (_marker_type == "") then {
 		default { _marker_type = CTI_P_MarkerPrefix+"unknown" };
 	};
 };
-//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this == driver _target"]};
+//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this isEqualTo driver _target"]};
 if (CTI_ENABLE_VEHICLE_STEALTH == 1) then {
 	if (_vehicle isKindOf "Tank") then { // adds in stealth add action to tanks 
-		_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target == _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
+		_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target isEqualTo _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
 	};
 };
 //--- Marker initialization
