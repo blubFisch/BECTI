@@ -29,6 +29,8 @@
 	Common Function: CTI_CO_FNC_GetFunds
 	Common Function: CTI_CO_FNC_InitializeCustomVehicle
 	Common Function: CTI_CO_FNC_SanitizeAircraft
+	Common Function: CTI_CO_FNC_SanitizeLandOrdinance
+	Common Function: CTI_CO_FNC_SanitizeAirOrdinance	
 	
   # EXAMPLE #
 	[_seed, _classname, group player, _veh_infos, _factory] spawn CTI_CL_FNC_OnPurchaseOrderReceived
@@ -190,10 +192,12 @@ if (_model isKindOf "Man") then {
 	player reveal _vehicle;
 	
 	//--- Authorize the air loadout depending on the parameters set
-	if (_vehicle isKindOf "Air") then {[_vehicle, CTI_P_SideJoined] call CTI_CO_FNC_SanitizeAircraft};
-	
+	//if (_vehicle isKindOf "Air") then {[_vehicle, CTI_P_SideJoined] call CTI_CO_FNC_SanitizeAircraft};
 	//--- Sanitize the artillery loadout, mines may lag the server for instance
-	if (CTI_ARTILLERY_FILTER == 1) then {if (_model in (missionNamespace getVariable ["CTI_ARTILLERY", []])) then {(_vehicle) call CTI_CO_FNC_SanitizeArtillery}};
+	//if (CTI_ARTILLERY_FILTER == 1) then {if (_model in (missionNamespace getVariable ["CTI_ARTILLERY", []])) then {(_vehicle) call CTI_CO_FNC_SanitizeArtillery}};
+	
+	//check ordinance - does same as both above
+	(_vehicle) call CTI_CO_FNC_SanitizeVehicle;
 	
 	//--- Track this vehicle
 	(_vehicle) remoteExec ["CTI_PVF_SRV_RequestHandleEmptyVehicles", CTI_PV_SERVER];

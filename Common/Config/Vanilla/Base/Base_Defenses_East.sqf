@@ -29,7 +29,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 	//Compositions - setup compositions in Common/Config/Compositions/
 	//Format: ["Name in Menu", [["Composition","Composition Name",AlignTerrain(bool)]]];
 	///////////////////////////////////////////////////////////////////
-	/*	_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",false]]];
+		_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",false]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Green_F";
 		_prices pushBack 		100;
 		_placements pushBack 	[0, 5];
@@ -147,12 +147,12 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;	
-		_specials pushBack 		[];*/
+		_specials pushBack 		[];
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	//--- Compositions Manual Mode - must set statics manually in Server_BuildDefense.sqf line 123
 	////////////////////////////////////////////////////////////////////////////////////////////////
-	/*	_headers pushBack 		["Bunker (MG)", [["Armed","MG"]]];
+		_headers pushBack 		["Bunker (MG)", [["Armed","MG"]]];
 		_classes pushBack 		"Land_BagBunker_Small_F";
 		_prices pushBack 		250;
 		_placements pushBack 	[0, 7];
@@ -180,7 +180,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		0;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];	*/
+		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 2]];	
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	//end custom objects
 	////////////////////////////////////////////////////////////////////////////////////////////////
@@ -189,7 +189,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		//MALDEN OBJECTS 
 	
 		//Barricades
-		/*_headers pushBack 		["Barricade 4m",[["CanAutoAlign", 4, 0]]];
+		_headers pushBack 		["Barricade 4m",[["CanAutoAlign", 4, 0]]];
 		_classes pushBack 		"Land_Barricade_01_4m_F";
 		_prices pushBack 		200;
 		_placements pushBack 	[0, 7];
@@ -318,7 +318,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_coinmenus pushBack 	["HQ"];
 		_coinblacklist pushBack [];
 		_upgrade pushBack		2;		
-		_specials pushBack 		[["DMG_Explosion", 0.34]];	*/
+		_specials pushBack 		[["DMG_Explosion", 0.34]];	
 		
 	//******************************BASE DEFENSE 0******************************
 		_headers pushBack 		"Bunker (Small)";

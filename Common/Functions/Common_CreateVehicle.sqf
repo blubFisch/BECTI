@@ -62,6 +62,7 @@ if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSid
 _side = _sideID call CTI_CO_FNC_GetSideFromID;
 
 _vehicle = createVehicle [_type, _position, [], 7, _special];
+_vehicle setVariable ["BIS_enableRandomization", false];//stop randomization (for skin fix)
 _velocity = velocity _vehicle;
 _vehicle setDir _direction;
 _vehicle setVectorUp surfaceNormal position _vehicle;

@@ -115,7 +115,12 @@ if (_completion >= 100) then { //--- The structure is complete
 	_structure setDir _direction;
 	_structure setPos _position;
 	_structure setDir _direction;
-	_structure setVectorUp [0,0,0];
+	//level with terrain if enabled
+	if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+		_structure setVectorUp [0,0,0];
+	} else {
+		_structure setVectorUp surfaceNormal _position;
+	};
 	_structure setVariable ["cti_structure_type", ((_var select 0) select 0)];
 
 	//--- Do we use our alternative damage system to prevent some bisteries from happening?

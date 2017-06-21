@@ -108,6 +108,7 @@ _last_collision_update = -100;
 _last_composition_update = -100;
 _last_menu = "";
 _last_wallalign = false;
+_last_terrainalign = false;
 _last_autodefense = false;
 _last_defense_count = "";
 
@@ -130,11 +131,12 @@ with missionNamespace do {
 			_position = screenToWorld [0.5,0.5];
 			{
 				if ((_x getVariable ["cti_defense_sideID", -1]) isEqualTo CTI_P_SideID) then {_list pushBack _x};
-			} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 10]);
+			} forEach (nearestObjects [_position, ["StaticWeapon", "Static"], 15]);
 			_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
-			if (_position distance _nearest < 10) then {
+			if (_position distance _nearest < 15) then {
 				_nearest = [_position, _list] call CTI_CO_FNC_GetClosestEntity;
 				_nearest_var = missionNamespace getVariable [format["CTI_%1_%2", CTI_P_SideJoined, typeOf _nearest], []];
+				if (_nearest_var isEqualTo []) then {_nearest_var = ["No Title","",100]};
 				_nearest_title = _nearest_var select 0;
 				switch (typeName _nearest_title) do {
 					case "STRING": { _nearest_title = _nearest_title; };
@@ -142,7 +144,10 @@ with missionNamespace do {
 						_nearest_title = _nearest_title select 0;
 					};
 				};
-				_nearest_refund = round((_nearest_var select 2) * CTI_BASE_DEFENSES_SOLD_COEF);
+				_objprice = 0;
+				_objprice = _nearest_var select 2;
+				_nearest_refund = round((_objprice) * CTI_BASE_DEFENSES_SOLD_COEF);
+				
 				//update bottom ui with text
 				_sellText = format ["<t color='#42b6ff' shadow='2' size='1' align='center' valign='top'>%1 - <t color='#30fd07'>$%2</t> | Press O to Sell</t>", _nearest_title, _nearest_refund];
 				((uiNamespace getVariable "cti_title_coin") displayCtrl 112214) ctrlSetStructuredText (parseText _sellText);
@@ -170,14 +175,17 @@ with missionNamespace do {
 			if (isNil 'CTI_COIN_PREVIEW') then {
 				_preview = objNull;
 				_hq_mobilize = false;
+				//systemchat format ["Full| %1",CTI_COIN_PARAM];
 				switch (CTI_COIN_PARAM_KIND) do {
 					case 'STRUCTURES': {
 						_preview = (CTI_COIN_PARAM select 1) select 0;
 						if (((CTI_COIN_PARAM select 0) select 0) == CTI_HQ_MOBILIZE) then {_hq_mobilize = true};
 						if (count(CTI_COIN_PARAM select 4) < 3) then {CTI_COIN_HELPER = "Sign_Arrow_Large_Blue_F" createVehicleLocal [0,0,0]};
+						//systemchat format ["Preview | %1",_preview];
 					};
 					case 'DEFENSES': {
-						_preview = CTI_COIN_PARAM select 1;
+							_preview = CTI_COIN_PARAM select 1;
+							//systemchat format ["Preview | %1",_preview];
 					};
 				};
 				
@@ -208,9 +216,10 @@ with missionNamespace do {
 					call CTI_Coin_OnHQMobilized;
 				};
 			} else {
+				//systemchat format ["Preview | %1",CTI_COIN_PREVIEW];
 				//--- Update the direction to prevent it from moving by itself on sloppy hills
 				CTI_COIN_PREVIEW setDir CTI_COIN_DIR;
-				CTI_COIN_PREVIEW setVectorUp [0,0,0];
+				//CTI_COIN_PREVIEW setVectorUp [0,0,0];
 				if (time - _last_collision_update > 2) then {_last_collision_update = time;{CTI_COIN_PREVIEW disableCollisionWith _x} forEach (CTI_COIN_PREVIEW nearEntities 150)};
 		
 				//--- Update the coloration if needed
@@ -223,13 +232,19 @@ with missionNamespace do {
 					_helper_pos = CTI_COIN_PREVIEW modelToWorld [(sin (360 -_direction_structure) * _distance_structure), (cos (360 -_direction_structure) * _distance_structure), 0];
 					_helper_pos set [2, 0];
 					CTI_COIN_HELPER setPos _helper_pos;
-					CTI_COIN_HELPER setDir direction CTI_COIN_PREVIEW;
+					CTI_COIN_HELPER setDir direction CTI_COIN_PREVIEW;		
+				};
+				//level with terrain
+				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+					CTI_COIN_PREVIEW setVectorUp [0,0,0];
+				} else {
+					CTI_COIN_PREVIEW setVectorUp surfaceNormal (position CTI_COIN_PREVIEW);
 				};
 				//---Composition
 				if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {				
-					//due to amount of objects in compositions, only update once per second (remove old and place new)
-					if (time - _last_composition_update > 1) then {
-						_last_composition_update = time;
+					//due to amount of objects in compositions, limit update time but not too fast (remove old and place new)
+					if (diag_tickTime - _last_composition_update > 0.5) then {
+						_last_composition_update = diag_tickTime;
 						if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[ CTI_COIN_PREVIEW_COMP ] call LARs_fnc_deleteComp;};
 						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
 					};	
@@ -299,9 +314,10 @@ with missionNamespace do {
 			_textControls = "";
 			
 			if (isNil 'CTI_COIN_PREVIEW') then { //--- Menu browsing
-				_textAlign = format["<t color='#42b6ff' shadow='2' size='1'>Auto Align:<t align='right'>%1</t></t><br />", actionKeysNames ["Diary", 1]];
-				_textAutoDefense = format["<t color='#42b6ff' shadow='2' size='1'>Auto Defense:<t align='right'>%1</t></t><br />", actionKeysNames ["Gear", 1]];
-				_textControls = format ["%1%2", _textAutoDefense, _textAlign];
+				_textAlign = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Align:<t align='right'>%1</t></t><br />", actionKeysNames ["Diary", 1]];
+				_textAlignTerrain = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Terrain:<t align='right'>%1</t></t><br />", "T"];//Letter T
+				_textAutoDefense = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Defense:<t align='right'>%1</t></t><br />", actionKeysNames ["Gear", 1]];
+				_textControls = format ["%1%2%3", _textAutoDefense, _textAlign, _textAlignTerrain];
 				if (commandingMenu == "#USER:CTI_COIN_Categories_0") then {
 					_textControls = _textControls + format ["<t color='%2' shadow='2' size='1'>Exit:<t align='right'>%1</t></t>", actionKeysNames ["NavigateMenu", 1], CTI_COIN_COLOR_INVALID];
 				} else {
@@ -351,6 +367,21 @@ with missionNamespace do {
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112217) ctrlCommit 0;
 		};
 		
+		//--- Update Terrain Alignment icon if needed
+		if !(_last_terrainalign isEqualTo (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+			_last_terrainalign = profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false];
+			
+			_color = CTI_COIN_COLOR_OUTOFRANGE_UI;
+			if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				_color_valid_lum = +CTI_COIN_COLOR_VALID_UI;
+				_color_valid_lum set [3, 0.6];
+				_color = _color_valid_lum;
+			};
+			
+			((uiNamespace getVariable "cti_title_coin") displayCtrl 112218) ctrlSetTextColor _color;
+			((uiNamespace getVariable "cti_title_coin") displayCtrl 112218) ctrlCommit 0;
+		};		
+		
 		sleep .01;
 	};
 };
@@ -359,7 +390,7 @@ with missionNamespace do {
 with missionNamespace do {
 	//--- Cleanup the preview if needed
 	if !(isNil 'CTI_COIN_PREVIEW') then {deleteVehicle CTI_COIN_PREVIEW};
-	if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[CTI_COIN_PREVIEW_COMP] call LARs_fnc_deleteComp;};
+	if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[CTI_COIN_PREVIEW_COMP] call LARs_fnc_deleteComp;};//possibly add scan for any id created in entire process
 	//--- Remove the Construction Overlay
 	112200 cutText ["", "plain"];
 	

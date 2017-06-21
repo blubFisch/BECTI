@@ -378,10 +378,12 @@ class CTI_RscPurchaseMenu {
 			colorFocused[] = {0,0,0,0};
 			text = "Rsc\Pictures\icon_wf_building_barracks.paa"; //--- ToDo: Localize;
 			action = "['onIconSet', 0, CTI_BARRACKS] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_PurchaseMenu.sqf'";
+			
 			x = 0.225959 * safezoneW + safezoneX;
 			y = 0.24304 * safezoneH + safezoneY;
 			w = 0.034 * safezoneW;
 			h = 0.064 * safezoneH;
+
 			colorBackground[] = {0.6,0.8392,0.4706,0.7};
 			colorActive[] = {1,1,1,0.7};
 		};
@@ -6548,7 +6550,7 @@ class CTI_RscLoadoutMenu
 			x = 0.73486 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
 			w = 0.257773 * safezoneW;
-			h = 0.286 * safezoneH;
+			h = 0.275 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 			sizeEx = 1.0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25);
 		};
@@ -6559,7 +6561,7 @@ class CTI_RscLoadoutMenu
 			text = "OFPS Unit Loadout System"; //--- ToDo: Localize;
 			x = 0.0360089 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.137479 * safezoneW;
+			w = 0.23486 * safezoneW;
 			h = 0.022 * safezoneH;
             class Attributes {
                 font = "PuristaMedium";
@@ -6572,7 +6574,7 @@ class CTI_RscLoadoutMenu
 		{
 			idc = 790104;
 
-			text = "Loadout"; //--- ToDo: Localize;
+			text = "Select Loadout"; //--- ToDo: Localize;
 			x = 0.293782 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
@@ -6664,7 +6666,7 @@ class CTI_RscLoadoutMenu
 			onKeyUp = "['onQtyChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_LoadoutMenu.sqf'";
 
 			x = 0.809327 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
+			y = 0.753 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -6675,7 +6677,7 @@ class CTI_RscLoadoutMenu
 
 			text = "Camo"; //--- ToDo: Localize;
 			x = 0.809327 * safezoneW + safezoneX;
-			y = 0.775 * safezoneH + safezoneY;
+			y = 0.808 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -6712,7 +6714,7 @@ class CTI_RscLoadoutMenu
 
 			text = "Clear Mounts"; //--- ToDo: Localize;
 			x = 0.809327 * safezoneW + safezoneX;
-			y = 0.819 * safezoneH + safezoneY;
+			y = 0.852 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -6723,7 +6725,7 @@ class CTI_RscLoadoutMenu
 
 			text = "Rearm All"; //--- ToDo: Localize;
 			x = 0.809327 * safezoneW + safezoneX;
-			y = 0.863 * safezoneH + safezoneY;
+			y = 0.885 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -6734,7 +6736,7 @@ class CTI_RscLoadoutMenu
 
 			text = "Purchase Magazines"; //--- ToDo: Localize;
 			x = 0.809327 * safezoneW + safezoneX;
-			y = 0.907 * safezoneH + safezoneY;
+			y = 0.918 * safezoneH + safezoneY;
 			w = 0.148935 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -6787,7 +6789,47 @@ class CTI_RscLoadoutMenu
 			w = 0.257773 * safezoneW;
 			h = 0.088 * safezoneH;
 		};
+		class CTI_RscLoadoutMenu_SkinTitle: RscStructuredText
+		{
+			idc = 790022;
+
+			text = "Select Skin"; //--- ToDo: Localize;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.786 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
+			h = 0.022 * safezoneH;
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 	
+		};
+		class CTI_RscLoadoutMenu_AmmoQtyTitle: RscStructuredText
+		{
+			idc = 790023;
+
+			text = "Ammo Count"; //--- ToDo: Localize;
+			x = 0.809327 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.148935 * safezoneW;
+			h = 0.022 * safezoneH;
+            class Attributes {
+                font = "PuristaMedium";
+                color = "#2b76a5";
+                align = "left";
+                shadow = false;
+            }; 	
+		};	
+		class CTI_RscLoadoutMenu_StatusBar: RscProgress
+		{
+			idc = 790024;
+
+			x = 0.73486 * safezoneW + safezoneX;
+			y = 0.61 * safezoneH + safezoneY;
+			w = 0.257773 * safezoneW;
+			h = 0.0055 * safezoneH;			
+		};			
 
 	};
 };
-

@@ -133,6 +133,12 @@ if (_iscomposition) then {
 		// _defense setVectorUp [0,0,0];
 		if !(isNull _origin) then {(_defense) remoteExec ["CTI_PVF_CLT_OnDefensePlaced", _origin]};
 	};
+	//level with terrain
+	if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+		_defense setVectorUp [0,0,0];
+	} else {
+		_defense setVectorUp surfaceNormal _position;
+	};
 	//Check for Armed Versions - This is an alternative to using compositions
 	//Manually check for primary classname object, then manually place each static - examples below
 	if (_isarray) then {
@@ -141,11 +147,22 @@ if (_iscomposition) then {
 			if ((_var select 1) == "Land_BagBunker_Small_F") then {
 				_static1 = "O_HMG_01_High_F" createVehicle _position;
 				_static1 attachTo [_defense, [0, 0, 0.7]]; 
-				_static1 setVectorDirAndUp [[0,-1,0],[0,0,1]];
+				//_static1 setVectorDirAndUp [[0,-1,0],[0,0,1]];
 				detach _static1;
-				if (_static1 emptyPositions "gunner" > 0) then { //--- Hard defense
-					if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_static1 setVariable ["cti_aman_enabled", true]};
+				_static1 setDir (_direction - 180);
+				//level with terrain
+				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+					_static1 setVectorUp [0,0,0];
+				} else {
+					_static1 setVectorUp surfaceNormal _position;
 				};
+				//set statics automan
+				if (_static1 emptyPositions "gunner" > 0) then { //--- Hard defense
+					if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {_static1 setVariable ["cti_aman_enabled", true]};
+				};
+				//set cleanup and zeus vars
+				_static1 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static1 setVariable ["cti_static_properly_created", true, true];
 				_static1 call CTI_CO_FNC_UnitCreated;
 			};
 			//--- Armed Tower - MG x2
@@ -154,16 +171,30 @@ if (_iscomposition) then {
 				_static1 attachTo [_defense, [1.5, -1.5, 1.1]]; 
 				_static2 = "O_HMG_01_High_F" createVehicle _position;
 				_static2 attachTo [_defense, [-1.5, -1.5, 1.1]]; 
-				_static1 setVectorDirAndUp [[0,1,0],[0,0,1]];
-				_static2 setVectorDirAndUp [[0,1,0],[0,0,1]];
+				//_static1 setVectorDirAndUp [[0,1,0],[0,0,1]];
+				//_static2 setVectorDirAndUp [[0,1,0],[0,0,1]];
 				detach _static1;detach _static2;
+				_static1 setDir (_direction - 180);
+				_static2 setDir (_direction - 180);
+				//level with terrain
+				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+					_static1 setVectorUp [0,0,0];
+					_static2 setVectorUp [0,0,0];
+				} else {
+					_static1 setVectorUp surfaceNormal _position;
+					_static2 setVectorUp surfaceNormal _position;
+				};				
 				if (_static1 emptyPositions "gunner" > 0) then { //--- Hard defense
 					if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_static1 setVariable ["cti_aman_enabled", true]};
 				};
 				if (_static2 emptyPositions "gunner" > 0) then { //--- Hard defense
 					if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_static2 setVariable ["cti_aman_enabled", true]};
 				};
+				_static1 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static1 setVariable ["cti_static_properly_created", true, true];
 				_static1 call CTI_CO_FNC_UnitCreated;
+				_static2 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static2 setVariable ["cti_static_properly_created", true, true];
 				_static2 call CTI_CO_FNC_UnitCreated;
 			};
 			//--- Armed Cargo Tower - AA x3
@@ -175,9 +206,19 @@ if (_iscomposition) then {
 				_static3 = "O_static_AA_F" createVehicle _position;
 				_static3 attachTo [_defense, [4, 0.5, 6]]; 	
 				detach _static1;detach _static2;detach _static3;
-				_static1 setVectorDirAndUp [[0,1,0],[0,0,1]];
-				_static2 setVectorDirAndUp [[0,1,0],[0,0,1]];
-				_static3 setVectorDirAndUp [[1,0,0],[0,0,1]];
+				_static1 setDir (_direction - 0);
+				_static2 setDir (_direction - 180);
+				_static3 setDir (_direction - 270);
+				//level with terrain
+				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+					_static1 setVectorUp [0,0,0];
+					_static2 setVectorUp [0,0,0];
+					_static3 setVectorUp [0,0,0];
+				} else {
+					_static1 setVectorUp surfaceNormal _position;
+					_static2 setVectorUp surfaceNormal _position;
+					_static3 setVectorUp surfaceNormal _position;
+				};				
 				if (_static1 emptyPositions "gunner" > 0) then { //--- Hard defense
 					if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_static1 setVariable ["cti_aman_enabled", true]};
 				};
@@ -187,8 +228,14 @@ if (_iscomposition) then {
 				if (_static3 emptyPositions "gunner" > 0) then { //--- Hard defense
 					if (CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_static3 setVariable ["cti_aman_enabled", true]};
 				};
+				_static1 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static1 setVariable ["cti_static_properly_created", true, true];
 				_static1 call CTI_CO_FNC_UnitCreated;
+				_static2 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static2 setVariable ["cti_static_properly_created", true, true];
 				_static2 call CTI_CO_FNC_UnitCreated;
+				_static3 setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
+				_static3 setVariable ["cti_static_properly_created", true, true];
 				_static3 call CTI_CO_FNC_UnitCreated;
 			};
 		};

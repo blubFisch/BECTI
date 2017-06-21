@@ -135,7 +135,16 @@ class RscTitles {
 				
 				text = "Rsc\Pictures\icon_staticman.paa";
 			};
-			
+			class IconTerrain: IconWall
+			{
+				idc = 112218;
+
+				text = "Rsc\Pictures\icon_terrain.paa";
+				x = 0.689835 * safezoneW + safezoneX;
+				y = 0.95232 * safezoneH + safezoneY;
+				w = 0.04 * safezoneW;
+				h = 0.04 * safezoneH;
+			};
 			class DescriptionText : RscStructuredText {
 				idc = 112214;
 				x = "SafeZoneX + (SafeZoneW * 0.21)";
@@ -188,3 +197,4 @@ class RscTitles {
 			};
 		};
 };
+

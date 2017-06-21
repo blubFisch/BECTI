@@ -31,6 +31,21 @@ params[
 	[ "_compWater", true ],
 	[ "_previewmode", true ]
 ];
+//level with terrain
+if (_compAlign ) then {
+	_compAlign = true;
+	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+		_compAlign = false;
+	} else {
+		_compAlign = true;
+	};
+} else {
+	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+		_compAlign = false;
+	} else {
+		_compAlign = false;
+	};
+};
 
 _msg = format[ "COMP - Name: %1, Pos:%2, Offset: %3, Rot: %4, Align: %5", _compName, _compPos, _compOffset, _compRot, _compAlign ];
 DEBUG_MSG( DEBUG, _msg );
@@ -259,7 +274,7 @@ private _fnc_setPositionAndRotation = {
 		[ "_needsSurfaceUp", false ],
 		[ "_placementRadius", 0 ]
 	];
-	
+
 	//TESTING
 //	if ( DEBUG_DEV ) then {
 //		if !( canSuspend ) exitWith {
