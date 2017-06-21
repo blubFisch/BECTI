@@ -2,9 +2,9 @@ with missionNamespace do {
 	GUER_TOWNS_FLAG_TEXTURE = "\A3\Data_F\Flags\Flag_green_CO.paa";
 
 	//--- Town Defenses
-	GUER_TOWN_MG = ["I_HMG_01_high_F"];
-	GUER_TOWN_GL = ["I_GMG_01_high_F"];
-	GUER_TOWN_AT = ["I_static_AT_F"];
+	//GUER_TOWN_MG = ["I_HMG_01_high_F"];
+	//GUER_TOWN_GL = ["I_GMG_01_high_F"];
+	//GUER_TOWN_AT = ["I_static_AT_F"];
 	GUER_TOWN_AA = ["I_static_AA_F"];
 	
 
@@ -15,7 +15,7 @@ with missionNamespace do {
 	//  Returns :
 	//    [the mannable defenses, the composition objects]
 	
-	GUER_TOWN_BUNKER = [{
+	GUER_TOWN_MG = [{
 		_t_center = _this select 0;
 		_t_direction = _this select 1;
 		
@@ -23,13 +23,61 @@ with missionNamespace do {
 		_t_composition = [];
 		
 		_t_pos = [_t_center, 5, _t_direction] call CTI_CO_FNC_GetPositionFrom;
-		_object = createVehicle ["Land_HBarrier_1_F", _t_pos, [], 0, "CAN_COLLIDE"];
+		_object = createVehicle ["Land_BagBunker_Small_F", _t_pos, [], 0, "CAN_COLLIDE"];
 		_object setDir _t_direction;
 		_object setPos _t_pos;
 		_object enableSimulationGlobal false;
 		_t_composition pushBack _object;
 		
 		_object = createVehicle ["I_HMG_01_high_F", _t_center, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object setVectorUp surfaceNormal position _object;
+		_t_defenses pushBack _object;
+		
+		//--- Return the defenses objects and the composition
+		[_t_defenses, _t_composition]
+	}];
+
+		GUER_TOWN_GL = [{
+		_t_center = _this select 0;
+		_t_direction = _this select 1;
+		
+		_t_defenses = [];
+		_t_composition = [];
+		
+		_t_pos = [_t_center, 5, _t_direction] call CTI_CO_FNC_GetPositionFrom;
+		_object = createVehicle ["Land_BagBunker_Small_F", _t_pos, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object enableSimulationGlobal false;
+		_t_composition pushBack _object;
+		
+		_object = createVehicle ["I_GMG_01_high_F", _t_center, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object setVectorUp surfaceNormal position _object;
+		_t_defenses pushBack _object;
+		
+		//--- Return the defenses objects and the composition
+		[_t_defenses, _t_composition]
+	}];
+
+		GUER_TOWN_AT = [{
+		_t_center = _this select 0;
+		_t_direction = _this select 1;
+		
+		_t_defenses = [];
+		_t_composition = [];
+		
+		_t_pos = [_t_center, 5, _t_direction] call CTI_CO_FNC_GetPositionFrom;
+		_object = createVehicle ["Land_BagBunker_Small_F", _t_pos, [], 0, "CAN_COLLIDE"];
+		_object setDir _t_direction;
+		_object setPos _t_pos;
+		_object enableSimulationGlobal false;
+		_t_composition pushBack _object;
+		
+		_object = createVehicle ["I_static_AT_F", _t_center, [], 0, "CAN_COLLIDE"];
 		_object setDir _t_direction;
 		_object setPos _t_pos;
 		_object setVectorUp surfaceNormal position _object;
