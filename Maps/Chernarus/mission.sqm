@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1078;
+		nextID=1225;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12940.029,108.8648,1587.2367};
-		dir[]={-0.5402959,-0.77418339,0.32975137};
-		up[]={-0.66083241,0.63295543,0.40331694};
-		aside[]={0.52096045,-5.7218131e-008,0.85359061};
+		pos[]={10142.135,31.012787,1581.3357};
+		dir[]={0.081784099,-0.32341093,0.94272083};
+		up[]={0.02795214,0.94625789,0.32220241};
+		aside[]={0.99626231,-4.9478331e-008,-0.086429268};
 	};
 };
 binarizationWanted=0;
@@ -144,7 +144,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=423;
+		items=557;
 		class Item0
 		{
 			dataType="Marker";
@@ -157,11 +157,10 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={2677.6494,38.997314,2393.7908};
+			position[]={2663.4397,5.9887466,2013.7197};
 			name="cti-spawn1";
 			type="Empty";
 			id=1;
-			atlOffset=-77.783897;
 		};
 		class Item2
 		{
@@ -175,11 +174,10 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={9314.4922,149.09229,11116.304};
+			position[]={8943.748,92.676521,12918.15};
 			name="cti-spawn3";
 			type="Empty";
 			id=3;
-			atlOffset=-104.05635;
 		};
 		class Item4
 		{
@@ -2769,14 +2767,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1715.4092,145.67093,3674.9512};
-				angles[]={0,3.229641,0};
+				position[]={1715.4091,145.6709,3674.9509};
+				angles[]={0,3.2296445,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Pavlovo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Pavlovo,this,[[""Pavlovo_defence_0"",[""TOWN_MG""]],[""Pavlovo_defence_1"",[""TOWN_MG""]],[""Pavlovo_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=166;
@@ -2851,7 +2849,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7865.9287,10.905001,3322.5869};
+				position[]={7776.6514,10.899141,3327.6965};
 				angles[]={0,3.1556251,0};
 			};
 			side="Empty";
@@ -2863,7 +2861,7 @@ class Mission
 			};
 			id=168;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=-6.0081482e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2893,19 +2891,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8164.3018,10.95537,3137.2388};
-				angles[]={0,2.0370021,0};
+				position[]={8183.8281,11.034593,3095.4939};
+				angles[]={0,2.0370085,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Prigorodki,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Prigorodki,this,[[""Prigorodki_defence_0"",[""TOWN_MG""]],[""Prigorodki_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=169;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2935,7 +2932,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6077.5742,271.44852,10492.617};
+				position[]={6086.5835,266.11105,10595.353};
 				angles[]={0,1.8798544,0};
 			};
 			side="Empty";
@@ -2947,6 +2944,7 @@ class Mission
 			};
 			id=170;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3059,13 +3057,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11432.777,178.18106,12233.554};
-				angles[]={0,1.5068823,6.195919};
+				angles[]={0,1.5068823,6.1959186};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Krasnostav,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Krasnostav,this,[[""Krasnostav_defence_0"",[""TOWN_GL""]],[""Krasnostav_defence_1"",[""TOWN_GL""]],[""Krasnostav_defence_2"",[""TOWN_GL""]],[""Krasnostav_defence_3"",[""TOWN_AT""]],[""Krasnostav_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=173;
@@ -3141,13 +3139,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={13302.41,118.07671,12661.846};
-				angles[]={6.2482791,3.5880129,6.143559};
+				angles[]={6.2482786,3.5880129,6.143559};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Olsha,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Olsha,this,[[""Olsha_defence_0"",[""TOWN_MG""]],[""Olsha_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=175;
@@ -3223,14 +3221,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2075.4553,10.346926,2280.1572};
-				angles[]={0,1.4189069,0};
+				position[]={2075.4551,10.34691,2280.157};
+				angles[]={0,1.4189003,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Kamenka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Kamenka,this,[[""Kamenka_defence_0"",[""TOWN_MG""]],[""Kamenka_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=177;
@@ -3272,7 +3270,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Dubrovka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Dubrovka,this,[[""Dubrovka_defence_0"",[""TOWN_MG""]],[""Dubrovka_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=178;
@@ -3347,19 +3345,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13443.383,9.8908501,6456.834};
-				angles[]={0,6.2002263,0};
+				position[]={13443.383,9.890851,6456.834};
+				angles[]={0,6.2002301,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Solnichniy,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Solnichniy,this,[[""Solnichniy_defence_0"",[""TOWN_GL""]],[""Solnichniy_defence_1"",[""TOWN_GL""]],[""Solnichniy_defence_2"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=180;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3472,19 +3470,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6942.0859,10.917788,2643.5879};
+				position[]={7043.6182,10.883821,2685.1289};
 				angles[]={0,0.89500481,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Chernogorsk,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Chernogorsk,this,[[""Chernogorsk_defence_0"",[""TOWN_GL""]],[""Chernogorsk_defence_1"",[""TOWN_GL""]],[""Chernogorsk_defence_2"",[""TOWN_GL""]],[""Chernogorsk_defence_3"",[""TOWN_AA""]],[""Chernogorsk_defence_4"",[""TOWN_AT""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=183;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3678,18 +3676,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10584.537,201.15886,7910.6479};
+				position[]={10584.537,201.15884,7910.6479};
 				angles[]={6.1959186,3.4942713,0.10471976};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Polana,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Polana,this,[[""Polana_defence_0"",[""TOWN_MG""]],[""Polana_defence_1"",[""TOWN_MG""]],[""Polana_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=188;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3767,7 +3766,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Gorka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Gorka,this,[[""Gorka_defence_0"",[""TOWN_MG""]],[""Gorka_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=190;
@@ -3965,7 +3964,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3648.9768,315.6524,8969.8652};
+				position[]={3633.1296,315.64096,8951.7041};
 				angles[]={0,2.2842577,0};
 			};
 			side="Empty";
@@ -4013,7 +4012,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Pogorevka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Pogorevka,this,[[""Pogorevka_defence_0"",[""TOWN_MG""]],[""Pogorevka_defence_1"",[""TOWN_MG""]],[""Pogorevka_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=197;
@@ -4136,7 +4135,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Gvozdno,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Gvozdno,this,[[""Gvozdno_defence_0"",[""TOWN_MG""]],[""Gvozdno_defence_1"",[""TOWN_MG""]],[""Gvozdno_defence_2"",[""TOWN_GL""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=200;
@@ -4334,14 +4333,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8663.1758,349.67276,6520.8403};
-				angles[]={0,3.6217744,0};
+				position[]={8663.1758,349.67276,6520.8398};
+				angles[]={0,3.6217675,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Guglovo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Guglovo,this,[[""Guglovo_defence_0"",[""TOWN_MG""]],[""Guglovo_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=206;
@@ -4423,7 +4422,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Zelenogorsk,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Zelenogorsk,this,[[""Zelenogorsk_defence_0"",[""TOWN_GL""]],[""Zelenogorsk_defence_1"",[""TOWN_GL""]],[""Zelenogorsk_defence_2"",[""TOWN_GL""]],[""Zelenogorsk_defence_3"",[""TOWN_AT""]],[""Zelenogorsk_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=208;
@@ -4464,7 +4463,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Msta,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Msta,this,[[""Msta_defence_0"",[""TOWN_MG""]],[""Msta_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=209;
@@ -4539,18 +4538,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2178.821,278.51297,7271.6479};
+				position[]={2178.821,278.513,7271.6479};
 				angles[]={6.1959186,4.737504,0.08726646};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Myshkino,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Myshkino,this,[[""Myshkino_defence_0"",[""TOWN_MG""]],[""Myshkino_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=211;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4704,19 +4704,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10105.425,10.680124,2111.6628};
-				angles[]={0,5.975811,0};
+				position[]={10105.425,10.680124,2111.6631};
+				angles[]={0,5.9758153,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Elektrozavodsk,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Elektrozavodsk,this,[[""Elektrozavodsk_defence_0"",[""TOWN_GL""]],[""Elektrozavodsk_defence_1"",[""TOWN_GL""]],[""Elektrozavodsk_defence_2"",[""TOWN_GL""]],[""Elektrozavodsk_defence_3"",[""TOWN_AT""]],[""Elektrozavodsk_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=218;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4746,18 +4745,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4108.9639,323.138,8781.7324};
+				position[]={4108.9639,323.13797,8781.7324};
 				angles[]={0,1.8192265,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Vybor,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Vybor,this,[[""Vybor_defence_0"",[""TOWN_MG""]],[""Vybor_defence_1"",[""TOWN_MG""]],[""Vybor_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=219;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5051,19 +5051,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3349.6846,10.968807,2334.7053};
+				position[]={3349.6851,10.968809,2334.7051};
 				angles[]={0,0.58070594,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Komarovo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Komarovo,this,[[""Komarovo_defence_0"",[""TOWN_MG""]],[""Komarovo_defence_1"",[""TOWN_MG""]],[""Komarovo_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=169;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5184,7 +5183,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Kamyshovo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Kamyshovo,this,[[""Kamyshovo_defence_0"",[""TOWN_MG""]],[""Kamyshovo_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=172;
@@ -5269,7 +5268,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Nizhnoye,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Nizhnoye,this,[[""Nizhnoye_defence_0"",[""TOWN_MG""]],[""Nizhnoye_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=174;
@@ -5353,7 +5352,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Berezino,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Berezino,this,[[""Berezino_defence_0"",[""TOWN_GL""]],[""Berezino_defence_1"",[""TOWN_GL""]],[""Berezino_defence_2"",[""TOWN_GL""]],[""Berezino_defence_3"",[""TOWN_AT""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=176;
@@ -5387,18 +5386,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12359.782,113.39607,10994.642};
+				position[]={12359.782,113.39608,10994.642};
 				angles[]={6.2308254,1.7126915,6.1959186};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Khelm,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Khelm,this,[[""Khelm_defence_0"",[""TOWN_MG""]],[""Khelm_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=177;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5521,7 +5521,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Staroye,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Staroye,this,[[""Staroye_defence_0"",[""TOWN_MG""]],[""Staroye_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=180;
@@ -5600,14 +5600,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11847.056,206.86667,7348.1235};
-				angles[]={0,2.1532438,0};
+				position[]={11847.056,206.86668,7348.124};
+				angles[]={0,2.1532476,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Orlovets,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Orlovets,this,[[""Orlovets_defence_0"",[""TOWN_MG""]],[""Orlovets_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=182;
@@ -5723,18 +5723,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5479.5889,341.98788,8375.541};
+				position[]={5479.5889,341.98785,8375.541};
 				angles[]={0,5.7450132,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Kabanino,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Kabanino,this,[[""Kabanino_defence_0"",[""TOWN_MG""]],[""Kabanino_defence_1"",[""TOWN_MG""]],[""Kabanino_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=185;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5771,7 +5772,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [StarySobor,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [StarySobor,this,[[""StarySobor_defence_0"",[""TOWN_GL""]],[""StarySobor_defence_1"",[""TOWN_GL""]],[""StarySobor_defence_2"",[""TOWN_GL""]],[""StarySobor_defence_3"",[""TOWN_AT""]],[""StarySobor_defence_4"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=186;
@@ -5806,13 +5807,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={9495.0742,212.92325,6770.8052};
-				angles[]={0,1.2386036,0};
+				angles[]={0,1.2386079,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Shakhovka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Shakhovka,this,[[""Shakhovka_defence_0"",[""TOWN_MG""]],[""Shakhovka_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=187;
@@ -5887,18 +5888,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7487.855,217.16547,4940.8169};
+				position[]={7487.855,217.16548,4940.8169};
 				angles[]={0,0.30553734,6.1959186};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Mogilevka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Mogilevka,this,[[""Mogilevka_defence_0"",[""TOWN_MG""]],[""Mogilevka_defence_1"",[""TOWN_MG""]],[""Mogilevka_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=189;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5928,18 +5930,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5833.5112,144.13361,4546.8901};
+				position[]={5833.5112,144.13362,4546.8901};
 				angles[]={0.052359879,0.18240437,0.20943952};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Nadezhdino,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Nadezhdino,this,[[""Nadezhdino_defence_0"",[""TOWN_MG""]],[""Nadezhdino_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=190;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6010,14 +6013,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4248.7163,249.51102,4837.9463};
+				position[]={4248.7158,249.51102,4837.9458};
 				angles[]={0,2.1079912,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Kozlovka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Kozlovka,this,[[""Kozlovka_defence_0"",[""TOWN_MG""]],[""Kozlovka_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=192;
@@ -6152,7 +6155,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Vyshnoye,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Vyshnoye,this,[[""Vyshnoye_defence_0"",[""TOWN_MG""]],[""Vyshnoye_defence_1"",[""TOWN_MG""]],[""Vyshnoye_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=196;
@@ -6186,8 +6189,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2682.7,199.98042,5145.0928};
-				angles[]={6.1086521,0.7810697,0.08726646};
+				position[]={2563.9917,198.905,5049.4878};
+				angles[]={0,5.8107257,0};
 			};
 			side="Empty";
 			flags=5;
@@ -6313,18 +6316,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4669.2827,12.716743,2434.0061};
-				angles[]={0,1.9240351,0};
+				position[]={4669.2832,12.716749,2434.0061};
+				angles[]={0,1.9240335,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Balota,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Balota,this,[[""Balota_defence_0"",[""TOWN_MG""]],[""Balota_defence_1"",[""TOWN_MG""]],[""Balota_defence_2"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=200;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6446,7 +6450,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Pusta,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Pusta,this,[[""Pusta_defence_0"",[""TOWN_MG""]],[""Pusta_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=203;
@@ -6692,14 +6696,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11524.147,71.868233,6585.5557};
-				angles[]={0,4.6080265,0};
+				position[]={11524.147,71.868233,6585.5562};
+				angles[]={0,4.6080179,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Dolina,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Dolina,this,[[""Dolina_defence_0"",[""TOWN_MG""]],[""Dolina_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=209;
@@ -6784,7 +6788,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Petrovka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Petrovka,this,[[""Petrovka_defence_0"",[""TOWN_MG""]],[""Petrovka_defence_1"",[""TOWN_MG""]],[""Petrovka_defence_2"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=211;
@@ -6859,8 +6863,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10075.528,254.86319,5568.7939};
-				angles[]={6.1959186,5.9810338,6.195919};
+				position[]={10032.413,265.26617,5696.145};
+				angles[]={0,5.6523957,0};
 			};
 			side="Empty";
 			flags=5;
@@ -6871,6 +6875,7 @@ class Mission
 			};
 			id=213;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.00012207031;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6985,14 +6990,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4637.5264,343.905,10473.187};
-				angles[]={0,2.5912528,0};
+				position[]={4637.5259,343.905,10473.187};
+				angles[]={0,2.5912554,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Airfield,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Airfield,this,[[""Airfield_defence_0"",[""TOWN_GL""]],[""Airfield_defence_1"",[""TOWN_GL""]],[""Airfield_defence_2"",[""TOWN_GL""]],[""Airfield_defence_3"",[""TOWN_AA""]],[""Airfield_defence_4"",[""TOWN_AT""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=216;
@@ -7118,7 +7123,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [NovySobor,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [NovySobor,this,[[""NovySobor_defence_0"",[""TOWN_MG""]],[""NovySobor_defence_1"",[""TOWN_MG""]],[""NovySobor_defence_2"",[""TOWN_MG""]],[""NovySobor_defence_3"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=219;
@@ -7234,7 +7239,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7113.0679,285.74899,7541.2441};
+				position[]={7158.1958,280.89822,7449.2554};
 				angles[]={6.2308254,0.088889614,0};
 			};
 			side="Empty";
@@ -7246,6 +7251,7 @@ class Mission
 			};
 			id=222;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.00012207031;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7327,7 +7333,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Altar,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Altar,this,[[""Altar_defence_0"",[""TOWN_MG""]],[""Altar_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=224;
@@ -7406,13 +7412,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12608.594,184.82314,4390.8911};
-				angles[]={0.13962634,4.8401647,6.2482791};
+				angles[]={0.13962634,4.8401647,6.2482786};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [Tulga,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [Tulga,this,[[""Tulga_defence_0"",[""TOWN_MG""]],[""Tulga_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=227;
@@ -7490,18 +7496,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9621.8633,135.44977,13321.206};
-				angles[]={0,5.4987893,0};
+				position[]={9621.8633,135.44975,13321.206};
+				angles[]={0,5.4987822,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [PobedaDam,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [PobedaDam,this,[[""PobedaDam_defence_0"",[""TOWN_MG""]],[""PobedaDam_defence_1"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=229;
 			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7531,8 +7538,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6916.4355,397.89456,11389.498};
-				angles[]={0.10361954,0,6.2591872};
+				position[]={6889.2939,397.06488,11379.343};
+				angles[]={6.2511969,0,0.06258551};
 			};
 			side="Empty";
 			flags=4;
@@ -7546,7 +7553,7 @@ class Mission
 			};
 			id=231;
 			type="FlagPole_F";
-			atlOffset=3.0517578e-005;
+			atlOffset=0.1000061;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7583,7 +7590,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="nullreturn = [DevilsCastle,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				init="call{nullreturn = [DevilsCastle,this,[[""DevilsCastle_defence_0"",[""TOWN_MG""]],[""DevilsCastle_defence_1"",[""TOWN_MG""]],[""DevilsCastle_defence_2"",[""TOWN_AA""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
 				disableSimulation=1;
 			};
 			id=233;
@@ -7699,8 +7706,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6922.9692,395.14709,11389.763};
-				angles[]={0,3.5942962,0};
+				position[]={6895.8276,393.87479,11379.607};
+				angles[]={6.2485313,3.5942962,6.2086816};
 			};
 			side="Empty";
 			flags=4;
@@ -7711,7 +7718,7 @@ class Mission
 			};
 			id=239;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-0.1000061;
+			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13756,7 +13763,7 @@ class Mission
 			};
 			id=434;
 			type="Land_LampSolar_F";
-			atlOffset=0.040578842;
+			atlOffset=0.040577888;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14036,7 +14043,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12791.15,-4.7634888,1691.787};
+				position[]={12791.15,-4.7634869,1691.787};
 				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
@@ -14119,7 +14126,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12790.15,-4.9201059,1583.787};
+				position[]={12790.15,-4.9201078,1583.787};
 				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
@@ -14244,7 +14251,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12827.9,-4.9366789,1583.787};
+				position[]={12827.9,-4.9366779,1583.787};
 				angles[]={0,3.1415925,0};
 			};
 			side="Empty";
@@ -14785,7 +14792,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12869.9,-4.8751392,1584.037};
+				position[]={12869.9,-4.8751402,1584.037};
 			};
 			side="Empty";
 			class Attributes
@@ -16839,7 +16846,7 @@ class Mission
 			};
 			id=1076;
 			type="Land_Cargo_Patrol_V3_F";
-			atlOffset=0.037906647;
+			atlOffset=0.037907124;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16905,6 +16912,1631 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item423
+		{
+			dataType="Marker";
+			position[]={3016.156,0,9955.8906};
+			name="Lopatino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=82.902;
+			id=1078;
+			atlOffset=-288.64679;
+		};
+		class Item424
+		{
+			dataType="Marker";
+			position[]={2587.5566,-28.613434,9796.1025};
+			name="Lopatino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=219.72073;
+			id=1079;
+			atlOffset=-288.62146;
+		};
+		class Item425
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2606.1111,278.9263,10096.275};
+				angles[]={0,5.7063012,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{nullreturn = [Lopatino,this,[[""Lopatino_defence_0"",[""TOWN_MG""]],[""Lopatino_defence_1"",[""TOWN_MG""]],[""Lopatino_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
+				disableSimulation=1;
+			};
+			id=1080;
+			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.0029907227;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item426
+		{
+			dataType="Marker";
+			position[]={2672.8792,-10.008484,10128.769};
+			name="Lopatino_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=320.41953;
+			id=1081;
+			atlOffset=-288.5145;
+		};
+		class Item427
+		{
+			dataType="Marker";
+			position[]={4142.7651,0,8786.9111};
+			name="Vybor_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=102.30769;
+			id=1082;
+			atlOffset=-321.43729;
+		};
+		class Item428
+		{
+			dataType="Marker";
+			position[]={3625.4407,-22.955536,8560.1914};
+			name="Vybor_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=224.74901;
+			id=1084;
+			atlOffset=-321.40112;
+		};
+		class Item429
+		{
+			dataType="Marker";
+			position[]={3614.9683,-11.096863,8967.21};
+			name="Vybor_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=314.521;
+			id=1085;
+			atlOffset=-321.33405;
+		};
+		class Item430
+		{
+			dataType="Marker";
+			position[]={4379.3452,0,10906.657};
+			name="Airfield_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=325.26901;
+			id=1087;
+			atlOffset=-338.99088;
+		};
+		class Item431
+		{
+			dataType="Marker";
+			position[]={4248.1245,0.0050354004,10368.927};
+			name="Airfield_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=139.98969;
+			id=1088;
+			atlOffset=-338.99078;
+		};
+		class Item432
+		{
+			dataType="Marker";
+			position[]={4602.5068,0.0091247559,10441.193};
+			name="Airfield_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=145.76727;
+			id=1089;
+			atlOffset=-338.99088;
+		};
+		class Item433
+		{
+			dataType="Marker";
+			position[]={4435.9927,0.0091247559,10594.766};
+			name="Airfield_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=136.08145;
+			id=1090;
+			atlOffset=-338.99088;
+		};
+		class Item434
+		{
+			dataType="Marker";
+			position[]={4119.3418,0.0091247559,10804.517};
+			name="Airfield_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=141.58098;
+			id=1091;
+			atlOffset=-338.99088;
+		};
+		class Item435
+		{
+			dataType="Marker";
+			position[]={6097.3291,0,10612.978};
+			name="Grishino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=21.118;
+			id=1092;
+			atlOffset=-260.53229;
+		};
+		class Item436
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6253.2749,283.47333,10436.296};
+				angles[]={0,2.1152344,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{nullreturn = [Grishino,this,[[""Grishino_defence_0"",[""TOWN_MG""]],[""Grishino_defence_1"",[""TOWN_MG""]],[""Grishino_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
+				disableSimulation=1;
+			};
+			id=1093;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item437
+		{
+			dataType="Marker";
+			position[]={6283.3296,20.919403,10419.622};
+			name="Grishino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=110.1628;
+			id=1094;
+			atlOffset=-260.51233;
+		};
+		class Item438
+		{
+			dataType="Marker";
+			position[]={5834.7202,20.453583,10011.626};
+			name="Grishino_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=179.30455;
+			id=1095;
+			atlOffset=-260.5885;
+		};
+		class Item439
+		{
+			dataType="Marker";
+			position[]={3335.1201,0,7882.645};
+			name="Pustoshka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=123.56697;
+			id=1096;
+			atlOffset=-300.55685;
+		};
+		class Item440
+		{
+			dataType="Marker";
+			position[]={2964.1011,30.576416,7668.9385};
+			name="Pustoshka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=176.62775;
+			id=1097;
+			atlOffset=-300.67377;
+		};
+		class Item441
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3189.7791,293.12616,8169.9458};
+				angles[]={0,2.2671826,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{nullreturn = [Pustoshka,this,[[""Pustoshka_defence_0"",[""TOWN_MG""]],[""Pustoshka_defence_1"",[""TOWN_MG""]],[""Pustoshka_defence_2"",[""TOWN_MG""]]]] execVM  ""Common\Init\Init_Camp.sqf"";}";
+				disableSimulation=1;
+			};
+			id=1098;
+			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.0069885254;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item442
+		{
+			dataType="Marker";
+			position[]={3175.5657,-13.849701,8203.0469};
+			name="Pustoshka_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=51.550514;
+			id=1099;
+			atlOffset=-300.59149;
+		};
+		class Item443
+		{
+			dataType="Marker";
+			position[]={2213.894,0,7251.021};
+			name="Myshkino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=94.872002;
+			id=1100;
+			atlOffset=-275.40253;
+		};
+		class Item444
+		{
+			dataType="Marker";
+			position[]={1878.3461,-6.6810608,7557.7256};
+			name="Myshkino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=10.972662;
+			id=1101;
+			atlOffset=-275.41284;
+		};
+		class Item445
+		{
+			dataType="Marker";
+			position[]={4812.2241,0,12439.855};
+			name="Petrovka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=197.06993;
+			id=1102;
+			atlOffset=-205.26242;
+		};
+		class Item446
+		{
+			dataType="Marker";
+			position[]={5124.1738,-24.760635,12464.746};
+			name="Petrovka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=117.27642;
+			id=1103;
+			atlOffset=-205.34535;
+		};
+		class Item447
+		{
+			dataType="Marker";
+			position[]={4899.8076,-6.7315369,12433.498};
+			name="Petrovka_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=129.53864;
+			id=1104;
+			atlOffset=-205.37306;
+		};
+		class Item448
+		{
+			dataType="Marker";
+			position[]={7087.3906,3.2340393,11417.864};
+			name="DevilsCastle_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=64.821869;
+			id=1106;
+			atlOffset=-346.54837;
+		};
+		class Item449
+		{
+			dataType="Marker";
+			position[]={6949.4644,41.912292,11345.307};
+			name="DevilsCastle_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=64.821869;
+			id=1108;
+			atlOffset=-346.52225;
+		};
+		class Item450
+		{
+			dataType="Marker";
+			position[]={6822.1016,42.8125,11426.233};
+			name="DevilsCastle_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=162.99222;
+			id=1109;
+			atlOffset=-345.75177;
+		};
+		class Item451
+		{
+			dataType="Marker";
+			position[]={5142.022,0,8540.0371};
+			name="Kabanino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=277.05753;
+			id=1110;
+			atlOffset=-347.55093;
+		};
+		class Item452
+		{
+			dataType="Marker";
+			position[]={5492.251,-7.46875,8338.8281};
+			name="Kabanino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=123.56905;
+			id=1111;
+			atlOffset=-347.58218;
+		};
+		class Item453
+		{
+			dataType="Marker";
+			position[]={5366.5195,-11.724731,8754.7988};
+			name="Kabanino_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=181.53239;
+			id=1112;
+			atlOffset=-347.53519;
+		};
+		class Item454
+		{
+			dataType="Marker";
+			position[]={8824.4443,0,11694.842};
+			name="Gvozdno_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=64.821999;
+			id=1113;
+			atlOffset=-214.00095;
+		};
+		class Item455
+		{
+			dataType="Marker";
+			position[]={8464.7266,-50.243317,12112.264};
+			name="Gvozdno_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=273.19153;
+			id=1114;
+			atlOffset=-213.96416;
+		};
+		class Item456
+		{
+			dataType="Marker";
+			position[]={8729.7422,-23.893158,11956.838};
+			name="Gvozdno_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=222.87944;
+			id=1115;
+			atlOffset=-214.04153;
+		};
+		class Item457
+		{
+			dataType="Marker";
+			position[]={9619.3271,0,13291.608};
+			name="PobedaDam_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=224.38792;
+			id=1116;
+			atlOffset=-133.12895;
+		};
+		class Item458
+		{
+			dataType="Marker";
+			position[]={9693.6914,0,13578.708};
+			name="PobedaDam_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=175.80397;
+			id=1117;
+			atlOffset=-82.140511;
+		};
+		class Item459
+		{
+			dataType="Marker";
+			position[]={11158.477,0,12055.605};
+			name="Krasnostav_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=224.52194;
+			id=1118;
+			atlOffset=-205.1674;
+		};
+		class Item460
+		{
+			dataType="Marker";
+			position[]={10921.661,25.100998,12419.801};
+			name="Krasnostav_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=284.37637;
+			id=1119;
+			atlOffset=-205.1808;
+		};
+		class Item461
+		{
+			dataType="Marker";
+			position[]={11445.234,-33.162979,12232.043};
+			name="Krasnostav_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=82.740494;
+			id=1120;
+			atlOffset=-205.20128;
+		};
+		class Item462
+		{
+			dataType="Marker";
+			position[]={11033.596,9.2994385,12127.097};
+			name="Krasnostav_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=46.729012;
+			id=1121;
+			atlOffset=-205.23547;
+		};
+		class Item463
+		{
+			dataType="Marker";
+			position[]={11185.203,17.002029,12584.181};
+			name="Krasnostav_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=187.8757;
+			id=1122;
+			atlOffset=-205.1514;
+		};
+		class Item464
+		{
+			dataType="Marker";
+			position[]={13287.132,0,12638.518};
+			name="Olsha_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=215.43794;
+			id=1123;
+			atlOffset=-113.34563;
+		};
+		class Item465
+		{
+			dataType="Marker";
+			position[]={13348.612,-19.910721,12915.626};
+			name="Olsha_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=164.70457;
+			id=1124;
+			atlOffset=-113.31242;
+		};
+		class Item466
+		{
+			dataType="Marker";
+			position[]={2606.1951,0,5754.2529};
+			name="Zelenogorsk_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=34.873993;
+			id=1125;
+			atlOffset=-242.39169;
+		};
+		class Item467
+		{
+			dataType="Marker";
+			position[]={3003.208,-8.3799896,5484.4414};
+			name="Zelenogorsk_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=82.361603;
+			id=1126;
+			atlOffset=-242.31438;
+		};
+		class Item468
+		{
+			dataType="Marker";
+			position[]={2545.7034,-48.391693,5047.0161};
+			name="Zelenogorsk_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=222.03661;
+			id=1127;
+			atlOffset=-242.39169;
+		};
+		class Item469
+		{
+			dataType="Marker";
+			position[]={2467.3689,208.28003,5485.6372};
+			name="Zelenogorsk_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=100.69141;
+			id=1128;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item470
+		{
+			dataType="Marker";
+			position[]={2604.1921,-34.651566,5364.4536};
+			name="Zelenogorsk_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=34.873993;
+			id=1129;
+			atlOffset=-242.37234;
+		};
+		class Item471
+		{
+			dataType="Marker";
+			position[]={1784.193,0,4141.5972};
+			name="Pavlovo_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=31.358999;
+			id=1130;
+			atlOffset=-158.31154;
+		};
+		class Item472
+		{
+			dataType="Marker";
+			position[]={1754.871,-19.558044,3632.2095};
+			name="Pavlovo_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=163.37129;
+			id=1131;
+			atlOffset=-158.29475;
+		};
+		class Item473
+		{
+			dataType="Marker";
+			position[]={1795.5624,-14.981598,3927.928};
+			name="Pavlovo_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=148.03619;
+			id=1132;
+			atlOffset=-158.27422;
+		};
+		class Item474
+		{
+			dataType="Marker";
+			position[]={1773.599,0,2523.543};
+			name="Kamenka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=32.393002;
+			id=1133;
+			atlOffset=-38.571384;
+		};
+		class Item475
+		{
+			dataType="Marker";
+			position[]={2090.0591,-32.760891,2251.5068};
+			name="Kamenka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=117.10281;
+			id=1134;
+			atlOffset=-38.595394;
+		};
+		class Item476
+		{
+			dataType="Marker";
+			position[]={3369.156,0,2315.478};
+			name="Komarovo_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=217.34396;
+			id=1135;
+			atlOffset=-6.0399618;
+		};
+		class Item477
+		{
+			dataType="Marker";
+			position[]={3811.5457,1.0678315,2589.6492};
+			name="Komarovo_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=77.272224;
+			id=1136;
+			atlOffset=-6.0419626;
+		};
+		class Item478
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3292.7437,49.383949,2555.4609};
+				angles[]={0,0.58070594,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Komarovo,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=1137;
+			type="Land_Cargo_Patrol_V3_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item479
+		{
+			dataType="Marker";
+			position[]={3342.3589,34.3438,2539.1235};
+			name="Komarovo_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=296.40323;
+			id=1139;
+			atlOffset=0.021976471;
+		};
+		class Item480
+		{
+			dataType="Marker";
+			position[]={4278.875,0,2587.887};
+			name="Balota_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=283.47192;
+			id=1140;
+			atlOffset=-5.8934665;
+		};
+		class Item481
+		{
+			dataType="Marker";
+			position[]={4679.3252,1.1065335,2426.3457};
+			name="Balota_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=110.95007;
+			id=1141;
+			atlOffset=-5.8934665;
+		};
+		class Item482
+		{
+			dataType="Marker";
+			position[]={4590.3735,4.2184825,2592.8823};
+			name="Balota_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=349.59158;
+			id=1142;
+			atlOffset=-5.8961339;
+		};
+		class Item483
+		{
+			dataType="Marker";
+			position[]={6464.1748,0,2317.0559};
+			name="Chernogorsk_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=258.37994;
+			id=1143;
+			atlOffset=-6;
+		};
+		class Item484
+		{
+			dataType="Marker";
+			position[]={6769.1274,0,2685.4055};
+			name="Chernogorsk_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=311.19696;
+			id=1144;
+			atlOffset=-6;
+		};
+		class Item485
+		{
+			dataType="Marker";
+			position[]={7090.9849,0.012786865,2663.9321};
+			name="Chernogorsk_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=58.366116;
+			id=1145;
+			atlOffset=-6;
+		};
+		class Item486
+		{
+			dataType="Marker";
+			position[]={7056.8936,0.0048828125,2172.5505};
+			name="Chernogorsk_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=338.84836;
+			id=1146;
+			atlOffset=-5.9951172;
+		};
+		class Item487
+		{
+			dataType="Marker";
+			position[]={7001.7021,0.001188755,2166.3027};
+			name="Chernogorsk_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=258.37991;
+			id=1147;
+			atlOffset=-6.0008521;
+		};
+		class Item488
+		{
+			dataType="Marker";
+			position[]={4558.5552,0,4397.855};
+			name="Kozlovka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=139.42596;
+			id=1149;
+			atlOffset=-222.65831;
+		};
+		class Item489
+		{
+			dataType="Marker";
+			position[]={4182.3862,13.925934,4858.6709};
+			name="Kozlovka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=263.323;
+			id=1150;
+			atlOffset=-222.62566;
+		};
+		class Item490
+		{
+			dataType="Marker";
+			position[]={5822.3999,0,4477.4302};
+			name="Nadezhdino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=200.87598;
+			id=1152;
+			atlOffset=-132.92712;
+		};
+		class Item491
+		{
+			dataType="Marker";
+			position[]={5818.3262,6.6593933,4996.0166};
+			name="Nadezhdino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=14.87816;
+			id=1153;
+			atlOffset=-132.86797;
+		};
+		class Item492
+		{
+			dataType="Marker";
+			position[]={4251.6318,0,6528.8169};
+			name="Pogorevka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=321.32898;
+			id=1154;
+			atlOffset=-307.71469;
+		};
+		class Item493
+		{
+			dataType="Marker";
+			position[]={4731.3853,150.24187,6350.6636};
+			name="Nadezhdino_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=19.171194;
+			id=1155;
+			atlOffset=-132.9012;
+		};
+		class Item494
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4418.79,313.99448,6178.897};
+				angles[]={0,3.077877,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="nullreturn = [Pogorevka,this] execVM  ""Common\Init\Init_Camp.sqf"";";
+				disableSimulation=1;
+			};
+			id=1156;
+			type="Land_Cargo_Patrol_V3_F";
+			atlOffset=-0.050323486;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item495
+		{
+			dataType="Marker";
+			position[]={4422.0059,-0.23693848,6156.9424};
+			name="Pogorevka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=183.17635;
+			id=1157;
+			atlOffset=-307.83002;
+		};
+		class Item496
+		{
+			dataType="Marker";
+			position[]={7378.897,0,5402.0049};
+			name="Mogilevka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=292.58093;
+			id=1158;
+			atlOffset=-249.78865;
+		};
+		class Item497
+		{
+			dataType="Marker";
+			position[]={7496.0703,-37.750488,4986.498};
+			name="Mogilevka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=118.39888;
+			id=1159;
+			atlOffset=-249.87024;
+		};
+		class Item498
+		{
+			dataType="Marker";
+			position[]={7812.062,-26.802353,5324.4048};
+			name="Mogilevka_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=348.74683;
+			id=1160;
+			atlOffset=-249.83168;
+		};
+		class Item499
+		{
+			dataType="Marker";
+			position[]={6689.2632,0,5869.627};
+			name="Vyshnoye_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=121.86199;
+			id=1161;
+			atlOffset=-332.36099;
+		};
+		class Item500
+		{
+			dataType="Marker";
+			position[]={6342.8755,80.298874,6315.998};
+			name="Mogilevka_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=301.85794;
+			id=1162;
+			atlOffset=-249.6833;
+		};
+		class Item501
+		{
+			dataType="Marker";
+			position[]={6511.6567,363.28809,6417.1323};
+			name="Mogilevka_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=5.9995141;
+			id=1163;
+		};
+		class Item502
+		{
+			dataType="Marker";
+			position[]={5926.9692,0,8015.522};
+			name="StarySobor_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=325.99695;
+			id=1164;
+			atlOffset=-307.41208;
+		};
+		class Item503
+		{
+			dataType="Marker";
+			position[]={5977.021,0,7616.542};
+			name="StarySobor_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=225.74097;
+			id=1165;
+			atlOffset=-312.40561;
+		};
+		class Item504
+		{
+			dataType="Marker";
+			position[]={6364.644,0,7555.3711};
+			name="StarySobor_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=95.43;
+			id=1166;
+			atlOffset=-288.33542;
+		};
+		class Item505
+		{
+			dataType="Marker";
+			position[]={6151.894,24.480804,7992.7734};
+			name="StarySobor_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=225.74095;
+			id=1167;
+			atlOffset=-312.24744;
+		};
+		class Item506
+		{
+			dataType="Marker";
+			position[]={6327.123,-7.454834,7821.8115};
+			name="StarySobor_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=225.74095;
+			id=1168;
+			atlOffset=-312.41092;
+		};
+		class Item507
+		{
+			dataType="Marker";
+			position[]={6939.4668,0,7951.0649};
+			name="NovySobor_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=26.214655;
+			id=1170;
+			atlOffset=-300.58893;
+		};
+		class Item508
+		{
+			dataType="Marker";
+			position[]={6903.8481,-8.9093628,7641.3486};
+			name="NovySobor_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=253.14429;
+			id=1171;
+			atlOffset=-300.48627;
+		};
+		class Item509
+		{
+			dataType="Marker";
+			position[]={7395.9019,6.8321838,7610.0464};
+			name="NovySobor_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=123.19751;
+			id=1172;
+			atlOffset=-300.58157;
+		};
+		class Item510
+		{
+			dataType="Marker";
+			position[]={7178.4258,-26.934601,7427.2529};
+			name="NovySobor_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=187.27296;
+			id=1173;
+			atlOffset=-300.48755;
+		};
+		class Item511
+		{
+			dataType="Marker";
+			position[]={7750.4194,5.992888,3327.8337};
+			name="Prigorodki_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=259.74893;
+			id=1174;
+		};
+		class Item512
+		{
+			dataType="Marker";
+			position[]={8214.0234,0.14825678,3071.7158};
+			name="Prigorodki_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=124.28881;
+			id=1175;
+			atlOffset=-6.0050621;
+		};
+		class Item513
+		{
+			dataType="Marker";
+			position[]={8050.5801,0,9413.373};
+			name="Altar_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=44.723301;
+			id=1176;
+			atlOffset=-465.10968;
+		};
+		class Item514
+		{
+			dataType="Marker";
+			position[]={8115.0688,169.48672,9194.5225};
+			name="NovySobor_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=154.02431;
+			id=1177;
+			atlOffset=-300.57681;
+		};
+		class Item515
+		{
+			dataType="Marker";
+			position[]={8213.8535,0,6889.23};
+			name="Guglovo_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=309.57095;
+			id=1178;
+			atlOffset=-356.12787;
+		};
+		class Item516
+		{
+			dataType="Marker";
+			position[]={8695.2637,-12.070343,6509.1245};
+			name="Guglovo_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=123.57649;
+			id=1179;
+			atlOffset=-356.1412;
+		};
+		class Item517
+		{
+			dataType="Marker";
+			position[]={9250.4697,0,3630.5471};
+			name="Pusta_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=111.74298;
+			id=1180;
+			atlOffset=-206.76419;
+		};
+		class Item518
+		{
+			dataType="Marker";
+			position[]={8880.2881,60.607697,4013.6724};
+			name="Pusta_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=298.59766;
+			id=1181;
+			atlOffset=-206.82751;
+		};
+		class Item519
+		{
+			dataType="Marker";
+			position[]={9934.5752,0,8798.0615};
+			name="Gorka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=85.731003;
+			id=1182;
+			atlOffset=-278.38431;
+		};
+		class Item520
+		{
+			dataType="Marker";
+			position[]={9342.1016,44.503265,8864.2842};
+			name="Gorka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=279.27896;
+			id=1183;
+			atlOffset=-278.37631;
+		};
+		class Item521
+		{
+			dataType="Marker";
+			position[]={10273.284,0,9636.1621};
+			name="Dubrovka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=149.52698;
+			id=1184;
+			atlOffset=-160.89763;
+		};
+		class Item522
+		{
+			dataType="Marker";
+			position[]={10489.527,-48.884804,10048.992};
+			name="Dubrovka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=14.094658;
+			id=1185;
+			atlOffset=-160.96532;
+		};
+		class Item523
+		{
+			dataType="Marker";
+			position[]={12291.074,0,10563.703};
+			name="Khelm_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=194.22096;
+			id=1186;
+			atlOffset=-87.805565;
+		};
+		class Item524
+		{
+			dataType="Marker";
+			position[]={12366.281,23.074432,11018.272};
+			name="Khelm_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=2.6278427;
+			id=1187;
+			atlOffset=-87.775055;
+		};
+		class Item525
+		{
+			dataType="Marker";
+			position[]={9707.2861,0,6333.916};
+			name="Shakhovka_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=123.077;
+			id=1188;
+			atlOffset=-238.79886;
+		};
+		class Item526
+		{
+			dataType="Marker";
+			position[]={9542.5068,-29.587143,6768.2275};
+			name="Shakhovka_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=36.467773;
+			id=1189;
+			atlOffset=-238.81285;
+		};
+		class Item527
+		{
+			dataType="Marker";
+			position[]={12044.234,0,9293.7578};
+			name="Berezino_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=351.92798;
+			id=1190;
+			atlOffset=-41.906124;
+		};
+		class Item528
+		{
+			dataType="Marker";
+			position[]={11652.617,30.8894,9192.0508};
+			name="Berezino_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=310.00638;
+			id=1191;
+			atlOffset=-41.94611;
+		};
+		class Item529
+		{
+			dataType="Marker";
+			position[]={11986.871,28.538601,8849.5283};
+			name="Berezino_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=171.59779;
+			id=1192;
+			atlOffset=-41.990124;
+		};
+		class Item530
+		{
+			dataType="Marker";
+			position[]={12248.856,0,9250.6074};
+			name="Berezino_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=351.92798;
+			id=1194;
+			atlOffset=-34.01638;
+		};
+		class Item531
+		{
+			dataType="Marker";
+			position[]={12952.139,0,8382.9131};
+			name="Nizhnoye_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=351.92798;
+			id=1195;
+			atlOffset=-5.9737434;
+		};
+		class Item532
+		{
+			dataType="Marker";
+			position[]={13026.602,-0.21155834,7937.0103};
+			name="Nizhnoye_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=176.63721;
+			id=1196;
+			atlOffset=-5.9891009;
+		};
+		class Item533
+		{
+			dataType="Marker";
+			position[]={10639.29,0,8384.3779};
+			name="Polana_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=329.02493;
+			id=1197;
+			atlOffset=-224.61723;
+		};
+		class Item534
+		{
+			dataType="Marker";
+			position[]={10921.661,15.701553,7997.7153};
+			name="Polana_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=127.59792;
+			id=1198;
+			atlOffset=-224.67789;
+		};
+		class Item535
+		{
+			dataType="Marker";
+			position[]={10540.179,-35.195648,7847.6069};
+			name="Polana_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=190.53967;
+			id=1199;
+			atlOffset=-224.56723;
+		};
+		class Item536
+		{
+			dataType="Marker";
+			position[]={11825.486,0,7362.1201};
+			name="Orlovets_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=298.45096;
+			id=1201;
+			atlOffset=-202.97878;
+		};
+		class Item537
+		{
+			dataType="Marker";
+			position[]={12365.341,-45.046524,7371.9761};
+			name="Orlovets_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=4.0985174;
+			id=1202;
+			atlOffset=-203.01675;
+		};
+		class Item538
+		{
+			dataType="Marker";
+			position[]={11010.579,0,6644.749};
+			name="Dolina_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=298.61694;
+			id=1203;
+			atlOffset=-91.964127;
+		};
+		class Item539
+		{
+			dataType="Marker";
+			position[]={11552.654,-25.382339,6585.2539};
+			name="Dolina_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=92.254448;
+			id=1204;
+			atlOffset=-91.966896;
+		};
+		class Item540
+		{
+			dataType="Marker";
+			position[]={13437.025,0,6481.7031};
+			name="Solnichniy_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=344.20096;
+			id=1205;
+			atlOffset=-4.1744251;
+		};
+		class Item541
+		{
+			dataType="Marker";
+			position[]={13169.286,2.5452385,6244.5234};
+			name="Solnichniy_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=274.28424;
+			id=1206;
+			atlOffset=-4.1033335;
+		};
+		class Item542
+		{
+			dataType="Marker";
+			position[]={13403.986,1.5277591,5964.6123};
+			name="Solnichniy_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=180.87022;
+			id=1207;
+			atlOffset=-4.168426;
+		};
+		class Item543
+		{
+			dataType="Marker";
+			position[]={13174.096,25.853045,6403.71};
+			name="Solnichniy_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=344.20096;
+			id=1208;
+			atlOffset=-4.2997284;
+		};
+		class Item544
+		{
+			dataType="Marker";
+			position[]={10018.571,0,5723.8232};
+			name="Staroye_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=344.20096;
+			id=1209;
+			atlOffset=-262.32419;
+		};
+		class Item545
+		{
+			dataType="Marker";
+			position[]={10158.112,-30.314148,5233.8003};
+			name="Staroye_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=140.9464;
+			id=1210;
+			atlOffset=-262.23688;
+		};
+		class Item546
+		{
+			dataType="Marker";
+			position[]={11157.655,0,5379.3491};
+			name="Msta_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=211.96896;
+			id=1211;
+			atlOffset=-263.35114;
+		};
+		class Item547
+		{
+			dataType="Marker";
+			position[]={11261.724,22.666382,5631.3027};
+			name="Msta_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=154.77226;
+			id=1212;
+			atlOffset=-263.40579;
+		};
+		class Item548
+		{
+			dataType="Marker";
+			position[]={12588.97,0,4389.3672};
+			name="Tulga_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=279.47498;
+			id=1213;
+			atlOffset=-181.21799;
+		};
+		class Item549
+		{
+			dataType="Marker";
+			position[]={12808.618,-90.767166,4433.7876};
+			name="Msta_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=275.73441;
+			id=1214;
+			atlOffset=-263.28839;
+		};
+		class Item550
+		{
+			dataType="Marker";
+			position[]={11858.662,0,3472.1311};
+			name="Kamyshovo_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=257.49597;
+			id=1216;
+			atlOffset=-6.1845284;
+		};
+		class Item551
+		{
+			dataType="Marker";
+			position[]={12322.257,0,3504.0991};
+			name="Kamyshovo_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=80.066002;
+			id=1218;
+			atlOffset=-5.9399223;
+		};
+		class Item552
+		{
+			dataType="Marker";
+			position[]={10083.79,0,2118.8181};
+			name="Elektrozavodsk_defence_0";
+			type="Empty";
+			colorName="ColorRed";
+			angle=257.49597;
+			id=1219;
+			atlOffset=-6.072032;
+		};
+		class Item553
+		{
+			dataType="Marker";
+			position[]={10598.355,-0.072031975,2195.0103};
+			name="Elektrozavodsk_defence_1";
+			type="Empty";
+			colorName="ColorRed";
+			angle=56.160831;
+			id=1220;
+			atlOffset=-6.072032;
+		};
+		class Item554
+		{
+			dataType="Marker";
+			position[]={10477.693,0.031778812,2488.0569};
+			name="Elektrozavodsk_defence_2";
+			type="Empty";
+			colorName="ColorRed";
+			angle=4.9419527;
+			id=1221;
+			atlOffset=-5.9900522;
+		};
+		class Item555
+		{
+			dataType="Marker";
+			position[]={10145.061,6.0126953,1612.0172};
+			name="Elektrozavodsk_defence_3";
+			type="Empty";
+			colorName="ColorRed";
+			angle=20.698044;
+			id=1222;
+			atlOffset=-9.1552734e-005;
+		};
+		class Item556
+		{
+			dataType="Marker";
+			position[]={9945.2959,-0.05924511,1634.3345};
+			name="Elektrozavodsk_defence_4";
+			type="Empty";
+			colorName="ColorRed";
+			angle=13.588943;
+			id=1224;
+			atlOffset=-6.072032;
 		};
 	};
 	class Connections
