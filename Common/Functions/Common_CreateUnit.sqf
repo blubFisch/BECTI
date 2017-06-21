@@ -36,24 +36,17 @@
 	  -> Create a "B_Soldier_F" at the player's position, initialize it over the network and ignore the formation on creation
 */
 
-private ["_net", "_position", "_sideID", "_special", "_team", "_type", "_unit", "_upgrades", "_side", "_upgrade_barracks", "_logic", "_unit_skill_val"];
-
-_classname = _this select 0;
-_team = _this select 1;
-_position = _this select 2;
-_sideID = _this select 3;
-_net = if (count _this > 4) then {_this select 4} else {false};
-_special = if (count _this > 5) then {_this select 5} else {"FORM"};
-_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
+params ["_classname", "_group", "_position", "_sideID", ["_net", false], ["_special", "FORM"]];
+private ["_unit"];
 
 if (CTI_Log_Level >= CTI_Log_Debug) then {
-	["DEBUG", "FILE: Common\Functions\Common_CreateUnit.sqf", format["Attempting to create a [%1] unit on team [%2] at [%3] on side [%4], net? [%5] special? [%6]", _classname, _team, _position, _sideID, _net, _special]] call CTI_CO_FNC_Log;
+	["DEBUG", "FILE: Common\Functions\Common_CreateUnit.sqf", format["Attempting to create a [%1] unit on team [%2] at [%3] on side [%4], net? [%5] special? [%6]", _classname, _group, _position, _sideID, _net, _special]] call CTI_CO_FNC_Log;
 };
 
 if (typeName _position == "OBJECT") then {_position = getPos _position};
 if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 
-_unit = _team createUnit [_classname, _position, [], 0, _special];
+_unit = _group createUnit [_classname, _position, [], 0, _special];
 
 if (_net) then {_unit setVariable ["cti_net", _sideID, true]};
 

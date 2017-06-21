@@ -28,10 +28,8 @@
 	  -> This will initialize the vehicle of the player with his own Side ID
 */
 
-private ["_marker_dead_color", "_marker_dead_size", "_marker_dead_type", "_marker_color", "_marker_label", "_marker_name", "_marker_size", "_marker_type", "_side", "_sideID", "_vehicle"];
-
-_vehicle = _this select 0;
-_sideID = _this select 1;
+params ["_vehicle", "_sideID"];
+private ["_marker_dead_color", "_marker_dead_size", "_marker_dead_type", "_marker_color", "_marker_label", "_marker_name", "_marker_size", "_marker_type", "_side"];
 
 _side = _sideID call CTI_CO_FNC_GetSideFromID;
 _classname = typeOf _vehicle;
@@ -119,7 +117,7 @@ if (CTI_SPECIAL_DEPLOYABLEFOBLARGE in _special) then { //--- LARGE FOB vehicle.
 };
 
 //--- Get a proper icon
-if (_marker_type == "") then {
+if (_marker_type isEqualTo "") then {
 	_marker_size = [0.75,0.75];
 	switch (true) do {
 		case (_classname isKindOf "Man"): { _marker_type = CTI_P_MarkerPrefix+"inf"; _marker_size = [0.4, 0.4]; _marker_color = "ColorYellow"; };
