@@ -41,6 +41,7 @@ _f = []; //--- Built from Factory.
 _s = []; //--- Script
 _d = []; //--- Extra Distance (From Factory)
 _g = []; //--- Filter by Camo
+_e = []; //--- Empty Version (strips all pylons and guns of all magazines)
 
 //--- Infantry
 //--- NATO Infantry (Arid)

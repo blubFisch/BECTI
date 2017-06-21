@@ -52,7 +52,7 @@ if (_virtual_damages >= 1 || !alive _object) then {
 	_object setDammage 1;
 	_objpos = _object modelToWorld [0,0,0];
 	//Destruction effects due to no ruins
-	_smoke = createVehicle ["SmallSecondary", _objpos, [], 0, "CAN_COLLIDE"];
+	//_smoke = createVehicle ["SmallSecondary", _objpos, [], 0, "CAN_COLLIDE"];
 	_smoke = createVehicle ["CMflare_Chaff_Ammo", _objpos, [], 0, "CAN_COLLIDE"];
 	[_objpos] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
 

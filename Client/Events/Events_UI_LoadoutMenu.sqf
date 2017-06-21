@@ -20,7 +20,7 @@ switch (_action) do {
 		CTI_Air_cam camSetDir (CTI_Air_cam_pos2 vectorFromTo CTI_Air_cam_pos1);
 		CTI_Air_cam camCommit 0.75;
 		//End Air Cam
-		
+		(_unit) call CTI_UI_Loadout_UpdateMode;
 		//Update Unit Info - TOP RIGHT		
 		(_unit) call CTI_UI_Loadout_UpdateTitle;
 		(_unit) call CTI_UI_Loadout_UpdateDescription;
@@ -112,9 +112,9 @@ switch (_action) do {
 	};
 	case "onCamoLBSelChanged": {
 		_changeto = _this select 1;
-		//_changeto = _changeto;
 		//systemchat format ["camo: %1 ", _changeto];
 		if (!isNil "_changeto") then {
+			//if (_changeto > 0) then {_changeto = _changeto - 1};//remove 1 for helper
 			_selectedcamo = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu_camolist");
 			_colorName = _selectedcamo select 0 select _changeto;
 			_colorTextures = _selectedcamo select 1 select _changeto;

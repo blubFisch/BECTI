@@ -1,10 +1,11 @@
-private ["_cpt", "_faction", "_filterui", "_items", "_prices", "_upgrades", "_times"];
+private ["_cpt", "_faction", "_filterui", "_items", "_prices", "_ammotype", "_upgrades", "_times"];
 
 _faction = _this select 0;
 _ammoclass = _this select 1;
-_upgrades = _this select 2;
-_prices = _this select 3;
-_times = _this select 4;
+_ammotype = _this select 2;
+_upgrades = _this select 3;
+_prices = _this select 4;
+_times = _this select 5;
 
 _cpt = 0;
 for '_i' from 0 to (count _ammoclass)-1 do {
@@ -14,7 +15,7 @@ for '_i' from 0 to (count _ammoclass)-1 do {
 	if (isClass (configFile >> "CfgAmmo" >> _classname) || isClass (configFile >> "CfgMagazines" >> _classname)) then {
 		_get = missionNamespace getVariable _var_name;
 		if (isNil "_get") then {
-			_stored = [_upgrades select _i,_prices select _i,_times select _i];
+			_stored = [_ammotype select _i,_upgrades select _i,_prices select _i,_times select _i];
 			missionNamespace setVariable [_var_name, _stored];
 			_cpt = _cpt + 1;
 			

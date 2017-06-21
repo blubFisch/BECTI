@@ -309,38 +309,20 @@ class Params {
 		title = "VEHICLES: Loadouts";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Realistic","Unlocked"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_ORDINANCE {
+		title = "VEHICLES: Air Ordinance Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled (no limit)","Enabled"};
 		default = 1;
 	};
-	class CTI_VEHICLES_AIR_FFAR {
-		title = "VEHICLES: Aircraft FFAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_DAR {
-		title = "VEHICLES: Aircraft DAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_AA {
-		title = "VEHICLES: Aircraft AA Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_AT {
-		title = "VEHICLES: Aircraft AT Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_CM {
-		title = "VEHICLES: Aircraft Countermeasures";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
+	class CTI_VEHICLES_LAND_ORDINANCE {
+		title = "VEHICLES: Land Ordinance Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled (no limit)","Enabled"};
+		default = 1;
+	};	
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
@@ -629,6 +611,12 @@ class Params {
 		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
 		default = 3;
 	};
+	class CTI_MALDEN_ADDON {
+		title = "ADDON: MALDEN DLC Support";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};	
 	class CTI_TANKS_ADDON {
 		title = "ADDON: TANKS DLC Support";
 		values[] = {0,1,2,3};

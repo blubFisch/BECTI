@@ -33,6 +33,8 @@
 	Common Function: CTI_CO_FNC_SanitizeAircraft
 	Server Function: CTI_SE_FNC_HandleEmptyVehicle
 	Server Function: CTI_SE_FNC_OnClientPurchaseComplete
+	Common Function: CTI_CO_FNC_SanitizeLandOrdinance
+	Common Function: CTI_CO_FNC_SanitizeAirOrdinance
 	
   # EXAMPLE #
     [_req_seed, _req_classname, _req_buyer, _req_target, _factory, _req_side] spawn CTI_SE_FNC_HandleAIPurchase;
@@ -144,8 +146,11 @@ if (_model isKindOf "Man") then {
 	[_vehicle] spawn CTI_SE_FNC_HandleEmptyVehicle;
 	
 	//--- Authorize the air loadout depending on the parameters set
-	if (_vehicle isKindOf "Air") then {[_vehicle, _req_side] call CTI_CO_FNC_SanitizeAircraft};
+	//if (_vehicle isKindOf "Air") then {[_vehicle, _req_side] call CTI_CO_FNC_SanitizeAircraft};
 	// _req_target addVehicle _vehicle;
+	
+	//check ordinance
+	(_vehicle) call CTI_CO_FNC_SanitizeVehicle;
 };
 
 if (_script != "" && alive _vehicle) then {

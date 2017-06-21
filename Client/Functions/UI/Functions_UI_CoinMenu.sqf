@@ -130,12 +130,36 @@ CTI_Coin_UpdateItemLabel = {
 //--- Check if a defense may be placed at it's given position
 CTI_Coin_DefenseCanBePlaced = {
 	_preview = _this;
-	
 	_valid = true;
-	
 	if !((CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST) isEqualTo []) then { //--- Check if the defense can be placed according to the blacklist
+		//check if composition and retrieve name
+		_compitems = [];
+		if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {
+			_compid = (((CTI_COIN_PARAM select 5) select 0) select 1) ;
+			_objsarray =  missionConfigFile >> "CfgCompositions" >> _compid >> "items";
+			{
+				_class = getText( _x >> "type" );
+				_compitems pushback _class;
+				//systemchat format ["Comp: %1 ",_class];
+			}forEach ( "true" configClasses _objsarray );
+		};	
+		//systemchat format ["_compitems: %1 ",_compitems];
 		{
-			if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
+			if ("All" in _x) then { 
+				_items = [];	
+				{
+					if !(typeof _x in _compitems) then {
+						if (typeof _x != typeof _preview) then {
+							_items pushback (typeof _x);
+							//systemchat format ["_x: %1 ",typeof _x];
+						};
+					};
+				} foreach (_preview nearobjects ["All", (_x select 1)]);
+				//systemchat format ["Clear?: %1 | %2 ",_items, typeof _preview];
+				if !((_items) isEqualTo []) exitWith {_valid = false};	
+			} else {
+				if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
+			};
 		} forEach (CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST);
 	};
 	
@@ -402,6 +426,7 @@ CTI_Coin_OnPreviewPlacement = {
 						};
 					};
 					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, _classname];
+					//systemchat format ["_variable | %1",_variable];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
 					[_variable, CTI_P_SideJoined, _position, _direction, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
@@ -559,6 +584,7 @@ CTI_Coin_OnKeyDown = {
 			};
 			case (_key in [28, 156]): {if !(isNil 'CTI_COIN_PREVIEW') then {call CTI_Coin_OnPreviewPlacement}};
 			case (_key in actionKeys "Diary"): {profileNamespace setVariable ["CTI_COIN_WALLALIGN", !(profileNamespace getVariable ["CTI_COIN_WALLALIGN", true])]};
+			case (_key in [20]): {profileNamespace setVariable ["CTI_COIN_TERRAINALIGN", !(profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])]};
 			case (_key in actionKeys "Gear"): {profileNamespace setVariable ["CTI_COIN_AUTODEFENSE", !(profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true])]};
 			case (_key in actionKeys "NightVision"): {if !(isNil 'CTI_COIN_CAMCONSTRUCT') then {camUseNVG !CTI_COIN_CAMUSENVG; CTI_COIN_CAMUSENVG = !CTI_COIN_CAMUSENVG}};
 			case (_key in actionKeys "Watch"): {call CTI_Coin_OnBuildingSold};

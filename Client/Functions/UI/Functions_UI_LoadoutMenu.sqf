@@ -23,8 +23,24 @@
 //Cur Mag Title 790019
 //Cur Mag List 790020
 //Status Area 790021
+//status bar 790024
 
 //Update Main unit title
+CTI_UI_Loadout_UpdateMode = {
+	_mode = "Test";
+	switch (CTI_VEHICLES_LOADOUTS) do {
+		case 0: {
+			_mode = "Disabled";
+		};
+		case 1: {
+			_mode = "Realistic Mode";
+		};
+		case 2: {
+			_mode = "Unlocked Mode";
+		};
+	};
+	((uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790004) ctrlSetStructuredText (parseText format["<t color='#2b76a5'>Loadout System<t> <t color='#8a8b8d'> (%1) <t>", _mode]);
+};
 CTI_UI_Loadout_UpdateTitle = {
 	_unit = _this;
 	_unit = (uiNamespace getVariable "cti_dialog_ui_servicemenu_loadoutunit");
@@ -204,7 +220,7 @@ CTI_UI_Loadout_viewAllArms = {
 			_countlist pushback (_x select 2);	
 		} forEach _magsfull;		
 	} forEach ([_unit, configNull] call BIS_fnc_getTurrets);
-
+	//systemchat format ["getturrets: %1 | %2 | %3",_turretlist, _maglist, _countlist ];
 	_unitpylonfull = uiNamespace getVariable "cti_dialog_ui_loadoutmenu_unitpylonfull";
 	_validPylons = _unitpylonfull select 0;
 	_activePylonMags = _unitpylonfull select 1;
@@ -260,6 +276,16 @@ CTI_UI_Loadout_viewAllMags = {
 	_classname = typeOf _unit;
 	//all compatible turret magazine
 	_compatiblemags = getArray (configfile >> "CfgWeapons" >> _selectedturret >> "magazines");
+	//add subturret magazines
+	if ((count getArray (configfile >> "CfgWeapons" >> _selectedturret >> "muzzles")) > 0 ) then {
+		{
+			_submags = getArray (configfile >> "CfgWeapons" >> _selectedturret >> _x >> "magazines");
+			{
+				_compatiblemags pushback _x;
+			} foreach _submags;
+		} foreach getArray (configfile >> "CfgWeapons" >> _selectedturret >> "muzzles");
+	};
+
 	//Pylons
 	_enableall = false;
 	if (CTI_VEHICLES_LOADOUTS == 2) then {_enableall = true;};
@@ -324,16 +350,55 @@ CTI_UI_Loadout_viewTurretMags = {
 	_classname = typeOf _unit;
 
 	_compatiblemags = getArray (configfile >> "CfgWeapons" >> _turret >> "magazines");
+	//add subturret magazines
+	if ((count getArray (configfile >> "CfgWeapons" >> _selectedturret >> "muzzles")) > 0 ) then {
+		{
+			_submags = getArray (configfile >> "CfgWeapons" >> _selectedturret >> _x >> "magazines");
+			{
+				_compatiblemags pushback _x;
+			} foreach _submags;
+		} foreach getArray (configfile >> "CfgWeapons" >> _selectedturret >> "muzzles");
+	};
+	//get all setHit
+	_allturrets = getArray (configfile >> "CfgWeapons" >> _x);
 
 	lbClear 790007;
 	//TODO: add check for magazine prices
 	if !(isNil '_compatiblemags') then {
 		if ((count _compatiblemags) > 0) then {
+			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			{	
-				_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-				if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
-				lbAdd [790007,format ["%1", _hasName]];
-				lbsetData [790007,_foreachIndex,_x];
+				if (CTI_VEHICLES_LAND_ORDINANCE == 1 || CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+						_magvar = missionNamespace getVariable _x;
+						if (!isNil "_magvar") then {
+							_upgradetype = _magvar select 0;
+							_ammoupgrade = _magvar select 1;
+							_upgrade_lvl = 0;
+							if (_upgradetype == "Land" && CTI_VEHICLES_LAND_ORDINANCE == 1) then {
+								_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
+							};
+							if (_upgradetype == "Air" && CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+								_upgrade_lvl = _upgrades select CTI_UPGRADE_AIR_ORDINANCE;
+							};							
+							if (_upgrade_lvl >= _ammoupgrade) then {
+								_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+								if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+								lbAdd [790007,format ["%1", _hasName]];
+								lbsetData [790007,_foreachIndex,_x];
+							};
+						} else {
+							_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+							if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+							lbAdd [790007,format ["NO DATA | %1", _hasName]];
+							lbsetData [790007,_foreachIndex,_x];
+						};
+	
+				} else {
+					_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
+					if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+					lbAdd [790007,format ["%1", _hasName]];
+					lbsetData [790007,_foreachIndex,_x];
+				};								
 			} forEach _compatiblemags;
 			playSound "Click";//audio feedback
 		} else {
@@ -346,7 +411,7 @@ CTI_UI_Loadout_viewTurretMags = {
 		lbAdd [790007,format ["%1", _hint]];
 		hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />No Magazines";
 	};	
-	
+	copyToClipboard str _compatiblemags;//OUTPUT ALL MAGS
 	uiNamespace setVariable ["cti_dialog_ui_loadoutmenu_unitturretselected",[_turret]];
 	uiNamespace setVariable ["cti_dialog_ui_loadoutmenu_unitvalidturretmaglist",_compatiblemags];
 	playSound "Click";
@@ -377,9 +442,33 @@ CTI_UI_Loadout_viewMags = {
 	lbClear 790007;
 	if !(isNil '_validPylonMags') then {
 		if ((count _validPylonMags) > 0) then {
+			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			{
-				lbAdd [790007,format ["%1 ", _validDispNames select _foreachIndex]];
-				lbsetData [790007,_foreachIndex,_x];
+				if (CTI_VEHICLES_LAND_ORDINANCE == 1 || CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+					_magvar = missionNamespace getVariable _x;
+					if (!isNil "_magvar") then {
+						_upgradetype = _magvar select 0;
+						_ammoupgrade = _magvar select 1;
+						_upgrade_lvl = 0;
+						if (_upgradetype == "Land" && CTI_VEHICLES_LAND_ORDINANCE == 1) then {
+							_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
+						};
+						if (_upgradetype == "Air" && CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+							_upgrade_lvl = _upgrades select CTI_UPGRADE_AIR_ORDINANCE;
+						};												
+						if (_upgrade_lvl >= _ammoupgrade) then {
+							lbAdd [790007,format ["%1 ", _validDispNames select _foreachIndex]];
+							lbsetData [790007,_foreachIndex,_x];
+						};
+					} else {
+						lbAdd [790007,format ["NO DATA | %1 ", _validDispNames select _foreachIndex]];
+						lbsetData [790007,_foreachIndex,_x];
+					};
+				} else {
+					lbAdd [790007,format ["%1 ", _validDispNames select _foreachIndex]];
+					lbsetData [790007,_foreachIndex,_x];
+				};
+
 			} forEach _validPylonMags;
 			playSound "Click";//audio feedback
 		} else {
@@ -392,7 +481,7 @@ CTI_UI_Loadout_viewMags = {
 		lbAdd [790007,format ["%1", _hint]];
 		hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />No Magazines";
 	};	
-	//copyToClipboard str _validPylonMags;//OUTPUT ALL MAGS
+	copyToClipboard str _validPylonMags;//OUTPUT ALL MAGS
 	uiNamespace setVariable ["cti_dialog_ui_loadoutmenu_unitpylonselected",[_pylon]];
 	uiNamespace setVariable ["cti_dialog_ui_loadoutmenu_unitvalidmaglist",_validPylonMags];
 	playSound "Click";
@@ -429,9 +518,10 @@ CTI_UI_Loadout_viewMagStats = {
 	//systemchat format ["_ammoclass: %1",_ammoclass];
 	//get ammo class from list
 	_ammoclass2 = missionNamespace getVariable _magclass;
-	_ammoupgrade = _ammoclass2 select 0;
-	_ammoprice = _ammoclass2 select 1;
-	_ammotime = _ammoclass2 select 2;
+	_ammotype = _ammoclass2 select 0;
+	_ammoupgrade = _ammoclass2 select 1;
+	_ammoprice = _ammoclass2 select 2;
+	_ammotime = _ammoclass2 select 3;
 	//systemchat format ["_ammoclass2: %1 | %2 | %3 | %4", _magclass, _ammoprice, _ammoupgrade, _ammotime];
 	if (isNil "_ammoclass2") then {
 		_ammostat_price = getNumber(configFile >> 'CfgAmmo' >> _ammoclass >> 'cost');
@@ -461,6 +551,7 @@ CTI_UI_Loadout_viewMagStats = {
 	lnbAddRow [790009, ["Ammo: ", str (_ammoclass)]];
 	lnbAddRow [790009, ["Max qty: ", str (_maxAmount)]];
 	lnbAddRow [790009, ["Price: ", str (_ammostat_price)]];
+	lnbAddRow [790009, ["Reload Time: ", str (_ammotime)]];
 	lnbAddRow [790009, ["Mass: ", str (getNumber(configFile >> 'CfgMagazines' >> _magclass >> 'mass'))]];
 	
 	lnbAddRow [790009, ["fuseDistance: ", str (_ammostat_fuseDistance)]];
@@ -492,11 +583,13 @@ CTI_UI_Loadout_viewTurretMagStats = {
 	_ammostat_price = 0;
 	
 	//get ammo class from list
-	_ammoclass2 = (uiNamespace getVariable _magclass);
+	_ammoclass2 = missionNamespace getVariable _magclass;
+	_ammoprice = _ammoclass2 select 2;
+	_ammotime = _ammoclass2 select 3;
 	if (isNil "_ammoclass2") then {
 		_ammostat_price = getNumber(configFile >> 'CfgAmmo' >> _ammoclass >> 'cost');
 	} else {
-		_ammostat_price = (uiNamespace getVariable _magclass) select 0;
+		_ammostat_price = _ammoprice;
 	};
 	
 	//systemchat format ["selected: %1 | %2 | %3 | %4 ",_pylonName,_magclass,_finalAmount,_magDispName];
@@ -511,6 +604,7 @@ CTI_UI_Loadout_viewTurretMagStats = {
 	lnbAddRow [790009, ["Ammo: ", str (_ammoclass)]];
 	lnbAddRow [790009, ["Max qty: ", str (_maxAmount)]];
 	lnbAddRow [790009, ["Price: ", str (_ammostat_price)]];
+	lnbAddRow [790009, ["Reload Time: ", str (_ammotime)]];
 	lnbAddRow [790009, ["fuseDistance: ", str (_ammostat_fuseDistance)]];
 	lnbAddRow [790009, ["hit: ", str (_ammostat_htmin)]];
 	
@@ -619,19 +713,24 @@ CTI_UI_Loadout_installPylons = {
 	[_unit,[_pylonNum,_selectedmag,true,_pylonOwner]] remoteexec ["setPylonLoadOut",0];
 
 	[_unit,[_pylonNum,0]] remoteexec ["SetAmmoOnPylon",0];
+	//get magazine reload time
+	_ammoclass = missionNamespace getVariable _selectedmag;
+	_ammotime = _ammoclass select 3;
+	//PROGRESSBAR
+	disableserialization; 
+	_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+	_controlbar progressSetPosition 0;
+	for "_i" from 1 to _finalamount do {
+		for "_i" from 1 to _ammotime do {
+			_pos = progressPosition _controlbar;
+			_fraction = 1 / (_finalamount * _ammotime);
+			sleep 1;
+			_controlbar progressSetPosition (_pos + _fraction);
+		}; 
+		[_unit,[_pylonNum,_i]] remoteexec ["SetAmmoOnPylon",0];
+		playSound "Click";
+	}; 
 
-	if (_finalamount <= 24) then {
-		for "_i" from 1 to _finalamount do {
-			sleep 1; 
-			[_unit,[_pylonNum,_i]] remoteexec ["SetAmmoOnPylon",0];
-			playSound "Click";//change to 3dclick
-			
-		};
-	} else {
-		sleep 1; 
-		[_unit,[_pylonNum,_finalamount]] remoteexec ["SetAmmoOnPylon",0];
-		playSound "Click";//change to 3dclick
-	};
 	//systemchat format ["Successfully installed %1 %2 on %3!",_finalAmount,_magDispName,_pylonName];
 	(parseText format["Successfully installed %1 %2 on %3!",_finalAmount,_magDispName,_pylonName]) call CTI_UI_Loadout_UpdateStatus;
 	
@@ -650,18 +749,46 @@ CTI_UI_Loadout_installturrets = {
 	
 	_turretlist = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu_unitturretlist");
 	_turrets = _turretlist select 0;
+	_mags = _turretlist select 1;
 	_paths = _turretlist select 2;
 	
 	//systemchat format ["_paths %1 ",_paths];
 	_path = [];
+	_mag = "";
 	{ 
-		if(_turretName == _x) then {_path = _paths select _foreachindex};
+		if(_turretName == _x) then {_path = _paths select _foreachindex;_mag = _mags select _foreachindex;};
 	} forEach _turrets;
 	//systemchat format ["_path %1 ",_path];
-	_unit removeMagazineTurret [_selectedmag, [_path]]; 
-	sleep 5;//TODO: get rearm time from var
-	//systemchat format ["removed %1 from path %2",_selectedmag, _path];
+	if (isNil "_path") then {_path = [0]};
+	//get magazine reload time
+	_ammoclass = missionNamespace getVariable _selectedmag;
+	_ammotime = _ammoclass select 3;
+	//set progress
+	_unit removeMagazineTurret [_mag, [_path]]; 
+	_unit removeWeaponTurret [_turretName, [_path]]; 
+	//_unit removeMagazinesTurret [_mag, [_path]]; 
+	//(vehicle player) addMagazineTurret ["Missile_AA_04_Plane_CAS_01_F",[-1]];
+	//check for pylon turrets
+	_unit removeMagazine _mag; 
+	_unit removeWeapon _turretName; 
+
+	//PROGRESSBAR
+	disableserialization; 
+	_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+	_controlbar progressSetPosition 0;
+	for "_i" from 1 to _ammotime do {
+		_pos = progressPosition _controlbar;
+		_fraction = 1 / _ammotime;
+		sleep 1;
+		_controlbar progressSetPosition (_pos + _fraction);
+	}; 
+	//END PROGRESS
+	_unit addWeaponTurret [_turretName, [_path]];
 	_unit addMagazineTurret [_selectedmag, [_path]];
+	//add pylon based turrets
+	_unit addMagazine _selectedmag;
+	_unit addWeapon _turretName;
+	
 	
 	(parseText format["Successfully installed %1 %2 on %3",_finalAmount, _selectedmag, _turretName]) call CTI_UI_Loadout_UpdateStatus;
 	playSound "Click";
@@ -693,25 +820,51 @@ CTI_UI_Loadout_listSkins = {
 	_vehDispName = getText (configfile >> "CfgVehicles" >> typeof _unit >> "displayName");
 	_colorTextures = [];
 	_colorNames = [];
+	//Default
+	_hiddentextures = getArray (configfile >> "CfgVehicles" >> typeof _unit >> "hiddenSelectionsTextures");
+	if (count _hiddentextures > 0) then {
+		lbAdd [790111, "Default"];
+		_colorNames pushback ("Default");
+		_colorTextures pushback (_hiddentextures);
+	};	
 	//systemchat format ["_colorConfigs %1",_colorConfigs];
 	if (count _colorConfigs > 0) then {
 		lbclear 790111;
-		{															
+		//lbAdd [790111, "Select Skin"]; lbSetCurSel [790111,0];
+		{														
 			lbAdd [790111,(getText (configfile >> "CfgVehicles" >> typeof _unit >> "textureSources" >> configName _x >> "displayName"))];
-			//lbSetCurSel [790111,0];//set to current skin
 			_colorNames pushback (getText (configfile >> "CfgVehicles" >> typeof _unit >> "textureSources" >> configName _x >> "displayName"));
 			_colorTextures pushback (getArray (configfile >> "CfgVehicles" >> typeof _unit >> "textureSources" >> configName _x >> "textures"));
 		} foreach _colorConfigs;
 
-	} else {
-		lbclear 790111;//lbAdd [790111,"No Camos"];lbSetCurSel [790111,0];
 	};
-
-	//Preset Universal Skins
-	lbAdd [790111, "Black"];
-	_colorNames pushback ("Black");
+	//Preset Universal Solid Skins -- todo, customize per side
+	//black
+	lbAdd [790111, "SolidBlack"];
+	_colorNames pushback ("SolidBlack");
 	_colorTextures pushback (["Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa","Rsc\Pictures\skin_black.paa"]);		
-
+	//tan
+	lbAdd [790111, "SolidTan"];
+	_colorNames pushback ("SolidTan");
+	_colorTextures pushback (["Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa","Rsc\Pictures\skin_tan.paa"]);		
+	//green
+	lbAdd [790111, "SolidGreen"];
+	_colorNames pushback ("SolidGreen");
+	_colorTextures pushback (["Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa","Rsc\Pictures\skin_green.paa"]);		
+	//grey/winter
+	lbAdd [790111, "SolidGrey"];
+	_colorNames pushback ("SolidGrey");
+	_colorTextures pushback (["Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa","Rsc\Pictures\skin_grey.paa"]);		
+	
+	//ADMIN ONLY SECTION -- maybe ranks later?
+	_adminState = call BIS_fnc_admin;
+	if (_adminState == 2) then {
+		//usa 
+		lbAdd [790111, "USA"];
+		_colorNames pushback ("USA");
+		_colorTextures pushback (["Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa","Rsc\Pictures\skin_usa.paa"]);		
+		//something super badass...
+	};
 
 	//systemchat format ["_colorNames %1",_colorNames];
 	uiNamespace setVariable ["cti_dialog_ui_loadoutmenu_camolist", [_colorNames, _colorTextures]];
@@ -722,14 +875,36 @@ CTI_UI_Loadout_setSkin = {
 	//systemchat format ["this %1",_this];
 	_colorName = _this select 0;
 	_colorTextures = _this select 1;
+	_colorCount = count _colorTextures;
 	if !(isNil "_colorTextures") then {
 		(parseText format["Painting new skin %1 on %2 ...", _colorName, _vehDispName]) call CTI_UI_Loadout_UpdateStatus;
-		{
-			sleep 1;
-			_index = (_colorTextures ) find _x;
-			_unit setObjectTextureGlobal [_index, (_colorTextures ) select _index];
-			playSound "Click";
-		} foreach (_colorTextures );
+		disableserialization; 
+		_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+		_controlbar progressSetPosition 0;
+		if (_colorName == "SolidBlack" || _colorName == "SolidTan" || _colorName == "SolidGreen" || _colorName == "SolidGrey" || _colorName == "USA") then {			
+			{
+				//PROGRESSBAR
+				_pos = progressPosition _controlbar;
+				_fraction = 1 / _colorCount;
+				sleep 1;
+				_unit setObjectTextureGlobal [_foreachindex, (_colorTextures ) select _foreachindex];
+				playSound "Click";
+				_controlbar progressSetPosition (_pos + _fraction);
+				//END PROGRESS
+			} foreach (_colorTextures );
+		} else	{
+			{
+				//PROGRESSBAR
+				_pos = progressPosition _controlbar;
+				_fraction = 1 / _colorCount;
+				sleep 1;
+				_index = (_colorTextures ) find _x;
+				_unit setObjectTextureGlobal [_index, (_colorTextures ) select _index];
+				playSound "Click";
+				_controlbar progressSetPosition (_pos + _fraction);
+				//END PROGRESS				
+			} foreach (_colorTextures );
+		};
 		(parseText format["Successfully installed new skin %1 on %2", _colorName, _vehDispName]) call CTI_UI_Loadout_UpdateStatus;
 	};
 };
@@ -740,14 +915,20 @@ CTI_UI_Loadout_clearAllPylons = {
 	_classname = typeOf _unit;
 	(parseText format["Removing pylons...",_classname]) call CTI_UI_Loadout_UpdateStatus;
 	_activePylonMags = GetPylonMagazines _unit;
+	_pyloncount = count _activePylonMags;
+	disableserialization; 
+	_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+	_controlbar progressSetPosition 0;
 	{
-		//_unit setPylonLoadOut [_foreachIndex,"",true];
-		//_unit SetAmmoOnPylon [_foreachIndex,0];
+		//PROGRESSBAR
+		_pos = progressPosition _controlbar;
+		_fraction = 1 / _pyloncount;
 		sleep 1;
 		[_unit,[_foreachIndex + 1,"",true]] remoteexec ["setPylonLoadOut",0];
 		[_unit,[_foreachIndex + 1,0]] remoteexec ["SetAmmoOnPylon",0];
 		playSound "Click";
-
+		_controlbar progressSetPosition (_pos + _fraction);
+		//END PROGRESS
 	} forEach _activePylonMags;
 
 	(parseText format["Vehicle pylons cleared!",_classname]) call CTI_UI_Loadout_UpdateStatus;
@@ -761,9 +942,27 @@ CTI_UI_Loadout_rearmAllPylons = {
 
 	_unitpylonfull = uiNamespace getVariable "cti_dialog_ui_loadoutmenu_unitpylonfull";
 	_activePylonMags = _unitpylonfull select 1;
+	disableserialization; 
+	_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+	_controlbar progressSetPosition 0;	
+	_totaltime = 0;
 	{
+		_ammoclass = missionNamespace getVariable _x;
+		_ammotime = _ammoclass select 3;
+		_totaltime = _totaltime + _ammotime;
+	} forEach _activePylonMags;	
+	{
+		_ammoclass = missionNamespace getVariable _x;
+		_ammotime = _ammoclass select 3;
+		//PROGRESSBAR
+		for "_i" from 1 to _ammotime do {
+			_pos = progressPosition _controlbar;
+			_fraction = 1 / _totaltime;
+			sleep 1;
+			_controlbar progressSetPosition (_pos + _fraction);
+		}; 
+		//END PROGRESS		
 		_maxAmount = getNumber (configfile >> "CfgMagazines" >> _x >> "count");
-		sleep 2;
 		_unit SetAmmoOnPylon [_foreachIndex+1,_maxAmount];
 		playSound "Click";
 	} forEach _activePylonMags;
@@ -777,14 +976,30 @@ CTI_UI_Loadout_rearmAllTurrets = {
 	(parseText format["Rearming All Turrets...",_classname]) call CTI_UI_Loadout_UpdateStatus;
 	_unitturretfull = uiNamespace getVariable "cti_dialog_ui_loadoutmenu_unitturretlist";
 	_activeTurretMags = _unitturretfull select 1;
+	disableserialization; 
+	_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
+	_controlbar progressSetPosition 0;	
+	_totaltime = 0;
 	{
-		_maxAmount = getNumber (configfile >> "CfgMagazines" >> _x >> "count");
-		sleep 2;
-		//_unit SetAmmoOnPylon [_foreachIndex,_maxAmount];
+		_ammoclass = missionNamespace getVariable _x;
+		_ammotime = _ammoclass select 3;
+		_totaltime = _totaltime + _ammotime;
+	} forEach _activeTurretMags;		
+	{
+		_ammoclass = missionNamespace getVariable _x;
+		_ammotime = _ammoclass select 3;
+		//PROGRESSBAR
+		for "_i" from 1 to _ammotime do {
+			_pos = progressPosition _controlbar;
+			_fraction = 1 / _totaltime;
+			sleep 1;
+			_controlbar progressSetPosition (_pos + _fraction);
+		}; 
+		_maxAmount = getNumber (configfile >> "CfgMagazines" >> _x >> "count");	
 		_unit addMagazineTurret [_x,[-1]];//-1 for drivers turret
 		_unit addMagazineTurret [_x,[0]];
 		playSound "Click";
-	} forEach _activeTurretMags;
+	} forEach _activeTurretMags;	
 	
 	(parseText format["Vehicle turrets rearmed!",_classname]) call CTI_UI_Loadout_UpdateStatus;
 
@@ -795,25 +1010,25 @@ CTI_UI_Loadout_magazineQty = {
 	_magamount = _this select 1;
 
 	_ammoclass2 = missionNamespace getVariable _magclass;
-	_ammoprice = _ammoclass2 select 1;
+	_ammoprice = _ammoclass2 select 2;
 	//systemchat format ["_ammoclass2: %1 | %2 | %3 | %4", _magclass, _ammoprice, _ammoupgrade, _ammotime];
 	if (isNil "_ammoclass2") then {
 		_ammostat_price = getNumber(configFile >> 'CfgAmmo' >> _ammoclass >> 'cost');
 	} else {
 		_ammostat_price = _ammoprice;
 	};	
-
+	
 	_maxAmount = getNumber (configfile >> "CfgMagazines" >> _magclass >> "count");
 	_setAmount = if (count (ctrlText 790010) > 0) then {call compile (ctrlText 790010)} else {_maxAmount};
 	//systemchat format ["ct: %1 %2",_setAmount, _maxAmount];
 	_finalAmount = _setAmount min _maxAmount;
 
-	ctrlSetText [790010, str _finalAmount];
+	ctrlSetText [790010, str _maxAmount];
 
 	//check if they had any existing
 	
 	//update pricing
-	_totalprice = _ammostat_price * _finalAmount;
+	_totalprice = _ammostat_price * _maxAmount;
 	[_totalprice] call CTI_UI_Loadout_UpdatePrice;
 
 };
