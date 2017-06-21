@@ -45,7 +45,7 @@
 */
 
 private ["_side", "_vehicle", "_velocity", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
-params ["_type", "_position", "_direction", "_sideID", ["_locked", false], ["_net", false], ["_handle", false], ["_special", "FORM"],["_created ", objNull]];
+params ["_type", "_position", "_direction", "_sideID", ["_locked", false], ["_net", false], ["_handle", false], ["_special", "FORM"],["_created", objNull]];
 
 if (typeName _position == "OBJECT") then {_position = getPos _position};
 if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
