@@ -74,7 +74,13 @@ _p pushBack 30;
 _t pushBack 2; 
 
 //lmg
-_i pushBack "200Rnd_65x39_Belt","200Rnd_65x39_Belt_Tracer_Red";
+_i pushBack "200Rnd_65x39_Belt"
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 100;
+_t pushBack 1; 
+
+_i pushBack "200Rnd_65x39_Belt_Tracer_Red"
 _o pushBack "Land";
 _u pushBack 0;
 _p pushBack 100;
