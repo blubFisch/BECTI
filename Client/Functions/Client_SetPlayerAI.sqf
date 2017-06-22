@@ -5,25 +5,25 @@ while {! CTI_GameOver} do {
 
 	_rank = (player) call CTI_CO_FNC_GetUnitsRank;
 	switch (true) do {
-		case (_rank == "PRIVATE") : { 
+		case (_rank isEqualTo "PRIVATE") : { 
 			_playerai = 3;
 		};
-		case (_rank == "CORPORAL") : { 
+		case (_rank isEqualTo "CORPORAL") : { 
 			_playerai = 4;
 		};
-		case (_rank == "SERGEANT") : { 
+		case (_rank isEqualTo "SERGEANT") : { 
 			_playerai = 5;
 		};
-		case (_rank == "LIEUTENANT") : { 
+		case (_rank isEqualTo "LIEUTENANT") : { 
 			_playerai = 6;
 		};
-		case (_rank == "CAPTAIN") : { 
+		case (_rank isEqualTo "CAPTAIN") : { 
 			_playerai = 7;
 		};
-		case (_rank == "MAJOR") : { 
+		case (_rank isEqualTo "MAJOR") : { 
 			_playerai = 8;
 		};
-		case (_rank == "COLONEL") : { 
+		case (_rank isEqualTo "COLONEL") : { 
 			_playerai = 9;
 		};
 	};

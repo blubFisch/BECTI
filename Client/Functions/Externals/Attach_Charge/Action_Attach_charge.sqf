@@ -57,7 +57,7 @@ EtV_TimedCharge =
 	while {alive _explosive} do
 	{
 		waitUntil {!isNil {_illogic getVariable "timer"};};
-		if(_illogic getVariable "timer" == 0) exitWith 
+		if(_illogic getVariable "timer" isEqualTo 0) exitWith 
 		{
 			_charges = _unit getVariable ["charges",[]];
 			_unit setVariable ["charges",_charges - [_explosive]];

@@ -59,7 +59,7 @@ _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
 if (_lastdamagediff <= 0.1) exitWith {0};
 
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
@@ -154,7 +154,7 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 	[_damaged, _shooter, _sideID, _ruins, _variable, _fobtype] spawn CTI_SE_FNC_OnFOBDestroyed;
 };
 //gives shooter notification on how much damage per shot
-if (CTI_BASE_DISPLAY_HINT == 1) then {
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then {
 	_health = (1 - _virtual_damages);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place

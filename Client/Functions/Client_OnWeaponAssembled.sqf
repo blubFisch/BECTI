@@ -40,7 +40,7 @@ if !(isNil "_properly_created") exitWith {};  //-- if the static was assembled a
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 _ruins = "";
-{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if (_x select 0 isEqualTo "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 _defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]]; */
 
 _defense call CTI_CO_FNC_UnitCreated;

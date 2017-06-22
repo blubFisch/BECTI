@@ -18,7 +18,7 @@ _con = _con + 2
 _height = _height - 3
 _next = _next + 1
 goto "start"
-?(_next == 32):exit
+?(_next isEqualTo 32):exit
 
 _coef = 0.98 + random 0.04
 _velx = (sin _agl) * _rad * _coef

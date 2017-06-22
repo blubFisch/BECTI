@@ -65,7 +65,7 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 	};
 };
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //--- Adjust damage for ammo types
 //--- This is active file that works with base damage 2/17/2017 -Omon
 //--- This damage values are also used in FOB damage system as well as Statics "Live thanks for living this notes in"
@@ -134,7 +134,7 @@ if (_reduce_damages > 0 ) then {
 //_logic = (_side) call CTI_CO_FNC_GetSideLogic;// line isnt needed? - protossmaster
 
 
-if (CTI_BASE_DISPLAY_HINT == 1) then{
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then{
 	_health = (1 - _damage);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place

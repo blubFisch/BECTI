@@ -5,7 +5,7 @@ _hud=_this;
 disableSerialization;
 _veh=(_hud displayCtrl(HUD_IDC+2));
 
-if (vehicle	player == player  ) then{
+if (vehicle	player isEqualTo player  ) then{
 	_veh ctrlShow	false;
 } else {
 	_veh ctrlShow	true;
@@ -14,13 +14,13 @@ if (vehicle	player == player  ) then{
 	_text=_text+"</t></t><br /><t size='0.7'>";
 	_text=_text+format	["<t color='#00ff00'><img image='A3\ui_f\data\IGUI\Cfg\Actions\heal_ca.paa'/>%1</t>", ceil( (1- getDammage	( vehicle player))*100)];
 	//check for LVOSS
-	if ((vehicle player) isKindOf "Car" && CTI_VEHICLES_LVOSS == 1) then {
+	if ((vehicle player) isKindOf "Car" && CTI_VEHICLES_LVOSS isEqualTo 1) then {
 		_col2=if (((vehicle player) getVariable ["reloading_left",0]) > 0 )then { "#ff0000" } else {"#00ff00"};
 		_col3=if (((vehicle player) getVariable ["reloading_right",0]) > 0 )then { "#ff0000" } else {"#00ff00"};
 		_text=_text+format	[" |  LVOSS : <t color='%3'>%1</t>|<t color='%4'>%2</t>", (vehicle player) getVariable ["ammo_left",0],(vehicle player) getVariable ["ammo_right",0],_col2,_col3];
 	};	
 	//check for ERA
-	if ((vehicle player) isKindOf "Tank" && CTI_VEHICLES_ERA == 1) then {
+	if ((vehicle player) isKindOf "Tank" && CTI_VEHICLES_ERA isEqualTo 1) then {
 		_col2=if (((vehicle player) getVariable ["reloading_left",0]) > 0 )then { "#ff0000" } else {"#00ff00"};
 		_col3=if (((vehicle player) getVariable ["reloading_right",0]) > 0 )then { "#ff0000" } else {"#00ff00"};
 		_text=_text+format	[" |  ERA : <t color='%3'>%1</t>|<t color='%4'>%2</t>", (vehicle player) getVariable ["ammo_left",0],(vehicle player) getVariable ["ammo_right",0],_col2,_col3];
@@ -33,7 +33,7 @@ if (vehicle	player == player  ) then{
 	_g=gunner (vehicle	player);
 	if (!isNull	_g && isPlayer	_g) then {_text=_text + 	format	["%1<img image='Rsc\Pictures\i_gunner.paa'/><br />",name _g];};
 	{
-			if (isplayer _x && !(commander (vehicle	player) == _x || driver	(vehicle	player) ==_x || gunner (vehicle	player) ==_x )) then {
+			if (isplayer _x && !(commander (vehicle	player) isEqualTo _x || driver	(vehicle	player) ==_x || gunner (vehicle	player) ==_x )) then {
 				_text=_text + 	format	["%1<img image='Rsc\Pictures\i_turrets.paa'/><br />",name _x];
 			};
 	} forEach crew (vehicle	player);

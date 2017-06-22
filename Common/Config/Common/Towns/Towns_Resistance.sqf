@@ -87,7 +87,7 @@ with missionNamespace do {
 		[_t_defenses, _t_composition]
 	}];
 
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 0) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 0) then { 
 //--- VANILLA - AAF TOWN OCCUPATION
 	//--- Infantry
 	GUER_SOLDIER = "I_soldier_F";
@@ -140,7 +140,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 0) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 1) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 1) then { 
 //--- VANILLA - FIA TOWN OCCUPATION
 	//--- Infantry
 	GUER_SOLDIER = "I_G_Soldier_F";
@@ -193,7 +193,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 1) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 2) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 2) then { 
 //--- Syndikat TOWN OCCUPATION - Tanoa Forces
 	//--- Infantry
 	GUER_SOLDIER = "I_C_Soldier_Bandit_7_F";
@@ -250,7 +250,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 2) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 3) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 3) then { 
 //--- CUP - ION PMC TOWN OCCUPATION
 	//--- Infantry
 	GUER_SOLDIER = "CUP_I_PMC_Bodyguard_M4";
@@ -303,7 +303,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 3) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 4) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 4) then { 
 //--- CUP - NAPA Chernarus TOWN OCCUPATION
 	//--- Infantry
 	GUER_SOLDIER = "CUP_I_GUE_Soldier_AKS74";
@@ -356,7 +356,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 4) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 5) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 5) then { 
 //--- CUP - Royal Army Corp Of Sahrani TOWN OCCUPATION
 	//--- Infantry
 	GUER_SOLDIER = "CUP_I_RACS_Soldier";
@@ -409,7 +409,7 @@ if (CTI_TOWNS_OCCUPATION_RESISTANCE == 5) then {
 	GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 	GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 6) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 6) then { 
 //--- CUP - TAKISTANI MILITARY TOWN OCCUPATION
     //--- Infantry
 	GUER_SOLDIER = "CUP_I_TK_GUE_Soldier";
@@ -462,7 +462,7 @@ GUER_SOLDIER_NAVAL_SQUADLEADER = "I_diver_TL_F";
     GUER_NAVAL_MEDIUM_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
     GUER_NAVAL_LARGE_ASSAULT_BOAT = ["I_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_RESISTANCE == 7) then { 
+if (CTI_TOWNS_OCCUPATION_RESISTANCE isEqualTo 7) then { 
 //--- RHS GREF RESISTANCE
 	//--- Infantry
 	/*GUER_SOLDIER = "rhsgref_cdf_reg_rifleman";

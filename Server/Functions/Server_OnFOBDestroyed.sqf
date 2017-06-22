@@ -40,9 +40,9 @@ _fobtype = _this select 5;
 _position = getPos _killed;
 _award = 0;
 _fob = false;
-if (_fobtype == "small") then {_fob = true;_award = 20000;};
+if (_fobtype isEqualTo "small") then {_fob = true;_award = 20000;};
 _large_fob = false;
-if (_fobtype == "large") then {_large_fob = true;_award = 40000;};
+if (_fobtype isEqualTo "large") then {_large_fob = true;_award = 40000;};
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;

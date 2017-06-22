@@ -16,7 +16,7 @@ _unit = _this;
 
 if (local _unit) then {
 	if (_unit isKindOf "Man") then {
-		if (CTI_VEHICLES_LVOSS == 1 || CTI_VEHICLES_ERA == 1) then {
+		if (CTI_VEHICLES_LVOSS isEqualTo 1 || CTI_VEHICLES_ERA isEqualTo 1) then {
 			_unit addEventHandler ["FiredMan",{_this spawn FNC_BAPS_FIRED}];
 		};
 		_unit addEventHandler ["FiredMan",{_this spawn FNC_CRAMControl_AttackerFiredEH}];

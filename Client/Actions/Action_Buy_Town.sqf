@@ -7,7 +7,7 @@ _price =(_this select 3) select 1;
 _veh=(_this select 3) select 2;
 _funds = (group _caller) call CTI_CO_FNC_GetFunds;
 
-if (typeName _model == "ARRAY") then {
+if (typeName _model isEqualTo "ARRAY") then {
 	_model=_model select floor(random count _model);
 };
 

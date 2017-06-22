@@ -86,7 +86,7 @@ with missionNamespace do {
 		[_t_defenses, _t_composition]
 	}];
 
-if (CTI_TOWNS_OCCUPATION_WEST == 0) then { 
+if (CTI_TOWNS_OCCUPATION_WEST isEqualTo 0) then { 
 //--- VANILLA TOWN OCCUPATION
 //--- Infantry
 	WEST_SOLDIER = "B_Soldier_F";
@@ -140,7 +140,7 @@ if (CTI_TOWNS_OCCUPATION_WEST == 0) then {
 	WEST_NAVAL_MEDIUM_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 	WEST_NAVAL_LARGE_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_WEST == 1) then { 
+if (CTI_TOWNS_OCCUPATION_WEST isEqualTo 1) then { 
 //--- PACIFIC TOWN OCCUPATION - tanoa forces
 //--- Infantry
 	WEST_SOLDIER = "B_T_Soldier_F";
@@ -194,7 +194,7 @@ if (CTI_TOWNS_OCCUPATION_WEST == 1) then {
 	WEST_NAVAL_MEDIUM_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 	WEST_NAVAL_LARGE_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 };
-if (CTI_TOWNS_OCCUPATION_WEST == 2) then { 
+if (CTI_TOWNS_OCCUPATION_WEST isEqualTo 2) then { 
 //--- CUP - US Army TOWN OCCUPATION
 	//--- Infantry
 	WEST_SOLDIER = "CUP_B_US_Soldier";
@@ -248,7 +248,7 @@ if (CTI_TOWNS_OCCUPATION_WEST == 2) then {
 	WEST_NAVAL_MEDIUM_ASSAULT_BOAT = ["B_Boat_Armed_01_minigun_F"];
 	WEST_NAVAL_LARGE_ASSAULT_BOAT = ["sfp_rbb_norrkoping"];
 };
-if (CTI_TOWNS_OCCUPATION_WEST == 3) then { 
+if (CTI_TOWNS_OCCUPATION_WEST isEqualTo 3) then { 
 //--- RHS US ARMY ARID
 //--- Infantry
 	WEST_SOLDIER = "rhsusf_army_ocp_rifleman";

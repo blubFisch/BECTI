@@ -9,21 +9,21 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Heavy
 	true, //--- Naval
 	true, //--- Air
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_ORDINANCE") == 1, //--- Air Ordinance
-	(missionNamespace getVariable "CTI_VEHICLES_LAND_ORDINANCE") == 1, //--- Land Ordinance
+	(missionNamespace getVariable "CTI_VEHICLES_AIR_ORDINANCE") isEqualTo 1, //--- Air Ordinance
+	(missionNamespace getVariable "CTI_VEHICLES_LAND_ORDINANCE") isEqualTo 1, //--- Land Ordinance
 	true, //--- Halo
 	true, //--- Air Radar
 	true, //--- Art Radar
 	true, //--- Respawn Range
-	(missionNamespace getVariable "CTI_VEHICLES_LVOSS") == 1, //--- LVOSS System
-	(missionNamespace getVariable "CTI_VEHICLES_ERA") == 1, //--- ERA System
+	(missionNamespace getVariable "CTI_VEHICLES_LVOSS") isEqualTo 1, //--- LVOSS System
+	(missionNamespace getVariable "CTI_VEHICLES_ERA") isEqualTo 1, //--- ERA System
 	true, //--- Satellite
 	true, //--- Nuke
 	true, //--- Supply Rate
-	(missionNamespace getVariable "CTI_BASE_HEALTH_UPGRADE") == 1, //--- Base Health
+	(missionNamespace getVariable "CTI_BASE_HEALTH_UPGRADE") isEqualTo 1, //--- Base Health
 	true //--- Base Defense Upgrade		
 ]];
-if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
+if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 	//------------------------------ Guerilla / Zombie Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
 		[1000,1000,1000,1000], //--- Gear
@@ -73,7 +73,7 @@ if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 	]];
 };
 
-if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
+if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 	//------------------------------ Guerilla / Zombie Mode	------------------------------	
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
 		3, //--- Gear
@@ -123,7 +123,7 @@ if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
 	]];
 };
 
-if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
+if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 //------------------------------ Guerilla / Zombie Mode	------------------------------	
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[],[],[],[]], //--- Gear
@@ -199,7 +199,7 @@ if (CTI_DEV_MODE > 0) then {
 	]];
 }else {
 	//------------------------------ Guerilla / Zombie Mode	------------------------------
-	if (CTI_GUERILLA_MODE == 1 || CTI_ZOMBIE_MODE == 1) then {
+	if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
 			[30,60,120,180], //--- Gear
 			[60,120,180,240], //--- Barracks

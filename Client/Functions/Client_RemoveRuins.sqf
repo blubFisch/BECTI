@@ -26,12 +26,12 @@ params ["_position", "_variable"];
 private ["_classnames", "_var"];
 
 _classnames = [];
-if (typeName _variable == "ARRAY") then {
+if (typeName _variable isEqualTo "ARRAY") then {
 _var = missionNamespace getVariable _variable;
 _classnames = _var select CTI_STRUCTURE_CLASSES;
 _classnames = if (count _classnames > 2) then {[_classnames select 1] + (_classnames select 2)} else {[_classnames select 1]};
 };
-if (typeName _variable == "STRING") then {
+if (typeName _variable isEqualTo "STRING") then {
 	_classnames = [_variable];
 };
 

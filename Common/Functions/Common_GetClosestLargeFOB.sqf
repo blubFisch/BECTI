@@ -31,7 +31,7 @@ private ["_closest"];
 
 _closest = objNull;
 
-if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
+if (typeName _sideID isEqualTo "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 {
 	if !(isNil {_x getVariable "cti_large_fob"}) then {
 		_closest = _x;

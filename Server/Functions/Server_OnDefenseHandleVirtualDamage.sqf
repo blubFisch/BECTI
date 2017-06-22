@@ -58,7 +58,7 @@ _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
 if (_lastdamagediff <= 0.1) exitWith {0};
 
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
@@ -157,10 +157,10 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 		};
 		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 		_ruins = "";
-		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+		{if (_x select 0 isEqualTo "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
-if (CTI_BASE_DISPLAY_HINT == 1) then {
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then {
 	_health = (1 - _virtual_damages);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
