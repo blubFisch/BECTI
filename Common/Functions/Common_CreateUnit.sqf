@@ -13,7 +13,7 @@
   # PARAMETERS #
     0	[String]: The type of unit to create
     1	[Group]: The team that the unit should belong to
-    2	[Array/Object]: The 2D/3D position where the unit should be created at
+    2	[Array/Object]: The position where the unit should be created at
     3	[Side/Integer]: The Side or Side ID of the unit
     4	{Optionnal} [Boolean]: Determine if the unit should be "public" or not
     5	{Optionnal} [String]: Set a special spawn mode for the unit
@@ -36,7 +36,7 @@
 	  -> Create a "B_Soldier_F" at the player's position, initialize it over the network and ignore the formation on creation
 */
 
-params ["_classname", "_group", "_position", "_sideID", ["_net", false], ["_special", "FORM"]];
+params ["_classname", "_group", "_position", "_sideID", "_side", ["_net", false], ["_special", "FORM"]];
 private ["_unit"];
 
 if (CTI_Log_Level >= CTI_Log_Debug) then {
@@ -57,6 +57,7 @@ _unit addEventHandler ["killed", format["[_this select 0, _this select 1, %1] sp
 _unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 
 //Check Barrack Upgrade and set default skills
+_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_logic = (_side) call CTI_CO_FNC_GetSideLogic;
 	_unit_skill = (_logic getVariable "cti_player_ai_skill");

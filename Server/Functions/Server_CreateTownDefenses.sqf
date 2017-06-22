@@ -117,7 +117,7 @@ _town_group = if (count _pool > 0) then {createGroup _side} else {grpNull};
 		
 		_defenses pushBack _defense;
 		
-		if !( isNil "ADMIN_ZEUS") then { ADMIN_ZEUS addCuratorEditableObjects [[_defense],true] };
+		if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_defense], true]};
 	} else { //--- Composition (script-block)
 		if (typeName _composition isEqualTo "CODE") then {
 			_custom_compo = [getMarkerPos _marker, markerDir _marker] call _composition;

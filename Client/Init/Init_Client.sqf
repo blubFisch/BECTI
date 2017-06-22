@@ -96,6 +96,8 @@ if (isMultiplayer) then {
 	//--- Can I join?
 	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.
 	
+	player setDammage 0;
+	
 	//--- Wait for the server to be initialized before requesting a Join ticket
 	waitUntil {sleep .5; !(isNil 'CTI_InitServer')};
 	

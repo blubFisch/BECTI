@@ -57,8 +57,6 @@ _vehicle setVariable ["BIS_enableRandomization", false];//stop randomization (fo
 _velocity = velocity _vehicle;
 _vehicle setDir _direction;
 _vehicle setVectorUp surfaceNormal position _vehicle;
-//--- Adding 2 second god mode to vehicles on spawn to prevent damage
-_vehicle  spawn {_this allowDamage false; sleep 2; _this allowDamage true};
 
 if (isNull _created) then {
 	_vehicle setDir _direction;

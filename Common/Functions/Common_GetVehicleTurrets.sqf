@@ -24,6 +24,8 @@
 params ["_classname"];
 private ["_config", "_config_sub", "_turret_main", "_turret_sub", "_turrets"];
 
+if (typeName _classname isEqualTo "OBJECT") then {_classname = typeOf _classname};
+
 _turrets = [];
 _config = configFile >> "CfgVehicles" >> _classname >> "turrets";
 for '_i' from 0 to (count _config)-1 do {

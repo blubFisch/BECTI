@@ -13,7 +13,7 @@
     2	[Group]: the unit's group
 	
   # RETURNED VALUE #
-	[Array]: The living units
+	[Array]: The available camps
 	
   # SYNTAX #
 	[CENTER, SIDE, GROUP] call CTI_CO_FNC_GetRespawnCamps
@@ -22,8 +22,7 @@
     _camps = [deathpos, side player, group player] call CTI_CO_FNC_GetRespawnCamps
 */
 
-
-private ["_camps", "_side", "_town","_up","_respawnrange","_respawnrangeclas"];
+params ["_location", "_sideID", "_group"];
 private ["_camps", "_side", "_town"];
 
 if (typeName _sideID isEqualTo "SIDE") then { _sideID = (_sideID) call CTI_CO_FNC_GetSideID };
