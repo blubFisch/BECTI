@@ -26,16 +26,8 @@
   # EXAMPLE #
     _structure addEventHandler ["explosion", format ["[_this select 0, _this select 2, %1, '%2', %3] spawn CTI_SE_FNC_OnExplosion", (_side) call CTI_CO_FNC_GetSideID, _variable, _position]];
 */
-
+params ["_object", "_damage", "_damage_val", "_sideID", "_variable", "_position"];
 private ["_damage", "_logic", "_position", "_side", "_sideID", "_structure", "_variable"];
-
-_object = _this select 0;
-_damage = _this select 1;
-_damage_val = _this select 2;
-_sideID = _this select 3;
-_variable = _this select 4;
-_position = _this select 5;
-//systemchat format ["Explosion %1 | %2",_damage, _damage_val];
 
 if (isNil '_damage_val') then {_damage_val = 0.05};
 

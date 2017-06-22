@@ -28,9 +28,9 @@
 	  -> Get a random position around 25-150 meters from the player
 */
 
-
 params ["_position", "_min_radius", "_max_radius", ["_tries", 500]];
 private["_radius", "_direction"];
+
 _direction = random 360;
 
 if (typeName _position isEqualTo "OBJECT") then {_position = ASLToAGL getPosASL _position};

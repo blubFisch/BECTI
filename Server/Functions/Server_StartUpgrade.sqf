@@ -31,10 +31,6 @@
 params ["_side", "_upgrade", "_level"];
 private ["_logic", "_upgrade_time", "_upgrades"];
 
-_side = _this select 0;
-_upgrade = _this select 1;
-_level = _this select 2;
-
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 

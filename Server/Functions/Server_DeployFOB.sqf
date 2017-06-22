@@ -23,15 +23,9 @@
     [_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir] Spawn CTI_SE_FNC_DeployFOB
 */
 
+params["_vehicle", "_side", "_position", "_direction", "_fobtype", "_fobclass", "_fobclassruins"];
 private ["_direction", "_structure", "_is_deployed", "_logic", "_position", "_side", "_sideID", "_var", "_vehicle","_fobtype","_fobclass","_foblargeclass","_fobclassruins","_foblargeclassruins"];
 
-_vehicle = _this select 0;
-_side = _this select 1;
-_position = _this select 2;
-_direction = _this select 3;
-_fobtype = _this select 4;
-_fobclass = _this select 5;
-_fobclassruins = _this select 6;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 _structure = "";

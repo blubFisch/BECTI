@@ -29,14 +29,9 @@
     _defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _side call CTI_CO_FNC_GetSideID, _ruins, _varname]];
 */
 
-private ["_killed", "_killer", "_logic", "_position", "_side", "_sideID", "_var", "_varname","_fobtype"];
+params["_killed", "_killer", "_sideID", "_ruins", "_varname", "_fobtype"];
+private ["_logic", "_position", "_side", "_sideID", "_var", "_varname","_fobtype"];
 
-_killed = _this select 0;
-_killer = _this select 1;
-_sideID = _this select 2;
-_ruins = _this select 3;
-_varname = _this select 4;
-_fobtype = _this select 5;
 _position = getPos _killed;
 _award = 0;
 _fob = false;

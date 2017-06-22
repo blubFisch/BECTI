@@ -29,9 +29,6 @@
 params ["_killed", "_killer", "_sideID"];
 private ["_side", "_was_deployed"];
 
-_killed = _this select 0;
-_killer = _this select 1;
-_sideID = _this select 2;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _was_deployed = _side call CTI_CO_FNC_IsHQDeployed;

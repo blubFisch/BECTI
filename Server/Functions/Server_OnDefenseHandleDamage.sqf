@@ -31,17 +31,9 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-private ["_damage", "_damaged", "_ammo", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
+params ["_damaged", "_damage", "_shooter", "_sideID", "_reduce_damages", "_variable", "_position","_multiply_damages"];
+private ["_logic", "_side", "_upgrades", "_upgrade_basehealth", "_baseratio","_overall_damage","_health"];
 
-_damaged = _this select 0;
-_damage = _this select 1;
-_shooter = _this select 2;
-_ammo = _this select 3;
-_sideID = _this select 4;
-_reduce_damages = _this select 5;
-_variable = _this select 6;
-_position = _this select 7;
-_multiply_damages = _this select 8;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 //Base Health Upgrade

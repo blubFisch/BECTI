@@ -37,7 +37,7 @@ _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _var = missionNamespace getVariable _varname;
 _fob = false;
-{if (_x select 0 isEqualTo "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if ((_x select 0) isEqualTo "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 _large_fob = false;
 {if (_x select 0 isEqualTo "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 

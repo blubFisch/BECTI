@@ -28,7 +28,6 @@
 params ["_factory"];
 private ["_list", "_req_buyer", "_req_classname", "_req_seed", "_req_side", "_req_time", "_req_time_out", "_req_toai", "_request", "_thread_id"];
 
-_factory = _this;
 _factory setVariable ["cti_inuse", true, true];
 
 _thread_id = round(time + random 200 - random 50 + diag_frameno);

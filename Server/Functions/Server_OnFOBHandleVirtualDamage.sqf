@@ -36,22 +36,8 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID","_health", "_var", "_variable", "_virtual_damages","_ruins","_fobtype","_health","_lastdamagetime", "_lastdamagediff"];
-
-_damaged = _this select 0;
-_damage = _this select 1;
-_shooter = _this select 2;
-_ammo = _this select 3;
-_variable = _this select 4;
-_sideID = _this select 5;
-_position = _this select 6;
-//_direction = _this select 7; // this line isn't needed? - ProtossMaaster
-_reduce_damages = _this select 8;
-_multiply_damages = _this select 9;
-_ruins = _this select 10 select 0;
-_fobtype = _this select 11 select 0;
-_side = (_sideID) call CTI_CO_FNC_GetSideFromID;
-//_logic = (_side) call CTI_CO_FNC_GetSideLogic; // this line isn't needed? - ProtossMaaster
+params ["_damaged", "_damage", "_shooter", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
+private ["_logic", "_side", "_var", "_variable", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff","_multiply_damages", "_ammo"];
 
 //check for last damage time
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			

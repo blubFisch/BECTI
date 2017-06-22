@@ -30,10 +30,6 @@
 params ["_town", "_camp", "_newSide"];
 private ["_currentSideID", "_newSideID", "_last_capture", "_newSide", "_award_teams", "_value", "_score"];
 
-_town = _this select 0;
-_camp = _this select 1;
-_newSide = _this select 2;
-
 _newSideID = (_newSide) call CTI_CO_FNC_GetSideID;
 _currentSideID = _camp getVariable "cti_camp_sideID";
 
