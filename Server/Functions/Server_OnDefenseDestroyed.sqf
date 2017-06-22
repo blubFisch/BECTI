@@ -82,5 +82,11 @@ if (_ruins != "") then {
 	//--- Current clients need to clean the remains.
 	[_position, _ruins] remoteExec ["CTI_PVF_CLT_RemoveRuins", CTI_PV_CLIENTS];
 };
+//--- Generic ruins cleanup if objects leftover
+{
+	_smoke = createVehicle ["CMflare_Chaff_Ammo", _position, [], 0, "CAN_COLLIDE"];
+	deleteVehicle _x;
+	[_position] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
+} forEach (nearestObjects [_position, ["Ruins"], 15]);
 
 deleteVehicle _killed;

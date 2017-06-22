@@ -29,6 +29,7 @@ CTI_SE_FNC_OnBuildingHandleVirtualDamage = compileFinal preprocessFileLineNumber
 CTI_SE_FNC_OnBuildingHit = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnBuildingHit.sqf";
 CTI_SE_FNC_OnDefenseHit = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseHit.sqf";
 CTI_SE_FNC_OnExplosion = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnExplosion.sqf";
+CTI_SE_FNC_BuildingChanged = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildingChanged.sqf";
 CTI_SE_FNC_OnCampCaptured = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnCampCaptured.sqf";
 CTI_SE_FNC_OnClientPurchase = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnClientPurchase.sqf";
 CTI_SE_FNC_OnClientPurchaseCancelled = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnClientPurchaseCancelled.sqf";

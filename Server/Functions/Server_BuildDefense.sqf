@@ -264,6 +264,8 @@ if (_iscomposition) then {
 	if (_explosionalt) then {
 		_defense addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
 	};
+	//BuildingChanged Handler
+	//_defense addEventHandler ["BuildingChanged", format ["[_this select 0, %1, '%2'] spawn CTI_SE_FNC_BuildingChanged", (_side) call CTI_CO_FNC_GetSideID, _position]];
 
 	//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 	_ruins = "";
