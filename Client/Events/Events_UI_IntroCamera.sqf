@@ -53,10 +53,10 @@ if (_cam_attached) then {
 	_loop = 0;
 	while{(_loop < _camera_duration)} do { 
 		sleep 1;
-		if (player getVariable "cti_intro" == 1) exitwith {};
+		if (player getVariable "cti_intro" isEqualTo 1) exitwith {};
 		_loop = _loop + 1; 
 	};
-	_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+	_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
 	//sleep _camera_duration;
 
 	_camera cameraeffect ["terminate", "back"];
@@ -81,7 +81,7 @@ _camera camCommitPrepared _camera_duration;
 _nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 camUseNVG _nvgstate;
 
-_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
 //sleep _camera_duration;
 
 _camera cameraeffect ["terminate", "back"];

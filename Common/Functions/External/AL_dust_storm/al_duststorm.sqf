@@ -82,22 +82,22 @@ fulg_p_dust_range = 150;
 fulg_p_dust_radius = 30;
 fulg_p_dust_opacity_multiplier = 0.5;
 
-if (CTI_WEATHER_DUST == 1) then { 
+if (CTI_WEATHER_DUST isEqualTo 1) then { 
 	fulg_p_dust_range = 150;
 	fulg_p_dust_radius = 30;
 	fulg_p_dust_opacity_multiplier = 0.5;
 };
-if (CTI_WEATHER_DUST == 2) then { 
+if (CTI_WEATHER_DUST isEqualTo 2) then { 
 	fulg_p_dust_range = 100;
 	fulg_p_dust_radius = 15;
 	fulg_p_dust_opacity_multiplier = 1;
 };
-if (CTI_WEATHER_DUST == 3) then { 
+if (CTI_WEATHER_DUST isEqualTo 3) then { 
 	fulg_p_dust_range = 100;
 	fulg_p_dust_radius = 10;
 	fulg_p_dust_opacity_multiplier = 1;
 };
-if (CTI_WEATHER_DUST == 4) then { 
+if (CTI_WEATHER_DUST isEqualTo 4) then { 
 	fulg_p_dust_range = 100;
 	fulg_p_dust_radius = 10;
 	fulg_p_dust_opacity_multiplier = 1;
@@ -110,13 +110,13 @@ publicVariable "fulg_p_dust_opacity_multiplier";
 	while {al_duststorm_on} do {
 		//APPLY VARIANCE
 		_variance_time_setting = 3600;
-		if (CTI_WEATHER_VARIANCE_TIME == -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
-		if (CTI_WEATHER_VARIANCE_TIME == 0) then {_variance_time_setting = 1};
+		if (CTI_WEATHER_VARIANCE_TIME isEqualTo -1) then {_variance_time_setting = random 3600};//random time within 1 hour range
+		if (CTI_WEATHER_VARIANCE_TIME isEqualTo 0) then {_variance_time_setting = 1};
 		if (CTI_WEATHER_VARIANCE_TIME > 0) then {_variance_time_setting = CTI_WEATHER_VARIANCE_TIME};
 		//add variance to dust/fog
 		_dust_variance_coef_setting = 1;
-		if (CTI_WEATHER_DUST_COEF == -1) then {_dust_variance_coef_setting = random (0.99)};
-		if (CTI_WEATHER_DUST_COEF == 0) then {_dust_variance_coef_setting = 1};
+		if (CTI_WEATHER_DUST_COEF isEqualTo -1) then {_dust_variance_coef_setting = random (0.99)};
+		if (CTI_WEATHER_DUST_COEF isEqualTo 0) then {_dust_variance_coef_setting = 1};
 		if (CTI_WEATHER_DUST_COEF > 0) then {_dust_variance_coef_setting = CTI_WEATHER_DUST_COEF};	
 		_fulg_p_dust_range_set = fulg_p_dust_range;
 		_fulg_p_dust_radius_set = fulg_p_dust_radius;
@@ -161,8 +161,8 @@ if (_dust_wall) then {
 	_xadd = 0;
 	_yadd = 0;
 
-	if ((_ypoz == -800) or ((_ypoz == 800))) then {_yadd =0; _xadd = 160};
-	if ((_xpoz == -800) or ((_xpoz == 800))) then {_yadd =160; _xadd = 0};
+	if ((_ypoz isEqualTo -800) or ((_ypoz isEqualTo 800))) then {_yadd =0; _xadd = 160};
+	if ((_xpoz isEqualTo -800) or ((_xpoz isEqualTo 800))) then {_yadd =160; _xadd = 0};
 
 
 	_stormsource = "Land_HelipadEmpty_F" createVehicle _pozobcj;

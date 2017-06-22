@@ -5,8 +5,8 @@ switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
     case 0: { //--- 3rd Person for Drivers and Pilots and for players on foot with guns on their backs
         while {true} do 
         {
-            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
-            if (((vehicle player) == player) && (currentWeapon player != '')) then
+            waitUntil {cameraView isEqualTo "EXTERNAL" || cameraView isEqualTo "GROUP"};
+            if (((vehicle player) isEqualTo player) && (currentWeapon player != '')) then
             {
                 player switchCamera "INTERNAL";
             }
@@ -24,8 +24,8 @@ switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
     case 1: { //--- 3rd Person for any vehicles only
         while {true} do 
         {
-            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
-            if (((vehicle player) == player) && (currentWeapon player != '')) then
+            waitUntil {cameraView isEqualTo "EXTERNAL" || cameraView isEqualTo "GROUP"};
+            if (((vehicle player) isEqualTo player) && (currentWeapon player != '')) then
             {
                 player switchCamera "INTERNAL";
             };
@@ -37,7 +37,7 @@ switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
     {    
         while {true} do 
         {
-            waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
+            waitUntil {cameraView isEqualTo "EXTERNAL" || cameraView isEqualTo "GROUP"};
             if ((vehicle player) != player) then 
             {
                 player switchCamera "INTERNAL";
@@ -51,7 +51,7 @@ switch (missionNamespace getVariable "CTI_GAMEPLAY_3P") do
         while {true} do 
         {
             waitUntil {cameraView != "GUNNER" || cameraView != "INTERNAL"};
-            if (cameraOn == vehicle (player)) then 
+            if (cameraOn isEqualTo vehicle (player)) then 
             {
                 player switchCamera "INTERNAL";
             };

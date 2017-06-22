@@ -31,17 +31,9 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-private ["_damage", "_damaged", "_ammo", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
+params ["_damaged", "_damage", "_shooter", "_ammo", "_sideID", "_reduce_damages", "_variable", "_position","_multiply_damages"];
+private ["_logic", "_side", "_upgrades", "_upgrade_basehealth", "_baseratio","_overall_damage","_health"];
 
-_damaged = _this select 0;
-_damage = _this select 1;
-_shooter = _this select 2;
-_ammo = _this select 3;
-_sideID = _this select 4;
-_reduce_damages = _this select 5;
-_variable = _this select 6;
-_position = _this select 7;
-_multiply_damages = _this select 8;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 //Base Health Upgrade
@@ -65,7 +57,7 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 	};
 };
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //--- Adjust damage for ammo types
 //--- This is active file that works with base damage 2/17/2017 -Omon
 //--- This damage values are also used in FOB damage system as well as Statics "Live thanks for living this notes in"
@@ -134,7 +126,7 @@ if (_reduce_damages > 0 ) then {
 //_logic = (_side) call CTI_CO_FNC_GetSideLogic;// line isnt needed? - protossmaster
 
 
-if (CTI_BASE_DISPLAY_HINT == 1) then{
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then{
 	_health = (1 - _damage);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place

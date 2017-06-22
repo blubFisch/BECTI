@@ -71,7 +71,7 @@ execVM "Server\Init\Init_Prison.sqf";
 _startup_locations = [];
 for '_i' from 0 to 30 do {
 	_location = getMarkerPos format ["cti-spawn%1", _i];
-	if (_location select 0 == 0 && _location select 1 == 0) exitWith {};
+	if (_location select 0 isEqualTo 0 && _location select 1 isEqualTo 0) exitWith {};
 	_startup_locations pushBack _location;
 };
 
@@ -107,8 +107,7 @@ if (_attempts >= 500) then {
 	_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 	_hq setVariable ["cti_mhq_fuel", true]; //--- HQ fuel variable
 	_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
-	_hq addItemCargoGlobal ["ToolKit",1];
-	if (CTI_BASE_NOOBPROTECTION == 1) then {
+	if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 		_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 	};
 	
@@ -182,7 +181,7 @@ if (_attempts >= 500) then {
 						_position = [getPos _hq, 8, 30, 5, "infantry", ["Man","Car","Motorcycle","Tank","Ship","Air","StaticWeapon"], 5] call CTI_CO_FNC_GetSafePosition;
 						(leader _group) setPos _position;
 						leader _group addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", _sideID]]; //--- Called on destruction
-						if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") == 0) then {leader _group enableFatigue false}; //--- Disable the unit's fatigue
+						if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") isEqualTo 0) then {leader _group enableFatigue false}; //--- Disable the unit's fatigue
 						
 						[_group, _side, _logic] spawn {
 							_group = _this select 0;
@@ -202,6 +201,9 @@ if (_attempts >= 500) then {
 						(leader _group) disableAI "FSM";
 					};
 				};
+				
+				//--- ZEUS Curator Editable
+				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[leader _group], true]};
 			};
 		};
 	} forEach (synchronizedObjects _logic);
@@ -239,7 +241,7 @@ if (_attempts >= 500) then {
 };
 
 // Date init
-if (CTI_ZOMBIE_MODE == 0) then {
+if (CTI_ZOMBIE_MODE isEqualTo 0) then {
 	_it=0;
 	_possible_it_off=[0,0,0,0,0,0,6,6,6,12,12,12,18];
 	if ((missionNamespace getVariable "CTI_WEATHER_INITIAL") < 18) then {
@@ -258,7 +260,7 @@ if (CTI_ZOMBIE_MODE == 0) then {
 execVM "Server\Functions\Server_Weather_Hook.sqf";	
 
 // Fast time compression
-if (CTI_ZOMBIE_MODE == 0) then {
+if (CTI_ZOMBIE_MODE isEqualTo 0) then {
 	0 spawn {
 		_day_ratio = 14/CTI_WEATHER_FAST;
 		_night_ratio = 10/CTI_WEATHER_FAST_NIGHT;

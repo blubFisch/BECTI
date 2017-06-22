@@ -126,7 +126,7 @@ call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_West.sq
 call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_East.sqf";
 
 //--- VANILLA MODE
-if (CTI_FACTION_MODE == 0) then { 
+if (CTI_FACTION_MODE isEqualTo 0) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_East.sqf";
@@ -219,7 +219,7 @@ if (CTI_FACTION_MODE == 0) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Squads\Squad_East.sqf";	
 };
 //CUP MODE
-if (CTI_FACTION_MODE == 1) then { 
+if (CTI_FACTION_MODE isEqualTo 1) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_East.sqf";
@@ -312,7 +312,7 @@ if (CTI_FACTION_MODE == 1) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Squads\Squad_East.sqf";
 };
 //RHS MODE
-if (CTI_FACTION_MODE == 2) then { 
+if (CTI_FACTION_MODE isEqualTo 2) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_East.sqf";
@@ -405,7 +405,7 @@ if (CTI_FACTION_MODE == 2) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Squads\Squad_East.sqf";
 };
 //OFPS MODE
-if (CTI_FACTION_MODE == 3) then { 
+if (CTI_FACTION_MODE isEqualTo 3) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_East.sqf";

@@ -400,7 +400,7 @@ CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a 
 //--- Towns: Economy
 
 //--- Economy delay Based on Island, Enabled when Auto mode selcted in Parameters
-if (CTI_ECONOMY_INCOME_CYCLE == 0) then {
+if (CTI_ECONOMY_INCOME_CYCLE isEqualTo 0) then {
 	switch (toLower(worldName)) do {
 		case "stratis": {CTI_ECONOMY_INCOME_CYCLE = 50};
 		case "takistan": {CTI_ECONOMY_INCOME_CYCLE = 55};

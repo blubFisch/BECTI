@@ -100,7 +100,7 @@ class FSM
           priority = 2.000000;
           to="Assignment";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && alive _worker && _worker_assignment == """""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && alive _worker && _worker_assignment isEqualTo """""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -156,7 +156,7 @@ class FSM
        "		_worker_assignment_target = _tasks_repair select floor(random count _tasks_repair);" \n
        "	} else { //--- 3: Repair (Entities)" \n
        "		_vehicles_service = [];" \n
-       "		{ if (getDammage _x > .01 && speed _x < 5 && position _x select 2 < 3 && side _x == _side) then { _vehicles_service pushBack _x } } forEach (_worker nearEntities [[""Car"", ""Motorcycle"", ""Tank"", ""Air"", ""StaticWeapon""], (CTI_BASE_WORKERS_RANGE * .8)]);" \n
+       "		{ if (getDammage _x > .01 && speed _x < 5 && position _x select 2 < 3 && side _x isEqualTo _side) then { _vehicles_service pushBack _x } } forEach (_worker nearEntities [[""Car"", ""Motorcycle"", ""Tank"", ""Air"", ""StaticWeapon""], (CTI_BASE_WORKERS_RANGE * .8)]);" \n
        "		" \n
        "		if (count _vehicles_service > 0) then {" \n
        "			_worker_assignment_target = [_worker, _vehicles_service] call CTI_CO_FNC_GetClosestEntity;" \n
@@ -205,7 +205,7 @@ class FSM
        "" \n
        "if (_worker_idled > 30) then {" \n
        "	_worker_idled = 0;" \n
-       "	[_worker, _worker_lastpos, 50] Call CTI_CO_FNC_PlaceSafe;" \n
+       "	[_worker, _worker_lastpos, 50] call CTI_CO_FNC_PlaceSafe;" \n
        "};" \n
        "" \n
        "if (behaviour _worker != ""CARELESS"") then {_worker setBehaviour ""CARELESS""};" \n
@@ -219,7 +219,7 @@ class FSM
           priority = 3.000000;
           to="Construct";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_worker_assignment == ""Construction"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_worker_assignment isEqualTo ""Construction"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -229,7 +229,7 @@ class FSM
           priority = 2.000000;
           to="Wander";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_worker_assignment == ""Wander"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_worker_assignment isEqualTo ""Wander"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -239,7 +239,7 @@ class FSM
           priority = 1.000000;
           to="Repair";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_worker_assignment == ""Repair"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_worker_assignment isEqualTo ""Repair"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -249,7 +249,7 @@ class FSM
           priority = 0.000000;
           to="Repair_Entities";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_worker_assignment == ""RepairEntity"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_worker_assignment isEqualTo ""RepairEntity"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -299,7 +299,7 @@ class FSM
        "	_worker_lastwandermove = time;" \n
        "	_move_to = if (_worker distance _worker_center > CTI_BASE_WORKERS_WANDER_RANGE_MAX) then {_worker_center} else {position _worker};" \n
        "" \n
-       "	_worker commandMove ([_move_to, 10, CTI_BASE_WORKERS_WANDER_RANGE] Call CTI_CO_FNC_GetRandomPosition);" \n
+       "	_worker commandMove ([_move_to, 10, CTI_BASE_WORKERS_WANDER_RANGE] call CTI_CO_FNC_GetRandomPosition);" \n
        "};" \n
        "" \n
        "_worker_assignment = """";"/*%FSM</STATEINIT""">*/;
@@ -342,7 +342,7 @@ class FSM
        "			if (_addin != _virtual_damages) then {_worker_assignment_target setVariable [""cti_altdmg"", _addin]};" \n
        "		};" \n
        "	};" \n
-       "	if (getDammage _worker_assignment_target == 0 || _virtual_damages == 0) then {_worker_assignment = """"};" \n
+       "	if (getDammage _worker_assignment_target isEqualTo 0 || _virtual_damages isEqualTo 0) then {_worker_assignment = """"};" \n
        "} else {" \n
        "	_worker_assignment = """";" \n
        "};"/*%FSM</STATEINIT""">*/;

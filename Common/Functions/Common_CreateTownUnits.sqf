@@ -156,6 +156,8 @@ while {true} do {
 				if (_use_default) then {
 					_has_vehicles = false;
 					{if !(_x isKindOf "Man") exitWith {_has_vehicles = true}} forEach _team;
+					//--- If a new building cannot be found, we look for a position
+					if (typeName _position isEqualTo "OBJECT") then {_position = getPos _position};
 					
 					for '_i' from 1 to 100 do {
 						_position_ran = [ASLToAGL _position, 10, _spawn_range, 10, if (_has_vehicles) then {"vehicles"} else {"infantry"}] call CTI_CO_FNC_GetSafePosition;
@@ -172,7 +174,7 @@ while {true} do {
 		};
 		
 		if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FILE: Common\Functions\Common_CreateTownUnits.sqf", format["Spawning [%1] units in group [%2] for town [%3] on side [%4] at position [%5]. Overall AI [%6] and current limit [%7]. Active Squad in town [%8] with current Ratio [%9]. Current Live AI in town [%10], AI Spawn threshold is set to [%11]", count _team, _group, _town getVariable "cti_town_name", _side, _position, _total, _limit, _active_squads, _ratio, _current, _active_units]] call CTI_CO_FNC_Log;
+			["INFORMATION", "FILE: Common\Functions\Common_CreateTownUnits.sqf", format["Spawning [%1] units in group [%2] for town [%3] on side [%4] at position [%5]. Overall AI [%6] and current limit [%7]. Active Squad in town [%8] with current Ratio [%9]. Current Live AI in town [%10], AI Spawn threshold is set to [%11]", count _team, _group, _town getVariable "cti_town_name", _side, _position, _total, _limit, _active_squads, _ratio, _current, _active_units]] call CTI_CO_FNC_Log;
 		};
 		
 		_index = _index + 1;

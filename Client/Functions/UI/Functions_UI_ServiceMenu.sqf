@@ -72,7 +72,7 @@ CTI_UI_Service_ProcessRepair = {
 	_repair = false;
 	while {true} do {
 		_ranged = [_unit, _content, _ranges, _index] call CTI_UI_Service_RangeStill;
-		if (count _ranged == 0 || !alive _unit) exitWith {};
+		if (count _ranged isEqualTo 0 || !alive _unit) exitWith {};
 		
 		_operative_index = _ranged select 2;
 		_service_time = _times select _operative_index;
@@ -129,7 +129,7 @@ CTI_UI_Service_ProcessRearm = {
 	_rearm = false;
 	while {true} do {
 		_ranged = [_unit, _content, _ranges, _index] call CTI_UI_Service_RangeStill;
-		if (count _ranged == 0 || !alive _unit) exitWith {};
+		if (count _ranged isEqualTo 0 || !alive _unit) exitWith {};
 		
 		_operative_index = _ranged select 2;
 		_service_time = _times select _operative_index;
@@ -170,7 +170,7 @@ CTI_UI_Service_ProcessRefuel = {
 	_refuel = false;
 	while {true} do {
 		_ranged = [_unit, _content, _ranges, _index] call CTI_UI_Service_RangeStill;
-		if (count _ranged == 0 || !alive _unit) exitWith {};
+		if (count _ranged isEqualTo 0 || !alive _unit) exitWith {};
 		
 		_operative_index = _ranged select 2;
 		_service_time = _times select _operative_index;
@@ -208,7 +208,7 @@ CTI_UI_Service_ProcessHeal = {
 	_repair = false;
 	while {true} do {
 		_ranged = [_unit, _content, _ranges, _index] call CTI_UI_Service_RangeStill;
-		if (count _ranged == 0 || !alive _unit) exitWith {};
+		if (count _ranged isEqualTo 0 || !alive _unit) exitWith {};
 		
 		_operative_index = _ranged select 2;
 		_service_time = _times select _operative_index;

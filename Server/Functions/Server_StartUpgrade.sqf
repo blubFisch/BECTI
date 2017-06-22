@@ -28,11 +28,8 @@
 	  -> Will bring the barracks on level 1 after the upgrade completion
 */
 
-private ["_level", "_side", "_upgrade"];
-
-_side = _this select 0;
-_upgrade = _this select 1;
-_level = _this select 2;
+params ["_side", "_upgrade", "_level"];
+private ["_logic", "_upgrade_time", "_upgrades"];
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
@@ -62,7 +59,7 @@ _logic setVariable ["cti_upgrade_lt",-1, true];
 
 _upgrades set [_upgrade, (_upgrades select _upgrade) + 1];
 _upgrade_barracks = _upgrades select CTI_UPGRADE_BARRACKS;
-if (_upgrade == CTI_UPGRADE_BARRACKS) then {
+if (_upgrade isEqualTo CTI_UPGRADE_BARRACKS) then {
 	switch (_upgrade_barracks) do {
 		case 0: {_logic setVariable ["cti_player_ai_skill", (CTI_UPGRADE_BARRACKS_SKILL select 0), true];};
 		case 1: {_logic setVariable ["cti_player_ai_skill", (CTI_UPGRADE_BARRACKS_SKILL select 1), true];};

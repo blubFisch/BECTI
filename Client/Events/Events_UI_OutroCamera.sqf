@@ -88,7 +88,7 @@ _cameratext spawn BIS_fnc_typeText;
 titleText [_cameratextscore, "PLAIN DOWN", 15];
 
 //--- add keyhandler to Esc to force close scoreboard
-[] spawn {outroKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x01) then {showScoretable -1;};"];};
+[] spawn {outroKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo 0x01) then {showScoretable -1;};"];};
 
 if (_showscore) then {showScoretable 1;};
 sleep _camera_duration;

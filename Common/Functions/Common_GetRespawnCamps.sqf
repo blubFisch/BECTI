@@ -33,7 +33,7 @@ _camps = [];
 //--- Determine the camp respawn mode
 switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 	case 1: { //--- Classic Mode, get the closest town
-		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) == 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
+		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		private ["_cti_entities", "_list"];
 		_respawnrangeclas=CTI_RESPAWN_CAMPS_RANGE_CLASSIC+500*_up;
 		_town = (_location) call CTI_CO_FNC_GetClosestTown;
@@ -52,7 +52,7 @@ switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 		};
 	};
 	case 2: { //--- Enhanced Respawn, get the camps around the unit
-		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) == 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
+		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		_respawnrange=CTI_RESPAWN_CAMPS_RANGE_ENHANCED+500*_up;
 		//--- Retrieve the nearby towns (Camps enhanced range * 4)
 		private ["_cti_entities", "_list", "_towns_near"];
@@ -87,7 +87,7 @@ if ((missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") > 0) then {
 				_coefficient = if (_town getVariable "cti_town_sideID" isEqualTo _sideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
 				_price = round((_town getVariable "cti_town_sv") * _coefficient);
 				
-				_funds = (_group) Call CTI_CO_FNC_GetFunds;
+				_funds = (_group) call CTI_CO_FNC_GetFunds;
 				if (_funds >= _price) then {_list pushBack _x};
 			};
 			case 2: { //--- Limited

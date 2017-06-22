@@ -27,10 +27,8 @@
 	  -> Will search for manable statics around _structure
 */
 
-private ["_ai", "_defense_team", "_delegate", "_direction", "_distance", "_logic", "_manned", "_nearest_area", "_net", "_position", "_side", "_sideID", "_structure", "_var", "_lastrearmtime", "_lastrearmdiff"];
-
-_structure = _this select 0;
-_side = _this select 1;
+params ["_structure", "_side"];
+private ["_ai", "_defense_team", "_delegate", "_direction", "_distance", "_logic", "_manned", "_nearest_area", "_net", "_position", "_sideID", "_var", "_lastrearmtime", "_lastrearmdiff"];
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
@@ -40,7 +38,7 @@ _var = missionNamespace getVariable format ["CTI_%1_%2", _side, _structure getVa
 _direction = 360 - ((_var select CTI_DEFENSE_PLACEMENT) select 0);
 _distance = (_var select CTI_DEFENSE_PLACEMENT) select 1;
 _position = _structure modelToWorld [(sin _direction * _distance), (cos _direction * _distance), 0];
-_net = if ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") == 1) then {true} else {false};
+_net = if ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") isEqualTo 1) then {true} else {false};
 _nearest_area = if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {[_structure, _logic getVariable "cti_structures_areas"] call CTI_CO_FNC_GetClosestEntity} else {objNull};
 
 //--- Perform a defense manning routine while we can
@@ -177,7 +175,7 @@ while {alive _structure} do {
     							["INFORMATION", "FILE: Server\Functions\Server_HandleStaticDefenses.sqf", format["At least one HC is present, defense [%1] (%2) from side [%3] will be managed by an HC", _x, typeOf _x, _side]] call CTI_CO_FNC_Log;
     						};
     
-    						[_x, _defense_team, _side, _ai_args] Call CTI_SE_FNC_AttemptDefenseDelegation;
+    						[_x, _defense_team, _side, _ai_args] call CTI_SE_FNC_AttemptDefenseDelegation;
     					};
 					};
 				};

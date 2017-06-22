@@ -6,7 +6,7 @@ params[ "_compReference" ];
 _objects = [];
 
 {
-	if ( !isNil "_x" && { _x select 0 == _compReference } ) exitWith {
+	if ( !isNil "_x" && { _x select 0 isEqualTo _compReference } ) exitWith {
 		{
 			_nul = _objects pushBack ( _x select 1 ); 
 		}forEach ( _x select 1 );

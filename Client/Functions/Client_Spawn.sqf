@@ -1,8 +1,8 @@
-waitUntil {vehicle player == player};
+waitUntil {vehicle player isEqualTo player};
 waituntil {!isnull (finddisplay 46)};
 	
 //--- Tablet Activation
-[] spawn {cmKeyPressWin = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == tablet_hotkeyDIKCodeNumberWin) then {[] call cm_Tablet_FUNc;};"];};
+[] spawn {cmKeyPressWin = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo tablet_hotkeyDIKCodeNumberWin) then {[] call cm_Tablet_FUNc;};"];};
 
 //--- No more weapon sway
 if (local player) then {

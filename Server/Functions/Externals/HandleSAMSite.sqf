@@ -85,7 +85,7 @@ while {true} do {
 	
 	// Unassign target from radars 
 	// TODO: doesnt work good, they will automatically start to watch target until we tell them to un-watch it over and over
-	if (count _detectedPossibleTargets == 0) then {
+	if (count _detectedPossibleTargets isEqualTo 0) then {
 		{
 			(gunner _x) doTarget objNull;
 			(gunner _x) doWatch objNull;
@@ -114,13 +114,13 @@ while {true} do {
 				
 			if (_a && _b && _c) then {
 				_dist = _launcher distance _launcherTarget;
-				if (_dist < _bestDistance || _bestDistance == -1) then {
+				if (_dist < _bestDistance || _bestDistance isEqualTo -1) then {
 					_bestDistance = _dist;
 					_useLauncherIndx = _forEachIndex;
 				};
 			};
 		} forEach _availableLaunchers;
-		if (_useLauncherIndx == -1) exitWith{"No launcher available" call _logFctn};
+		if (_useLauncherIndx isEqualTo -1) exitWith{"No launcher available" call _logFctn};
 
 		format ["Target selected: %1 (%2 m), Launcher %3", typeOf _launcherTarget, _bestDistance, _useLauncherIndx] call _logFctn;
 		

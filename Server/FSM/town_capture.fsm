@@ -80,7 +80,7 @@ class FSM
     {
       name = "Units_near_Cente";
       init = /*%FSM<STATEINIT""">*/"_sideID = _town getVariable ""cti_town_sideID"";" \n
-       "_side = (_sideID) Call CTI_CO_FNC_GetSideFromID;" \n
+       "_side = (_sideID) call CTI_CO_FNC_GetSideFromID;" \n
        "//_objects = (_town nearEntities [""AllVehicles"", _capture_range]) unitsBelowHeight 30;" \n
        "_objects = [];" \n
        "// {if (((ASLToAGL getPosASL _x) select 2) < 30) then {_objects pushBack _x}} forEach (_town nearEntities [""AllVehicles"", _capture_range]);" \n
@@ -127,7 +127,7 @@ class FSM
           priority = 2.000000;
           to="Supply_Mode";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && _west == 0 && _east == 0 && _resistance == 0"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && _west isEqualTo 0 && _east isEqualTo 0 && _resistance isEqualTo 0"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -201,7 +201,7 @@ class FSM
        "if (_force != civilian) then {" \n
        "	_supply = _town getVariable ""cti_town_sv"";" \n
        "	" \n
-       "	if (_side == _force) then { //--- Protect" \n
+       "	if (_side isEqualTo _force) then { //--- Protect" \n
        "		if (_supply < _town getVariable ""cti_town_sv_default"") then {" \n
        "			_supply = _supply + (_forceCount * CTI_TOWNS_CAPTURE_RATE);" \n
        "			if (_supply > (_town getVariable ""cti_town_sv_default"")) then { _supply = _town getVariable ""cti_town_sv_default"" };" \n
@@ -211,14 +211,14 @@ class FSM
        "		_capturable = true;" \n
        "		_capturable_camps = true;" \n
        "		if ((missionNamespace getVariable ""CTI_TOWNS_TERRITORIAL"") > 0) then {" \n
-       "			_capturable = [_town, _force] Call CTI_SE_FNC_CanCaptureTerritorialTown;" \n
+       "			_capturable = [_town, _force] call CTI_SE_FNC_CanCaptureTerritorialTown;" \n
        "		};" \n
-       "		if ((missionNamespace getVariable ""CTI_TOWNS_CAPTURE_MODE"") == 2) then {" \n
+       "		if ((missionNamespace getVariable ""CTI_TOWNS_CAPTURE_MODE"") isEqualTo 2) then {" \n
        "			//--- Check all camps captured" \n
-       "			_camps_count = count(_town Call CTI_CO_FNC_GetTownCamps);" \n
-       "			_camps_owned = count([_town, _force] Call CTI_CO_FNC_GetTownCampsOnSide);" \n
+       "			_camps_count = count(_town call CTI_CO_FNC_GetTownCamps);" \n
+       "			_camps_owned = count([_town, _force] call CTI_CO_FNC_GetTownCampsOnSide);" \n
        "			_camps_hostile = _camps_count - _camps_owned;" \n
-       "			if (_camps_count == _camps_owned) then {_capturable_camps = true} else {" \n
+       "			if (_camps_count isEqualTo _camps_owned) then {_capturable_camps = true} else {" \n
        "				{" \n
        "					[""town-capture-blocked"", [_town, _camps_hostile, _side]] remoteExec [""CTI_PVF_CLT_OnMessageReceived"", _x];" \n
        "				} forEach _objects;" \n
@@ -229,8 +229,8 @@ class FSM
        "			_rate = CTI_TOWNS_CAPTURE_RATE;" \n
        "			if ((missionNamespace getVariable ""CTI_TOWNS_CAPTURE_MODE"") > 0) then {" \n
        "				//--- Retrieve the current held camps" \n
-       "				_camps_count = count(_town Call CTI_CO_FNC_GetTownCamps);" \n
-       "				_camps_force = if (_camps_count < 1) then {1} else {count([_town, _force] Call CTI_CO_FNC_GetTownCampsOnSide) / _camps_count};" \n
+       "				_camps_count = count(_town call CTI_CO_FNC_GetTownCamps);" \n
+       "				_camps_force = if (_camps_count < 1) then {1} else {count([_town, _force] call CTI_CO_FNC_GetTownCampsOnSide) / _camps_count};" \n
        "				_rate = CTI_TOWNS_CAPTURE_RATE * _camps_force * CTI_TOWNS_CAPTURE_RATE_CAMPS;" \n
        "			};			" \n
        "			if (_rate < 1) then {_rate = 1};" \n
@@ -304,7 +304,7 @@ class FSM
           priority = 1.000000;
           to="Timed_Update";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"CTI_TOWNS_SUPPLY_MODE == 1 && _sideID != CTI_RESISTANCE_ID"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"CTI_TOWNS_SUPPLY_MODE isEqualTo 1 && _sideID != CTI_RESISTANCE_ID"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/

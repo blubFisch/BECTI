@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////
 //START EARPLUGS CODE
 
-waitUntil {vehicle player == player};
+waitUntil {vehicle player isEqualTo player};
 waituntil {!isnull (finddisplay 46)};
 
 //////////////////////////////////////////////////////////////////////////
@@ -18,7 +18,7 @@ waituntil {!isnull (finddisplay 46)};
 						sleep 1;
 						_OPRposition = position _OPRdude;
 
-						_OPRstationary = _OPRstartingpos select 0 == _OPRposition select 0 && _OPRstartingpos select 1 == _OPRposition select 1;
+						_OPRstationary = (_OPRstartingpos (select 0) isEqualTo _OPRposition (select 0)) && (_OPRstartingpos (select 1) isEqualTo _OPRposition (select 1));
 
 						if (_OPRstationary) then {} else {_OPRtrig=false;};
 						
@@ -37,13 +37,13 @@ SuperFunEPEHVariable = false;
 uisleep 1;
 _hasEPEH = player getVariable "Has_EPEH_Loop";
 uisleep 1;
-if ((_hasEPEH == "NEVER")) then {[] spawn cm_EP_LOOP;};	
+if ((_hasEPEH isEqualTo "NEVER")) then {[] spawn cm_EP_LOOP;};	
 
 if (cmEarplugsKeyPressEnabled) then {
 	if (isNil "cmEarplugs_hotkeyDIKCodeNumber") then {
 		cmEarplugs_hotkeyDIKCodeNumber = cmEarplugs_hotkeyDIKCodeNumberINSERT;
 	};
-	[] spawn {cmKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == cmEarplugs_hotkeyDIKCodeNumber) then {[] call cm_Earplugs_FUNc;};"];};
+	[] spawn {cmKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo cmEarplugs_hotkeyDIKCodeNumber) then {[] call cm_Earplugs_FUNc;};"];};
 };
 
 //cmEARPLUGS CODE END

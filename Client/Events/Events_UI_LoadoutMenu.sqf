@@ -143,7 +143,7 @@ switch (_action) do {
 	case "onPurchasePressed": {
 		_unit = (uiNamespace getVariable "cti_dialog_ui_servicemenu_loadoutunit");
 		_ispylon = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu_purchasetype");
-		if (_ispylon == "pylon") then {
+		if (_ispylon isEqualTo "pylon") then {
 			(_unit) spawn CTI_UI_Loadout_purchasePylons;
 		} else {
 			(_unit) spawn CTI_UI_Loadout_purchaseTurrets;

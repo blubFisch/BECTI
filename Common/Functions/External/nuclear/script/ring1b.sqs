@@ -11,7 +11,7 @@ _agl = random 360
 _con = _con + 2
 #loop
 ?(_cnt > 89) : _dis = _dis + 20; _height = _height - 3; _next = _next + 1; goto "start"
-?(_next == 30):exit
+?(_next isEqualTo 30):exit
 
 _cof = 0.98 + random 0.04
 _velx = (sin _agl) * 20.0 * _cof

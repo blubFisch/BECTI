@@ -51,7 +51,7 @@ while { true } do {
 	_group = uiNamespace getVariable "cti_dialog_ui_purchasemenu_team";
 	_size = count units _group;
 	if (_size != _last_size) then {
-		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110902) ctrlSetStructuredText (parseText format["<t align='right'>Group Size: <t color='#66baff'>%1</t>/%2</t>", _size, if (isPlayer leader _group) then {if ( CTI_PLAYERS_GROUPSIZE == 0) then {player getVariable ["CTI_PLAYER_GROUPSIZE",[]]} else {CTI_PLAYERS_GROUPSIZE};} else {CTI_AI_TEAMS_GROUPSIZE}]);
+		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110902) ctrlSetStructuredText (parseText format["<t align='right'>Group Size: <t color='#66baff'>%1</t>/%2</t>", _size, if (isPlayer leader _group) then {if ( CTI_PLAYERS_GROUPSIZE isEqualTo 0) then {player getVariable ["CTI_PLAYER_GROUPSIZE",[]]} else {CTI_PLAYERS_GROUPSIZE};} else {CTI_AI_TEAMS_GROUPSIZE}]);
 	};
 	
 	//--- Remove old content.
@@ -63,7 +63,7 @@ while { true } do {
 		
 		_is_present = false;
 		{
-			if (_x select 0 == _req_seed && _x select 1 == _req_classname) exitWith {_is_present = true};
+			if (_x select 0 isEqualTo _req_seed && _x select 1 isEqualTo _req_classname) exitWith {_is_present = true};
 		} forEach +CTI_P_PurchaseRequests;
 		
 		if !(_is_present) then {
@@ -88,7 +88,7 @@ while { true } do {
 		
 		_is_present = false;
 		{
-			if (_x select 0 == _req_seed && _x select 1 == _req_classname) exitWith {_is_present = true};
+			if (_x select 0 isEqualTo _req_seed && _x select 1 isEqualTo _req_classname) exitWith {_is_present = true};
 		} forEach _lb_queued_content;
 		
 		if !(_is_present) then {

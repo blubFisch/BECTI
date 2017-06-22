@@ -27,7 +27,7 @@ private ["_marker"];
 
 //--- Quick action (I know you want it brit!)
 if (((_var select CTI_STRUCTURE_LABELS) select 0) in CTI_FACTORIES) then {
-	_structure addAction [format["<t color='#c9f7bb'>Use %1</t>", ((_var select CTI_STRUCTURE_LABELS) select 1)], "Client\Actions\Action_UseNearestFactory.sqf", "", 95, false, true, "", "alive _target && _this == player"];
+	_structure addAction [format["<t color='#c9f7bb'>Use %1</t>", ((_var select CTI_STRUCTURE_LABELS) select 1)], "Client\Actions\Action_UseNearestFactory.sqf", "", 95, false, true, "", "alive _target && _this isEqualTo player"];
 };
 
 //--- Center marker
@@ -55,18 +55,18 @@ if (isNil {_structure getVariable "cti_structure_type"}) then {_structure setVar
 };
 
 // additionnal marker for radars
-if ((_var select CTI_STRUCTURE_LABELS) select 0 == CTI_RADAR) then {
+if ((_var select CTI_STRUCTURE_LABELS) select 0 isEqualTo CTI_RADAR) then {
 	(_structure) spawn {
 		(_this) spawn CTI_CL_FNC_UpdateRadarMarkerAir;
 	};
 };
-if ((_var select CTI_STRUCTURE_LABELS) select 0 == CTI_RADAR_ART) then {
+if ((_var select CTI_STRUCTURE_LABELS) select 0 isEqualTo CTI_RADAR_ART) then {
 	(_structure) spawn {
 		(_this) spawn CTI_CL_FNC_UpdateRadarMarkerArt;
 	};
 };
 // Base satellite marker and scan
-if ((_var select CTI_STRUCTURE_LABELS) select 0 == CTI_SATELLITE) then {
+if ((_var select CTI_STRUCTURE_LABELS) select 0 isEqualTo CTI_SATELLITE) then {
 	(_structure) spawn {
 		(_this) spawn CTI_CL_FNC_UpdateRadarSatellite;
 	};

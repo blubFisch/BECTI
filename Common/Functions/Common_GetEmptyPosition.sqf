@@ -27,6 +27,7 @@ private ["_i" , "_position", "_tpos"];
 if (typeName _object isEqualTo "OBJECT") then {_object = getPos _object};
 
 _position = [(_object select 0)+5, (_object select 1)+5, 0];
+_i = 0;
 
 while {_i < 1000} do {
 	_tpos = [(_object select 0)+(_radius - (random (_radius * 2))), (_object select 1)+(_radius - (random (_radius * 2))), 0];

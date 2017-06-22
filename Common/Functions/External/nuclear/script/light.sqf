@@ -21,7 +21,7 @@ _zpos = 100;
 
 for "_cnt" from 0 to 5000 do
 {
-  if ( _cnt == 5000 ) then {deletevehicle _light1};
+  if ( _cnt isEqualTo 5000 ) then {deletevehicle _light1};
 
   _light1 setLightBrightness (160 * _scl);
   _light1 setpos [_xpos, _ypos, _zpos];

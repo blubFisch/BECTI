@@ -51,7 +51,7 @@ switch (_action) do {
 		switch (uiNamespace getVariable "cti_dialog_ui_basecam_viewmode") do { case 1: {_mode = "NVG"; camUseNVG true }; case 2: {_mode = "Thermals"; true setCamUseTi 0}; };
 		((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177013) ctrlSetText _mode;
 		
-		if (ctrlText ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) == "") then { ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) ctrlSetText "Feed: No Target" };
+		if (ctrlText ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) isEqualTo "") then { ((uiNamespace getVariable "cti_dialog_ui_basecam") displayCtrl 177011) ctrlSetText "Feed: No Target" };
 		
 		CTI_BaseCamera cameraEffect ["Internal", "back"];
 		

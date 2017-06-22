@@ -96,7 +96,7 @@ switch (_message_var) do {
 	};
 	case "commander-vote-start": {
 		CTI_P_ChatID commandChat format["%1 has initiated a commander vote!", _parameters];
-		if (CTI_DEV_MODE == 0) then {
+		if (CTI_DEV_MODE isEqualTo 0) then {
 			hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />Commander vote will start in 15 seconds.";
 		};
 	};//--- Todo, popup system with helper on/off

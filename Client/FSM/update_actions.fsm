@@ -66,7 +66,7 @@ class FSM
                          "		};" \n
                          "		if !(isNil ""CTI_HQ_BuildAction"") then {player removeAction CTI_HQ_BuildAction};" \n
                          "	} else {" \n
-                         "		//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target == player && CTI_Base_HQInRange""];" \n
+                         "		//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target isEqualTo player && CTI_Base_HQInRange""];" \n
                          "		(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
                          "	};" \n
                          "};" \n
@@ -75,7 +75,7 @@ class FSM
                          "	if (alive player && !CTI_P_Respawning) then {CTI_P_CurrentGear = (player) call CTI_CO_FNC_GetUnitLoadout};" \n
                          "};" \n
                          "//--- Actions" \n
-                         "if (""ToolKit"" in items player && player == vehicle player) then {" \n
+                         "if (""ToolKit"" in items player && player isEqualTo vehicle player) then {" \n
                          "	if (count(vehicle player nearEntities [[""Car"",""Air"",""Tank"",""Ship""], 10]) > 0) then {" \n
                          "		if !(CTI_P_ActionLockPick) then {CTI_P_ActionLockPick = true};" \n
                          "		if !(CTI_P_ActionRepair) then {CTI_P_ActionRepair = true};" \n
@@ -88,12 +88,12 @@ class FSM
                          "	if (CTI_P_ActionRepair) then {CTI_P_ActionRepair = false};" \n
                          "};" \n
                          "_vehicle = vehicle player;// ---get the vehicle the player is currently inside?" \n
-                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"" && (player==driver _vehicle)) then {//--- Low gear added to tanks/apc/cars" \n
+                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"" && (player isEqualTo driver _vehicle)) then {//--- Low gear added to tanks/apc/cars" \n
                          "CTI_P_ActionLowGear = true;" \n
                          "} else {" \n
                          "CTI_P_ActionLowGear = false;" \n
                          "};" \n
-                         "if (_vehicle isKindOf ""Ship"" && (player==driver _vehicle)) then { //--- Push added to boats" \n
+                         "if (_vehicle isKindOf ""Ship"" && (player isEqualTo driver _vehicle)) then { //--- Push added to boats" \n
                          "CTI_P_ActionPush = true;" \n
                          "} else {" \n
                          "CTI_P_ActionPush = false;" \n

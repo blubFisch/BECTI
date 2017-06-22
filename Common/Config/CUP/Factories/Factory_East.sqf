@@ -8,7 +8,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //--- Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {  
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then {  
 		//CSAT Vanilla (arid)*********************
 		//--- CSAT Infantry (Arid)
 		_u pushBack 'O_Soldier_F';
@@ -102,7 +102,7 @@ if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {
 };
 //------------------------------ Heli ------------------------------
 //--- Infantry
-if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************
 		//CSAT Pacific APEX (woodland)******************************************
@@ -114,7 +114,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 		//CSAT Pacific APEX (woodland)******************************************
 };
 //------------------------------ APEX INFANTRY------------------------------
-if (CTI_APEX_ADDON  == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON  isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************		
 		//CSAT Pacific APEX (woodland)******************************************
@@ -183,19 +183,19 @@ if (CTI_APEX_ADDON  == 1 || CTI_APEX_ADDON >= 3) then {
 		_u pushBack 'O_V_Soldier_JTAC_ghex_F';	
 };
 //------------------------------ APEX VEHICLES ------------------------------
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************		
 		//CSAT Pacific APEX (woodland)******************************************
 };
 //------------------------------ JETS ------------------------------
-if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************		
 		//CSAT Pacific APEX (woodland)******************************************
 };	
 //--------------------------------- TANKS ------------------------------
-if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************
 		//CSAT Vanilla (woodland)******************************************	
 		//CSAT Pacific APEX (woodland)******************************************
@@ -320,12 +320,12 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 
 };
 //------------------------------ OFPS CUP ------------------------------
-if (CTI_OFPS_CUP_ADDON == 0 || CTI_OFPS_CUP_ADDON >= 3) then {
+if (CTI_OFPS_CUP_ADDON isEqualTo 0 || CTI_OFPS_CUP_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)******************************************
 };
 //------------------------------ RHS ------------------------------
-if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
+if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
 		//Russia RHS (Arid)*********************
 		_u pushBack 'rhs_msv_emr_rifleman';
 		_u pushBack 'rhs_msv_emr_aa';
@@ -449,12 +449,12 @@ if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3 ) then {
 		//Russia RHS (Woodland)******************************************		
 };
 //------------------------------ OFPS RHS ------------------------------
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {
 		//Russia RHS (Arid)*********************
 		//Russia RHS (Woodland)******************************************
 };
 //------------------------------ OFPS ------------------------------
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3 ) then { 
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3 ) then { 
 		//CSAT (arid)*********************
 		//CSAT (woodland)******************************************
 		//CSAT (winter)********************* - MODS NOT READY 
@@ -1416,7 +1416,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //---Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************	
 		_u pushBack 'O_Soldier_F';
 		_u pushBack 'O_crew_F';		
@@ -1452,7 +1452,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 };
 //------------------------------ APEX ------------------------------
 //---Infantry
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************
@@ -1473,7 +1473,7 @@ if (CTI_APEX_ADDON  >= 2) then {
 };
 //------------------------------ JETS ------------------------------
 //---Infantry
-if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
+if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************	
@@ -1486,7 +1486,7 @@ if (CTI_JETS_ADDON  >= 2) then {
 };	
 //--------------------------------- TANKS ------------------------------
 //---Infantry
-if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
+if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************		
 		//CSAT Vanilla (woodland)*********************		
 		//CSAT Pacific APEX (woodland)*********************	
@@ -1511,7 +1511,7 @@ if (CTI_CUP_VEHICLES_ADDON >= 2) then {
 };
 //------------------------------ OFPS CUP ------------------------------
 //---Infantry
-if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then {
+if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)*********************	
 };
@@ -1522,7 +1522,7 @@ if (CTI_OFPS_CUP_ADDON  >= 2) then {
 };
 //------------------------------ RHS ------------------------------
 //---Infantry
-if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then {
+if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then {
 		//Russia RHS (Arid)*********************
 		_u pushBack 'rhs_msv_emr_rifleman';
 		_u pushBack 'rhs_msv_emr_combatcrew';	
@@ -1538,7 +1538,7 @@ if (CTI_RHS_AFRF_ADDON  >= 2) then {
 };
 //------------------------------ OFPS RHS ------------------------------
 //---Infantry
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then {
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then {
 		//Russia RHS (Arid)*********************
 		//Russia RHS (Woodland)*********************
 };
@@ -1549,7 +1549,7 @@ if (CTI_OFPS_RHS_ADDON  >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 //---Infantry
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 		//Russia RHS (Arid)*********************
 		//Russia RHS (Woodland)*********************
 		//CSAT Winter OFPS
@@ -1668,7 +1668,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //---Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************		
 		_u pushBack 'O_Soldier_F';
 		_u pushBack 'O_crew_F';		
@@ -1702,7 +1702,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 };
 //------------------------------ APEX ------------------------------
 //---Infantry
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//CSAT Vanilla (arid)*********************			
 		//CSAT Vanilla (woodland)*********************
 		//CSAT Pacific APEX (woodland)*********************
@@ -1746,7 +1746,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 };
 //------------------------------ OFPS CUP ------------------------------
 //---Infantry
-if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then {
+if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)*********************	
 };
@@ -1757,7 +1757,7 @@ if (CTI_OFPS_CUP_ADDON  >= 2) then {
 };
 //------------------------------ RHS ------------------------------
 //---Infantry
-if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then {
+if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)*********************	
 };
@@ -1787,7 +1787,7 @@ if (CTI_RHS_AFRF_ADDON  >= 2) then {
 };
 //------------------------------ OFPS RHS ------------------------------
 //---Infantry
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then {
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)*********************	
 };
@@ -1798,7 +1798,7 @@ if (CTI_OFPS_RHS_ADDON  >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 //---Infantry
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 		//Russia CUP (Arid)*********************
 		//Russia CUP (Woodland)*********************	
 		//CSAT (Winter)*********************NEEDS MOD
