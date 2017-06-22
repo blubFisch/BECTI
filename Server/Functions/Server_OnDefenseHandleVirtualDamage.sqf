@@ -36,8 +36,8 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-params ["_damaged", "_damage", "_shooter", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
-private ["_logic", "_side", "_var", "_variable", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff","_multiply_damages", "_ammo"];
+params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
+private ["_logic", "_side", "_var", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff"];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;

@@ -31,7 +31,7 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-params ["_damaged", "_damage", "_shooter", "_sideID", "_reduce_damages", "_variable", "_position","_multiply_damages"];
+params ["_damaged", "_damage", "_shooter", "_ammo", "_sideID", "_reduce_damages", "_variable", "_position","_multiply_damages"];
 private ["_logic", "_side", "_upgrades", "_upgrade_basehealth", "_baseratio","_overall_damage","_health"];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
