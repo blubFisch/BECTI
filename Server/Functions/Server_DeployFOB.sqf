@@ -24,7 +24,7 @@
 */
 
 params["_vehicle", "_side", "_position", "_direction", "_fobtype", "_fobclass", "_fobclassruins"];
-private ["_direction", "_structure", "_is_deployed", "_logic", "_position", "_side", "_sideID", "_var", "_vehicle","_fobtype","_fobclass","_foblargeclass","_fobclassruins","_foblargeclassruins"];
+private ["_structure", "_is_deployed", "_logic", "_sideID", "_var","_foblargeclass","_foblargeclassruins"];
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;

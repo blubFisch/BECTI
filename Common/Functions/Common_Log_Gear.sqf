@@ -25,12 +25,9 @@
    Gear Array must be in this format [[[""arifle_mk20_aco_pointer_f"",["""",""acc_pointer_ir"",""optic_aco"",""""],[""30rnd_556x45_stanag""]],["""",["""","""","""",""""],[]],[""hgun_p07_f"",["""","""","""",""""],[]]],[[""u_b_combatuniform_mcam"",[""firstaidkit"",""30rnd_556x45_stanag"",""30rnd_556x45_stanag"",""30rnd_556x45_stanag""]],[""v_platecarrier2_rgr"",[""30rnd_556x45_stanag"",""30rnd_556x45_stanag"",""16rnd_9x21_mag"",""16rnd_9x21_mag"",""smokeshell"",""smokeshellgreen"",""chemlight_green"",""chemlight_green""]],[""b_assaultpack_rgr_lat"",[]]],[""h_helmetb_sand"",""""],[["""",""""],[""itemmap"",""itemgps"",""itemradio"",""itemcompass"",""itemwatch""]]]
 */
 
-private ["_geararray", "_log_from", "_log_type","_weapons","_uniform","_vest","_backpack","_gear_slots_1","_gear_slots_2"];
+params["_log_type", "_log_from", "_log_message", "_geararray"];
+private ["_weapons","_uniform","_vest","_backpack","_gear_slots_1","_gear_slots_2"];
 
-_log_type = _this select 0;
-_log_from = _this select 1;
-_log_message = _this select 2;
-_geararray = _this select 3;
 diag_log format["[CTI (%1)] [frameno:%2 | ticktime:%3 | fps:%4] [%5] | Message:%6 GEARARRAY:%7 ", _log_type, diag_frameno, diag_tickTime, diag_fps, _log_from, _log_message, _geararray];
 _weapons = _geararray  select 0;
 _uniform = _geararray  select 1 select 0;
@@ -44,6 +41,3 @@ diag_log format["[CTI (%1)] [frameno:%2 | ticktime:%3 | fps:%4] [%5] | Message:%
 diag_log format["[CTI (%1)] [frameno:%2 | ticktime:%3 | fps:%4] [%5] | Message:%6 Vest:%7", _log_type, diag_frameno, diag_tickTime, diag_fps, _log_message, _log_from, _vest];
 diag_log format["[CTI (%1)] [frameno:%2 | ticktime:%3 | fps:%4] [%5] | Message:%6 BackPack:%7", _log_type, diag_frameno, diag_tickTime, diag_fps, _log_message, _log_from,_backpack];
 diag_log format["[CTI (%1)] [frameno:%2 | ticktime:%3 | fps:%4] [%5] | Message:%6 GearSlot1:%7 | GearSlot2:%8", _log_type, diag_frameno, diag_tickTime, diag_fps, _log_message, _log_from, _gear_slots_1, _gear_slots_2];
-
-
-

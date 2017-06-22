@@ -26,7 +26,8 @@
 	  -> This function is triggered everytime the player assembles a weapon
 */
 
-private ["_builde", "_defense", "_properly_created"];
+params["_builder", "_defense"];
+private ["_properly_created"];
 _builder = _this select 0;
 _defense = _this select 1;
 //-- quickly figure out if we need to attach event handlers

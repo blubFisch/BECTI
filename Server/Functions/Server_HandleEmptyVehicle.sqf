@@ -25,14 +25,11 @@
 	  -> Track the player's vehicle with a 120 seconds timeout
 */
 
-private ["_delay", "_timeout", "_vehicle"];
+params ["_vehicle", ["_delay", 0]];
+private ["_timeout"];
 
-_vehicle = _this select 0;
-_delay = 0;
-if !(isNil {_vehicle getVariable "cti_spec"}) then { //--- if special vehicle
-	_delay = if (count _this > 1) then {_this select 1} else {missionNamespace getVariable "CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT"};
-} else {
-	_delay = if (count _this > 1) then {_this select 1} else {missionNamespace getVariable "CTI_VEHICLES_EMPTY_TIMEOUT"};
+if (_delay isEqualTo 0) then {
+	_delay = if (isNil {_vehicle getVariable "cti_spec"}) then [ { missionNamespace getVariable "CTI_VEHICLES_EMPTY_TIMEOUT" }, { missionNamespace getVariable "CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT" } ];
 };
 
 if (CTI_Log_Level >= CTI_Log_Information) then {
