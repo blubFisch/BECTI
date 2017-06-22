@@ -1,7 +1,7 @@
 _vehicles = player nearEntities [["Car","Motorcycle","Tank","Ship","Air","StaticWeapon"],5];
 if (count _vehicles < 1) exitWith {hint "There are no nearby vehicles to lockpick"};
 
-_vehicle = [player, _vehicles] Call CTI_CO_FNC_GetClosestEntity;
+_vehicle = [player, _vehicles] call CTI_CO_FNC_GetClosestEntity;
 
 if (locked _vehicle in [-1, 0, 1]) exitWith {hint "The vehicle is not locked"};
 if (count crew _vehicle > 0) exitWith {hint "The vehicle is not empty!"};

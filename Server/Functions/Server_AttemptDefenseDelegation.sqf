@@ -20,7 +20,7 @@
 	[UNIT, GROUP, SIDE ID, AI ARRAY ARGS] call CTI_SE_FNC_AttemptTownDelegation
 	
   # EXAMPLE #
-    [ai1, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] Call CTI_SE_FNC_AttemptDefenseDelegation;
+    [ai1, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] call CTI_SE_FNC_AttemptDefenseDelegation;
 */
 
 params ["_static", "_group", "_side", "_ai_args"];

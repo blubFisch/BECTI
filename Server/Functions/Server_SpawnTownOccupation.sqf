@@ -676,7 +676,7 @@ while {_totalGroups > 0} do {
 //--- Create the groups server-sided
 _groups = [];
 _positions = [];
-_camps = (_town) Call CTI_CO_FNC_GetTownCamps;
+_camps = (_town) call CTI_CO_FNC_GetTownCamps;
 
 _positions_building = _town getVariable ["cti_town_spawn_building", []];
 if (count _positions_building > 0) then {_positions_building = _positions_building call CTI_CO_FNC_ArrayShuffle};

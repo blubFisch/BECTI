@@ -98,10 +98,10 @@ waitUntil {camCommitted CTI_DeathCamera};
 CTI_DeathCamera camSetRelPos [1,1,20];
 CTI_DeathCamera camCommit (missionNamespace getVariable "CTI_RESPAWN_TIMER")+2;
 
-//Call Earplugs on death
+//call Earplugs on death
 call CTI_CL_FNC_EarPlugsDeath;
 
-//Call Tablet on death
+//call Tablet on death
 call CTI_CL_FNC_Death;
 
 //--- Remove "men" instantly on death if enabled

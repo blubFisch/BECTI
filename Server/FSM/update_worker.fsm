@@ -205,7 +205,7 @@ class FSM
        "" \n
        "if (_worker_idled > 30) then {" \n
        "	_worker_idled = 0;" \n
-       "	[_worker, _worker_lastpos, 50] Call CTI_CO_FNC_PlaceSafe;" \n
+       "	[_worker, _worker_lastpos, 50] call CTI_CO_FNC_PlaceSafe;" \n
        "};" \n
        "" \n
        "if (behaviour _worker != ""CARELESS"") then {_worker setBehaviour ""CARELESS""};" \n
@@ -299,7 +299,7 @@ class FSM
        "	_worker_lastwandermove = time;" \n
        "	_move_to = if (_worker distance _worker_center > CTI_BASE_WORKERS_WANDER_RANGE_MAX) then {_worker_center} else {position _worker};" \n
        "" \n
-       "	_worker commandMove ([_move_to, 10, CTI_BASE_WORKERS_WANDER_RANGE] Call CTI_CO_FNC_GetRandomPosition);" \n
+       "	_worker commandMove ([_move_to, 10, CTI_BASE_WORKERS_WANDER_RANGE] call CTI_CO_FNC_GetRandomPosition);" \n
        "};" \n
        "" \n
        "_worker_assignment = """";"/*%FSM</STATEINIT""">*/;

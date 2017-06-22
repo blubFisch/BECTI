@@ -70,8 +70,8 @@ class FSM
        "" \n
        "//--- Our side hold at least one town? if not the closest town to the HQ is our objective" \n
        "_hq_closest_town = objNull;" \n
-       "if ((CTI_P_SideID Call CTI_CO_FNC_GetSideTownCount) < 1) then {" \n
-       "	_hq_closest_town = [CTI_P_SideJoined Call CTI_CO_FNC_GetSideHQ, CTI_P_SideJoined] Call CTI_CO_FNC_GetClosestEnemyTown;" \n
+       "if ((CTI_P_SideID call CTI_CO_FNC_GetSideTownCount) < 1) then {" \n
+       "	_hq_closest_town = [CTI_P_SideJoined call CTI_CO_FNC_GetSideHQ, CTI_P_SideJoined] call CTI_CO_FNC_GetClosestEnemyTown;" \n
        "};" \n
        "" \n
        "//--- Generic, towns" \n

@@ -1344,7 +1344,7 @@ CTI_UI_Gear_ChangeCurrentMagazine = {
 CTI_UI_Gear_UpdateLinkedItems = {
 	private ["_config_type", "_get", "_item", "_magazines","_upgrade_gear", "_upgrades"];
 	_item = _this;
-	_upgrades = (CTI_P_SideJoined) Call CTI_CO_FNC_GetSideUpgrades;
+	_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 	_upgrade_gear = _upgrades select CTI_UPGRADE_GEAR;
 	_config_type = (_item) call CTI_UI_Gear_GetItemBaseConfig;
 	

@@ -38,7 +38,7 @@ CTI_UI_Respawn_GetAvailableLocations = {
 	
 	//--- Add camps if camp respawn is enabled
 	if ((missionNamespace getVariable "CTI_RESPAWN_CAMPS") > 0) then {
-		_list = _list + ([CTI_DeathPosition, CTI_P_SideID, group player] Call CTI_CO_FNC_GetRespawnCamps);
+		_list = _list + ([CTI_DeathPosition, CTI_P_SideID, group player] call CTI_CO_FNC_GetRespawnCamps);
 	};
 	
 	//--- Add mobile respawns if available (Also we retrieve the crew which may belong to the player to prevent "in-AI-respawn" over those)

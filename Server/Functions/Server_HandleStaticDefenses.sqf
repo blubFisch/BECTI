@@ -175,7 +175,7 @@ while {alive _structure} do {
     							["INFORMATION", "FILE: Server\Functions\Server_HandleStaticDefenses.sqf", format["At least one HC is present, defense [%1] (%2) from side [%3] will be managed by an HC", _x, typeOf _x, _side]] call CTI_CO_FNC_Log;
     						};
     
-    						[_x, _defense_team, _side, _ai_args] Call CTI_SE_FNC_AttemptDefenseDelegation;
+    						[_x, _defense_team, _side, _ai_args] call CTI_SE_FNC_AttemptDefenseDelegation;
     					};
 					};
 				};

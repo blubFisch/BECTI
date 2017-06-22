@@ -25,4 +25,4 @@ params ["_town", "_sideID"];
 
 if (typeName _sideID isEqualTo "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 
-count(_town Call CTI_CO_FNC_GetTownCamps) isEqualTo count([_town, _sideID] call CTI_CO_FNC_GetTownCampsOnSide)
+count(_town call CTI_CO_FNC_GetTownCamps) isEqualTo count([_town, _sideID] call CTI_CO_FNC_GetTownCampsOnSide)

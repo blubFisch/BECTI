@@ -68,7 +68,7 @@ class FSM
     {
       name = "Units_near_Camp";
       init = /*%FSM<STATEINIT""">*/"_sideID = _camp getVariable ""cti_camp_sideID"";" \n
-       "_side = (_sideID) Call CTI_CO_FNC_GetSideFromID;" \n
+       "_side = (_sideID) call CTI_CO_FNC_GetSideFromID;" \n
        "_town_local = (_town getVariable [""cti_town_occupation_groups"", []]) + (_town getVariable [""cti_town_resistance_groups"", []]);" \n
        "// _objects = _camp nearEntities [""Man"", CTI_TOWNS_CAMPS_CAPTURE_RANGE];" \n
        "" \n
@@ -186,7 +186,7 @@ class FSM
        "		//--- In case of territorial mode, check that the town can be captured!" \n
        "		_capturable = true;" \n
        "		if ((missionNamespace getVariable ""CTI_TOWNS_TERRITORIAL"") > 0) then {" \n
-       "			_capturable = [_town, _force] Call CTI_SE_FNC_CanCaptureTerritorialTown;" \n
+       "			_capturable = [_town, _force] call CTI_SE_FNC_CanCaptureTerritorialTown;" \n
        "		};" \n
        "		if (_capturable) then {" \n
        "			_rate = round(_forceCount * CTI_TOWNS_CAMPS_CAPTURE_RATE);" \n

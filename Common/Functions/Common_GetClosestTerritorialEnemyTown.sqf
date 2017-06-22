@@ -36,7 +36,7 @@ if (typeName _friendlySide isEqualTo "SIDE") then {_friendlySide = (_friendlySid
 
 //--- No towns are available for the friendly side? then, the closest enemy town is the one which is the closest to the HQ
 if ((_friendlySide call CTI_CO_FNC_GetSideTownCount) < 1) exitWith {
-	[_friendlySide call CTI_CO_FNC_GetSideHQ, _enemyTowns] Call CTI_CO_FNC_GetClosestEntity;
+	[_friendlySide call CTI_CO_FNC_GetSideHQ, _enemyTowns] call CTI_CO_FNC_GetClosestEntity;
 };
 
 //--- At least 1 town is available, browse to find the closest one which may be captured
@@ -48,4 +48,4 @@ _availableTowns = [];
 	} forEach (_x getVariable "cti_town_neighbors");
 } forEach _enemyTowns;
 
-[_center, _availableTowns] Call CTI_CO_FNC_GetClosestEntity
+[_center, _availableTowns] call CTI_CO_FNC_GetClosestEntity

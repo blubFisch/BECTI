@@ -54,8 +54,8 @@ with missionNamespace do {
 		_side = _this select 0;
 		_name = _this select 1;
 		
-		_logic = (_side) Call CTI_CO_FNC_GetSideLogic;
-		_team = (_side) Call CTI_CO_FNC_GetSideCommanderTeam;
+		_logic = (_side) call CTI_CO_FNC_GetSideLogic;
+		_team = (_side) call CTI_CO_FNC_GetSideCommanderTeam;
 		
 		//--- Make sure that no vote is running
 		if (_logic getVariable "cti_votetime" <= 0) then {
@@ -71,7 +71,7 @@ with missionNamespace do {
 			if (CTI_DEV_MODE isEqualTo 0) then {
 				sleep 15;
 			};
-			//--- Call in for a vote
+			//--- call in for a vote
 			(_side) Spawn CTI_SE_FNC_VoteForCommander;
 		};
 	};
