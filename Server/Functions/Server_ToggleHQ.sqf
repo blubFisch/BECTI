@@ -38,9 +38,10 @@ _is_deployed = (_side) call CTI_CO_FNC_IsHQDeployed;
 _current_hq = (_side) call CTI_CO_FNC_GetSideHQ;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
-	//--- If HQ construction requires time, wait for the construction delay
+//--- If HQ construction requires time, wait for the construction delay
 _structure_time = _var select CTI_STRUCTURE_TIME;
 if (_structure_time > 0) then {
+	["hq-deploying"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deploying
 	sleep _structure_time;
 	_logic setVariable ["cti_hq_ready", true, true];
 };

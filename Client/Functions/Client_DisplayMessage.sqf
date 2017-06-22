@@ -116,6 +116,9 @@ switch (_message_var) do {
 		CTI_P_ChatID commandChat "The HQ has been repaired";
 		playsound "bobcat_engine_start";
 	};
+	case "hq-deploying": {
+		CTI_P_ChatID commandChat "The HQ is deploying";
+	};	
 	case "hq-deployed": {
 		CTI_P_ChatID commandChat "The HQ has been deployed";
 //		playsound "Acts_carFixingWheel"; if sound is recommended, find a better sound
