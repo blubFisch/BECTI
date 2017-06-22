@@ -26,9 +26,8 @@
 params ["_unit"];
 private ["_find", "_split", "_yield"];
 
-_unit = _this;
-
 if (_unit isEqualTo leader (group _unit)) exitWith {"Leader"};
+if (isPlayer _unit && _unit != leader (group _unit)) exitWith {"Player"};
 
 _split = toArray(str _unit);
 
