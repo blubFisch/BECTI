@@ -11,20 +11,8 @@ waitUntil {scriptDone _secondshot};
 _thirdshot = [cam4, cam4, target3, 5, 1, 1, true, 0,-6,3] execVM "camera_work.sqf";
 waitUntil {scriptDone _thirdshot};
 */
+params ["_campos1", "_campos2", "_targetcam", "_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord", "_cameratext", "_cameratextscore", "_showscore"];
 
-_campos1= _this select 0;
-_campos2= _this select 1;
-_targetcam = _this select 2;
-_camera_duration = _this select 3;
-_zoom_level1 = _this select 4;
-_zoom_level2 = _this select 5;
-_cam_attached = _this select 6;
-_x_coord = _this select 7;
-_y_coord = _this select 8;
-_z_coord = _this select 9;
-_cameratext = _this select 10;
-_cameratextscore = _this select 11;
-_showscore = _this select 12;
 
 // to do exception management
 // if ((isNull _campos1)or(isNull _campos2)or(isNull _targetcam)) then exitWith {};

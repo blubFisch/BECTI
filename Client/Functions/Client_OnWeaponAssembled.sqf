@@ -28,8 +28,7 @@
 
 params["_builder", "_defense"];
 private ["_properly_created"];
-_builder = _this select 0;
-_defense = _this select 1;
+
 //-- quickly figure out if we need to attach event handlers
 _properly_created = _defense getVariable "cti_static_properly_created";
 if !(isNil "_properly_created") exitWith {};  //-- if the static was assembled and doesnt have cti_static_properly_created variable defined, we need to re-add event handlers and variables
