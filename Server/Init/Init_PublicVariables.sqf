@@ -305,7 +305,7 @@ with missionNamespace do {
 				_loadout = _get select 4;
 				
 				if (count _loadout > 0) then { //--- Make sure that there is a valid loadout in there
-					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout has been retrieved ", _name, _uid], _loadout] call CTI_CO_FNC_Log_Gear_Array};
+					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout has been retrieved [%3]", _name, _uid, _loadout]] call CTI_CO_FNC_Log};
 				} else {
 					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout is empty", _name, _uid]] call CTI_CO_FNC_Log};
 				};

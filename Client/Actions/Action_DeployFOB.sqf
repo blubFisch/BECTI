@@ -13,7 +13,7 @@ _fobclass = "Land_Medevac_house_V1_F";//vanilla FOB
 _fobclassruins = "Land_Cargo_House_V1_ruins_F";
 _foblargeclass = "Land_BagBunker_Large_F";//vanilla large FOB
 _foblargeclassruins = "Land_Cargo_House_V1_ruins_F";
-if (CTI_CUP_ADDON > 0) then { 
+if (CTI_CUP_CORE_ADDON > 0) then { 
 	_fobclass = "Land_Medevac_house_V1_F";
 	_foblargeclass = "WarfareBDepot";
 };

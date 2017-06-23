@@ -502,15 +502,6 @@ call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.s
 //---CRAM tracking
 call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
 
-//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
-if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
-	0 spawn {
-		waitUntil {!isNil 'CTI_InitTowns'};
-		
-		execVM "Common\Init\Init_LocationsPositions.sqf";
-	};
-};
-
 //--- Respawn markers
 createMarkerLocal ["respawn_east",getMarkerPos "CTI_EastRespawn"];
 "respawn_east" setMarkerColorLocal "ColorRed";
@@ -524,3 +515,12 @@ createMarkerLocal ["respawn_west",getMarkerPos "CTI_WestRespawn"];
 "respawn_west" setMarkerBrushLocal "BORDER";
 "respawn_west" setMarkerSizeLocal [10,10];
 "respawn_west" setMarkerAlphaLocal 0;
+
+//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
+if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
+	0 spawn {
+		waitUntil {!isNil 'CTI_InitTowns'};
+		
+		execVM "Common\Init\Init_LocationsPositions.sqf";
+	};
+};

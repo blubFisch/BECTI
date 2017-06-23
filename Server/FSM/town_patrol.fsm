@@ -261,7 +261,7 @@ class FSM
        "		//--- We found one camp to defend" \n
        "		if !(isNull _camp_target) then {" \n
        "			_action = ""defense_camp"";" \n
-       "			_camp_target setVariable [format[""cti_town_ai_camp_assignees_%1"", _sideID], ((_camp_target getVariable [format[""cti_town_ai_camp_assignees_%1"", _sideID], []]) pushBack _team)];" \n
+       "			_camp_target setVariable [format[""cti_town_ai_camp_assignees_%1"", _sideID], (_camp_target getVariable [format[""cti_town_ai_camp_assignees_%1"", _sideID], []]) + [_team]];" \n
        "		};" \n
        "	};" \n
        "};" \n

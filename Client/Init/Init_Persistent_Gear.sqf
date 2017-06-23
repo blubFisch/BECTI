@@ -22,9 +22,6 @@ if (typeName _templates isEqualTo "ARRAY") then { //--- The variable itself is a
 		
 		if (typeName _x isEqualTo "ARRAY") then { //--- Each items are arrays >> [_label, _picture, _cost, _x, upgrade]
 			_gear = _x select 3;
-			if (CTI_Log_Level >= CTI_Log_Information) then {
-				["INFORMATION", "FILE: Client\Init\Init_Persistent_Gear.sqf", format["Attempting to load persistent template number [%1] with the following value ", _forEachIndex], _gear] call CTI_CO_FNC_Log_Gear_Array;
-			};
 			if (typeName (_x select 0) isEqualTo "STRING" && typeName (_x select 1) isEqualTo "STRING" && typeName _gear isEqualTo "ARRAY") then { //--- The label is a string, the picture is a string and the template is an array. Cost and upgrade are re-calculated at the end to prevent third party modification
 				if (count _gear isEqualTo 4) then { //--- Make sure that we have the sections (weapons/container+mags/equipment/equipment2)
 					_flag_load = true;
@@ -233,7 +230,6 @@ if (typeName _templates isEqualTo "ARRAY") then { //--- The variable itself is a
 								
 								if (CTI_Log_Level >= CTI_Log_Information) then {
 									["INFORMATION", "FILE: Client\Init\Init_Persistent_Gear.sqf", format["A persistent template has been loaded with the label [%1], cost of [%2], upgrade level of [%3] and gear [%4]", _x select 0, _cost, _upgrade_max, _x select 3]] call CTI_CO_FNC_Log;
-									["INFORMATION", "FILE: Client\Init\Init_Persistent_Gear.sqf", format["A persistent template has been loaded with the label [%1], cost of [%2], upgrade level of [%3] and gear ", _x select 0, _cost, _upgrade_max], _gear] call CTI_CO_FNC_Log_Gear_Array;
 								};
 								
 								_list pushBack _x;

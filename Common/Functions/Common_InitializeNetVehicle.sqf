@@ -130,12 +130,7 @@ if (_marker_type isEqualTo "") then {
 		default { _marker_type = CTI_P_MarkerPrefix+"unknown" };
 	};
 };
-//if (typeOf _vehicle in (CTI_VEHICLES_HOOKERS+CTI_VEHICLES_HOOKERS_EX)) then {_vehicle addAction ["<t color='#86F078'>Hook (Main)</t>", "Client\Actions\Action_HookMenu.sqf", "", 99, false, true, "", "alive _target && local _target && _this isEqualTo driver _target"]};
-if (CTI_ENABLE_VEHICLE_STEALTH isEqualTo 1) then {
-	if (_vehicle isKindOf "Tank") then { // adds in stealth add action to tanks 
-		_vehicle addAction ["<t color='"+"#00E4FF"+"'>Toggle Stealth</t>","Client\Functions\Externals\Engine_Stealth\Stealth_Toggle.sqf", [], 7,false, true,"","(driver _target isEqualTo _this)  && alive _target"]; // any AI or player in driver seat can turn on stealth.
-	};
-};
+
 //--- Marker initialization
 _marker_label = "";
 _marker_name = format["cti_vehicle_%1", CTI_P_MarkerIterator];

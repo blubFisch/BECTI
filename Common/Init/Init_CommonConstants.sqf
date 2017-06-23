@@ -158,11 +158,10 @@ CTI_TOOLKIT_REPAIR_TIME_AIR = 45; // repair time for aircraft in seconds
 CTI_TOOLKIT_REPAIR_TIME_SHIP = 60; // repair time for ships in seconds
 CTI_TOOLKIT_REPAIR_TIME_UNKNOWN = 20; //default repair time for a vehicle in seconds
 CTI_TOOLKIT_HITPOINT_REPAIR_AMMOUNT = 0.4; // a number between 0-1. When a vehicle part is repaired, this is the max ammount of health that part has. "You gotta have logistics"
-//-------------------------------------------------------------------------------------------------------------------------//
-//-------------------------------------------------------------------------------------------------------------------------//
-//-- vehicle stealth
-CTI_ENABLE_VEHICLE_STEALTH = 0; //0 to disable, 1 to enable
-//-------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
 //----------------------------------------------------ORDERS-------------------------------------------------------------//
 /*
  * The orders determine the actions that AI Team Leaders will perform, they are executed in a different thread in order

@@ -871,11 +871,6 @@ FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Extern
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 
-//-- Stealth script
-if (CTI_ENABLE_VEHICLE_STEALTH isEqualTo 1) then {
-execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
-};
-
 //--- Zues Module
 player call CTI_CO_FNC_UnitCreated;
 ADMIN_ZEUS addEventHandler ["CuratorObjectPlaced", { (_this select 1) call CTI_CO_FNC_UnitCreated;}];

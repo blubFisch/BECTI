@@ -18,7 +18,7 @@ waituntil {!isnull (finddisplay 46)};
 						sleep 1;
 						_OPRposition = position _OPRdude;
 
-						_OPRstationary = (_OPRstartingpos (select 0) isEqualTo _OPRposition (select 0)) && (_OPRstartingpos (select 1) isEqualTo _OPRposition (select 1));
+						_OPRstationary = _OPRstartingpos select 0 == _OPRposition select 0 && _OPRstartingpos select 1 == _OPRposition select 1;
 
 						if (_OPRstationary) then {} else {_OPRtrig=false;};
 						
