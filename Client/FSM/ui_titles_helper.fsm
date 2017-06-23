@@ -71,12 +71,12 @@ class FSM
     {
       name = "Refresh";
       init = /*%FSM<STATEINIT""">*/"_nearest = (player) call CTI_CO_FNC_GetClosestTown;" \n
-       "_update = if (player distance _nearest < CTI_UI_TOWNS_PROGRESSBAR_DISTANCE && alive player) then {true} else {false};" \n
+       "_update = [false, true] select (player distance _nearest < CTI_UI_TOWNS_PROGRESSBAR_DISTANCE && alive player)" \n
        "" \n
        "if !(isNull (uiNamespace getVariable ""cti_title_capture"")) then {" \n
        "	_commander = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideCommanderTeam;" \n
        "	if (isNull _commander) then {" \n
-       "		_commander = if (missionNamespace getVariable ""CTI_AI_TEAMS_ENABLED"" > 0) then {""AI""} else {""N/A""};" \n
+       "		_commander = [""N/A"", ""AI""] select (missionNamespace getVariable ""CTI_AI_TEAMS_ENABLED"" > 0);" \n
        "	} else {" \n
        "		_commander = name leader _commander;" \n
        "	};" \n

@@ -98,7 +98,7 @@ switch (_action) do {
 		
 		//--- Sat cam available?
 		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlEnable (if ((CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
-		_enable = if ((CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false};
+		_enable = [false, true] select (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0);
 		if (_enable) then {((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.31), SafeZoneY + (SafeZoneH * 0.95), SafeZoneW * 0.14, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlCommit 0};
 		
 		if (isNil {uiNamespace getVariable "cti_dialog_ui_unitscam_viewmode"}) then {uiNamespace setVariable ["cti_dialog_ui_unitscam_viewmode", 0]};

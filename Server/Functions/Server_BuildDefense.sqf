@@ -112,7 +112,7 @@ if (_iscomposition) then {
     	};
 
 		(_defense) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
-		_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") + [_defense], true];
+		_logic setVariable ["cti_fobs", ((_logic getVariable "cti_fobs") pushBack _defense), true];
 	};
 	if (_large_fob) then {
 		_defense setVariable ["cti_large_fob", [],true];
@@ -268,9 +268,6 @@ if (_iscomposition) then {
 
 	_defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]];
 
-    //-- Deleted EH
-	_defense addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
-
 	if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
 		//todo: determine if the defense is "auto" or not via config simulation
 		[_defense, CTI_BASE_DEFENSES_EMPTY_TIMEOUT] spawn CTI_SE_FNC_HandleEmptyVehicle; //--- Track the defense lifespan
@@ -283,9 +280,6 @@ if (_iscomposition) then {
 			(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
 		};
 		
-		if (typeOf(_defense) find "POOK_ANMPQ53_B" isEqualTo 0 || typeOf(_defense) find "POOK_ANMPQ53_O" isEqualTo 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery_B" isEqualTo 0 || typeOf(_defense) find "pook_MIM104_PAC2Battery_O" isEqualTo 0) then {
-			_defense setVehicleLock "LOCKED";
-		}
 	};
 	_defense setVariable ["cti_static_properly_created", true, true]; //-- set cti_static_properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers and variables
 	_defense call CTI_CO_FNC_UnitCreated;

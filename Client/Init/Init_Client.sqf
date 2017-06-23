@@ -868,10 +868,6 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
 
-//--- Sam altitude warning
-// Disabling for now, to much spam.
-//call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
-
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 

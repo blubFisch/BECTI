@@ -726,27 +726,12 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 	};
 	
 	_positions pushBack _position;
-
-	if (CTI_DEV_MODE > 0) then {
-	//--- Paint Spawning Positions on map, used for debug
-		_marker = createMarker [(format ["safepos%1", ([0, 350] call BIS_fnc_randomInt)]), _position];
-		_marker setMarkerShape "ICON";
-		_marker setMarkerType "hd_dot";
-		_marker setMarkerColor "ColorRed";
-	};
-
+	
 	_group = createGroup resistance;
 	_group setGroupIdGlobal [format["(%1) %2", _town, _group]];
 	_group deleteGroupWhenEmpty true;
 	_groups pushBack _group;
 	
-	//--- Set AI to Combat mode
-	_group setBehaviour "AWARE";
-	_group setCombatMode "RED";
-	_group setSpeedMode "FULL";
-	_group enableAttack true;
-
-
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_SpawnTownResistance.sqf", format["Composing Resistance Team for town [%1] using group [%2] at position [%3] with units [%4]", _town getVariable "cti_town_name", _group, _position, _x]] call CTI_CO_FNC_Log;
 	};
