@@ -45,15 +45,15 @@ while {alive _vehicle && time - _timeout <= _delay} do {
 	
 	sleep CTI_VEHICLES_EMPTY_SCAN_PERIOD;
 	
-	switch (CTI_VEHICLES_HANDLER_EMPTY) do { //--- After
+	switch (CTI_VEHICLES_HANDLER_EMPTY) do { //--- Check about the vehicle status
 		case 0: {if ({alive _x} count crew _vehicle > 0) then {_timeout = time}};
 		case 1: {if ({alive _x} count crew _vehicle > 0 || canMove _vehicle || canFire _vehicle) then {_timeout = time}};
 	};
 };
 
-if (alive _vehicle) then {
+if (alive _vehicle) then { //--- If we got out of the loop then we can just delete the vehicle if it's still alive
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_HandleEmptyVehicle.sqf", format["Vehicle [%1] will now get removed after an empty delay of [%2]", _vehicle, _delay]] call CTI_CO_FNC_Log;
 	};
 	deleteVehicle _vehicle;
-}; //--- If we got out of the loop then we can just delete the vehicle
+};

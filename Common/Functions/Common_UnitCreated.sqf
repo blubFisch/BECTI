@@ -28,12 +28,3 @@ if (local _unit) then {
 		["ERROR", "FILE: Common\Functions\Common_UnitCreated.sqf", "Unit " + str(_unit) + " is not local"] call CTI_CO_FNC_Log;
 	};
 };
-
-//--- Make unit ZEUS/Curator editable
-if !(isNil "ADMIN_ZEUS") then {
-	if (CTI_IsServer) then {
-		ADMIN_ZEUS addCuratorEditableObjects [[_unit], true];
-	} else {
-		[ADMIN_ZEUS, _unit] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
-	};
-};
