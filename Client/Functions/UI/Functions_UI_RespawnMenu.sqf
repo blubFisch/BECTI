@@ -109,7 +109,7 @@ CTI_UI_Respawn_GetRespawnLabel = {
 			_town = _location getVariable "cti_camp_town";
 			switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") do {
 				case 1: {
-					_coefficient = if (_town getVariable "cti_town_sideID" isEqualTo CTI_P_SideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
+					_coefficient = if (_town getVariable "cti_town_sideID" == CTI_P_SideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
 					_price = round((_town getVariable "cti_town_sv") * _coefficient);
 					_value = format["Camp (%1) - $%2", _town getVariable "cti_town_name", _price];
 				};
@@ -283,7 +283,7 @@ CTI_UI_Respawn_OnRespawnReady = {
 				_town = _where getVariable "cti_camp_town";
 				switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") do {
 					case 1: {
-						_coefficient = if (_town getVariable "cti_town_sideID" isEqualTo CTI_P_SideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
+						_coefficient = if (_town getVariable "cti_town_sideID" == CTI_P_SideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
 						_price = round((_town getVariable "cti_town_sv") * _coefficient);
 						(-_price) call CTI_CL_FNC_ChangePlayerFunds
 					}; //--- Priced, deduce the cost from the player's funds

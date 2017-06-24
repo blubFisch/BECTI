@@ -33,8 +33,8 @@ _camps = [];
 //--- Determine the camp respawn mode
 switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 	case 1: { //--- Classic Mode, get the closest town
+		private ["_cti_entities", "_list", "_up", "_respawnrangeclas"];
 		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
-		private ["_cti_entities", "_list"];
 		_respawnrangeclas=CTI_RESPAWN_CAMPS_RANGE_CLASSIC+500*_up;
 		_town = (_location) call CTI_CO_FNC_GetClosestTown;
 		if !(isNull _town) then {
@@ -52,10 +52,10 @@ switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 		};
 	};
 	case 2: { //--- Enhanced Respawn, get the camps around the unit
+		private ["_cti_entities", "_list", "_towns_near","_up", "_respawnrange"];
 		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		_respawnrange=CTI_RESPAWN_CAMPS_RANGE_ENHANCED+500*_up;
 		//--- Retrieve the nearby towns (Camps enhanced range * 4)
-		private ["_cti_entities", "_list", "_towns_near"];
 		_towns_near = [_location, CTI_Towns, _respawnrange*4] call CTI_CO_FNC_GetEntitiesInRange;
 		
 		//--- Check the friendly camps of each nearby towns
