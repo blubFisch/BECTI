@@ -350,8 +350,8 @@ class Params {
 	class CTI_ARTILLERY_SETUP {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
-		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = -1;
+		texts[] = {"Disabled","Computer (Vanilla)","Short Range (2k)","Medium Range (4k)","Long Range (6k)","Extreme Range (8k)"};
+		default = 1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";

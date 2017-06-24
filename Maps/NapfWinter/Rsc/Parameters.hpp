@@ -69,7 +69,7 @@ class Params {
 		title = "BASE: Startup Placement";
 		values[] = {2000,3000,4000,5000,6000,7000,8000,9000,10000,12000,15000,20000};
 		texts[] = {"2 KM","3 KM","4 KM","5 KM","6 KM","7 KM","8 KM","9 KM","10 KM","12 KM","15 KM","20 KM"};
-		default = 20000;
+		default = 10000;
 	};
 	class SEPARATOR1 {
 		title = "========================== INCOME ============================";
@@ -309,38 +309,20 @@ class Params {
 		title = "VEHICLES: Loadouts";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Realistic","Unlocked"};
+		default = 2;
+	};
+	class CTI_VEHICLES_AIR_ORDINANCE {
+		title = "VEHICLES: Air Ordinance Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled (no limit)","Enabled"};
 		default = 1;
 	};
-	class CTI_VEHICLES_AIR_FFAR {
-		title = "VEHICLES: Aircraft FFAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_DAR {
-		title = "VEHICLES: Aircraft DAR";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_AA {
-		title = "VEHICLES: Aircraft AA Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_AT {
-		title = "VEHICLES: Aircraft AT Missiles";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
-	class CTI_VEHICLES_AIR_CM {
-		title = "VEHICLES: Aircraft Countermeasures";
-		values[] = {0,1,2};
-		texts[] = {"Disabled","Enabled with Upgrade","Enabled"};
-		default = 2;
-	};
+	class CTI_VEHICLES_LAND_ORDINANCE {
+		title = "VEHICLES: Land Ordinance Upgrade";
+		values[] = {0,1};
+		texts[] = {"Disabled (no limit)","Enabled"};
+		default = 1;
+	};	
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
 		values[] = {0,1};
@@ -368,8 +350,8 @@ class Params {
 	class CTI_ARTILLERY_SETUP {
 		title = "ARTILLERY: Setup";
 		values[] = {-2,-1,0,1,2,3};
-		texts[] = {"Disabled","Ballistic Computer","Short","Medium","Long","Extreme"};
-		default = -1;
+		texts[] = {"Disabled","Computer (Vanilla)","Short Range (2k)","Medium Range (4k)","Long Range (6k)","Extreme Range (8k)"};
+		default = 1;
 	};
 	class SEPARATOR6 {
 		title = "========================== GAMEPLAY ===========================";
@@ -379,9 +361,9 @@ class Params {
 	};
 	class CTI_GAMEPLAY_3P {
 		title = "GAMEPLAY: 3P view";
-		values[] = {1,2,3};
-		texts[] = {"Vehicles","Infrantry","None"};
-		default = 1;
+		values[] = {-1,0,1,2,3};
+		texts[] = {"All","Drivers and Holstered","Vehicles","Infrantry","None"};
+		default = 0;
 	};
 	class CTI_WEAPON_SWAY {
 		title = "GAMEPLAY: Weapon Sway Level";
@@ -629,6 +611,12 @@ class Params {
 		texts[] = {"Disabled","Gear/Troops","Vehicles","Enable All"};
 		default = 3;
 	};
+	class CTI_MALDEN_ADDON {
+		title = "ADDON: MALDEN DLC Support";
+		values[] = {0,1};
+		texts[] = {"Disabled","Enabled"};
+		default = 1;
+	};	
 	class CTI_TANKS_ADDON {
 		title = "ADDON: TANKS DLC Support";
 		values[] = {0,1,2,3};
