@@ -30,7 +30,9 @@ switch (_action) do {
 		if !(call CTI_CL_FNC_IsPlayerCommander) then {
 			{((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl _x) ctrlEnable false} forEach [780106,780102,780103,780107];
 		};
-		if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") < 0) then {((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 780108) ctrlEnable false};
+		if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") < 0) then {
+			((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 780108) ctrlEnable false;
+		};
 		
 		execVM "Client\GUI\GUI_TabletMenu.sqf";
 		

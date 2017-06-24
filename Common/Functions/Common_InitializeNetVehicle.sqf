@@ -116,6 +116,11 @@ if (CTI_SPECIAL_DEPLOYABLEFOBLARGE in _special) then { //--- LARGE FOB vehicle.
 	_vehicle addAction ["<t color='#FFBD4C'>DEPLOY LARGE FOB</t>","Client\Actions\Action_DeployFOB.sqf", ["large"], 10, false, true, "", "(player isEqualTo driver _target) && !(CTI_P_fob_currently_deploying)"];
 };
 
+//Artillery Menu in action menu for ease
+if (getNumber(configFile >> "CfgVehicles" >> _classname >> "artilleryScanner") > 0 && (missionNamespace getVariable "CTI_ARTILLERY_SETUP") > -1) then {
+	_vehicle addAction ["<t color='#FFBD4C'>Ballistics Computer</t>","Client\Actions\Action_ArtilleryMenu.sqf", [], 10, false, false, "", "(player isEqualTo gunner _target)"];
+};
+
 //--- Get a proper icon
 if (_marker_type isEqualTo "") then {
 	_marker_size = [0.75,0.75];
