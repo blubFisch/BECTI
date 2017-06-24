@@ -64,7 +64,7 @@ CTI_UI_KeyHandler_SatelitteCamera_MouseZChanged = {
 	_pos = getPos CTI_SatelitteCamera;
 	_level = _pos select 2;
 	
-	_change = if (_change > 0) then { _level - (_level * 0.2) } else { _level + (_level * 0.2) };
+	_change = [_level + (_level * 0.2), _level - (_level * 0.2)] select (_change > 0);
 	if (_change > CTI_SATCAM_ZOOM_MAX) then { _change = CTI_SATCAM_ZOOM_MAX };
 	if (_change < CTI_SATCAM_ZOOM_MIN) then { _change = CTI_SATCAM_ZOOM_MIN };
 	
@@ -119,7 +119,7 @@ CTI_UI_KeyHandler_SatelitteCamera_MouseButtonDown = {
 CTI_UI_KeyHandler_SatelitteCamera_MouseButtonUp = {
 	_button = _this select 1;
 	
-	if (_button == 1) then { //--- Right clicked
+	if (_button isEqualTo 1) then { //--- Right clicked
 		uiNamespace setVariable ["cti_dialog_ui_satcam_anchor", nil];
 	};
 };
@@ -157,7 +157,7 @@ CTI_UI_KeyHandler_SatelitteCamera_MouseMoving = {
 CTI_UI_KeyHandler_UnitsCam_MouseButtonUp = {
 	_button = _this select 1;
 	
-	if (_button == 1) then { //--- Right clicked
+	if (_button isEqualTo 1) then { //--- Right clicked
 		uiNamespace setVariable ["cti_dialog_ui_unitscam_anchor", nil];
 	};
 };

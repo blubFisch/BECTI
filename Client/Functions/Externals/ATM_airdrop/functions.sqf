@@ -193,8 +193,8 @@ dokeyDown={
 	player setvariable ["key",false];
    _r = false ;
 
-   if (player getvariable["key",true] and (_this select 1)  == Keys) exitwith {player setvariable["key",false]; [_key_delay] spawn {sleep (_this select 0);player setvariable["key",true]; }; _r};
-     if ((_this select 1)  == Keys) then {
+   if (player getvariable["key",true] and (_this select 1)  isEqualTo Keys) exitwith {player setvariable["key",false]; [_key_delay] spawn {sleep (_this select 0);player setvariable["key",true]; }; _r};
+     if ((_this select 1)  isEqualTo Keys) then {
        if  (player != vehicle player and player getvariable ["cutaway",true]) then  {
        	playSound CTI_SOUND_Para;
 		_cut = nearestObjects [player, ["Steerable_Parachute_F"], 5];
@@ -281,7 +281,7 @@ Frontpack={
 		_target setvariable ["frontpack", _packHolder,true];
 		_packHolder setVectorDirAndUp [[0,1,0],[0,0,-1]];
 
-		waitUntil {animationState _target == "para_pilot"};
+		waitUntil {animationState _target isEqualTo "para_pilot"};
 		_packHolder attachTo [vehicle _target,[0.1,0.72,0.52],"pelvis"];
 		_packHolder setVectorDirAndUp [[0,0.1,1],[0,1,0.1]];
 		};

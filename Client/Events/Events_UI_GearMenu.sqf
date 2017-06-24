@@ -19,10 +19,9 @@ switch (_action) do {
 		
 		//--- Handle drag stop //todo check the getVariable modification.
 		_dragging = if (isNil{uiNamespace getVariable "cti_dialog_ui_gear_dragging"}) then {false} else {uiNamespace getVariable "cti_dialog_ui_gear_dragging"};
-		// if (uiNamespace getVariable ["cti_dialog_ui_gear_dragging", false]) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
+		if (uiNamespace getVariable ["cti_dialog_ui_gear_dragging", false]) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
 		if (_dragging) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
-		// (findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "if (uiNamespace getVariable ['cti_dialog_ui_gear_dragging', false]) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Functions\UI\Function_UI_Gear_Events.sqf'}"];
-		(findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "_dragging = if (isNil{uiNamespace getVariable 'cti_dialog_ui_gear_dragging'}) then {false} else {uiNamespace getVariable 'cti_dialog_ui_gear_dragging'}; if (_dragging) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'}"];
+		(findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "if (uiNamespace getVariable ['cti_dialog_ui_gear_dragging', fase]) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'}"];
 	if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then {
 		ctrlEnable [70030, true];
 		ctrlEnable [70029, true];
@@ -204,7 +203,7 @@ switch (_action) do {
 		_mouse = _this select 3;
 		
 		//--- Remove the container & its content if needed
-		if (_mouse == 1 && uiNamespace getVariable "cti_dialog_ui_gear_target" isKindOf "Man") then { //--- Right click
+		if (_mouse isEqualTo 1 && uiNamespace getVariable "cti_dialog_ui_gear_target" isKindOf "Man") then { //--- Right click
 			_updated = ["", _container] call CTI_UI_Gear_ReplaceContainer;
 			if (_updated) then { call CTI_UI_Gear_UpdatePrice };
 		};
@@ -458,7 +457,7 @@ switch (_action) do {
 					hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t align='left'>A new temporary template has been created with the name <t color='#bcff70'>%1</t>.<br /><br />You may find it in the <t color='#eaff96'>Template</t> tab</t><br /><br /><img image='Rsc\Pictures\icon_wf_building_barracks.paa' size='2.5'/>", _label];
 				};
 				
-				if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" == CTI_GEAR_TAB_TEMPLATES) then { //--- Reload the template tab if needed
+				if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" isEqualTo CTI_GEAR_TAB_TEMPLATES) then { //--- Reload the template tab if needed
 					(CTI_GEAR_TAB_TEMPLATES) call CTI_UI_Gear_DisplayShoppingItems;
 				};
 			} else {
@@ -471,7 +470,7 @@ switch (_action) do {
 		//todo: lnbvalue later when they're hidden
 		_index = _this select 1;
 		
-		if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" == CTI_GEAR_TAB_TEMPLATES) then {
+		if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" isEqualTo CTI_GEAR_TAB_TEMPLATES) then {
 			_seed = lnbValue[70108, [_index,0]];
 			
 			if (CTI_Log_Level >= CTI_Log_Debug) then {["DEBUG", "FILE: Client\Events\Events_UI_GearMenu.sqf", format["Attempting to remove the template at index [%1] which has a seed value of [%2]", _index, _seed]] call CTI_CO_FNC_Log};
@@ -486,7 +485,7 @@ switch (_action) do {
 				//--- Persistent!
 				(_seed) call CTI_UI_Gear_RemoveProfileTemplate;
 				
-				if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" == CTI_GEAR_TAB_TEMPLATES) then { //--- Reload the template tab if needed
+				if (uiNamespace getVariable "cti_dialog_ui_gear_shop_tab" isEqualTo CTI_GEAR_TAB_TEMPLATES) then { //--- Reload the template tab if needed
 					(CTI_GEAR_TAB_TEMPLATES) call CTI_UI_Gear_DisplayShoppingItems;
 				};
 			};
@@ -503,7 +502,7 @@ switch (_action) do {
 			_container_type = ((_gear select 1) select _container) select 0;
 			
 			if (_container_type != "") then {
-				if (uiNamespace getVariable "cti_dialog_ui_gear_items_tab" == _container) then {lnbClear 70109};
+				if (uiNamespace getVariable "cti_dialog_ui_gear_items_tab" isEqualTo _container) then {lnbClear 70109};
 				
 				["Container", "", _container_type, [_container, ((_gear select 1) select _container) select 1]] call CTI_UI_Gear_UpdateMass;
 				((_gear select 1) select _container) set [1, []];

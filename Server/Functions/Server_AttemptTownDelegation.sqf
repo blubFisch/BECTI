@@ -29,13 +29,12 @@
 	  -> Delegate the creation to the HC if any, return false if none are present
 */
 
-private ["_candidates", "_groups", "_positions", "_side", "_teams", "_town"];
+params ["_town", "_side", "_teams", "_groups", "_positions"];
+private ["_candidates", "_candidates_count", "_delegated", "_delegation_table", "_sleep_thread"];
 
-_town = _this select 0;
-_side = _this select 1;
-_teams = +(_this select 2);
-_groups = +(_this select 3);
-_positions = +(_this select 4);
+_teams = +(_teams);
+_groups = +(_groups);
+_positions = +(_positions);
 
 _candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
 
@@ -58,7 +57,7 @@ if !(isNil '_candidates') then {
 		
 		_index_hc = 0;
 		for '_i' from 0 to count(_teams)-1 do {
-			_delegation_table set [_index_hc, (_delegation_table select _index_hc) + [[_teams select _i, _groups select _i, _positions select _i]]];
+			_delegation_table set [_index_hc, (_delegation_table select _index_hc) pushBack [_teams select _i, _groups select _i, _positions select _i]];
 			_index_hc = if (_index_hc+1 > _candidates_count) then {0} else {_index_hc + 1};
 		};
 		

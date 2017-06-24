@@ -142,7 +142,7 @@ while { true } do
 	_availableCRAMs = [];
 	{
 		private _g = gunner _x;
-		if (side _x == _side && alive _g) then {
+		if (side _x isEqualTo _side && alive _g) then {
 			_availableCRAMs pushBack _x
 		};
 	} forEach entities [_CRAMClassnames, [], false, true];
@@ -217,7 +217,7 @@ while { true } do
 			if (count _readyCRAMs > 0) then {
 				// Find the closest ready turret to target
 				{
-					if (_bestDist == 0 || _x distance _tgt < _bestDist) then {
+					if (_bestDist isEqualTo 0 || _x distance _tgt < _bestDist) then {
 						_bestDist = _x distance _tgt;
 						_bestCRAM = _x;
 					};

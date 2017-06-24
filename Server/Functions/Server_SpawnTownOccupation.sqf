@@ -39,10 +39,9 @@
 	  -> Will spawn West defense forces for Town0
 */
 
-private ["_groups", "_pool", "_pool_units", "_positions", "_side", "_sideID", "_teams", "_totalGroups", "_town", "_upgrade", "_value", "_vehicles"];
+params ["_town", "_side"];
+private ["_groups", "_pool", "_pool_units", "_positions", "_sideID", "_teams", "_totalGroups", "_upgrade", "_value", "_vehicles"];
 
-_town = _this select 0;
-_side = _this select 1;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 _upgrade = (_side call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_TOWNS;
 
@@ -68,8 +67,8 @@ _tries = 400;
 
 //--- Pool data: [<GROUP>, <PRESENCE>, {<SPAWN PROBABILITY>}], nesting is possible to narrow down some choices
 if (isNil {_town getVariable "cti_naval"}) then {
-	if (CTI_ZOMBIE_MODE == 0 && isNil {_town getVariable "cti_zombie"}) then {
-		if (CTI_GUERILLA_MODE == 0 && isNil {_town getVariable "cti_infantry"}) then {
+	if (CTI_ZOMBIE_MODE isEqualTo 0 && isNil {_town getVariable "cti_zombie"}) then {
+		if (CTI_GUERILLA_MODE isEqualTo 0 && isNil {_town getVariable "cti_infantry"}) then {
 			switch (true) do { 	
 
 				//--- Normal Town Values
@@ -652,7 +651,7 @@ while {_totalGroups > 0} do {
 		_team = _x;
 		
 		//--- If nested, pick a random element
-		if (typeName(_team select 0) == "ARRAY") then {
+		if (typeName(_team select 0) isEqualTo "ARRAY") then {
 			_team = _team select floor(random count _team);
 		};
 		
@@ -677,10 +676,11 @@ while {_totalGroups > 0} do {
 //--- Create the groups server-sided
 _groups = [];
 _positions = [];
-_camps = (_town) Call CTI_CO_FNC_GetTownCamps;
+_camps = (_town) call CTI_CO_FNC_GetTownCamps;
 
 _positions_building = _town getVariable ["cti_town_spawn_building", []];
 if (count _positions_building > 0) then {_positions_building = _positions_building call CTI_CO_FNC_ArrayShuffle};
+
 {
 	_position = [];
 	_has_vehicles = false;
@@ -728,26 +728,12 @@ if (count _positions_building > 0) then {_positions_building = _positions_buildi
 	};
 
 	_positions pushBack _position;
-
-	if (CTI_DEV_MODE > 0) then {
-	//--- Paint Spawning Positions on map, used for debug
-		_marker = createMarker [(format ["safepos%1", ([0, 350] call BIS_fnc_randomInt)]), _position];
-		_marker setMarkerShape "ICON";
-		_marker setMarkerType "hd_dot";
-		_marker setMarkerColor "ColorGreen";
-	};
-
+	
 	_group = createGroup _side;
 	_group setGroupIdGlobal [format["(%1) %2", _town, _group]];
 	_group deleteGroupWhenEmpty true;
 	_groups pushBack _group;
 	
-	//--- Set AI to Combat mode
-	_group setBehaviour "AWARE";
-	_group setCombatMode "RED";
-	_group setSpeedMode "FULL";
-	_group enableAttack true;
-
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_SpawnTownOccupation.sqf", format["Composing Occupation Team for town [%1] on side [%2] using group [%3] at position [%4] with units [%5]", _town getVariable "cti_town_name", _side, _group, _position, _x]] call CTI_CO_FNC_Log;
 	};

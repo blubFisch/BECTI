@@ -23,11 +23,7 @@
     [Barracks1, BarrackCoreInfo, East] call CTI_SE_FNC_InitializeStructure
 */
 
-private ["_side", "_structure", "_var"];
-
-_structure = _this select 0;
-_var = _this select 1;
-_side = _this select 2;
+params ["_structure", "_var", "_side"];
 
 switch ((_var select CTI_STRUCTURE_LABELS) select 0) do {
 	case CTI_BARRACKS: {

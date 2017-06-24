@@ -36,18 +36,8 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
 
-private ["_completion_ratio", "_damage", "_damaged", "_ammo", "_direction", "_logic", "_position", "_reduce_damages", "_multiply_damages", "_shooter", "_side", "_sideID", "_var", "_variable", "_virtual_damages","_ruins","_health","_lastdamagetime", "_lastdamagediff"];
-
-_damaged = _this select 0;
-_damage = _this select 1;
-_shooter = _this select 2;
-_ammo = _this select 3;
-_variable = _this select 4;
-_sideID = _this select 5;
-_position = _this select 6;
-_direction = _this select 7;
-_reduce_damages = _this select 8;
-_multiply_damages = _this select 9;
+params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
+private ["_logic", "_side", "_var", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff"];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -58,7 +48,7 @@ _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
 if (_lastdamagediff <= 0.1) exitWith {0};
 
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
@@ -157,10 +147,10 @@ if (_virtual_damages >= 1 || !alive _damaged) then {
 		};
 		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
 		_ruins = "";
-		{if (_x select 0 == "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+		{if (_x select 0 isEqualTo "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		[_damaged, _shooter, _sideID, _ruins, _variable] spawn CTI_SE_FNC_OnDefenseDestroyed;
 };
-if (CTI_BASE_DISPLAY_HINT == 1) then {
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then {
 	_health = (1 - _virtual_damages);
 	_health = (_health*100);
 	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place

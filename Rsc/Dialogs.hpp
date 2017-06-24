@@ -5124,7 +5124,7 @@ class CTI_RscArtilleryMenu {
 			
 			sizeEx = "0.85 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 			
-			text = "Call Fire Mission";
+			text = "call Fire Mission";
 			action = "['onFireMissionCall'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_ArtilleryMenu.sqf'";
 		};
 		class CTI_Menu_FireMission_SelectAll : CTI_Menu_FireMission_Call {

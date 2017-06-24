@@ -29,21 +29,17 @@
     _defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _side call CTI_CO_FNC_GetSideID, _ruins, _varname]];
 */
 
-private ["_killed", "_killer", "_logic", "_position", "_side", "_sideID", "_var", "_varname"];
+params ["_killed", "_killer", "_sideID", "_ruins", "_varname"];
+private ["_logic", "_position", "_side", "_var"];
 
-_killed = _this select 0;
-_killer = _this select 1;
-_sideID = _this select 2;
-_ruins = _this select 3;
-_varname = _this select 4;
 _position = getPos _killed;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _var = missionNamespace getVariable _varname;
 _fob = false;
-{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if ((_x select 0) isEqualTo "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 _large_fob = false;
-{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if (_x select 0 isEqualTo "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 if (_fob) then { //--- Erase this FOB upon destruction

@@ -214,7 +214,7 @@ FNC_BAPS_SCAN =
 		_block = "true";
 		// Specific duel APS code for Merkava Mk4
 		_vehicleType = typeOf _defender;
-		if (_vehicleType == "B_MBT_01_cannon_F") then 
+		if (_vehicleType isEqualTo "B_MBT_01_cannon_F") then 
 		{
 			// Get the direction of the tank's turret
 			_weaponDir = _defender weaponDirection "cannon_120mm";
@@ -312,7 +312,7 @@ FNC_BAPS_BLOCK_SMOKE =
 	_ammoLeft = _defender getVariable "ammo_left";
 	_ammoRight = _defender getVariable "ammo_right";
 	_do = 1;
-	while {_do == 1} do
+	while {_do isEqualTo 1} do
 	{
 		_speed = speed _projectile;
 		if (_speed != 0 && alive _projectile) then
@@ -348,17 +348,17 @@ FNC_BAPS_BLOCK_SMOKE =
 				_reloadRight = _defender getVariable "reloading_right"; 
 				
 				// Check if the vehicle's APS is reloading on default/left side
-				if ((_block == "left" || _block == "true") && _reloadLeft == 1) then 
+				if ((_block isEqualTo "left" || _block isEqualTo "true") && _reloadLeft isEqualTo 1) then 
 				{
 					_canBlock = false;
 				};	
 				// Check if the vehicle's APS is reloading on right side
-				if (_block == "right" && _reloadRight == 1) then 
+				if (_block isEqualTo "right" && _reloadRight isEqualTo 1) then 
 				{
 					_canBlock = false;
 				};	
 				// Check if the vehicles's default/left APS has ammo left
-				if (_canBlock && (_block == "left" || _block == "true")) then 
+				if (_canBlock && (_block isEqualTo "left" || _block isEqualTo "true")) then 
 				{
 					if (_ammoLeft < 1) then
 					{
@@ -380,7 +380,7 @@ FNC_BAPS_BLOCK_SMOKE =
 					};
 				};	
 				// Check if the vehicles's right APS has ammo left
-				if (_canBlock &&  _block == "right" ) then 
+				if (_canBlock &&  _block isEqualTo "right" ) then 
 				{
 					if (_ammoRight < 1) then
 					{
@@ -410,7 +410,7 @@ FNC_BAPS_BLOCK_SMOKE =
 					// Remove the threat and create FX
 					//deleteVehicle _projectile;
 					// Check projectile side
-					if (_block == "true" || _block == "left" ) then 
+					if (_block isEqualTo "true" || _block isEqualTo "left" ) then 
 					{
 						_toleftside = _defender modelToWorld [-7,0,1];
 						//_sfx1 = createVehicle ["SmallSecondary", _toleftside, [], 0, "CAN_COLLIDE"];
@@ -420,7 +420,7 @@ FNC_BAPS_BLOCK_SMOKE =
 						//[_toleftside, _upgrade_lvoss] spawn DEPLOY_SMOKE_CLOUD;
 						[_toleftside, _upgrade_lvoss] remoteExec ["CTI_PVF_CLT_APS_SMOKESCREEN"];
 					};	
-					if (_block == "right") then 
+					if (_block isEqualTo "right") then 
 					{
 						_torightside = _defender modelToWorld [7,0,1];
 						//_sfx4 = createVehicle ["SmallSecondary", _torightside, [], 0, "CAN_COLLIDE"];
@@ -432,7 +432,7 @@ FNC_BAPS_BLOCK_SMOKE =
 
 					};
 					// Do reload and ammo functions
-					if (_block == "true" || _block == "left") then 
+					if (_block isEqualTo "true" || _block isEqualTo "left") then 
 					{
 						[_defender, _upgrade_lvoss] spawn 
 						{ 
@@ -443,7 +443,7 @@ FNC_BAPS_BLOCK_SMOKE =
 							_defender setVariable ["reloading_left", 0, true];
 						};
 					};
-					if (_block == "right") then
+					if (_block isEqualTo "right") then
 					{
 						[_defender, _upgrade_lvoss] spawn 
 						{ 
@@ -492,7 +492,7 @@ FNC_BAPS_BLOCK =
 	_ammoLeft = _defender getVariable "ammo_left";
 	_ammoRight = _defender getVariable "ammo_right";
 	_do = 1;
-	while {_do == 1} do
+	while {_do isEqualTo 1} do
 	{
 		_speed = speed _projectile;
 		if (_speed != 0 && alive _projectile) then
@@ -535,17 +535,17 @@ FNC_BAPS_BLOCK =
 				_reloadRight = _defender getVariable "reloading_right";
 				
 				// Check if the vehicle's APS is reloading on default/left side
-				if ((_block == "left" || _block == "true") && _reloadLeft == 1) then 
+				if ((_block isEqualTo "left" || _block isEqualTo "true") && _reloadLeft isEqualTo 1) then 
 				{
 					_canBlock = false;
 				};	
 				// Check if the vehicle's APS is reloading on right side
-				if (_block == "right" && _reloadRight == 1) then 
+				if (_block isEqualTo "right" && _reloadRight isEqualTo 1) then 
 				{
 					_canBlock = false;
 				};	
 				// Check if the vehicles's default/left APS has ammo left
-				if (_canBlock && (_block == "left" || _block == "true")) then 
+				if (_canBlock && (_block isEqualTo "left" || _block isEqualTo "true")) then 
 				{
 					if (_ammoLeft < 1) then
 					{
@@ -567,7 +567,7 @@ FNC_BAPS_BLOCK =
 					};
 				};	
 				// Check if the vehicles's right APS has ammo left
-				if (_canBlock &&  _block == "right" ) then 
+				if (_canBlock &&  _block isEqualTo "right" ) then 
 				{
 					if (_ammoRight < 1) then
 					{
@@ -600,7 +600,7 @@ FNC_BAPS_BLOCK =
 					//[position _projectile] spawn DEPLOY_SHOCK_WAVE;
 					[position _projectile] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
 					// Do reload and ammo functions
-					if (_block == "true" || _block == "left") then 
+					if (_block isEqualTo "true" || _block isEqualTo "left") then 
 					{
 						[_defender, _upgrade_era] spawn 
 						{ 
@@ -611,7 +611,7 @@ FNC_BAPS_BLOCK =
 							_defender setVariable ["reloading_left", 0, true]; 
 						};
 					};
-					if (_block == "right") then
+					if (_block isEqualTo "right") then
 					{
 						[_defender, _upgrade_era] spawn 
 						{ 

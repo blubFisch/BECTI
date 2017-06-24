@@ -1,6 +1,6 @@
 _range = (CTI_TOWNS_RESISTANCE_SPAWN_RANGE + CTI_TOWNS_OCCUPATION_SPAWN_RANGE) / 2;
 
-if (CTI_Log_Level >= CTI_Log_Debug) then {
+if (CTI_Log_Level >= CTI_Log_Information) then {
 	["INFORMATION", "FILE: Common\Init\Init_TownsPositions.sqf", format["Scanning all [%1] towns for valid position and structures within [%2] meters", count CTI_Towns, _range]] call CTI_CO_FNC_Log;
 };
 

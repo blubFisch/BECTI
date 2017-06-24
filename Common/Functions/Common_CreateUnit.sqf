@@ -43,8 +43,8 @@ if (CTI_Log_Level >= CTI_Log_Debug) then {
 	["DEBUG", "FILE: Common\Functions\Common_CreateUnit.sqf", format["Attempting to create a [%1] unit on team [%2] at [%3] on side [%4], net? [%5] special? [%6]", _classname, _group, _position, _sideID, _net, _special]] call CTI_CO_FNC_Log;
 };
 
-if (typeName _position == "OBJECT") then {_position = getPos _position};
-if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
+if (typeName _position isEqualTo "OBJECT") then {_position = getPos _position};
+if (typeName _sideID isEqualTo "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 
 _unit = _group createUnit [_classname, _position, [], 0, _special];
 
@@ -52,9 +52,6 @@ if (_net) then {_unit setVariable ["cti_net", _sideID, true]};
 
 //--- Add a Killed EH.
 _unit addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", _sideID]];
-
-//-- Deleted EH
-_unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
 
 //Check Barrack Upgrade and set default skills
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;

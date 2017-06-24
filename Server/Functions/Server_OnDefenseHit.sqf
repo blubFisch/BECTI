@@ -29,13 +29,9 @@
     _structure addEventHandler ["hit", format ["[_this select 0, _this select 2, %1, '%2', %3] spawn CTI_SE_FNC_OnDefenseHit", (_side) call CTI_CO_FNC_GetSideID, _variable, _position]];
 */
 
+params ["_structure", "_damage", "_sideID", "_variable", "_position"];
 private ["_damage", "_logic", "_position", "_side", "_sideID", "_structure", "_variable"];
 
-_structure = _this select 0;
-_damage = _this select 1;
-_sideID = _this select 2;
-_variable = _this select 3;
-_position = _this select 4;
 systemchat format ["HIT %1",_damage];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;

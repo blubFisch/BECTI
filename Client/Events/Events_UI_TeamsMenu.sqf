@@ -3,7 +3,7 @@ _action = _this select 0;
 
 switch (_action) do {
 	case "onLoad": {
-		_groups = if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" == 1) then {(CTI_P_SideJoined) call CTI_CO_FNC_GetSideGroups} else {(CTI_P_SideJoined) call CTI_CO_FNC_GetSidePlayerGroups};
+		_groups = if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" isEqualTo 1) then {(CTI_P_SideJoined) call CTI_CO_FNC_GetSideGroups} else {(CTI_P_SideJoined) call CTI_CO_FNC_GetSidePlayerGroups};
 		_commander = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideCommanderTeam;
 		_groups = _groups - [_commander];
 		// if (_commander != group player) exitWith {};
@@ -48,10 +48,10 @@ switch (_action) do {
 		
 		((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190005) lbSetCurSel (if (_who getVariable "cti_independent") then {0} else {1});
 		for '_i' from 0 to lbSize((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190006)-1 do {
-			if (((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190006) lbData _i == _role) exitWith {((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190006) lbSetCurSel _i};
+			if (((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190006) lbData _i isEqualTo _role) exitWith {((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190006) lbSetCurSel _i};
 		};
 		for '_i' from 0 to lbSize((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190016)-1 do {
-			if (((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190016) lbValue _i == _order) exitWith {((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190016) lbSetCurSel _i};
+			if (((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190016) lbValue _i isEqualTo _order) exitWith {((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190016) lbSetCurSel _i};
 		};
 	};
 	case "onSetTeamIndependentPressed": {
@@ -60,8 +60,8 @@ switch (_action) do {
 		
 		if (_selected > -1 && _independent_mode > -1) then {
 			_who = (uiNamespace getVariable "cti_dialog_ui_teamsmenu_groups") select _selected;
-			_current_eta = if (_who getVariable "cti_independent") then {0} else {1};
-			if (_independent_mode != _current_eta) then {_who setVariable ["cti_independent", if (_independent_mode == 0) then {true} else {false}, true]};
+			_current_eta = [1, 0] select (_who getVariable "cti_independent");
+			if !(_independent_mode isEqualTo _current_eta) then {_who setVariable ["cti_independent", ([false, true] select (_independent_mode isEqualTo 0)), true]};
 		};
 	};
 	case "onSetRolePressed": {
@@ -97,7 +97,7 @@ switch (_action) do {
 			_amount = ((uiNamespace getVariable "cti_dialog_ui_teamsmenu") displayCtrl 190007) lbValue _amount;
 			_funds = call CTI_CL_FNC_GetPlayerFunds;
 			
-			if (_funds >= _amount && _who != group player) then {
+			if (_funds >= _amount && !(_who isEqualTo group player)) then {
 				[_who, _amount] call CTI_CO_FNC_ChangeFunds;
 				-(_amount) call CTI_CL_FNC_ChangePlayerFunds;
 				hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br />Transfered <t color='%1'>$%2</t> to group <t color='#55bcfc'>%3 (%4)</t>.", CTI_P_Coloration_Money, _amount, _who getVariable ["cti_alias",CTI_PLAYER_DEFAULT_ALIAS], name leader _who];
@@ -109,8 +109,8 @@ switch (_action) do {
 		
 		if (_independent_mode > -1) then {
 			{
-				_current_eta = if (_x getVariable "cti_independent") then {0} else {1};
-				if (_independent_mode != _current_eta) then {_x  setVariable ["cti_independent", if (_independent_mode == 0) then {true} else {false}, true]};
+				_current_eta = [1, 0] select (_x getVariable "cti_independent");
+				if !(_independent_mode isEqualTo _current_eta) then {_x setVariable ["cti_independent", ([false, true] select (_independent_mode isEqualTo 0)), true]};
 			} forEach (uiNamespace getVariable "cti_dialog_ui_teamsmenu_groups");
 		};
 	};
@@ -155,8 +155,8 @@ switch (_action) do {
 	case "onAllAIIndependentPressed": {
 		_independent_mode = _this select 1;
 		{
-			_current_eta = if (_x getVariable "cti_independent") then {0} else {1};
-			if (_independent_mode != _current_eta) then {_x  setVariable ["cti_independent", if (_independent_mode == 0) then {true} else {false}, true]};
+			_current_eta = [1, 0] select (_x getVariable "cti_independent");
+			if !(_independent_mode isEqualTo _current_eta) then {_x setVariable ["cti_independent", [false, true] select (_independent_mode isEqualTo 0), true]};
 		} forEach (uiNamespace getVariable "cti_dialog_ui_teamsmenu_groups");
 	};
 	case "onTeamDisband": {

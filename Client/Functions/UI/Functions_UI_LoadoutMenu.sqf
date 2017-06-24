@@ -288,7 +288,7 @@ CTI_UI_Loadout_viewAllMags = {
 
 	//Pylons
 	_enableall = false;
-	if (CTI_VEHICLES_LOADOUTS == 2) then {_enableall = true;};
+	if (CTI_VEHICLES_LOADOUTS isEqualTo 2) then {_enableall = true;};
 	_getCompatibles = getArray (configfile >> "CfgVehicles" >> _classname >> "Components" >> "TransportPylonsComponent" >> "Pylons" >> _selectedturret >> "hardpoints");
 	if (_getCompatibles isEqualTo []) then {
 		//darn BI for using "Pylons" and "pylons" all over the place as if it doesnt fucking matter ffs honeybadger
@@ -368,34 +368,34 @@ CTI_UI_Loadout_viewTurretMags = {
 		if ((count _compatiblemags) > 0) then {
 			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			{	
-				if (CTI_VEHICLES_LAND_ORDINANCE == 1 || CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+				if (CTI_VEHICLES_LAND_ORDINANCE isEqualTo 1 || CTI_VEHICLES_AIR_ORDINANCE isEqualTo 1) then {
 						_magvar = missionNamespace getVariable _x;
 						if (!isNil "_magvar") then {
 							_upgradetype = _magvar select 0;
 							_ammoupgrade = _magvar select 1;
 							_upgrade_lvl = 0;
-							if (_upgradetype == "Land" && CTI_VEHICLES_LAND_ORDINANCE == 1) then {
+							if (_upgradetype isEqualTo "Land" && CTI_VEHICLES_LAND_ORDINANCE isEqualTo 1) then {
 								_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
 							};
-							if (_upgradetype == "Air" && CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+							if (_upgradetype isEqualTo "Air" && CTI_VEHICLES_AIR_ORDINANCE isEqualTo 1) then {
 								_upgrade_lvl = _upgrades select CTI_UPGRADE_AIR_ORDINANCE;
 							};							
 							if (_upgrade_lvl >= _ammoupgrade) then {
 								_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-								if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+								if (_hasName isEqualTo "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
 								lbAdd [790007,format ["%1", _hasName]];
 								lbsetData [790007,_foreachIndex,_x];
 							};
 						} else {
 							_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-							if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+							if (_hasName isEqualTo "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
 							lbAdd [790007,format ["NO DATA | %1", _hasName]];
 							lbsetData [790007,_foreachIndex,_x];
 						};
 	
 				} else {
 					_hasName = getText (configfile >> "CfgMagazines" >> _x >> "displayName");
-					if (_hasName == "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
+					if (_hasName isEqualTo "") then {_hasName = getText(configFile >> 'CfgMagazines' >> _x >> 'ammo')};
 					lbAdd [790007,format ["%1", _hasName]];
 					lbsetData [790007,_foreachIndex,_x];
 				};								
@@ -444,16 +444,16 @@ CTI_UI_Loadout_viewMags = {
 		if ((count _validPylonMags) > 0) then {
 			_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			{
-				if (CTI_VEHICLES_LAND_ORDINANCE == 1 || CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+				if (CTI_VEHICLES_LAND_ORDINANCE isEqualTo 1 || CTI_VEHICLES_AIR_ORDINANCE isEqualTo 1) then {
 					_magvar = missionNamespace getVariable _x;
 					if (!isNil "_magvar") then {
 						_upgradetype = _magvar select 0;
 						_ammoupgrade = _magvar select 1;
 						_upgrade_lvl = 0;
-						if (_upgradetype == "Land" && CTI_VEHICLES_LAND_ORDINANCE == 1) then {
+						if (_upgradetype isEqualTo "Land" && CTI_VEHICLES_LAND_ORDINANCE isEqualTo 1) then {
 							_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
 						};
-						if (_upgradetype == "Air" && CTI_VEHICLES_AIR_ORDINANCE == 1) then {
+						if (_upgradetype isEqualTo "Air" && CTI_VEHICLES_AIR_ORDINANCE isEqualTo 1) then {
 							_upgrade_lvl = _upgrades select CTI_UPGRADE_AIR_ORDINANCE;
 						};												
 						if (_upgrade_lvl >= _ammoupgrade) then {
@@ -493,7 +493,7 @@ CTI_UI_Loadout_viewCurrentMag = {
 	_name = getText(configFile >> 'CfgMagazines' >> _curmagclass >> 'displayName');
 	//systemchat format ["_curmagclass: %1 | %2",_name, _curmagclass];
 	lnbClear 790020;
-	if(_curmagclass == "") then {
+	if(_curmagclass isEqualTo "") then {
 		lnbAddRow [790020, ["No Mags "]];	
 	} else {
 		lnbAddRow [790020, [_name]];
@@ -509,7 +509,7 @@ CTI_UI_Loadout_viewMagStats = {
 	_validPylons = _unitpylonfull select 0;
 	_pylonNum = 0;
 	{
-		if (_x == _pylonName) then {_pylonNum = _foreachindex};
+		if (_x isEqualTo _pylonName) then {_pylonNum = _foreachindex};
 	} foreach _validPylons;
 
 	_magDispName = getText (configfile >> "CfgMagazines" >> _magclass >> "displayName");
@@ -756,7 +756,7 @@ CTI_UI_Loadout_installturrets = {
 	_path = [];
 	_mag = "";
 	{ 
-		if(_turretName == _x) then {_path = _paths select _foreachindex;_mag = _mags select _foreachindex;};
+		if(_turretName isEqualTo _x) then {_path = _paths select _foreachindex;_mag = _mags select _foreachindex;};
 	} forEach _turrets;
 	//systemchat format ["_path %1 ",_path];
 	if (isNil "_path") then {_path = [0]};
@@ -858,7 +858,7 @@ CTI_UI_Loadout_listSkins = {
 	
 	//ADMIN ONLY SECTION -- maybe ranks later?
 	_adminState = call BIS_fnc_admin;
-	if (_adminState == 2) then {
+	if (_adminState isEqualTo 2) then {
 		//usa 
 		lbAdd [790111, "USA"];
 		_colorNames pushback ("USA");
@@ -881,7 +881,7 @@ CTI_UI_Loadout_setSkin = {
 		disableserialization; 
 		_controlbar = (uiNamespace getVariable "cti_dialog_ui_loadoutmenu") displayCtrl 790024;
 		_controlbar progressSetPosition 0;
-		if (_colorName == "SolidBlack" || _colorName == "SolidTan" || _colorName == "SolidGreen" || _colorName == "SolidGrey" || _colorName == "USA") then {			
+		if (_colorName isEqualTo "SolidBlack" || _colorName isEqualTo "SolidTan" || _colorName isEqualTo "SolidGreen" || _colorName isEqualTo "SolidGrey" || _colorName isEqualTo "USA") then {			
 			{
 				//PROGRESSBAR
 				_pos = progressPosition _controlbar;

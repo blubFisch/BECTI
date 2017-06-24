@@ -13,17 +13,7 @@ _thirdshot = [cam4, cam4, target3, 5, 1, 1, true, 0,-6,3] execVM "camera_work.sq
 waitUntil {scriptDone _thirdshot};
 */
 
-
-_campos1= _this select 0;
-_campos2= _this select 1;
-_targetcam = _this select 2;
-_camera_duration = _this select 3;
-_zoom_level1 = _this select 4;
-_zoom_level2 = _this select 5;
-_cam_attached = _this select 6;
-_x_coord = _this select 7;
-_y_coord = _this select 8;
-_z_coord = _this select 9;
+params ["_campos1", "_campos2", "_targetcam", "_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord"]
 
 // to do exception management
 // if ((isNull _campos1)or(isNull _campos2)or(isNull _targetcam)) then exitWith {};
@@ -53,10 +43,10 @@ if (_cam_attached) then {
 	_loop = 0;
 	while{(_loop < _camera_duration)} do { 
 		sleep 1;
-		if (player getVariable "cti_intro" == 1) exitwith {};
+		if (player getVariable "cti_intro" isEqualTo 1) exitwith {};
 		_loop = _loop + 1; 
 	};
-	_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+	_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
 	//sleep _camera_duration;
 
 	_camera cameraeffect ["terminate", "back"];
@@ -81,7 +71,7 @@ _camera camCommitPrepared _camera_duration;
 _nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 camUseNVG _nvgstate;
 
-_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
+_loop = 0;while{(_loop < _camera_duration)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
 //sleep _camera_duration;
 
 _camera cameraeffect ["terminate", "back"];

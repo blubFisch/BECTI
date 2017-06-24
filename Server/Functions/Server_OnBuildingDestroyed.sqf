@@ -32,15 +32,8 @@
     [_damaged, _shooter, _variable, _sideID, _position, _direction, _completion_ratio] spawn CTI_SE_FNC_OnBuildingDestroyed
 */
 
-private ["_classnames", "_completion_ratio", "_direction", "_killed", "_killer", "_logic", "_position", "_sell", "_side", "_sideID", "_structure", "_var", "_variable"];
-
-_killed = _this select 0;
-_killer = _this select 1;
-_variable = _this select 2;
-_sideID = _this select 3;
-_position = _this select 4;
-_direction = _this select 5;
-_completion_ratio = _this select 6;
+params ["_killed", "_killer", "_variable", "_sideID", "_position", "_direction", "_completion_ratio"];
+private ["_classnames", "_logic", "_sell", "_side", "_structure", "_var"];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -74,7 +67,7 @@ if !(_sell) then {
 	_logic setVariable ["cti_structures_wip", (_logic getVariable "cti_structures_wip") + [_structure] - [objNull]];
 
 	//--- Remove supply if supply depot
-	if (((_var select CTI_STRUCTURE_LABELS) select 0) == CTI_SUPPLY_DEPOT) then {
+	if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_SUPPLY_DEPOT) then {
 		[_side, -CTI_BASE_SUPPLY_DEPOT_VALUE] call CTI_CO_FNC_ChangeSideSupply; 
 	};
 	

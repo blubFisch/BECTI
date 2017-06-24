@@ -47,8 +47,8 @@
 private ["_side", "_vehicle", "_velocity", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
 params ["_type", "_position", "_direction", "_sideID", ["_locked", false], ["_net", false], ["_handle", false], ["_special", "FORM"],["_created", objNull]];
 
-if (typeName _position == "OBJECT") then {_position = getPos _position};
-if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
+if (typeName _position isEqualTo "OBJECT") then {_position = getPos _position};
+if (typeName _sideID isEqualTo "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 
 _side = _sideID call CTI_CO_FNC_GetSideFromID;
 
@@ -79,9 +79,6 @@ if (_handle) then {
 	_vehicle addEventHandler ["getOut", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; 
 	_vehicle setVariable ["cti_occupant", _side];
 	_vehicle setVariable ["initial_side", _side, true];
-	//-- Deleted EH
-	_vehicle addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
-
 };
 
 //--- Tire protection (Client, HC, Server). TODO: Detect if the vehicle has wheels
@@ -119,12 +116,12 @@ _upgrade_lvoss = 0;
 _upgrade_era = 0;
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
-	if (CTI_VEHICLES_LVOSS == 1) then {_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;};
-	if (CTI_VEHICLES_ERA == 1) then {_upgrade_era = _upgrades select CTI_UPGRADE_ERA;};
+	if (CTI_VEHICLES_LVOSS isEqualTo 1) then {_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;};
+	if (CTI_VEHICLES_ERA isEqualTo 1) then {_upgrade_era = _upgrades select CTI_UPGRADE_ERA;};
 };
 
 //---Add LVOSS system
-if (CTI_VEHICLES_LVOSS == 1) then {
+if (CTI_VEHICLES_LVOSS isEqualTo 1) then {
 	if (isNil "_upgrade_lvoss") then {_upgrade_lvoss = 0;};
 	if (_vehicle isKindOf "Car") then {
 		if (_upgrade_lvoss > 0) then {
@@ -148,7 +145,7 @@ if (CTI_VEHICLES_LVOSS == 1) then {
 	};
 };
 //---Add ERA system
-if (CTI_VEHICLES_ERA == 1) then {
+if (CTI_VEHICLES_ERA isEqualTo 1) then {
 	if (isNil "_upgrade_era") then {_upgrade_era = 0;};
 	if (_vehicle isKindOf "Tank") then {
 		if (_upgrade_era > 0) then {

@@ -19,7 +19,7 @@ CTI_FSM_UpdateClientAI_Order_Patrol = {
 	};
 	
 	//--- Is it a queued order?
-	_is_queued = if ((typeName (_position select 0)) == "ARRAY") then {true} else {false};
+	_is_queued = [false, true] select ((typeName (_position select 0)) isEqualTo "ARRAY");
 	
 	if (_exit) exitWith {if (_is_queued) then {_ai setVariable ["cti_ai_reload", true]}}; //--- Reload if the order is queued since the leader may die and our members may not move to the next pos.
 	
@@ -53,7 +53,7 @@ CTI_FSM_UpdateClientAI_Order_Patrol = {
 		
 		if ((_ai distance _position_current < 20) || ([getPos _ai select 0, getPos _ai select 1] distance [_position_current select 0, _position_current select 1] < 125 && vehicle _ai isKindOf "Air")) then { //--- Move order complete, more nodes?
 			//--- Determine the next node (restart?)
-			_node = if (_node + 1 > (count _patrol_area)-1) then {0} else {_node + 1};
+			_node = [_node + 1, 0] select (_node + 1 > (count _patrol_area) - 1);
 			{_x setVariable ["cti_ai_order_patrol_cn", _node]} forEach (_ai getVariable "cti_ai_formation");
 			_position_current = _patrol_area select _node;
 			vehicle _ai doMove _position_current;
@@ -83,12 +83,12 @@ CTI_FSM_UpdateClientAI_Order_Move = {
 	};
 	
 	//--- Is it a queued order?
-	_is_queued = if ((typeName (_position select 0)) == "ARRAY") then {true} else {false};
+	_is_queued = [false, true] select ((typeName (_position select 0)) isEqualTo "ARRAY");
 	
 	if (_exit) exitWith {if (_is_queued) then {_ai setVariable ["cti_ai_reload", true]}}; //--- Reload if the order is queued since the leader may die and our members may not move to the next pos.
 	
 	if !(_is_queued) then { //--- Simple non-queued order
-		if (_position select 0 == 0 && _position select 1 == 0) exitWith {};
+		if (_position select 0 isEqualTo 0 && _position select 1 isEqualTo 0) exitWith {};
 		_ai groupChat format ["Acknowledged.  Moving to grid %1", mapGridPosition _position];
 		
 		vehicle _ai doMove _position;
@@ -113,7 +113,7 @@ CTI_FSM_UpdateClientAI_Order_Move = {
 				if (count _position < 1) then {_position = [0,0]};
 				_position_current = _position select 0;
 				{_x setVariable ["cti_ai_order_pos", _position]} forEach (_ai getVariable "cti_ai_formation");
-				if (typeName _position_current == "ARRAY") then {vehicle _ai doMove _position_current; ((_ai getVariable "cti_ai_formation") - [_ai]) doFollow _ai};
+				if (typeName _position_current isEqualTo "ARRAY") then {vehicle _ai doMove _position_current; ((_ai getVariable "cti_ai_formation") - [_ai]) doFollow _ai};
 			};
 			
 			if (typeName _position_current != "ARRAY") exitWith {};
@@ -206,7 +206,7 @@ CTI_FSM_UpdateClientAI_Order_TakeTown = {
 		if !(alive _ai) exitWith {};
 		if (_seed != (_ai getVariable "cti_ai_order_seed")) exitWith {};
 		
-		if ((_town getVariable "cti_town_sideID") == CTI_P_SideID) exitWith {_side_owned = true};
+		if ((_town getVariable "cti_town_sideID") isEqualTo CTI_P_SideID) exitWith {_side_owned = true};
 		if (_order in [CTI_ORDER_CLIENT_TAKETOWN_AUTO, CTI_ORDER_CLIENT_TAKEHOLDTOWN_AUTO]) then {if (([_ai, CTI_P_SideJoined] call CTI_CO_FNC_GetClosestEnemyTown) != _town) then {_process = false}};
 		
 		sleep 5;
@@ -228,7 +228,7 @@ CTI_FSM_UpdateClientAI_Order_TakeTown = {
 				if !(alive _ai) exitWith {};
 				if (_seed != (_ai getVariable "cti_ai_order_seed") || time - _start_patrol > CTI_AI_ORDER_TAKEHOLDTOWNS_TIME) exitWith {};
 				
-				if (((_town getVariable 'cti_town_sv') < CTI_TOWNS_CAPTURE_VALUE_CEIL && CTI_P_SideID == (_town getVariable 'cti_town_sideID')) || CTI_P_SideID != (_town getVariable 'cti_town_sideID')) then {
+				if (((_town getVariable 'cti_town_sv') < CTI_TOWNS_CAPTURE_VALUE_CEIL && CTI_P_SideID isEqualTo (_town getVariable 'cti_town_sideID')) || CTI_P_SideID != (_town getVariable 'cti_town_sideID')) then {
 					_action = "defense";if (_action != _last_action) then {_move_defend_last = -120};
 				} else {
 					_action = "patrol";if (_action != _last_action) then {_move_patrol_reload = true};
@@ -250,7 +250,7 @@ CTI_FSM_UpdateClientAI_Order_TakeTown = {
 	if !(alive _ai) exitWith {};
 	
 	//--- Release ! (if order still match the current seed)
-	if (_seed == (_ai getVariable "cti_ai_order_seed")) then {
+	if (_seed isEqualTo (_ai getVariable "cti_ai_order_seed")) then {
 		switch (true) do {
 			case (_order in [CTI_ORDER_CLIENT_TAKETOWN, CTI_ORDER_CLIENT_TAKETOWN_AUTO]): {_ai setVariable ["cti_ai_order", CTI_ORDER_CLIENT_TAKETOWNS]};
 			case (_order in [CTI_ORDER_CLIENT_TAKEHOLDTOWN, CTI_ORDER_CLIENT_TAKEHOLDTOWN_AUTO]): {_ai setVariable ["cti_ai_order", CTI_ORDER_CLIENT_TAKEHOLDTOWNS]};
@@ -331,9 +331,14 @@ CTI_FSM_UpdateClientAI_Order_HoldTownsBase = {
 	if !(_reload) then {_ai groupChat "Acknowledged.  Proceeding to nearest base or friendly town for guard duty"};
 	
 	//--- We patrol!
-	_move_defend_last = 0;_move_patrol_reload = true;
-	_action = "patrol";_last_action = "";_patrol_area = [];_start_patrol = time;
-	_pos_patrol = getPos _defend; _pos_patrol_isbase = if (isNil {_defend getVariable "cti_town_sideID"}) then {true} else {false};
+	_move_defend_last = 0;
+	_move_patrol_reload = true;
+	_action = "patrol";
+	_last_action = "";
+	_patrol_area = [];
+	_start_patrol = time;
+	_pos_patrol = getPos _defend; 
+	_pos_patrol_isbase = [false, true] select (isNil {_defend getVariable "cti_town_sideID"});
 	
 	for '_i' from 1 to CTI_AI_ORDER_HOLDTOWNSBASES_HOPS do {_patrol_area pushBack ([_defend, 5, CTI_AI_ORDER_HOLDTOWNSBASES_PATROL_RANGE] call CTI_CO_FNC_GetRandomPosition)};
 	
@@ -344,7 +349,7 @@ CTI_FSM_UpdateClientAI_Order_HoldTownsBase = {
 		if !(alive _defend) exitWith {_destroyed = true};
 		
 		if !(isNil {_defend getVariable "cti_town_sideID"}) then {
-			if (((_defend getVariable 'cti_town_sv') < CTI_TOWNS_CAPTURE_VALUE_CEIL && CTI_P_SideID == (_defend getVariable 'cti_town_sideID')) || CTI_P_SideID != (_defend getVariable 'cti_town_sideID')) then {
+			if (((_defend getVariable 'cti_town_sv') < CTI_TOWNS_CAPTURE_VALUE_CEIL && CTI_P_SideID isEqualTo (_defend getVariable 'cti_town_sideID')) || CTI_P_SideID != (_defend getVariable 'cti_town_sideID')) then {
 				_action = "defense";if (_action != _last_action) then {_move_defend_last = -120};
 			} else {
 				_action = "patrol";if (_action != _last_action) then {_move_patrol_reload = true};

@@ -3443,7 +3443,7 @@ class Mission
 			};
 			id=169;
 			type="Land_BagBunker_Large_F";
-			atlOffset=1.5258789e-005;
+			atlOffset=0.030441284;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3485,7 +3485,7 @@ class Mission
 			};
 			id=170;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-2.3841858e-007;
+			atlOffset=0.030430555;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3527,7 +3527,7 @@ class Mission
 			};
 			id=172;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=0.030430317;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3569,7 +3569,7 @@ class Mission
 			};
 			id=173;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.19999695;
+			atlOffset=0.23042297;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3611,6 +3611,7 @@ class Mission
 			};
 			id=175;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3652,6 +3653,7 @@ class Mission
 			};
 			id=178;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030430794;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3693,6 +3695,7 @@ class Mission
 			};
 			id=180;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3734,6 +3737,7 @@ class Mission
 			};
 			id=182;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3775,6 +3779,7 @@ class Mission
 			};
 			id=184;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030430794;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3816,7 +3821,7 @@ class Mission
 			};
 			id=186;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-2.3841858e-007;
+			atlOffset=0.030430555;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3858,6 +3863,7 @@ class Mission
 			};
 			id=188;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.03042984;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3899,6 +3905,7 @@ class Mission
 			};
 			id=189;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3940,7 +3947,7 @@ class Mission
 			};
 			id=191;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=0.030430317;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3982,6 +3989,7 @@ class Mission
 			};
 			id=193;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.030426025;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4023,6 +4031,7 @@ class Mission
 			};
 			id=195;
 			type="Land_BagBunker_Large_F";
+			atlOffset=0.03042984;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4064,7 +4073,7 @@ class Mission
 			};
 			id=196;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-7.6293945e-006;
+			atlOffset=0.030418396;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5063,7 +5072,7 @@ class Mission
 			};
 			id=243;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-2.3841858e-007;
+			atlOffset=0.030430555;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5105,7 +5114,7 @@ class Mission
 			};
 			id=244;
 			type="Land_BagBunker_Large_F";
-			atlOffset=-2.3841858e-007;
+			atlOffset=0.030430555;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5146,7 +5155,7 @@ class Mission
 			};
 			id=245;
 			type="Land_BagBunker_Large_F";
-			atlOffset=0.34898329;
+			atlOffset=0.37941408;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6224,7 +6233,7 @@ class Mission
 			};
 			id=313;
 			type="Land_MilOffices_V1_F";
-			atlOffset=0.035772324;
+			atlOffset=0.11689377;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12884,7 +12893,7 @@ class Mission
 			name="KillFarm_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=476;
 			atlOffset=-136.5589;
 		};
@@ -12950,7 +12959,7 @@ class Mission
 			name="TransmissionTowerBrit_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=483;
 			atlOffset=-180.30519;
 		};
@@ -12961,7 +12970,7 @@ class Mission
 			name="TransmissionTowerBrit_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93985;
+			angle=226.93982;
 			id=484;
 			atlOffset=-0.00019836426;
 		};
@@ -12994,7 +13003,7 @@ class Mission
 			name="KaminoFiringRange_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=487;
 			atlOffset=-26.818083;
 		};
@@ -13005,7 +13014,7 @@ class Mission
 			name="KaminoFiringRange_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93985;
+			angle=226.93982;
 			id=488;
 			atlOffset=-3.4332275e-005;
 		};
@@ -13038,7 +13047,7 @@ class Mission
 			name="OldOutpost_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=491;
 			atlOffset=-192.86389;
 		};
@@ -13049,7 +13058,7 @@ class Mission
 			name="OldOutpost_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93985;
+			angle=226.93982;
 			id=492;
 			atlOffset=-4.5776367e-005;
 		};
@@ -13104,7 +13113,7 @@ class Mission
 			name="LimeriBay_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=498;
 			atlOffset=-74.654457;
 		};
@@ -13115,7 +13124,7 @@ class Mission
 			name="StorageDump_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93987;
+			angle=226.93983;
 			id=499;
 			atlOffset=-35.61834;
 		};
@@ -13192,7 +13201,7 @@ class Mission
 			name="LZConnor_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811966;
+			angle=56.811958;
 			id=506;
 			atlOffset=-167.21246;
 		};
@@ -13203,7 +13212,7 @@ class Mission
 			name="LZConnor_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811962;
+			angle=56.811954;
 			id=507;
 			atlOffset=1.5258789e-005;
 		};
@@ -13214,7 +13223,7 @@ class Mission
 			name="JayCove_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811962;
+			angle=56.811954;
 			id=508;
 			atlOffset=-10.770875;
 		};

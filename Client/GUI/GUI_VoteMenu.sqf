@@ -45,7 +45,7 @@ while { alive player && dialog } do {
 		if (isPlayer leader _x) then {
 			_vote = _x getVariable "cti_vote";
 			_index = (uiNamespace getVariable "cti_dialog_ui_votemenu_groups") find _vote;
-			_index = if (_index < 0) then {0} else {_index + 1};
+			_index = [_index + 1, 0] select (_index < 0);
 			_vote_array set [_index, (_vote_array select _index) + 1];
 			_player_count = _player_count + 1;
 		};
@@ -66,7 +66,7 @@ while { alive player && dialog } do {
 	};
 	
 	//--- Display the highest voted person
-	_voted_commander = if ((_vote_array select _highest_id) <= (_player_count/3) || _highest_id == 0) then {if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" > 0) then {"Electing: AI Commander"} else {"Electing: No Commander"}} else {format["Electing: %1", name leader ((uiNamespace getVariable "cti_dialog_ui_votemenu_groups") select _highest_id-1)]};
+	_voted_commander = if ((_vote_array select _highest_id) <= (_player_count/3) || _highest_id isEqualTo 0) then {if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" > 0) then {"Electing: AI Commander"} else {"Electing: No Commander"}} else {format["Electing: %1", name leader ((uiNamespace getVariable "cti_dialog_ui_votemenu_groups") select _highest_id-1)]};
 	((uiNamespace getVariable "cti_dialog_ui_votemenu") displayCtrl 300003) ctrlSetText _voted_commander;
 	
 	sleep .1;
