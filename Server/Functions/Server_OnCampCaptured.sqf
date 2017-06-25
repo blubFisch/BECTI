@@ -28,7 +28,7 @@
 */
 
 params ["_town", "_camp", "_newSide"];
-private ["_currentSideID", "_newSideID", "_last_capture", "_newSide", "_award_teams", "_value", "_score"];
+private ["_camp", "_currentSideID", "_newSide", "_newSideID", "_town", "_last_capture", "_newSide", "_award_teams", "_value", "_score"];
 
 _newSideID = (_newSide) call CTI_CO_FNC_GetSideID;
 _currentSideID = _camp getVariable "cti_camp_sideID";
@@ -42,7 +42,7 @@ if (CTI_Log_Level >= CTI_Log_Information) then {
 
 [_town, _camp, _newSideID, _currentSideID] remoteExec ["CTI_PVF_CLT_OnCampCaptured", CTI_PV_CLIENTS];
 
-//--rewards
+//--- Camp Reward
 if (_newSide != resistance && (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" isEqualTo 1)) then { //--- Award the AI
 	_award_teams = [];
 	{

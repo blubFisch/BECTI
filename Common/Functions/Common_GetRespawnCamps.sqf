@@ -13,17 +13,17 @@
     2	[Group]: the unit's group
 	
   # RETURNED VALUE #
-	[Array]: The available camps
+	[Array]: The living units
 	
   # SYNTAX #
 	[CENTER, SIDE, GROUP] call CTI_CO_FNC_GetRespawnCamps
 	
   # EXAMPLE #
-    _camps = [deathpos, side player, group player] call CTI_CO_FNC_GetRespawnCamps
+    _camps = [deathpos, sideplayer, group player] call CTI_CO_FNC_GetRespawnCamps
 */
 
 params ["_location", "_sideID", "_group"];
-private ["_camps", "_side", "_town"];
+private ["_camps", "_side", "_town", "_group", "_location", "_sideID", "_up","_respawnrange","_respawnrangeclas"];
 
 if (typeName _sideID isEqualTo "SIDE") then { _sideID = (_sideID) call CTI_CO_FNC_GetSideID };
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
@@ -33,7 +33,6 @@ _camps = [];
 //--- Determine the camp respawn mode
 switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 	case 1: { //--- Classic Mode, get the closest town
-		private ["_cti_entities", "_list", "_up", "_respawnrangeclas"];
 		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		_respawnrangeclas=CTI_RESPAWN_CAMPS_RANGE_CLASSIC+500*_up;
 		_town = (_location) call CTI_CO_FNC_GetClosestTown;
@@ -52,7 +51,6 @@ switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 		};
 	};
 	case 2: { //--- Enhanced Respawn, get the camps around the unit
-		private ["_cti_entities", "_list", "_towns_near","_up", "_respawnrange"];
 		_up=if (!( count ((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) isEqualTo 0)) then {((CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades) select CTI_UPGRADE_REST} else {0};
 		_respawnrange=CTI_RESPAWN_CAMPS_RANGE_ENHANCED+500*_up;
 		//--- Retrieve the nearby towns (Camps enhanced range * 4)
@@ -77,17 +75,15 @@ switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS") do {
 
 //--- Check the camp condition if needed, default is unlimited
 if ((missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") > 0) then {
-	private ["_list"];
 	_list = [];
 	{
 		switch (missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") do {
 			case 1: { //--- Priced
-				private ["_coefficient", "_funds", "_price"];
 				_town = _x getVariable "cti_camp_town";
 				_coefficient = if (_town getVariable "cti_town_sideID" isEqualTo _sideID) then {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_FRIENDLY} else {CTI_RESPAWN_CAMPS_CONDITION_PRICED_COEF_ENEMY};
 				_price = round((_town getVariable "cti_town_sv") * _coefficient);
 				
-				_funds = (_group) call CTI_CO_FNC_GetFunds;
+				_funds = (_group) Call CTI_CO_FNC_GetFunds;
 				if (_funds >= _price) then {_list pushBack _x};
 			};
 			case 2: { //--- Limited

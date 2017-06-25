@@ -112,7 +112,9 @@ if (_iscomposition) then {
     	};
 
 		(_defense) remoteExec ["CTI_PVF_CLT_OnFOBDeployment", _side];
-		_logic setVariable ["cti_fobs", (_logic getVariable "cti_fobs") + [_defense], true];
+		_fobs = _logic getVariable "cti_fobs";
+		_fobs pushBack _defense;
+		_logic setVariable ["cti_fobs", _fobs, true];
 	};
 	if (_large_fob) then {
 		_defense setVariable ["cti_large_fob", [],true];

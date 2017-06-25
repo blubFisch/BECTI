@@ -32,7 +32,7 @@ private ["_classnames"];
 
 _classnames = [];
 {
-	diag_log (_x);
+diag_log (_x);
 	if (_x select 0 != "") then { _classnames pushBack (_x select 0) };
 	{ if (_x != "") then { _classnames pushBack _x } } forEach (_x select 1);
 	if (count(_x select 2) > 0) then { _classnames pushBack ((_x select 2) select 0) };

@@ -12893,7 +12893,7 @@ class Mission
 			name="KillFarm_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=476;
 			atlOffset=-136.5589;
 		};
@@ -12959,7 +12959,7 @@ class Mission
 			name="TransmissionTowerBrit_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=483;
 			atlOffset=-180.30519;
 		};
@@ -13003,7 +13003,7 @@ class Mission
 			name="KaminoFiringRange_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=487;
 			atlOffset=-26.818083;
 		};
@@ -13047,7 +13047,7 @@ class Mission
 			name="OldOutpost_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=491;
 			atlOffset=-192.86389;
 		};
@@ -13113,7 +13113,7 @@ class Mission
 			name="LimeriBay_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=498;
 			atlOffset=-74.654457;
 		};
@@ -13124,7 +13124,7 @@ class Mission
 			name="StorageDump_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=226.93983;
+			angle=226.93982;
 			id=499;
 			atlOffset=-35.61834;
 		};
@@ -13201,7 +13201,7 @@ class Mission
 			name="LZConnor_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811958;
+			angle=56.811947;
 			id=506;
 			atlOffset=-167.21246;
 		};
@@ -13212,7 +13212,7 @@ class Mission
 			name="LZConnor_Defence_1";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811954;
+			angle=56.811943;
 			id=507;
 			atlOffset=1.5258789e-005;
 		};
@@ -13223,7 +13223,7 @@ class Mission
 			name="JayCove_Defence_0";
 			type="Empty";
 			colorName="ColorBlue";
-			angle=56.811954;
+			angle=56.811943;
 			id=508;
 			atlOffset=-10.770875;
 		};

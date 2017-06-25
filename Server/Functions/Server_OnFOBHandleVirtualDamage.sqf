@@ -35,9 +35,8 @@
   # EXAMPLE #
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _completion_ratio, _reduce_damages]];
 */
-
-params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
-private ["_logic", "_side", "_var", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff"];
+private ["_damage", "_damaged", "_logic", "_side", "_var", "_virtual_damages", "_ruins", "_fobtype", "_health", "_lastdamagetime", "_lastdamagediff"];
+params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_reduce_damages", "_multiply_damages"];
 
 //check for last damage time
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			

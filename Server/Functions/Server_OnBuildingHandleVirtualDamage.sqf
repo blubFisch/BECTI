@@ -36,7 +36,7 @@
 */
 
 params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_completion_ratio", "_reduce_damages", "_multiply_damages"];
-private ["_logic", "_side", "_var", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff","_multiply_damages"];
+private ["_logic", "_side", "_var", "_virtual_damages","_overall_damage","_health","_lastdamagetime", "_lastdamagediff"];
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
