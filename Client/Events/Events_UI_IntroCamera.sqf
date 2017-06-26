@@ -13,7 +13,7 @@ _thirdshot = [cam4, cam4, target3, 5, 1, 1, true, 0,-6,3] execVM "camera_work.sq
 waitUntil {scriptDone _thirdshot};
 */
 
-params ["_campos1", "_campos2", "_targetcam", "_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord"]
+params ["_campos1", "_campos2", "_targetcam", "_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord"];
 
 // to do exception management
 // if ((isNull _campos1)or(isNull _campos2)or(isNull _targetcam)) then exitWith {};
