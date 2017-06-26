@@ -35,7 +35,7 @@ _building = objNull;
 		_building_valid = true;
 		
 		if (_safe_range > 0) then {
-			_entities = _x nearEntities[["Man"], _safe_range];
+			_entities = _x nearEntities [["Man"], _safe_range];
 			if (({_x countSide _entities > 0} count _hostiles) > 0) then {_building_valid = false};
 		};
 		

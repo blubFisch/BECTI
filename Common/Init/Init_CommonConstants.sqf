@@ -1,4 +1,6 @@
 //--- GAME STATICS ---//
+
+//--- Base: Factories type
 CTI_FACTORY_BARRACKS = 0;
 CTI_FACTORY_LIGHT = 1;
 CTI_FACTORY_HEAVY = 2;
@@ -12,8 +14,9 @@ CTI_FACTORY_RADAR_ART = 9;
 CTI_FACTORY_LARGE_FOB = 10;
 
 CTI_PV_SERVER = 2;
-CTI_PV_CLIENTS = if (!isMultiplayer || CTI_IsHostedServer) then {0} else {-2};
+CTI_PV_CLIENTS = [-2, 0] select (!isMultiplayer || CTI_IsHostedServer);
 
+//--- Base: Structures variable names
 CTI_BARRACKS = "Barracks";
 CTI_LIGHT = "Light";
 CTI_CONTROLCENTER = "ControlCenter";
@@ -34,10 +37,12 @@ CTI_LARGE_FOB = "LargeFOB";
 
 CTI_FACTORIES = [CTI_BARRACKS, CTI_LIGHT, CTI_HEAVY, CTI_AIR, CTI_REPAIR, CTI_AMMO, CTI_NAVAL, CTI_RADAR, CTI_RADAR_ART];
 
+//--- Game: Sides color
 CTI_WEST_COLOR = "ColorBlue";
 CTI_EAST_COLOR = "ColorRed";
 CTI_RESISTANCE_COLOR = "ColorGreen";
 
+//--- Base: Structures constants
 CTI_STRUCTURE_LABELS = 0;
 CTI_STRUCTURE_CLASSES = 1;
 CTI_STRUCTURE_PRICE = 2;
@@ -47,6 +52,7 @@ CTI_STRUCTURE_SPECIALS = 5;
 CTI_STRUCTURE_CONDITION = 6;
 CTI_STRUCTURE_RESPAWNBPOS = 7;
 
+//--- Base: Defenses constants
 CTI_DEFENSE_LABEL = 0;
 CTI_DEFENSE_CLASS = 1;
 CTI_DEFENSE_PRICE = 2;
@@ -58,11 +64,13 @@ CTI_DEFENSE_COINBLACKLIST = 7;
 
 CTI_CAMP_RESPAWNBPOS = 0;
 
+//--- Classes: Gear constants
 CTI_GEAR_PROPERTIES = 0;
 CTI_GEAR_TYPE = 1;
 CTI_GEAR_CONFIG = 2;
 CTI_GEAR_FILTERUI = 3;
 
+//--- UI: Gear tab constants
 CTI_GEAR_TAB_PRIMARY = 0;
 CTI_GEAR_TAB_SECONDARY = 1;
 CTI_GEAR_TAB_HANDGUN = 2;
@@ -72,6 +80,7 @@ CTI_GEAR_TAB_MISC = 5;
 CTI_GEAR_TAB_EQUIPMENT = 6;
 CTI_GEAR_TAB_TEMPLATES = 7;
 
+//--- Classes: Units constants
 CTI_UNIT_LABEL = 0;
 CTI_UNIT_PICTURE = 1;
 CTI_UNIT_PRICE = 2;

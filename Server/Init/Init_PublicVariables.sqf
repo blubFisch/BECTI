@@ -13,7 +13,7 @@ with missionNamespace do {
 		_module = _this select 0;
 		_objects = _this select 1;
 		
-		if (typeName _objects != "ARRAY") then {_objects = [_objects]};
+		if !(typeName _objects isEqualTo "ARRAY") then {_objects = [_objects]};
 		
 		_module addCuratorEditableObjects [_objects, true];
 	};
@@ -28,7 +28,7 @@ with missionNamespace do {
 		_order = _this select 1;
 		_side = _this select 2;
 		
-		if (typeName _groups != "ARRAY") then {_groups = [_groups]};
+		if !(typeName _groups isEqualTo "ARRAY") then {_groups = [_groups]};
 		
 		{
 			_message = "";
@@ -40,7 +40,7 @@ with missionNamespace do {
 				case CTI_ORDER_DISEMBARKCARGOVEH: {_message = "order-getoutc"; (_x) call CTI_FSM_UpdateAI_DisembarkCargoVehicles};
 			};
 			
-			if (_message != "") then {[_message, leader _x] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]};
+			if !(_message isEqualTo "") then {[_message, leader _x] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]};
 		} forEach _groups;
 	};
 	
@@ -108,7 +108,7 @@ with missionNamespace do {
 		_ownerID = owner _client;
 		_uid = getPlayerUID _client;
 		
-		if (_ownerID != 0) then { //--- The ID is different than 0, the client is not local to the server
+		if !(_ownerID isEqualTo 0) then { //--- The ID is different than 0, the client is not local to the server
 			_candidates = missionNamespace getVariable ["CTI_HEADLESS_CLIENTS", []];
 			_candidates pushBack [_ownerID, _client, _uid];
 			missionNamespace setVariable ["CTI_HEADLESS_CLIENTS", _candidates];
@@ -258,12 +258,12 @@ with missionNamespace do {
 
 			_side_origin = _get select 2; //--- Get the original side.
 			
-			if (_side_origin != _side && (missionNamespace getVariable "CTI_TEAMSWAP") > 0) then { //--- Teamswapping, the joined side differs from the original one (make sure that teamswaping is prohibed)
+			if (!(_side_origin isEqualTo _side) && (missionNamespace getVariable "CTI_TEAMSWAP") > 0) then { //--- Teamswapping, the joined side differs from the original one (make sure that teamswaping is prohibed)
 				_join = false;
 				["teamswap", _name] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] tried to teamswap from it's original side [%3] to side [%4]. The server explicitely answered that he should be sent back to the lobby.", _name, _uid, _side_origin, _side]] call CTI_CO_FNC_Log};
 			} else {
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] either joined back it's original side [%3] or teamswaping is disabled.", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] joined back it's original side [%3].", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
 				_original_side = true;
 			};
 			
@@ -314,13 +314,13 @@ with missionNamespace do {
 				};
 				
 				//--- Make sure that the player didn't teamswap.
-				if (_side_origin != _side || isNil '_funds') then { 
+				if (!(_side_origin isEqualTo _side) || isNil '_funds') then { 
 					_funds = missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_FUNDS_%1", _side];
 					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] funds are now using the default value [%3] since he either swaped or had no funds", _name, _uid, _funds]] call CTI_CO_FNC_Log};
 				};
 				
 				_team setVariable ["cti_funds", _funds, true];
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Current side is [%3] and funds are [%4], Teamswap? [%5]", _name, _uid, _side, _funds, (_side_origin != _side)]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Current side is [%3] and funds are [%4], Teamswap? [%5]", _name, _uid, _side, _funds, !(_side_origin isEqualTo _side)]] call CTI_CO_FNC_Log};
 				
 				//--- ZEUS Curator Editable
 				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_leader], true]};
@@ -352,7 +352,7 @@ with missionNamespace do {
 		_side = _this select 1;
 		_vehicles = _this select 2;
 		
-		_tvar = if (_side isEqualTo resistance) then {"cti_town_resistance_active_vehicles"} else {"cti_town_occupation_active_vehicles"};
+		_tvar = ["cti_town_occupation_active_vehicles", "cti_town_resistance_active_vehicles"] select (_side isEqualTo resistance);
 		
 		_town setVariable [_tvar, (_town getVariable _tvar) + _vehicles];
 	};

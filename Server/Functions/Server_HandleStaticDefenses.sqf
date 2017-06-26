@@ -38,12 +38,12 @@ _var = missionNamespace getVariable format ["CTI_%1_%2", _side, _structure getVa
 _direction = 360 - ((_var select CTI_DEFENSE_PLACEMENT) select 0);
 _distance = (_var select CTI_DEFENSE_PLACEMENT) select 1;
 _position = _structure modelToWorld [(sin _direction * _distance), (cos _direction * _distance), 0];
-_net = if ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") isEqualTo 1) then {true} else {false};
+
+_net = [false, true] select ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") isEqualTo 1);
 _nearest_area = if (CTI_BASE_DEFENSES_AUTO_MODE > 0) then {[_structure, _logic getVariable "cti_structures_areas"] call CTI_CO_FNC_GetClosestEntity} else {objNull};
 
 //--- Perform a defense manning routine while we can
 while {alive _structure} do {
-
 	//--- We man only one defense per loop as we skip the usual queue
 	_manned = false;
 	{
