@@ -183,7 +183,7 @@ class FSM
        "	};" \n
        "};" \n
        "" \n
-       "if (_sideID != _lastSID) then {_delay = 0};" \n
+       "if !(_sideID isEqualTo _lastSID) then {_delay = 0};" \n
        "" \n
        "if !(isNull (uiNamespace getVariable ""cti_title_capture"")) then {" \n
        "" \n

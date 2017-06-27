@@ -31,7 +31,7 @@ private ["_towns"];
 if (typeName _friendlySide isEqualTo "SIDE") then {_friendlySide = (_friendlySide) call CTI_CO_FNC_GetSideID};
 
 _towns = [];
-{if (_x getVariable "cti_town_sideID" != _friendlySide) then {_towns pushBack _x}} forEach CTI_Towns;
+{if !((_x getVariable "cti_town_sideID") isEqualTo _friendlySide) then {_towns pushBack _x}} forEach CTI_Towns;
 
 //--- Territorial mode
 if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) exitWith {

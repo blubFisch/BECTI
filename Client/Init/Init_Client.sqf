@@ -86,8 +86,9 @@ CTI_P_ActionPush = false;
 
 CTI_P_Coloration_Money = "#BAFF81";
 CTI_P_fob_currently_deploying = false;
+
 //--- Artillery Computer is only enabled on demand
-if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngineArtillery false};
+if !((missionNamespace getVariable "CTI_ARTILLERY_SETUP") isEqualTo -1) then {enableEngineArtillery false};
 
 //--- Loading Screen Status
 12452 cutText ["Receiving mission intel 30%", "BLACK FADED", 50000];
@@ -120,7 +121,7 @@ if (isMultiplayer) then {
 //--- Initialize the client PV
 call compile preprocessFile "Client\Init\Init_PublicVariables.sqf";
 
-//--- call the UI Functions
+//--- Call the UI Functions
 call compile preprocessFile "Client\Functions\UI\Functions_UI_AIMicromanagementMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_ArtilleryMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_CoinMenu.sqf";
@@ -803,7 +804,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	_distance_max = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
 
 	if (isNil "_distance") then { _distance = viewDistance };
-	if (typeName _distance != "SCALAR") then { _distance = viewDistance };
+	if !(typeName _distance isEqualTo "SCALAR") then { _distance = viewDistance };
 	if (_distance < 1) then { _distance = 500 };
 	if (_distance > _distance_max) then { _distance = _distance_max };
 	setViewDistance _distance;
@@ -830,7 +831,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	_grid_max = missionNamespace getVariable "CTI_GRAPHICS_TG_MAX";
 
 	if (isNil "_grid") then { _grid = 25 };
-	if (typeName _grid != "SCALAR") then {
+	if !(typeName _grid isEqualTo "SCALAR") then { 
 		_grid = 0;
 	} else {
 		if (_grid < 0) then { _grid = 0 };

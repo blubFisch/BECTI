@@ -60,7 +60,7 @@ switch (missionNamespace getVariable "CTI_BASE_CONSTRUCTION_MODE") do {
 		sleep (if (CTI_DEV_MODE > 0) then {0} else {_time_build}); //--- This timer determines how long it takes for the structure to pop up.
 		
 		//--- Upon destruction, a structure is no longer valid in a timed-based situation
-		_completion = if (_isDestroyed) then {0} else {100};
+		_completion = [100, 0] select (_isDestroyed);
 	};
 	case 1: { //--- Worker Based
 		_lasttouch = time;

@@ -71,7 +71,7 @@ if !(isNull _killer) then {
 };
 
 //--- If the building has some ruins upon destruction then we remove them
-if (_ruins != "") then {
+if !(_ruins isEqualTo "") then {
 	//--- Wipe them from the server
 	{deleteVehicle _x} forEach (nearestObjects [_position, [_ruins], 25]);
 	

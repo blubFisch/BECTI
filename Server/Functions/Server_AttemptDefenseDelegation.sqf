@@ -40,7 +40,7 @@ _sideID = (_side) call CTI_CO_FNC_GetSideID;
 _hc = (_hcs select 0) select 0;
 
 //--- First of all, we delegate the group to the HC if needed
-if (groupOwner _group != _hc) then {
+if !(groupOwner _group isEqualTo _hc) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["Attempting to change ownership of group [%1] to HC [%2]", _group, _hc]] call CTI_CO_FNC_Log;
 	};
@@ -80,7 +80,6 @@ if !(isNil {_static getVariable "cti_delegated"}) then {
 	_static = (_var select CTI_DEFENSE_CLASS) createVehicle _position;
 	_static setVariable ["cti_defense_sideID", _sideID, true];
 	_static setVariable ["cti_aman_enabled", true];
-	_static setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 	_static setDir _direction;
 	_static setPos _position;
 	
