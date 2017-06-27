@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "scriptedFSM.cfg, town_occupation.fsm">*/
+/*%FSM<COMPILE "D:\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, town_occupation.fsm">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Start_FSM",0,250,-100.000000,-400.000000,0.000000,-350.000000,0.000000,"Start FSM"};
@@ -7,9 +7,9 @@ item2[] = {"Town_Occupant",2,250,-100.000000,-200.000000,0.000000,-150.000000,0.
 item3[] = {"End_FSM",1,250,-250.000000,-100.000000,-150.000000,-50.000000,0.000000,"End FSM"};
 item4[] = {"East___West",4,218,-100.000000,-100.000000,0.000000,-50.000000,2.000000,"East / West"};
 item5[] = {"Gameover",8,218,-250.000000,-200.000000,-150.000000,-150.000000,0.000000,"Gameover"};
-item6[] = {"Enemy_Near_",2,250,-100.000000,0.000000,0.000000,50.000000,0.000000,"Enemy Near?"};
+item6[] = {"Enemy_Near_",2,4346,-100.000000,0.000000,0.000000,50.000000,0.000000,"Enemy Near?"};
 item7[] = {"Resistance",4,218,50.000000,-200.000000,150.000000,-150.000000,1.000000,"Resistance"};
-item8[] = {"Occupation_Timeout",2,4346,400.000000,100.000000,500.000000,150.000000,0.000000,"Occupation" \n "Timeout?"};
+item8[] = {"Occupation_Timeout",2,250,400.000000,100.000000,500.000000,150.000000,0.000000,"Occupation" \n "Timeout?"};
 item9[] = {"Active",8,218,250.000000,100.000000,350.000000,150.000000,0.000000,"Active"};
 item10[] = {"Inactive",4,218,400.000000,-200.000000,500.000000,-150.000000,1.000000,"Inactive"};
 item11[] = {"Still_active",8,218,400.000000,0.000000,500.000000,50.000000,0.000000,"Still active"};
@@ -60,8 +60,8 @@ link28[] = {23,24};
 link29[] = {24,15};
 link30[] = {25,1};
 link31[] = {26,25};
-globals[] = {0.000000,0,0,0,0,640,480,1,170,6316128,1,-391.899933,446.676270,1043.859131,-286.787323,530,841,1};
-window[] = {0,-1,-1,-1,-1,1658,-66,1849,645,1,548};
+globals[] = {25.000000,1,0,0,0,640,480,1,170,6316128,1,-463.360901,766.469299,475.049347,-543.260498,888,910,1};
+window[] = {2,-1,-1,-1,-1,989,-1712,-457,208,3,906};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -72,7 +72,6 @@ class FSM
                 class Start_FSM
                 {
                         name = "Start_FSM";
-                        itemno = 0;
                         init = /*%FSM<STATEINIT""">*/"_town = _this;" \n
                          "" \n
                          "_town setVariable [""cti_town_occupation_active"", false];" \n
@@ -86,7 +85,6 @@ class FSM
                                 /*%FSM<LINK "Cycle">*/
                                 class Cycle
                                 {
-                                        itemno = 1;
                                         priority = 0.000000;
                                         to="Town_Occupant";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -101,7 +99,6 @@ class FSM
                 class Town_Occupant
                 {
                         name = "Town_Occupant";
-                        itemno = 2;
                         init = /*%FSM<STATEINIT""">*/"_ncycle = time + 5;" \n
                          "" \n
                          "_sideID = _town getVariable ""cti_town_sideID"";" \n
@@ -112,18 +109,16 @@ class FSM
                                 /*%FSM<LINK "East___West">*/
                                 class East___West
                                 {
-                                        itemno = 4;
                                         priority = 2.000000;
                                         to="Enemy_Near_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && _sideID != CTI_RESISTANCE_ID"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!CTI_GameOver && !(_sideID isEqualTo CTI_RESISTANCE_ID)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                                 /*%FSM<LINK "Resistance">*/
                                 class Resistance
                                 {
-                                        itemno = 7;
                                         priority = 1.000000;
                                         to="Occupation_Active";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -134,7 +129,6 @@ class FSM
                                 /*%FSM<LINK "Gameover">*/
                                 class Gameover
                                 {
-                                        itemno = 5;
                                         priority = 0.000000;
                                         to="End_FSM";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -149,7 +143,6 @@ class FSM
                 class End_FSM
                 {
                         name = "End_FSM";
-                        itemno = 3;
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -161,7 +154,6 @@ class FSM
                 class Enemy_Near_
                 {
                         name = "Enemy_Near_";
-                        itemno = 6;
                         init = /*%FSM<STATEINIT""">*/"//_objects = (_town nearEntities [""AllVehicles"", CTI_TOWNS_OCCUPATION_DETECTION_RANGE]) unitsBelowHeight CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR;" \n
                          "_count_enemies = 0;" \n
                          "" \n
@@ -195,7 +187,6 @@ class FSM
                                 /*%FSM<LINK "Clear">*/
                                 class Clear
                                 {
-                                        itemno = 17;
                                         priority = 1.000000;
                                         to="Occupation_Active";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -206,7 +197,6 @@ class FSM
                                 /*%FSM<LINK "Contact">*/
                                 class Contact
                                 {
-                                        itemno = 16;
                                         priority = 0.000000;
                                         to="Occupation_Active_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -221,7 +211,6 @@ class FSM
                 class Occupation_Timeout
                 {
                         name = "Occupation_Timeout";
-                        itemno = 8;
                         init = /*%FSM<STATEINIT""">*/"//--- Occupation is Active..." \n
                          "if !(_sideID isEqualTo (_town getVariable ""cti_town_occupation_active_sideID"")) then { //--- ....yet the current side holding the town is not the one which is active" \n
                          "	//--- Do we still have some fighting units?" \n
@@ -238,7 +227,6 @@ class FSM
                                 /*%FSM<LINK "Timed_out">*/
                                 class Timed_out
                                 {
-                                        itemno = 12;
                                         priority = 1.000000;
                                         to="Cleanup";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -249,7 +237,6 @@ class FSM
                                 /*%FSM<LINK "Still_active">*/
                                 class Still_active
                                 {
-                                        itemno = 11;
                                         priority = 0.000000;
                                         to="Skip";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -264,7 +251,6 @@ class FSM
                 class Skip
                 {
                         name = "Skip";
-                        itemno = 13;
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -272,7 +258,6 @@ class FSM
                                 /*%FSM<LINK "Cycle">*/
                                 class Cycle
                                 {
-                                        itemno = 1;
                                         priority = 0.000000;
                                         to="Town_Occupant";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -287,7 +272,6 @@ class FSM
                 class Cleanup
                 {
                         name = "Cleanup";
-                        itemno = 14;
                         init = /*%FSM<STATEINIT""">*/"if (CTI_Log_Level >= CTI_Log_Information) then {" \n
                          "	[""INFORMATION"", ""FILE: Server\FSM\town_occupation.fsm"", format[""Town [%1] [%2] forces will be deactivated"", _town getVariable ""cti_town_name"", (_town getVariable ""cti_town_occupation_active_sideID"") call CTI_CO_FNC_GetSideFromID]] call CTI_CO_FNC_Log;" \n
                          "};" \n
@@ -299,7 +283,6 @@ class FSM
                                 /*%FSM<LINK "Cycle">*/
                                 class Cycle
                                 {
-                                        itemno = 1;
                                         priority = 0.000000;
                                         to="Town_Occupant";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -314,7 +297,6 @@ class FSM
                 class Occupation_Active
                 {
                         name = "Occupation_Active";
-                        itemno = 15;
                         init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -322,7 +304,6 @@ class FSM
                                 /*%FSM<LINK "Inactive">*/
                                 class Inactive
                                 {
-                                        itemno = 10;
                                         priority = 1.000000;
                                         to="Skip";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -333,7 +314,6 @@ class FSM
                                 /*%FSM<LINK "Active">*/
                                 class Active
                                 {
-                                        itemno = 9;
                                         priority = 0.000000;
                                         to="Occupation_Timeout";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -348,7 +328,6 @@ class FSM
                 class Create
                 {
                         name = "Create";
-                        itemno = 18;
                         init = /*%FSM<STATEINIT""">*/"if (CTI_Log_Level >= CTI_Log_Information) then {" \n
                          "	[""INFORMATION"", ""FILE: Server\FSM\town_occupation.fsm"", format[""Town [%1] is now active"", _town getVariable ""cti_town_name""]] call CTI_CO_FNC_Log;" \n
                          "};" \n
@@ -360,7 +339,6 @@ class FSM
                                 /*%FSM<LINK "Cycle">*/
                                 class Cycle
                                 {
-                                        itemno = 1;
                                         priority = 0.000000;
                                         to="Town_Occupant";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -375,7 +353,6 @@ class FSM
                 class Occupation_Active_1
                 {
                         name = "Occupation_Active_1";
-                        itemno = 19;
                         init = /*%FSM<STATEINIT""">*/"_town setVariable [""cti_town_occupation_activeTime"", time];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -383,7 +360,6 @@ class FSM
                                 /*%FSM<LINK "Active">*/
                                 class Active
                                 {
-                                        itemno = 21;
                                         priority = 1.000000;
                                         to="Occupation_Timeout";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -394,7 +370,6 @@ class FSM
                                 /*%FSM<LINK "Inactive">*/
                                 class Inactive
                                 {
-                                        itemno = 20;
                                         priority = 0.000000;
                                         to="Create";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;

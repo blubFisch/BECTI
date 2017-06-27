@@ -84,7 +84,7 @@ class FSM
        "		//--- Can we capture it?" \n
        "		_safe = true;" \n
        "		{" \n
-       "			if ((_x getVariable ""cti_town_sideID"") != CTI_P_SideID) exitWith {_safe = false};" \n
+       "			if !((_x getVariable ""cti_town_sideID"") isEqualTo CTI_P_SideID) exitWith {_safe = false};" \n
        "		} forEach (_x getVariable ""cti_town_neighbors"");" \n
        "		" \n
        "		//--- Safe, it cannot be captured" \n

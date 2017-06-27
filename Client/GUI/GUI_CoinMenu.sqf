@@ -248,14 +248,14 @@ with missionNamespace do {
 		//--- Check if the funds overlay control need an update
 		_update = false;
 		if (_source isEqualTo 'HQ') then {
-			if ((CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply) != (CTI_COIN_LASTFUNDS select 0)) then {_update = true};
-			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
+			if !((CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply) isEqualTo (CTI_COIN_LASTFUNDS select 0)) then {_update = true};
+			if !((call CTI_CL_FNC_GetPlayerFunds) isEqualTo (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 			CTI_COIN_LASTFUNDS set [0, CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply];
 			CTI_COIN_LASTFUNDS set [1, call CTI_CL_FNC_GetPlayerFunds];
 			
 			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 		} else {
-			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
+			if !((call CTI_CL_FNC_GetPlayerFunds) isEqualTo (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 			CTI_COIN_LASTFUNDS set [1, call CTI_CL_FNC_GetPlayerFunds];
 		};
 		
@@ -293,7 +293,7 @@ with missionNamespace do {
 		};*/
 		
 		//--- Update the controls if the menu differs from the last
-		if (commandingMenu != _last_menu) then {
+		if !(commandingMenu isEqualTo _last_menu) then {
 			_textControls = "";
 			
 			if (isNil 'CTI_COIN_PREVIEW') then { //--- Menu browsing

@@ -579,7 +579,7 @@ CTI_Coin_OnKeyDown = {
 					call CTI_Coin_OnPreviewCanceled;
 				} else {
 					// if (_key isEqualTo 14 && commandingMenu != "#USER:CTI_COIN_Categories_0") then {_handled = false} else {CTI_COIN_EXIT = true};
-					if (_key in actionKeys "NavigateMenu" && commandingMenu != "#USER:CTI_COIN_Categories_0") then {_handled = false} else {CTI_COIN_EXIT = true};
+					if (_key in actionKeys "NavigateMenu" && !(commandingMenu isEqualTo "#USER:CTI_COIN_Categories_0")) then {_handled = false} else {CTI_COIN_EXIT = true};
 				};
 			};
 			case (_key in [28, 156]): {if !(isNil 'CTI_COIN_PREVIEW') then {call CTI_Coin_OnPreviewPlacement}};

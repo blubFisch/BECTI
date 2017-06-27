@@ -206,13 +206,13 @@ if !(isNil "ADMIN_ZEUS") then {
 	};
 };
 
-if (_script != "" && alive _vehicle) then {
+if (!(_script isEqualTo "") && alive _vehicle) then {
 	[_vehicle, CTI_P_SideJoined, _script] spawn CTI_CO_FNC_InitializeCustomVehicle;
 	if (_customid > -1) then {_vehicle setVariable ["cti_customid", _customid, true]};
 };
 
 //--- Notify the current client
-_picture = if ((_var_classname select CTI_UNIT_PICTURE) != "") then {format["<img image='%1' size='2.5'/><br /><br />", _var_classname select CTI_UNIT_PICTURE]} else {""};
+_picture = if !((_var_classname select CTI_UNIT_PICTURE) isEqualTo "") then {format["<img image='%1' size='2.5'/><br /><br />", _var_classname select CTI_UNIT_PICTURE]} else {""};
 _logic = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideLogic;
 _unit_skill = (_logic getVariable "cti_player_ai_skill");
 hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t>Your <t color='#ccffaf'>%1</t> with a skill of <t color='#fcffaf'>%2</t> has arrived from the <t color='#fcffaf'>%3</t> at grid <t color='#beafff'>%4</t></t>", _var_classname select CTI_UNIT_LABEL, _unit_skill, _factory_label, mapGridPosition _position, _picture];
