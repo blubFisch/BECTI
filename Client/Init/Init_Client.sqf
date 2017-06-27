@@ -120,7 +120,7 @@ if (isMultiplayer) then {
 //--- Initialize the client PV
 call compile preprocessFile "Client\Init\Init_PublicVariables.sqf";
 
-//--- call the UI Functions
+//--- Call the UI Functions
 call compile preprocessFile "Client\Functions\UI\Functions_UI_AIMicromanagementMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_ArtilleryMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_CoinMenu.sqf";
