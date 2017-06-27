@@ -287,6 +287,4 @@ if (_iscomposition) then {
 	_defense call CTI_CO_FNC_UnitCreated;
 };
 
-//--- ZEUS Curator Editable
-if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_defense], true]};
 _defense
