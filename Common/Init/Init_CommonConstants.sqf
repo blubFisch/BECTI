@@ -377,7 +377,7 @@ CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respaw
 
 //--- Towns: Camps
 CTI_TOWNS_CAMPS_CAPTURE_RANGE = 5; //--- Range needed to capture/protect a camp
-CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 30; //--- Range needed to capture/protect a camp for town AIs
+CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 10; //--- Range needed to capture/protect a camp for town AIs
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to match CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE), proc all 5 seconds.
@@ -402,23 +402,22 @@ CTI_TOWNS_CAPTURE_VALUE_ITERATE = 5; //--- The iterated value, (try to match CTI
 CTI_TOWNS_DEPOT_ACCESS_MODE = 1; //--- Determine how depots can be accessed for purchases (0: Town belong to side, 1: Town belong to side + all camps)
 CTI_TOWNS_DEPOT_BUILD_DIRECTION = 0; //--- Determine the direction a vehicle will use while being spawned from the depot
 CTI_TOWNS_DEPOT_BUILD_DISTANCE = 15; //--- Determine how far a unit/vehicle will spawn from the depot
-CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_green_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
+CTI_TOWNS_DEPOT_CLASSNAME = ["Land_Bunker_01_HQ_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
 //--- Towns: Economy
-
 //--- Economy delay Based on Island, Enabled when Auto mode selcted in Parameters
-if (CTI_ECONOMY_INCOME_CYCLE isEqualTo 0) then {
-	switch (toLower(worldName)) do {
-		case "stratis": {CTI_ECONOMY_INCOME_CYCLE = 50};
-		case "takistan": {CTI_ECONOMY_INCOME_CYCLE = 55};
-		case "isladuala3": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		case "chernarus": {CTI_ECONOMY_INCOME_CYCLE = 65};
-		case "altis": { CTI_ECONOMY_INCOME_CYCLE = 75};
-		case "tanoa": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		case "napf": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		default {CTI_ECONOMY_INCOME_CYCLE = 65};
-	};
+CTI_TOWN_ISLAND_RATIO = switch (toLower(worldName)) do {
+case "stratis":{2}; 
+case "takistan": {1.5};
+case "isladuala3": {1};
+case "chernarus": {1.2};
+case "altis": {1};
+case "tanoa": {1};
+case "napf": {1};
+case "malden" : {2};
+case "sara_dbe1" : {2};
+default {1};
 };
 
 CTI_TOWNS_INCOME_RATIO = 7.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio) 
@@ -645,6 +644,7 @@ with missionNamespace do {
 	if (isNil 'CTI_BASE_HQ_REPAIR') then {CTI_BASE_HQ_REPAIR = 1}; //--- Determine whether the HQ can be repaired or not
 	if (isNil 'CTI_BASE_STARTUP_PLACEMENT') then {CTI_BASE_STARTUP_PLACEMENT = 4000}; //--- Each side need to be further than x meters
 };
+
 //-----------------------------------------------------------------------------------------------------------------------//
 
 
