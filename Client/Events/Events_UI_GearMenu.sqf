@@ -22,7 +22,7 @@ switch (_action) do {
 		if (uiNamespace getVariable ["cti_dialog_ui_gear_dragging", false]) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
 		if (_dragging) then {uiNamespace setVariable ["cti_dialog_ui_gear_dragging", false]};
 		(findDisplay 70000) displaySetEventHandler ["mouseButtonUp", "if (uiNamespace getVariable ['cti_dialog_ui_gear_dragging', fase]) then {['onShoppingListMouseUp', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_GearMenu.sqf'}"];
-	if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then {
+	if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_AmmoPod || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then {
 		ctrlEnable [70030, true];
 		ctrlEnable [70029, true];
 	} else { // disabled reload and clear options on gear menu

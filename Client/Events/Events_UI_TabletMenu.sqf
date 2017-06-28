@@ -5,7 +5,7 @@ switch (_action) do {
 	case "onLoad": {
 		//--- Gear available?
 		//((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then {true} else {false});
-		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_ControlCenterInRange || CTI_Base_GearInRange_Depot ||CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB )) then {true} else {false}); //gear available everywhere. if cc destroyed then cannot access equipment unless near depot or barracks
+		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777101) ctrlEnable (if ((CTI_Base_ControlCenterInRange || CTI_Base_GearInRange_Depot ||CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_AmmoPod || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB )) then {true} else {false}); //gear available everywhere. if cc destroyed then cannot access equipment unless near depot or barracks
 		//--- Factory available?
 		((uiNamespace getVariable "cti_dialog_ui_tabletmenu") displayCtrl 777102) ctrlEnable (if ((CTI_Base_BarracksInRange || CTI_Base_LightInRange || CTI_Base_HeavyInRange || CTI_Base_AirInRange || CTI_Base_AmmoInRange || CTI_Base_RepairInRange || CTI_Base_NavalInRange || CTI_Base_DepotInRange || CTI_Base_LargeFOBInRange)) then {true} else {false});
 		//--- Build available?

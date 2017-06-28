@@ -11,8 +11,8 @@ link1[] = {1,2};
 link2[] = {2,1};
 link3[] = {2,4};
 link4[] = {4,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-294.235992,72.908051,422.452942,-638.185547,230,884,1};
-window[] = {2,-1,-1,-1,-1,948,122,1377,167,3,248};
+globals[] = {0.000000,0,0,0,0,640,480,1,133,6316128,1,-294.235992,72.908051,422.452942,-638.185547,119,811,1};
+window[] = {0,-1,-1,-1,-1,1061,111,1514,78,1,137};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -66,14 +66,18 @@ class FSM
                          "		};" \n
                          "		if !(isNil ""CTI_HQ_BuildAction"") then {player removeAction CTI_HQ_BuildAction};" \n
                          "	} else {" \n
-                         "		//CTI_HQ_BuildAction = player addAction [""<t color='#a5c4ff'>MENU: Construction (HQ)</t>"", ""Client\Actions\Action_CoinBuild.sqf"", ""HQ"", 93, false, true, """", ""_target isEqualTo player && CTI_Base_HQInRange""];" \n
                          "		(_hq) spawn (missionNamespace getVariable ""CTI_PVF_CLT_AddHQActions"");" \n
                          "	};" \n
                          "};" \n
+                         "" \n
+                         "//--- Generic base checks" \n
+                         "//--- Went into Client_UpdateBaseVariables.sqf" \n
+                         "" \n
                          "//--- Update player's last held gear" \n
                          "if (CTI_GEAR_RESPAWN_WITH_LAST > 0) then {" \n
                          "	if (alive player && !CTI_P_Respawning) then {CTI_P_CurrentGear = (player) call CTI_CO_FNC_GetUnitLoadout};" \n
                          "};" \n
+                         "" \n
                          "//--- Actions" \n
                          "if (""ToolKit"" in items player && player isEqualTo vehicle player) then {" \n
                          "	if (count(vehicle player nearEntities [[""Car"",""Air"",""Tank"",""Ship""], 10]) > 0) then {" \n
@@ -87,27 +91,17 @@ class FSM
                          "	if (CTI_P_ActionLockPick) then {CTI_P_ActionLockPick = false};" \n
                          "	if (CTI_P_ActionRepair) then {CTI_P_ActionRepair = false};" \n
                          "};" \n
+                         "" \n
+                         "//--- Low Gear" \n
                          "_vehicle = vehicle player;// ---get the vehicle the player is currently inside?" \n
-                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"" && (player isEqualTo driver _vehicle)) then {//--- Low gear added to tanks/apc/cars" \n
-                         "CTI_P_ActionLowGear = true;" \n
-                         "} else {" \n
-                         "CTI_P_ActionLowGear = false;" \n
-                         "};" \n
-                         "if (_vehicle isKindOf ""Ship"" && (player isEqualTo driver _vehicle)) then { //--- Push added to boats" \n
-                         "CTI_P_ActionPush = true;" \n
-                         "} else {" \n
-                         "CTI_P_ActionPush = false;" \n
+                         "if (_vehicle isKindOf ""Tank"" || _vehicle isKindOf ""Car"" && (player isEqualTo driver _vehicle)) then {" \n
+                         "	CTI_P_ActionLowGear = true; } else { CTI_P_ActionLowGear = false;" \n
                          "};" \n
                          "" \n
-                         "" \n
-                         "/*//debug" \n
-                         "CTI_Base_BarracksInRange = true;" \n
-                         "CTI_Base_LightInRange = true;" \n
-                         "CTI_Base_HeavyInRange = true;" \n
-                         "CTI_Base_AirInRange = true;" \n
-                         "CTI_Base_AmmoInRange = true;" \n
-                         "CTI_Base_RepairInRange = true;*/" \n
-                         ""/*%FSM</STATEINIT""">*/;
+                         "//--- Push" \n
+                         "if (_vehicle isKindOf ""Ship"" && (player isEqualTo driver _vehicle)) then { " \n
+                         "CTI_P_ActionPush = true; } else { CTI_P_ActionPush = false;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

@@ -320,11 +320,11 @@ CTI_UI_Gear_DisplayShoppingItems = {
 	_upgrade_gear = _upgrades select CTI_UPGRADE_GEAR;
 	
 	//--- Depot only? use the town upgrade level then
-	if (CTI_Base_GearInRange_Depot && !(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB)) then {
+	if (CTI_Base_GearInRange_Depot && !(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_AmmoPod || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB)) then {
 		_upgrade_gear = _upgrades select CTI_UPGRADE_TOWNS;
 	};
 	
-	if (!(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then { //checks if players is not near a structure/special unit that will allow purchasing of gear. If player isn't near a structure that allows purchasing of gear then player will have an empty equipment list. 
+	if (!(CTI_Base_GearInRange || CTI_Base_GearInRange_Mobile || CTI_Base_GearInRange_AmmoPod || CTI_Base_GearInRange_FOB || CTI_Base_GearInRange_LARGE_FOB || CTI_Base_GearInRange_Depot)) then { //checks if players is not near a structure/special unit that will allow purchasing of gear. If player isn't near a structure that allows purchasing of gear then player will have an empty equipment list. 
 		_upgrade_gear = -1;
 	};
 
