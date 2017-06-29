@@ -1948,7 +1948,6 @@ class CTI_RscRespawnMenu {
 			colorBackground[] = {0,0,0,0};
 			
 			onLBSelChanged = "['onSpawnLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_RespawnMenu.sqf'";
-			// onLBDblClick = "['onBuildStructureLBDblClick', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'";
 		};
 		class CTI_Menu_Respawn_Info : RscStructuredText {
 			idc = 120003;
@@ -3363,7 +3362,6 @@ class CTI_RscTeamsMenu {
 			columns[] = {0.001, 0.25, 0.35, 0.48, 0.6, 0.8};
 			
 			onLBSelChanged = "['onTeamListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_TeamsMenu.sqf'";
-			// onLBDblClick = "['onBuildStructure', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'";
 		};
 		class CTI_Control_Button_AIIndependent : RscButton {
 			idc = 190002;
@@ -3505,137 +3503,6 @@ class CTI_RscTeamsMenu {
 			
 			text = "Disband Team";
 			action = "['onTeamDisband', lnbCurSelRow 190001] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_TeamsMenu.sqf'";
-		};
-	};
-};
-
-class CTI_RscDefenseMenu {
-	movingEnable = 0;
-	idd = 200000;
-	onLoad = "uiNamespace setVariable ['cti_dialog_ui_defensemenu', _this select 0];['onLoad'] execVM 'Client\Events\Events_UI_DefenseMenu.sqf'";
-	onUnload = "uiNamespace setVariable ['cti_dialog_ui_defensemenu', nil]; ['onUnload'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'";
-	
-	class controlsBackground {
-		class CTI_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.175)";
-			w = "SafeZoneW * 0.305";
-			h = "SafeZoneH * 0.65";
-			colorBackground[] = {0, 0, 0, 0.7};
-			moving = 1;
-		};
-		class CTI_Background_Header : CTI_Background {
-			x = "SafeZoneX + (SafeZoneW * 0.21)";
-			y = "SafeZoneY + (SafezoneH * 0.175)";
-			w = "SafeZoneW * 0.305";
-			h = "SafeZoneH * 0.05"; //0.06 stock
-			colorBackground[] = {0, 0, 0, 0.4};
-		};
-		class CTI_Menu_Title : RscText {
-			style = ST_LEFT;
-			x = "SafeZoneX + (SafeZoneW * 0.23)";
-			y = "SafeZoneY + (SafezoneH * 0.180)";
-			w = "SafeZoneW * 0.295";
-			h = "SafeZoneH * 0.037";
-			
-			text = "Defense Construction";
-			colorText[] = {0.258823529, 0.713725490, 1, 1};
-			
-			sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		};
-		
-		class CTI_Menu_DefenseListFrame : RscFrame {
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.415)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.34";
-		};
-		class CTI_Menu_Info : CTI_Menu_DefenseListFrame {
-			y = "SafeZoneY + (SafezoneH * 0.235)";
-			h = "SafeZoneH * 0.06";
-		};
-		class CTI_Menu_Info_Background : RscText {
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.235)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.06";
-			colorBackground[] = {0.5, 0.5, 0.5, 0.25};
-		};
-	};
-	
-	class controls {
-		class CTI_Menu_Control_Undo : RscButton {
-			idc = 200001;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafeZoneH * 0.77)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.04";
-			
-			text = "Undo Structure";
-			action = "['onUndoDefense'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'";
-		};
-		class CTI_Menu_Control_BuildStructure : CTI_Menu_Control_Undo {
-			idc = 200002;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.36)";
-			
-			text = "Build Defense";
-			action = "['onBuildDefense', lnbCurSelRow 200007] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'";
-		};
-		class CTI_Menu_Control_AutoAlign : CTI_Menu_Control_Undo {
-			idc = 200003;
-			
-			y = "SafeZoneY + (SafeZoneH * 0.3075)";
-			
-			text = "";
-			action = "['onAutoAlign'] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'";
-		};
-		
-		class CTI_Menu_Control_BuildingList : RscListNBox {
-			idc = 200007;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.415)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.34";
-			
-			rowHeight = "1.3 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			sizeEx = "0.78 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-			
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0};
-			itemBackground[] = {1,1,1,0.1};
-			// columns[] = {0.001, 0.26};
-			columns[] = {0.001, 0.18};
-			
-			onLBDblClick = "['onBuildDefense', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_DefenseMenu.sqf'";
-		};
-		class CTI_Menu_Control_Info : RscStructuredText {
-			idc = 200008;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.225)";
-			y = "SafeZoneY + (SafezoneH * 0.235)";
-			w = "SafeZoneW * 0.275";
-			h = "SafeZoneH * 0.03";
-			
-			size = "0.9 * (			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		};
-		class CTI_Menu_Control_InfoWorkers : CTI_Menu_Control_Info {
-			idc = 200009;
-			
-			y = "SafeZoneY + (SafezoneH * 0.265)";
-		};
-		class CTI_Control_Exit : RscButton {
-			idc = 22555;
-			
-			x = "SafeZoneX + (SafeZoneW * 0.46)";
-			y = "SafeZoneY + (SafezoneH * 0.18)";
-			w = "SafeZoneW * 0.04";
-			h = "SafeZoneH * 0.04";
-			
-			text = "X";
-			action = "closeDialog 0";
 		};
 	};
 };
@@ -4501,7 +4368,6 @@ class CTI_RscWorkersMenu {
 			columns[] = {0.001, 0.35};
 			
 			onLBSelChanged = "['onWorkersListLBSelChanged', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_WorkersMenu.sqf'";
-			// onLBDblClick = "['onBuildStructure', _this select 1] call compile preprocessFileLineNumbers 'Client\Events\Events_UI_BuildMenu.sqf'";
 		};
 		class CTI_Menu_Control_Disband : RscButton {
 			idc = 260003;
