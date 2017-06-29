@@ -442,7 +442,7 @@ CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threa
 CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 180; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 0; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 50;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 40;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 25; //--- Determine the min occupation AI count to present in a town
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
@@ -456,7 +456,7 @@ CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat
 CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 180; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 50; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 40; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 25; //--- Determine the min resistance AI count to present in a town
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
