@@ -74,13 +74,7 @@ _p pushBack 30;
 _t pushBack 2; 
 
 //lmg
-_i pushBack "200Rnd_65x39_Belt";
-_o pushBack "Land";
-_u pushBack 0;
-_p pushBack 100;
-_t pushBack 1; 
-
-_i pushBack "200Rnd_65x39_Belt_Tracer_Red";
+_i pushBack "200Rnd_65x39_Belt","200Rnd_65x39_Belt_Tracer_Red";
 _o pushBack "Land";
 _u pushBack 0;
 _p pushBack 100;
@@ -1281,4 +1275,311 @@ _u pushBack 4;
 _p pushBack 300;
 _t pushBack 30; 
 
-[_faction, _i, _o, _u, _p, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";
+//------------------------------Unsorted------------------------------ 
+_i pushBack "130Rnd_338_Mag"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Air"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_shells"; 
+_o pushBack "Air"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_Flare_white"; 
+_o pushBack "Air"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_Smoke_white"; 
+_o pushBack "Air"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_guided"; 
+_o pushBack "Air"; 
+_u pushBack 4; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_LG"; 
+_o pushBack "Air"; 
+_u pushBack 4; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+_i pushBack "130Rnd_338_Mag"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "500Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "200Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Red"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Green"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "100Rnd_127x99_mag_Tracer_Yellow"; 
+_o pushBack "Land"; 
+_u pushBack 0; 
+_p pushBack 2; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_shells"; 
+_o pushBack "Land"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_Flare_white"; 
+_o pushBack "Land"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_Smoke_white"; 
+_o pushBack "Land"; 
+_u pushBack 3; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_guided"; 
+_o pushBack "Land"; 
+_u pushBack 4; 
+_p pushBack 1000; 
+_t pushBack 2; 
+ 
+ 
+_i pushBack "8Rnd_82mm_Mo_LG"; 
+_o pushBack "Land"; 
+_u pushBack 4; 
+_p pushBack 1000; 
+_t pushBack 2; 
+
+[_faction, _i, _o, _u, _p, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";
