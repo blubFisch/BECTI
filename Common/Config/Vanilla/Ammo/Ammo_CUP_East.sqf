@@ -26,6 +26,75 @@ _p pushBack 600;
 
 
 //------------------------------ Bombs ------------------------------
+_i pushBack "CUP_12Rnd_MLRS_HE";
+_o pushBack "Air";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_12Rnd_MLRS_DPICM";
+_o pushBack "Air";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_40Rnd_GRAD_HE";
+_o pushBack "Air";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_12Rnd_AT16_M";
+_o pushBack "Air";
+_u pushBack 3;
+_p pushBack 500;
+_t pushBack 50;
+
+
+_i pushBack "CUP_22Rnd_2A46_APFSDS_T_M";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_12Rnd_2A46_HE_T_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_17Rnd_2A46_HE_T_M";
+_o pushBack "Air";
+_u pushBack 0;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_5Rnd_AT11_M";
+_o pushBack "Air";
+_u pushBack 3;
+_p pushBack 100;
+_t pushBack 20;
+
+
+_i pushBack "2Rnd_Missile_AA_03_F";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 100;
+_t pushBack 20;
+
+
+_i pushBack "CUP_4Rnd_Missile_AA_03_F";
+_o pushBack "Air";
+_u pushBack 1;
+_p pushBack 100;
+_t pushBack 20;
+
 _i pushBack "CUP_200Rnd_TE1_Red_Tracer_40mmGPR_M";
 _o pushBack "Air";
 _u pushBack 1;
@@ -6332,6 +6401,77 @@ _o pushBack "Land";
 _u pushBack 1;
 _p pushBack 50;
 _t pushBack 1;
+
+_i pushBack "CUP_12Rnd_MLRS_HE";
+_o pushBack "Land";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_12Rnd_MLRS_DPICM";
+_o pushBack "Land";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_40Rnd_GRAD_HE";
+_o pushBack "Land";
+_u pushBack 4;
+_p pushBack 1000;
+_t pushBack 500;
+
+
+_i pushBack "CUP_12Rnd_AT16_M";
+_o pushBack "Land";
+_u pushBack 3;
+_p pushBack 500;
+_t pushBack 50;
+
+
+_i pushBack "CUP_22Rnd_2A46_APFSDS_T_M";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_12Rnd_2A46_HE_T_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_17Rnd_2A46_HE_T_M";
+_o pushBack "Land";
+_u pushBack 0;
+_p pushBack 20;
+_t pushBack 20;
+
+
+_i pushBack "CUP_5Rnd_AT11_M";
+_o pushBack "Land";
+_u pushBack 3;
+_p pushBack 100;
+_t pushBack 20;
+
+
+_i pushBack "2Rnd_Missile_AA_03_F";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 100;
+_t pushBack 20;
+
+
+_i pushBack "CUP_4Rnd_Missile_AA_03_F";
+_o pushBack "Land";
+_u pushBack 1;
+_p pushBack 100;
+_t pushBack 20;
+
+
 
 
 [_faction, _i, _u, _p] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";
