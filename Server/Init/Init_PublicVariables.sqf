@@ -123,14 +123,7 @@ with missionNamespace do {
 	
 	//--- The client request an FOB (deploy)
 	CTI_PVF_SRV_RequestFOBDeploy = {
-		private ["_vehicle","_side","_position","_direction","_fobtype","_fobclass","_fobclassruins"];
-		_vehicle = _this select 0;
-		_side = _this select 1;
-		_position = _this select 2;
-		_direction = _this select 3;
-		_fobtype = _this select 4;
-		_fobclass = _this select 5;
-		_fobclassruins = _this select 6;
+		params ["_vehicle", "_side", "_position", "_direction", "_fobtype", "_fobclass", "_fobclassruins"];
 		[_vehicle, _side, _position, _direction, _fobtype, _fobclass, _fobclassruins] spawn CTI_SE_FNC_DeployFOB;
 	};	
 	

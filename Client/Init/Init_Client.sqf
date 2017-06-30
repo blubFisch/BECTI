@@ -911,11 +911,6 @@ _igiload = execVM "Client\Functions\Externals\IgiLoad\IgiLoadInit.sqf";
 attached = false;
 0 = execVM "Client\Functions\Externals\BDD\Greifer.sqf";
 
-//--- Explosives on Vehicles Script
-waitUntil {time > 0};
-execVM "Client\Functions\Externals\Attach_Charge\Action_Attach_charge.sqf";
-waitUntil {!isNil "EtVInitialized"};
-
 //--- cmEARPLUGS
 call compile preProcessFileLineNumbers "Client\Functions\Externals\cmEarplugs\config.sqf";
 

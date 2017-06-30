@@ -82,10 +82,9 @@ _westLocation = getMarkerPos "cti-spawn0";
 _eastLocation = getMarkerPos "cti-spawn0";
 
 _attempts = 0;
-_total = count _startup_locations;
 while {_eastLocation distance _westLocation < _range && _attempts <= 500} do {
-	_eastLocation = _startup_locations select floor(random _total);
-	_westLocation = _startup_locations select floor(random _total);
+	_eastLocation = selectRandom _startup_locations;
+	_westLocation = selectRandom _startup_locations;
 	_attempts = _attempts + 1;
 };
 
