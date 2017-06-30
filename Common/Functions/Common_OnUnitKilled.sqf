@@ -75,7 +75,7 @@ if !(_is_defense) then {
 
 _var = missionNamespace getVariable _var_name;
 
-if (!isNil '_var' && _isplayable_killer) then {
+if (!isNil '_var') then { //--- Include Base Defence AI as well for rewards
 	_cost = if !(_is_defense) then {_var select CTI_UNIT_PRICE} else {_var select CTI_DEFENSE_PRICE};
 	
 	if !(_side_killer isEqualTo _side_killed) then { //--- Kill
@@ -148,13 +148,5 @@ if (!isNil '_var' && _isplayable_killer) then {
 				};
 			};
 		};
-	};
-};
-
-//--- Remove "men" instantly on death if enabled
-if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
-	_killed spawn {
-		sleep 2;
-		deleteVehicle _this;
 	};
 };

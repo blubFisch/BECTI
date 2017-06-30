@@ -80,9 +80,9 @@ if (_center isEqualTo _position) then {
 	
 	//--- Check again after the failover
 	if (_center isEqualTo _position) then {
-	if (CTI_Log_Level >= CTI_Log_Warning) then { 
-		["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position at [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes", _position, _template, _radius_min, _radius_max, _distance_min, _passes]] call CTI_CO_FNC_Log;
-	};
+		if (CTI_Log_Level >= CTI_Log_Warning) then { 
+			["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position at [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes", _position, _template, _radius_min, _radius_max, _distance_min, _passes]] call CTI_CO_FNC_Log;
+		};
 	};
 	
 	/*if (_center isEqualTo _position) then {

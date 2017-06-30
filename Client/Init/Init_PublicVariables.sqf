@@ -101,8 +101,6 @@ with missionNamespace do {
 		_var = missionNamespace getVariable _type_killed;
 		_label = _var select CTI_UNIT_LABEL;
 		
-		diag_log "killbounty-debug: EH";
-		
 		if (call CTI_CL_FNC_IsPlayerCommander) then {
 			(_award) call CTI_CL_FNC_ChangePlayerFunds;
 			if (_killed_pname isEqualTo "") then {

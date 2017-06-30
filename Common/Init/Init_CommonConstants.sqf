@@ -376,7 +376,7 @@ CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respaw
  */
 
 //--- Towns: Camps
-CTI_TOWNS_CAMPS_CAPTURE_RANGE = 5; //--- Range needed to capture/protect a camp
+CTI_TOWNS_CAMPS_CAPTURE_RANGE = 4; //--- Range needed to capture/protect a camp
 CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 10; //--- Range needed to capture/protect a camp for town AIs
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
@@ -805,14 +805,13 @@ CTI_UI_TOWNS_PROGRESSBAR_DISTANCE = 550;
 CTI_GC_DELAY = 90;
 CTI_GC_DELAY_AIR = 360;
 CTI_GC_DELAY_CAR = 240;
-CTI_GC_DELAY_MAN = 60;
+CTI_GC_DELAY_MAN = 5;
 CTI_GC_DELAY_TANK = 300;
 CTI_GC_DELAY_SHIP = 60;
 CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
 
 CTI_HALO_COOLDOWN = 300;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;
