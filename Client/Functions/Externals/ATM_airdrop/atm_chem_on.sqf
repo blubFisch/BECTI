@@ -12,23 +12,23 @@ _ltcolor = (_this select 3) select 0;
 
 
 if (_ltcolor =="Chemlight_Red") then {
-        RedOff = _caller addAction["<t color='#B40404'>Chemlight Red OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target == ( player)"];
+        RedOff = _caller addAction["<t color='#B40404'>Chemlight Red OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target isEqualTo ( player)"];
         _caller removeaction blueon;_caller removeaction yellowon;_caller removeaction greenon;_caller removeaction Iron;
         };
 if (_ltcolor =="Chemlight_Blue") then {
-        actionBlueOff = _caller addAction["<t color='#68ccf6'>Chemlight Blue OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"","_target == ( player)"];
+        actionBlueOff = _caller addAction["<t color='#68ccf6'>Chemlight Blue OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"","_target isEqualTo ( player)"];
         _caller removeaction redon;_caller removeaction yellowon;_caller removeaction greenon;_caller removeaction Iron;
         };
 if (_ltcolor =="Chemlight_Yellow") then {
-        actionYellowOff = _caller addAction["<t color='#fcf018'>Chemlight Yellow OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target == (player)"];
+        actionYellowOff = _caller addAction["<t color='#fcf018'>Chemlight Yellow OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target isEqualTo (player)"];
         _caller removeaction blueon;_caller removeaction redon;_caller removeaction greenon;_caller removeaction Iron;
         };
 if (_ltcolor =="Chemlight_Green") then {
-        actionGreenOff = _caller addAction["<t color='#30fd07'>Chemlight Green OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target == ( player)"];
+        actionGreenOff = _caller addAction["<t color='#30fd07'>Chemlight Green OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target isEqualTo ( player)"];
         _caller removeaction blueon;_caller removeaction yellowon;_caller removeaction redon;_caller removeaction Iron;
         };
 if (_ltcolor =="NVG_TargetC") then {
-        actionIROff = _caller addAction["<t color='#FF00CC'>Strobe IR OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target == ( player)"];
+        actionIROff = _caller addAction["<t color='#FF00CC'>Strobe IR OFF</t>", "ATM_airdrop\atm_chem_off.sqf",[_ltcolor],6,false,false,"", "_target isEqualTo ( player)"];
         _caller removeaction blueon;_caller removeaction yellowon;_caller removeaction redon;_caller removeaction greenon;
         };
 

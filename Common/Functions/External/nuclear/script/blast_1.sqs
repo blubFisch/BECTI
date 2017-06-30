@@ -14,7 +14,7 @@ _agl = random 360
 
 
 #loop
-?(_cnt == 1) : goto "next"
+?(_cnt isEqualTo 1) : goto "next"
 
 _velx = (sin _agl) * (100.0 + random 150.0)
 _vely = (cos _agl) * (100.0 + random 150.0)
@@ -36,7 +36,7 @@ goto "loop"
 
 
 #next
-?(_next == 9) : goto "end"
+?(_next isEqualTo 9) : goto "end"
 _cnt=0
 _agl = random 360
 _scl = _scl + 50

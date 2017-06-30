@@ -51,7 +51,7 @@ _deferedGroups = [];
 }forEach _deferedGroups;
 
 {
-	if ( !isNil "_x" && { _x select 0 == _compReference } ) exitWith { LARs_spawnedCompositions set [ _forEachIndex, nil ] };
+	if ( !isNil "_x" && { _x select 0 isEqualTo _compReference } ) exitWith { LARs_spawnedCompositions set [ _forEachIndex, nil ] };
 }forEach LARs_spawnedCompositions;
 
 if ( { !isNil "_x" }count LARs_spawnedCompositions isEqualTo 0 ) then {

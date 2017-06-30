@@ -20,15 +20,11 @@
 	[UNIT, GROUP, SIDE, AI ARRAY ARGS] call CTI_SE_FNC_AttemptTownDefenseDelegation
 	
   # EXAMPLE #
-    [staticX, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] Call CTI_SE_FNC_AttemptTownDefenseDelegation;
+    [staticX, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] call CTI_SE_FNC_AttemptTownDefenseDelegation;
 */
 
-private ["_ai_args", "_delegated", "_hc", "_hcs", "_result", "_side", "_sideID", "_static", "_unit"];
-
-_static = _this select 0;
-_group = _this select 1;
-_side = _this select 2;
-_ai_args = _this select 3;
+params ["_static", "_group", "_side", "_ai_args"];
+private ["_delegated", "_hc", "_hcs", "_result", "_sideID", "_unit"];
 
 _hcs = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
 _delegated = true;
@@ -41,10 +37,10 @@ if (count _hcs < 1) exitWith {false};
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
 //--- Grab a random HC. (TODO: Round robin iterator if hc count > 1)
-_hc = (_hcs select floor(random count _hcs)) select 0;
+_hc = (selectRandom _hcs) select 0;
 
 //--- First of all, we delegate the group to the HC if needed
-if (groupOwner _group != _hc) then {
+if !(groupOwner _group isEqualTo _hc) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_AttemptTownDefenseDelegation.sqf", format["Attempting to change ownership of group [%1] to HC [%2]", _group, _hc]] call CTI_CO_FNC_Log;
 	};

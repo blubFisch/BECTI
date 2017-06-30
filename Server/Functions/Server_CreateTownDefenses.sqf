@@ -27,10 +27,7 @@
 */
 
 params ["_town", "_side"];
-private ["_defenses", "_pool", "_pool_all", "_sideID"];
-
-_town = _this select 0;
-_side = _this select 1;
+private ["_defenses", "_defenses_inert", "_pool", "_pool_all", "_sideID", "_town_group"];
 
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
@@ -117,7 +114,8 @@ _town_group = if (count _pool > 0) then {createGroup _side} else {grpNull};
 		
 		_defenses pushBack _defense;
 		
-		if !( isNil "ADMIN_ZEUS") then { ADMIN_ZEUS addCuratorEditableObjects [[_defense],true] };
+		//--- ZEUS Curator Editable
+		if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_defense], true]};
 	} else { //--- Composition (script-block)
 		if (typeName _composition isEqualTo "CODE") then {
 			_custom_compo = [getMarkerPos _marker, markerDir _marker] call _composition;
@@ -126,7 +124,7 @@ _town_group = if (count _pool > 0) then {createGroup _side} else {grpNull};
 			
 			{
 				_x addEventHandler ["killed", format["[_this select 0, _this select 1, %1, true] spawn CTI_CO_FNC_OnUnitKilled", _sideID]];
-				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_x], true]};
+				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_x], true]}; //--- ZEUS Curator Editable
 				_defenses pushBack _x;
 			} forEach _custom_defenses;
 			
@@ -148,8 +146,8 @@ if !(isNull _town_group) then {
 	_town_group deleteGroupWhenEmpty true;
 	
 	{
-		_can_delegate = if (count(missionNamespace getVariable ["CTI_HEADLESS_CLIENTS", []]) > 0) then {true} else {false};
-		_ai_args = [missionNamespace getVariable format["CTI_%1_Soldier", _side], _town_group, getPos _x, _sideID, if ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") == 1) then {true} else {false}];
+		_can_delegate = [false, true] select (count(missionNamespace getVariable ["CTI_HEADLESS_CLIENTS", []]) > 0);
+		_ai_args = [missionNamespace getVariable format["CTI_%1_Soldier", _side], _town_group, getPos _x, _sideID, ([false, true] select ((missionNamespace getVariable "CTI_MARKERS_INFANTRY") isEqualTo 1))];
 		
 		//--- Assign him to the defense
 		if !(_can_delegate) then {

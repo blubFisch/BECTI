@@ -19,16 +19,14 @@
     [_bestCRAM,"incoming",60] call Common_Say3D;
 */
 
-private ["_obj","_snd","_distance"];
-_obj = _this select 0;    //object
-_snd = _this select 1;    //sound
-_distance = _this select 2;    //distance
+params ["_obj","_snd","_distance"];
+
  
-// broadcast PV
+//--- Broadcast PV
 Radio_Say3D = [_obj,_snd,_distance];
 publicVariable "Radio_Say3D";
  
-//run on all player clients incl. player host
+//--- Run on all player clients including player host
 if (hasInterface) then {_obj say3D [_snd,_distance,1]};
  
 true

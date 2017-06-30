@@ -8,7 +8,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //--- Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {  
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
 		//--- NATO Infantry (Arid)
 		_u pushBack 'B_Soldier_F';
@@ -82,7 +82,7 @@ if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then {
 		//NATO Vanilla (woodland)*********************		
 };
 //------------------------------ Heli ------------------------------
-if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3 ) then {  
+if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -94,7 +94,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 		//NATO Pacific APEX (woodland)*********************
 };
 //------------------------------ APEX ------------------------------
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3 ) then {  
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
@@ -161,13 +161,13 @@ if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3 ) then {
 		
 };
 //------------------------------ JETS ------------------------------
-if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3 ) then {  
+if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
 };	
 //--------------------------------- TANKS ------------------------------
-if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3 ) then {  
+if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3 ) then {  
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************
@@ -323,12 +323,12 @@ if (CTI_CUP_UNITS_ADDON > 0) then {
 		_u pushBack 'CUP_B_US_SpecOps_UAV';
 };
 //------------------------------ OFPS CUP ------------------------------
-if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {  
+if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3 ) then {  
 		//USMC CUP (Arid)*********************
 		//USMC CUP (woodland)*********************	
 };
 //------------------------------ RHS ------------------------------
-if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {  
+if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3 ) then {  
 		//--- Army D OEF/CP
 		_u PushBack 'rhsusf_army_ocp_rifleman_10th';
 		_u PushBack 'rhsusf_army_ocp_rifleman_1stcav';
@@ -405,13 +405,13 @@ if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3 ) then {
 		_u PushBack 'rhsusf_army_ucp_squadleader';
 };
 //------------------------------ OFPS RHS ------------------------------
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {  
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3 ) then {  
 		//USAF RHS (Arid)*********************
 		
 		//USAF RHS (Woodland)*********************
 };
 //------------------------------ OFPS ------------------------------
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3 ) then {  
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3 ) then {  
 		//NATO (arid)*********************
 		//NATO (woodland)*********************
 		//NATO Winter OFPS
@@ -1439,7 +1439,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //---Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'B_Soldier_F';
 		_u pushBack 'B_crew_F';		
@@ -1463,7 +1463,7 @@ if (CTI_VANILLA_ADDON >= 2) then {
 };
 //------------------------------ Heli ------------------------------
 //---Infantry
-if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
+if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1482,7 +1482,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 };
 //------------------------------ APEX ------------------------------
 //---Infantry
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1530,7 +1530,7 @@ if (CTI_CUP_VEHICLES_ADDON > 0) then {
 };
 //------------------------------ OFPS CUP ------------------------------
 //---Infantry
-if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then {
+if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1542,7 +1542,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 };
 //------------------------------ RHS ------------------------------
 //---Infantry
-if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then {
+if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'rhsusf_army_ocp_rifleman_m16';
 		_u pushBack 'rhsusf_army_ocp_combatcrewman';		
@@ -1561,7 +1561,7 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 };
 //------------------------------ OFPS RHS ------------------------------
 //---Infantry
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then {
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1573,7 +1573,7 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 //---Infantry
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1685,7 +1685,7 @@ _u = [];
 
 //------------------------------ Vanilla ------------------------------
 //---Infantry
-if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3) then {
+if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'B_Soldier_F';
 		_u pushBack 'B_crew_F';		
@@ -1719,7 +1719,7 @@ if (CTI_MARKSMEN_ADDON > 0) then {
 };
 //------------------------------ APEX ------------------------------
 //---Infantry
-if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
+if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
@@ -1773,7 +1773,7 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 };
 //------------------------------ OFPS RHS ------------------------------
 //---Infantry
-if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then {
+if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		_u pushBack 'rhsusf_army_ocp_rifleman_m16';
 		_u pushBack 'rhsusf_army_ocp_combatcrewman';
@@ -1811,7 +1811,7 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 //---Infantry
-if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
+if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 		//NATO Vanilla (arid)*********************
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	

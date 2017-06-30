@@ -33,8 +33,8 @@ _win = false;
 _winnerside = West;
 _loserside = East;
 switch (_result) do {
-	case "win": {if (CTI_P_SideJoined isEqualTo _side) then {_win = true; if (CTI_P_SideJoined == West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};}};
-	case "loose": {if (CTI_P_SideJoined != _side) then {_win = true; if (CTI_P_SideJoined == West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};} else {if (CTI_P_SideJoined == West) then {_winnerside = East;_loserside = West;} else {_winnerside = West;_loserside = East;};}};
+	case "win": {if (CTI_P_SideJoined isEqualTo _side) then {_win = true; if (CTI_P_SideJoined isEqualTo West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};}};
+	case "loose": {if (CTI_P_SideJoined != _side) then {_win = true; if (CTI_P_SideJoined isEqualTo West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};} else {if (CTI_P_SideJoined isEqualTo West) then {_winnerside = East;_loserside = West;} else {_winnerside = West;_loserside = East;};}};
 };
 _winnername = "Blufor";
 _losername = "Opfor";

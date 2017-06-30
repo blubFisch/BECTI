@@ -86,7 +86,7 @@ with missionNamespace do {
 		[_t_defenses, _t_composition]
 	}];
 
-if (CTI_TOWNS_OCCUPATION_EAST == 0) then { 
+if (CTI_TOWNS_OCCUPATION_EAST isEqualTo 0) then { 
 //--- VANILLA TOWN OCCUPATION
 	//--- Infantry
 	EAST_SOLDIER = "O_Soldier_F";
@@ -140,7 +140,7 @@ if (CTI_TOWNS_OCCUPATION_EAST == 0) then {
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
-if (CTI_TOWNS_OCCUPATION_EAST == 1) then { 
+if (CTI_TOWNS_OCCUPATION_EAST isEqualTo 1) then { 
 //--- Pacific TOWN OCCUPATION - tanoa forces
 	//--- Infantry
 	EAST_SOLDIER = "O_T_Soldier_F";
@@ -194,7 +194,7 @@ if (CTI_TOWNS_OCCUPATION_EAST == 1) then {
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
-if (CTI_TOWNS_OCCUPATION_EAST == 2) then { 
+if (CTI_TOWNS_OCCUPATION_EAST isEqualTo 2) then { 
 //--- CUP - Russians TOWN OCCUPATION
 	//--- Infantry
 	EAST_SOLDIER = "CUP_O_RU_Soldier";
@@ -248,7 +248,7 @@ if (CTI_TOWNS_OCCUPATION_EAST == 2) then {
 	EAST_NAVAL_MEDIUM_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 	EAST_NAVAL_LARGE_ASSAULT_BOAT = ["O_Boat_Armed_01_hmg_F"];
 };
-if (CTI_TOWNS_OCCUPATION_EAST == 3) then { 
+if (CTI_TOWNS_OCCUPATION_EAST isEqualTo 3) then { 
 //--- RHS TOWN OCCUPATION
 	//--- Infantry
 	EAST_SOLDIER = "rhs_msv_emr_rifleman";

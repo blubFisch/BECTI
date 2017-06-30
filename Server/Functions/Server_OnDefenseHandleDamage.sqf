@@ -31,17 +31,9 @@
     _structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 */
 
-private ["_damage", "_damaged", "_ammo", "_logic", "_position", "_reduce_damages", "_shooter", "_multiply_damages", "_side", "_sideID", "_variable", "_upgrades", "_upgrade_basehealth", "_baseratio"];
+params ["_damaged", "_damage", "_shooter", "_ammo", "_sideID", "_reduce_damages", "_variable", "_position","_multiply_damages"];
+private ["_logic", "_side", "_upgrades", "_upgrade_basehealth", "_baseratio","_overall_damage","_health"];
 
-_damaged = _this select 0;
-_damage = _this select 1;
-_shooter = _this select 2;
-_ammo = _this select 3;
-_sideID = _this select 4;
-_reduce_damages = _this select 5;
-_variable = _this select 6;
-_position = _this select 7;
-_multiply_damages = _this select 8;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 //Base Health Upgrade
@@ -65,55 +57,67 @@ if (CTI_BASE_HEALTH_UPGRADE > 0) then {
 		case 4: {_baseratio = CTI_BASE_HEALTH_MULTIPLIER select 4;};
 	};
 };
-if (CTI_BASE_NOOBPROTECTION == 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //--- Adjust damage for ammo types
 //--- This is active file that works with base damage 2/17/2017 -Omon
 //--- This damage values are also used in FOB damage system as well as Statics "Live thanks for living this notes in"
 
-//--- Tanks
-if ((_ammo isKindOf "ShellBase") || (_ammo isKindOf "ShellCore")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
-	if (_damage > CTI_BASE_DAMAGE_MAX_SHELL) then {_damage = CTI_BASE_DAMAGE_MAX_SHELL};
+_dmg_mutliplier = 0;
+_dmg_max = 0;
+
+//--- Handle the different ammunitions
+switch (true) do {
+	//--- Tanks
+	case (_ammo isKindOf ["ShellBase", configFile >> "CfgAmmo"] || _ammo isKindOf ["ShellCore", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_SHELL;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_SHELL;
+	};
+	//--- Arty (Has to be Spesific as tanks use same basecore)
+	case (_ammo isKindOf ["Sh_155mm_AMOS", configFile >> "CfgAmmo"] || _ammo isKindOf ["R_230mm_HE", configFile >> "CfgAmmo"] || _ammo isKindOf ["R_230mm_fly", configFile >> "CfgAmmo"] || _ammo isKindOf ["Mo_cluster_AP", configFile >> "CfgAmmo"] || _ammo isKindOf ["ArtilleryRocketCore", configFile >> "CfgAmmo"]) : {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_ARTY;
+	};
+	//--- Satchels
+	case (_ammo isKindOf ["TimeBombCore", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_SATCHEL;
+	};
+	//--- Satchels
+	case (_ammo isKindOf ["PipeBombCore", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_PIPE;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_PIPE;
+	};
+	//--- HE Cannons
+	case (_ammo isKindOf ["GrenadeBase", configFile >> "CfgAmmo"] || _ammo isKindOf ["BulletBase", configFile >> "CfgAmmo"] || _ammo isKindOf ["VehicleMagazine", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_CANNON;
+	};
+	//--- Missiles
+	case (_ammo isKindOf ["MissileCore", configFile >> "CfgAmmo"] || _ammo isKindOf ["MissileBase", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_MISSLE;
+	};
+	//--- Explosions
+	case (_ammo isKindOf ["FuelExplosion", configFile >> "CfgAmmo"] || _ammo isKindOf ["FuelExplosionBig", configFile >> "CfgAmmo"] || _ammo isKindOf ["HelicopterExploSmall", configFile >> "CfgAmmo"] || _ammo isKindOf ["HelicopterExploBig", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_FUEL;
+	};
+	//--- Rockets
+	case (_ammo isKindOf ["RocketCore", configFile >> "CfgAmmo"] || _ammo isKindOf ["M_Titan_AT", configFile >> "CfgAmmo"] || _ammo isKindOf ["M_Titan_AP", configFile >> "CfgAmmo"] || _ammo isKindOf ["M_Titan_AA", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_ROCKETS;
+	};
+	//--- Bombs
+	case (_ammo isKindOf ["BombCore", configFile >> "CfgAmmo"] || _ammo isKindOf ["LaserBombCore", configFile >> "CfgAmmo"] || _ammo isKindOf ["MineCore", configFile >> "CfgAmmo"]): {
+		_dmg_mutliplier = CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
+		_dmg_max = CTI_BASE_DAMAGE_MAX_BOMB;
+	};
 };
-//--- Arty (Has to be Spesific as tanks use same basecore)
-if ((_ammo isKindOf "Sh_155mm_AMOS") || (_ammo isKindOf "R_230mm_HE") || (_ammo isKindOf "R_230mm_fly") || (_ammo isKindOf "Mo_cluster_AP") || (_ammo isKindof "ArtilleryRocketCore")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ARTY;
-	if (_damage > CTI_BASE_DAMAGE_MAX_ARTY) then {_damage = CTI_BASE_DAMAGE_MAX_ARTY};
-};
-//--- Satchels
-if (_ammo isKindOf "TimeBombCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_SATCHEL;
-	if (_damage > CTI_BASE_DAMAGE_MAX_SATCHEL) then {_damage = CTI_BASE_DAMAGE_MAX_SATCHEL};
-};
-//--- Pipe Bomb
-if (_ammo isKindOf "PipeBombCore") then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_PIPE;
-	if (_damage > CTI_BASE_DAMAGE_MAX_PIPE) then {_damage = CTI_BASE_DAMAGE_MAX_PIPE};
-};
-//--- HE Cannons
-if ((_ammo isKindOf "GrenadeBase") || (_ammo isKindOf "BulletBase") || (_ammo isKindOf "VehicleMagazine")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_CANNON;
-	if (_damage > CTI_BASE_DAMAGE_MAX_CANNON) then {_damage = CTI_BASE_DAMAGE_MAX_CANNON};
-};
-//--- Missiles
-if ((_ammo isKindOf "MissileCore") || (_ammo isKindOf "MissileBase")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_MISSLE;
-	if (_damage > CTI_BASE_DAMAGE_MAX_MISSLE) then {_damage = CTI_BASE_DAMAGE_MAX_MISSLE};
-};
-//--- Explosions
-if ((_ammo isKindOf "FuelExplosion") || (_ammo isKindOf "FuelExplosionBig") || (_ammo isKindOf "HelicopterExploSmall") || (_ammo isKindOf "HelicopterExploBig")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_FUEL;
-	if (_damage > CTI_BASE_DAMAGE_MAX_FUEL) then {_damage = CTI_BASE_DAMAGE_MAX_FUEL};
-};
-//--- Rockets
-if ((_ammo isKindOf "RocketCore") || (_ammo isKindOf "M_Titan_AT") || (_ammo isKindOf "M_Titan_AP") || (_ammo isKindOf "M_Titan_AA")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_ROCKETS;
-	if (_damage > CTI_BASE_DAMAGE_MAX_ROCKETS) then {_damage = CTI_BASE_DAMAGE_MAX_ROCKETS};
-};
-//--- Bombs
-if ((_ammo isKindOf "BombCore") || (_ammo isKindOf "LaserBombCore") || (_ammo isKindOf "MineCore")) then {
-	_damage = _damage * CTI_BASE_DAMAGE_MULTIPLIER_BOMB;
-	if (_damage > CTI_BASE_DAMAGE_MAX_BOMB) then {_damage = CTI_BASE_DAMAGE_MAX_BOMB};
+
+//--- Apply a custom multiplier if specified
+if !(_dmg_mutliplier isEqualTo 0) then {
+	_damage = _damage * _dmg_mutliplier;
+	if (_damage > _dmg_max) then {_damage = _dmg_max};
 };
 
 if (_reduce_damages > 0 ) then {
@@ -131,19 +135,16 @@ if (_reduce_damages > 0 ) then {
 	};
 };
 
-//_logic = (_side) call CTI_CO_FNC_GetSideLogic;// line isnt needed? - protossmaster
-
-
-if (CTI_BASE_DISPLAY_HINT == 1) then{
+if (CTI_BASE_DISPLAY_HINT isEqualTo 1) then{
 	_health = (1 - _damage);
-	_health = (_health*100);
-	_health = [_health,1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
+	_health = (_health * 100);
+	_health = [_health, 1] call BIS_fnc_cutDecimals; // returns returns _health with 1 decimal place
 	if (alive _damaged && !(side _shooter in [_side, sideEnemy])) then {
 		["building-hit",[ _health, _upgrade_basehealth]] remoteExec ["CTI_CL_FNC_DisplayMessage",owner _shooter]; // displays a hint for player shooting the structure
 	};
 };
 //--- Display a message to the team
-if (!alive _damaged) then {
+if !(alive _damaged) then {
 	["defense-destroyed", [_variable, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 };
 _damage

@@ -1,11 +1,5 @@
-private ["_cpt", "_faction", "_filterui", "_items", "_prices", "_ammotype", "_upgrades", "_times"];
-
-_faction = _this select 0;
-_ammoclass = _this select 1;
-_ammotype = _this select 2;
-_upgrades = _this select 3;
-_prices = _this select 4;
-_times = _this select 5;
+params["_faction", "_ammoclass", "_ammotype", "_upgrades", "_prices", "_times"];
+private ["_cpt", "_filterui", "_items"];
 
 _cpt = 0;
 for '_i' from 0 to (count _ammoclass)-1 do {

@@ -86,8 +86,9 @@ CTI_P_ActionPush = false;
 
 CTI_P_Coloration_Money = "#BAFF81";
 CTI_P_fob_currently_deploying = false;
+
 //--- Artillery Computer is only enabled on demand
-if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngineArtillery false};
+if !((missionNamespace getVariable "CTI_ARTILLERY_SETUP") isEqualTo -1) then {enableEngineArtillery false};
 
 //--- Loading Screen Status
 12452 cutText ["Receiving mission intel 30%", "BLACK FADED", 50000];
@@ -95,6 +96,8 @@ if ((missionNamespace getVariable "CTI_ARTILLERY_SETUP") != -1) then {enableEngi
 if (isMultiplayer) then {
 	//--- Can I join?
 	missionNamespace setVariable ["CTI_PVF_CLT_JoinRequestAnswer", {_this execVM "Client\Functions\Client_JoinRequestAnswer.sqf"}]; //--- Early PVF, do not spoil the game with the others.
+	
+	player setDammage 0;
 	
 	//--- Wait for the server to be initialized before requesting a Join ticket
 	waitUntil {sleep .5; !(isNil 'CTI_InitServer')};
@@ -139,93 +142,93 @@ call compile preprocessFile "Client\Functions\UI\Functions_UI_UpgradeMenu.sqf";
 12452 cutText ["Receiving mission intel 40%", "BLACK FADED", 50000];
 
 //--- VANILLA MODE
-if (CTI_FACTION_MODE == 0) then { 
+if (CTI_FACTION_MODE isEqualTo 0) then { 
 	//--Load Vanilla
-	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_East.sqf"};
+	if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_Vanilla_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_Vanilla_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_Vanilla_East.sqf"};
 	};
 	//--Load Heli Gear
-	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_East.sqf"};
+	if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_HELI_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_HELI_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_HELI_East.sqf"};
 	};	
 	//--- Load Marksmen Gear
-	if (CTI_MARKSMEN_ADDON == 1) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_East.sqf"};
+	if (CTI_MARKSMEN_ADDON isEqualTo 1) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_MARKSMEN_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_MARKSMEN_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_MARKSMEN_East.sqf"};
 	};
 	//--- Load APEX Gear
-	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_East.sqf"};
+	if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_APEX_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_APEX_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_APEX_East.sqf"};
 	};
 	//--- Load JETS Gear
-	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_East.sqf"};
+	if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_JETS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_JETS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_JETS_East.sqf"};
 	};	
 	//--- Load TANKS Gear
-	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_East.sqf"};
+	if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_TANKS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_TANKS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_TANKS_East.sqf"};
 	};
 	//--- Load CUP Gear
 	if (CTI_CUP_WEAPONS_ADDON > 0) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_CUP_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_CUP_East.sqf"};
 	};
 	//--- Load RHS Gear
-	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_AFRF_East.sqf"};
+	if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_AFRF_East.sqf"};
 	};
-	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_USAF_West.sqf"};
+	if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_RHS_USAF_West.sqf"};
 	};
 	//--- Load RHS Loadout Ammo
 	if (CTI_RHS_USAF_ADDON > 0 || CTI_RHS_AFRF_ADDON >= 3) then { 
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_RHS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_RHS_East.sqf"};
 	};
 	//--- OFPS Gear
-	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_East.sqf"};
+	if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_OFPS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Ammo\Ammo_OFPS_East.sqf"};
 	};
 	//--- OFPS RHS Gear
-	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_East.sqf"};
+	if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_RHS_East.sqf"};
 	};
 	//--- OFPS CUP Gear
-	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_East.sqf"};
+	if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Gear\Gear_OFPS_CUP_East.sqf"};
 	};
 };
 
@@ -233,93 +236,93 @@ if (CTI_FACTION_MODE == 0) then {
 12452 cutText ["Receiving mission intel 50%", "BLACK FADED", 50000];
 
 //--- CUP MODE
-if (CTI_FACTION_MODE == 1) then { 
+if (CTI_FACTION_MODE isEqualTo 1) then { 
 	//--Load Vanilla
-	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_East.sqf"};
+	if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_Vanilla_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_Vanilla_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_Vanilla_East.sqf"};
 	};
 	//--Load Heli Gear
-	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_East.sqf"};
+	if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_HELI_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_HELI_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_HELI_East.sqf"};
 	};	
 	//--- Load Marksmen Gear
-	if (CTI_MARKSMEN_ADDON == 1) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_East.sqf"};
+	if (CTI_MARKSMEN_ADDON isEqualTo 1) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_MARKSMEN_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_MARKSMEN_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_MARKSMEN_East.sqf"};
 	};
 	//--- Load APEX Gear
-	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_East.sqf"};
+	if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_APEX_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_APEX_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_APEX_East.sqf"};
 	};
 	//--- Load JETS Gear
-	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_East.sqf"};
+	if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_JETS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_JETS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_JETS_East.sqf"};
 	};	
 	//--- Load TANKS Gear
-	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_East.sqf"};
+	if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_TANKS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_TANKS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_TANKS_East.sqf"};
 	};
 	//--- Load CUP Gear
 	if (CTI_CUP_WEAPONS_ADDON > 0) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_CUP_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_CUP_East.sqf"};
 	};
 	//--- Load RHS Gear
-	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_AFRF_East.sqf"};
+	if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_AFRF_East.sqf"};
 	};
-	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_USAF_West.sqf"};
+	if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_RHS_USAF_West.sqf"};
 	};
 	//--- Load RHS Loadout Ammo
 	if (CTI_RHS_USAF_ADDON > 0 || CTI_RHS_AFRF_ADDON >= 3) then { 
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_RHS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_RHS_East.sqf"};
 	};
 	//--- OFPS Gear
-	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_East.sqf"};
+	if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_OFPS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Ammo\Ammo_OFPS_East.sqf"};
 	};
 	//--- OFPS RHS Gear
-	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_East.sqf"};
+	if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_RHS_East.sqf"};
 	};
 	//--- OFPS CUP Gear
-	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_East.sqf"};
+	if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Gear\Gear_OFPS_CUP_East.sqf"};
 	};
 };
 
@@ -327,93 +330,93 @@ if (CTI_FACTION_MODE == 1) then {
 12452 cutText ["Receiving mission intel 60%", "BLACK FADED", 50000];
 
 //--- RHS MODE
-if (CTI_FACTION_MODE == 2) then { 
+if (CTI_FACTION_MODE isEqualTo 2) then { 
 	//--Load Vanilla
-	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_East.sqf"};
+	if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_Vanilla_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_Vanilla_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_Vanilla_East.sqf"};
 	};
 	//--Load Heli Gear
-	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_East.sqf"};
+	if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_HELI_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_HELI_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_HELI_East.sqf"};
 	};	
 	//--- Load Marksmen Gear
-	if (CTI_MARKSMEN_ADDON == 1) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_East.sqf"};
+	if (CTI_MARKSMEN_ADDON isEqualTo 1) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_MARKSMEN_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_MARKSMEN_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_MARKSMEN_East.sqf"};
 	};
 	//--- Load APEX Gear
-	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_East.sqf"};
+	if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_APEX_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_APEX_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_APEX_East.sqf"};
 	};
 	//--- Load JETS Gear
-	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_East.sqf"};
+	if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_JETS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_JETS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_JETS_East.sqf"};
 	};	
 	//--- Load TANKS Gear
-	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_East.sqf"};
+	if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_TANKS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_TANKS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_TANKS_East.sqf"};
 	};
 	//--- Load CUP Gear
 	if (CTI_CUP_WEAPONS_ADDON > 0) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_CUP_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_CUP_East.sqf"};
 	};
 	//--- Load RHS Gear
-	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_AFRF_East.sqf"};
+	if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_AFRF_East.sqf"};
 	};
-	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_USAF_West.sqf"};
+	if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_RHS_USAF_West.sqf"};
 	};
 	//--- Load RHS Loadout Ammo
 	if (CTI_RHS_USAF_ADDON > 0 || CTI_RHS_AFRF_ADDON >= 3) then { 
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_RHS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_RHS_East.sqf"};
 	};
 	//--- OFPS Gear
-	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_East.sqf"};
+	if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_OFPS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Ammo\Ammo_OFPS_East.sqf"};
 	};
 	//--- OFPS RHS Gear
-	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_East.sqf"};
+	if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_RHS_East.sqf"};
 	};
 	//--- OFPS CUP Gear
-	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_East.sqf"};
+	if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Gear\Gear_OFPS_CUP_East.sqf"};
 	};	
 };
 
@@ -421,93 +424,93 @@ if (CTI_FACTION_MODE == 2) then {
 12452 cutText ["Receiving mission intel 70%", "BLACK FADED", 50000];
 
 //--- OFPS MODE
-if (CTI_FACTION_MODE == 3) then { 
+if (CTI_FACTION_MODE isEqualTo 3) then { 
 	//--Load Vanilla
-	if (CTI_VANILLA_ADDON == 1 || CTI_VANILLA_ADDON >= 3 ) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_East.sqf"};
+	if (CTI_VANILLA_ADDON isEqualTo 1 || CTI_VANILLA_ADDON >= 3 ) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_Vanilla_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_Vanilla_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_Vanilla_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_Vanilla_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_Vanilla_East.sqf"};
 	};
 	//--Load Heli Gear
-	if (CTI_HELI_ADDON == 1 || CTI_HELI_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_East.sqf"};
+	if (CTI_HELI_ADDON isEqualTo 1 || CTI_HELI_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_HELI_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_HELI_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_HELI_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_HELI_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_HELI_East.sqf"};
 	};	
 	//--- Load Marksmen Gear
-	if (CTI_MARKSMEN_ADDON == 1) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_East.sqf"};
+	if (CTI_MARKSMEN_ADDON isEqualTo 1) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_MARKSMEN_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_MARKSMEN_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_MARKSMEN_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_MARKSMEN_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_MARKSMEN_East.sqf"};
 	};
 	//--- Load APEX Gear
-	if (CTI_APEX_ADDON == 1 || CTI_APEX_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_East.sqf"};
+	if (CTI_APEX_ADDON isEqualTo 1 || CTI_APEX_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_APEX_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_APEX_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_APEX_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_APEX_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_APEX_East.sqf"};
 	};
 	//--- Load JETS Gear
-	if (CTI_JETS_ADDON == 1 || CTI_JETS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_East.sqf"};
+	if (CTI_JETS_ADDON isEqualTo 1 || CTI_JETS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_JETS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_JETS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_JETS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_JETS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_JETS_East.sqf"};
 	};	
 	//--- Load TANKS Gear
-	if (CTI_TANKS_ADDON == 1 || CTI_TANKS_ADDON >= 3) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_East.sqf"};
+	if (CTI_TANKS_ADDON isEqualTo 1 || CTI_TANKS_ADDON >= 3) then {
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_TANKS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_TANKS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_TANKS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_TANKS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_TANKS_East.sqf"};
 	};
 	//--- Load CUP Gear
 	if (CTI_CUP_WEAPONS_ADDON > 0) then {
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_CUP_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_CUP_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_CUP_East.sqf"};
 	};
 	//--- Load RHS Gear
-	if (CTI_RHS_AFRF_ADDON == 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_AFRF_East.sqf"};
+	if (CTI_RHS_AFRF_ADDON isEqualTo 1 || CTI_RHS_AFRF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_AFRF_East.sqf"};
 	};
-	if (CTI_RHS_USAF_ADDON == 1 || CTI_RHS_USAF_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_USAF_West.sqf"};
+	if (CTI_RHS_USAF_ADDON isEqualTo 1 || CTI_RHS_USAF_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_RHS_USAF_West.sqf"};
 	};
 	//--- Load RHS Loadout Ammo
 	if (CTI_RHS_USAF_ADDON > 0 || CTI_RHS_AFRF_ADDON >= 3) then { 
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_RHS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_RHS_East.sqf"};
 	};
 	//--- OFPS Gear
-	if (CTI_OFPS_UNITS_ADDON == 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_East.sqf"};
+	if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_East.sqf"};
 		//loadouts ammo
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_OFPS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_OFPS_East.sqf"};
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_OFPS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Ammo\Ammo_OFPS_East.sqf"};
 	};
 	//--- OFPS RHS Gear
-	if (CTI_OFPS_RHS_ADDON == 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_East.sqf"};
+	if (CTI_OFPS_RHS_ADDON isEqualTo 1 || CTI_OFPS_RHS_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_RHS_East.sqf"};
 	};
 	//--- OFPS CUP Gear
-	if (CTI_OFPS_CUP_ADDON == 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
-		if (CTI_P_SideJoined == west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_West.sqf"};
-		if (CTI_P_SideJoined == east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_East.sqf"};
+	if (CTI_OFPS_CUP_ADDON isEqualTo 1 || CTI_OFPS_CUP_ADDON >= 3) then { 
+		if (CTI_P_SideJoined isEqualTo west) then {(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_West.sqf"};
+		if (CTI_P_SideJoined isEqualTo east) then {(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Gear\Gear_OFPS_CUP_East.sqf"};
 	};	
 };
 
@@ -591,7 +594,7 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 		if (CTI_IsClient && !CTI_IsServer) then {
 			_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CL_FNC_OnHQDestroyed", CTI_P_SideID]];
 
-			if (CTI_BASE_NOOBPROTECTION == 1) then {
+			if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 				_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", CTI_P_SideID]]; //--- You want that on public
 			};
 		};
@@ -734,12 +737,12 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 				_introtext_7 = format ["%1", _mode_guerrilla];
 				_introtext_8 = format ["%1", _mode_zombie];
 
-				if (CTI_DEV_MODE == 0) then {	
+				if (CTI_DEV_MODE isEqualTo 0) then {	
 					//press spacebar to skip 0x39
 					player setVariable ["cti_intro",0,true];
 					//add skip keyhandler
 					waituntil {!isnull (finddisplay 46)};
-					_skipintro = (findDisplay 46) displayAddEventHandler ["KeyDown", {if ((_this select 1) == 0x39) then {player setVariable ["cti_intro",1,true]};}];
+					_skipintro = (findDisplay 46) displayAddEventHandler ["KeyDown", {if ((_this select 1) isEqualTo 0x39) then {player setVariable ["cti_intro",1,true]};}];
 					if (!isNil "_camera_run") exitWith {};
 					_camera_run = true;
 					_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
@@ -748,27 +751,27 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 					//option to skip
 					_skiptext = format ["Open Map for Server rules! Press Space to Skip or Win key to open Tablet"];
 					titleText [_skiptext, "PLAIN DOWN", 15];
-					if (player getVariable "cti_intro" == 0) then {[
+					if (player getVariable "cti_intro" isEqualTo 0) then {[
 						[["OFPS CTI WARFARE","<t align = 'center' shadow = '1' size = '1.4' font='PuristaBold'>%1</t><br/>"],
 						["CAPTURE THE ISLAND","<t align = 'center' shadow = '1' size = '1.2' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_1,"<br/><t align = 'center' shadow = '1' size = '1.1' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_6,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"]]
 					] spawn BIS_fnc_typeText;};
-					_loop = 0;while{(_loop < 13)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
-					if (player getVariable "cti_intro" == 0) then {[
+					_loop = 0;while{(_loop < 13)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
+					if (player getVariable "cti_intro" isEqualTo 0) then {[
 						[[_introtext_2,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"],
 						[_introtext_3,"<t align = 'center' shadow = '1' size = '1' font='PuristaBold'>%1</t><br/>"]]
 					] spawn BIS_fnc_typeText;};
-					_loop = 0;while{(_loop < 10)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };
-					if (player getVariable "cti_intro" == 0) then {titleText [_introtext_4, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
-					if (player getVariable "cti_intro" == 0) then {titleText [_introtext_5, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" == 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
-					if (CTI_GUERILLA_MODE == 1 && player getVariable "cti_intro" == 0) then {
+					_loop = 0;while{(_loop < 10)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };
+					if (player getVariable "cti_intro" isEqualTo 0) then {titleText [_introtext_4, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
+					if (player getVariable "cti_intro" isEqualTo 0) then {titleText [_introtext_5, "PLAIN", 1];_loop = 0;while{(_loop < 4)} do { sleep 1;if (player getVariable "cti_intro" isEqualTo 1) exitwith {};_loop = _loop + 1; };titleFadeOut 1;};
+					if (CTI_GUERILLA_MODE isEqualTo 1 && player getVariable "cti_intro" isEqualTo 0) then {
 						titleText [_introtext_7, "PLAIN", 1];sleep 4;titleFadeOut 1;
 					};
-					if (CTI_ZOMBIE_MODE == 1 && player getVariable "cti_intro" == 0) then {
+					if (CTI_ZOMBIE_MODE isEqualTo 1 && player getVariable "cti_intro" isEqualTo 0) then {
 						titleText [_introtext_8, "PLAIN", 1];sleep 4;titleFadeOut 1;
 					};
-					waitUntil {scriptdone _firstshot || player getVariable "cti_intro" == 1};
+					waitUntil {scriptdone _firstshot || player getVariable "cti_intro" isEqualTo 1};
 					//remove keyhandler
 					(findDisplay 46) displayRemoveEventHandler ["KeyDown", _skipintro];
 					player setVariable ["cti_intro",0,true];
@@ -801,7 +804,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	_distance_max = missionNamespace getVariable "CTI_GRAPHICS_VD_MAX";
 
 	if (isNil "_distance") then { _distance = viewDistance };
-	if (typeName _distance != "SCALAR") then { _distance = viewDistance };
+	if !(typeName _distance isEqualTo "SCALAR") then { _distance = viewDistance };
 	if (_distance < 1) then { _distance = 500 };
 	if (_distance > _distance_max) then { _distance = _distance_max };
 	setViewDistance _distance;
@@ -816,7 +819,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	//--- Shadows Distance.
 	_distance = profileNamespace getVariable "CTI_PERSISTENT_SHADOWS_DISTANCE";
 	if !(isNil "_distance") then {
-		if (typeName _distance == "SCALAR") then {
+		if (typeName _distance isEqualTo "SCALAR") then {
 			if (_distance < 50) then { _distance = 50 };
 			if (_distance > 200) then { _distance = 200 };
 			setShadowDistance _distance;
@@ -828,7 +831,7 @@ if !(isNil {profileNamespace getVariable format["CTI_PERSISTENT_GEAR_TEMPLATEV3_
 	_grid_max = missionNamespace getVariable "CTI_GRAPHICS_TG_MAX";
 
 	if (isNil "_grid") then { _grid = 25 };
-	if (typeName _grid != "SCALAR") then {
+	if !(typeName _grid isEqualTo "SCALAR") then { 
 		_grid = 0;
 	} else {
 		if (_grid < 0) then { _grid = 0 };
@@ -850,8 +853,8 @@ if (profileNamespace getVariable "CTI_PERSISTENT_HINTS") then {
 	};
 };
 
-if (CTI_BASE_NOOBPROTECTION == 1) then {player addEventHandler ["fired", {_this spawn CTI_CL_FNC_OnPlayerFired}]}; //--- Trust me, you want that
-if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") == 0) then {player enableFatigue false}; //--- Disable the unit's fatigue
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {player addEventHandler ["fired", {_this spawn CTI_CL_FNC_OnPlayerFired}]}; //--- Trust me, you want that
+if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") isEqualTo 0) then {player enableFatigue false}; //--- Disable the unit's fatigue
 
 //--- Thermal / NV restriction
 if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVariable 'CTI_ZOMBIE_MODE')==1 || (missionNamespace getVariable 'CTI_GUERILLA_MODE')==1) then {
@@ -866,17 +869,8 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 
 FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
 
-//--- Sam altitude warning
-// Disabling for now, to much spam.
-//call compile preprocessFile "Client\Functions\Externals\HandleSAMSitel_ClientWarn.sqf";
-
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
-
-//-- Stealth script
-if (CTI_ENABLE_VEHICLE_STEALTH == 1) then {
-execVm "Client\Functions\Externals\Engine_Stealth\Stealth_init.sqf";
-};
 
 //--- Zues Module
 player call CTI_CO_FNC_UnitCreated;
@@ -936,6 +930,6 @@ _uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_
 
 //--- TODO: Organize all keybinds in one location
 //--- Holster weapon Keybind (Key 5)
-holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 0x05) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
+holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 0x05) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
 
 CTI_Init_Client = true;

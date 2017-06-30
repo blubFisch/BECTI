@@ -4,7 +4,7 @@ _repair_status = true;
 scopeName "end";
 if (!(_repair_status)) exitWith{};
 if (_repair_status) then {
-_vehicle = [player, _vehicles] Call CTI_CO_FNC_GetClosestEntity;
+_vehicle = [player, _vehicles] call CTI_CO_FNC_GetClosestEntity;
 _actionTime = 30;//-- define _actiontime incase it doesnt get defined below.
 _actionTime = switch (true) do {
 	case (_vehicle isKindOf "Tank"): {CTI_TOOLKIT_REPAIR_TIME_TANK};// repair times for tracked vehicles

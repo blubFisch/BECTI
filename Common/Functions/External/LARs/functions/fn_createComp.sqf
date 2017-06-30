@@ -1120,7 +1120,7 @@ private [ "_pType", "_dataType" ];
 	_pType = _x;
 	{
 		_dataType = getText( _x >> "dataType" );
-		if ( _dataType == _pType ) then {
+		if ( _dataType isEqualTo _pType ) then {
 			[ _x ] call _fnc_spawnItems;
 		};
 	}forEach _itemCfgs;
@@ -1139,7 +1139,7 @@ DEBUG_MSG( DEBUG, "DEFERED ITEMS" );
 	_pType = _x;
 	{
 		_dataType = getText( _x >> "dataType" );
-		if ( _dataType == _pType ) then {
+		if ( _dataType isEqualTo _pType ) then {
 			[ _x ] call _fnc_spawnItems;
 		};
 	}forEach _deferedItems;

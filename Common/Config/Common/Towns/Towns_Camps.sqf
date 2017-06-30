@@ -1,8 +1,8 @@
 _classnames = [];
 _respawnBPos = [];
 
-_classnames pushBack 		"Land_Cargo_Patrol_V3_F";
-_respawnBPos pushBack 		-1;
+_classnames pushBack "Land_Bunker_01_small_F";
+_respawnBPos pushBack -1;
 
 for '_i' from 0 to (count _classnames) -1 do {
 	_classname = _classnames select _i;

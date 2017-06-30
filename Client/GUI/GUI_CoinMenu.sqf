@@ -15,26 +15,9 @@ _areaSize = _this select 2;
 _startPos = getPos _origin;
 
 //--- Check if the HQ is within a construction area
-if (_source == 'HQ') then {
+if (_source isEqualTo 'HQ') then {
 	{if (_startPos distance2D _x <= CTI_BASE_AREA_RANGE) exitWith {_startPos = [_x select 0, _x select 1, 0]}} forEach (CTI_P_SideLogic getVariable "cti_structures_areas");
 };
-/*
-//--- HQ Area checkin
-_area_max = false;
-if (_source == 'HQ') then {
-	_in_area = false;
-	{if ([_startPos select 0, _startPos select 1] distance [_x select 0, _x select 1] <= CTI_BASE_AREA_RANGE) exitWith {_in_area = true}} forEach (CTI_P_SideLogic getVariable "cti_structures_areas");
-	
-	if !(_in_area) then {
-		if (count (CTI_P_SideLogic getVariable "cti_structures_areas") < (missionNamespace getVariable "CTI_BASE_AREA_MAX")) then {
-			CTI_P_SideLogic setVariable ["cti_structures_areas", (CTI_P_SideLogic getVariable "cti_structures_areas") + [[_startPos select 0, _startPos select 1]], true];
-		} else {
-			_area_max = true;
-		};
-	};
-};
-
-if (_area_max) exitWith {hint parseText "<t size='1.3' color='#2394ef'>Information</t><br /><br />The base area limit has been reached."};*/
 
 if !(isNil {missionNamespace getVariable "CTI_COIN_CAMCONSTRUCT"}) exitWith {};
 
@@ -87,7 +70,7 @@ with missionNamespace do {
 	CTI_COIN_CAMCONSTRUCT camConstuctionSetParams ([_startPos] + _areaSize);
 	
 	//--- Apply NVG or not depending on the daytime
-	_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
+	_nvgstate = [false, true] select (daytime > 18.5 || daytime < 4.0);
 	camUseNVG _nvgstate;
 	CTI_COIN_CAMUSENVG = _nvgstate;
 	
@@ -117,7 +100,7 @@ with missionNamespace do {
 	
 	while {!isNil 'CTI_COIN_CAMCONSTRUCT' && !CTI_COIN_EXIT && alive player} do {
 		//--- Check if the HQ was mobilized/deployed
-		if (CTI_COIN_SOURCE == 'HQ' && isNull CTI_COIN_ORIGIN) then {
+		if (CTI_COIN_SOURCE isEqualTo 'HQ' && isNull CTI_COIN_ORIGIN) then {
 			_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
 			if (alive _hq) then {CTI_COIN_ORIGIN = _hq};
 		};
@@ -179,7 +162,7 @@ with missionNamespace do {
 				switch (CTI_COIN_PARAM_KIND) do {
 					case 'STRUCTURES': {
 						_preview = (CTI_COIN_PARAM select 1) select 0;
-						if (((CTI_COIN_PARAM select 0) select 0) == CTI_HQ_MOBILIZE) then {_hq_mobilize = true};
+						if (((CTI_COIN_PARAM select 0) select 0) isEqualTo CTI_HQ_MOBILIZE) then {_hq_mobilize = true};
 						if (count(CTI_COIN_PARAM select 4) < 3) then {CTI_COIN_HELPER = "Sign_Arrow_Large_Blue_F" createVehicleLocal [0,0,0]};
 						//systemchat format ["Preview | %1",_preview];
 					};
@@ -194,6 +177,8 @@ with missionNamespace do {
 					//--- Create the preview item
 					_preview_item = _preview createVehicleLocal (screenToWorld [0.5,0.5]);
 					_preview_item allowDamage false;
+					_preview_item enableSimulation false;
+
 					if !(isNil 'CTI_COIN_LASTDIR') then {_preview_item setDir CTI_COIN_LASTDIR};
 					CTI_COIN_DIR = getDir _preview_item;
 					
@@ -219,9 +204,7 @@ with missionNamespace do {
 				//systemchat format ["Preview | %1",CTI_COIN_PREVIEW];
 				//--- Update the direction to prevent it from moving by itself on sloppy hills
 				CTI_COIN_PREVIEW setDir CTI_COIN_DIR;
-				//CTI_COIN_PREVIEW setVectorUp [0,0,0];
-				if (time - _last_collision_update > 2) then {_last_collision_update = time;{CTI_COIN_PREVIEW disableCollisionWith _x} forEach (CTI_COIN_PREVIEW nearEntities 150)};
-		
+				if !(CTI_COIN_PREVIEW isKindOf "Building") then {CTI_COIN_PREVIEW setVectorUp surfaceNormal position CTI_COIN_PREVIEW};
 				//--- Update the coloration if needed
 				(CTI_COIN_PREVIEW) call CTI_Coin_UpdatePreview;
 				
@@ -232,7 +215,7 @@ with missionNamespace do {
 					_helper_pos = CTI_COIN_PREVIEW modelToWorld [(sin (360 -_direction_structure) * _distance_structure), (cos (360 -_direction_structure) * _distance_structure), 0];
 					_helper_pos set [2, 0];
 					CTI_COIN_HELPER setPos _helper_pos;
-					CTI_COIN_HELPER setDir direction CTI_COIN_PREVIEW;		
+					CTI_COIN_HELPER setDir CTI_COIN_DIR;	
 				};
 				//level with terrain
 				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
@@ -243,7 +226,7 @@ with missionNamespace do {
 				//---Composition
 				if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {				
 					//due to amount of objects in compositions, limit update time but not too fast (remove old and place new)
-					if (diag_tickTime - _last_composition_update > 0.25) then {
+					if (diag_tickTime - _last_composition_update > 0.1) then {
 						_last_composition_update = diag_tickTime;
 						if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[ CTI_COIN_PREVIEW_COMP ] call LARs_fnc_deleteComp;};
 						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
@@ -257,22 +240,22 @@ with missionNamespace do {
 				};
 			};
 		} else { //--- The player's commanding menu is gone
-			if (commandingMenu == '' && !CTI_COIN_MENUTRANS) then {
+			if (commandingMenu isEqualTo '' && !CTI_COIN_MENUTRANS) then {
 				showCommandingMenu '#USER:CTI_COIN_Categories_0';
 			};
 		};
 		
 		//--- Check if the funds overlay control need an update
 		_update = false;
-		if (_source == 'HQ') then {
-			if ((CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply) != (CTI_COIN_LASTFUNDS select 0)) then {_update = true};
-			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
+		if (_source isEqualTo 'HQ') then {
+			if !((CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply) isEqualTo (CTI_COIN_LASTFUNDS select 0)) then {_update = true};
+			if !((call CTI_CL_FNC_GetPlayerFunds) isEqualTo (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 			CTI_COIN_LASTFUNDS set [0, CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply];
 			CTI_COIN_LASTFUNDS set [1, call CTI_CL_FNC_GetPlayerFunds];
 			
 			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 		} else {
-			if ((call CTI_CL_FNC_GetPlayerFunds) != (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
+			if !((call CTI_CL_FNC_GetPlayerFunds) isEqualTo (CTI_COIN_LASTFUNDS select 1)) then {_update = true};
 			CTI_COIN_LASTFUNDS set [1, call CTI_CL_FNC_GetPlayerFunds];
 		};
 		
@@ -285,7 +268,7 @@ with missionNamespace do {
 			//--- Update the overlay cash controls
 			_cashValues = "";
 			_cashSize = 2;
-			if (_source == 'HQ') then {
+			if (_source isEqualTo 'HQ') then {
 				_cashValues = _cashValues + format ["S %1<br />", CTI_P_SideJoined call CTI_CO_FNC_GetSideSupply];
 				_cashValues = _cashValues + format ["$ %1<br />", call CTI_CL_FNC_GetPlayerFunds];
 				_cashSize = 1.4;
@@ -310,7 +293,7 @@ with missionNamespace do {
 		};*/
 		
 		//--- Update the controls if the menu differs from the last
-		if (commandingMenu != _last_menu) then {
+		if !(commandingMenu isEqualTo _last_menu) then {
 			_textControls = "";
 			
 			if (isNil 'CTI_COIN_PREVIEW') then { //--- Menu browsing
@@ -318,7 +301,7 @@ with missionNamespace do {
 				_textAlignTerrain = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Level:<t align='right'>%1</t></t><br />", "T"];//Letter T
 				_textAutoDefense = format["<t color='#42b6ff' shadow='2' size='0.7'>Auto Defense:<t align='right'>%1</t></t><br />", actionKeysNames ["Gear", 1]];
 				_textControls = format ["%1%2%3", _textAutoDefense, _textAlign, _textAlignTerrain];
-				if (commandingMenu == "#USER:CTI_COIN_Categories_0") then {
+				if (commandingMenu isEqualTo "#USER:CTI_COIN_Categories_0") then {
 					_textControls = _textControls + format ["<t color='%2' shadow='2' size='1'>Exit:<t align='right'>%1</t></t>", actionKeysNames ["NavigateMenu", 1], CTI_COIN_COLOR_INVALID];
 				} else {
 					_textControls = _textControls + format ["<t color='#42b6ff' shadow='2' size='1'>Back:<t align='right'>%1</t></t>", actionKeysNames ["NavigateMenu", 1]];

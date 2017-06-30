@@ -26,22 +26,13 @@
   # EXAMPLE #
     _structure addEventHandler ["explosion", format ["[_this select 0, _this select 2, %1, '%2', %3] spawn CTI_SE_FNC_OnExplosion", (_side) call CTI_CO_FNC_GetSideID, _variable, _position]];
 */
-
-private ["_damage", "_logic", "_position", "_side", "_sideID", "_structure", "_variable"];
-
-_object = _this select 0;
-_damage = _this select 1;
-_damage_val = _this select 2;
-_sideID = _this select 3;
-_variable = _this select 4;
-_position = _this select 5;
-//systemchat format ["Explosion %1 | %2",_damage, _damage_val];
+params ["_object", "_damage", "_damage_val", "_sideID", "_variable", "_position"];
+private ["_logic", "_side"];
 
 if (isNil '_damage_val') then {_damage_val = 0.05};
 
 //get current damage variable
-_virtual_damages = _object getVariable "cti_explosivedmg";
-if (isNil '_virtual_damages') then {_virtual_damages = 0};
+_virtual_damages = _object getVariable ["cti_explosivedmg", 0];
 _virtual_damages = _virtual_damages + _damage_val;
 if (_virtual_damages > 1) then { _virtual_damages = 1 };
 
@@ -55,6 +46,4 @@ if (_virtual_damages >= 1 || !alive _object) then {
 	//_smoke = createVehicle ["SmallSecondary", _objpos, [], 0, "CAN_COLLIDE"];
 	_smoke = createVehicle ["CMflare_Chaff_Ammo", _objpos, [], 0, "CAN_COLLIDE"];
 	[_objpos] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
-
-	
 };

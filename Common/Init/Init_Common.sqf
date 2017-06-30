@@ -106,7 +106,6 @@ CTI_CO_FNC_SanitizeAirOrdinance = compileFinal preprocessFileLineNumbers "Common
 
 CTI_CO_FNC_UnitCreated = compileFinal preprocessFileLineNumbers "Common\Functions\Common_UnitCreated.sqf";
 CTI_CO_FNC_Say3D = compileFinal preprocessFileLineNumbers "Common\Functions\Common_Say3D.sqf";
-CTI_CO_FNC_OnDeleted = compileFinal preprocessFileLineNumbers "Common\Functions\Common_OnDeleted.sqf";
 
 //--- External Functions
 CTI_CO_FNC_EXT_HandleTiresDamages = compileFinal preprocessFileLineNumbers "Common\Functions\External\External_HandleTiresDamages.sqf";
@@ -126,7 +125,7 @@ call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_West.sq
 call compile preprocessFileLineNumbers "Common\Config\Common\Towns\Towns_East.sqf";
 
 //--- VANILLA MODE
-if (CTI_FACTION_MODE == 0) then { 
+if (CTI_FACTION_MODE isEqualTo 0) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Upgrades\Upgrades_East.sqf";
@@ -219,7 +218,7 @@ if (CTI_FACTION_MODE == 0) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\Vanilla\Squads\Squad_East.sqf";	
 };
 //CUP MODE
-if (CTI_FACTION_MODE == 1) then { 
+if (CTI_FACTION_MODE isEqualTo 1) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Upgrades\Upgrades_East.sqf";
@@ -312,7 +311,7 @@ if (CTI_FACTION_MODE == 1) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\CUP\Squads\Squad_East.sqf";
 };
 //RHS MODE
-if (CTI_FACTION_MODE == 2) then { 
+if (CTI_FACTION_MODE isEqualTo 2) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Upgrades\Upgrades_East.sqf";
@@ -405,7 +404,7 @@ if (CTI_FACTION_MODE == 2) then {
 	(east) call compile preprocessFileLineNumbers "Common\Config\RHS\Squads\Squad_East.sqf";
 };
 //OFPS MODE
-if (CTI_FACTION_MODE == 3) then { 
+if (CTI_FACTION_MODE isEqualTo 3) then { 
 	//--- Upgrade goes before the base definition so that we may construct the commander's logical path
 	(west) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_West.sqf";
 	(east) call compile preprocessFileLineNumbers "Common\Config\OFPS\Upgrades\Upgrades_East.sqf";
@@ -503,15 +502,6 @@ call compile preprocessFile "Common\Functions\External\Baked_AIS\Baked_AIS_fnc.s
 //---CRAM tracking
 call compile preprocessFile "Common\Functions\External\CRAMControl_FiredEvent.sqf";
 
-//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
-if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
-	0 spawn {
-		waitUntil {!isNil 'CTI_InitTowns'};
-		
-		execVM "Common\Init\Init_TownsPositions.sqf";
-	};
-};
-
 //--- Respawn markers
 createMarkerLocal ["respawn_east",getMarkerPos "CTI_EastRespawn"];
 "respawn_east" setMarkerColorLocal "ColorRed";
@@ -525,3 +515,12 @@ createMarkerLocal ["respawn_west",getMarkerPos "CTI_WestRespawn"];
 "respawn_west" setMarkerBrushLocal "BORDER";
 "respawn_west" setMarkerSizeLocal [10,10];
 "respawn_west" setMarkerAlphaLocal 0;
+
+//--- If the towns units spawn mode is set to 1, we have to cache all possible spawn locations on start, only use on HC and Server
+if (CTI_TOWNS_SPAWN_MODE isEqualTo 1 && (CTI_IsHeadless || CTI_IsServer)) then {
+	0 spawn {
+		waitUntil {!isNil 'CTI_InitTowns'};
+		
+		execVM "Common\Init\Init_LocationsPositions.sqf";
+	};
+};

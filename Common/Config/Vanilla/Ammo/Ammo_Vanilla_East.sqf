@@ -1582,4 +1582,4 @@ _u pushBack 4;
 _p pushBack 1000; 
 _t pushBack 2; 
 
-[_faction, _i, _o, _u, _p, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";
+[_faction, _i, _o, _u, _p, _t] call compile preprocessFileLineNumbers "Common\Config\Common\Ammo\Ammo_Config_Set.sqf";

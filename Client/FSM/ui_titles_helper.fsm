@@ -71,12 +71,12 @@ class FSM
     {
       name = "Refresh";
       init = /*%FSM<STATEINIT""">*/"_nearest = (player) call CTI_CO_FNC_GetClosestTown;" \n
-       "_update = if (player distance _nearest < CTI_UI_TOWNS_PROGRESSBAR_DISTANCE && alive player) then {true} else {false};" \n
+       "_update = [false, true] select (player distance _nearest < CTI_UI_TOWNS_PROGRESSBAR_DISTANCE && alive player);" \n
        "" \n
        "if !(isNull (uiNamespace getVariable ""cti_title_capture"")) then {" \n
        "	_commander = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideCommanderTeam;" \n
        "	if (isNull _commander) then {" \n
-       "		_commander = if (missionNamespace getVariable ""CTI_AI_TEAMS_ENABLED"" > 0) then {""AI""} else {""N/A""};" \n
+       "		_commander = [""N/A"", ""AI""] select (missionNamespace getVariable ""CTI_AI_TEAMS_ENABLED"" > 0);" \n
        "	} else {" \n
        "		_commander = name leader _commander;" \n
        "	};" \n
@@ -170,7 +170,7 @@ class FSM
        "if (!isNull _camp && _camp distance player < CTI_TOWNS_CAMPS_CAPTURE_RANGE) then {" \n
        "	_sideID = _camp getVariable ""cti_camp_sideID"";" \n
        "	_curSV = _camp getVariable ""cti_camp_sv"";" \n
-       "	if (_lastCheck == ""Town"") then {_delay = 0};" \n
+       "	if (_lastCheck isEqualTo ""Town"") then {_delay = 0};" \n
        "	_txt = """";" \n
        "	_lastCheck = ""Camp"";" \n
        "} else {" \n
@@ -183,7 +183,7 @@ class FSM
        "	};" \n
        "};" \n
        "" \n
-       "if (_sideID != _lastSID) then {_delay = 0};" \n
+       "if !(_sideID isEqualTo _lastSID) then {_delay = 0};" \n
        "" \n
        "if !(isNull (uiNamespace getVariable ""cti_title_capture"")) then {" \n
        "" \n

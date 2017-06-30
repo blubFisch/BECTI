@@ -68,7 +68,7 @@ _upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 		_upgradetype = _magvar select 0;
 		_ammoupgrade = _magvar select 1;
 		//systemchat format ["magvar OK:  %1 | %2", _upgradetype, _ammoupgrade];
-		if (_upgradetype == "Land") then {
+		if (_upgradetype isEqualTo "Land") then {
 			_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
 			//systemchat format ["upgrade OK:  %1 | %2",_upgrade_lvl, _ammoupgrade];
 			if (_upgrade_lvl < _ammoupgrade) then {
@@ -96,7 +96,7 @@ _path = [];
 	if (!isNil "_magvar") then {
 		_upgradetype = _magvar select 0;
 		_ammoupgrade = _magvar select 1;
-		if (_upgradetype == "Land") then {
+		if (_upgradetype isEqualTo "Land") then {
 			_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
 			if (_upgrade_lvl < _ammoupgrade) then {
 				_vehicle removeMagazineTurret [_mag, [_path]]; 

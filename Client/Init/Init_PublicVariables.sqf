@@ -4,8 +4,8 @@ with missionNamespace do {
 	CTI_PVF_CLT_AddHQActions = {
 		waitUntil {local _this};
 		_this lock 2;
-		_this addAction ["<t color='#86F078'>Unlock</t>","Client\Actions\Action_ToggleLock.sqf", [], 99, false, true, '', 'alive _target && locked _target == 2'];
-		_this addAction ["<t color='#86F078'>Lock</t>","Client\Actions\Action_ToggleLock.sqf", [], 99, false, true, '', 'alive _target && locked _target == 0'];
+		_this addAction ["<t color='#86F078'>Unlock</t>","Client\Actions\Action_ToggleLock.sqf", [], 99, false, true, '', 'alive _target && locked _target isEqualTo 2'];
+		_this addAction ["<t color='#86F078'>Lock</t>","Client\Actions\Action_ToggleLock.sqf", [], 99, false, true, '', 'alive _target && locked _target isEqualTo 0'];
 	};
 	
 	//--- The client receives the HQ EH
@@ -85,7 +85,7 @@ with missionNamespace do {
 		_label = if !(_is_defense) then {_var select CTI_UNIT_LABEL} else {_var select CTI_DEFENSE_LABEL};
 		
 		(_award) call CTI_CL_FNC_ChangePlayerFunds;
-		if (_killed_pname == "") then {
+		if (_killed_pname isEqualTo "") then {
 			["award-bounty", [_award, _label]] call CTI_CL_FNC_DisplayMessage;
 		} else {
 			["award-bounty-pvp", [_award, _killed_pname, _label]] call CTI_CL_FNC_DisplayMessage;
@@ -101,17 +101,15 @@ with missionNamespace do {
 		_var = missionNamespace getVariable _type_killed;
 		_label = _var select CTI_UNIT_LABEL;
 		
-		diag_log "killbounty-debug: EH";
-		
 		if (call CTI_CL_FNC_IsPlayerCommander) then {
 			(_award) call CTI_CL_FNC_ChangePlayerFunds;
-			if (_killed_pname == "") then {
+			if (_killed_pname isEqualTo "") then {
 				["award-bounty-basedefense", [_award, _label]] call CTI_CL_FNC_DisplayMessage;
 			} else {
 				["award-bounty-basedefense-player", [_award, _killed_pname, _label]] call CTI_CL_FNC_DisplayMessage;
 			};
 		} else {	// Notification to players
-			if (_killed_pname == "") then {
+			if (_killed_pname isEqualTo "") then {
 				["basedefense-kill", [_label]] call CTI_CL_FNC_DisplayMessage;
 			} else {
 				["basedefense-kill-player", [_killed_pname, _label]] call CTI_CL_FNC_DisplayMessage;
@@ -131,9 +129,9 @@ with missionNamespace do {
 		_marker setMarkerColorLocal CTI_P_SideColor;
 		_marker setMarkerSizeLocal [0.75, 0.75]; 
 		_marker setMarkerTextLocal "FOB";
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Bike (50$)</t>","Client\Actions\Action_Buy_Town.sqf", ["dbo_CIV_new_bike",50,true], 99, false, true, "", "vehicle player == player"];
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Quadbike (250$)</t>","Client\Actions\Action_Buy_Town.sqf", ["C_Quadbike_01_F",250,true], 99, false, true, "", "vehicle player == player"];
-		_fob addAction ["<t color='#e67b09'>FOB: Buy Scooter (150$)</t>","Client\Actions\Action_Buy_Town.sqf", ["sfp_dakota",150,true], 99, false, true, "", "vehicle player == player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Bike (50$)</t>","Client\Actions\Action_Buy_Town.sqf", ["dbo_CIV_new_bike",50,true], 99, false, true, "", "vehicle player isEqualTo player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Quadbike (250$)</t>","Client\Actions\Action_Buy_Town.sqf", ["C_Quadbike_01_F",250,true], 99, false, true, "", "vehicle player isEqualTo player"];
+		_fob addAction ["<t color='#e67b09'>FOB: Buy Scooter (150$)</t>","Client\Actions\Action_Buy_Town.sqf", ["sfp_dakota",150,true], 99, false, true, "", "vehicle player isEqualTo player"];
 		
 		[_fob, _marker] spawn {
 			_structure = _this select 0;
@@ -206,9 +204,9 @@ with missionNamespace do {
 		_factory = _this select 3;
 		
 		_index = -1;
-		{ if ((_x select 0) == _req_seed && (_x select 1) == _req_classname) exitWith {_index = _forEachIndex} } forEach CTI_P_PurchaseRequests;
+		{ if ((_x select 0) isEqualTo _req_seed && (_x select 1) isEqualTo _req_classname) exitWith {_index = _forEachIndex} } forEach CTI_P_PurchaseRequests;
 		
-		if (_index != -1) then {CTI_P_PurchaseRequests deleteAt _index};
+		if !(_index isEqualTo -1) then {CTI_P_PurchaseRequests deleteAt _index};
 		//todo cash deduction!
 		if (CTI_Log_Level >= CTI_Log_Information) then { ["INFORMATION", "FUNCTION: CTI_PVF_CLT_OnPurchaseDelegationStart", format["Removed purchase delegation for [%1] concerning classname [%2] with seed [%3] on factory [%4, (%5)]", _req_target, _req_classname, _req_seed, _factory, _factory getVariable "cti_structure_type"]] call CTI_CO_FNC_Log };
 	};
@@ -220,9 +218,9 @@ with missionNamespace do {
 		_factory = _this select 2;
 		
 		_index = -1;
-		{ if ((_x select 0) == _req_seed && (_x select 1) == _req_classname) exitWith {_index = _forEachIndex} } forEach CTI_P_PurchaseRequests;
+		{ if ((_x select 0) isEqualTo _req_seed && (_x select 1) isEqualTo _req_classname) exitWith {_index = _forEachIndex} } forEach CTI_P_PurchaseRequests;
 		
-		if (_index != -1) then {
+		if !(_index isEqualTo -1) then {
 			// CTI_P_PurchaseRequests set [_index, "!REMOVE!"];
 			// CTI_P_PurchaseRequests = CTI_P_PurchaseRequests - ["!REMOVE!"];
 			CTI_P_PurchaseRequests deleteAt _index;
@@ -250,13 +248,13 @@ with missionNamespace do {
 		_from = _this select 2;
 		
 		_position = [_position, 5, CTI_AI_TEAMS_OBSERVATION_ACCURACY] call CTI_CO_FNC_GetRandomPosition;
-		_markerType = if (_type == "base") then {"mil_warning"} else {"mil_unknown"};
-		_marker = createMarkerLocal [Format ["cti_report_%1", CTI_P_MarkerIterator], _position];CTI_P_MarkerIterator = CTI_P_MarkerIterator + 1;
+		_markerType = ["mil_unknown", "mil_warning"] select (_type isEqualTo "base");
+		_marker = createMarkerLocal [format ["cti_report_%1", CTI_P_MarkerIterator], _position];CTI_P_MarkerIterator = CTI_P_MarkerIterator + 1;
 		_marker setMarkerTypeLocal _markerType;
 		_marker setMarkerColorLocal "ColorBlack";
 		_marker setMarkerSizeLocal [0.5, 0.5]; 
 		
-		if (_type == "base") then {["spot-base", [_from, _position]] call CTI_CL_FNC_DisplayMessage} else {["spot-unit", [_from, _position]] call CTI_CL_FNC_DisplayMessage};
+		if (_type isEqualTo "base") then {["spot-base", [_from, _position]] call CTI_CL_FNC_DisplayMessage} else {["spot-unit", [_from, _position]] call CTI_CL_FNC_DisplayMessage};
 		
 		sleep CTI_AI_TEAMS_OBSERVATION_MARKER_LIFESPAN;
 		

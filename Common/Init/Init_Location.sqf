@@ -1,11 +1,5 @@
-private ["_sideID", "_town", "_town_defenses", "_town_name", "_town_side", "_town_sv_default", "_town_sv_max"];
-
-_town = _this select 0;
-_town_name = _this select 1;
-_town_side = _this select 2;
-_town_sv_default = _this select 3;
-_town_sv_max = _this select 4;
-_town_defenses = if (count _this > 5) then {_this select 5} else {[]};
+params ["_town", "_town_name", "_town_side", "_town_sv_default", "_town_sv_max", ["_town_defenses", []]];
+private ["_sideID"];
 
 _town setVariable ["cti_town_name", _town_name];
 _town setVariable ["cti_town_sv_default", _town_sv_default];
@@ -26,13 +20,13 @@ if (CTI_IsServer) then {
 	
 	//--- Town Statics
 	if (count _town_defenses > 0) then { 
-		if (typeName (_town_defenses select 0) == "STRING") then {_town_defenses = [_town_defenses]};
+		if (typeName (_town_defenses select 0) isEqualTo "STRING") then {_town_defenses = [_town_defenses]};
 		_town setVariable ["cti_town_defenses", _town_defenses];
 		if (isNil {_town getVariable "cti_town_hasdefenses"}) then {_town setVariable ["cti_town_hasdefenses", true]};
 	};
 	
 	//--- Update the flag texture
-	if (typeOf _town == "FlagPole_F") then {_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _town_side], CTI_TOWNS_FLAG_TEXTURE_PEACE])};
+	if (typeOf _town isEqualTo "FlagPole_F") then {_town setFlagTexture (missionNamespace getVariable [format["%1_TOWNS_FLAG_TEXTURE", _town_side], CTI_TOWNS_FLAG_TEXTURE_PEACE])};
 	
 	(_town) execFSM "Server\FSM\town_capture.fsm";
 	(_town) execFSM "Server\FSM\town_resistance.fsm";
@@ -64,13 +58,4 @@ if (CTI_IsClient) then {
 	_marker setMarkerTypeLocal "mil_flag";
 	_marker setMarkerColorLocal _coloration;
 	_marker setMarkerSizeLocal [0.5, 0.5]; 
-	
-	//--- Capture marker
-	//_marker = createMarkerLocal [format ["cti_town_marker_%1_capture", _town], getPos _town];
-	//_marker setMarkerAlphaLocal .2;
-	//_marker setMarkerColorLocal "ColorBlack";
-	//_marker setMarkerShapeLocal "ELLIPSE";
-	//_marker setMarkerBrushLocal "SolidBorder";
-	//_marker setMarkerSizeLocal [CTI_TOWNS_CAPTURE_RANGE, CTI_TOWNS_CAPTURE_RANGE]; 
-
 };

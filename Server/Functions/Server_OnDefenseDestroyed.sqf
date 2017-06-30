@@ -29,21 +29,17 @@
     _defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _side call CTI_CO_FNC_GetSideID, _ruins, _varname]];
 */
 
-private ["_killed", "_killer", "_logic", "_position", "_side", "_sideID", "_var", "_varname"];
+params ["_killed", "_killer", "_sideID", "_ruins", "_varname"];
+private ["_logic", "_position", "_side", "_var"];
 
-_killed = _this select 0;
-_killer = _this select 1;
-_sideID = _this select 2;
-_ruins = _this select 3;
-_varname = _this select 4;
 _position = getPos _killed;
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 
 _var = missionNamespace getVariable _varname;
 _fob = false;
-{if (_x select 0 == "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if ((_x select 0) isEqualTo "FOB") exitWith {_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 _large_fob = false;
-{if (_x select 0 == "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+{if (_x select 0 isEqualTo "LARGE_FOB") exitWith {_large_fob = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 if (_fob) then { //--- Erase this FOB upon destruction
@@ -75,12 +71,18 @@ if !(isNull _killer) then {
 };
 
 //--- If the building has some ruins upon destruction then we remove them
-if (_ruins != "") then {
+if !(_ruins isEqualTo "") then {
 	//--- Wipe them from the server
 	{deleteVehicle _x} forEach (nearestObjects [_position, [_ruins], 25]);
 	
 	//--- Current clients need to clean the remains.
 	[_position, _ruins] remoteExec ["CTI_PVF_CLT_RemoveRuins", CTI_PV_CLIENTS];
 };
+//--- Generic ruins cleanup if objects leftover
+{
+	_smoke = createVehicle ["CMflare_Chaff_Ammo", _position, [], 0, "CAN_COLLIDE"];
+	deleteVehicle _x;
+	[_position] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
+} forEach (nearestObjects [_position, ["Ruins"], 15]);
 
 deleteVehicle _killed;

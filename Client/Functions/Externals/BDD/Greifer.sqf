@@ -15,8 +15,8 @@ for "_i" from 0 to (count _cfgvehicles)-1 do {
 	if (isClass _vehicle) then { // Sanity check
 		private["_classname", "_vehicleclass"];
 		_classname = configName(_vehicle); // Ammo box classname
-		_vehicleclass = getText(_cfgvehicles >> _classname >> "vehicleClass"); // All ammo boxes have the "vehicleClass" == "Ammo"
-		if (_vehicleclass == "Ammo") then {
+		_vehicleclass = getText(_cfgvehicles >> _classname >> "vehicleClass"); // All ammo boxes have the "vehicleClass" isEqualTo "Ammo"
+		if (_vehicleclass isEqualTo "Ammo") then {
 			_ammo_classnames set [count _ammo_classnames, _classname];
 		}
 	};

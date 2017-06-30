@@ -80,7 +80,7 @@ CTI_UI_Purchase_FillUnitsList = {
 	lnbClear ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007);
 	
 	//--- If we're dealing with a depot, determine whether it is on ground or on water
-	if (_type == CTI_DEPOT) then {
+	if (_type isEqualTo CTI_DEPOT) then {
 		if (((uiNamespace getVariable "cti_dialog_ui_purchasemenu_factory") getVariable "cti_depot") getVariable ["cti_naval", false]) then {_type = CTI_DEPOT_NAVAL};
 	};
 	
@@ -115,7 +115,7 @@ CTI_UI_Purchase_FillUnitsList = {
 		_var = missionNamespace getVariable _x;
 		
 		if !(isNil "_var") then {
-		    _upgrade_match = if !(_upgrade isEqualTo -1) then {(_var select CTI_UNIT_UPGRADE) <= (_upgrades select _upgrade)} else {true};
+			_upgrade_match = if !(_upgrade isEqualTo -1) then {(_var select CTI_UNIT_UPGRADE) <= (_upgrades select _upgrade)} else {true};
 			if (_upgrade_match && !((_var select CTI_UNIT_FILTERUI) in _filters) && !((_var select CTI_UNIT_FILTERUI) isEqualTo "")) then {_filters pushBack (_var select CTI_UNIT_FILTERUI)};
 		};
 	} forEach (missionNamespace getVariable format ["CTI_%1_%2Units", CTI_P_SideJoined, _type]);
@@ -166,9 +166,6 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 	_IDCs = [110100, 110101, 110102, 110103];
 	
 	if (_classname isKindOf "Man") then {
-		// {
-			// ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl _x) ctrlShow false; 
-		// } forEach (_IDCs + [110104]);
 		call CTI_UI_Purchase_HideVehicleIcons;
 	} else {
 		_var = missionNamespace getVariable _classname;
@@ -176,8 +173,8 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 		
 		_showArray = [true, false, false, false];
 		{
-			if (count _x == 1) then {_showArray set [3, true]};
-			if (count _x == 2) then {
+			if (count _x isEqualTo 1) then {_showArray set [3, true]};
+			if (count _x isEqualTo 2) then {
 				switch (_x select 1) do { case "Gunner": {_showArray set [1, true]}; case "Commander": {_showArray set [2, true]}; };
 			};
 		} forEach _turrets;
@@ -197,7 +194,7 @@ CTI_UI_Purchase_UpdateCost = {
 	
 	_cost = 0;
 	
-	if (_classname != "") then {
+	if !(_classname isEqualTo "") then {
 		_var = missionNamespace getVariable _classname;
 		_cost = _var select CTI_UNIT_PRICE;
 		if !(_classname isKindOf "Man") then { //--- Add the vehicle crew cost if applicable
@@ -206,7 +203,7 @@ CTI_UI_Purchase_UpdateCost = {
 			
 			//--- Ultimately if we're dealing with a sub we may want to use divers unless that our current soldiers are free-diving champions
 			if (_req_classname isKindOf "Ship") then {
-				if (getText(configFile >> "CfgVehicles" >> _req_classname >> "simulation") == "submarinex") then { _crew = missionNamespace getVariable format["CTI_%1_Diver", CTI_P_SideJoined] };
+				if (getText(configFile >> "CfgVehicles" >> _req_classname >> "simulation") isEqualTo "submarinex") then { _crew = missionNamespace getVariable format["CTI_%1_Diver", CTI_P_SideJoined] };
 			};
 			
 			_var_crew_classname = missionNamespace getVariable _crew;
@@ -215,7 +212,7 @@ CTI_UI_Purchase_UpdateCost = {
 				for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select CTI_UNIT_PRICE) } };
 				
 				if (_veh_infos select 3) then { //--- Turrets
-					{ if (count _x == 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var select CTI_UNIT_TURRETS);
+					{ if (count _x isEqualTo 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var select CTI_UNIT_TURRETS);
 				};
 			};
 		};
@@ -289,7 +286,7 @@ CTI_UI_Purchase_OnUnitListLoad = {
 	private ["_classname"];
 	if (lnbCurSelRow 111007 > -1) then {
 		_classname = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbData [lnbCurSelRow 111007, 0];
-		if (_classname != "") then {
+		if !(_classname isEqualTo "") then {
 			(_classname) call CTI_UI_Purchase_UpdateVehicleIcons;
 		} else {
 			call CTI_UI_Purchase_HideVehicleIcons;
@@ -310,7 +307,7 @@ CTI_UI_Purchase_LoadFactories = {
 	
 	lbClear ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009);
 	
-	if ((_type != CTI_DEPOT) && (_type != CTI_LARGE_FOB)) then {
+	if (!(_type isEqualTo CTI_DEPOT) && !(_type isEqualTo CTI_LARGE_FOB)) then {
 		_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 		_fetched = [_type, _structures, player, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetSideStructuresByType;
 		
@@ -353,12 +350,12 @@ CTI_UI_Purchase_SetVehicleIconsColor = {
 	private ["_color", "_idc"];
 	_idc = 110100;
 	{
-		_color = if (uiNamespace getVariable format ["cti_dialog_ui_purchasemenu_vehicon_%1", _x]) then {[0.258823529, 0.713725490, 1, 1]} else {[0.2, 0.2, 0.2, 1]};
+		_color = [[0.2, 0.2, 0.2, 1], [0.258823529, 0.713725490, 1, 1]] select (uiNamespace getVariable format ["cti_dialog_ui_purchasemenu_vehicon_%1", _x]);
 		
 		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl (_idc + _forEachIndex)) ctrlSetTextColor _color;
 	} forEach ['driver','gunner','commander','turrets'];
 	
-	_color = if (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock") then {[1, 0.22745098, 0.22745098, 1]} else {[0.2, 0.2, 0.2, 1]};
+	_color = [[0.2, 0.2, 0.2, 1], [1, 0.22745098, 0.22745098, 1]] select (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock");
 	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110104) ctrlSetTextColor _color;
 };
 

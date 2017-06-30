@@ -28,7 +28,8 @@
 	  -> Rearm the player vehicle of the player
 */
 
-private ["_side", "_type", "_vehicle", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
+params ["_vehicle", "_side"];
+private ["_type","_upgrades", "_upgrade_lvoss", "_upgrade_era"];
 
 _vehicle = _this select 0;
 _side = _this select 1;
@@ -54,7 +55,7 @@ for '_i' from 0 to (count _config)-1 do {
 //--- Authorize the air loadout depending on the parameters set
 //if (_vehicle isKindOf "Air") then {[_vehicle, _side] call CTI_CO_FNC_SanitizeAircraft};
 //--- Sanitize the artillery loadout, mines may lag the server for instance
-//if (CTI_ARTILLERY_FILTER == 1) then {if (typeOf _vehicle in (missionNamespace getVariable ["CTI_ARTILLERY", []])) then {(_vehicle) call CTI_CO_FNC_SanitizeArtillery}};
+//if (CTI_ARTILLERY_FILTER isEqualTo 1) then {if (typeOf _vehicle in (missionNamespace getVariable ["CTI_ARTILLERY", []])) then {(_vehicle) call CTI_CO_FNC_SanitizeArtillery}};
 
 //check ordinance - does same as both above
 (_vehicle) call CTI_CO_FNC_SanitizeVehicle;
@@ -62,7 +63,7 @@ for '_i' from 0 to (count _config)-1 do {
 //---Check Upgrades
 _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 //---Add LVOSS system
-if (CTI_VEHICLES_LVOSS == 1) then {
+if (CTI_VEHICLES_LVOSS isEqualTo 1) then {
 	_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;
 	if (_vehicle isKindOf "Car") then {
 		if (_upgrade_lvoss > 0) then {
@@ -84,7 +85,7 @@ if (CTI_VEHICLES_LVOSS == 1) then {
 	};
 };
 //---Add ERA system
-if (CTI_VEHICLES_ERA == 1) then {
+if (CTI_VEHICLES_ERA isEqualTo 1) then {
 	_upgrade_era = _upgrades select CTI_UPGRADE_ERA;
 	if (_vehicle isKindOf "Tank") then {
 		if (_upgrade_era > 0) then {

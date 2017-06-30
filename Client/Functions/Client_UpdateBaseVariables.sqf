@@ -34,30 +34,36 @@ private["_update_variables","_structures","_hq","_depot","_barracks","_available
 _update_variables = _this;
 
 if (_update_variables) then { // if true, we update all variables!
-	//--- Generic base checks
+
 	_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 	_hq = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideHQ;
-	CTI_Base_HQInRange = if (alive _hq && _hq distance player < CTI_BASE_CONSTRUCTION_RANGE) then {true} else {false};
-	CTI_Base_ControlCenterInRange = if !(isNull ([CTI_CONTROLCENTER, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_CC] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_SatelliteInRange = if !(isNull ([CTI_SATELLITE, player, _structures, CTI_BASE_SATELLITE_RANGE_SATCAM] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	
-	CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE = if (CTI_Base_ControlCenterInRange) then {CTI_BASE_PURCHASE_UNITS_RANGE_CC} else {CTI_BASE_PURCHASE_UNITS_RANGE};
-	
+
+
+	CTI_Base_HQInRange = [false, true] select (alive _hq && _hq distance player < CTI_BASE_CONSTRUCTION_RANGE);
+	CTI_Base_ControlCenterInRange = [false, true] select !(isNull ([CTI_CONTROLCENTER, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_CC] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_SatelliteInRange = [false, true] select !(isNull ([CTI_SATELLITE, player, _structures, CTI_BASE_SATELLITE_RANGE_SATCAM] call CTI_CO_FNC_GetClosestStructure));
+
+	CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE = [CTI_BASE_PURCHASE_UNITS_RANGE, CTI_BASE_PURCHASE_UNITS_RANGE_CC] select (CTI_Base_ControlCenterInRange);
 	_barracks = [CTI_BARRACKS, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure;
-	CTI_Base_BarracksInRange = if !(isNull _barracks) then {true} else {false};
-	CTI_Base_GearInRange = if (_barracks distance player < CTI_BASE_GEAR_RANGE) then {true} else {false};
-	CTI_Base_GearInRange_Mobile = if ((count([player, CTI_SPECIAL_AMMOTRUCK, CTI_SERVICE_AMMO_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) || (count([player, CTI_SPECIAL_GEAR, CTI_SERVICE_GEAR_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0)) then {true} else {false};
 	
-	CTI_Base_LightInRange = if !(isNull ([CTI_LIGHT, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_HeavyInRange = if !(isNull ([CTI_HEAVY, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_AirInRange = if !(isNull ([CTI_AIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_AmmoInRange = if !(isNull ([CTI_AMMO, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_RepairInRange = if !(isNull ([CTI_REPAIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
-	CTI_Base_NavalInRange = if !(isNull ([CTI_NAVAL, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure)) then {true} else {false};
+	//--- Gear
+	CTI_Base_GearInRange = [false, true] select (_barracks distance player < CTI_BASE_GEAR_RANGE);
+	CTI_Base_GearInRange_Mobile = [false, true] select (count([player, CTI_SPECIAL_AMMOTRUCK, CTI_SERVICE_AMMO_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0);
+	CTI_Base_GearInRange_AmmoPod =  [false, true] select (count([player, CTI_SPECIAL_GEAR, CTI_SERVICE_GEAR_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0);
 	
-	CTI_Base_RepairInRange_Mobile = if (count([player, CTI_SPECIAL_REPAIRTRUCK, CTI_SERVICE_REPAIR_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};
-	CTI_Base_FuelInRange_Mobile = if (count([player, CTI_SPECIAL_FUELTRUCK, CTI_SERVICE_FUEL_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};
-	CTI_Base_DefenseTruckInRange_Mobile = if (count([player, CTI_SPECIAL_DEFENSETRUCK, CTI_SERVICE_DEFENSE_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0) then {true} else {false};
+	//--- Mobile
+	CTI_Base_RepairInRange_Mobile = [false, true] select (count([player, CTI_SPECIAL_REPAIRTRUCK, CTI_SERVICE_REPAIR_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0);
+	CTI_Base_FuelInRange_Mobile = [false, true] select (count([player, CTI_SPECIAL_FUELTRUCK, CTI_SERVICE_FUEL_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0);
+	CTI_Base_DefenseTruckInRange_Mobile = [false, true] select (count([player, CTI_SPECIAL_DEFENSETRUCK, CTI_SERVICE_DEFENSE_TRUCK_RANGE] call CTI_CO_FNC_GetNearestSpecialVehicles) > 0);
+
+	//--- Factorys
+	CTI_Base_LightInRange = [false, true] select !(isNull ([CTI_LIGHT, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_HeavyInRange = [false, true] select !(isNull ([CTI_HEAVY, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_AirInRange = [false, true] select !(isNull ([CTI_AIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_AmmoInRange = [false, true] select !(isNull ([CTI_AMMO, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_RepairInRange = [false, true] select !(isNull ([CTI_REPAIR, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_NavalInRange = [false, true] select !(isNull ([CTI_NAVAL, player, _structures, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetClosestStructure));
+	CTI_Base_BarracksInRange = [false, true] select !(isNull _barracks);
 
 	//--- Depot check
 	_depot = [player, CTI_P_SideID] call CTI_CO_FNC_GetClosestDepot;
@@ -90,27 +96,29 @@ if (_update_variables) then { // if true, we update all variables!
 	};
 	CTI_Base_LargeFOBInRange = _in_range_large;
 	CTI_Base_GearInRange_LARGE_FOB = _in_range_large;
+	
 } else {
+
 // set all variables to false
-		CTI_Tablet_Open = false;
-		CTI_Base_HQInRange = false;
-		CTI_Base_ControlCenterInRange = false;
-		CTI_Base_SatelliteInRange = false;
-		CTI_Base_BarracksInRange = false;
-		CTI_Base_GearInRange = false;
-		CTI_Base_GearInRange_Mobile = false;
-		CTI_Base_LightInRange = false;
-		CTI_Base_HeavyInRange = false;
-		CTI_Base_AirInRange = false;
-		CTI_Base_AmmoInRange = false;
-		CTI_Base_RepairInRange = false;
-		CTI_Base_NavalInRange = false;
-		CTI_Base_RepairInRange_Mobile = false;
-		CTI_Base_FuelInRange_Mobile = false;
-		CTI_Base_DefenseTruckInRange_Mobile = false;
-		CTI_Base_DepotInRange = false;
-		CTI_Base_GearInRange_Depot = false;
-		CTI_Base_GearInRange_FOB = false;
-		CTI_Base_LargeFOBInRange = false;
-		CTI_Base_GearInRange_LARGE_FOB = false;
+	CTI_Tablet_Open = false;
+	CTI_Base_HQInRange = false;
+	CTI_Base_ControlCenterInRange = false;
+	CTI_Base_SatelliteInRange = false;
+	CTI_Base_BarracksInRange = false;
+	CTI_Base_GearInRange = false;
+	CTI_Base_GearInRange_Mobile = false;
+	CTI_Base_LightInRange = false;
+	CTI_Base_HeavyInRange = false;
+	CTI_Base_AirInRange = false;
+	CTI_Base_AmmoInRange = false;
+	CTI_Base_RepairInRange = false;
+	CTI_Base_NavalInRange = false;
+	CTI_Base_RepairInRange_Mobile = false;
+	CTI_Base_FuelInRange_Mobile = false;
+	CTI_Base_DefenseTruckInRange_Mobile = false;
+	CTI_Base_DepotInRange = false;
+	CTI_Base_GearInRange_Depot = false;
+	CTI_Base_GearInRange_FOB = false;
+	CTI_Base_LargeFOBInRange = false;
+	CTI_Base_GearInRange_LARGE_FOB = false;
 };

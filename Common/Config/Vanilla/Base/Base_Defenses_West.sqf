@@ -978,7 +978,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		//STATICS
 		
 		//CAMO
-		/*if (CTI_CUP_ADDON > 0) then { 
+		/*if (CTI_CUP_CORE_ADDON > 0) then { 
 			_headers pushBack 		["LARGE FOB",[["RuinOnDestroyed", "Land_Cargo_House_V3_ruins_F"], ["LARGE_FOB"],["Condition", {_cpt = if (isNil {CTI_P_SideLogic getVariable "cti_large_fobs"}) then {1000} else {count (CTI_P_SideLogic getVariable "cti_large_fobs")}; (_cpt < CTI_BASE__LARGE_FOB_MAX) && (call CTI_CL_FNC_IsPlayerCommander || (!(call CTI_CL_FNC_IsPlayerCommander) && CTI_P_TeamsRequests_FOB > 0))}]]];
 			_classes pushBack 		"WarfareBDepot";
 			_prices pushBack 		40000;

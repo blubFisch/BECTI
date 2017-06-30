@@ -24,23 +24,20 @@
 	  -> Will mobilize or deploy the HQ based on the given and global variable at the desired position
 */
 
-private ["_direction", "_hq", "_is_deployed", "_logic", "_position", "_side", "_sideID", "_structure_time", "_var", "_variable"];
+params ["_variable", "_side", "_position", "_direction"];
+private ["_hq", "_is_deployed", "_logic", "_sideID", "_structure_time", "_var"];
 
-_variable = _this select 0;
-_side = _this select 1;
-_position = _this select 2;
-_direction = _this select 3;
-
-_var = missionNamespace getVariable (_this select 0);
+_var = missionNamespace getVariable _variable;
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _is_deployed = (_side) call CTI_CO_FNC_IsHQDeployed;
 _current_hq = (_side) call CTI_CO_FNC_GetSideHQ;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
-	//--- If HQ construction requires time, wait for the construction delay
+//--- If HQ construction requires time, wait for the construction delay
 _structure_time = _var select CTI_STRUCTURE_TIME;
 if (_structure_time > 0) then {
+	["hq-deploying"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deploying
 	sleep _structure_time;
 	_logic setVariable ["cti_hq_ready", true, true];
 };
