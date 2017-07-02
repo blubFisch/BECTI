@@ -556,9 +556,9 @@ CTI_BASE_SELL_DELAY = 60; //--- Delay for factories to get sold.
 CTI_BASE_CONSTRUCTION_LIMIT_WHITELIST = [CTI_SUPPLY_DEPOT]; //--- Whitelist structures from limit here. [XX,XX,XX]
 
 //--- Base: Defenses
-CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be manned within a given area
+CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 15; //--- Amount of defenses which may be manned within a given area
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
-CTI_BASE_DEFENSES_AUTO_LIMIT = 20; //--- Amount of independent units which may man nearby defenses
+CTI_BASE_DEFENSES_AUTO_LIMIT = 30; //--- Amount of independent units which may man nearby defenses
 CTI_BASE_DEFENSES_AUTO_MODE = 2; //--- AI Base Defenses mode (0: No AI, 1: Global Limit, 2: Limit per Area)
 CTI_BASE_DEFENSES_AUTO_RANGE = 600; //--- Range from the nearest barrack at which AI may auto man a defense
 CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 600; //--- Range needed for a defense to be able to rearm at a service point

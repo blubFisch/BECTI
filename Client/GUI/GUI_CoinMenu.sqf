@@ -184,7 +184,7 @@ with missionNamespace do {
 					
 					//---Composition
 					if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {
-						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), true] call LARs_fnc_spawnComp;
+						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
 					};
 					//--- Update the overlay description
 					(_preview_item) call CTI_Coin_UpdatePreview;
@@ -238,11 +238,11 @@ with missionNamespace do {
 						//move comp
 						[_composition, (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_moveComp;
 						{	
-							_y = _x;
+							_x enableSimulationGlobal false;
+							_compobj = _x;
 							{
-								_y disableCollisionWith _x;
-								_x enableSimulationGlobal false;
-							} forEach ((position _y) nearEntities 200);
+								_compobj disableCollisionWith _x;
+							} forEach ((position _compobj) nearEntities 150);
 						}forEach _compositionobjects;	
 						profileNamespace setVariable ["previewobjects", _compositionobjects];//for preview					
 					};

@@ -32,7 +32,25 @@ params[
 	[ "_previewmode", true ]
 ];
 //level with terrain
-if (_compAlign ) then {
+switch (_compAlign) do {
+	case 0: {
+		//force terrain align
+		_compAlign = true;
+	};
+	case 1: {
+		//force upright
+		_compAlign = false;
+	};
+	case 2: {
+		//allow toggle
+		if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+			_compAlign = false;
+		} else {
+			_compAlign = true;
+		};
+	};
+};
+/*if (_compAlign ) then {
 	_compAlign = true;
 	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
 		_compAlign = false;
@@ -45,7 +63,7 @@ if (_compAlign ) then {
 	} else {
 		_compAlign = false;
 	};
-};
+};*/
 
 _msg = format[ "COMP - Name: %1, Pos:%2, Offset: %3, Rot: %4, Align: %5", _compName, _compPos, _compOffset, _compRot, _compAlign ];
 DEBUG_MSG( DEBUG, _msg );

@@ -45,7 +45,25 @@ _compName = "";
 }forEach LARs_spawnedCompositions;
 //systemchat format ["_objects: %1 ", _objects];
 //level with terrain
-if (_compAlign ) then {
+switch (_compAlign) do {
+	case 0: {
+		//force terrain align
+		_compAlign = true;
+	};
+	case 1: {
+		//force upright
+		_compAlign = false;
+	};
+	case 2: {
+		//allow toggle
+		if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+			_compAlign = false;
+		} else {
+			_compAlign = true;
+		};
+	};
+};
+/*if (_compAlign ) then {
 	_compAlign = true;
 	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
 		_compAlign = false;
@@ -58,7 +76,7 @@ if (_compAlign ) then {
 	} else {
 		_compAlign = false;
 	};
-};
+};*/
 _asPlaced = false;
 
 ///get comp objects

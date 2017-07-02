@@ -83,21 +83,38 @@ if (_iscomposition) then {
 		if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_x], true]};
 		
 		//getvarname
-		_varname = format ["CTI_%1_%2", CTI_P_SideJoined, _x];
+		_varname = format ["CTI_%1_%2", CTI_P_SideJoined, typeof _x];
 		_var = missionNamespace getVariable _varname;
+		//systemchat format ["_varname: %1 | %2 ",_varname, _var];
 		if !(isnil "_var") then {
 			//--- Make the defense stronger?
 			_alternative_damages = false;
 			_reduce_damages = 0;
 			_multiply_damages = 0;
-			{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select 9);
+			{
+				if ("DMG_Alternative" in _x) then {_alternative_damages = true}; 
+				if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; 
+				if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1};
+			} forEach (_var select 9);
+			//systemchat format ["_varname: %1 | %2 ",_alternative_damages, _reduce_damages, _multiply_damages];
 			if (_alternative_damages) then {
-				_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages, _multiply_damages]];
+				_x addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages, _multiply_damages]];
 			} else {
 				if (_multiply_damages > 0 || _reduce_damages > 0 || CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
-					_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
+					_x addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
 				};
+			};
+			//handler for invinsible objects
+			_explosionalt = false;
+			_damage_explosion = 0;
+			{
+				if ("DMG_Explosion" in _x) then {_explosionalt = true;_damage_explosion = _x select 1;}; 
+			} forEach (_var select 9);
+			if (_explosionalt) then {
+				_x addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
 			};	
+			//killed handler
+			_x addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, "", _varname]];
 		};		
 		
 	}forEach _compositionobjects;	

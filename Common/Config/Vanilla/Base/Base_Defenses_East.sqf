@@ -35,7 +35,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 	//Compositions - setup compositions in Common/Config/Compositions/
 	//Format: ["Name in Menu", [["Composition","Composition Name",AlignTerrain(Allow terrain align (DISABLE for tall compositions))]]];
 	///////////////////////////////////////////////////////////////////
-		_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",true]]];
+		_headers pushBack 		["Mil Wall x3", [["Composition","mil_wall_3",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		100;
 		_placements pushBack 	[0, 5];
@@ -45,7 +45,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Mil Wall x5", [["Composition","mil_wall_5",true]]];
+		_headers pushBack 		["Mil Wall x5", [["Composition","mil_wall_5",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		500;
 		_placements pushBack 	[0, 5];
@@ -55,7 +55,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Shed Walled", [["Composition","shed_walled",true]]];
+		_headers pushBack 		["Shed Walled", [["Composition","shed_walled",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		3000;
 		_placements pushBack 	[0, 5];
@@ -65,7 +65,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Fort", [["Composition","fort_box",true]]];
+		_headers pushBack 		["Fort", [["Composition","fort_box",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		2000;
 		_placements pushBack 	[0, 5];
@@ -75,7 +75,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Bunker MG", [["Composition","bunker_mg",true]]];
+		_headers pushBack 		["Bunker MG", [["Composition","bunker_mg",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		1500;
 		_placements pushBack 	[0, 5];
@@ -85,7 +85,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Bunker GL", [["Composition","bunker_gl",true]]];
+		_headers pushBack 		["Bunker GL", [["Composition","bunker_gl",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		1500;
 		_placements pushBack 	[0, 5];
@@ -95,7 +95,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Tower MG x2", [["Composition","tower_mg",true]]];
+		_headers pushBack 		["Tower MG x2", [["Composition","tower_mg",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		3500;
 		_placements pushBack 	[0, 5];
@@ -105,7 +105,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Tower GL x2", [["Composition","tower_gl",true]]];
+		_headers pushBack 		["Tower GL x2", [["Composition","tower_gl",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 5];
@@ -115,7 +115,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Tower AT", [["Composition","tower_at",true]]];
+		_headers pushBack 		["Tower AT", [["Composition","tower_at",2]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		3500;
 		_placements pushBack 	[0, 5];
@@ -125,7 +125,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Tower Tall MG x2", [["Composition","tower_tall_mg",false]]];
+		_headers pushBack 		["Tower Tall MG x2", [["Composition","tower_tall_mg",1]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 5];
@@ -135,7 +135,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Tower Tall GL x2", [["Composition","tower_tall_gl",false]]];
+		_headers pushBack 		["Tower Tall GL x2", [["Composition","tower_tall_gl",1]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		4500;
 		_placements pushBack 	[0, 5];
@@ -145,7 +145,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Cargo Tower AA x3", [["Composition","cargo_tower_aa",false]]];
+		_headers pushBack 		["Cargo Tower AA x3", [["Composition","cargo_tower_aa",1]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		8000;
 		_placements pushBack 	[0, 5];
@@ -155,7 +155,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 		
-		_headers pushBack 		["Mine Field (AT)", [["Composition","mines_at",true]]];
+		_headers pushBack 		["Mine Field (AT)", [["Composition","mines_at",0]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		100;
 		_placements pushBack 	[0, 5];
@@ -165,34 +165,45 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 		
-		//Base Templates
-		_headers pushBack 		["Basic", [["Composition","template_basic",true]]];
+		//Outposts
+		_headers pushBack 		["Outpost Alpha", [["Composition","outpost_alpha",0]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		2000;
 		_placements pushBack 	[0, 5];
-		_categories pushBack 	"Template";
+		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 50]];
+		_coinblacklist pushBack [["All", 40]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+		
+		//Base Templates
+		_headers pushBack 		["Basic", [["Composition","template_basic",0]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		2000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Templates";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [["All", 70]];
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 
-		_headers pushBack 		["Alpha", [["Composition","template_alpha",true]]];
+		_headers pushBack 		["Alpha", [["Composition","template_alpha",0]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		4000;
 		_placements pushBack 	[0, 5];
-		_categories pushBack 	"Template";
+		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 50]];
+		_coinblacklist pushBack [["All", 70]];
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 		
-		_headers pushBack 		["Alpha Armed (Mg)", [["Composition","template_alpha_armed",true]]];
+		_headers pushBack 		["Alpha Armed (Mg)", [["Composition","template_alpha_armed",0]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
 		_prices pushBack 		10000;
 		_placements pushBack 	[0, 5];
-		_categories pushBack 	"Template";
+		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 50]];
+		_coinblacklist pushBack [["All", 70]];
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];		
 
