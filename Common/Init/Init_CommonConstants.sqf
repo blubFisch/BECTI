@@ -376,8 +376,8 @@ CTI_GEAR_RESPAWN_WITH_LAST = 1; //--- Determine whether the player should respaw
  */
 
 //--- Towns: Camps
-CTI_TOWNS_CAMPS_CAPTURE_RANGE = 5; //--- Range needed to capture/protect a camp
-CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 30; //--- Range needed to capture/protect a camp for town AIs
+CTI_TOWNS_CAMPS_CAPTURE_RANGE = 2.8; //--- Range needed for player to capture/protect a camp (Set for inside camp only)
+CTI_TOWNS_CAMPS_CAPTURE_RANGE_TOWN_AI = 10; //--- Range needed to capture/protect a camp for town AIs
 CTI_TOWNS_CAMPS_CAPTURE_RATE = 2; //--- Determine how fast a camp may be captured/protected
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_CEIL = 30; //--- The camp value's ceiling
 CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE = 1; //--- The iterated value, (try to match CTI_TOWNS_CAMPS_CAPTURE_VALUE_ITERATE), proc all 5 seconds.
@@ -402,23 +402,22 @@ CTI_TOWNS_CAPTURE_VALUE_ITERATE = 5; //--- The iterated value, (try to match CTI
 CTI_TOWNS_DEPOT_ACCESS_MODE = 1; //--- Determine how depots can be accessed for purchases (0: Town belong to side, 1: Town belong to side + all camps)
 CTI_TOWNS_DEPOT_BUILD_DIRECTION = 0; //--- Determine the direction a vehicle will use while being spawned from the depot
 CTI_TOWNS_DEPOT_BUILD_DISTANCE = 15; //--- Determine how far a unit/vehicle will spawn from the depot
-CTI_TOWNS_DEPOT_CLASSNAME = ["Land_BagBunker_Large_F","Land_BagBunker_large_green_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
+CTI_TOWNS_DEPOT_CLASSNAME = ["Land_Bunker_01_HQ_F","Land_Lighthouse_small_F"]; //--- The classname(s) used for town depots in editor
 CTI_TOWNS_DEPOT_RANGE = 15; //--- Determine how far a player needs to be from a depot in order to use it
 
 //--- Towns: Economy
-
 //--- Economy delay Based on Island, Enabled when Auto mode selcted in Parameters
-if (CTI_ECONOMY_INCOME_CYCLE isEqualTo 0) then {
-	switch (toLower(worldName)) do {
-		case "stratis": {CTI_ECONOMY_INCOME_CYCLE = 50};
-		case "takistan": {CTI_ECONOMY_INCOME_CYCLE = 55};
-		case "isladuala3": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		case "chernarus": {CTI_ECONOMY_INCOME_CYCLE = 65};
-		case "altis": { CTI_ECONOMY_INCOME_CYCLE = 75};
-		case "tanoa": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		case "napf": {CTI_ECONOMY_INCOME_CYCLE = 80};
-		default {CTI_ECONOMY_INCOME_CYCLE = 65};
-	};
+CTI_TOWN_ISLAND_RATIO = switch (toLower(worldName)) do {
+case "stratis":{2}; 
+case "takistan": {1.5};
+case "isladuala3": {1};
+case "chernarus": {1.2};
+case "altis": {1};
+case "tanoa": {1};
+case "napf": {1};
+case "malden" : {2};
+case "sara_dbe1" : {2};
+default {1};
 };
 
 CTI_TOWNS_INCOME_RATIO = 7.0; //--- A value above 1 will increase the resources ($) generation ((Current SV) * ratio) 
@@ -432,36 +431,36 @@ CTI_TOWNS_MARKERS_ALERT_COLOR = "ColorYellow"; //--- The color used for when ene
 
 //--- Towns: Patrol
 CTI_TOWNS_PATROL_CAMPS_AI_DEFENSE_MAX = 2; //--- Determine how many Town AI groups may try to capture back one hostile camp
-CTI_TOWNS_PATROL_HOPS = 5; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
+CTI_TOWNS_PATROL_HOPS = 7; //--- Towns patrol hops (non-waypoint), ammount of "waypoints" given to town AI
 CTI_TOWNS_PATROL_RANGE = 400; //--- Patrol range in a town "Max range of waypoints"
 
 //--- Towns: Occupation
 
 //CTI_TOWNS_OCCUPATION_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
 CTI_TOWNS_OCCUPATION_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 100; //--- Determine how high a threat is considered aerial
-CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 180; //--- Determine how long a town may remain active when triggered
+CTI_TOWNS_OCCUPATION_DETECTION_RANGE_AIR = 50; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_OCCUPATION_INACTIVE_MAX = 200; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_OCCUPATION_MIN_ACTIVE = 0; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 50;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_OCCUPATION_SPAWN_AI_MAX = 40;  //--- Determine the max occupation AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_OCCUPATION_SPAWN_AI_MIN = 25; //--- Determine the min occupation AI count to present in a town
 CTI_TOWNS_OCCUPATION_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_OCCUPATION_SPAWN_RANGE_CAMPS = 60; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_OCCUPATION_SPAWN_SAFE_RANGE = 80; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Resistance
 
 //CTI_TOWNS_RESISTANCE_GROUPS_RATIO = 0.025; //--- Determine how many groups may spawn (scales with town value)
 CTI_TOWNS_RESISTANCE_DETECTION_RANGE = 750; //--- Determine how far a threat may be detected from the town center
-CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 40; //--- Determine how high a threat is considered aerial
+CTI_TOWNS_RESISTANCE_DETECTION_RANGE_AIR = 50; //--- Determine how high a threat is considered aerial
 CTI_TOWNS_RESISTANCE_INACTIVE_MAX = 180; //--- Determine how long a town may remain active when triggered
 CTI_TOWNS_RESISTANCE_MIN_ACTIVE = 5; //--- When the town is not held by the side and when no enemy is near, at least x enemies need to be alive for the town to be considered active
 
-CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 50; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
+CTI_TOWNS_RESISTANCE_SPAWN_AI_MAX = 40; //--- Determine the max resistance AI count to present in a town (if the count is below the given limit, a new wave will spawn)
 CTI_TOWNS_RESISTANCE_SPAWN_AI_MIN = 25; //--- Determine the min resistance AI count to present in a town
 CTI_TOWNS_RESISTANCE_SPAWN_RANGE = 350; //--- Determine how far the units may spawn from the town center
-CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 80; //--- Determine how far the units may spawn from a town's camp when selected
-CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 100; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
+CTI_TOWNS_RESISTANCE_SPAWN_RANGE_CAMPS = 60; //--- Determine how far the units may spawn from a town's camp when selected
+CTI_TOWNS_RESISTANCE_SPAWN_SAFE_RANGE = 80; //--- Determine the "safe" range for spawning units (no enemy units have to be present within this area)
 
 //--- Towns: Spawn System
 CTI_TOWNS_SPAWN_BUILDING_INFANTRY_CHANCE = 100; //--- Determine the chance over 100 that infantry may spawn in a building (requires CTI_TOWNS_SPAWN_MODE on 1)
@@ -474,7 +473,7 @@ CTI_TOWNS_DYNAMIC_FPS_MODE = 1; //---Determine whether the host FPS should be us
 
 //--- Towns: Supply
 CTI_TOWNS_SUPPLY_MODE = 1; //--- Supply Mode: (0: Default, 1: Timed)
-CTI_TOWNS_SUPPLY_TIME_INTERVAL = 85; //--- Determine the interval between each town SV increment with time
+CTI_TOWNS_SUPPLY_TIME_INTERVAL = 80; //--- Determine the interval between each town SV increment with time
 CTI_TOWNS_SUPPLY_TIME_INCREASE = 1; //--- Determine the town SV increment when the interval's reached (Potential upgrade?)
 
 //--- Towns: Territorial
@@ -561,10 +560,10 @@ CTI_BASE_DEFENSES_AUTO_AREA_LIMIT = 10; //--- Amount of defenses which may be ma
 CTI_BASE_DEFENSES_AUTO_DELAY = 250; //--- Delay after which a new unit will replace a dead one for a defense
 CTI_BASE_DEFENSES_AUTO_LIMIT = 20; //--- Amount of independent units which may man nearby defenses
 CTI_BASE_DEFENSES_AUTO_MODE = 2; //--- AI Base Defenses mode (0: No AI, 1: Global Limit, 2: Limit per Area)
-CTI_BASE_DEFENSES_AUTO_RANGE = 350; //--- Range from the nearest barrack at which AI may auto man a defense
-CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 350; //--- Range needed for a defense to be able to rearm at a service point
+CTI_BASE_DEFENSES_AUTO_RANGE = 600; //--- Range from the nearest barrack at which AI may auto man a defense
+CTI_BASE_DEFENSES_AUTO_REARM_RANGE = 600; //--- Range needed for a defense to be able to rearm at a service point
 CTI_BASE_DEFENSES_EMPTY_TIMEOUT = 400; //--- Delay after which an empty defense is considered empty
-CTI_BASE_DEFENSES_SOLD_COEF = 0.50; //--- The player will get a fund return based on the defense price * coef when a defense is sold
+CTI_BASE_DEFENSES_SOLD_COEF = 0.25; //--- The player will get a fund return based on the defense price * coef when a defense is sold
 CTI_BASE_DEFENSES_AUTO_REARM_DELAY = 60; //--- Time delay between auto reloads
 
 //--- Base: HQ
@@ -645,6 +644,7 @@ with missionNamespace do {
 	if (isNil 'CTI_BASE_HQ_REPAIR') then {CTI_BASE_HQ_REPAIR = 1}; //--- Determine whether the HQ can be repaired or not
 	if (isNil 'CTI_BASE_STARTUP_PLACEMENT') then {CTI_BASE_STARTUP_PLACEMENT = 4000}; //--- Each side need to be further than x meters
 };
+
 //-----------------------------------------------------------------------------------------------------------------------//
 
 
@@ -719,7 +719,7 @@ with missionNamespace do {
 	if (isNil 'CTI_VEHICLES_AIR_AT') then {CTI_VEHICLES_AIR_AT = 1}; //--- AT Missiles availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_AIR_CM') then {CTI_VEHICLES_AIR_CM = 1}; //--- Countermeasures availability (0: Disabled, 1: Enabled on Upgrade, 2: Enabled)
 	if (isNil 'CTI_VEHICLES_EMPTY_TIMEOUT') then {CTI_VEHICLES_EMPTY_TIMEOUT = 900}; //--- set default vehicles timeout
-	if (isNil 'CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT') then {CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT = 3600}; //--- set special vehicles timeout
+	if (isNil 'CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT') then {CTI_VEHICLES_EMPTY_SPECIAL_TIMEOUT = 4800}; //--- set special vehicles timeout
 };
 //-----------------------------------------------------------------------------------------------------------------------//
 
@@ -805,14 +805,13 @@ CTI_UI_TOWNS_PROGRESSBAR_DISTANCE = 550;
 CTI_GC_DELAY = 90;
 CTI_GC_DELAY_AIR = 360;
 CTI_GC_DELAY_CAR = 240;
-CTI_GC_DELAY_MAN = 60;
+CTI_GC_DELAY_MAN = 5;
 CTI_GC_DELAY_TANK = 300;
 CTI_GC_DELAY_SHIP = 60;
 CTI_GC_DELAY_STATIC = 80;
 CTI_GC_DELAY_BUILDING = 30;
 CTI_GC_GROUND_CLEANUP_KIND = ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated", "CraterLong_small", "CraterLong"];
 CTI_GC_GROUND_CLEANUP_DISTANCE_UNIT = 30;
-CTI_GC_CLEANUP_MAN = 0; //--- 1 to enable / 0 to disable -Instant clean up on death, some times dont work for Players.
 
 CTI_HALO_COOLDOWN = 300;
 CTI_HALO_LASTTIME = CTI_HALO_COOLDOWN;

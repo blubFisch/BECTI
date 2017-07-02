@@ -33,9 +33,3 @@ player addAction ["<t color='#86F078'>Push (Reverse)</t>","Client\Actions\Action
 //--- Skill actions
 player addAction ["<t color='#c7a5ff'>SKILL: Lockpick</t>", "Client\Actions\Action_SkillLockpick.sqf", "", 80, false, true, "", "CTI_P_ActionLockPick && time > CTI_P_ActionLockPickNextUse"];
 player addAction ["<t color='#c7a5ff'>SKILL: Repair</t>", "Client\Actions\Action_SkillRepair.sqf", "", 80, false, true, "", "CTI_P_ActionRepair && time > CTI_P_ActionRepairNextUse"];
-
-//--- Misc
-if (isNil "EtVInitialized") then {
-	waitUntil {!isNil "EtVInitialized"};
-};
-[player] call EtV_Actions;

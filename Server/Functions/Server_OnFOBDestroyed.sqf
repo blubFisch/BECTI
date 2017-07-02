@@ -30,14 +30,14 @@
 */
 
 params["_killed", "_killer", "_sideID", "_ruins", "_varname", "_fobtype"];
-private ["_logic", "_position", "_side", "_sideID", "_var", "_varname","_fobtype"];
+private ["_logic", "_position", "_side", "_var"];
 
 _position = getPos _killed;
 _award = 0;
 _fob = false;
-if (_fobtype isEqualTo "small") then {_fob = true;_award = 20000;};
+if (_fobtype isEqualTo "small") then {_fob = true; _award = 20000;};
 _large_fob = false;
-if (_fobtype isEqualTo "large") then {_large_fob = true;_award = 40000;};
+if (_fobtype isEqualTo "large") then {_large_fob = true; _award = 40000;};
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
@@ -52,7 +52,7 @@ sleep 5;
 
 //--- Bounty
 if !(isNull _killer) then {
-	if (side _killer != sideEnemy && side _killer != _side && (group _killer) call CTI_CO_FNC_IsGroupPlayable) then {
+	if (!(side _killer isEqualTo sideEnemy) && !(side _killer isEqualTo _side) && (group _killer) call CTI_CO_FNC_IsGroupPlayable) then {
 		if (isPlayer _killer) then {
 			_label = "FOB";
 			_award = round((_award) * CTI_BASE_CONSTRUCTION_DEFENSE_BOUNTY);
@@ -66,7 +66,7 @@ if !(isNull _killer) then {
 };
 
 //--- If the building has some ruins upon destruction then we remove them
-if (_ruins != "") then {
+if !(_ruins isEqualTo "") then {
 	//--- Wipe them from the server
 	{deleteVehicle _x} forEach (nearestObjects [_position, [_ruins], 25]);
 	

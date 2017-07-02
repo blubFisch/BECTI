@@ -37,6 +37,7 @@ if !(typeName _value isEqualTo "SCALAR") exitWith {["ERROR", "FILE: Common\Funct
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _supply = (_side) call CTI_CO_FNC_GetSideSupply;
 
+//--- Supply Depot
 _structures = (_side) call CTI_CO_FNC_GetSideStructures;
 _supply_depots = [CTI_SUPPLY_DEPOT, _structures] call CTI_CO_FNC_GetSideStructuresByType;
 _supply_depots_count = count _supply_depots;

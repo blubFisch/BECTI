@@ -197,15 +197,6 @@ switch (_action) do {
 				_who = (uiNamespace getVariable "cti_dialog_ui_aimicromenu_units") select _value;
 				if (_who isEqualTo effectiveCommander vehicle _who && !(vehicle _who isEqualTo _who)) then {(vehicle _who) setDammage 1};
 				_who setDammage 1;
-				_isvehicle_killed = if (_who isKindOf "Man") then {false} else {true};
-				//--- Clean up man isntatly on death
-				if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
-					_who spawn {
-						sleep 2;
-						deleteVehicle _this;
-					};
-				};
-
 			} forEach _selection;
 			{((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270002) lbDelete _x} forEach _selection;
 			

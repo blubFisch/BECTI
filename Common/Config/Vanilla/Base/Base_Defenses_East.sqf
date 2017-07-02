@@ -1322,7 +1322,7 @@ if (CTI_APEX_ADDON > 0) then {
 		_classes pushBack 		"Land_BagBunker_01_small_green_F";
 		_prices pushBack 		250;
 		_placements pushBack 	[0, 7];
-		_categories pushBack 	"Fortifications";
+		_categories pushBack 	"Fortification";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
 		_coinblacklist pushBack ["*"];
 		_upgrade pushBack		0;	
