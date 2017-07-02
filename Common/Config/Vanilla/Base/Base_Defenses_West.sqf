@@ -909,6 +909,16 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Explosion", 0.2]];				
 		//FORTIFICATIONS
+		_headers pushBack 		"Bunker Large";
+		_classes pushBack 		"Land_BagBunker_Large_F";
+		_prices pushBack 		1000;
+		_placements pushBack 	[90, 5];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		2;	
+		_specials pushBack 		[["DMG_Explosion", 0.2]];		
+		
 		_headers pushBack 		"H-Barrier Bunker";
 		_classes pushBack 		"Land_BagBunker_Tower_F";
 		_prices pushBack 		500;
@@ -1407,6 +1417,16 @@ if (CTI_APEX_ADDON > 0) then {
 		_upgrade pushBack		2;	
 		_specials pushBack 		[["DMG_Explosion", 0.2]];
 		//FORTIFICATIONS
+		_headers pushBack 		"Bunker Large (green)";
+		_classes pushBack 		"Land_BagBunker_01_large_green_F";
+		_prices pushBack 		1000;
+		_placements pushBack 	[90, 5];
+		_categories pushBack 	"Fortification";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack ["*"];
+		_upgrade pushBack		2;	
+		_specials pushBack 		[["DMG_Explosion", 0.2]];		
+		
 		_headers pushBack 		"H-Barrier Bunker (green)";
 		_classes pushBack 		"Land_HBarrier_01_tower_green_F";
 		_prices pushBack 		500;
