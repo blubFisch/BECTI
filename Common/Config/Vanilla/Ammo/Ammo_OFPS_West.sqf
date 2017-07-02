@@ -7,7 +7,8 @@ _i = []; //Ammo Classname
 _o = []; //Ordinance Type
 _u = []; //Upgrade Level
 _p = []; //Price
-_t = []; //Rearm time per round (seconds)
+_t = []; //Rearm time per pylon round (seconds) or per mag for turrets
+_m = []; //Max Mags per turret
 
 /*EXAMPLE
 _i pushBack "Rocket_03_AP_F"; 
@@ -15,7 +16,9 @@ _o pushBack "Air"; //values are Air or Land
 _u pushBack 2; 
 _p pushBack 600; 
 _t pushBack 2; 
-*/
+_m pushBack 5; 
+*/ 
+
 //------------------------------ Turrets ------------------------------
 
 
