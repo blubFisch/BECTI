@@ -27,6 +27,7 @@ _specials = [];
 		- ["*"] = block all
 		- [["Land_Shed_Small_F", 12], ["Land_BagBunker_Small_F", 10]] = Specific blacklist classnames: Classname, distance
 		- [["All", 25]]; - block all within set range - second value is distance
+		- [["Factories", 25]]; - block all within set range excluding factories (shed support)
 */
 
 //--Load Vanilla
@@ -61,7 +62,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Composition";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack [];
+		_coinblacklist pushBack [["Factories", 30]];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
@@ -154,6 +155,47 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_coinblacklist pushBack [["All", 20]];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
+		
+		_headers pushBack 		["Mine Field (AT)", [["Composition","mines_at",true]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		100;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Composition";
+		_coinmenus pushBack 	["HQ", "RepairTruck", "DefenseTruck"];
+		_coinblacklist pushBack [];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+		
+		//Base Templates
+		_headers pushBack 		["Basic", [["Composition","template_basic",true]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		2000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Template";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [["All", 50]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];
+
+		_headers pushBack 		["Alpha", [["Composition","template_alpha",true]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		4000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Template";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [["All", 50]];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];
+		
+		_headers pushBack 		["Alpha Armed (Mg)", [["Composition","template_alpha_armed",true]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		10000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Template";
+		_coinmenus pushBack 	["HQ"];
+		_coinblacklist pushBack [["All", 50]];
+		_upgrade pushBack		1;	
+		_specials pushBack 		[];		
 
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	//--- Compositions Manual Mode - must set statics manually in Server_BuildDefense.sqf line 123

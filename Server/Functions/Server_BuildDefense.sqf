@@ -80,8 +80,28 @@ if (_iscomposition) then {
 		};
 		_x setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 		_x call CTI_CO_FNC_UnitCreated;
+		if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_x], true]};
+		
+		//getvarname
+		_varname = format ["CTI_%1_%2", CTI_P_SideJoined, _x];
+		_var = missionNamespace getVariable _varname;
+		if !(isnil "_var") then {
+			//--- Make the defense stronger?
+			_alternative_damages = false;
+			_reduce_damages = 0;
+			_multiply_damages = 0;
+			{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select 9);
+			if (_alternative_damages) then {
+				_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages, _multiply_damages]];
+			} else {
+				if (_multiply_damages > 0 || _reduce_damages > 0 || CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
+					_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
+				};
+			};	
+		};		
+		
 	}forEach _compositionobjects;	
-	_defense = "";
+
 } else {
 	_position set [2, 0];
 
@@ -234,57 +254,61 @@ if (_iscomposition) then {
 				_static3 call CTI_CO_FNC_UnitCreated;
 			};
 		};
-	};
+	
 
-	//--- Make the defense stronger?
-	//_stronger = -1;
-	//{if (_x select 0 isEqualTo "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
-	//if (_stronger != -1) then {_defense addEventHandler ["handleDamage", format["getDammage (_this select 0)+(_this select 2)/%1",_stronger]]};
-	//["test-var", [_variable]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
-	_alternative_damages = false;
-	_reduce_damages = 0;
-	_multiply_damages = 0;
-	{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select 9);
-	if (_alternative_damages) then {
-		_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages, _multiply_damages]];
-	} else {
-		if (_multiply_damages > 0 || _reduce_damages > 0 || CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
-			_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
+		//--- Make the defense stronger?
+		//_stronger = -1;
+		//{if (_x select 0 isEqualTo "DMG_Reduce") exitWith {_stronger = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
+		//if (_stronger != -1) then {_defense addEventHandler ["handleDamage", format["getDammage (_this select 0)+(_this select 2)/%1",_stronger]]};
+		//["test-var", [_variable]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+		_alternative_damages = false;
+		_reduce_damages = 0;
+		_multiply_damages = 0;
+		{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}; if ("DMG_Multiplier" in _x) then {_multiply_damages = _x select 1}} forEach (_var select 9);
+		if (_alternative_damages) then {
+			_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnDefenseHandleVirtualDamage", _varname, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, _reduce_damages, _multiply_damages]];
+		} else {
+			if (_multiply_damages > 0 || _reduce_damages > 0 || CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
+				_defense addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4, %5] call CTI_SE_FNC_OnDefenseHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _varname, _position, _multiply_damages]];
+			};
 		};
-	};
-	//handler for invinsible objects
-	_explosionalt = false;
-	_damage_explosion = 0;
-	{
-		if ("DMG_Explosion" in _x) then {_explosionalt = true;_damage_explosion = _x select 1;}; 
-	} forEach (_var select 9);
-	if (_explosionalt) then {
-		_defense addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
-	};
-	//BuildingChanged Handler
-	//_defense addEventHandler ["BuildingChanged", format ["[_this select 0, %1, '%2'] spawn CTI_SE_FNC_BuildingChanged", (_side) call CTI_CO_FNC_GetSideID, _position]];
-
-	//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
-	_ruins = "";
-	{if (_x select 0 isEqualTo "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_DEFENSE_SPECIALS);
-
-	_defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]];
-
-	if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
-		//todo: determine if the defense is "auto" or not via config simulation
-		[_defense, CTI_BASE_DEFENSES_EMPTY_TIMEOUT] spawn CTI_SE_FNC_HandleEmptyVehicle; //--- Track the defense lifespan
-		
-		//--- The defense is eligible for auto manning
-		if (_manned && CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_defense setVariable ["cti_aman_enabled", true]};
-		
-		//--- The defense may be an artillery piece, if so we track it
-		if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select CTI_DEFENSE_CLASS) >> "artilleryScanner") > 0) then {
-			(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
+		//handler for invinsible objects
+		_explosionalt = false;
+		_damage_explosion = 0;
+		{
+			if ("DMG_Explosion" in _x) then {_explosionalt = true;_damage_explosion = _x select 1;}; 
+		} forEach (_var select 9);
+		if (_explosionalt) then {
+			_defense addEventHandler ["explosion", format ["[_this select 0, _this select 1, %1, '%2', %3, %4] spawn CTI_SE_FNC_OnExplosion", _damage_explosion, (_side) call CTI_CO_FNC_GetSideID, _var, _position]];
 		};
-		
+		//BuildingChanged Handler
+		//_defense addEventHandler ["BuildingChanged", format ["[_this select 0, %1, '%2'] spawn CTI_SE_FNC_BuildingChanged", (_side) call CTI_CO_FNC_GetSideID, _position]];
+
+		//--- Check if the defense has a ruin model attached (we don't wana have a cemetery of wrecks)
+		_ruins = "";
+		{if (_x select 0 isEqualTo "RuinOnDestroyed") exitWith {_ruins = _x select 1}} forEach (_var select CTI_DEFENSE_SPECIALS);
+
+		_defense addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, _ruins, _varname]];
+
+		if (_defense emptyPositions "gunner" > 0) then { //--- Hard defense
+			//todo: determine if the defense is "auto" or not via config simulation
+			[_defense, CTI_BASE_DEFENSES_EMPTY_TIMEOUT] spawn CTI_SE_FNC_HandleEmptyVehicle; //--- Track the defense lifespan
+			
+			//--- The defense is eligible for auto manning
+			if (_manned && CTI_BASE_DEFENSES_AUTO_LIMIT > 0) then {_defense setVariable ["cti_aman_enabled", true]};
+			
+			//--- The defense may be an artillery piece, if so we track it
+			if (CTI_BASE_ARTRADAR_TRACK_FLIGHT_DELAY > -1 && getNumber(configFile >> "CfgVehicles" >> (_var select CTI_DEFENSE_CLASS) >> "artilleryScanner") > 0) then {
+				(_defense) remoteExec ["CTI_PVF_CLT_OnArtilleryPieceTracked", CTI_PV_CLIENTS];
+			};
+			
+		};
+		_defense setVariable ["cti_static_properly_created", true, true]; //-- set cti_static_properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers and variables
+		_defense call CTI_CO_FNC_UnitCreated;
 	};
-	_defense setVariable ["cti_static_properly_created", true, true]; //-- set cti_static_properly_created to "true" and broadcast that variable to all clients and JIP. Use that variable to determine if we need to re-add event handlers and variables
-	_defense call CTI_CO_FNC_UnitCreated;
+
+	//--- ZEUS Curator Editable
+	if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_defense], true]};
+
+	_defense
 };
-
-_defense

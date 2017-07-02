@@ -1,6 +1,6 @@
 ﻿//Main function resposible for spawning compositions
 
-//[ COMP_NAME, POS_ATL, OFFSET, DIR, ALIGN_TERRAIN ] call LARs_fnc_spawnComp;
+//[ COMP_NAME, POS_ATL, OFFSET, DIR, ALIGN_TERRAIN, allow water, previewmode ] call LARs_fnc_spawnComp;
 
 //COMP_NAME - Classname given to composition in missionConfigFile CfgCompositions
 

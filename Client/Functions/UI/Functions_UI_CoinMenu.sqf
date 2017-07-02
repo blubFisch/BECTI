@@ -158,7 +158,27 @@ CTI_Coin_DefenseCanBePlaced = {
 				//systemchat format ["Clear?: %1 | %2 ",_items, typeof _preview];
 				if !((_items) isEqualTo []) exitWith {_valid = false};	
 			} else {
-				if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
+				if ("Factories" in _x) then { 
+					_items = [];	
+					{
+						_previewobjs = (profileNamespace getVariable ["previewobjects", [""]]);
+						//systemchat format ["_previewobjs: %1 | %2 ",_previewobjs, _x];
+						if (typeof _x != typeof _preview ) then {
+							if !(_x in _previewobjs) then {
+								//get factories
+								_factobjs = (missionNamespace getVariable (format ["CTI_%1_FACTORIES", CTI_P_SideJoined]));
+								if !(typeof _x in _factobjs) then {
+								_items pushback (typeof _x);
+								//systemchat format ["_x: %1 ",typeof _x];
+								};
+							};
+						};
+					} foreach (_preview nearobjects ["All", (_x select 1)]);
+					//systemchat format ["Clear?: %1 | %2 ",_items, typeof _preview];
+					if !((_items) isEqualTo []) exitWith {_valid = false};	
+				} else {
+					if !(((_preview nearObjects _x) - [_preview]) isEqualTo []) exitWith {_valid = false};
+				};			
 			};
 		} forEach (CTI_COIN_PARAM select CTI_DEFENSE_COINBLACKLIST);
 	};

@@ -226,17 +226,26 @@ with missionNamespace do {
 				//---Composition
 				if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {				
 					//due to amount of objects in compositions, limit update time but not too fast (remove old and place new)
-					if (diag_tickTime - _last_composition_update > 0.1) then {
+					//OLD method, respawn composition on each
+					/*if (diag_tickTime - _last_composition_update > 0.1) then {
 						_last_composition_update = diag_tickTime;
 						if !(isNil 'CTI_COIN_PREVIEW_COMP') then {[ CTI_COIN_PREVIEW_COMP ] call LARs_fnc_deleteComp;};
 						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
-					};	
-					_composition = CTI_COIN_PREVIEW_COMP;
-					_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
-					{	
-						_y = _x;
-						{_y disableCollisionWith _x} forEach ((position _y) nearEntities 200);
-					}forEach _compositionobjects;	
+					};*/	
+					if !(isNil 'CTI_COIN_PREVIEW_COMP') then {
+						_composition = CTI_COIN_PREVIEW_COMP;
+						_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
+						//move comp
+						[_composition, (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_moveComp;
+						{	
+							_y = _x;
+							{
+								_y disableCollisionWith _x;
+								_x enableSimulationGlobal false;
+							} forEach ((position _y) nearEntities 200);
+						}forEach _compositionobjects;	
+						profileNamespace setVariable ["previewobjects", _compositionobjects];//for preview					
+					};
 				};
 			};
 		} else { //--- The player's commanding menu is gone
