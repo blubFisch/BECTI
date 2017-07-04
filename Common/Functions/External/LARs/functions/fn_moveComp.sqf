@@ -25,7 +25,7 @@ params[
 	[ "_compPosNew", [] ],
 	[ "_compOffset", [0,0,0] ],
 	[ "_compRot", 0 ],
-	[ "_compAlign", true ],
+	[ "_compAlign", 2 ],
 	[ "_compWater", true ],
 	[ "_previewmode", true ]
 ];
