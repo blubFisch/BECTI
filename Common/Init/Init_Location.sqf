@@ -58,4 +58,14 @@ if (CTI_IsClient) then {
 	_marker setMarkerTypeLocal "mil_flag";
 	_marker setMarkerColorLocal _coloration;
 	_marker setMarkerSizeLocal [0.5, 0.5]; 
+	
+	//--- Naval Depot markers
+	if !(isNil {_town getVariable "cti_naval_depot"}) then {
+		_marker = createMarkerLocal [format["cti_naval_depot_marker_%1", _town], getPos(_town getVariable "cti_naval_depot")];
+		_marker setMarkerTypeLocal "mil_triangle";
+		_marker setMarkerColorLocal _coloration;
+		_marker setMarkerSizeLocal [0.3, 0.3]; 
+		
+		_town setVariable ["cti_naval_depot_marker", _marker];
+	};
 };
