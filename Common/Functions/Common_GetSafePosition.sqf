@@ -71,10 +71,36 @@ if (_center isEqualTo _position) then {
 		_n_radius_max = _radius_max * 1.25;
 		_n_distance_min = _distance_min - (_distance_min / 4);
 		_n_near_entities_range =  _near_entities_range - (_near_entities_range / 4);
-		_position = [_center, _radius_min, _n_radius_max, _n_distance_min, _template, _near_entities, _n_near_entities_range, _passes, _failover_narrow, _failover_narrow_depth-1] call CTI_CO_FNC_GetSafePosition;
+		_position = [_center, _radius_min, _n_radius_max, _n_distance_min, _template, _near_entities, _n_near_entities_range, _near_object, _passes, _failover_narrow, _failover_narrow_depth-1] call CTI_CO_FNC_GetSafePosition;
 		
 		if (CTI_Log_Level >= CTI_Log_Information) then { 
 			["INFORMATION", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position at [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes... Attempting to narrow down the parameters", _position, _template, _radius_min, _radius_max, _distance_min, _passes]] call CTI_CO_FNC_Log;
+		};
+	};
+	
+	//--- Ultimately, if we cannot find a safe position, we try to use a road
+	if (_center isEqualTo _position && _failover_narrow && _failover_narrow_depth < 1) then {
+		_roads = _center nearRoads _radius_max;
+		_road = objNull;
+		
+		//--- Attempt to get road segment with no entities nearby
+		if (count _near_entities > 0) then {
+			{ 
+				if (count ((position _x) nearEntities [_near_entities, _near_entities_range]) isEqualTo 0 && !(surfaceIsWater position _x)) exitWith {_road = _x};
+			} forEach _roads;
+		};
+		
+		//--- There are no roads nearby, try to pick a random one if possible
+		if (isNull _road && count _roads > 0) then {
+			_road = selectRandom _roads;
+		};
+		
+		if !(isNull _road) then {
+			_position = position _road;
+			
+			if (CTI_Log_Level >= CTI_Log_Warning) then { 
+				["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position around [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes. Using road segment [%7] as a failover", _center, _template, _radius_min, _radius_max, _distance_min, _passes, _position]] call CTI_CO_FNC_Log;
+			};
 		};
 	};
 	
@@ -84,43 +110,6 @@ if (_center isEqualTo _position) then {
 			["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position at [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes", _position, _template, _radius_min, _radius_max, _distance_min, _passes]] call CTI_CO_FNC_Log;
 		};
 	};
-	
-	/*if (_center isEqualTo _position) then {
-	
-		// todo, call the fnc again and reduce the values
-		//--- Failover, use nearest road if possible
-		if (_failover_road) then {
-			_roads = _center nearRoads _radius_max;
-			_road = objNull;
-			
-			//--- Attempt to get road segment with no entities nearby
-			if (count _near_entities > 0) then {
-				{ 
-					if (count ((position _x) nearEntities [_near_entities, _near_entities_range]) isEqualTo 0 && !(surfaceIsWater position _x)) exitWith {_road = _x};
-				} forEach _roads;
-			};
-			
-			//--- There are no roads nearby, try to pick a random one if possible
-			if (isNull _road && count _roads > 0) then {
-				_road = selectRandom _roads;
-			};
-			
-			if !(isNull _road) then {
-				_position = position _road;
-				
-				if (CTI_Log_Level >= CTI_Log_Warning) then { 
-					["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position around [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes. Using road segment [%7] as a failover", _center, _template, _radius_min, _radius_max, _distance_min, _passes, _position]] call CTI_CO_FNC_Log;
-				};
-			};
-		};
-		
-		//--- Check again after the failover
-		if (_center isEqualTo _position) then {
-			if (CTI_Log_Level >= CTI_Log_Warning) then { 
-				["WARNING", "FILE: Common\Functions\Common_GetSafePosition.sqf", format ["Could not find a safe position at [%1] using template [%2], min radius [%3], max radius [%4], min distance [%5] after [%6] passes", _position, _template, _radius_min, _radius_max, _distance_min, _passes]] call CTI_CO_FNC_Log;
-			};
-		};
-	};*/
 };
 
 _position
