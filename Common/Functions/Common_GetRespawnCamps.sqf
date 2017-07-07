@@ -19,7 +19,7 @@
 	[CENTER, SIDE, GROUP] call CTI_CO_FNC_GetRespawnCamps
 	
   # EXAMPLE #
-    _camps = [deathpos, sideplayer, group player] call CTI_CO_FNC_GetRespawnCamps
+    _camps = [deathpos, side player, group player] call CTI_CO_FNC_GetRespawnCamps
 */
 
 params ["_location", "_sideID", "_group"];

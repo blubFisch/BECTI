@@ -668,6 +668,7 @@ with missionNamespace do {
  */
 
 //--- Vehicles: Misc
+CTI_VEHICLES_BASE_SAFE_SPAWN = 1; //--- If enabled, the vehicles will try to spawn near their factory in a safe area
 CTI_VEHICLES_EMPTY_SCAN_PERIOD = 15; //--- Scan for a crew member in a vehicle each x seconds
 CTI_VEHICLES_HANDLER_EMPTY = 0; //--- Determine how an empty vehicle is handled by the engine (0: Typical delay, 1: delay AND the unit cannot move/fire)
 CTI_VEHICLES_PROTECT_TIRES = 1; //--- Determine whether the damages applied to tires should be reduced or not

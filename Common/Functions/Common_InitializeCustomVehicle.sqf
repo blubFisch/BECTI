@@ -42,17 +42,17 @@ switch (_script) do {
 		_salvagers pushBack _vehicle;
 		_sideLogic setVariable ["cti_salvagers", _salvagers, true]; 
 		[_side, _vehicle] execFSM "Server\FSM\update_salvager_independent.fsm";
-	};	
+	};
 	case "service-repairtruck": {
 		_vehicle setVariable ["cti_spec", CTI_SPECIAL_REPAIRTRUCK, true]; 
 		if (CTI_IsServer) then {[_vehicle, _side] execFSM "Server\FSM\update_repairtruck.fsm"} else {["repair", [_vehicle, _side]] remoteExec ["CTI_PVF_SRV_RequestHandleSpecialVehicle", CTI_PV_SERVER]}
 	};
-	case "service-defensetruck": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_DEFENSETRUCK, true]};
 	case "service-ammotruck": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_AMMOTRUCK, true]};
-	case "service-fueltruck": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_FUELTRUCK, true]};
 	case "service-medic": {if ((missionNamespace getVariable "CTI_RESPAWN_MOBILE") > 0) then {_vehicle setVariable ["cti_spec", CTI_SPECIAL_MEDICALVEHICLE, true]}};
 	case "service-gear": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_GEAR], true]};
 	case "nuke-truck": {_vehicle setVariable ["cti_spec", [CTI_SPECIAL_NUKETRUCK], true]};
 	case "deployable-fob": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_DEPLOYABLEFOB, true]};
-	case "deployable-fob-large": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_DEPLOYABLEFOBLARGE, true]};	
+	case "deployable-fob-large": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_DEPLOYABLEFOBLARGE, true]};
+	case "service-defensetruck": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_DEFENSETRUCK, true]};
+	case "service-fueltruck": {_vehicle setVariable ["cti_spec", CTI_SPECIAL_FUELTRUCK, true]};
 };

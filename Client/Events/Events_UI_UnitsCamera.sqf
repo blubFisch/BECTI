@@ -4,12 +4,10 @@ true call CTI_CL_FNC_UpdateBaseVariables;
 switch (_action) do {
 	case "onLoad": {
 		_groups = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideGroups;
-		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;	
+		
 		_track = player;
 		showCinemaBorder false;
 		
-		// _ep = _track weaponDirection currentWeapon _track;
-		// _pitch = (_ep) call CTI_UI_UnitsCamera_GetPitchFromDirectionVector;
 		_pitch = 0;
 		_dir = 180;
 		_distance = 2.5;
@@ -97,8 +95,9 @@ switch (_action) do {
 		};
 		
 		//--- Sat cam available?
-		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlEnable (if ((CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
+		_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 		_enable = [false, true] select (CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0);
+		((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlEnable (if ((CTI_Base_SatelliteInRange && _upgrades select CTI_UPGRADE_SATELLITE > 0)) then {true} else {false});
 		if (_enable) then {((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlSetPosition [SafeZoneX + (SafeZoneW * 0.31), SafeZoneY + (SafeZoneH * 0.95), SafeZoneW * 0.14, SafeZoneH * 0.04]; ((uiNamespace getVariable "cti_dialog_ui_unitscam") displayCtrl 180014) ctrlCommit 0};
 		
 		if (isNil {uiNamespace getVariable "cti_dialog_ui_unitscam_viewmode"}) then {uiNamespace setVariable ["cti_dialog_ui_unitscam_viewmode", 0]};
@@ -223,6 +222,7 @@ switch (_action) do {
 			switch (_changeto) do {
 				case "ironsight": {
 					CTI_UnitsCamera cameraEffect["TERMINATE","BACK"];
+					vehicle _track switchCamera "INTERNAL";
 					vehicle _track switchCamera "GUNNER";
 					uiNamespace setVariable ["cti_dialog_ui_unitscam_camview", "ironsight"];
 				};
@@ -233,7 +233,7 @@ switch (_action) do {
 				};
 				case "external": {
 					if (difficultyOption "thirdPersonView" isEqualTo 1) then {
-						vehicle player switchCamera (uiNamespace getVariable "cti_dialog_ui_unitscam_camview_in");
+						vehicle _track switchCamera (uiNamespace getVariable "cti_dialog_ui_unitscam_camview_in");
 						CTI_UnitsCamera cameraEffect ["Internal", "back"];
 						uiNamespace setVariable ["cti_dialog_ui_unitscam_camview", "external"];
 					};

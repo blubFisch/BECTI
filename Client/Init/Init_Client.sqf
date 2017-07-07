@@ -135,7 +135,6 @@ call compile preprocessFile "Client\Functions\UI\Functions_UI_RespawnMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_SatelliteCamera.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_ServiceMenu.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_LoadoutMenu.sqf";
-call compile preprocessFile "Client\Functions\UI\Functions_UI_UnitsCamera.sqf";
 call compile preprocessFile "Client\Functions\UI\Functions_UI_UpgradeMenu.sqf";
 
 //--- Loading Screen Status

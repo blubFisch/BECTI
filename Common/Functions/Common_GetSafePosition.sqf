@@ -15,8 +15,10 @@
     4	{Optionnal} [String]: The template to use
     5	{Optionnal} [Array]: The living entities classnames to detect
     6	{Optionnal} [Number]: The living entities detection radius
-    7	{Optionnal} [Number]: The amount of scans to perform
-    8	{Optionnal} [Boolean]: If a safe position cannot be used, try to find a road
+    7	{Optionnal} [Array]: An inert object kind to detect with it's range
+    8	{Optionnal} [Number]: The amount of scans to perform
+    9	{Optionnal} [Boolean]: Call the function again with more flexible parameters
+    10	{Optionnal} [Integer]: The amount of time this function may call itself
 	
   # RETURNED VALUE #
 	[Array]: A safe position
@@ -24,14 +26,14 @@
   # SYNTAX #
 	[POSITION] call CTI_CO_FNC_GetSafePosition
 	[POSITION, RADIUS MIN, RADIUS MAX, DISTANCE MIN] call CTI_CO_FNC_GetSafePosition
-	[POSITION, RADIUS MIN, RADIUS MAX, DISTANCE MIN, TEMPLATE, ENTITIES, ENTITIES RANGE, PASSES] call CTI_CO_FNC_GetSafePosition
+	[POSITION, RADIUS MIN, RADIUS MAX, DISTANCE MIN, TEMPLATE, ENTITIES, ENTITIES RANGE, [OBJECT TYPE, OBJECT RANGE], PASSES, NARROW SEARCH, NARROW SEARCH DEPTH] call CTI_CO_FNC_GetSafePosition
 	
   # EXAMPLE #
     _empty_position = [vehicle player] call CTI_CO_FNC_GetSafePosition
-    _empty_position = [vehicle player, 1, 50, 10, "vehicles", ["Man"], 5, 250] call CTI_CO_FNC_GetSafePosition
+    _empty_position = [vehicle player, 1, 50, 10, "vehicles", ["Man"], 5, ["Building", 15], 250] call CTI_CO_FNC_GetSafePosition
 */
 
-params["_center", ["_radius_min", 1], ["_radius_max", 200], ["_distance_min", 15], ["_template", ""], ["_near_entities", []], ["_near_entities_range", 5], ["_passes", 500], ["_failover_narrow", true], ["_failover_narrow_depth", 3]];
+params["_center", ["_radius_min", 1], ["_radius_max", 200], ["_distance_min", 15], ["_template", ""], ["_near_entities", []], ["_near_entities_range", 5], ["_near_object", []], ["_passes", 500], ["_failover_narrow", true], ["_failover_narrow_depth", 3]];
 private ["_breakout", "_center_ran", "_direction", "_filter", "_is_clear", "_position", "_radius"];
 
 if (typeName _center isEqualTo "OBJECT") then {_center = position _center};
@@ -53,6 +55,10 @@ for '_i' from 1 to _passes do {
 		_is_clear = true;
 		if (count _near_entities > 0) then {
 			if !(count (_center_ran nearEntities [_near_entities, _near_entities_range]) isEqualTo 0) then {_is_clear = false};
+		};
+		
+		if (_is_clear && count _near_object > 0) then {
+			if !(count (_center_ran nearObjects _near_object) isEqualTo 0) then {_is_clear = false};
 		};
 		
 		if (_is_clear) then {

@@ -5,7 +5,7 @@
 	Description:	Return the base structures of a given type among a structures array
 	Author: 		Benny
 	Creation Date:	18-09-2013
-	Revision Date:	15-03-2017
+	Revision Date:	18-09-2013
 	
   # PARAMETERS #
     0	[Integer]: The structure type
