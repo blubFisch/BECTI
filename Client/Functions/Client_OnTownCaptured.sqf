@@ -80,5 +80,8 @@ _color = (_side_new) call CTI_CO_FNC_GetSideColoration;
 //--- Update the camps if needed
 {(_x getVariable "cti_camp_marker") setMarkerColorLocal _color} forEach (_town getVariable ["cti_town_camps", []]);
 
+//--- Update the naval depots if needed
+if !(isNil {_town getVariable "cti_naval_depot_marker"}) then {(_town getVariable "cti_naval_depot_marker") setMarkerColorLocal _color};
+
 //--- Update the territorial markers if enabled
 if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) then {CTI_P_TerritorialUpdate = true};

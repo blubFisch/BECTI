@@ -36,7 +36,7 @@
 	  -> Create a "B_Soldier_F" at the player's position, initialize it over the network and ignore the formation on creation
 */
 
-params ["_classname", "_group", "_position", "_sideID", "_side", ["_net", false], ["_special", "FORM"]];
+params ["_classname", "_group", "_position", "_sideID", ["_net", false], ["_special", "FORM"]];
 private ["_unit"];
 
 if (CTI_Log_Level >= CTI_Log_Debug) then {
