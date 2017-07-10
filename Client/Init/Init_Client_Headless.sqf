@@ -150,6 +150,7 @@ with missionNamespace do {
 						{
 							["DEBUG", "FUNCTION: CTI_PVF_HC_OnTownDelegationRemoval", format["Town [%1] deleting unit [%2] from group [%3], local? [%4]", _town getVariable "cti_town_name", _x, group _x, local _x]] call CTI_CO_FNC_Log;
 							deleteVehicle _x;
+							sleep 4;
 							["DEBUG", "FUNCTION: CTI_PVF_HC_OnTownDelegationRemoval", format["Town [%1] is unit removed? unit [%2]", _town getVariable "cti_town_name", _x]] call CTI_CO_FNC_Log;
 						} forEach units _x;
 					};
