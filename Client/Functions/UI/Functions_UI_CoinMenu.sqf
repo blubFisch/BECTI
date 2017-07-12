@@ -166,7 +166,7 @@ CTI_Coin_DefenseCanBePlaced = {
 						if (typeof _x != typeof _preview ) then {
 							if !(_x in _previewobjs) then {
 								//get factories
-								_factobjs = (missionNamespace getVariable (format ["CTI_%1_FACTORIES", CTI_P_SideJoined]));
+								_factobjs = (missionNamespace getVariable (format ["CTI_%1_FACTCLASS", CTI_P_SideJoined]));
 								if !(typeof _x in _factobjs) then {
 								_items pushback (typeof _x);
 								//systemchat format ["_x: %1 ",typeof _x];
