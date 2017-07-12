@@ -20,10 +20,8 @@
     (vehicle player) call CTI_CO_FNC_SanitizeLandOrdinance;
 	  -> Sanitize the player's vehicle
 */
-
-private ["_magazines","_vehicle","_weapons"];
-
-_vehicle = _this;
+params ["_vehicle"];
+private ["_magazines","_vehicle","_activePylonMags","_activePylonMagsCount","_typepylonlist","_turretlist","_maglist","_pathlist","_countlist","_upgrades","_turrets","_mags","_paths","_path"];
 
 //Gather all current mags
 
@@ -74,7 +72,8 @@ _upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
 			if (_upgrade_lvl < _ammoupgrade) then {
 				[_vehicle,[_foreachIndex + 1,"",true]] remoteexec ["setPylonLoadOut",0];
 				[_vehicle,[_foreachIndex + 1,0]] remoteexec ["SetAmmoOnPylon",0];
-				systemchat format ["Removed %1",_x];
+				systemchat format ["Ammo Not Unlocked | Removing %1",_x];
+				//issue refund?
 				playSound "Click";
 			};
 		};	
@@ -100,7 +99,8 @@ _path = [];
 			_upgrade_lvl = _upgrades select CTI_UPGRADE_LAND_ORDINANCE;
 			if (_upgrade_lvl < _ammoupgrade) then {
 				_vehicle removeMagazineTurret [_mag, [_path]]; 
-				systemchat format ["Removed %1",_mag];
+				systemchat format ["Ammo Not Unlocked | Removing %1",_mag];
+				//issue refund?
 				playSound "Click";
 			};
 		};

@@ -27,17 +27,17 @@
 	  -> Sanitize the player's vehicle depending on the upgrade levels/parameters
 */
 
-private ["_side", "_vehicle", "_upgrades"];
+private ["_vehicle"];
 
-_vehicle = _this;
+params ["_vehicle"];
 
 //--- We check air ordinance param
 if((missionNamespace getVariable "CTI_VEHICLES_AIR_ORDINANCE") > 0 ) then {
-	_vehicle call CTI_CO_FNC_SanitizeAirOrdinance;
+	_vehicle spawn CTI_CO_FNC_SanitizeAirOrdinance;
 };
 
 //--- We check land ordinance param
 if((missionNamespace getVariable "CTI_VEHICLES_LAND_ORDINANCE") > 0 ) then {
-	_vehicle call CTI_CO_FNC_SanitizeLandOrdinance;
+	_vehicle spawn CTI_CO_FNC_SanitizeLandOrdinance;
 };
 
