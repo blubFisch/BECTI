@@ -56,7 +56,6 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then 
 		//--- Transfer the previous damages to the new HQ if enabled
 		_damages = if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_current_hq getVariable ["cti_altdmg", getDammage _current_hq]} else {0};
 		
-		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
 		_alternative_damages = false;
 		_reduce_damages = 0;
@@ -77,6 +76,8 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then 
 		_logic setVariable ["cti_hq", _structure, true];
 		deleteVehicle _current_hq;
 		
+		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+		
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FILE: Server\Functions\Server_ToggleHQ.sqf", format["HQ from side [%1] was deployed at position [%2]", _side, _position]] call CTI_CO_FNC_Log;
 		};
@@ -86,7 +87,7 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then 
 		_logic setVariable ["cti_hq_deployed", false, true];
 		
 		//--- Get a safe position
-		_position = [_position, 90] call CTI_CO_FNC_GetEmptyPosition;
+		_position = [_position, 25, 100] call CTI_CO_FNC_GetSafePosition;
 		
 		//--- Mobilize the HQ
 		_hq = [missionNamespace getVariable Format["CTI_%1_HQ", _side], _position, 0, _side, true, false] call CTI_CO_FNC_CreateVehicle;
@@ -115,12 +116,13 @@ if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then 
 			(_hq) remoteExec ["CTI_PVF_CLT_AddHQActions", leader _commander];
 		};
 		
+		["hq-mobilized"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+		
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FILE: Server\Functions\Server_ToggleHQ.sqf", format["HQ from side [%1] was mobilized at position [%2]", _side, _position]] call CTI_CO_FNC_Log;
 		};
 		
 		//--- Update base areas
 		(_side) call CTI_SE_FNC_UpdateBaseAreas;
-		["hq-mobilized"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];// -- notification HQ is mobilized + sound
 	};
 };
