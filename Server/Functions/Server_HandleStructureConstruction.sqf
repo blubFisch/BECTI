@@ -32,10 +32,10 @@
 	Server Function: CTI_SE_FNC_OnBuildingHit
 
   # EXAMPLE #
-    [_side, _structure, _variable, _position, _direction] spawn CTI_SE_FNC_HandleStructureConstruction;
+    [_side, _structure, _variable, _position, _direction, _aligntoggle] spawn CTI_SE_FNC_HandleStructureConstruction;
 */
 
-params ["_side", "_structure", "_variable", "_position", "_direction", ["_isDestroyed", false]];
+params ["_side", "_structure", "_variable", "_position", "_direction", "_aligntoggle", ["_isDestroyed", false]];
 private ["_completion", "_completion_ratio", "_completion_last", "_lasttouch", "_sideID", "_time_build", "_var"];
 
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
@@ -111,7 +111,7 @@ if (_completion >= 100) then { //--- The structure is complete
 	_structure setPos _position;
 	_structure setDir _direction;
 	//level with terrain if enabled
-	if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+	if (_aligntoggle) then {
 		_structure setVectorUp [0,0,0];
 	} else {
 		_structure setVectorUp surfaceNormal _position;

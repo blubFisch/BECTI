@@ -27,7 +27,7 @@
     _placed = [_placed, CTI_CL_VAR_SideJoined, getPos _preview, getDir _preview] call CTI_SE_FNC_BuildStructure;
 */
 
-params["_classname", "_side", "_position", "_direction"];
+params["_classname", "_side", "_position", "_direction", "_aligntoggle"];
 
 _var = missionNamespace getVariable _classname;
 
@@ -55,7 +55,7 @@ _structures_wip = _logic getVariable "cti_structures_wip";
 _structures_wip pushBack _structure;
 for '_i' from count(_structures_wip)-1 to 0 step -1 do {if (isNull(_structures_wip select _i)) then {_structures_wip deleteAt _i}};
 
-[_side, _structure, _classname, _position, _direction] spawn CTI_SE_FNC_HandleStructureConstruction;
+[_side, _structure, _classname, _position, _direction, _aligntoggle] spawn CTI_SE_FNC_HandleStructureConstruction;
 
 ["structure-preplaced", [_classname, _position]] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 

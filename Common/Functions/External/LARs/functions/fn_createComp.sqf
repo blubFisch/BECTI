@@ -28,6 +28,7 @@ params[
 	[ "_compOffset", [0,0,0] ],
 	[ "_compRot", 0 ],
 	[ "_compAlign", 2 ],
+	[ "_aligntoggle", false ],
 	[ "_compWater", true ],
 	[ "_previewmode", true ]
 ];
@@ -43,27 +44,13 @@ switch (_compAlign) do {
 	};
 	case 2: {
 		//allow toggle
-		if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
+		if (_aligntoggle) then {
 			_compAlign = false;
 		} else {
 			_compAlign = true;
 		};
 	};
 };
-/*if (_compAlign ) then {
-	_compAlign = true;
-	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
-		_compAlign = false;
-	} else {
-		_compAlign = true;
-	};
-} else {
-	if ((profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
-		_compAlign = false;
-	} else {
-		_compAlign = false;
-	};
-};*/
 
 _msg = format[ "COMP - Name: %1, Pos:%2, Offset: %3, Rot: %4, Align: %5", _compName, _compPos, _compOffset, _compRot, _compAlign ];
 DEBUG_MSG( DEBUG, _msg );

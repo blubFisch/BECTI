@@ -95,6 +95,7 @@ _last_terrainalign = false;
 _last_autodefense = false;
 _last_defense_count = "";
 
+
 with missionNamespace do {
 	CTI_COIN_CATEGORIES = _categories;
 	
@@ -153,6 +154,14 @@ with missionNamespace do {
 		};
 		//END SELL
 		
+		//level with terrain
+		_aligntoggle = false;
+		if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+			_aligntoggle = false;
+		} else {
+			_aligntoggle = true;
+		};
+		
 		//--- Parameters are set, a preview is being created or is being moved
 		if !(isNil 'CTI_COIN_PARAM') then {
 			if (isNil 'CTI_COIN_PREVIEW') then {
@@ -184,7 +193,7 @@ with missionNamespace do {
 					
 					//---Composition
 					if ("Composition" in ((CTI_COIN_PARAM select 5) select 0)) then {
-						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_spawnComp;
+						CTI_COIN_PREVIEW_COMP = [ (((CTI_COIN_PARAM select 5) select 0) select 1), (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), _aligntoggle, false, true] call LARs_fnc_spawnComp;
 					};
 					//--- Update the overlay description
 					(_preview_item) call CTI_Coin_UpdatePreview;
@@ -218,7 +227,7 @@ with missionNamespace do {
 					CTI_COIN_HELPER setDir CTI_COIN_DIR;	
 				};
 				//level with terrain
-				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				if (_aligntoggle) then {
 					CTI_COIN_PREVIEW setVectorUp [0,0,0];
 				} else {
 					CTI_COIN_PREVIEW setVectorUp surfaceNormal (position CTI_COIN_PREVIEW);
@@ -236,7 +245,7 @@ with missionNamespace do {
 						_composition = CTI_COIN_PREVIEW_COMP;
 						_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
 						//move comp
-						[_composition, (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), false, true] call LARs_fnc_moveComp;
+						[_composition, (screenToWorld [0.5,0.5]), [0,0,0], CTI_COIN_DIR, (((CTI_COIN_PARAM select 5) select 0) select 2), _aligntoggle, false, true] call LARs_fnc_moveComp;
 						{	
 							_x enableSimulationGlobal false;
 							_compobj = _x;
@@ -360,11 +369,11 @@ with missionNamespace do {
 		};
 		
 		//--- Update Terrain Alignment icon if needed
-		if !(_last_terrainalign isEqualTo (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false])) then {
-			_last_terrainalign = profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false];
+		if !(_last_terrainalign isEqualTo _aligntoggle) then {
+			_last_terrainalign = _aligntoggle;
 			
 			_color = CTI_COIN_COLOR_OUTOFRANGE_UI;
-			if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+			if (_aligntoggle) then {
 				_color_valid_lum = +CTI_COIN_COLOR_VALID_UI;
 				_color_valid_lum set [3, 0.6];
 				_color = _color_valid_lum;

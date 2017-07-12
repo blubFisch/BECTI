@@ -398,6 +398,14 @@ CTI_Coin_OnPreviewPlacement = {
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlSetTextColor CTI_COIN_COLOR_OUTOFRANGE_UI;
 			((uiNamespace getVariable "cti_title_coin") displayCtrl 112201) ctrlCommit 0;
 			
+			//level with terrain
+			_aligntoggle = false;
+			if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				_aligntoggle = false;
+			} else {
+				_aligntoggle = true;
+			};
+			
 			//--- Create the desired item
 			_reload_expression = nil;
 			switch (CTI_COIN_PARAM_KIND) do {
@@ -409,7 +417,7 @@ CTI_Coin_OnPreviewPlacement = {
 						
 						//--- Check whether we're dealing with the HQ or a normal structure
 						if !(((CTI_COIN_PARAM select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then {
-							[_variable, CTI_P_SideJoined, _position, _direction] remoteExec ["CTI_PVF_SRV_RequestBuilding", CTI_PV_SERVER];
+							[_variable, CTI_P_SideJoined, _position, _direction,_aligntoggle] remoteExec ["CTI_PVF_SRV_RequestBuilding", CTI_PV_SERVER];
 						} else {
 							//--- When the HQ is being deployed or mobilized, the commanding menu must be reloaded
 							_reload_expression = CTI_Coin_OnHQToggle;
@@ -448,7 +456,7 @@ CTI_Coin_OnPreviewPlacement = {
 					_variable = format ["CTI_%1_%2", CTI_P_SideJoined, _classname];
 					//systemchat format ["_variable | %1",_variable];
 					-(_price) call CTI_CL_FNC_ChangePlayerFunds;
-					[_variable, CTI_P_SideJoined, _position, _direction, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true]] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
+					[_variable, CTI_P_SideJoined, _position, _direction, profileNamespace getVariable ["CTI_COIN_WALLALIGN", true], profileNamespace getVariable ["CTI_COIN_AUTODEFENSE", true],_aligntoggle] remoteExec ["CTI_PVF_SRV_RequestDefense", CTI_PV_SERVER];
 				};
 			};
 			

@@ -31,7 +31,7 @@
     _defense = [_variable, CTI_P_SideJoined, [_pos select 0, _pos select 1], _dir, CTI_P_WallsAutoAlign, CTI_P_DefensesAutoManning] call CTI_SE_FNC_BuildDefense;
 */
 
-params ["_varname", "_side", "_position", "_direction", "_autoalign", ["_manned", false]];
+params ["_varname", "_side", "_position", "_direction", "_autoalign", ["_manned", false], "_aligntoggle"];
 private ["_defense", "_direction_structure", "_fob", "_limit", "_logic", "_ruins", "_seed", "_sideID", "_stronger", "_var"];
 
 _var = missionNamespace getVariable _varname;
@@ -72,7 +72,7 @@ switch (typeName (_var select CTI_STRUCTURE_SPECIALS)) do {
 _iscomposition = false;
 {if (_x select 0 isEqualTo "Composition") exitWith {_iscomposition = true}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 if (_iscomposition) then {
-	_composition = [ (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 1), _position, [0,0,0], _direction, (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 2), false, false ] call LARs_fnc_spawnComp;
+	_composition = [ (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 1), _position, [0,0,0], _direction, (((_var select CTI_STRUCTURE_SPECIALS) select 0) select 2),_aligntoggle, false, false ] call LARs_fnc_spawnComp;
 	_compositionobjects = [ _composition ] call LARs_fnc_getCompObjects;
 	{	
 		if (_x emptyPositions "gunner" > 0) then { //--- Hard defense
@@ -166,7 +166,7 @@ if (_iscomposition) then {
 		_defense setDir _direction;
 	};
 	//level with terrain
-	if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+	if (_aligntoggle) then {
 		_defense setVectorUp [0,0,0];
 	} else {
 		_defense setVectorUp surfaceNormal _position;
@@ -183,7 +183,7 @@ if (_iscomposition) then {
 				detach _static1;
 				_static1 setDir (_direction - 180);
 				//level with terrain
-				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				if (_aligntoggle) then {
 					_static1 setVectorUp [0,0,0];
 				} else {
 					_static1 setVectorUp surfaceNormal _position;
@@ -209,7 +209,7 @@ if (_iscomposition) then {
 				_static1 setDir (_direction - 180);
 				_static2 setDir (_direction - 180);
 				//level with terrain
-				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				if (_aligntoggle) then {
 					_static1 setVectorUp [0,0,0];
 					_static2 setVectorUp [0,0,0];
 				} else {
@@ -242,7 +242,7 @@ if (_iscomposition) then {
 				_static2 setDir (_direction - 180);
 				_static3 setDir (_direction - 270);
 				//level with terrain
-				if (profileNamespace getVariable ["CTI_COIN_TERRAINALIGN", false]) then {
+				if (_aligntoggle) then {
 					_static1 setVectorUp [0,0,0];
 					_static2 setVectorUp [0,0,0];
 					_static3 setVectorUp [0,0,0];

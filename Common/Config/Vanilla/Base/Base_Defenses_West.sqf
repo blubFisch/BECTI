@@ -62,7 +62,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Composition";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
-		_coinblacklist pushBack [["Factories", 30]];
+		_coinblacklist pushBack [["Factories", 10]];
 		_upgrade pushBack		2;	
 		_specials pushBack 		[];
 
@@ -173,7 +173,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 40]];
+		_coinblacklist pushBack [["All", 30]];
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 		
@@ -184,7 +184,7 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 70]];
+		_coinblacklist pushBack [["All", 50]];
 		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 
@@ -194,8 +194,8 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 70]];
-		_upgrade pushBack		1;	
+		_coinblacklist pushBack [["All", 50]];
+		_upgrade pushBack		0;	
 		_specials pushBack 		[];
 		
 		_headers pushBack 		["Alpha Armed (Mg)", [["Composition","template_alpha_armed",0]]];
@@ -204,8 +204,8 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_placements pushBack 	[0, 5];
 		_categories pushBack 	"Templates";
 		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["All", 70]];
-		_upgrade pushBack		1;	
+		_coinblacklist pushBack [["All", 50]];
+		_upgrade pushBack		0;	
 		_specials pushBack 		[];		
 
 	////////////////////////////////////////////////////////////////////////////////////////////////

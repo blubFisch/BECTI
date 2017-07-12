@@ -83,6 +83,6 @@ if !(_ruins isEqualTo "") then {
 	_smoke = createVehicle ["CMflare_Chaff_Ammo", _position, [], 0, "CAN_COLLIDE"];
 	deleteVehicle _x;
 	[_position] remoteExec ["CTI_PVF_CLT_APS_SHOCKWAVE"];
-} forEach (nearestObjects [_position, ["Ruins"], 15]);
+} forEach (nearestObjects [_position, ["Ruins"], 30]);
 
 deleteVehicle _killed;
