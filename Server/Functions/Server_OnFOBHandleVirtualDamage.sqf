@@ -38,11 +38,13 @@
 params ["_damaged", "_damage", "_shooter", "_ammo", "_variable", "_sideID", "_position", "_direction", "_reduce_damages", "_multiply_damages"];
 private ["_logic", "_side", "_var", "_virtual_damages", "_ruins", "_fobtype", "_health", "_lastdamagetime", "_lastdamagediff"];
 
-//check for last damage time
+//--- Check for last damage time
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
 _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
-if (_lastdamagediff <= 0.1) exitWith {0};
+
+//--- Adjust this for sleep between each damage hit
+if (_lastdamagediff <= 0.01) exitWith {0};
 
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 

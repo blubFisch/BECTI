@@ -41,11 +41,13 @@ _upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
 _upgrade_basehealth = _upgrades select CTI_UPGRADE_BASE_HEALTH;
 _baseratio = 1;
 
-//check for last damage time
+//--- Check for last damage time
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
 _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
-if (_lastdamagediff <= 0.1) exitWith {0};
+
+//--- Adjust this for sleep between each damage hit
+if (_lastdamagediff <= 0.01) exitWith {0};
 
 //--- Base Health Upgrade
 if (CTI_BASE_HEALTH_UPGRADE > 0) then {
