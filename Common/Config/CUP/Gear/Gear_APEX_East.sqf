@@ -162,11 +162,6 @@ _g pushBack "Tropic";
 //--- EXPLOSIVES	
 //------------------------------ ACCESSORIES ------------------------------
 //--- ATTACHMENTS
-_i pushBack "bipod_01_F_ghex";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
 //--- OPTICS 
 _i pushBack "optic_ERCO_khk_F";
 _u pushBack 2;
@@ -247,21 +242,11 @@ _u pushBack 0;
 _p pushBack 500;
 _g pushBack "Hex";
 
-_i pushBack "Laserdesignator_03_ghex_F";
-_u pushBack 3;
-_p pushBack 1000;
-_g pushBack "Tropic";
-
 //CSAT
 _i pushBack "Laserdesignator_02_ghex_F";
 _u pushBack 3;
 _p pushBack 1000;
 _g pushBack "Tropic";
-
-_i pushBack "Laserdesignator_02_hex_F";
-_u pushBack 3;
-_p pushBack 1000;
-_g pushBack "Hex";
 
 //--- SUPPRESSORS
 _i pushBack "muzzle_snds_58_blk_F";
@@ -289,21 +274,6 @@ _i pushBack "muzzle_snds_H_khk_F";
 _u pushBack 3;
 _p pushBack 650;
 _g pushBack "Tropic";
-
-_i pushBack "muzzle_snds_H_blk_F";
-_u pushBack 3;
-_p pushBack 650;
-_g pushBack "Black";
-
-_i pushBack "muzzle_snds_khk_F";
-_u pushBack 2;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "muzzle_snds_snd_F";
-_u pushBack 2;
-_p pushBack 500;
-_g pushBack "Khaki";
 
 _i pushBack "muzzle_snds_93mmg";
 _u pushBack 2;

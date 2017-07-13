@@ -119,11 +119,6 @@ _u pushBack 4;
 _p pushBack 800;
 _g pushBack "Black";
 
-_i pushBack "optic_KHS_khk";
-_u pushBack 4;
-_p pushBack 800;
-_g pushBack "Khaki";
-
 //--- ITEMS 
 _i pushBack "Laserdesignator_02";
 _u pushBack 3;

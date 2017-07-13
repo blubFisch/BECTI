@@ -11,6 +11,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Air
 	(missionNamespace getVariable "CTI_VEHICLES_AIR_ORDINANCE") isEqualTo 1, //--- Air Ordinance
 	(missionNamespace getVariable "CTI_VEHICLES_LAND_ORDINANCE") isEqualTo 1, //--- Land Ordinance
+	(missionNamespace getVariable "CTI_TOWNS_OCCUPATION") > 0, //--- Towns Depots
 	true, //--- Halo
 	true, //--- Air Radar
 	true, //--- Art Radar
@@ -106,8 +107,8 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		4, //--- Heavy
 		2, //--- Naval
 		5, //--- Air
-		1, //--- Air Ordinance
-		1, //--- Land Ordinance
+		4, //--- Air Ordinance
+		4, //--- Land Ordinance
 		3, //--- Towns Depots
 		2, //--- Halo
 		3, //--- Air Radar
@@ -262,11 +263,6 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 	[CTI_UPGRADE_SUPPLY_RATE, 1],
 	[CTI_UPGRADE_GEAR, 3],
 	[CTI_UPGRADE_TOWNS, 2],
-	[CTI_UPGRADE_AIR_FFAR, 1],
-	[CTI_UPGRADE_AIR_DAR, 1],
-	[CTI_UPGRADE_AIR_AT, 1],
-	[CTI_UPGRADE_AIR_AA, 1],
-	[CTI_UPGRADE_AIR_CM, 1],
 	[CTI_UPGRADE_SUPPLY_RATE, 2],
 	[CTI_UPGRADE_TOWNS, 3],
 	[CTI_UPGRADE_HALO, 1],

@@ -960,6 +960,7 @@ if (CTI_APEX_ADDON >= 2) then {
 
 		_u pushBack 'B_T_VTOL_01_infantry_blue_F';
 		_u pushBack 'B_T_VTOL_01_infantry_olive_F';
+		_u pushBack 'B_T_VTOL_01_vehicle_F';
 		_u pushBack 'B_T_VTOL_01_armed_blue_F';
 		_u pushBack 'B_T_VTOL_01_armed_olive_F';
 
