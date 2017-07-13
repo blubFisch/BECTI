@@ -130,8 +130,8 @@ switch (_message_var) do {
 	case "fob-sold": {CTI_P_ChatID commandChat format ["A FOB has been sold at Grid %1", _parameters]};
 	case "fob-large-sold": {CTI_P_ChatID commandChat format ["A Large FOB has been sold at Grid %1", _parameters]};
 	case "funds-transfer": {
-		player groupChat format ["%2 has transfered you $%1", _parameters select 0, name (_parameters select 1) ];
-		hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t color='#55bcfc'>%3</t> transfered <t color='%1'>$%2</t> to you.", CTI_P_Coloration_Money, _parameters select 0, name (_parameters select 1)];
+		player groupChat format ["%2 has transfered you $%1", _parameters select 0, name leader (_parameters select 1) ];
+		hint parseText format ["<t size='1.3' color='#2394ef'>Information</t><br /><br /><t color='#55bcfc'>%3</t> transfered <t color='%1'>$%2</t> to you.", CTI_P_Coloration_Money, _parameters select 0, name leader (_parameters select 1)];
 				uiNamespace setVariable ["cti_dialog_ui_transferresourcesmenu_forceupdate", true];
 	};
 	case "order-taketowns": {_parameters sideChat "Acknowledged.  Advancing on neutral or enemy towns"};
@@ -146,7 +146,7 @@ switch (_message_var) do {
 	case "penalty": {
 		_var = missionNamespace getVariable (_parameters select 0);
 //		CTI_P_ChatID sideChat format ["A friendly %1 was killed by the %2 group! %2 was fined $%3", _var select CTI_UNIT_LABEL, (_parameters select 1) getVariable ["cti_alias",CTI_PLAYER_DEFAULT_ALIAS], _parameters select 2];
-		CTI_P_ChatID sideChat format ["A friendly %1 was killed by  %2! %2 was fined $%3", _var select CTI_UNIT_LABEL, name (_parameters select 1), _parameters select 2];
+		CTI_P_ChatID sideChat format ["A friendly %1 was killed by  %2! %2 was fined $%3", _var select CTI_UNIT_LABEL, name leader (_parameters select 1), _parameters select 2];
 	};
 	case "repair-by": {
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _parameters select 1];
