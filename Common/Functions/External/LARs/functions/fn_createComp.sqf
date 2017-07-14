@@ -1,6 +1,6 @@
 ﻿//Main function resposible for spawning compositions
 
-//[ COMP_NAME, POS_ATL, OFFSET, DIR, ALIGN_TERRAIN ] call LARs_fnc_spawnComp;
+//[ COMP_NAME, POS_ATL, OFFSET, DIR, ALIGN_TERRAIN, allow water, previewmode ] call LARs_fnc_spawnComp;
 
 //COMP_NAME - Classname given to composition in missionConfigFile CfgCompositions
 
@@ -27,10 +27,30 @@ params[
 	[ "_compPos", [] ],
 	[ "_compOffset", [0,0,0] ],
 	[ "_compRot", 0 ],
-	[ "_compAlign", true ],
+	[ "_compAlign", 2 ],
+	[ "_aligntoggle", false ],
 	[ "_compWater", true ],
 	[ "_previewmode", true ]
 ];
+//level with terrain
+switch (_compAlign) do {
+	case 0: {
+		//force terrain align
+		_compAlign = true;
+	};
+	case 1: {
+		//force upright
+		_compAlign = false;
+	};
+	case 2: {
+		//allow toggle
+		if (_aligntoggle) then {
+			_compAlign = false;
+		} else {
+			_compAlign = true;
+		};
+	};
+};
 
 _msg = format[ "COMP - Name: %1, Pos:%2, Offset: %3, Rot: %4, Align: %5", _compName, _compPos, _compOffset, _compRot, _compAlign ];
 DEBUG_MSG( DEBUG, _msg );
@@ -259,7 +279,7 @@ private _fnc_setPositionAndRotation = {
 		[ "_needsSurfaceUp", false ],
 		[ "_placementRadius", 0 ]
 	];
-	
+
 	//TESTING
 //	if ( DEBUG_DEV ) then {
 //		if !( canSuspend ) exitWith {
@@ -1105,7 +1125,7 @@ private [ "_pType", "_dataType" ];
 	_pType = _x;
 	{
 		_dataType = getText( _x >> "dataType" );
-		if ( _dataType == _pType ) then {
+		if ( _dataType isEqualTo _pType ) then {
 			[ _x ] call _fnc_spawnItems;
 		};
 	}forEach _itemCfgs;
@@ -1124,7 +1144,7 @@ DEBUG_MSG( DEBUG, "DEFERED ITEMS" );
 	_pType = _x;
 	{
 		_dataType = getText( _x >> "dataType" );
-		if ( _dataType == _pType ) then {
+		if ( _dataType isEqualTo _pType ) then {
 			[ _x ] call _fnc_spawnItems;
 		};
 	}forEach _deferedItems;

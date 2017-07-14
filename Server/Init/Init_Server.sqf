@@ -8,9 +8,11 @@ CTI_SE_FNC_AddScore = compileFinal preprocessFileLineNumbers "Server\Functions\S
 CTI_SE_FNC_AI_PurchaseSquad = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AI_PurchaseSquad.sqf";
 CTI_SE_FNC_AttemptDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptDefenseDelegation.sqf";
 CTI_SE_FNC_AttemptTownDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptTownDelegation.sqf";
+CTI_SE_FNC_AttemptTownDefenseDelegation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_AttemptTownDefenseDelegation.sqf";
 CTI_SE_FNC_BuildStructure = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildStructure.sqf";
 CTI_SE_FNC_BuildDefense = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildDefense.sqf";
 CTI_SE_FNC_CanCaptureTerritorialTown = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CanCaptureTerritorialTown.sqf";
+CTI_SE_FNC_CreateTownDefenses = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CreateTownDefenses.sqf";
 CTI_SE_FNC_CreateWorker = compileFinal preprocessFileLineNumbers "Server\Functions\Server_CreateWorker.sqf";
 CTI_SE_FNC_HandleAIPurchase = compileFinal preprocessFileLineNumbers "Server\Functions\Server_HandleAIPurchase.sqf";
 CTI_SE_FNC_HandleEmptyVehicle = compileFinal preprocessFileLineNumbers "Server\Functions\Server_HandleEmptyVehicle.sqf";
@@ -25,6 +27,9 @@ CTI_SE_FNC_OnBuildingDestroyed = compileFinal preprocessFileLineNumbers "Server\
 CTI_SE_FNC_OnBuildingHandleDamage = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnBuildingHandleDamage.sqf";
 CTI_SE_FNC_OnBuildingHandleVirtualDamage = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnBuildingHandleVirtualDamage.sqf";
 CTI_SE_FNC_OnBuildingHit = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnBuildingHit.sqf";
+CTI_SE_FNC_OnDefenseHit = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseHit.sqf";
+CTI_SE_FNC_OnExplosion = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnExplosion.sqf";
+CTI_SE_FNC_BuildingChanged = compileFinal preprocessFileLineNumbers "Server\Functions\Server_BuildingChanged.sqf";
 CTI_SE_FNC_OnCampCaptured = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnCampCaptured.sqf";
 CTI_SE_FNC_OnClientPurchase = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnClientPurchase.sqf";
 CTI_SE_FNC_OnClientPurchaseCancelled = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnClientPurchaseCancelled.sqf";
@@ -35,8 +40,10 @@ CTI_SE_FNC_OnFOBHandleVirtualDamage = compileFinal preprocessFileLineNumbers "Se
 CTI_SE_FNC_OnDefenseDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnDefenseDestroyed.sqf";
 CTI_SE_FNC_OnFOBDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnFOBDestroyed.sqf";
 CTI_SE_FNC_OnHQDestroyed = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnHQDestroyed.sqf";
+CTI_SE_FNC_OnTownActivation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownActivation.sqf";
 CTI_SE_FNC_OnTownCaptured = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownCaptured.sqf";
 CTI_SE_FNC_OnTownDeactivation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_OnTownDeactivation.sqf";
+CTI_SE_FNC_RemoveTownDefenses = compileFinal preprocessFileLineNumbers "Server\Functions\Server_RemoveTownDefenses.sqf";
 CTI_SE_FNC_RepairHQ = compileFinal preprocessFileLineNumbers "Server\Functions\Server_RepairHQ.sqf";
 CTI_SE_FNC_SpawnTownOccupation = compileFinal preprocessFileLineNumbers "Server\Functions\Server_SpawnTownOccupation.sqf";
 CTI_SE_FNC_SpawnTownResistance = compileFinal preprocessFileLineNumbers "Server\Functions\Server_SpawnTownResistance.sqf";
@@ -65,7 +72,7 @@ execVM "Server\Init\Init_Prison.sqf";
 _startup_locations = [];
 for '_i' from 0 to 30 do {
 	_location = getMarkerPos format ["cti-spawn%1", _i];
-	if (_location select 0 == 0 && _location select 1 == 0) exitWith {};
+	if (_location select 0 isEqualTo 0 && _location select 1 isEqualTo 0) exitWith {};
 	_startup_locations pushBack _location;
 };
 
@@ -76,10 +83,9 @@ _westLocation = getMarkerPos "cti-spawn0";
 _eastLocation = getMarkerPos "cti-spawn0";
 
 _attempts = 0;
-_total = count _startup_locations;
 while {_eastLocation distance _westLocation < _range && _attempts <= 500} do {
-	_eastLocation = _startup_locations select floor(random _total);
-	_westLocation = _startup_locations select floor(random _total);
+	_eastLocation = selectRandom _startup_locations;
+	_westLocation = selectRandom _startup_locations;
 	_attempts = _attempts + 1;
 };
 
@@ -94,13 +100,14 @@ if (_attempts >= 500) then {
 	_startPos = _x select 2;
 	_sideID = _side call CTI_CO_FNC_GetSideID;
 	
-	_hq = [missionNamespace getVariable Format["CTI_%1_HQ", _side], _startPos, 0, _side, true, false] call CTI_CO_FNC_CreateVehicle;
+	_position = [_startPos, 1, 35, 5, "vehicles", ["Man","Car","Motorcycle","Tank","Ship","Air","StaticWeapon"], 5] call CTI_CO_FNC_GetSafePosition;
+	
+	_hq = [missionNamespace getVariable Format["CTI_%1_HQ", _side], _position, 0, _side, true, false] call CTI_CO_FNC_CreateVehicle;
 	_hq setVariable ["cti_gc_noremove", true]; //--- HQ wreck cannot be removed nor salvaged
 	_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 	_hq setVariable ["cti_mhq_fuel", true]; //--- HQ fuel variable
 	_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
-	_hq addItemCargoGlobal ["ToolKit",1];
-	if (CTI_BASE_NOOBPROTECTION == 1) then {
+	if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 		_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 	};
 	
@@ -150,8 +157,9 @@ if (_attempts >= 500) then {
 		_model = _x select 0;
 		_equipment = _x select 1;
 		
-		_vehicle = [_model, _startPos, 0, _side, false, true, true] call CTI_CO_FNC_CreateVehicle;
-		[_vehicle, getPos _hq, 45, 60, true, false, true] call CTI_CO_FNC_PlaceNear;
+		_position = [getPos _hq, 30, 60, 10, "vehicles", ["Man","Car","Motorcycle","Tank","Ship","Air","StaticWeapon"], 8] call CTI_CO_FNC_GetSafePosition;
+		
+		_vehicle = [_model, _position, [_hq, _position] call CTI_CO_FNC_GetDirTo, _side, false, true, true] call CTI_CO_FNC_CreateVehicle;
 		[_vehicle] spawn CTI_SE_FNC_HandleEmptyVehicle;
 		if (count _equipment > 0) then {[_vehicle, _equipment] call CTI_CO_FNC_EquipVehicleCargoSpace};
 		if ((missionNamespace getVariable [format ["%1", _model],["","","","","","","",""]]) select 7 != "") then {[_vehicle, _side, ((missionNamespace getVariable [format ["%1", _model],["","","","","","","",""]]) select 7)] call CTI_CO_FNC_InitializeCustomVehicle;};
@@ -170,9 +178,10 @@ if (_attempts >= 500) then {
 				
 				if !(isPlayer leader _group) then {
 					if (missionNamespace getVariable "CTI_AI_TEAMS_ENABLED" > 0) then { //--- Wait for the player to be "ready"
-						(leader _group) setPos ([_startPos, 8, 30] call CTI_CO_FNC_GetRandomPosition);
+						_position = [getPos _hq, 8, 30, 5, "infantry", ["Man","Car","Motorcycle","Tank","Ship","Air","StaticWeapon"], 5] call CTI_CO_FNC_GetSafePosition;
+						(leader _group) setPos _position;
 						leader _group addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_CO_FNC_OnUnitKilled", _sideID]]; //--- Called on destruction
-						if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") == 0) then {leader _group enableFatigue false}; //--- Disable the unit's fatigue
+						if ((missionNamespace getVariable "CTI_UNITS_FATIGUE") isEqualTo 0) then {leader _group enableFatigue false}; //--- Disable the unit's fatigue
 						
 						[_group, _side, _logic] spawn {
 							_group = _this select 0;
@@ -192,6 +201,9 @@ if (_attempts >= 500) then {
 						(leader _group) disableAI "FSM";
 					};
 				};
+				
+				//--- ZEUS Curator Editable
+				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[leader _group], true]};
 			};
 		};
 	} forEach (synchronizedObjects _logic);
@@ -217,6 +229,7 @@ if (_attempts >= 500) then {
 0 spawn {
 	waitUntil {!isNil 'CTI_InitTowns'};
 	
+	//--- Initialize the game FSM after that the towns are initialized
 	execFSM "Server\FSM\update_ai_defensive.fsm";
 	execFSM "Server\FSM\update_garbage_collector.fsm";
 	execFSM "Server\FSM\update_resources.fsm";
@@ -228,7 +241,7 @@ if (_attempts >= 500) then {
 };
 
 // Date init
-if (CTI_ZOMBIE_MODE == 0) then {
+if (CTI_ZOMBIE_MODE isEqualTo 0) then {
 	_it=0;
 	_possible_it_off=[0,0,0,0,0,0,6,6,6,12,12,12,18];
 	if ((missionNamespace getVariable "CTI_WEATHER_INITIAL") < 18) then {
@@ -247,12 +260,12 @@ if (CTI_ZOMBIE_MODE == 0) then {
 execVM "Server\Functions\Server_Weather_Hook.sqf";	
 
 // Fast time compression
-if (CTI_ZOMBIE_MODE == 0) then {
+if (CTI_ZOMBIE_MODE isEqualTo 0) then {
 	0 spawn {
 		_day_ratio = 14/CTI_WEATHER_FAST;
 		_night_ratio = 10/CTI_WEATHER_FAST_NIGHT;
 		while {!CTI_Gameover} do {
-			if (daytime > 5 && daytime <19 ) then {
+			if (daytime > 4 && daytime < 18.5 ) then {
 				if (timeMultiplier != _day_ratio) then  {setTimeMultiplier _day_ratio ; };
 			} else {
 				if (timeMultiplier !=  _night_ratio) then {setTimeMultiplier _night_ratio ; };
@@ -276,30 +289,6 @@ if !( isNil "ADMIN_ZEUS") then {
 	};
 };
 
-
-/*// Initialize control scripts for Pook SAM Site
-// Must have exactly 1 instance per side, running on HC if possible
-0 spawn {
-	// Give HCs some init time
-	sleep 30;
-	
-	_hcs = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
-	
-	// Run on server or HC
-	if ( !isNil '_hcs' && {count _hcs > 0} ) then {
-		_hc = (_hcs select 0) select 0;
-		{
-			FNC_HandleSAMSite = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\HandleSAMSite.sqf";
-			[east] spawn FNC_HandleSAMSite;
-			[west] spawn FNC_HandleSAMSite;
-		} remoteExec ["bis_fnc_call", _hc];
-	} else {
-		FNC_HandleSAMSite = compileFinal preprocessFileLineNumbers "Server\Functions\Externals\HandleSAMSite.sqf";
-		[east] spawn FNC_HandleSAMSite;
-		[west] spawn FNC_HandleSAMSite;
-	};
-};
-*/
 // Initialize control scripts for C-RAM turrets
 // Must have exactly 1 instance per side, running on HC if possible
 0 spawn {

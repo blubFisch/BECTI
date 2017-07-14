@@ -22,17 +22,14 @@
 	  -> Add 2 points!
 */
 
-//--- Register the best players ingame!
-_proplayer = _this select 0;
-_score = _this select 1;
+params ["_proplayer", "_score"];
 
 //--- Try to get the score of that marvelous players.
 _uid = getPlayerUID _proplayer;
-_get = missionNamespace getVariable format ["CTI_SERVER_CLIENT_ELITE_%1", _uid];
-if (isNil '_get') then {_get = [0, 0]};
+_get = missionNamespace getVariable [format ["CTI_SERVER_CLIENT_ELITE_%1", _uid], [0, 0]];
 _get set [0, (_get select 0) + _score];
 
-//--- Did the pro player reached the top?
+//--- Did the pro player reach the top?
 if ((_get select 0) > 3) then {
 	//--- Send to mcfly dungeon
 	remoteExec ["CTI_PVF_CLT_OnUbernessReached", _proplayer];
@@ -46,7 +43,7 @@ if ((_get select 0) > 3) then {
 		_start = time;
 		while {true} do {
 			_get = missionNamespace getVariable format ["CTI_SERVER_CLIENT_ELITE_%1", _uid];
-			if (time - _start > 240 || _get select 0 == 0) exitWith {};
+			if (time - _start > 240 || (_get select 0) isEqualTo 0) exitWith {};
 			sleep 10;
 		};
 		

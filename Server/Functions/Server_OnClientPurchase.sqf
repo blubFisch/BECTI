@@ -29,18 +29,11 @@
     [_team, group player, CTI_P_SideJoined, _classname, _factory, _veh_infos, _seed] call CTI_SE_FNC_OnClientPurchase
 */
 
-private ["_buyer", "_buyto_ai", "_classname", "_factory", "_locked", "_request", "_seed", "_side", "_team", "_var", "_veh_infos"];
-
-_team = _this select 0;
-_buyer = _this select 1;
-_side = _this select 2;
-_classname = _this select 3;
-_factory = _this select 4;
-_veh_infos = _this select 5;
-_seed = _this select 6;
+params ["_team", "_buyer", "_side", "_classname" ,"_factory" ,"_veh_infos" ,"_seed"];
+private ["_buyto_ai", "_locked", "_request", "_var"];
 
 _buyto_ai = false;
-if (typeName _team == "SIDE") then {
+if (typeName _team isEqualTo "SIDE") then {
 	_buyto_ai = true;
 } else {
 	if !(isPlayer leader _team) then {_buyto_ai = true};
@@ -48,6 +41,11 @@ if (typeName _team == "SIDE") then {
 
 //--- Determine the time needed to construct the unit (in case of d/c or timeout).
 _var = missionNamespace getVariable _classname;
+
+if (isNil '_var') exitWith {
+	if (CTI_Log_Level >= CTI_Log_Error) then { ["ERROR", "FILE: Server\Functions\Server_OnClientPurchase.sqf", format ["Cannot complete the Purchase Request [%1] from team [%2] on side [%3] since unit [%4] is not defined", _seed, _team, _side, _classname]] call CTI_CO_FNC_Log };
+};
+
 _required_time = _var select CTI_UNIT_TIME;
 
 //--- Compose the request

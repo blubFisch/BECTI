@@ -185,7 +185,7 @@ class FSM
        "if (alive _factory_commandCenter) then {_action = ""management""};" \n
        "" \n
        "if (alive _hq && alive _factory_commandCenter) then {" \n
-       "	_action = if (_lastAction == ""construction"") then {""management""} else {""construction""};" \n
+       "	_action = if (_lastAction isEqualTo ""construction"") then {""management""} else {""construction""};" \n
        "};" \n
        "" \n
        "_lastAction = _action;" \n
@@ -200,7 +200,7 @@ class FSM
           priority = 2.000000;
           to="Determine";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""construction"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""construction"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -210,7 +210,7 @@ class FSM
           priority = 1.000000;
           to="Determine_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""management"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""management"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -245,22 +245,22 @@ class FSM
        "	_group = _teams select _j;" \n
        "	" \n
        "	_last_assigned = _assigned;" \n
-       "	while { _ratio_air > 0 && _assigned == _last_assigned} do {" \n
+       "	while { _ratio_air > 0 && _assigned isEqualTo _last_assigned} do {" \n
        "		_group setVariable [""cti_role_evo"", ""Air""];" \n
        "		_ratio_air = _ratio_air - 1;" \n
        "		_assigned = _assigned + 1;" \n
        "	};" \n
-       "	while { _ratio_heavy > 0 && _assigned == _last_assigned} do {" \n
+       "	while { _ratio_heavy > 0 && _assigned isEqualTo _last_assigned} do {" \n
        "		_group setVariable [""cti_role_evo"", ""Heavy""];" \n
        "		_ratio_heavy = _ratio_heavy - 1;" \n
        "		_assigned = _assigned + 1;" \n
        "	};" \n
-       "	while { _ratio_infantry > 0 && _assigned == _last_assigned} do {" \n
+       "	while { _ratio_infantry > 0 && _assigned isEqualTo _last_assigned} do {" \n
        "		_group setVariable [""cti_role_evo"", ""Infantry""];" \n
        "		_ratio_infantry = _ratio_infantry - 1;" \n
        "		_assigned = _assigned + 1;" \n
        "	};" \n
-       "	while { _ratio_light_n_heavy > 0 && _assigned == _last_assigned} do {" \n
+       "	while { _ratio_light_n_heavy > 0 && _assigned isEqualTo _last_assigned} do {" \n
        "		_group setVariable [""cti_role_evo"", ""Light""];" \n
        "		_ratio_light_n_heavy = _ratio_light_n_heavy - 1;" \n
        "		_assigned = _assigned + 1;" \n
@@ -313,19 +313,19 @@ class FSM
        "	if !([_side, _selected_param, getPos _hq, 1250] call CTI_CO_FNC_HasStructure) then {" \n
        "		//--- But is it in WIP?" \n
        "		_is_being_built = false;" \n
-       "		{if ((_x getVariable ""cti_structure_type"") == _selected_param && _x distance _hq <= 1250) exitWith {_is_being_built = true}} forEach (_sideLogic getVariable ""cti_structures_wip"");" \n
+       "		{if ((_x getVariable ""cti_structure_type"") isEqualTo _selected_param && _x distance _hq <= 1250) exitWith {_is_being_built = true}} forEach (_sideLogic getVariable ""cti_structures_wip"");" \n
        "		" \n
        "		//--- All clear!" \n
        "		if !(_is_being_built) then {" \n
        "			_var = missionNamespace getVariable format [""CTI_%1_%2"", _side, _selected_param];" \n
        "			" \n
        "			if !(isNil '_var') then {" \n
-       "				if (_supply >= (_var select 2)) then {" \n
+       "				if (_supply >= (_var select CTI_STRUCTURE_PRICE)) then {" \n
        "					_index = -1;" \n
-       "					{if ((_x select 0) == ((_var select 0) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
+       "					{if ((_x select 0) isEqualTo ((_var select CTI_STRUCTURE_LABELS) select 0)) exitWith {_index = _forEachIndex }} forEach _template;" \n
        "					if (_index != -1) then {" \n
        "						_emplacement = [_side, _var, _template select _index] call CTI_FSM_UpdateCommander_GetStructureEmplacement;" \n
-       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select 0) select 0, _var select 2, _emplacement]};" \n
+       "						if (_emplacement select 0 != 0 && _emplacement select 1 != 0) then {_build = [(_var select CTI_STRUCTURE_LABELS) select 0, _var select CTI_STRUCTURE_PRICE, _emplacement]};" \n
        "					} else {" \n
        "						_increment = true; //--- We can't do it, what's next?" \n
        "					};" \n
@@ -350,12 +350,12 @@ class FSM
        "	if (_supply >= (_build select 1)) then {" \n
        "		_position = _build select 2;" \n
        "		_var = missionNamespace getVariable format [""CTI_%1_%2"", _side, _build select 0];" \n
-       "		_distance_structure = (_var select 4) select 1;" \n
+       "		_distance_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 1;" \n
        "		_dir_to = [_hq, _position] call CTI_CO_FNC_GetDirTo;" \n
        "		_goto = [(_position select 0) - ((sin _dir_to) * _distance_structure), (_position select 1) - ((cos _dir_to) * _distance_structure), 0];" \n
        "" \n
        "		//--- Construct" \n
-       "		_direction_structure = (_var select 4) select 0;" \n
+       "		_direction_structure = (_var select CTI_STRUCTURE_PLACEMENT) select 0;" \n
        "		_direction = 0 + ((_build select 2) select 1) + _direction_structure; //todo template defines that (0)" \n
        "		[format [""CTI_%1_%2"", _side, _build select 0], _side, (_build select 2), _direction] call CTI_SE_FNC_BuildStructure;" \n
        "		" \n
@@ -511,7 +511,7 @@ class FSM
        "				//--- The factory is alive and we're lucky enough!" \n
        "				if (alive _factory && random 100 <= (([CTI_AI_COMMANDER_BUYTO_INFANTRY, CTI_AI_COMMANDER_BUYTO_LIGHT, CTI_AI_COMMANDER_BUYTO_HEAVY, CTI_AI_COMMANDER_BUYTO_AIR] select _id) * _modifier)) then {" \n
        "					_var = missionNamespace getVariable format [""CTI_SQUAD_%1_%2"", _side, _role];" \n
-       "					_cost = _var select 1;" \n
+       "					_cost = _var select CTI_STRUCTURE_CLASSES;" \n
        "					" \n
        "					//--- We have enough cash to purchase the template" \n
        "					if (_funds >= _cost) then {" \n
@@ -643,7 +643,7 @@ class FSM
           priority = 4.000000;
           to="Update_Structure";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""build-structures"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""build-structures"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -653,7 +653,7 @@ class FSM
           priority = 3.000000;
           to="Update_Defenses";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""build-defenses"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""build-defenses"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -663,7 +663,7 @@ class FSM
           priority = 2.000000;
           to="Update_Workers";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""hire-workers"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""hire-workers"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -673,7 +673,7 @@ class FSM
           priority = 1.000000;
           to="Update_Salvagers";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""hire-salvager"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""hire-salvager"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -693,7 +693,7 @@ class FSM
           priority = 0.000000;
           to="Update_Upgrades";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""upgrade"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""upgrade"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -708,7 +708,7 @@ class FSM
        "if !(_role_assigned) exitWith {_action = ""roles""}; //--- Assign the roles at first" \n
        "if (_role_assigned && time - _role_assigned_lastcheck > 600) then {_action = ""update-orders""};" \n
        "" \n
-       "if (_action == """" && time - _commander_lastteamupdate > CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY && _funds > 12500) then {_action = ""update-teams""};"/*%FSM</STATEINIT""">*/;
+       "if (_action isEqualTo """" && time - _commander_lastteamupdate > CTI_AI_COMMANDER_TEAMS_UPDATE_DELAY && _funds > 12500) then {_action = ""update-teams""};"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -718,7 +718,7 @@ class FSM
           priority = 3.000000;
           to="Update_Teams";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""update-teams"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""update-teams"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -728,7 +728,7 @@ class FSM
           priority = 2.000000;
           to="Update_Orders";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""update-orders"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""update-orders"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -738,7 +738,7 @@ class FSM
           priority = 1.000000;
           to="Set_Roles__One_Time";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_action == ""roles"""/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_action isEqualTo ""roles"""/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/

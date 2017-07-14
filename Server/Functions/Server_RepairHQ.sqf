@@ -31,15 +31,15 @@
 	  -> Will repair the West HQ if destroyed
 */
 
-private ["_commander", "_direction", "_hq", "_hq_wreck", "_logic", "_position", "_side", "_sideID"];
+params ["_side"];
+private ["_commander", "_direction", "_hq", "_hq_wreck", "_logic", "_position", "_sideID"];
 
-_side = _this;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
 _hq_wreck = (_side) call CTI_CO_FNC_GetSideHQ;
 // _position = [([getPos _hq_wreck, 50] call CTI_CO_FNC_GetEmptyPosition), 30, "meadow", 8, 3, 0.1, true] call CTI_CO_FNC_GetRandomBestPlaces;
-_position = [getPos _hq_wreck, 50] call CTI_CO_FNC_GetEmptyPosition;
+_position = [getPos _hq_wreck, 25, 100] call CTI_CO_FNC_GetSafePosition;
 _direction = getDir _hq_wreck;
 
 if (alive _hq_wreck) exitWith {};
@@ -50,10 +50,7 @@ _hq setVariable ["cti_gc_noremove", true]; //--- HQ wreck cannot be removed nor 
 _hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 _hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
 _hq addItemCargoGlobal ["ToolKit",1];
-// add low gear
-//_hq addAction ["<t color='#FFBD4C'>Hill Climb On</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && !Local_HighClimbingModeOn && canMove _target"];
-//_hq addAction ["<t color='#FFBD4C'>Hill Climb Off</t>","Client\Functions\Externals\Valhalla\LowGear_Toggle.sqf", [], 6, false, true, "", "(player==driver _target)  && Local_HighClimbingModeOn && canMove _target"];
-if (CTI_BASE_NOOBPROTECTION == 1) then {
+if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 	_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 	(_hq) remoteExec ["CTI_PVF_CLT_AddHQDamagerHandler", _side];
 };

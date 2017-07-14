@@ -1,3 +1,6 @@
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 0%", "BLACK FADED", 50000];
+
 //--- Early definition, will be override later on in the init files.
 CTI_P_SideJoined = civilian;
 
@@ -12,16 +15,15 @@ CTI_Log_Level = CTI_Log_Debug;
 
 //--- We define the log function early so that we may use it
 CTI_CO_FNC_Log = compile preprocessFileLineNumbers "Common\Functions\Common_Log.sqf";
-CTI_CO_FNC_Log_Gear_Array = compile preprocessFileLineNumbers "Common\Functions\Common_Log_Gear.sqf";
 
 //--- Global gameplay variables
 CTI_GameOver = false;
 
 //--- Determine which machine is running this init script
-CTI_IsHostedServer = if (isServer && !isDedicated) then {true} else {false};
-CTI_IsServer = if (isDedicated || CTI_IsHostedServer) then {true} else {false};
-CTI_IsClient = if (CTI_IsHostedServer || !isDedicated) then {true} else {false};
-CTI_IsHeadless = if !(hasInterface || isDedicated) then {true} else {false};
+CTI_IsHostedServer = [false, true] select (isServer && !isDedicated);
+CTI_IsServer = [false, true] select (isDedicated || CTI_IsHostedServer);
+CTI_IsClient = [false, true] select (CTI_IsHostedServer || !isDedicated);
+CTI_IsHeadless = [false, true] select !(hasInterface || isDedicated);
 
 //--- Create a resistance center
 createCenter resistance;
@@ -37,7 +39,15 @@ if (CTI_Log_Level >= CTI_Log_Information) then { //--- Information
 if (CTI_IsClient && isMultiplayer) then {
 	0 spawn {
 		waitUntil {!(isNull player)};
-		12452 cutText ["Receiving mission intel...", "BLACK FADED", 50000];
+		player enableSimulation true;
+ 		player allowDamage true;
+		player setCaptive false;
+		player setDammage 0;
+		removeAllWeapons player;
+		removeAllItems player;
+		removeAllAssignedItems player;
+		removeAllContainers player;
+		removeHeadgear player;
 	};
 };
 //--- In MP, we get the parameters.
@@ -99,3 +109,6 @@ execVM "Common\Init\Init_GroupsID.sqf";
 
 //--- Briefing Entries
 0 execVM "Briefing.sqf";
+
+//--- Loading Screen Status
+12452 cutText ["Receiving mission intel 10%", "BLACK FADED", 50000];

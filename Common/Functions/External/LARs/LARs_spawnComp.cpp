@@ -9,5 +9,6 @@ class LARs_spawnComp {
 		class getCompItem{};
 		class getItemComp{};
 		class drawBounds{};
+		class moveComp{};
 	};
 };

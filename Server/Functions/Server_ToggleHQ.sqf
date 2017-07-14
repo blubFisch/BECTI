@@ -24,41 +24,49 @@
 	  -> Will mobilize or deploy the HQ based on the given and global variable at the desired position
 */
 
-private ["_direction", "_hq", "_is_deployed", "_logic", "_position", "_side", "_sideID", "_var", "_variable"];
+params ["_variable", "_side", "_position", "_direction"];
+private ["_hq", "_is_deployed", "_logic", "_sideID", "_structure_time", "_var"];
 
-_variable = _this select 0;
-_side = _this select 1;
-_position = _this select 2;
-_direction = _this select 3;
-
-_var = missionNamespace getVariable (_this select 0);
+_var = missionNamespace getVariable _variable;
 
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 _is_deployed = (_side) call CTI_CO_FNC_IsHQDeployed;
 _current_hq = (_side) call CTI_CO_FNC_GetSideHQ;
 _sideID = (_side) call CTI_CO_FNC_GetSideID;
 
-if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy the HQ
+//--- If HQ construction requires time, wait for the construction delay
+_structure_time = _var select CTI_STRUCTURE_TIME;
+if (_structure_time > 0) then {
+	["hq-deploying"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deploying
+	sleep _structure_time;
+	_logic setVariable ["cti_hq_ready", true, true];
+};
+
+if (((_var select CTI_STRUCTURE_LABELS) select 0) isEqualTo CTI_HQ_DEPLOY) then { //--- Attempt to deploy the HQ
 	if (!_is_deployed && alive _current_hq) then { //--- Make sure that the HQ is not deployed and alive
 		_logic setVariable ["cti_hq_deployed", true, true];
 		
 		//--- Deploy the HQ
-		_structure = ((_var select 1) select 0) createVehicle _position;
+		_structure = ((_var select CTI_STRUCTURE_CLASSES) select 0) createVehicle _position;
 		_structure setDir _direction;
 		_structure setPos _position;
 		_structure setDir _direction;
 		_structure setVectorUp [0,0,0];
-		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]; // -- notification HQ is deployed + sound
+		
+		//--- Transfer the previous damages to the new HQ if enabled
+		_damages = if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_current_hq getVariable ["cti_altdmg", getDammage _current_hq]} else {0};
+		
 		//--- Do we use our alternative damage system to prevent some bisteries from happening?
 		_alternative_damages = false;
 		_reduce_damages = 0;
-		{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}} forEach (_var select 5);
+		{if ("DMG_Alternative" in _x) then {_alternative_damages = true}; if ("DMG_Reduce" in _x) then {_reduce_damages = _x select 1}} forEach (_var select CTI_STRUCTURE_SPECIALS);
 		if (_alternative_damages) then {
-			_structure setVariable ["cti_altdmg", 0];
+			_structure setVariable ["cti_altdmg", _damages];
 			_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, '%1', %2, %3, %4, %5, %6] call CTI_SE_FNC_OnBuildingHandleVirtualDamage", _variable, (_side) call CTI_CO_FNC_GetSideID, _position, _direction, 100, _reduce_damages]];
 		} else {
+		    if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {_structure setDammage _damages};
 			_structure addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
-			if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION == 1) then {
+			if (_reduce_damages > 0 || CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 				_structure addEventHandler ["handledamage", format ["[_this select 0, _this select 2, _this select 3, _this select 4, %1, %2, '%3', %4] call CTI_SE_FNC_OnBuildingHandleDamage", (_side) call CTI_CO_FNC_GetSideID, _reduce_damages, _variable, _position]];
 			} else {
 				_structure addEventHandler ["hit", format ["[_this select 0, _this select 2, %1, '%2', %3] spawn CTI_SE_FNC_OnBuildingHit", (_side) call CTI_CO_FNC_GetSideID, _variable, _position]];
@@ -67,6 +75,8 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		
 		_logic setVariable ["cti_hq", _structure, true];
 		deleteVehicle _current_hq;
+		
+		["hq-deployed"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
 		
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FILE: Server\Functions\Server_ToggleHQ.sqf", format["HQ from side [%1] was deployed at position [%2]", _side, _position]] call CTI_CO_FNC_Log;
@@ -77,7 +87,7 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_logic setVariable ["cti_hq_deployed", false, true];
 		
 		//--- Get a safe position
-		_position = [_position, 90] call CTI_CO_FNC_GetEmptyPosition;
+		_position = [_position, 25, 100] call CTI_CO_FNC_GetSafePosition;
 		
 		//--- Mobilize the HQ
 		_hq = [missionNamespace getVariable Format["CTI_%1_HQ", _side], _position, 0, _side, true, false] call CTI_CO_FNC_CreateVehicle;
@@ -85,10 +95,16 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 		_hq setVariable ["cti_ai_prohib", true]; //--- HQ may not be used by AI as a commandable vehicle
 		_hq addEventHandler ["killed", format["[_this select 0, _this select 1, %1] spawn CTI_SE_FNC_OnHQDestroyed", _sideID]];
 
-		if (CTI_BASE_NOOBPROTECTION == 1) then {
+		if (CTI_BASE_NOOBPROTECTION isEqualTo 1) then {
 			_hq addEventHandler ["handleDamage", format["[_this select 2, _this select 3, %1] call CTI_CO_FNC_OnHQHandleDamage", _sideID]]; //--- You want that on public
 			(_hq) remoteExec ["CTI_PVF_CLT_AddHQDamagerHandler", _side];
 		};
+		
+		//--- Transfer the previous damages to the new HQ if enabled
+		if (CTI_BASE_HQ_DAMAGES_TRANSFER > 0) then {
+			_hq setDammage (_current_hq getVariable ["cti_altdmg", getDammage _current_hq]);
+		};
+		
 		_hq addItemCargoGlobal ["ToolKit",1];
 		_logic setVariable ["cti_hq", _hq, true];
 		deleteVehicle _current_hq;
@@ -100,12 +116,13 @@ if (((_var select 0) select 0) == CTI_HQ_DEPLOY) then { //--- Attempt to deploy 
 			(_hq) remoteExec ["CTI_PVF_CLT_AddHQActions", leader _commander];
 		};
 		
+		["hq-mobilized"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];
+		
 		if (CTI_Log_Level >= CTI_Log_Information) then {
 			["INFORMATION", "FILE: Server\Functions\Server_ToggleHQ.sqf", format["HQ from side [%1] was mobilized at position [%2]", _side, _position]] call CTI_CO_FNC_Log;
 		};
 		
 		//--- Update base areas
 		(_side) call CTI_SE_FNC_UpdateBaseAreas;
-		["hq-mobilized"] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side];// -- notification HQ is mobilized + sound
 	};
 };

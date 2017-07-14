@@ -11,20 +11,8 @@ waitUntil {scriptDone _secondshot};
 _thirdshot = [cam4, cam4, target3, 5, 1, 1, true, 0,-6,3] execVM "camera_work.sqf";
 waitUntil {scriptDone _thirdshot};
 */
+params ["_campos1", "_campos2", "_targetcam", "_camera_duration", "_zoom_level1", "_zoom_level2", "_cam_attached", "_x_coord", "_y_coord", "_z_coord", "_cameratext", "_cameratextscore", "_showscore"];
 
-_campos1= _this select 0;
-_campos2= _this select 1;
-_targetcam = _this select 2;
-_camera_duration = _this select 3;
-_zoom_level1 = _this select 4;
-_zoom_level2 = _this select 5;
-_cam_attached = _this select 6;
-_x_coord = _this select 7;
-_y_coord = _this select 8;
-_z_coord = _this select 9;
-_cameratext = _this select 10;
-_cameratextscore = _this select 11;
-_showscore = _this select 12;
 
 // to do exception management
 // if ((isNull _campos1)or(isNull _campos2)or(isNull _targetcam)) then exitWith {};
@@ -52,7 +40,7 @@ if (_cam_attached) then {
 	_camera camPrepareFOV _zoom_level1;
 	_camera camCommitPrepared _camera_duration;
 	
-	_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+	_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 	camUseNVG _nvgstate;
 
 	sleep 3;
@@ -80,7 +68,7 @@ _camera camPrepareTarget _targetcam;
 _camera camPrepareFOV _zoom_level2;
 _camera camCommitPrepared _camera_duration;
 
-_nvgstate = if (daytime > 18.5 || daytime < 5.5) then {true} else {false};
+_nvgstate = if (daytime > 18.5 || daytime < 4) then {true} else {false};
 camUseNVG _nvgstate;
 
 sleep 3;
@@ -88,7 +76,7 @@ _cameratext spawn BIS_fnc_typeText;
 titleText [_cameratextscore, "PLAIN DOWN", 15];
 
 //--- add keyhandler to Esc to force close scoreboard
-[] spawn {outroKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == 0x01) then {showScoretable -1;};"];};
+[] spawn {outroKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) isEqualTo 0x01) then {showScoretable -1;};"];};
 
 if (_showscore) then {showScoretable 1;};
 sleep _camera_duration;

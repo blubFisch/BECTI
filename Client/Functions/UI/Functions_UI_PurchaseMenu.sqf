@@ -45,7 +45,7 @@ CTI_UI_Purchase_GetFirstAvailableFactories = {
 		_var = _fetched getVariable "cti_structure_type";
 		if !(isNil '_var') then {
 			_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _var];
-			_type = (_var select 0) select 0;
+			_type = (_var select CTI_STRUCTURE_LABELS) select 0;
 			_index = switch (_type) do {
 				case CTI_BARRACKS: {CTI_FACTORY_BARRACKS};
 				case CTI_LIGHT: {CTI_FACTORY_LIGHT};
@@ -80,7 +80,7 @@ CTI_UI_Purchase_FillUnitsList = {
 	lnbClear ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007);
 	
 	//--- If we're dealing with a depot, determine whether it is on ground or on water
-	if (_type == CTI_DEPOT) then {
+	if (_type isEqualTo CTI_DEPOT) then {
 		if (((uiNamespace getVariable "cti_dialog_ui_purchasemenu_factory") getVariable "cti_depot") getVariable ["cti_naval", false]) then {_type = CTI_DEPOT_NAVAL};
 	};
 	
@@ -96,20 +96,53 @@ CTI_UI_Purchase_FillUnitsList = {
 		default {-1};
 	};
 	_upgrades = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideUpgrades;
+
+	_filter_use = "all";
+	
+	//--- Prevent the reloading of the current tab via onLBSelChanged EH
+	uiNamespace setVariable ["cti_dialog_ui_purchasemenu_filter_reload", false];
+	
+	_filter_current = lbCurSel((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017);
+	if (_filter_current != -1) then {_filter_use = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbData _filter_current};
+
+	lbClear 110017;
+	
+	_lb = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbAdd "All";
+	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbSetData [_lb, "all"];
+		
+	_filters = [];
+	{
+		_var = missionNamespace getVariable _x;
+		
+		if !(isNil "_var") then {
+			_upgrade_match = if !(_upgrade isEqualTo -1) then {(_var select CTI_UNIT_UPGRADE) <= (_upgrades select _upgrade)} else {true};
+			if (_upgrade_match && !((_var select CTI_UNIT_FILTERUI) in _filters) && !((_var select CTI_UNIT_FILTERUI) isEqualTo "")) then {_filters pushBack (_var select CTI_UNIT_FILTERUI)};
+		};
+	} forEach (missionNamespace getVariable format ["CTI_%1_%2Units", CTI_P_SideJoined, _type]);
+	
+	//--- Add the filters to the combo rsc
+	{
+		_lb = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbAdd _x;
+		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbSetData [_lb, _x];
+		
+		if (_filter_use isEqualTo _x) then {((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbSetCurSel _lb};
+	} forEach _filters;
+	
+	if (_filter_use isEqualto "all") then {((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110017) lbSetCurSel 0}; //--- No filter specified? select the default one! (all)
 	
 	{
 		_var = missionNamespace getVariable _x;
 		if !(isNil '_var') then {
 			//--- Upgradeable?
-			_load = true;
-			if (_upgrade > -1) then {
-				if (_upgrades select _upgrade < _var select CTI_UNIT_UPGRADE) then {_load = false};
-			};
+			_upgrade_match = if !(_upgrade isEqualTo -1) then {(_var select CTI_UNIT_UPGRADE) <= (_upgrades select _upgrade)} else {true};
 			
-			if (_load) then {
-				_row = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbAddRow [format ["$%1", _var select CTI_UNIT_PRICE], _var select CTI_UNIT_LABEL];
-				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbSetData [[_row, 0], _x];
-				((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbSetPicture [[_row, 0], _var select CTI_UNIT_PICTURE];
+			if (_upgrade_match) then {
+				if (_filter_use isEqualTo "all" || _filter_use isEqualTo (_var select CTI_UNIT_FILTERUI)) then {
+				
+				    _row = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbAddRow [format ["$%1", _var select CTI_UNIT_PRICE], _var select CTI_UNIT_LABEL];
+				    ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbSetData [[_row, 0], _x];
+				    ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbSetPicture [[_row, 0], _var select CTI_UNIT_PICTURE];
+				};
 			};
 		};
 	} forEach (missionNamespace getVariable format ["CTI_%1_%2Units", CTI_P_SideJoined, _type]);
@@ -133,9 +166,6 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 	_IDCs = [110100, 110101, 110102, 110103];
 	
 	if (_classname isKindOf "Man") then {
-		// {
-			// ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl _x) ctrlShow false; 
-		// } forEach (_IDCs + [110104]);
 		call CTI_UI_Purchase_HideVehicleIcons;
 	} else {
 		_var = missionNamespace getVariable _classname;
@@ -143,8 +173,8 @@ CTI_UI_Purchase_UpdateVehicleIcons = {
 		
 		_showArray = [true, false, false, false];
 		{
-			if (count _x == 1) then {_showArray set [3, true]};
-			if (count _x == 2) then {
+			if (count _x isEqualTo 1) then {_showArray set [3, true]};
+			if (count _x isEqualTo 2) then {
 				switch (_x select 1) do { case "Gunner": {_showArray set [1, true]}; case "Commander": {_showArray set [2, true]}; };
 			};
 		} forEach _turrets;
@@ -164,32 +194,86 @@ CTI_UI_Purchase_UpdateCost = {
 	
 	_cost = 0;
 	
-	if (_classname != "") then {
+	if !(_classname isEqualTo "") then {
 		_var = missionNamespace getVariable _classname;
-		_cost = _var select 2;
+		_cost = _var select CTI_UNIT_PRICE;
 		if !(_classname isKindOf "Man") then { //--- Add the vehicle crew cost if applicable
 			_crew = switch (true) do { case (_classname isKindOf "Tank"): {"Crew"}; case (_classname isKindOf "Air"): {"Pilot"}; default {"Soldier"}};
 			_crew = missionNamespace getVariable format["CTI_%1_%2", CTI_P_SideJoined, _crew];
 			
 			//--- Ultimately if we're dealing with a sub we may want to use divers unless that our current soldiers are free-diving champions
 			if (_req_classname isKindOf "Ship") then {
-				if (getText(configFile >> "CfgVehicles" >> _req_classname >> "simulation") == "submarinex") then { _crew = missionNamespace getVariable format["CTI_%1_Diver", CTI_P_SideJoined] };
+				if (getText(configFile >> "CfgVehicles" >> _req_classname >> "simulation") isEqualTo "submarinex") then { _crew = missionNamespace getVariable format["CTI_%1_Diver", CTI_P_SideJoined] };
 			};
 			
 			_var_crew_classname = missionNamespace getVariable _crew;
 			if !(isNil '_var_crew_classname') then {
 				_veh_infos = call CTI_UI_Purchase_GetVehicleInfo;
-				for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select 2) } };
+				for '_i' from 0 to 2 do { if (_veh_infos select _i) then { _cost = _cost + (_var_crew_classname select CTI_UNIT_PRICE) } };
 				
 				if (_veh_infos select 3) then { //--- Turrets
-					{ if (count _x == 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var select CTI_UNIT_TURRETS);
+					{ if (count _x isEqualTo 1) then { _cost = _cost + (_var_crew_classname select 2) } } forEach (_var select CTI_UNIT_TURRETS);
 				};
 			};
 		};
 	};
-	
+	(_classname) call CTI_UI_Purchase_UpdateDescription;
 	uiNamespace setVariable ["cti_dialog_ui_purchasemenu_unitcost", _cost];
 	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110014) ctrlSetStructuredText (parseText format["<t align='left'>Cost: <t color='#F56363'>$%1</t></t>", _cost]);
+};
+CTI_UI_Purchase_UpdateDescription = {
+	_classname = _this;
+	_time = "";
+	_isInfantry = if (_classname isKindOf 'Man') then {true} else {false};
+	if (_classname != "") then {
+		_var = missionNamespace getVariable _classname;
+		_price = _var select 2;
+		_time = _var select 3;
+	};
+	_weapons = (getArray (configFile >> 'CfgVehicles' >> _classname >> 'weapons')) - ['Put','Throw'];
+	_magazines = getArray (configFile >> 'CfgVehicles' >> _classname >> 'magazines');	
+	//Update large Image - idc - 111014
+	//_isPreview = isClass (configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
+	//_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "picture");
+	_pic = getText(configFile >> 'CfgVehicles' >> _classname >> "editorPreview");
+	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111014) ctrlSetStructuredText (parseText format["<img image='%1'  size='4.5'/>", _pic]);
+
+	//Update Stat rows - 110020
+	lnbClear 110020;
+	if !(_isInfantry) then {
+		lnbAddRow [110020, ["Faction: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'faction')]]];
+		lnbAddRow [110020, ["Build Time: ", format ["%1s", _time]]];
+		lnbAddRow [110020, ["Capacity: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'transportSoldier'))]];
+		lnbAddRow [110020, ["Max speed: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'maxSpeed'))]];
+		lnbAddRow [110020, ["Brake Dist: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'brakeDistance'))]];
+		lnbAddRow [110020, ["Max load: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'maximumLoad'))]];
+		lnbAddRow [110020, ["Armor: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armor'))]];
+		lnbAddRow [110020, ["Structural: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armorStructural'))]];
+		lnbAddRow [110020, ["Weapons: ", _weapons joinString " | "]];
+		lnbAddRow [110020, ["Magazines: ", _magazines joinString " | "]];
+	} else {
+		lnbAddRow [110020, ["Faction: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'faction')]]];
+		lnbAddRow [110020, ["Build Time: ", format ["%1s", _time]]];
+		lnbAddRow [110020, ["SKill: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'displayName')]]];
+		lnbAddRow [110020, ["Role: ", format ["%1", getText(configFile >> 'CfgVehicles' >> _classname >> 'role')]]];
+		lnbAddRow [110020, ["Accuracy: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'accuracy'))]];
+		lnbAddRow [110020, ["Armor: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'armor'))]];
+		lnbAddRow [110020, ["Audible: ", str (getNumber (configFile >> 'CfgVehicles' >> _classname >> 'audible'))]];
+		lnbAddRow [110020, ["Weapons: ", _weapons joinString " | "]];
+		lnbAddRow [110020, ["Magazines: ", _magazines joinString " | "]];
+	};
+	//update Descriptions - idc - 110019
+	//--- Long description.
+	if !(_isInfantry) then {
+		if (isClass (configFile >> 'CfgVehicles' >> _classname >> 'Library')) then {
+			_txt = getText (configFile >> 'CfgVehicles' >> _classname >> 'Library' >> 'libTextDesc');
+			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText _txt);
+		} else {
+			((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText '');
+		};
+	} else {
+		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110019) ctrlSetStructuredText (parseText '');
+	};
 };
 
 CTI_UI_Purchase_HideVehicleIcons = {
@@ -202,7 +286,7 @@ CTI_UI_Purchase_OnUnitListLoad = {
 	private ["_classname"];
 	if (lnbCurSelRow 111007 > -1) then {
 		_classname = ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 111007) lnbData [lnbCurSelRow 111007, 0];
-		if (_classname != "") then {
+		if !(_classname isEqualTo "") then {
 			(_classname) call CTI_UI_Purchase_UpdateVehicleIcons;
 		} else {
 			call CTI_UI_Purchase_HideVehicleIcons;
@@ -223,12 +307,12 @@ CTI_UI_Purchase_LoadFactories = {
 	
 	lbClear ((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110009);
 	
-	if ((_type != CTI_DEPOT) && (_type != CTI_LARGE_FOB)) then {
+	if (!(_type isEqualTo CTI_DEPOT) && !(_type isEqualTo CTI_LARGE_FOB)) then {
 		_structures = (CTI_P_SideJoined) call CTI_CO_FNC_GetSideStructures;
 		_fetched = [_type, _structures, player, CTI_BASE_PURCHASE_UNITS_RANGE_EFFECTIVE] call CTI_CO_FNC_GetSideStructuresByType;
 		
 		_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _type];
-		_structure_text = (_var select 0) select 1;
+		_structure_text = (_var select CTI_STRUCTURE_LABELS) select 1;
 		
 		{
 			_closest = _x call CTI_CO_FNC_GetClosestTown;
@@ -266,12 +350,12 @@ CTI_UI_Purchase_SetVehicleIconsColor = {
 	private ["_color", "_idc"];
 	_idc = 110100;
 	{
-		_color = if (uiNamespace getVariable format ["cti_dialog_ui_purchasemenu_vehicon_%1", _x]) then {[0.258823529, 0.713725490, 1, 1]} else {[0.2, 0.2, 0.2, 1]};
+		_color = [[0.2, 0.2, 0.2, 1], [0.258823529, 0.713725490, 1, 1]] select (uiNamespace getVariable format ["cti_dialog_ui_purchasemenu_vehicon_%1", _x]);
 		
 		((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl (_idc + _forEachIndex)) ctrlSetTextColor _color;
 	} forEach ['driver','gunner','commander','turrets'];
 	
-	_color = if (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock") then {[1, 0.22745098, 0.22745098, 1]} else {[0.2, 0.2, 0.2, 1]};
+	_color = [[0.2, 0.2, 0.2, 1], [1, 0.22745098, 0.22745098, 1]] select (uiNamespace getVariable "cti_dialog_ui_purchasemenu_vehicon_lock");
 	((uiNamespace getVariable "cti_dialog_ui_purchasemenu") displayCtrl 110104) ctrlSetTextColor _color;
 };
 

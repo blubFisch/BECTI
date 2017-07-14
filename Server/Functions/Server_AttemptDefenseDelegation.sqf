@@ -20,15 +20,11 @@
 	[UNIT, GROUP, SIDE ID, AI ARRAY ARGS] call CTI_SE_FNC_AttemptTownDelegation
 	
   # EXAMPLE #
-    [ai1, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] Call CTI_SE_FNC_AttemptDefenseDelegation;
+    [ai1, defGroup, 1, ["B_Soldier_R", defGroup, [500, 600, 0], 1, true]] call CTI_SE_FNC_AttemptDefenseDelegation;
 */
 
-private ["_ai_args", "_delegated", "_hc", "_hcs", "_result", "_side", "_sideID", "_static", "_unit"];
-
-_static = _this select 0;
-_group = _this select 1;
-_side = _this select 2;
-_ai_args = _this select 3;
+params ["_static", "_group", "_side", "_ai_args"];
+private ["_delegated", "_hc", "_hcs", "_result", "_sideID", "_unit"];
 
 _hcs = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
 _delegated = true;
@@ -44,7 +40,7 @@ _sideID = (_side) call CTI_CO_FNC_GetSideID;
 _hc = (_hcs select 0) select 0;
 
 //--- First of all, we delegate the group to the HC if needed
-if (groupOwner _group != _hc) then {
+if !(groupOwner _group isEqualTo _hc) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["Attempting to change ownership of group [%1] to HC [%2]", _group, _hc]] call CTI_CO_FNC_Log;
 	};
@@ -71,7 +67,6 @@ if !(isNil {_static getVariable "cti_delegated"}) then {
 	_var = missionNamespace getVariable _varname;
 	
 	if (isNil '_var') exitWith {
-	
 		["ERROR", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["A [%1] static [%2] (%3) cannot be created for the HC [%4] since the static defense variable [%5] is not defined", _side, _static, typeOf _static, _hc, _varname]] call CTI_CO_FNC_Log;
 		_delegated = false;
 	};
@@ -79,25 +74,24 @@ if !(isNil {_static getVariable "cti_delegated"}) then {
 	if (CTI_Log_Level >= CTI_Log_Information) then {
 		["INFORMATION", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["A [%1] static [%2] (%3) is about to be replaced (delete/create) by a new one for the HC [%4]", _side, _static, typeOf _static, _hc]] call CTI_CO_FNC_Log;
 	};
-
+	
 	deleteVehicle _static;
 	
-	_static = (_var select 1) createVehicle _position;
+	_static = (_var select CTI_DEFENSE_CLASS) createVehicle _position;
 	_static setVariable ["cti_defense_sideID", _sideID, true];
 	_static setVariable ["cti_aman_enabled", true];
-	_static setVariable ["cti_defense_sideID", _sideID, true]; //--- Track the defense by giving it a sideID
 	_static setDir _direction;
 	_static setPos _position;
 	
 	_static addEventHandler ["killed", format["[_this select 0, _this select 1, %1, '%2', '%3'] spawn CTI_SE_FNC_OnDefenseDestroyed", _sideID, "", _varname]];
 	[_static, CTI_BASE_DEFENSES_EMPTY_TIMEOUT] spawn CTI_SE_FNC_HandleEmptyVehicle; //--- Track the defense lifespan
 	
+	//--- ZEUS Curator Editable
 	if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_static], true]};
-
-	if (CTI_Log_Level >= CTI_Log_Information) then {
-	["INFORMATION", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["A [%1] static [%2] (%3) has been created again for delegation of group [%4] to HC [%5]", _side, _static, _var select 1, _group, _hc]] call CTI_CO_FNC_Log;
-	};
 	
+	if (CTI_Log_Level >= CTI_Log_Information) then {
+		["INFORMATION", "FILE: Server\Functions\Server_AttemptDefenseDelegation.sqf", format["A [%1] static [%2] (%3) has been created again for delegation of group [%4] to HC [%5]", _side, _static, _var select CTI_DEFENSE_CLASS, _group, _hc]] call CTI_CO_FNC_Log;
+	};
 };
 
 if (_delegated) then {

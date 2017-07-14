@@ -35,7 +35,7 @@ CTI_UI_AIMicromanagement_GetOrdersParameters = {
 			
 			{
 				_var = missionNamespace getVariable format ["CTI_%1_%2", CTI_P_SideJoined, _x getVariable "cti_structure_type"];
-				_value = (_var select 0) select 1;
+				_value = (_var select CTI_STRUCTURE_LABELS) select 1;
 				((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270010) lbAdd format["BASE: %1 (%2)", _value, mapGridPosition getPos _x];
 				((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270010) lbSetValue [_u+1, _u];
 				_u = _u + 1;
@@ -52,8 +52,8 @@ CTI_UI_AIMicromanagement_TrySetOrder = {
 	_order = _this select 1;
 	_order_pos_new = _this select 2;
 	
-	if (_order != (_ai getVariable "cti_ai_order")) then {_ai setVariable ["cti_ai_order", _order]};
-	if (typeName _order_pos_new != "BOOL") then {_ai setVariable ["cti_ai_order_pos", _order_pos_new]};
+	if !(_order isEqualTo (_ai getVariable "cti_ai_order")) then {_ai setVariable ["cti_ai_order", _order]};
+	if !(typeName _order_pos_new isEqualTo "BOOL") then {_ai setVariable ["cti_ai_order_pos", _order_pos_new]};
 };
 
 CTI_UI_AIMicromanagement_GetEffectiveUnits = {

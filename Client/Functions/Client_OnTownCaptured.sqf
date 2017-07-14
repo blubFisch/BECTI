@@ -30,17 +30,14 @@
 	[_structure, _variable] call CTI_CL_FNC_OnTownCaptured
 */
 
-private ["_color", "_in_range", "_last_capture", "_score", "_side_new", "_sideID_new", "_sideID_old", "_town", "_town_camps", "_value"];
-
-_town = _this select 0;
-_sideID_new = _this select 1;
-_sideID_old = _this select 2;
+params ["_town", "_sideID_new", "_sideID_old"];
+private ["_color", "_in_range", "_last_capture", "_score", "_side_new", "_value"];
 
 if !(CTI_P_SideID in [_sideID_new, _sideID_old]) exitWith {}; //--- Make sure that the client need an update
 
 _side_new = (_sideID_new) call CTI_CO_FNC_GetSideFromID;
 
-if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured it
+if (_side_new isEqualTo CTI_P_SideJoined) then { //--- The player's side has captured it
 	//todo move to displaymessage
 	CTI_P_ChatID commandChat format["%1 has been captured!", _town getVariable "cti_town_name"];
 	
@@ -55,6 +52,7 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 		};
 		
 		_score = round(_value / CTI_SCORE_TOWN_VALUE_PERPOINT);
+		
 		if (CTI_Log_Level >= CTI_Log_Debug) then {
 			["DEBUG", "FILE: Client\Functions\Client_OnTownCaptured.sqf", format ["Town [%1] capture did award the player's [%2] with [$%3] along with a score bonus of [%4]", _town getVariable "cti_town_name", group player, _value, _score]] call CTI_CO_FNC_Log;
 		};
@@ -73,17 +71,17 @@ if (_side_new == CTI_P_SideJoined) then { //--- The player's side has captured i
 };
 
 //--- Whenever a town is captured or lost, if the camp spawn mode is on limited, we reset the respawn counter.
-if ((missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") == 2) then {_town setVariable ["cti_camp_respawn_count", CTI_RESPAWN_CAMPS_CONDITION_LIMITED]};
+if ((missionNamespace getVariable "CTI_RESPAWN_CAMPS_CONDITION") isEqualTo 2) then {_town setVariable ["cti_camp_respawn_count", CTI_RESPAWN_CAMPS_CONDITION_LIMITED]};
 
 //--- Paint it
 _color = (_side_new) call CTI_CO_FNC_GetSideColoration;
 (format ["cti_town_marker_%1", _town]) setMarkerColorLocal _color;
 
 //--- Update the camps if needed
-_town_camps = _town getVariable "cti_town_camps";
-if !(isNil "_town_camps") then {
-	{(_x getVariable "cti_camp_marker") setMarkerColorLocal _color} forEach _town_camps;
-};
+{(_x getVariable "cti_camp_marker") setMarkerColorLocal _color} forEach (_town getVariable ["cti_town_camps", []]);
+
+//--- Update the naval depots if needed
+if !(isNil {_town getVariable "cti_naval_depot_marker"}) then {(_town getVariable "cti_naval_depot_marker") setMarkerColorLocal _color};
 
 //--- Update the territorial markers if enabled
 if ((missionNamespace getVariable "CTI_TOWNS_TERRITORIAL") > 0) then {CTI_P_TerritorialUpdate = true};

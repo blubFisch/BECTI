@@ -13,7 +13,7 @@ _agl = random 360
 
 
 #loop
-?(_cnt == 18) : goto "next"
+?(_cnt isEqualTo 18) : goto "next"
 
 _dis = 1 + random 0.3
 _upposx = _posx + (sin _agl) * _scl * _dis
@@ -29,7 +29,7 @@ goto "loop"
 
 
 #next
-?(_next == 60) : goto "end"
+?(_next isEqualTo 60) : goto "end"
 _cnt=0
 _agl = random 360
 _scl = _scl + 40

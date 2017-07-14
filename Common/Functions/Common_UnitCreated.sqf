@@ -16,24 +16,9 @@ _unit = _this;
 
 if (local _unit) then {
 	if (_unit isKindOf "Man") then {
-		if (CTI_VEHICLES_LVOSS == 1 || CTI_VEHICLES_ERA == 1) then {
+		if (CTI_VEHICLES_LVOSS isEqualTo 1 || CTI_VEHICLES_ERA isEqualTo 1) then {
 			_unit addEventHandler ["FiredMan",{_this spawn FNC_BAPS_FIRED}];
 		};
 		_unit addEventHandler ["FiredMan",{_this spawn FNC_CRAMControl_AttackerFiredEH}];
-		//-- Deleted EH
-		_unit addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
-	};
-} else {
-	if (CTI_Log_Level >= CTI_Log_Error) then {
-		["ERROR", "FILE: Common\Functions\Common_UnitCreated.sqf", "Unit " + str(_unit) + " is not local"] call CTI_CO_FNC_Log;
-	};
-};
-
-//--- Make unit ZEUS/Curator editable
-if !(isNil "ADMIN_ZEUS") then {
-	if (CTI_IsServer) then {
-		ADMIN_ZEUS addCuratorEditableObjects [[_unit], true];
-	} else {
-		[ADMIN_ZEUS, _unit] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
 	};
 };

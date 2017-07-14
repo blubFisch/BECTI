@@ -26,17 +26,15 @@
 	[West, "loose"] spawn CTI_CL_FNC_OnMissionEnding
 */
 
+params ["_side", "_result"];
 private ["_result", "_side", "_win", "_enemyhq", "_winnerhq", "_winnerside", "_loserside", "_winnername", "_losername", "_winnertext", "_winnerscore", "_loserscore", "_winnerscoretext", "_loserscoretext", "_losertext", "_scoretext1", "_cameratext1", "_cameratext2", "_cameratext3", "_endtext", "_endmusic", "_firstshot", "_secondshot", "_thirdshot", "_scoretext", "_playerscore", "_playerscore_kills", "_playerscore_vehicle", "_playerscore_armor", "_playerscore_air", "_playerscore_deaths", "_playerscore_score", "_playerscoretext"];
-
-_side = _this select 0;
-_result = _this select 1;
 
 _win = false;
 _winnerside = West;
 _loserside = East;
 switch (_result) do {
-	case "win": {if (CTI_P_SideJoined == _side) then {_win = true; if (CTI_P_SideJoined == West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};}};
-	case "loose": {if (CTI_P_SideJoined != _side) then {_win = true; if (CTI_P_SideJoined == West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};} else {if (CTI_P_SideJoined == West) then {_winnerside = East;_loserside = West;} else {_winnerside = West;_loserside = East;};}};
+	case "win": {if (CTI_P_SideJoined isEqualTo _side) then {_win = true; if (CTI_P_SideJoined isEqualTo West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};}};
+	case "loose": {if (CTI_P_SideJoined != _side) then {_win = true; if (CTI_P_SideJoined isEqualTo West) then {_winnerside = West;_loserside = East;} else {_winnerside = East;_loserside = West;};} else {if (CTI_P_SideJoined isEqualTo West) then {_winnerside = East;_loserside = West;} else {_winnerside = West;_loserside = East;};}};
 };
 _winnername = "Blufor";
 _losername = "Opfor";

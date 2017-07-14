@@ -27,10 +27,8 @@
 	  -> This function be triggered everytime the player dies
 */
 
-private ["_killed", "_killer"];
+params ["_killed", "_killer"];
 
-_killed = _this select 0;
-_killer = _this select 1;
 _isvehicle_killed = if (_killed isKindOf "Man") then {false} else {true};
 CTI_DeathPosition = getPos _killed;
 
@@ -54,6 +52,15 @@ if !(CTI_P_Jailed) then {[_killed, _killer, CTI_P_SideID] spawn CTI_CO_FNC_OnUni
 
 waitUntil {alive player};
 
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [[player], true];
+	} else {
+		[ADMIN_ZEUS, player] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+};
+
 if (CTI_P_Jailed) exitWith {
 	_pos = getMarkerPos "prison";
 	_rpos = [(_pos select 0) + random 2 - random 2, (_pos select 1) + random 2 - random 2, 0.75];
@@ -71,7 +78,7 @@ CTI_DeathTimer = time + (missionNamespace getVariable "CTI_RESPAWN_TIMER");
 call CTI_CL_FNC_AddMissionActions;
 
 //--- Make sure that player is always the leader (of his group).
-if (! (isPlayer (leader(group player))) && !(CTI_P_SideJoined == resistance)) then {(group player) selectLeader player};
+if (! (isPlayer (leader(group player))) && !(CTI_P_SideJoined isEqualTo resistance)) then {(group player) selectLeader player};
 
 createDialog "CTI_RscRespawnMenu";
 
@@ -91,16 +98,8 @@ waitUntil {camCommitted CTI_DeathCamera};
 CTI_DeathCamera camSetRelPos [1,1,20];
 CTI_DeathCamera camCommit (missionNamespace getVariable "CTI_RESPAWN_TIMER")+2;
 
-//Call Earplugs on death
+//call Earplugs on death
 call CTI_CL_FNC_EarPlugsDeath;
 
-//Call Tablet on death
+//call Tablet on death
 call CTI_CL_FNC_Death;
-
-//--- Remove "men" instantly on death if enabled
-if (CTI_GC_CLEANUP_MAN > 0 && !_isvehicle_killed) then {
-	_killed spawn {
-		sleep 2;
-		deleteVehicle _this;
-	};
-};

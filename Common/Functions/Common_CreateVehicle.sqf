@@ -13,7 +13,7 @@
   # PARAMETERS #
     0	[String]: The type of vehicle to create
     1	[Array/Object]: The 2D/3D position where the vehicle should be created at
-    2	[Integer]: The Azimuth direction (0-360Â°) of the vehicle
+    2	[Integer]: The Azimuth direction (0-360°) of the vehicle
     3	[Side/Integer]: The Side or Side ID of the vehicle
     4	{Optionnal} [Boolean]: Determine if the vehicle should be created locked or not
     5	{Optionnal} [Boolean]: Determine if the vehicle should be "public" or not
@@ -44,29 +44,23 @@
 	  -> Create a locked and handled "B_Quadbike_01_F" at the player's position facing South on the player's initial side
 */
 
-private ["_direction", "_handle", "_locked", "_net", "_position", "_side", "_sideID", "_special", "_type", "_vehicle", "_velocity", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
+params ["_type", "_position", "_direction", "_sideID", ["_locked", false], ["_net", false], ["_handle", false], ["_special", "FORM"],["_created", objNull]];
+private ["_side", "_vehicle", "_velocity", "_upgrades", "_upgrade_lvoss", "_upgrade_era"];
 
-_type = _this select 0;
-_position = _this select 1;
-_direction = _this select 2;
-_sideID = _this select 3;
-_locked = if (count _this > 4) then {_this select 4} else {false};
-_net = if (count _this > 5) then {_this select 5} else {false};
-_handle = if (count _this > 6) then {_this select 6} else {false};
-_special = if (count _this > 7) then {_this select 7} else {"FORM"};
-_created = if (count _this > 8) then {_this select 8} else {objNull};
-
-if (typeName _position == "OBJECT") then {_position = getPos _position};
-if (typeName _sideID == "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
+if (typeName _position isEqualTo "OBJECT") then {_position = getPos _position};
+if (typeName _sideID isEqualTo "SIDE") then {_sideID = (_sideID) call CTI_CO_FNC_GetSideID};
 
 _side = _sideID call CTI_CO_FNC_GetSideFromID;
 
+if (CTI_Log_Level >= CTI_Log_Debug) then {
+	["DEBUG", "FILE: Common\Functions\Common_CreateVehicle.sqf", format["Attempting to create a [%1] vehicle at position [%2] with direction [%3] on side [%4], locked [%5]? net [%6]? handle [%7]? special [%8]", _type, _position, _direction, _side, _locked, _net, _handle, _special]] call CTI_CO_FNC_Log;
+};
+
 _vehicle = createVehicle [_type, _position, [], 7, _special];
+_vehicle setVariable ["BIS_enableRandomization", false];//stop randomization (for skin fix)
 _velocity = velocity _vehicle;
 _vehicle setDir _direction;
 _vehicle setVectorUp surfaceNormal position _vehicle;
-//--- Adding 2 second god mode to vehicles on spawn to prevent damage
-_vehicle  spawn {_this allowDamage false; sleep 2; _this allowDamage true};
 
 if (isNull _created) then {
 	_vehicle setDir _direction;
@@ -89,9 +83,6 @@ if (_handle) then {
 	_vehicle addEventHandler ["getOut", {_this spawn CTI_CO_FNC_OnUnitGetOut}]; 
 	_vehicle setVariable ["cti_occupant", _side];
 	_vehicle setVariable ["initial_side", _side, true];
-	//-- Deleted EH
-	_vehicle addEventHandler ["Deleted",{_this remoteExec ["CTI_CO_FNC_OnDeleted", 2];}];
-
 };
 
 //--- Tire protection (Client, HC, Server). TODO: Detect if the vehicle has wheels
@@ -129,12 +120,12 @@ _upgrade_lvoss = 0;
 _upgrade_era = 0;
 if (count ((_side) call CTI_CO_FNC_GetSideUpgrades) > 0) then {
 	_upgrades = (_side) call CTI_CO_FNC_GetSideUpgrades;
-	if (CTI_VEHICLES_LVOSS == 1) then {_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;};
-	if (CTI_VEHICLES_ERA == 1) then {_upgrade_era = _upgrades select CTI_UPGRADE_ERA;};
+	if (CTI_VEHICLES_LVOSS isEqualTo 1) then {_upgrade_lvoss = _upgrades select CTI_UPGRADE_LVOSS;};
+	if (CTI_VEHICLES_ERA isEqualTo 1) then {_upgrade_era = _upgrades select CTI_UPGRADE_ERA;};
 };
 
 //---Add LVOSS system
-if (CTI_VEHICLES_LVOSS == 1) then {
+if (CTI_VEHICLES_LVOSS isEqualTo 1) then {
 	if (isNil "_upgrade_lvoss") then {_upgrade_lvoss = 0;};
 	if (_vehicle isKindOf "Car") then {
 		if (_upgrade_lvoss > 0) then {
@@ -158,7 +149,7 @@ if (CTI_VEHICLES_LVOSS == 1) then {
 	};
 };
 //---Add ERA system
-if (CTI_VEHICLES_ERA == 1) then {
+if (CTI_VEHICLES_ERA isEqualTo 1) then {
 	if (isNil "_upgrade_era") then {_upgrade_era = 0;};
 	if (_vehicle isKindOf "Tank") then {
 		if (_upgrade_era > 0) then {
@@ -189,6 +180,23 @@ if (CTI_VEHICLES_ERA == 1) then {
 		};
 	};
 };
+
+//-- Radar Support to all for now
+/*_vehicle setVehicleRadar 1; //AI radar Usage : 0 - automatic, 1 - forced on, 2 - forced off
+_vehicle setVehicleReportRemoteTargets true; //Sets that the vehicle will share targets that were acquired by its own sensors via datalink to the Side center.
+_vehicle ssetVehicleReceiveRemoteTargets true; //Sets that the vehicle will be able to receive targets acquired by someone else via datalink from the Side center.
+_vehicle setVehicleReportOwnPosition true; // Sets that the vehicle will share its own position via datalink to the Side center.
+*/
+
+//--- ZEUS Curator Editable
+if !(isNil "ADMIN_ZEUS") then {
+	if (CTI_IsServer) then {
+		ADMIN_ZEUS addCuratorEditableObjects [[_vehicle], true];
+	} else {
+		[ADMIN_ZEUS, _vehicle] remoteExec ["CTI_PVF_SRV_RequestAddCuratorEditable", CTI_PV_SERVER];
+	};
+};
+
 _vehicle call CTI_CO_FNC_UnitCreated;
 
 _vehicle

@@ -13,7 +13,7 @@ with missionNamespace do {
 		_module = _this select 0;
 		_objects = _this select 1;
 		
-		if (typeName _objects != "ARRAY") then {_objects = [_objects]};
+		if !(typeName _objects isEqualTo "ARRAY") then {_objects = [_objects]};
 		
 		_module addCuratorEditableObjects [_objects, true];
 	};
@@ -28,7 +28,7 @@ with missionNamespace do {
 		_order = _this select 1;
 		_side = _this select 2;
 		
-		if (typeName _groups != "ARRAY") then {_groups = [_groups]};
+		if !(typeName _groups isEqualTo "ARRAY") then {_groups = [_groups]};
 		
 		{
 			_message = "";
@@ -40,7 +40,7 @@ with missionNamespace do {
 				case CTI_ORDER_DISEMBARKCARGOVEH: {_message = "order-getoutc"; (_x) call CTI_FSM_UpdateAI_DisembarkCargoVehicles};
 			};
 			
-			if (_message != "") then {[_message, leader _x] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]};
+			if !(_message isEqualTo "") then {[_message, leader _x] remoteExec ["CTI_PVF_CLT_OnMessageReceived", _side]};
 		} forEach _groups;
 	};
 	
@@ -54,24 +54,19 @@ with missionNamespace do {
 		_side = _this select 0;
 		_name = _this select 1;
 		
-		_logic = (_side) Call CTI_CO_FNC_GetSideLogic;
-		_team = (_side) Call CTI_CO_FNC_GetSideCommanderTeam;
+		_logic = (_side) call CTI_CO_FNC_GetSideLogic;
+		_team = (_side) call CTI_CO_FNC_GetSideCommanderTeam;
 		
 		//--- Make sure that no vote is running
 		if (_logic getVariable "cti_votetime" <= 0) then {
 			//--- Set the votes for the default commander
 			{
-				_vote_update = false;
-				if (isNull (_x getVariable "cti_vote") && !isNull _team || !isNull (_x getVariable "cti_vote") && isNull _team) then {_vote_update = true};
-				if (!isNull (_x getVariable "cti_vote") && !isNull _team) then {
-					if ((_x getVariable "cti_vote") != _team) then {_vote_update = true};
-				};
-				if (_vote_update) then {_x setVariable ["cti_vote", _team, true]};
+				if !((_x getVariable "cti_vote") isEqualTo _team) then {_x setVariable ["cti_vote", _team, true]};
 			} forEach (_logic getVariable "cti_teams");
-			if (CTI_DEV_MODE == 0) then {
+			if (CTI_DEV_MODE isEqualTo 0) then {
 				sleep 15;
 			};
-			//--- Call in for a vote
+			//--- call in for a vote
 			(_side) Spawn CTI_SE_FNC_VoteForCommander;
 		};
 	};
@@ -81,7 +76,7 @@ with missionNamespace do {
 	
 	//--- The client request an empty vehicle handling
 	CTI_PVF_SRV_RequestHandleEmptyVehicles = { 
-		if (typeName _this == "ARRAY") then {
+		if (typeName _this isEqualTo "ARRAY") then {
 			{[_x] spawn CTI_SE_FNC_HandleEmptyVehicle} forEach _this;
 		} else {
 			[_this] spawn CTI_SE_FNC_HandleEmptyVehicle;
@@ -108,9 +103,8 @@ with missionNamespace do {
 		_ownerID = owner _client;
 		_uid = getPlayerUID _client;
 		
-		if (_ownerID != 0) then { //--- The ID is different than 0, the client is not local to the server
-			_candidates = missionNamespace getVariable "CTI_HEADLESS_CLIENTS";
-			if (isNil '_candidates') then {_candidates = []};
+		if !(_ownerID isEqualTo 0) then { //--- The ID is different than 0, the client is not local to the server
+			_candidates = missionNamespace getVariable ["CTI_HEADLESS_CLIENTS", []];
 			_candidates pushBack [_ownerID, _client, _uid];
 			missionNamespace setVariable ["CTI_HEADLESS_CLIENTS", _candidates];
 			if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestHCRegister", format["Headless Client [%1] with owner ID [%2] has been registered as a valid Headless Client. There is now [%3] Headless Clients", _uid, _ownerID, count _candidates]] call CTI_CO_FNC_Log};
@@ -129,14 +123,7 @@ with missionNamespace do {
 	
 	//--- The client request an FOB (deploy)
 	CTI_PVF_SRV_RequestFOBDeploy = {
-		private ["_vehicle","_side","_position","_direction","_fobtype","_fobclass","_fobclassruins"];
-		_vehicle = _this select 0;
-		_side = _this select 1;
-		_position = _this select 2;
-		_direction = _this select 3;
-		_fobtype = _this select 4;
-		_fobclass = _this select 5;
-		_fobclassruins = _this select 6;
+		params ["_vehicle", "_side", "_position", "_direction", "_fobtype", "_fobclass", "_fobclassruins"];
 		[_vehicle, _side, _position, _direction, _fobtype, _fobclass, _fobclassruins] spawn CTI_SE_FNC_DeployFOB;
 	};	
 	
@@ -191,7 +178,10 @@ with missionNamespace do {
 			if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] does not belong to any CTI Groups on [%3]. Performed late-initialization and updated the Global Teams", _name, _uid, _side]] call CTI_CO_FNC_Log};
 			
 			//--- Update the global teams
-			_logic setVariable ["cti_teams", _teams - [objNull] + [_team], true];
+			_teams pushBack _team;
+			for '_i' from count(_teams)-1 to 0 step -1 do {if (isNull(_teams select _i)) then {_teams deleteAt _i}};
+			
+			_logic setVariable ["cti_teams", _teams, true];
 		};
 		
 		//--- We attempt to get the player information in case that he had joined before.
@@ -211,8 +201,8 @@ with missionNamespace do {
 			//--- Check if the teamstack protection is enabled or not	
 			if ((missionNamespace getVariable "CTI_TEAMSTACK") > 0) then {
 				//--- Retrieve the player count for each given side (minus the connecting client)
-				_west_players = {side _x == west && isPlayer _x} count (playableUnits - [_leader]);
-				_east_players = {side _x == east && isPlayer _x} count (playableUnits - [_leader]);
+				_west_players = {side _x isEqualTo west && isPlayer _x} count (playableUnits - [_leader]);
+				_east_players = {side _x isEqualTo east && isPlayer _x} count (playableUnits - [_leader]);
 				
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] on side [%3]. Without this player, there are [%4] players on west and [%5] players on east. The stack limit is set on [%6] with a current value of [%7]", _name, _uid, _side, _west_players, _east_players, missionNamespace getVariable "CTI_TEAMSTACK", abs(_west_players - _east_players)]] call CTI_CO_FNC_Log};
 				
@@ -235,7 +225,7 @@ with missionNamespace do {
 			};
 			
 			//--- Check if the player is still jailed
-			if ((missionNamespace getVariable [format ["CTI_SERVER_CLIENT_ELITE_%1", _uid], [0, 0]] select 1) == 1) then {_special = "jailed"};
+			if ((missionNamespace getVariable [format ["CTI_SERVER_CLIENT_ELITE_%1", _uid], [0, 0]] select 1) isEqualTo 1) then {_special = "jailed"};
 			
 			//--- Determine whether the client is allowed to join or not
 			if (_join) then {
@@ -256,20 +246,20 @@ with missionNamespace do {
 
 			_side_origin = _get select 2; //--- Get the original side.
 			
-			if (_side_origin != _side && (missionNamespace getVariable "CTI_TEAMSWAP") > 0) then { //--- Teamswapping, the joined side differs from the original one (make sure that teamswaping is prohibed)
+			if (!(_side_origin isEqualTo _side) && (missionNamespace getVariable "CTI_TEAMSWAP") > 0) then { //--- Teamswapping, the joined side differs from the original one (make sure that teamswaping is prohibed)
 				_join = false;
 				["teamswap", _name] remoteExec ["CTI_PVF_CLT_OnMessageReceived", CTI_PV_CLIENTS];
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] tried to teamswap from it's original side [%3] to side [%4]. The server explicitely answered that he should be sent back to the lobby.", _name, _uid, _side_origin, _side]] call CTI_CO_FNC_Log};
 			} else {
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] either joined back it's original side [%3] or teamswaping is disabled.", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] joined back it's original side [%3].", _name, _uid, _side_origin]] call CTI_CO_FNC_Log};
 				_original_side = true;
 			};
 			
 			//--- Apply the team stack system if enabled
 			if ((missionNamespace getVariable "CTI_TEAMSTACK") > 0 && _join) then {
 				//--- Retrieve the player count for each given side (minus the connecting client)
-				_west_players = {side _x == west && isPlayer _x} count (playableUnits - [_leader]);
-				_east_players = {side _x == east && isPlayer _x} count (playableUnits - [_leader]);
+				_west_players = {side _x isEqualTo west && isPlayer _x} count (playableUnits - [_leader]);
+				_east_players = {side _x isEqualTo east && isPlayer _x} count (playableUnits - [_leader]);
 				
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] on side [%3]. Without this player, there are [%4] players on west and [%5] players on east. The stack limit is set on [%6] with a current value of [%7]", _name, _uid, _side, _west_players, _east_players, missionNamespace getVariable "CTI_TEAMSTACK", abs(_west_players - _east_players)]] call CTI_CO_FNC_Log};
 				
@@ -292,7 +282,7 @@ with missionNamespace do {
 			};
 			
 			//--- Check if the player is still jailed
-			if ((missionNamespace getVariable [format ["CTI_SERVER_CLIENT_ELITE_%1", _uid], [0, 0]] select 1) == 1) then {_special = "jailed"};
+			if ((missionNamespace getVariable [format ["CTI_SERVER_CLIENT_ELITE_%1", _uid], [0, 0]] select 1) isEqualTo 1) then {_special = "jailed"};
 			
 			_get set [3, _side];
 			
@@ -306,19 +296,22 @@ with missionNamespace do {
 				_loadout = _get select 4;
 				
 				if (count _loadout > 0) then { //--- Make sure that there is a valid loadout in there
-					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout has been retrieved ", _name, _uid], _loadout] call CTI_CO_FNC_Log_Gear_Array};
+					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout has been retrieved [%3]", _name, _uid, _loadout]] call CTI_CO_FNC_Log};
 				} else {
 					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJIPGear", format["Player [%1] [%2] previous loadout is empty", _name, _uid]] call CTI_CO_FNC_Log};
 				};
 				
 				//--- Make sure that the player didn't teamswap.
-				if (_side_origin != _side || isNil '_funds') then { 
+				if (!(_side_origin isEqualTo _side) || isNil '_funds') then { 
 					_funds = missionNamespace getVariable format ["CTI_ECONOMY_STARTUP_FUNDS_%1", _side];
 					if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] funds are now using the default value [%3] since he either swaped or had no funds", _name, _uid, _funds]] call CTI_CO_FNC_Log};
 				};
 				
 				_team setVariable ["cti_funds", _funds, true];
-				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Current side is [%3] and funds are [%4], Teamswap? [%5]", _name, _uid, _side, _funds, (_side_origin != _side)]] call CTI_CO_FNC_Log};
+				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were updated. Current side is [%3] and funds are [%4], Teamswap? [%5]", _name, _uid, _side, _funds, !(_side_origin isEqualTo _side)]] call CTI_CO_FNC_Log};
+				
+				//--- ZEUS Curator Editable
+				if !(isNil "ADMIN_ZEUS") then {ADMIN_ZEUS addCuratorEditableObjects [[_leader], true]};
 			} else {
 				if (CTI_Log_Level >= CTI_Log_Information) then {["INFORMATION", "FUNCTION: CTI_PVF_SRV_RequestJoin", format["Player [%1] [%2] information were not stored since he is not allowed to join", _name, _uid]] call CTI_CO_FNC_Log};
 			};
@@ -347,7 +340,7 @@ with missionNamespace do {
 		_side = _this select 1;
 		_vehicles = _this select 2;
 		
-		_tvar = if (_side == resistance) then {"cti_town_resistance_active_vehicles"} else {"cti_town_occupation_active_vehicles"};
+		_tvar = ["cti_town_occupation_active_vehicles", "cti_town_resistance_active_vehicles"] select (_side isEqualTo resistance);
 		
 		_town setVariable [_tvar, (_town getVariable _tvar) + _vehicles];
 	};

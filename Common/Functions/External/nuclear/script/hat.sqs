@@ -25,9 +25,9 @@ _scl = _scl * 0.995
 ?(_hatalfa2 < 0.99 and _next > 10) : _hatalfa2 = _hatalfa2 + 0.02
 _hatposz = _hatposz + (10.0 * _scl)
 _next = _next + 1
-?(_next == 2500) : goto "end"
+?(_next isEqualTo 2500) : goto "end"
 #hatloop
-?(_cnt == 10) : goto "hatloopend"
+?(_cnt isEqualTo 10) : goto "hatloopend"
 
 _velx = (sin _agl) * (10.0 + random 10.0) * _hatsize
 _vely = (cos _agl) * (10.0 + random 10.0) * _hatsize
@@ -77,7 +77,7 @@ drop ["\a3\Data_f\kouleSvetlo.p3d","","Billboard",1,10.0 + random 5,[_glareposx,
 _glaretrans = _glaretrans * 0.990
 
 ~0.2
-?(_mushflag == 0) : [_posx,_posy] exec "Common\Functions\External\nuclear\script\mush.sqs"; _mushflag = 1
+?(_mushflag isEqualTo 0) : [_posx,_posy] exec "Common\Functions\External\nuclear\script\mush.sqs"; _mushflag = 1
 goto "hatstart"
 
 

@@ -25,10 +25,10 @@ _index = {
 
 if ( isNil "_index" ) then {
 	_compReference = format[ "%1_%2", _compName, count LARs_spawnedCompositions ];
-	_nul = LARs_spawnedCompositions pushBack [ _compReference, _objects ];
+	_nul = LARs_spawnedCompositions pushBack [ _compReference, _objects, _compName ];
 }else{
 	_compReference = format[ "%1_%2", _compName, _index ];
-	LARs_spawnedCompositions set [ _index, [ _compReference, _objects ] ];
+	LARs_spawnedCompositions set [ _index, [ _compReference, _objects, _compName ] ];
 };
 
 _compReference

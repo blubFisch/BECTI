@@ -23,7 +23,7 @@ while {_radius > 1} do
           _damage = main_nuclear_radiation_damage * _radiation;
           _damage = _damage + random _damage;
           _x setdammage ((getdammage _x) + _damage);
-          if ( _x == player && _damage > 0.01 ) then {titletext ["", "BLACK IN"]};
+          if ( _x isEqualTo player && _damage > 0.01 ) then {titletext ["", "BLACK IN"]};
         } else
         {
           _radiation = main_nuclear_car_armour * _radiation;
@@ -31,7 +31,7 @@ while {_radius > 1} do
 	  {
 	    _dmg = _damage + random _damage;
 	    _x setdammage ((getdammage _x) + _dmg);
-            if ( _x == player && _dmg > 0.01 ) then {titletext ["", "BLACK IN"]};
+            if ( _x isEqualTo player && _dmg > 0.01 ) then {titletext ["", "BLACK IN"]};
 	  } foreach (crew _x);
         };
       };

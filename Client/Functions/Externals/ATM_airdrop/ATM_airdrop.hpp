@@ -53,10 +53,10 @@ class ATM_AD_RscShortcutButton {
 	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	text = "";
-	soundEnter[] = {"\A3\ui_f\data\sound\onover", 0.09, 1};
-	soundPush[] = {"\A3\ui_f\data\sound\new1", 0.0, 0};
-	soundClick[] = {"\A3\ui_f\data\sound\onclick", 0.07, 1};
-	soundEscape[] = {"\A3\ui_f\data\sound\onescape", 0.09, 1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.0, 0};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.07, 1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
 	action = "";
 
 	class Attributes {
@@ -186,10 +186,10 @@ class ATM_AD_activeText
 	font = "PuristaLight";
 	color[] = {1, 1, 1, 1};
 	colorActive[] = {1, 0.2, 0.2, 1};
-	soundEnter[] = {"\A3\ui_f\data\sound\onover", 0.09, 1};
-	soundPush[] = {"\A3\ui_f\data\sound\new1", 0.0, 0};
-	soundClick[] = {"\A3\ui_f\data\sound\onclick", 0.07, 1};
-	soundEscape[] = {"\A3\ui_f\data\sound\onescape", 0.09, 1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.0, 0};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.07, 1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
 	action = "";
 	text = "";
 };

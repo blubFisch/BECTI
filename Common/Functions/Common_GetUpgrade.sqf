@@ -18,13 +18,10 @@
 	[SIDE, INTEGER] call CTI_CO_FNC_GetUpgrade
 	
   # EXAMPLE #
-    _upgrade_gear = [west, CTI_UPGRADE_GEAR] call CTI_CO_FNC_GetUnitsScore
+    _upgrade_gear = [west, CTI_UPGRADE_GEAR] call CTI_CO_FNC_GetUpgrade
 	  -> Returns the "Gear" upgrade level for the west side
 */
 
-private ["_index", "_side"];
-
-_side = _this select 0;
-_index = _this select 1;
+params ["_side", "_index"];
 
 ((_side) call CTI_CO_FNC_GetSideUpgrades) select _index

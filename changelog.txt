@@ -1,3 +1,26 @@
+**1.07.3**
+Tweaked: Damage for defenses and base
+Tweaked: Code optimizations
+Tweaked: Initial spawn vehicle placement
+Tweaked: Base repair speed been decreased
+Tweaked: 3D Person is available via H button, also holsters the weapon
+Added: Compositions and defense Templates
+Added: Build menu auto terrain level
+Added: New AI building placement system
+Added: Vehicles will have higher priority to spawn one’s town is active
+Added: Base building respawn will not work if enemy is near 30m, for exception of MHQ
+Added: Town defense statics
+Added: MHQ damage transfers ones deployed or mobilized 
+Added: MHQ deploy and mobilization will take time now
+Added: Complete mod support restructure, with ability to mix and match on fly
+Added: Filters based by camo for both Gear and Vehicles
+Added: Vanilla Revive System
+Added: UAV Terminal Support for Persistent gear
+Added: More base buildings to count as factories
+Fixed: Vehicles will not spawn in houses
+Fixed: Empty town vehicles will not despawn after town deactivation
+Fixed: ERA is now enabled
+
 **1.07.2**
 Fixed: Altis naval camp
 Fixed: Supply depot building limit
@@ -82,7 +105,7 @@ Disabled: Era upgrads
 Disabled: Fuel burn
 Enabled: Air CM, FFAR, AA, DAR by default 
 
-1.06.6
+**1.06.6**
 Replaced: Camps with watch towers
 Added: 4 extra slots, and removed HC slots
 Added: Spawn inside camps system
@@ -96,14 +119,14 @@ Fixed: UAZ's spawning empty in towns
 Fixed: RHS Unit tweaks
 Fixed: Gear template  bug where you can buy high level gear
 
-﻿1.06.5
+﻿**1.06.5**
 Removed: Ifrit/Hunter ones again :)
 Fixed: Resistance bounty
 Added: Base respawn inside buildings
 Added: GUI for selling in build menu
 Disabled: Fog
 
-1.06.4
+**1.06.4**
 Removed: Ifrit/Hunter
 Removed: kord gun/tripod bag from opfor
 Added: Podnos static pod to blufor
@@ -111,7 +134,7 @@ Added: Remaining rpg ammo types
 Tweaked: Nuke range incrased to 1km
 Added: Gear menu Cam
 
-1.06.3
+**1.06.3**
 Tweaked: Blufor titan ammo at correct tiers
 Added: Wipeout added to blufor AF4 to replace A-10
 Tweaked: Artys added in behind LF5 upgrade tier
@@ -128,7 +151,7 @@ Fixed: Some defence structure ruins not disappearing on death
 Fixed: Town occupation not spawning
 Fixed: Base defence will not respawn after it dies
 
-1.06.2
+**1.06.2**
 Fixed: Rearm on some aircraft giving incorrect loadouts
 Tweaked: rearming an aicraft doesn't remove all of this ammo during rearm. 
 Fixed: tool kit repair not always fixing tires on a vehicle
@@ -142,12 +165,12 @@ Tweaked: Correctly tier titan at(g3) and aa(g4)
 Tweaked: Unified blufor/opfor titan ammo cost (ap800/aa1500/at2500)
 Tweaked: Balance blufor/opfor lack of thermals
 
-1.06.1
+**1.06.1**
 Fixed: Depot available when camps are lost
 Replaced: Opfor mbt's with t72d/t80bkv/t80ue-1
 Tweaked: Reduced all AF prices (AF4-5%/AF3-10%/AF2-15%/AF1-20%/AF0-25%)
 
-1.06
+**1.06**
 Tweaked: Moved l39 from air factory 1 to air factory 2
 Tweaked: Moved BRDM ATGM from light factory 0 to light factory 2
 Tweaked: Moved kajman from air factory 3 to air factory 4
@@ -203,7 +226,7 @@ Removed: Items from defense truck and repair truck old action menus.
 Removed: Actions menus from halo drop.
 Tweaked: Halo jump cooldown now changed from 1 minute to 5 minutes.
 
-1.05
+**1.05**
 Added: Spawn on vehicle disabled when enemy nearby 50M
 Added: Tank Low Gear / Hill climb
 Added: Tank Stealth mode
@@ -230,3 +253,117 @@ Fixed: Reload and clear buttons are disabled unless near gear source
 Fixed: Respawn pods and ammo pods
 Fixed: Teamstack system would show incorrect message
 Fixed: Fuel truck now has service menu
+
+**V1.04**
+Added: Spawn on vehicle disabled when enemy nearby
+Added: Tank Low Gear / Hill climb
+Added: Tank Stealth mode
+Added: Paramter to set all camps required to capture town
+Added: All camps must be captured to capture town
+Added: Base area enemy reporting sattelite upgrade
+Added: New satellite base structure 
+Added: Longer despawn timer for service vehicles
+Added: RHS Support
+Tweaked: UI Edits
+Tweaked: Weather no more crazy fog
+Tweaked: AI Patrols will now take the camps back
+Fixed: Persistent gear templates
+Fixed: Gear dup when adding weapons to cargo
+Fixed: Player starting cash would follow slot and not player
+Fixed: AI unit cam view
+Fixed: Patriot not firing on blufor
+Fixed: AI map labels
+Fixed: On teamswap player wont loose original gear
+Fixed: Issue where players could access equipment menu outside base
+Fixed: Reload and clear buttons are disabled unless near gear source
+
+**V1.03**
+Fixed: Various map/mission fixes
+Fixed: Intro/Outro Fix 
+Fixed: Nuke truck
+Fixed: Salvager bug on tropic maps 
+Fixed: Money transfer display bug fixed
+Tweaked: View distance set for 3500
+Tweaked: BTR 90, LAV25 moved to Light Factory 4 
+Tweaked: Vodnik BPPU moved to Light Factory 3 
+Tweaked: Weapon sway changed to none -However, weapon sway at NONE still creates a reasonable amount of weapon sway.
+Tweaked: AI crew has improved spotting
+Tweaked: Darter moved to gear 3 
+Tweaked: RPG-7 Scope's added to Gear 2/3 
+Tweaked: Darter now has a range limit of 4k 
+Tweaked: HMG/GMG/MED Strykers moved to Light Factory 2/3 
+Tweaked: Names of units updated to better describe them to new players (WIP) 
+Tweaked: Titan Launchers had a price update to reduce dependency/spam 
+Tweaked: Alpha jet and I39 moved to air 3 
+Tweaked: Various price adjustments 
+Tweaked: S300/Patriot Range now 3.5 Km 
+Tweaked: Starting Supply max reduced to 5k 
+Tweaked: Repair trucks have a tax multiplier to build things. HQ does not.
+Added: VON now keeps players out of global 
+Added: Defense Truck added to Depots/Repair Factory. Comes With a small collection of mines and can build basic fortifications. 
+Added: Winter units
+Added: Player rank system improved. starts with 4 AI slots every rank gain 1 AI slots 
+Rank system now gives perks at each level, Corporal-Medic, Sergeant-explosive specialist/engineer, Lieutenant-UAV hacker, Captain-Increased stamina, Major-reduced load, Colonel-increased camo vs AI and decreased noise.
+Added: Tags added to reduce FF from Newbs, can be turned off by player 
+Added: AI Now get better based off of how many enemy kills they have. Keep your men alive! 
+Added: ERA AND LVOSS added to Heavy and Light units on upgrade tree 
+Added: Toolkits and Parachutes added to all Air units 
+Added: Toolkits added to all repair trucks 
+Added: Deployable Backpack boat added to gear 3 
+Added: Autonomous HMG/GMG added to gear 4
+Added: New Supply system-Bases now store supply in the supply Depot building costs 2.5 supply to build stores 5k supply if destroyed you lose that much supply, has debt protection. 
+Added: Base CRAM can now destroy incoming projectiles and kill darters at 1K
+Added: Bounties to defensive structures and Fortifications 
+Added: Defensive structures now have a upgrade tree 
+Added: Base health now on a upgrade tree Max health is the old starter health 
+Added: New Fob type added as a small forward base Resupply/light units/infantry/gear 
+Added: Teamstack system will not apply to players that are reconnecting 
+Removed: SPG9_TKA from OPFOR as it was pulling Resistance prices 
+Removed: Mastiff, Ridgeback, Wolfhound due to broken dmg states. 
+Removed: Gear crates because they where spawning advance gear in them 
+Removed: D30 from repair trucks
+
+**V1.01**
+Fixed: Empty res vehicles will not despawn when town is deactivated
+Fixed: Player AI running away on killed
+Fixed: Will not need heavy 4 for air 4 upgrade
+Fixed: Mobilising MHQ wont glitch into near by objects any more
+Fixed: Extra Crew player AI limiter didnt work
+Fixed: Salvage truck respawn time, moved tungushka down to heavy 2
+Fixed: Altis Camps
+Fixed: FOB colision with other objects
+Tweaked: Nuke Price decreased
+Tweaked: Removed Prodavec map marker script
+Tweaked: Vote system will requre less people to paticipate
+Tweaked: Money transfer will now show player name
+Tweaked: Incrase probabilityof AA troops in towns, as well as AA vehicles
+Tweaked: Arty price and upgrade slight bump
+Tweaked: Adjusted name tags, incrased the distance
+Tweaked: Disable stolen rep truck functions from outside
+Tweaked: Winter starting gear
+Added: Defence team count added to build menu
+Added: More Starting points
+Added: New game ending preview
+Added: New tropical camos
+Added: 3 step View distance Script (On foot, in vehicle, in air)
+Added: Cherno and Cherno winter naval towns
+Added: Bridge on Tanoa
+Removed Mark V Soc boat due to FPS drop
+Replaced S-300 system with Patriot on opfor due to texture glitch
+Removed m113 respawn
+
+**V1.00**
+Added: Fob removal via base managment for commander
+Added: Tire Protection script
+Tweaked patriot system building collison
+Tweaked starting placment for both teams
+Added: Extra CUP rifles with scopes
+Tweaked: Economy
+Added: Extra 6 towns to Napf
+Fixed: Floating camps on Napf
+Removed: DPICM Arty
+Added: No AI limiter for commander
+Added: Warning message before Vote menu opens
+Added: More Winter units
+Tweaked: Units and prices
+Tweaked: Terrain Grid

@@ -7,7 +7,7 @@ params[ "_compReference", "_item" ];
 
 //[ "Marker", "Object", "Group", "Waypoint", "Trigger", "Logic" ];
 {
-	if ( !isNil "_x" && { _x select 0 == _compReference } ) exitWith {
+	if ( !isNil "_x" && { _x select 0 isEqualTo _compReference } ) exitWith {
 		{
 			_x params[ "_id", "_obj" ];
 			switch ( typeName _item ) do {
