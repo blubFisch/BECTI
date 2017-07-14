@@ -866,8 +866,6 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 //--- Set Perks and Traits and Player Ai if rank based
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
-FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 
