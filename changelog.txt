@@ -1,4 +1,4 @@
-**Upcoming release**
+**1.07.3**
 Tweaked: Damage for defenses and base
 Tweaked: Code optimizations
 Tweaked: Initial spawn vehicle placement
