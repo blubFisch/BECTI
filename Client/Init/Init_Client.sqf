@@ -923,7 +923,7 @@ _uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_
 0 spawn { call CTI_CL_FNC_Spawn; };
 
 //--- TODO: Organize all keybinds in one location
-//--- Holster weapon Keybind (Key 5)
-holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 0x05) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
+//--- Holster weapon Keybind (Key H)
+holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 0x23) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
 
 CTI_Init_Client = true;
