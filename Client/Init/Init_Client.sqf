@@ -647,7 +647,7 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 					case 0: {_town_west = "Vanilla NATO";};
 					case 1: {_town_west = "Pacific Special Forces - APEX";};
 					case 2: {_town_west = "US Army - CUP";};
-					case 3: {_town_west = "Russians - RHS";};
+					case 3: {_town_west = "US - RHS";};
 					case 4: {_town_west = "Winter NATO";};
 				};
 				_town_east = "";

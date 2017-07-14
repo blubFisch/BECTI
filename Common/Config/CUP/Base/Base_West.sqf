@@ -111,7 +111,7 @@ _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
 _prices pushBack 		8000;
 _times pushBack 		140;
 _placements pushBack 	[180, 40];
-_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 20000]]; 
+_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]]; 
 _conditions pushBack 	(compile format["(%1) call CTI_CO_FNC_IsHQDeployed", _side]);
 _respawnBPos pushBack	-1;
 

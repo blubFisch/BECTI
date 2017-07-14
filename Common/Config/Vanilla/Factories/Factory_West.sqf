@@ -415,18 +415,6 @@ if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3 ) then {
 		//NATO (arid)*********************
 		//NATO (woodland)*********************
 		//NATO Winter OFPS
-		/*_u pushBack 'sfp_m90s_rifleman_ak5';
-		_u pushBack 'sfp_m90s_automaticrifleman_ksp90';
-		_u pushBack 'sfp_m90s_gr';
-		_u pushBack 'sfp_m90s_explosive_specialist';
-		_u pushBack 'sfp_m90s_engineer';
-		_u pushBack 'sfp_1990_m90s_marksman';
-		_u pushBack 'sfp_m90s_aa_specialist_rbs69';
-		_u pushBack 'sfp_m90s_at_specialist_grg86';
-		_u pushBack 'sfp_m90s_crew';
-		_u pushBack 'sfp_m90s_pilot';
-		_u pushBack 'sfp_m90s_medic';*/
-		//Special Forces Winter 
 		/*_u pushBack 'Meaty_Soldier_B_Sn';
 		_u pushBack 'Meaty_teamlead_B_Sn';
 		_u pushBack 'Meaty_SoldierGL_B_Sn';
@@ -714,10 +702,6 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
-		//_u pushBack 'dbo_CIV_new_bike';
-		//_u pushBack 'dbo_CIV_ol_bike';
 		//NATO (arid)*********************
 		_u pushBack "OFPS_4WD_B";
 		_u pushBack "OFPS_STRIDER_B";
@@ -730,7 +714,7 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack "OFPS_HUNTER_GMG";	
 		
 		//NATO (Winter)*********************
-		/*_u pushBack 'sfp_bv206_winter';
+		/*
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';	
 		_u pushBack 'Meaty_HunterGMG_Sn';*/		
@@ -856,7 +840,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
 		//USAF RHS (Arid)*********************
-		_u pushBack 'RHS_M2A2';
+/*		_u pushBack 'RHS_M2A2';
 		_u pushBack 'RHS_M2A2_wd';
 		_u pushBack 'RHSUSF_M113D_USARMY';
 		_u pushBack 'rhsusf_m113_usarmy';
@@ -883,7 +867,7 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'RHSUSF_M109D_USARMY';
 		_u pushBack 'rhsusf_m1a2sep1tuskiiwd_usarmy';
 		_u pushBack 'rhsusf_m109_usarmy';
-		_u pushBack 'rhsusf_m1a1hc_wd';	
+		_u pushBack 'rhsusf_m1a1hc_wd';	*/
 		//USAF RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -1059,7 +1043,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_USAF_ADDON >= 2) then { 
 		//USAF RHS (Arid)*********************
-		_u pushBack 'RHS_UH1Y_UNARMED_d';
+/*		_u pushBack 'RHS_UH1Y_UNARMED_d';
 		_u pushBack 'RHS_UH60M_MEV2_d';
 		_u pushBack 'RHS_MELB_MH6M';
 		_u pushBack 'RHS_MELB_H6M';
@@ -1087,7 +1071,7 @@ if (CTI_RHS_USAF_ADDON >= 2) then {
 		_u pushBack 'RHS_AH64DGrey';
 		_u pushBack 'RHS_AH64D';
 		_u pushBack 'RHS_AH64D_AA';
-		_u pushBack 'RHS_an2';		
+		_u pushBack 'RHS_an2';*/		
 		//USAF RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -1423,10 +1407,6 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
 		//NATO (arid)*********************
 		/*_u pushBack "Burnes_LCAC_1";
-		_u pushBack "sfp_svavare2000";
-		_u pushBack "sfp_svavare2000_transport";
-		_u pushBack "sfp_gruppbat";
-		_u pushBack "sfp_rbb_norrkoping";
 		_u pushBack "OFPS_Frigate_Blu";*/		
 		//NATO (woodland)*********************
 };
@@ -1579,21 +1559,18 @@ if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 		//NATO Vanilla (woodland)*********************		
 		//NATO Pacific APEX (woodland)*********************	
 		//NATO Winter OFPS
-		/*_u pushBack 'sfp_m90s_rifleman_ak5';
-		_u pushBack 'sfp_m90s_crew';*/
+
 };
 //---Vehicles
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
 		//NATO (arid)*********************
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
 		//_u pushBack 'usaf_police_car2';
 		//_u pushBack 'usaf_police_offroad';	
 		//NATO (woodland)*********************
 		_u pushBack 'OFPS_HUNTER';
 		_u pushBack 'OFPS_HUNTER_HMG';		
 		//NATO Winter OFPS
-		/*_u pushBack 'sfp_bv206_winter';
+		/*
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';*/		
 };
@@ -1670,10 +1647,7 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
-		//NATO (arid)*********************
-		/*_u pushBack "sfp_svavare2000";
-		_u pushBack "sfp_svavare2000_transport";
-		_u pushBack "sfp_gruppbat";*/		
+		//NATO (arid)*********************	
 		//NATO (woodland)*********************
 };
 
@@ -1819,19 +1793,13 @@ if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 };
 //---Vehicles
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
-		//NATO (arid)*********************
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
-		//_u pushBack 'usaf_police_car2';
-		//_u pushBack 'usaf_police_offroad';		
+		//NATO (arid)*********************	
 		//NATO (woodland)*********************
 		//NATO Pacific APEX (woodland)*********************
 		//_u pushBack "OFPS_HUNTER";
 		//_u pushBack "OFPS_HUNTER_HMG";
 		//NATO Winter OFPS
-		/*_u pushBack 'sfp_m90s_rifleman_ak5';
-		_u pushBack 'sfp_m90s_crew';
-		_u pushBack 'sfp_bv206_winter';
+		/*
 		_u pushBack 'Meaty_Hunter_Sn';		
 		_u pushBack 'Meaty_HunterHMG_Sn';*/		
 };

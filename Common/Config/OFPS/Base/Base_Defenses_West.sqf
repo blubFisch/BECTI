@@ -2624,35 +2624,6 @@ if (CTI_OFPS_UNITS_ADDON > 0) then {
 		//FORTIFICATIONS
 		
 		//SHEDS
-		/*_headers pushBack 		"Mil Shed";
-		_classes pushBack 		"Land_sfp_mil_shed";
-		_prices pushBack 		4000;
-		_placements pushBack 	[0, 20];
-		_categories pushBack 	"Sheds";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 40]];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
-
-		_headers pushBack 		"Hangar Wood";
-		_classes pushBack 		"Land_sfp_torebodahangar";
-		_prices pushBack 		4000;
-		_placements pushBack 	[0, 20];
-		_categories pushBack 	"Sheds";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 40]];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];
-
-		_headers pushBack 		"Hangar Wood Large";
-		_classes pushBack 		"Land_sfp_torebodahangar_alt2";
-		_prices pushBack 		5000;
-		_placements pushBack 	[0, 20];
-		_categories pushBack 	"Sheds";
-		_coinmenus pushBack 	["HQ"];
-		_coinblacklist pushBack [["Land_Shed_Big_F", 15], ["Land_TentHangar_V1_F", 30], ["Land_Dome_Small_F", 30], ["Land_Dome_Big_F", 40]];
-		_upgrade pushBack		2;	
-		_specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 3]];*/		
 		//MISC
 		
 		//STATICS

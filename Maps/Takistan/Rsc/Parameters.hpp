@@ -159,19 +159,19 @@ class Params {
 		title = "TOWNS: Resistance Occupation Forces";
 		values[] = {0,1,2,3,4,5,6,7};
 		texts[] = {"Vanilla - AAF","Vanilla - FIA","Syndikat Paramilitary - APEX","ION PMC - CUP","NAPA Chernarus - CUP","Royal Army Corp Of Sahrani - CUP","Takistani Military - CUP","GREF - RHS"};
-		default = 0;
+		default = 6;
 	};
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","Russians - RHS"};
-		default = 0;
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","US - RHS"};
+		default = 2;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
 		title = "TOWNS: Opfor Occupation Forces";
 		values[] = {0,1,2,3};
 		texts[] = {"Vanilla","Pacific Special Forces - APEX","Russians - CUP","Russians - RHS"};
-		default = 0;
+		default = 2;
 	};
 	class CTI_TOWNS_PEACE {
 		title = "TOWNS: Peace";
@@ -309,19 +309,19 @@ class Params {
 		title = "VEHICLES: Loadouts";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Realistic","Unlocked"};
-		default = 2;
+		default = 0;
 	};
 	class CTI_VEHICLES_AIR_ORDINANCE {
 		title = "VEHICLES: Air Ordinance Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled (no limit)","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_VEHICLES_LAND_ORDINANCE {
 		title = "VEHICLES: Land Ordinance Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled (no limit)","Enabled"};
-		default = 1;
+		default = 0;
 	};	
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
@@ -339,7 +339,7 @@ class Params {
 		title = "VEHICLES: Enable ERA/ARENA";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
 		title = "VEHICLES: Vehicles Recycling Delay";

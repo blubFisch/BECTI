@@ -13,14 +13,13 @@ Added: Town defense statics
 Added: MHQ damage transfers ones deployed or mobilized 
 Added: MHQ deploy and mobilization will take time now
 Added: Complete mod support restructure, with ability to mix and match on fly
-On Hold: Vehicle Loadouts, both Air and Land
-On Hold: Ability to re-texture on fly any vehicle
 Added: Filters based by camo for both Gear and Vehicles
 Added: Vanilla Revive System
 Added: UAV Terminal Support for Persistent gear
 Added: More base buildings to count as factories
 Fixed: Vehicles will not spawn in houses
 Fixed: Empty town vehicles will not despawn after town deactivation
+Fixed: ERA is now enabled
 
 **1.07.2**
 Fixed: Altis naval camp
