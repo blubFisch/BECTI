@@ -647,7 +647,7 @@ if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileN
 					case 0: {_town_west = "Vanilla NATO";};
 					case 1: {_town_west = "Pacific Special Forces - APEX";};
 					case 2: {_town_west = "US Army - CUP";};
-					case 3: {_town_west = "Russians - RHS";};
+					case 3: {_town_west = "US - RHS";};
 					case 4: {_town_west = "Winter NATO";};
 				};
 				_town_east = "";
@@ -866,8 +866,6 @@ if ( (missionNamespace getVariable 'CTI_SM_NONV')>0 || (missionNamespace getVari
 //--- Set Perks and Traits and Player Ai if rank based
 0 execVM "Client\Functions\Client_SetUnitPerks.sqf";
 
-FNC_AdjustPlayerCrewSkill = compileFinal preprocessFile "Client\Functions\Externals\AdjustPlayerCrewSkill.sqf";
-
 //--- Low gear script
 execVm "Client\Functions\Externals\Valhalla\Low_Gear_init.sqf";
 
@@ -923,7 +921,7 @@ _uav_restriction = execVM "Client\Functions\Externals\Restrict_uavrage\Restrict_
 0 spawn { call CTI_CL_FNC_Spawn; };
 
 //--- TODO: Organize all keybinds in one location
-//--- Holster weapon Keybind (Key 5)
-holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 0x05) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
+//--- Holster weapon Keybind (Key H)
+holsterKeydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 0x23) then {_nul = [] execVM 'Client\Functions\Externals\KeyFunctions\WeaponHolster.sqf'};"];
 
 CTI_Init_Client = true;

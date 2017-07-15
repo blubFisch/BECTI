@@ -41,11 +41,13 @@ private ["_logic", "_side", "_var", "_virtual_damages", "_overall_damage", "_hea
 _side = (_sideID) call CTI_CO_FNC_GetSideFromID;
 _logic = (_side) call CTI_CO_FNC_GetSideLogic;
 
-//check for last damage time
+//--- Check for last damage time
 _lastdamagetime = _damaged getVariable ["cti_damage_lastdamaged", (time - 10)]; 			
 _lastdamagediff = time - _lastdamagetime;
 _damaged setVariable ["cti_damage_lastdamaged", time];
-if (_lastdamagediff <= 0.1) exitWith {0};
+
+//--- Adjust this for sleep between each damage hit
+if (_lastdamagediff <= 0.01) exitWith {0};
 
 if (CTI_BASE_NOOBPROTECTION isEqualTo 1 && side _shooter in [_side, sideEnemy]) exitWith {0};
 //Base Health Upgrade

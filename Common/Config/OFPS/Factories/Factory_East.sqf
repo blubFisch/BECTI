@@ -721,10 +721,6 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON >= 2) then { 
 		//CSAT (arid)*********************
-		//_u pushBack 'dbo_CIV_new_bike';
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
-		//_u pushBack 'dbo_CIV_ol_bike';
 		_u pushBack "OFPS_4WD_O";
 		_u pushBack "OFPS_STRIDER_O";
 		_u pushBack "OFPS_STRIDER_HMG_O";
@@ -732,7 +728,7 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack "OFPS_O_Truck_03_device_F";		
 		//CSAT (woodland)******************************************
 		//CSAT (Winter)******************************************NOT READY
-		/*_u pushBack 'sfp_bv206_winter';
+		/*
 		_u pushBack 'AAF_D_Truck_02_covered_F';
 		_u pushBack 'AAF_D_MRAP_03_F';
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';
@@ -855,7 +851,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_AFRF_ADDON >= 2) then {
 		//Russia RHS (Arid)*********************
-		_u pushBack 'rhs_bmp1_msv'; 
+/*		_u pushBack 'rhs_bmp1_msv'; 
 		_u pushBack 'rhs_bmd1'; 
 		_u pushBack 'rhs_pts_vmf'; 
 		_u pushBack 'rhs_prp3_msv'; 
@@ -884,7 +880,7 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 		_u pushBack 'rhs_2s3_tv';
 		_u pushBack 'RHS_BM21_MSV_01';
 		_u pushBack 'rhs_9k79';
-		_u pushBack 'rhs_9k79_K';
+		_u pushBack 'rhs_9k79_K';*/
 		//Russia RHS (Woodland)*********************		
 };
 //------------------------------ OFPS RHS ------------------------------
@@ -1077,7 +1073,7 @@ if (CTI_OFPS_CUP_ADDON >= 2) then {
 //------------------------------ RHS ------------------------------
 if (CTI_RHS_AFRF_ADDON >= 2) then {
 		//Russia RHS (Arid)*********************
-		_u pushBack 'rhs_Mi8AMT_vvsc';
+/*		_u pushBack 'rhs_Mi8AMT_vvsc';
 		_u pushBack 'rhs_ka60_c';
 		_u pushBack 'RHS_Mi8mt_vvsc';
 		_u pushBack 'RHS_Mi8mt_cargo_vdv';
@@ -1102,7 +1098,7 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 		_u pushBack 'RHS_TU95MS_vvs_tambov';
 		_u pushBack 'RHS_TU95MS_vvs_old';
 		_u pushBack 'rhs_mi28n_vvsc';
-		_u pushBack 'rhs_mi28n_s13_vvsc';
+		_u pushBack 'rhs_mi28n_s13_vvsc';*/
 		_u pushBack 'rhs_an2';
 		//Russia RHS (Woodland)*********************		
 };
@@ -1131,35 +1127,10 @@ if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		_u pushBack "OFPS_HELLCAT_O_DYNAMIC";
 		_u pushBack "OFPS_BUZAA_O";
 		_u pushBack "OFPS_BUZAA_O_DYNAMIC";
-		_u pushBack "OFPS_GRYPHON_O";			
-		/*_u pushBack 'O_T_UAV_04_CAS_F';		
-		_u pushBack 'O_UCSV_01';
-		_u pushBack 'sfp_bo105_unarmed';
-		_u pushBack 'sfp_bo105';
-		_u pushBack 'O_UCSV_01';
-		_u pushBack 'USAF_C17';
-		_u pushBack 'usaf_c5';
-		_u pushBack 'LDL_C130J';
-		_u pushBack 'bwi_a3_t6a_5';
-		_u pushBack 'bwi_a3_at6b_2';
-		_u pushBack 'bwi_a3_at6b_4';
-		_u pushBack 'sab_alphajet8';
-		_u pushBack 'sfp_j12';
-		_u pushBack 'sfp_j12_rb15';
-		_u pushBack 'sfp_j12_cap';
-		_u pushBack 'usaf_b1b';
-		_u pushBack 'pook_tu953M80';
-		_u pushBack 'pook_tu95ms';
-		_u pushBack 'pook_tu95ms16';
-		_u pushBack 'pook_tu95MSM';
-		_u pushBack 'JS_JC_SU35';
-		_u pushBack "sab_l19_sea_1";*/		
+		_u pushBack "OFPS_GRYPHON_O";				
 		//CSAT (woodland)*********************
 		//CSAT (Winter)*********************
-		/*_u pushBack "IP_O_Plane_CAS_02_FSnowHex";
-		_u pushBack 'IP_O_Heli_Attack_02_SnowHex_FST';
-		_u pushBack 'IP_O_Heli_Light_02_FST';
-		_u pushBack 'IP_O_Heli_Light_02_unarmed_FST';*/		
+
 };
 
 missionNamespace setVariable [format ["CTI_%1_%2Units", _side, CTI_AIR], _u];
@@ -1399,10 +1370,6 @@ if (CTI_OFPS_RHS_ADDON >= 2) then {
 if (CTI_OFPS_UNITS_ADDON >= 2) then {
 		//CSAT (arid)*********************
 		/*_u pushBack "Burnes_LCAC_1";
-		_u pushBack "sfp_svavare2000";
-		_u pushBack "sfp_svavare2000_transport";
-		_u pushBack "sfp_gruppbat";
-		_u pushBack "sfp_rbb_norrkoping";
 		_u pushBack "OFPS_Frigate_CSAT";*/		
 		//CSAT (woodland)*********************
 };
@@ -1559,16 +1526,12 @@ if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 //---Vehicles
 if (CTI_OFPS_UNITS_ADDON  >= 2) then { 
 		//CSAT (arid)*********************
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
 		/*_u pushBack 'OFPS_UAZ';
 		_u pushBack 'OFPS_UAZ_MG';
-		_u pushBack 'OFPS_UAZ_AGS30';*/
-		//_u pushBack 'usaf_police_car2';
-		//_u pushBack 'usaf_police_offroad';		
+		_u pushBack 'OFPS_UAZ_AGS30';*/		
 		//CSAT (woodland)*********************
 		//CSAT Winter OFPS
-		/*_u pushBack 'sfp_bv206_winter';
+		/*
 		_u pushBack 'AAF_D_MRAP_03_F';
 		_u pushBack 'AAF_D_MRAP_03_hmg_F';*/		
 };
@@ -1652,10 +1615,7 @@ if (CTI_OFPS_RHS_ADDON  >= 2) then {
 };
 //------------------------------ OFPS ------------------------------
 if (CTI_OFPS_UNITS_ADDON  >= 2) then { 
-		//CSAT (arid)*********************
-		/*_u pushBack "sfp_svavare2000";
-		_u pushBack "sfp_svavare2000_transport";
-		_u pushBack "sfp_gruppbat";*/		
+		//CSAT (arid)*********************	
 		//CSAT (woodland)*********************
 };
 
@@ -1808,13 +1768,9 @@ if (CTI_OFPS_UNITS_ADDON isEqualTo 1 || CTI_OFPS_UNITS_ADDON >= 3) then {
 //---Vehicles
 if (CTI_OFPS_UNITS_ADDON  >= 2) then { 
 		//CSAT (arid)*********************
-		//_u pushBack 'sfp_dakota';
-		//_u pushBack 'sfp_mercedes';
 		/*_u pushBack 'OFPS_UAZ';
 		_u pushBack 'OFPS_UAZ_MG';
-		_u pushBack 'OFPS_UAZ_AGS30';*/
-		//_u pushBack 'usaf_police_car2';
-		//_u pushBack 'usaf_police_offroad';		
+		_u pushBack 'OFPS_UAZ_AGS30';*/		
 		//CSAT (woodland)*********************
 		//CSAT (Winter)*********************NEEDS MOD
 		/*_u pushBack 'AAF_D_MRAP_03_F';

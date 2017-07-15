@@ -954,11 +954,6 @@ _u pushBack 2;
 _p pushBack 100;
 _g pushBack "";
 
-_i pushBack "O_GMG_01_support_F";
-_u pushBack 2;
-_p pushBack 100;
-_g pushBack "";
-
 _i pushBack "O_Mortar_01_support_F";
 _u pushBack 3;
 _p pushBack 2500;
@@ -1021,17 +1016,6 @@ _i pushBack "H_PilotHelmetFighter_O";
 _u pushBack 1;
 _p pushBack 150;
 _g pushBack "Black";
-
-_i pushBack "H_HelmetLeader0_ocamo";
-_u pushBack 1;
-_p pushBack 150;
-_g pushBack "Hex";
-
-_i pushBack "H_HelmetLeader0_oucamo";
-_u pushBack 1;
-_p pushBack 150;
-_g pushBack "Hex";
-
 
 //--- HATS	
 _i pushBack "H_Bandanna_gry";

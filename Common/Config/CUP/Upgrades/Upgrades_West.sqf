@@ -9,11 +9,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 	true, //--- Heavy
 	true, //--- Naval
 	true, //--- Air
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_FFAR") isEqualTo 1, //--- Air FFAR
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_DAR") isEqualTo 1, //--- Air DAR
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_AT") isEqualTo 1, //--- Air AT
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_AA") isEqualTo 1, //--- Air AA
-	(missionNamespace getVariable "CTI_VEHICLES_AIR_CM") isEqualTo 1, //--- Air CM
+	(missionNamespace getVariable "CTI_VEHICLES_AIR_ORDINANCE") isEqualTo 1, //--- Air Ordinance
+	(missionNamespace getVariable "CTI_VEHICLES_LAND_ORDINANCE") isEqualTo 1, //--- Land Ordinance
 	(missionNamespace getVariable "CTI_TOWNS_OCCUPATION") > 0, //--- Towns Depots
 	true, //--- Halo
 	true, //--- Air Radar
@@ -36,11 +33,8 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		[2000], //--- Heavy
 		[1500,2000], //--- Naval
 		[2500,5000], //--- Air
-		[1500], //--- Air FFAR
-		[1500], //--- Air DAR
-		[1500], //--- Air AT
-		[1500], //--- Air AA
-		[1500], //--- Air CM
+		[500,1000,1500,2000], //--- Air Ordinance
+		[500,1000,1500,2000], //--- Land Ordinance
 		[2500, 5000, 7500], //--- Towns Depots
 		[1000, 2000], //--- Halo
 		[1000, 1000, 1000], //--- Air Radar
@@ -63,11 +57,8 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		[3500,4500,6000,8000], //--- Heavy
 		[1500,3000], //--- Naval
 		[4000,6000,8000,10000,12000], //--- Air
-		[10], //--- Air FFAR
-		[10], //--- Air DAR
-		[10], //--- Air AT
-		[10], //--- Air AA
-		[10], //--- Air CM
+		[500,1000,1500,2000], //--- Air Ordinance
+		[500,1000,1500,2000], //--- Land Ordinance
 		[1500,3000,4500], //--- Forward Logistics
 		[1000,2000], //--- Halo
 		[1000,1500,2000], //--- Air Radar
@@ -92,11 +83,8 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		0, //--- Heavy
 		2, //--- Naval
 		2, //--- Air
-		0, //--- Air FFAR
-		0, //--- Air DAR
-		0, //--- Air AT
-		0, //--- Air AA
-		1, //--- Air CM
+		0, //--- Air Ordinance
+		0, //--- Land Ordinance
 		2, //--- Towns Depots
 		0, //--- Halo
 		1, //--- Air Radar
@@ -119,11 +107,8 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		4, //--- Heavy
 		2, //--- Naval
 		5, //--- Air
-		1, //--- Air FFAR
-		1, //--- Air DAR
-		1, //--- Air AT
-		1, //--- Air AA
-		1, //--- Air CM
+		4, //--- Air Ordinance
+		4, //--- Land Ordinance
 		3, //--- Towns Depots
 		2, //--- Halo
 		3, //--- Air Radar
@@ -148,11 +133,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
 	[[],[]], //--- Naval
 	[[],[],[],[],[]], //--- Air
-	[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AT
-	[[CTI_UPGRADE_AIR, 1]], //--- Air AA
-	[[CTI_UPGRADE_AIR, 1]], //--- Air CM
+	[[],[],[],[]], //--- Air Ordinance
+	[[],[],[],[]], //--- Land Ordinance
 	[[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3]], //--- Towns Depots
 	[[CTI_UPGRADE_AIR, 1],[CTI_UPGRADE_AIR, 2]], //--- Halo
 	[[],[],[]], //--- Air Radar
@@ -175,11 +157,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 		[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
 		[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2]], //--- Naval
 		[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
-		[[CTI_UPGRADE_AIR, 1]], //--- Air FFAR
-		[[CTI_UPGRADE_AIR, 1]], //--- Air DAR
-		[[CTI_UPGRADE_AIR, 1]], //--- Air AT
-		[[CTI_UPGRADE_AIR, 1]], //--- Air AA
-		[[CTI_UPGRADE_AIR, 1]], //--- Air CM
+		[[],[],[],[]], //--- Air Ordinance
+		[[],[],[],[]], //--- Land Ordinance
 		[[CTI_UPGRADE_BARRACKS,2],[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- Towns Depots
 		[[],[CTI_UPGRADE_AIR, 1]], //--- Halo
 		[[],[],[]], //--- Air Radar
@@ -204,11 +183,8 @@ if (CTI_DEV_MODE > 0) then {
 		[1, 1, 1, 1], //--- Heavy
 		[1, 1], //--- Naval
 		[1, 1, 1, 1, 1], //--- Air
-		[1], //--- Air FFAR
-		[1], //--- Air DAR
-		[1], //--- Air AT
-		[1], //--- Air AA
-		[1], //--- Air CM
+		[1, 1, 1, 1], //--- Air Ordinance
+		[1, 1, 1, 1], //--- Land Ordinance
 		[1, 1, 1], //--- Towns Depots
 		[1, 1], //--- Halo
 		[1, 1, 1], //--- Air Radar
@@ -232,11 +208,8 @@ if (CTI_DEV_MODE > 0) then {
 			[120], //--- Heavy
 			[60,120], //--- Naval
 			[120,360], //--- Air
-			[60], //--- Air FFAR
-			[60], //--- Air DAR
-			[60], //--- Air AT
-			[60], //--- Air AA
-			[60], //--- Air CM
+			[30,60,120,180], //--- Air Ordinance
+			[30,60,120,180], //--- Land Ordinance
 			[60,120,180], //--- Towns Depots
 			[60,60], //--- Halo
 			[60,60,60], //--- Air Radar
@@ -259,11 +232,8 @@ if (CTI_DEV_MODE > 0) then {
 			[60,120,180,240], //--- Heavy
 			[60,120], //--- Naval
 			[60,120,180,240,300], //--- Air
-			[60], //--- Air FFAR
-			[60], //--- Air DAR
-			[60], //--- Air AT
-			[60], //--- Air AA
-			[60], //--- Air CM
+			[30,60,120,180], //--- Air Ordinance
+			[30,60,120,180], //--- Land Ordinance
 			[60,120,180], //--- Towns Depots
 			[60,60], //--- Halo
 			[60,60,60], //--- Air Radar
@@ -293,11 +263,6 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 	[CTI_UPGRADE_SUPPLY_RATE, 1],
 	[CTI_UPGRADE_GEAR, 3],
 	[CTI_UPGRADE_TOWNS, 2],
-	[CTI_UPGRADE_AIR_FFAR, 1],
-	[CTI_UPGRADE_AIR_DAR, 1],
-	[CTI_UPGRADE_AIR_AT, 1],
-	[CTI_UPGRADE_AIR_AA, 1],
-	[CTI_UPGRADE_AIR_CM, 1],
 	[CTI_UPGRADE_SUPPLY_RATE, 2],
 	[CTI_UPGRADE_TOWNS, 3],
 	[CTI_UPGRADE_HALO, 1],
@@ -317,11 +282,8 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
 	["Heavy Factory", "<t>Unlock better armored units</t>"], //--- Heavy
 	["Naval Factory", "<t>Unlock better naval units</t>"], //--- Naval
 	["Aircraft Factory", "<t>Unlock better aircraft units</t>"], //--- Air
-	["Aircraft FFAR", "<t>Unlocks the FFAR Rockets for Aircrafts</t>"], //--- Air FFAR
-	["Aircraft DAR", "<t>Unlocks the DAR Rockets for Aircrafts</t>"], //--- Air DAR
-	["Aircraft AT", "<t>Unlocks the Anti Tank Missiles for Aircrafts</t>"], //--- Air AT
-	["Aircraft AA", "<t>Unlocks the Anti Air Missiles for Aircrafts</t>"], //--- Air AA
-	["Aircraft Countermeasures", "<t>Allows Aircraft to deploy countermeasures</t>"], //--- Air CM
+	["Air Ordinance", "<t>Unlock better air ordinance.<br /><t color='#ffff00'>LVL 1</t> - AA Missles / FlaresChaff<br /><t color='#ffff00'>LVL 2</t> - FFAR/DAR Rockets<br /><t color='#ffff00'>LVL 3</t> - AT Rockets<br /><t color='#ffff00'>LVL 4</t> - GBU</t>"], //--- Air Ordinance
+	["Land Ordinance", "<t>Unlock better land based ordinance (tanks, mortars, arty, etc.).<br /><t color='#ffff00'>LVL 1</t> - Tank aps rounds<br /><t color='#ffff00'>LVL 2</t> - mortar rounds<br /><t color='#ffff00'>LVL 3</t> - Arty rounds<br /><t color='#ffff00'>LVL 4</t> - Arty rounds</t>"], //--- Land Ordinance
 	["Forward Logistics", "<t>Improves Gear and Vehicles available at Depots and Large FOBs<br /><t color='#ffff00'>LVL 1</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 2</t> - Additional Vehicles<br /><t color='#ffff00'>LVL 3</t> - Additional Vehicles and Adds Service To Depots</t>"], //--- Towns Depot
 	["Halo", "<t>Enable HALO Jumping from the Air factory and Depots<br /><t color='#ffff00'>LVL 1</t> - Halo to Towns and Bases<br /><t color='#ffff00'>LVL 2</t> - Halo to FOBs</t>"], //--- Halo
 	["Air Radar", "<t>Increase Range of Air Radar<br /><t color='#ffff00'>LVL 1</t> - 4000m<br /><t color='#ffff00'>LVL 2</t> - 6000m<br /><t color='#ffff00'>LVL 3</t> - 12000m<br /><t color='#ffff00'>LVL 4</t> - 18000m</t>"], //--- Air Radar

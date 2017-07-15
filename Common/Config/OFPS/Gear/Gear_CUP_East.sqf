@@ -2011,15 +2011,4 @@ _u pushBack 1;
 _p pushBack 250;
 _g pushBack "";
 
-_i pushBack "CUP_PG9_AT_M";
-_u pushBack 1;
-_p pushBack 250;
-_g pushBack "";
-
-_i pushBack "CUP_OG9_HE_M";
-_u pushBack 1;
-_p pushBack 250;
-_g pushBack "";
-
-
 [_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf";

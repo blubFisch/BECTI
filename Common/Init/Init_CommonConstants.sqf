@@ -677,9 +677,9 @@ CTI_VEHICLES_PROTECT_TIRES = 1; //--- Determine whether the damages applied to t
 ASL_HEAVY_LIFTING_MIN_LIFT_OVERRIDE = 2700;
 
 //--- Vehicles: Repair Trucks
-CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 2; //--- Repair trucks build speed multiplier (<coefficient> / (<structure build time> / 100)), higher is faster.
+CTI_VEHICLES_REPAIRTRUCK_BASE_BUILD_COEFFICIENT = 1.5; //--- Repair trucks build speed multiplier (<coefficient> / (<structure build time> / 100)), higher is faster.
 CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR = 0.01; //--- Repair trucks repair iteration per action over a structure.
-CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR_RANGE = 25; //--- Repair trucks may repair structures in that range
+CTI_VEHICLES_REPAIRTRUCK_BASE_REPAIR_RANGE = 35; //--- Repair trucks may repair structures in that range
 CTI_VEHICLES_REPAIRTRUCK_BUILD_TAX_COEFFICIENT = 2; //--- Repair truck build tax multiplier
 CTI_VEHICLES_DEFENSETRUCK_BUILD_TAX_COEFFICIENT = 2; //--- Defense truck build tax multiplier
 

@@ -164,7 +164,7 @@ class Params {
 	class CTI_TOWNS_OCCUPATION_WEST {
 		title = "TOWNS: Blufor Occupation Forces";
 		values[] = {0,1,2,3};
-		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","Russians - RHS"};
+		texts[] = {"Vanilla","Pacific Special Forces - APEX","US Army - CUP","US - RHS"};
 		default = 0;
 	};
 	class CTI_TOWNS_OCCUPATION_EAST {
@@ -309,19 +309,19 @@ class Params {
 		title = "VEHICLES: Loadouts";
 		values[] = {0,1,2};
 		texts[] = {"Disabled","Realistic","Unlocked"};
-		default = 2;
+		default = 0;
 	};
 	class CTI_VEHICLES_AIR_ORDINANCE {
 		title = "VEHICLES: Air Ordinance Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled (no limit)","Enabled"};
-		default = 1;
+		default = 0;
 	};
 	class CTI_VEHICLES_LAND_ORDINANCE {
 		title = "VEHICLES: Land Ordinance Upgrade";
 		values[] = {0,1};
 		texts[] = {"Disabled (no limit)","Enabled"};
-		default = 1;
+		default = 0;
 	};	
 	class CTI_VEHICLES_FUEL_CONSUMPTION {
 		title = "VEHICLES: Increased Fuel Consumption";
@@ -339,7 +339,7 @@ class Params {
 		title = "VEHICLES: Enable ERA/ARENA";
 		values[] = {0,1};
 		texts[] = {"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class CTI_VEHICLES_EMPTY_TIMEOUT {
 		title = "VEHICLES: Vehicles Recycling Delay";
