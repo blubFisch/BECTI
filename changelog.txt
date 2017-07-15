@@ -1,3 +1,7 @@
+**1.07.4**
+Fixed: Base auto rebuld on death
+Fixed: Player AI count in purchase menu
+
 **1.07.3**
 Tweaked: Damage for defenses and base
 Tweaked: Code optimizations
