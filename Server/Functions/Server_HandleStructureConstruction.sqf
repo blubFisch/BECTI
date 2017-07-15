@@ -13,12 +13,14 @@
     2	[String]: The structure variable name
     3	[Array]: The position
     4	[Array]: The direction
+	5	[Bool]: Align Toggle
+	6	[Bool]: Is Destroyed (optional)
 
   # RETURNED VALUE #
 	None
 
   # SYNTAX #
-	[SIDE, RUIN, STRUCTURE VARIABLE, POSITION, DIRECTION] spawn CTI_SE_FNC_HandleStructureConstruction
+	[SIDE, RUIN, STRUCTURE VARIABLE, POSITION, DIRECTION, ALIGN, DESTROYED] spawn CTI_SE_FNC_HandleStructureConstruction
 
   # DEPENDENCIES #
 
@@ -32,7 +34,7 @@
 	Server Function: CTI_SE_FNC_OnBuildingHit
 
   # EXAMPLE #
-    [_side, _structure, _variable, _position, _direction, _aligntoggle] spawn CTI_SE_FNC_HandleStructureConstruction;
+    [_side, _structure, _variable, _position, _direction, _aligntoggle, _isdestroyed] spawn CTI_SE_FNC_HandleStructureConstruction;
 */
 
 params ["_side", "_structure", "_variable", "_position", "_direction", "_aligntoggle", ["_isDestroyed", false]];

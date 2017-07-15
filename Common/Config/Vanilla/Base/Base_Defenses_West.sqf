@@ -166,6 +166,36 @@ if (CTI_VANILLA_ADDON > 0) then {
 		_upgrade pushBack		1;	
 		_specials pushBack 		[];
 		
+		_headers pushBack 		["Concrete Bunker", [["Composition","bunker_concrete",2]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		1500;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Composition";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack [["All", 20]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];	
+
+		_headers pushBack 		["Concrete Bunker (mg x2)", [["Composition","bunker_concrete_mg",2]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		3000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Composition";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack [["All", 20]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];	
+
+		_headers pushBack 		["Concrete Bunker HQ (mg x2)", [["Composition","hq_concrete_mg",2]]];
+		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";
+		_prices pushBack 		3000;
+		_placements pushBack 	[0, 5];
+		_categories pushBack 	"Composition";
+		_coinmenus pushBack 	["HQ", "RepairTruck"];
+		_coinblacklist pushBack [["All", 20]];
+		_upgrade pushBack		0;	
+		_specials pushBack 		[];			
+		
 		//Outposts
 		_headers pushBack 		["Outpost Alpha", [["Composition","outpost_alpha",0]]];
 		_classes pushBack 		"Sign_Arrow_Direction_Yellow_F";

@@ -5438,16 +5438,6 @@ class CTI_RscTabletDialogWelcome
 			h = 0.022 * safezoneH;
 			colorText[] = {0.886,0.871,0.871,1};
 		};
-		class CTI_RscTabletMenu_Title: RscTabletTitle
-		{
-			idc = 778005;
-
-			text = "Welcome"; //--- ToDo: Localize;
-			x = 14 * GUI_GRID_W + GUI_GRID_X;
-			y = 4 * GUI_GRID_H + GUI_GRID_Y;
-			w = 12 * GUI_GRID_W;
-			h = 1 * GUI_GRID_H;
-		};
 		class CTI_RscTabletMenu_MissionTime: RscTabletStructuredText
 		{
 			idc = 778006;
