@@ -113,6 +113,9 @@ switch (_action) do {
 			};
 		} forEach _list;
 		
+		//is Loadouts Enabled?
+		if (CTI_VEHICLES_LOADOUTS > 0) then {((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl 230006) ctrlEnable false};		
+		
 		uiNamespace setVariable ["cti_dialog_ui_servicemenu_list", _list_real];
 		uiNamespace setVariable ["cti_dialog_ui_servicemenu_content", _list_content];
 	};
