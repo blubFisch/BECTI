@@ -1,6 +1,3 @@
-//--- Loading Screen Status
-12452 cutText ["Receiving mission intel 0%", "BLACK FADED", 50000];
-
 //--- Early definition, will be override later on in the init files.
 CTI_P_SideJoined = civilian;
 
@@ -109,6 +106,3 @@ execVM "Common\Init\Init_GroupsID.sqf";
 
 //--- Briefing Entries
 0 execVM "Briefing.sqf";
-
-//--- Loading Screen Status
-12452 cutText ["Receiving mission intel 10%", "BLACK FADED", 50000];
