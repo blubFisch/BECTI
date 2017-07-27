@@ -111,10 +111,7 @@ switch (_action) do {
 					((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl 230005) lnbAddRow [_digits+_label, format["%1%2",round((1 - getDammage _vehicle) * 100), "%"], format["%1%2", round((fuel _vehicle) * 100), "%"], _health];
 				};
 			};
-		} forEach _list;
-		
-		//is Loadouts Enabled?
-		if (CTI_VEHICLES_LOADOUTS > 0) then {((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl 230006) ctrlEnable false};		
+		} forEach _list;		
 		
 		uiNamespace setVariable ["cti_dialog_ui_servicemenu_list", _list_real];
 		uiNamespace setVariable ["cti_dialog_ui_servicemenu_content", _list_content];
@@ -144,7 +141,8 @@ switch (_action) do {
 				if (count (_selected_content select 1) > 0) then {_enables pushBack 230006};
 				{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable false} forEach ([230001, 230002, 230003, 230004, 230006] - _enables);
 				{((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl _x) ctrlEnable true} forEach (_enables);
-				
+				//is Loadouts Enabled?
+				if (CTI_VEHICLES_LOADOUTS isEqualTo 0) then {((uiNamespace getVariable "cti_dialog_ui_servicemenu") displayCtrl 230006) ctrlEnable false};
 				{
 					if ((_x select 0) in _enables) then {
 						_price = _x select 1;
