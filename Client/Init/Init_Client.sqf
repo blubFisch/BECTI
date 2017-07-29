@@ -30,6 +30,7 @@ CTI_CL_FNC_OnJailed = compileFinal preprocessFile "Client\Functions\Client_OnJai
 CTI_CL_FNC_OnMissionEnding = compileFinal preprocessFile "Client\Functions\Client_OnMissionEnding.sqf";
 CTI_CL_FNC_OnPlayerFired = compileFinal preprocessFile "Client\Functions\Client_OnPlayerFired.sqf";
 CTI_CL_FNC_OnPlayerKilled = compileFinal preprocessFile "Client\Functions\Client_OnPlayerKilled.sqf";
+CTI_CL_FNC_OnPlayerDamaged = compileFinal preprocessFile "Client\Functions\Client_OnPlayerDamaged.sqf";
 CTI_CL_FNC_OnWeaponAssembled = compileFinal preprocessFile "Client\Functions\Client_OnWeaponAssembled.sqf";
 CTI_CL_FNC_OnPurchaseDelegationReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseDelegationReceived.sqf";
 CTI_CL_FNC_OnPurchaseOrderReceived = compileFinal preprocessFile "Client\Functions\Client_OnPurchaseOrderReceived.sqf";
@@ -505,6 +506,7 @@ CTI_InitClient = true;
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
 
 player addEventHandler ["killed", {_this spawn CTI_CL_FNC_OnPlayerKilled}];
+player addEventHandler ["HandleDamage", {_this spawn CTI_CL_FNC_OnPlayerDamaged}];
 player addEventHandler ["WeaponAssembled", {_this spawn CTI_CL_FNC_OnWeaponAssembled}];
 
 if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileNamespace setVariable ["CTI_PERSISTENT_HINTS", true]; saveProfileNamespace };
