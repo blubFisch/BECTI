@@ -2719,7 +2719,7 @@ if (CTI_OFPS_UNITS_ADDON > 0) then {
 		//STATICS
 		_headers pushBack 		"AT Defense (360)";
 		_classes pushBack 		"ofps_O_Van_static_AT_F";
-		_prices pushBack 		10000;
+		_prices pushBack 		3500;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -2729,7 +2729,7 @@ if (CTI_OFPS_UNITS_ADDON > 0) then {
 		
 		_headers pushBack 		"AA Defense (360)";
 		_classes pushBack 		"ofps_O_Van_static_AA_F";
-		_prices pushBack 		10000;
+		_prices pushBack 		2500;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -2811,9 +2811,9 @@ if (CTI_OFPS_RHS_ADDON > 0) then {
 		//MISC
 		
 		//STATICS
-		_headers pushBack 		"AA Defense (rhs)";
+		_headers pushBack 		"AT Defense (rhs)";
 		_classes pushBack 		"ofps_O_static_AT_F";
-		_prices pushBack 		10000;
+		_prices pushBack 		3500;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];
@@ -2822,8 +2822,8 @@ if (CTI_OFPS_RHS_ADDON > 0) then {
 		_specials pushBack 		[];	
 		
 		_headers pushBack 		"AA Defense (rhs)";
-		_classes pushBack 		"ofps_O_static_AT_F";
-		_prices pushBack 		10000;
+		_classes pushBack 		"ofps_O_static_AA_F";
+		_prices pushBack 		2500;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
 		_coinmenus pushBack 	["HQ", "RepairTruck"];

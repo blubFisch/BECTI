@@ -2764,7 +2764,7 @@ if (CTI_OFPS_RHS_ADDON > 0) then {
 		//MISC
 		
 		//STATICS
-		_headers pushBack 		"AA Defense (rhs)";
+		_headers pushBack 		"AT Defense (rhs)";
 		_classes pushBack 		"ofps_B_static_AT_F";
 		_prices pushBack 		3500;
 		_placements pushBack 	[180, 5];
@@ -2775,7 +2775,7 @@ if (CTI_OFPS_RHS_ADDON > 0) then {
 		_specials pushBack 		[];	
 		
 		_headers pushBack 		"AA Defense (rhs)";
-		_classes pushBack 		"ofps_B_static_AT_F";
+		_classes pushBack 		"ofps_B_static_AA_F";
 		_prices pushBack 		2500;
 		_placements pushBack 	[180, 5];
 		_categories pushBack 	"Defense";
