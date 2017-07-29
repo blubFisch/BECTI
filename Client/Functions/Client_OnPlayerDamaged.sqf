@@ -30,7 +30,8 @@
 */
 
 params ["_unit","_hitselection","_damage","_source","_projectile"];
-private["_damage"];
+private["_damage","_isleader"];
+_isleader = isPlayer (leader(group player));
 
 if !(_unit isKindOf "Man") exitWith {};
 
@@ -38,5 +39,8 @@ if !(_unit isKindOf "Man") exitWith {};
 if (lifeState player isEqualTo "INCAPACITATED") then {
 	if (! (isPlayer (leader(group player)))) then {(group player) selectLeader player};
 };   
+
+//log for debugging
+diag_log format ["DEBUG:: Client_OnPlayerDamaged.sqf:: unit %1 took damage %2 from source %3 and was leader? %4", name _unit, _damage, _source, _isleader];
 
 _damage
