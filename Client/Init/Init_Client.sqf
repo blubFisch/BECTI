@@ -506,7 +506,7 @@ CTI_InitClient = true;
 waitUntil {!isNil {(group player) getVariable "cti_funds"}};
 
 player addEventHandler ["killed", {_this spawn CTI_CL_FNC_OnPlayerKilled}];
-player addEventHandler ["HandleDamage", {_this spawn CTI_CL_FNC_OnPlayerDamaged}];
+//player addEventHandler ["HandleDamage", {_this spawn CTI_CL_FNC_OnPlayerDamaged}];
 player addEventHandler ["WeaponAssembled", {_this spawn CTI_CL_FNC_OnWeaponAssembled}];
 
 if (isNil {profileNamespace getVariable "CTI_PERSISTENT_HINTS"}) then { profileNamespace setVariable ["CTI_PERSISTENT_HINTS", true]; saveProfileNamespace };
