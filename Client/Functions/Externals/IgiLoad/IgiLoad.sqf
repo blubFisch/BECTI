@@ -142,7 +142,7 @@ if (isnil "IL_Variables") then
 	IL_Supported_Ifrit = ["O_MRAP_02_F", "O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F" , "rhsusf_rg33_usmc_d" , "rhsusf_rg33_usmc_wd"];
 	IL_Supported_UGV = ["B_UGV_01_rcws_F", "B_UGV_01_F", "O_UGV_01_rcws_F", "O_UGV_01_F", "I_UGV_01_rcws_F", "I_UGV_01_F"];
 	IL_Supported_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "JTF2_Offroad_armed_01", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F"];
+	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "B_G_Offroad_01_repair_F", "O_G_Offroad_01_repair_F", "JTF2_Offroad_armed_01", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F"];
 	IL_Supported_SUV = ["C_SUV_01_F","RHS_UAZ_MSV_01"];
 	IL_Supported_Hatchback = ["C_Hatchback_01_F", "C_Hatchback_01_sport_F"];
 	IL_Supported_Hummvee = ["rc_hmmwv", "HMMWV2", "HMMWV_M1035", "M1114_AGS_ACR", "HMMWV_M1151_M2", "HMMWV2_M2", "HMMWV2_MK19", "HMMWV2_TOW", "HMMWV", "HMMWV_M2", "HMMWV_MK19", "HMMWV_TOW", "CUP_B_HMMWV_Unarmed_USMC", "CUP_B_HMMWV_Ambulance_USMC", "CUP_B_HMMWV_Crows_M2_USA", "CUP_B_HMMWV_Crows_MK19_USA", "CUP_B_HMMWV_AGS_GPK_ACR", "CUP_B_HMMWV_DSHKM_GPK_ACR", "CUP_B_HMMWV_M2_GPK_USA", "CUP_B_HMMWV_M2_USMC", "CUP_B_HMMWV_M1114_USMC", "CUP_B_HMMWV_MK19_USMC", "CUP_B_HMMWV_SOV_USA", "CUP_B_HMMWV_TOW_USMC", "CUP_B_HMMWV_Transport_USA", "CUP_B_HMMWV_Terminal_USA", "CUP_C_LR_Transport_CTK", "CUP_B_UAZ_Unarmed_CDF", "CUP_O_UAZ_AMB_RU", "CUP_O_UAZ_Open_CSAT", "CUP_O_Ural_RU", "CUP_O_Ural_Empty_RU", "rhsusf_m1025_d", "rhsusf_m1025_w_m2","rhsusf_m1025_w_mk19","rhsusf_m1025_d_m2"];
@@ -156,6 +156,8 @@ if (isnil "IL_Variables") then
 	IL_Supported_Box_H1 = ["B_supplyCrate_F", "O_supplyCrate_F", "Box_IND_Wps_F", "Box_East_WpsLaunch_F", "Box_NATO_WpsLaunch_F", "Box_IND_WpsLaunch_F", "Box_IND_WpsSpecial_F", "Box_East_WpsSpecial_F", "Box_NATO_WpsSpecial_F", "Box_mas_all_rifle_Wps_F", "Box_mas_us_rifle_Wps_F", "Box_mas_ru_rifle_Wps_F", "Box_mas_mar_NATO_equip_F", "Box_mas_mar_NATO_Wps_F"];
 	IL_Supported_Box_H2 = ["Box_NATO_AmmoOrd_F", "Box_East_AmmoOrd_F", "Box_IND_AmmoOrd_F", "Box_NATO_Grenades_F", "Box_East_Grenades_F", "Box_IND_Grenades_F", "Box_NATO_Ammo_F", "Box_East_Ammo_F", "Box_IND_Ammo_F", "Box_IND_Support_F", "Box_East_Support_F", "Box_NATO_Support_F"];
 	IL_Supported_Cargo20 = ["Land_Cargo20_blue_F", "Land_Cargo20_brick_red_F", "Land_Cargo20_cyan_F", "Land_Cargo20_grey_F", "Land_Cargo20_light_blue_F", "Land_Cargo20_light_green_F", "Land_Cargo20_military_green_F", "Land_Cargo20_orange_F", "Land_Cargo20_red_F", "Land_Cargo20_sand_F", "Land_Cargo20_white_F", "Land_Cargo20_yellow_F", "Land_Pod_Heli_Transport_04_box_F", "B_Slingload_01_Cargo_F" ,"Land_Pod_Heli_Transport_04_ammo_F", "Land_Pod_Heli_Transport_04_repair_F", "Land_Pod_Heli_Transport_04_fuel_F", "B_Slingload_01_Repair_F", "B_Slingload_01_Fuel_F", "B_Slingload_01_Ammo_F"];
+	IL_Supported_LAV = ["CUP_B_LAV25_HQ_desert_USMC", "CUP_B_LAV25_HQ_USMC", "CUP_B_LAV25M240_USMC", "CUP_B_LAV25M240_desert_USMC", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC"];
+	
 	//TODO
 	//IL_Supported_Backpack = ["B_AssaultPack_blk", "B_AssaultPack_cbr", "B_AssaultPack_dgtl", "B_AssaultPack_khk", "B_AssaultPack_mcamo", "B_AssaultPack_ocamo", "B_AssaultPack_rgr", "B_AssaultPack_sgg", "B_AssaultPackG", "B_Bergen_blk", "B_Bergen_mcamo", "B_Bergen_rgr", "B_Bergen_sgg", "B_BergenC_blu", "B_BergenC_grn", "B_BergenC_red", "B_BergenG", "B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_mcamo", "B_Carryall_ocamo", "B_Carryall_oli", "B_Carryall_oucamo", "B_FieldPack_blk", "B_FieldPack_cbr", "B_FieldPack_khk", "B_FieldPack_ocamo", "B_FieldPack_oli", "B_FieldPack_oucamo", "B_HuntingBackpack", "B_Kitbag_cbr", "B_Kitbag_mcamo", "B_Kitbag_sgg", "B_OutdoorPack_blk", "B_OutdoorPack_blu", "B_OutdoorPack_tan", "B_TacticalPack_blk", "B_TacticalPack_mcamo", "B_TacticalPack_ocamo", "B_TacticalPack_oli", "B_TacticalPack_rgr", "C_Bergen_blu", "C_Bergen_grn", "C_Bergen_red", "G_AssaultPack", "G_Bergen"];
 	//IL_Supported_Backpack_Support = ["B_HMG_01_support_F", "B_HMG_01_support_high_F", "B_Mortar_01_support_F", "I_Mortar_01_support_F", "O_Mortar_01_support_F"];
@@ -194,7 +196,7 @@ if (isnil "IL_Variables") then
 	IL_Supported_Cargo_NonVeh_CHINOOK = IL_Supported_Cargo_NonVeh_Mohawk;
 	IL_Supported_Cargo_CHINOOK = IL_Supported_Cargo_Veh_CHINOOK + IL_Supported_Cargo_NonVeh_CHINOOK;
 	
-	IL_Supported_Cargo_Veh_C130J = IL_Supported_Cargo_Veh_HEMTT + IL_Supported_Strider + IL_Supported_Hunter + IL_Supported_Ifrit + IL_Supported_Hummvee + IL_Supported_HEMTT;
+	IL_Supported_Cargo_Veh_C130J = IL_Supported_Cargo_Veh_HEMTT + IL_Supported_Strider + IL_Supported_Hunter + IL_Supported_Ifrit + IL_Supported_Hummvee + IL_Supported_HEMTT + IL_Supported_LAV;
 	IL_Supported_Cargo_NonVeh_C130J = IL_Supported_Cargo_NonVeh_Mohawk;// Damage the plane + IL_Supported_Cargo20;
 	IL_Supported_Cargo_C130J = IL_Supported_Cargo_Veh_C130J + IL_Supported_Cargo_NonVeh_C130J;
 	
