@@ -4,7 +4,7 @@ respawnDelay = 3;
 respawnDialog = false;
 
 //-- Respawn Revive
-ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
+/*ReviveMode = 1;                         //0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode = 1;         //0: basic, 1: advanced, 2: realistic
 ReviveRequiredTrait = 0;                //0: none, 1: medic trait is required
 ReviveRequiredItems = 0;                //0: none, 1: medkit, 2: medkit or first aid kit
@@ -13,7 +13,7 @@ ReviveDelay = 6;                        //time needed to revive someone (in secs
 ReviveMedicSpeedMultiplier = 2;         //speed multiplier for revive performed by medic
 ReviveForceRespawnDelay = 3;            //time needed to perform force respawn (in secs)
 ReviveBleedOutDelay = 120;              //unconscious state duration (in secs)
-
+*/
 //--- Require briefing.html to show up.
 onLoadMission = "Conquer the Island BECTI";
 onLoadMissionTime = false;
