@@ -108,7 +108,7 @@ _respawnBPos pushBack	-1;
 
 _headers pushBack 		[CTI_AIR, "Aircraft Factory", "Air"];
 _classes pushBack 		["Land_Airport_Tower_F", "Land_Airport_Tower_ruins_F"];
-_prices pushBack 		8000;
+_prices pushBack 		6000;
 _times pushBack 		140;
 _placements pushBack 	[180, 40];
 _specials pushBack 		[["DMG_Alternative"], ["DMG_Reduce", 1]]; 

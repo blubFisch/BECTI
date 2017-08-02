@@ -27,7 +27,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_ENABLED", _side], [
 if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 	//------------------------------ Guerilla / Zombie Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-		[1000,1000,1000,1000], //--- Gear
+		[1000,1000,1000,1000,1000,1000], //--- Gear
 		[500,1000,1500,2000], //--- Barracks
 		[1000,2000,2000,3000,4000], //--- Light
 		[2000], //--- Heavy
@@ -51,7 +51,7 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 } else {
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-		[1000,1500,3000,3500], //--- Gear
+		[1000,1500,2000,2500,3000,3500], //--- Gear
 		[1000,1500,3000,4000], //--- Barracks
 		[2000,2250,3500,4500,20000], //--- Light
 		[3500,4500,6000,8000], //--- Heavy
@@ -101,7 +101,7 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 } else {
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LEVELS", _side], [
-		4, //--- Gear
+		6, //--- Gear
 		4, //--- Barracks
 		5, //--- Light
 		4, //--- Heavy
@@ -127,16 +127,16 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 //------------------------------ Guerilla / Zombie Mode	------------------------------	
 missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-	[[],[],[],[]], //--- Gear
-	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
+	[[],[],[]], //--- Gear
+	[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[]], //--- Barracks
 	[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 	[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2],[],[]], //--- Heavy
 	[[],[]], //--- Naval
 	[[],[],[],[],[]], //--- Air
 	[[],[],[],[]], //--- Air Ordinance
 	[[],[],[],[]], //--- Land Ordinance
-	[[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3]], //--- Towns Depots
-	[[CTI_UPGRADE_AIR, 1],[CTI_UPGRADE_AIR, 2]], //--- Halo
+	[[],[],[]], //--- Towns Depots
+	[[],[]], //--- Halo
 	[[],[],[]], //--- Air Radar
 	[[],[],[]], //--- Art Radar
 	[[],[],[]], //--- Respawn Range
@@ -151,22 +151,22 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 } else {
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
-		[[],[CTI_UPGRADE_BARRACKS,1],[CTI_UPGRADE_BARRACKS,2],[]], //--- Gear
+		[[],[],[],[],[],[]], //--- Gear
 		[[CTI_UPGRADE_GEAR, 1],[CTI_UPGRADE_GEAR, 2],[CTI_UPGRADE_GEAR, 3],[CTI_UPGRADE_GEAR, 4]], //--- Barracks
-		[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
+		[[],[],[],[],[CTI_UPGRADE_NUKE, 1]], //--- Light
 		[[CTI_UPGRADE_LIGHT,2],[CTI_UPGRADE_LIGHT,3],[CTI_UPGRADE_LIGHT,4],[]], //--- Heavy
-		[[CTI_UPGRADE_BARRACKS, 1],[CTI_UPGRADE_BARRACKS, 2]], //--- Naval
-		[[CTI_UPGRADE_HEAVY,1],[CTI_UPGRADE_HEAVY,2],[],[],[]], //--- Air
+		[[],[]], //--- Naval
+		[[],[],[],[],[]], //--- Air
 		[[],[],[],[]], //--- Air Ordinance
 		[[],[],[],[]], //--- Land Ordinance
-		[[CTI_UPGRADE_BARRACKS,2],[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- Towns Depots
-		[[],[CTI_UPGRADE_AIR, 1]], //--- Halo
+		[[],[],[]], //--- Towns Depots
+		[[],[]], //--- Halo
 		[[],[],[]], //--- Air Radar
 		[[],[],[]], //--- Art Radar
 		[[],[],[]], //--- Respawn Range
 		[[CTI_UPGRADE_LIGHT,1],[CTI_UPGRADE_LIGHT,2]], //--- LVOSS System
 		[[CTI_UPGRADE_LVOSS, 1],[CTI_UPGRADE_LVOSS, 2],[],[]], //--- ERA System
-		[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 3]], //--- Satellite
+		[[CTI_UPGRADE_AIR, 1], [CTI_UPGRADE_AIR, 2]], //--- Satellite
 		[[CTI_UPGRADE_LIGHT,4]], //--- Nuke
 		[[],[],[]], //--- Supply Rate
 		[[],[],[],[]], //--- Base Health
@@ -177,7 +177,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LINKS", _side], [
 if (CTI_DEV_MODE > 0) then { 
 	//------------------------------ DEV Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
-		[1, 1, 1, 1], //--- Gear
+		[1, 1, 1, 1, 1, 1], //--- Gear
 		[1, 1, 1, 1], //--- Barracks
 		[1, 1, 1, 1, 1], //--- Light
 		[1, 1, 1, 1], //--- Heavy
@@ -202,15 +202,15 @@ if (CTI_DEV_MODE > 0) then {
 	//------------------------------ Guerilla / Zombie Mode	------------------------------
 	if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
-			[30,60,120,180], //--- Gear
-			[60,120,180,240], //--- Barracks
+			[60,90,120], //--- Gear
+			[60,90,120,180], //--- Barracks
 			[60,120,180,240,300], //--- Light
 			[120], //--- Heavy
 			[60,120], //--- Naval
 			[120,360], //--- Air
-			[30,60,120,180], //--- Air Ordinance
-			[30,60,120,180], //--- Land Ordinance
-			[60,120,180], //--- Towns Depots
+			[60,90,120,180], //--- Air Ordinance
+			[60,90,120,180], //--- Land Ordinance
+			[60,90,120], //--- Towns Depots
 			[60,60], //--- Halo
 			[60,60,60], //--- Air Radar
 			[60,60,60], //--- Art Radar
@@ -219,22 +219,22 @@ if (CTI_DEV_MODE > 0) then {
 			[60,60,60,60], //--- ERA System
 			[60,300], //--- Satellite
 			[300], //--- Nuke
-			[60,75,90], //--- Supply Rate
-			[60,120,180,240], //--- Base Health
-			[60,120,180] //--- Base Defense
+			[60,90,120], //--- Supply Rate
+			[60,90,120,180], //--- Base Health
+			[60,90,120] //--- Base Defense
 		]];
 	} else {
 		//------------------------------ Normal Mode	------------------------------
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
-			[30,60,120,180], //--- Gear
-			[60,120,180,240], //--- Barracks
+			[60,90,120,180,210,240], //--- Gear
+			[60,90,120,180], //--- Barracks
 			[60,120,180,240,300], //--- Light
 			[60,120,180,240], //--- Heavy
 			[60,120], //--- Naval
 			[60,120,180,240,300], //--- Air
-			[30,60,120,180], //--- Air Ordinance
-			[30,60,120,180], //--- Land Ordinance
-			[60,120,180], //--- Towns Depots
+			[60,90,120,180], //--- Air Ordinance
+			[60,90,120,180], //--- Land Ordinance
+			[60,90,120], //--- Towns Depots
 			[60,60], //--- Halo
 			[60,60,60], //--- Air Radar
 			[60,60,60], //--- Art Radar
@@ -243,9 +243,9 @@ if (CTI_DEV_MODE > 0) then {
 			[60,60,60,60], //--- ERA System
 			[60,300], //--- Satellite
 			[300], //--- Nuke
-			[60,75,90], //--- Supply Rate
-			[60,120,180,240], //--- Base Health
-			[60,120,180] //--- Base Defense
+			[60,90,120], //--- Supply Rate
+			[60,90,120,180], //--- Base Health
+			[60,90,120] //--- Base Defense
 		]];
 	};
 };
@@ -257,6 +257,9 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_AI_ORDER", _side], [
 	[CTI_UPGRADE_LIGHT, 1],
 	[CTI_UPGRADE_GEAR, 2],
 	[CTI_UPGRADE_TOWNS, 1],
+	[CTI_UPGRADE_LIGHT, 2],
+	[CTI_UPGRADE_LIGHT, 3],
+	[CTI_UPGRADE_BARRACKS, 2],
 	[CTI_UPGRADE_HEAVY, 1],
 	[CTI_UPGRADE_NAVAL, 1],
 	[CTI_UPGRADE_AIR, 1],
@@ -293,7 +296,7 @@ missionNamespace setVariable [Format["CTI_%1_UPGRADES_LABELS", _side], [
 	["ERA System", "<t>Enable Explosive Reactive Armor system (ERA) or Arena System for Heavy Vehicles, Tanks still vulnerable from the rear.<br /><t color='#ffff00'>LVL 1</t> - ERA Mode Ammo 1 per side, Cooldown 150s<br /><t color='#ffff00'>LVL 2</t> - ERA Mode Ammo 2 per side, Cooldown 120s<br /><t color='#ffff00'>LVL 3</t> - ARENA Mode Ammo 3 per side, Cooldown 90s<br /><t color='#ffff00'>LVL 4</t> - ARENA Mode Ammo 4 per side, Cooldown 60s</t>"], //--- ERA System
 	["Satellite Uplink", "<t>Allows the use of the satellite camera and access to advanced intel reports. <br /><t color='#ffff00'>LVL 0</t> - Satellite Uplink building enables enemy detection near base.<br /><t color='#ffff00'>LVL 1</t> - Unlocks Base Satellite Cam and town intel.<br /><t color='#ffff00'>LVL 2</t> - Unlocks Full Satellite Cam </t>"], //--- Satellite
 	["Nuclear Arms Deal", "<t>Unlock Nuke Truck in Light Factory<br /><t color='#ffff00'>Unlocks Light 5 Upgrade which unlocks the Nuke Truck.</t></t>"], //--- Nuke
-	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 2 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 3 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 4 SV per Interval</t>"], //--- Supply Rate
+	["Supply Rate", "<t>Improves rate at which Capped Town SV Raises<br /><t color='#ffff00'>LVL 1</t> - 1.25 SV per Interval<br /><t color='#ffff00'>LVL 2</t> - 1.5 SV per Interval<br /><t color='#ffff00'>LVL 3</t> - 1.75 SV per Interval</t>"], //--- Supply Rate
 	["Base Health", "<t>Improves base structures health<br /><t color='#ffff00'>LVL 1</t> - 25% Boost </t><br /><t color='#ffff00'>LVL 2</t> - 50% Boost<br /><t color='#ffff00'>LVL 3</t> - 75% Boost <br /><t color='#ffff00'>LVL 4</t> - 100% Boost </t>"], //--- Base Health
 	["Base Defences", "<t>Unlock better defences structures and weapons<br /><t color='#ffff00'>LVL 1</t> - Basic ZSU and more.<br /><t color='#ffff00'>LVL 2</t> - Unlocks AA/AT.<br /><t color='#ffff00'>LVL 3</t> - Unlocks C-RAM and more."] //--- Base defense
 ]];

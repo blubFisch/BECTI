@@ -295,7 +295,7 @@ CTI_UPGRADE_BASE_HEALTH = 18;
 CTI_UPGRADE_BASE_DEFENSES = 19;
 
 //--- Supply
-CTI_UPGRADE_CST_SUPPLY_COEF = [1, 1.25, 1.50, 1.85]; //--- Supply coefficient (Default * upgrade)
+CTI_UPGRADE_CST_SUPPLY_COEF = [1, 1.25, 1.50, 1.75]; //--- Supply coefficient (Default * upgrade)
 CTI_UPGRADE_BARRACKS_SKILL = [40, 55, 70, 85, 100]; //--- Factory health upgrade damage reduce multipliers
 
 //-----------------------------------------------------------------------------------------------------------------------//
