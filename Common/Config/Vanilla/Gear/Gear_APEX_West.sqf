@@ -6,374 +6,413 @@ _faction = "West";
 _i = []; //Gear Classname
 _u = []; //Upgrade Level
 _p = []; //Price
-_g = []; //Filter
+_g = []; //Color
+// Item Name
 
 /*EXAMPLE
 _i pushBack "ATMine_Range_Mag";
 _u pushBack 2;
 _p pushBack 600;
-_g pushBack "";
+_g pushBack "Black";
+// AT Mine
 */
 
-//------------------------------ GUNS ------------------------------
-//--- PISTOLS
-//--- SMG
-//--- ASSAULT RIFLES
-//--- GRENADE LAUNCHERS
-//--- Machine Guns
-_i pushBack "LMG_03_F"; 
-_u pushBack 1;
-_p pushBack 700;
-_g pushBack "Black";
+//------------------------------ All ------------------------------
 
-//--- SNIPERS	
-_i pushBack "srifle_LRR_tna_F";
-_u pushBack 3;
-_p pushBack 2100;
-_g pushBack "Tropic";
+_i pushBack "launch_O_Titan_ghex_F";
+_u pushBack 5;
+_p pushBack 3000;
+_g pushBack "Green";
+// Titan AA GreenHex
 
-_i pushBack "V_PlateCarrierGL_tna_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
+_i pushBack "launch_B_Titan_tna_F";
+_u pushBack 5;
+_p pushBack 3000;
+_g pushBack "Green";
+// Titan AA Tropic
+
+_i pushBack "launch_O_Titan_short_ghex_F";
+_u pushBack 6;
+_p pushBack 5000;
+_g pushBack "Green";
+// Titan AT GreenHex
+
+_i pushBack "launch_B_Titan_short_tna_F";
+_u pushBack 6;
+_p pushBack 5000;
+_g pushBack "Green";
+// Titan AT Tropic
 
 _i pushBack "hgun_P07_khk_F";
 _u pushBack 0;
-_p pushBack 300;
-_g pushBack "Khaki";
-
-_i pushBack "hgun_P07_khk_F"; //P07 9mm
-_u pushBack 0;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_MX_khk_F"; //MX
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_MX_GL_khk_F"; //MX GL
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_MX_SW_khk_F"; //MX SW
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_MXC_khk_F"; //MX C
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_MXM_khk_F"; //MX M
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_SPAR_01_khk_F"; //SPAR-16 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_SPAR_01_blk_F"; //SPAR-16 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Black";
-
-_i pushBack "arifle_SPAR_01_snd_F"; //SPAR-16 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Khaki";
-
-_i pushBack "arifle_SPAR_01_GL_blk_F"; //SPAR-16 GL 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Black";
-
-_i pushBack "arifle_SPAR_01_GL_snd_F"; //SPAR-16 GL 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Khaki";
-
-_i pushBack "arifle_SPAR_02_snd_F"; //SPAR-16S 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Khaki";
-
-_i pushBack "arifle_SPAR_03_khk_F"; //SPAR-17 7.62 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_SPAR_03_blk_F"; //SPAR-17 7.62 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_SPAR_03_snd_F"; //SPAR-17 7.62 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-//--- SNIPERS	
-//--- DMR
-_i pushBack "arifle_SPAR_02_khk_F"; //SPAR-16S 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Tropic";
-
-_i pushBack "arifle_SPAR_02_blk_F"; //SPAR-16S 5.56 mm
-_u pushBack 1;
-_p pushBack 500;
-_g pushBack "Black";
-
-//------------------------------ LAUNCHERS	------------------------------
-//--- LAUNCHERS	
-_i pushBack "launch_B_Titan_tna_F"; //AA
-_u pushBack 4;
-_p pushBack 5000;
-	
-_g pushBack "Khaki";
-
-_i pushBack "launch_B_Titan_short_tna_F"; //Takes AT and AP rounds only
-_u pushBack 3;
-_p pushBack 3000;
-_g pushBack "Khaki";
-
-//------------------------------ EXPLOSIVES	------------------------------
-//--- EXPLOSIVES	
-//------------------------------ ACCESSORIES ------------------------------
-//--- ATTACHMENTS
-_i pushBack "bipod_01_F_blk";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Black";
-
-_i pushBack "bipod_01_F_mtp";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "MTP";
-
-_i pushBack "bipod_01_F_snd";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Khaki";
-
-_i pushBack "bipod_02_F_blk";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Black";
-
-_i pushBack "bipod_02_F_hex";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Hex";
-
-_i pushBack "bipod_02_F_tan";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Khaki";
-
-_i pushBack "bipod_03_F_blk";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Black";
-
-_i pushBack "bipod_03_F_oli";
-_u pushBack 1;
-_p pushBack 100;
+_p pushBack 150;
 _g pushBack "Green";
+// P07 Khaki
 
-//--- OPTICS 
-_i pushBack "optic_AMS";
-_u pushBack 3;
-_p pushBack 800;
-_g pushBack "Black";
+_i pushBack "NVGoggles_tna_F";
+_u pushBack 0;
+_p pushBack 750;
+_g pushBack "Green";
+// NV Tropic
 
-_i pushBack "optic_AMS_khk";
-_u pushBack 3;
-_p pushBack 800;
-_g pushBack "Khaki";
+_i pushBack "muzzle_snds_H_khk_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Green";
+// 650 Khaki
 
-_i pushBack "optic_AMS_snd";
-_u pushBack 3;
-_p pushBack 800;
-_g pushBack "Khaki";
+_i pushBack "muzzle_snds_H_snd_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Sand";
+// 650 Sand
 
-//--- ITEMS 
-_i pushBack "Laserdesignator_03";
-_u pushBack 3;
+_i pushBack "muzzle_snds_B_khk_F";
+_u pushBack 6;
 _p pushBack 1000;
 _g pushBack "Green";
+// 762 Khaki
 
-//--- SUPPRESSORS
-_i pushBack "muzzle_snds_338_black";
+_i pushBack "muzzle_snds_B_snd_F";
+_u pushBack 6;
+_p pushBack 1000;
+_g pushBack "Sand";
+// 762 Sand
+
+_i pushBack "muzzle_snds_65_TI_blk_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Black";
+// 650 black
+
+_i pushBack "muzzle_snds_65_TI_ghex_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Green";
+// 650 GreenHex
+
+_i pushBack "muzzle_snds_65_TI_hex_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Sand";
+// 650 Hex
+
+_i pushBack "muzzle_snds_m_khk_F";
+_u pushBack 3;
+_p pushBack 750;
+_g pushBack "Green";
+// 556 Khaki
+
+_i pushBack "muzzle_snds_m_snd_F";
+_u pushBack 3;
+_p pushBack 750;
+_g pushBack "Sand";
+// 556 Sand
+
+_i pushBack "muzzle_snds_H_MG_blk_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Black";
+// 650 Black MG
+
+_i pushBack "muzzle_snds_H_MG_khk_F";
+_u pushBack 5;
+_p pushBack 900;
+_g pushBack "Green";
+// 650 Khaki MG
+
+_i pushBack "muzzle_snds_58_blk_F";
 _u pushBack 4;
 _p pushBack 800;
 _g pushBack "Black";
+// 580 Black
 
-_i pushBack "muzzle_snds_338_green";
+_i pushBack "muzzle_snds_58_ghex_F";
 _u pushBack 4;
 _p pushBack 800;
 _g pushBack "Green";
+// 580 GreenHex
 
-_i pushBack "muzzle_snds_338_sand";
+_i pushBack "muzzle_snds_58_hex_F";
 _u pushBack 4;
 _p pushBack 800;
-_g pushBack "Khaki";
+_g pushBack "Sand";
+// 580 Hex
 
-//------------------------------ UNIFORMS------------------------------
-//--- UNIFORMS	
-
-_i pushBack "U_B_FullGhillie_ard";
+_i pushBack "bipod_01_F_khk";
 _u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-//--- VESTS
-
-_i pushBack "V_PlateCarrierIAGL_oli";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PlateCarrier1_rgr_noflag_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Green";
-
-_i pushBack "V_PlateCarrier1_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "V_PlateCarrier2_tna_F";
-_u pushBack 1;
 _p pushBack 300;
-_g pushBack "Tropic";
-
-_i pushBack "V_PlateCarrier2_rgr_noflag_F";
-_u pushBack 0;
-_p pushBack 600;
 _g pushBack "Green";
+// Bipod Khaki
 
-_i pushBack "V_PLateCarrierSpec_tna_F";
-_u pushBack 0;
-_p pushBack 600;
-_g pushBack "Tropic";
+_i pushBack "optic_Arco_blk_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Black";
+// Holo 4x Like ARCO Black
 
-_i pushBack "U_B_T_FullGhillie_tna_F";
-_u pushBack 2;
-_p pushBack 100;
-_g pushBack "Tropic";
+_i pushBack "optic_Arco_ghex_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Green";
+// Holo 4x Like ARCO GreenHex
+
+_i pushBack "optic_ERCO_blk_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Black";
+// Holo 4x Like ERCO Black
+
+_i pushBack "optic_ERCO_khk_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Green";
+// Holo 4x Like ERCO Khaki
+
+_i pushBack "optic_ERCO_snd_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Sand";
+// Holo 4x Like ERCO Sand
+
+_i pushBack "optic_Holosight_blk_F";
+_u pushBack 1;
+_p pushBack 150;
+_g pushBack "Black";
+// Holo
+
+_i pushBack "optic_Holosight_khk_F";
+_u pushBack 1;
+_p pushBack 150;
+_g pushBack "Black";
+// Holo
+
+_i pushBack "optic_Holosight_smg_blk_F";
+_u pushBack 1;
+_p pushBack 150;
+_g pushBack "Black";
+// Holo
+
+_i pushBack "optic_Holosight_smg_khk_F";
+_u pushBack 1;
+_p pushBack 150;
+_g pushBack "Black";
+// Holo
+
+_i pushBack "optic_SOS_khk_F";
+_u pushBack 3;
+_p pushBack 400;
+_g pushBack "Green";
+// MOS Sniper Khaki
+
+_i pushBack "optic_Hamr_khk_F";
+_u pushBack 3;
+_p pushBack 250;
+_g pushBack "Green";
+// Holo 4x Like RCO Khaki
+
+_i pushBack "B_Bergen_dgtl_F";
+_u pushBack 6;
+_p pushBack 2000;
+_g pushBack "Green";
+// Bergen Digital
+
+_i pushBack "B_Bergen_hex_F";
+_u pushBack 6;
+_p pushBack 2000;
+_g pushBack "Sand";
+// Bergen Hex
+
+_i pushBack "B_Bergen_mcamo_F";
+_u pushBack 6;
+_p pushBack 2000;
+_g pushBack "Green";
+// Bergen MTP
+
+_i pushBack "B_Bergen_tna_F";
+_u pushBack 6;
+_p pushBack 2000;
+_g pushBack "Green";
+// Bergen Tropic
+
+_i pushBack "B_Carryall_ghex_F";
+_u pushBack 4;
+_p pushBack 1100;
+_g pushBack "Green";
+// CarryAll GreenHex
+
+
+//------------------------------ West Only ------------------------------
+
+_i pushBack "Laserdesignator_01_khk_F";
+_u pushBack 6;
+_p pushBack 4000;
+_g pushBack "Green";
+// LaserDesignator BlueForce
+
+_i pushBack "NVGogglesB_blk_F";
+_u pushBack 5;
+_p pushBack 2500;
+_g pushBack "Black";
+// ENVG-II Black
+
+_i pushBack "NVGogglesB_grn_F";
+_u pushBack 5;
+_p pushBack 2500;
+_g pushBack "Green";
+// ENVG-II Green
+
+_i pushBack "NVGogglesB_gry_F";
+_u pushBack 5;
+_p pushBack 2500;
+_g pushBack "Urban";
+// ENVG-II Grey
+
+_i pushBack "optic_LRPS";
+_u pushBack 4;
+_p pushBack 750;
+_g pushBack "Black";
+// LRPS Sniper
+
+_i pushBack "optic_LRPS_ghex_F";
+_u pushBack 4;
+_p pushBack 750;
+_g pushBack "Green";
+// LPRS Sniper GreenHex
+
+_i pushBack "optic_LRPS_tna_F";
+_u pushBack 4;
+_p pushBack 750;
+_g pushBack "Green";
+// LPRS Sniper Tropic
+
+_i pushBack "H_HelmetB_TI_tna_F";
+_u pushBack 4;
+_p pushBack 1000;
+_g pushBack "Black";
+// Combat Helmet 
 
 _i pushBack "U_B_T_Soldier_SL_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_T_Soldier_AR_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-	
-_i pushBack "U_B_T_Soldier_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_T_Sniper_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_GEN_Soldier_F";
 _u pushBack 0;
-_p pushBack 100;
-_g pushBack "Tropic";
+_p pushBack 200;
+_g pushBack "Green";
+// Uniform Tropic
 
-_i pushBack "U_B_GEN_Commander_F";
-_u pushBack 0;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_2_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_3_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_urb_1_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_urb_2_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "U_B_CTRG_Soldier_urb_3_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-//--- BACKPACKS
-//--- DISMANTLED WEAPONS
-//--- HeadGear	
-//--- HATS
-_i pushBack "H_HelmetB_TI_tna_F";
-_u pushBack 2;
-_p pushBack 600;
-_g pushBack "Tropic";
-
-_i pushBack "H_HelmetB_tna_F";
+_i pushBack "LMG_03_F";
 _u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
+_p pushBack 1200;
+_g pushBack "Black";
+// LIM-85 SAW 556mm Black
 
-_i pushBack "H_HelmetB_Enh_tna_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "H_HelmetB_Light_tna_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-_i pushBack "H_MilCap_tna_F";
-_u pushBack 1;
-_p pushBack 100;
-_g pushBack "Tropic";
-
-
-//--- FACE
-//------------------------------ MAGAZINES ------------------------------
-//--- MAGAZINES
-_i pushBack "20Rnd_762x51_Mag";
-_u pushBack 2;
-_p pushBack 150;
-_g pushBack "";
-
-_i pushBack "130Rnd_338_Mag";
+_i pushBack "arifle_MX_GL_khk_F";
 _u pushBack 3;
-_p pushBack 230;
-_g pushBack "";
+_p pushBack 2000;
+_g pushBack "Green";
+// MX GL Sand Khaki
 
-//--- THROWABLE / DEPLOYABLE
-//--- GRENADELAUNCHER / MISSILES
+_i pushBack "arifle_MX_khk_F";
+_u pushBack 3;
+_p pushBack 1500;
+_g pushBack "Green";
+// MX 650 Khaki
+
+_i pushBack "arifle_MX_SW_khk_F";
+_u pushBack 3;
+_p pushBack 1600;
+_g pushBack "Green";
+// MX SW 650 Khaki
+
+_i pushBack "arifle_MXC_khk_F";
+_u pushBack 3;
+_p pushBack 1500;
+_g pushBack "Green";
+// MX 650 Carbine Khaki
+
+_i pushBack "arifle_MXM_khk_F";
+_u pushBack 3;
+_p pushBack 1500;
+_g pushBack "Green";
+// MX 650 MXM Khaki
+
+_i pushBack "SMG_05_F";
+_u pushBack 0;
+_p pushBack 500;
+_g pushBack "Black";
+// Protector MP5k 9mm Black
+
+_i pushBack "arifle_SPAR_01_blk_F";
+_u pushBack 1;
+_p pushBack 1000;
+_g pushBack "Black";
+// SPAR-16 556mm Black
+
+_i pushBack "arifle_SPAR_01_khk_F";
+_u pushBack 1;
+_p pushBack 1000;
+_g pushBack "Green";
+// SPAR-16 556mm Khaki
+
+_i pushBack "arifle_SPAR_01_snd_F";
+_u pushBack 1;
+_p pushBack 1000;
+_g pushBack "Sand";
+// SPAR-16 556mm Sand
+
+_i pushBack "arifle_SPAR_01_GL_blk_F";
+_u pushBack 1;
+_p pushBack 1500;
+_g pushBack "Black";
+// SPAR-16 556mm Black GL
+
+_i pushBack "arifle_SPAR_01_GL_khk_F";
+_u pushBack 1;
+_p pushBack 1500;
+_g pushBack "Green";
+// SPAR-16 556mm Khaki GL
+
+_i pushBack "arifle_SPAR_01_GL_snd_F";
+_u pushBack 1;
+_p pushBack 1500;
+_g pushBack "Sand";
+// SPAR-16 556mm Sand GL
+
+_i pushBack "arifle_SPAR_02_blk_F";
+_u pushBack 1;
+_p pushBack 1100;
+_g pushBack "Black";
+// SPAR-16 556mm Sniper Black
+
+_i pushBack "arifle_SPAR_02_khk_F";
+_u pushBack 1;
+_p pushBack 1100;
+_g pushBack "Green";
+// SPAR-16 556mm Sniper Khaki
+
+_i pushBack "arifle_SPAR_02_snd_F";
+_u pushBack 1;
+_p pushBack 1100;
+_g pushBack "Sand";
+// SPAR-16 556mm Sniper Sand
+
+_i pushBack "arifle_SPAR_03_blk_F";
+_u pushBack 4;
+_p pushBack 2000;
+_g pushBack "Black";
+// SPAR-17 762mm Black
+
+_i pushBack "arifle_SPAR_03_khk_F";
+_u pushBack 4;
+_p pushBack 2000;
+_g pushBack "Green";
+// SPAR-17 762mm Khaki
+
+_i pushBack "arifle_SPAR_03_snd_F";
+_u pushBack 4;
+_p pushBack 2000;
+_g pushBack "Sand";
+// SPAR-17 762mm Sand
+
+
+
 
 [_faction, _i, _u, _p, _g] call compile preprocessFileLineNumbers "Common\Config\Common\Gear\Gear_Config_Set.sqf"; 
