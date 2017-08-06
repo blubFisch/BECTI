@@ -51,7 +51,7 @@ if (CTI_GUERILLA_MODE isEqualTo 1 || CTI_ZOMBIE_MODE isEqualTo 1) then {
 } else {
 	//------------------------------ Normal Mode	------------------------------
 	missionNamespace setVariable [Format["CTI_%1_UPGRADES_COSTS", _side], [
-		[1000,1500,2000,2500,3000,3500], //--- Gear
+		[1000,1500,2500,1500,500,1500], //--- Gear
 		[1000,1500,3000,4000], //--- Barracks
 		[2000,2250,3500,4500,20000], //--- Light
 		[3500,4500,6000,8000], //--- Heavy
@@ -226,7 +226,7 @@ if (CTI_DEV_MODE > 0) then {
 	} else {
 		//------------------------------ Normal Mode	------------------------------
 		missionNamespace setVariable [Format["CTI_%1_UPGRADES_TIMES", _side], [
-			[60,90,120,180,210,240], //--- Gear
+			[60,90,120,180,60,90], //--- Gear
 			[60,90,120,180], //--- Barracks
 			[60,120,180,240,300], //--- Light
 			[60,120,180,240], //--- Heavy
