@@ -709,8 +709,8 @@ if (CTI_RHS_AFRF_ADDON >= 2) then {
 		_u pushBack 'rhsgref_BRDM2_ATGM_msv';
 		_u pushBack 'rhs_btr80a_msv';
 		_u pushBack 'RHS_BM21_MSV_01';
-		_u pushBack 'rhs_9k79';
-		_u pushBack 'rhs_9k79_K';	
+		//_u pushBack 'rhs_9k79';
+		//_u pushBack 'rhs_9k79_K';	
 		//Russia RHS (Woodland)******************************************	
 };
 //------------------------------ OFPS RHS ------------------------------

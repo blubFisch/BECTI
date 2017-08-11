@@ -1616,16 +1616,6 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
-_c pushBack 'rhs_9k79';
-_p pushBack '';
-_n pushBack '9P129-1M (HE Warhead)';
-_o pushBack 120000;
-_t pushBack 30;
-_u pushBack 5;
-_f pushBack CTI_FACTORY_LIGHT;
-_s pushBack "";
-_d pushBack 10;
-_g pushBack "";
 
 //Being used as salvage truck
 _c pushBack 'rhs_kamaz5350_flatbed_msv';
@@ -1940,6 +1930,19 @@ _s pushBack "";
 _d pushBack 10;
 _g pushBack "";
 
+//Scud HE
+_c pushBack 'rhs_9k79';
+_p pushBack '';
+_n pushBack '9P129-1M (HE Warhead)';
+_o pushBack 120000;
+_t pushBack 30;
+_u pushBack 5;
+_f pushBack CTI_FACTORY_LIGHT;
+_s pushBack "";
+_d pushBack 10;
+_g pushBack "";
+
+//Scud Cluster
 _c pushBack 'rhs_9k79_K';
 _p pushBack '';
 _n pushBack '9P129-1M (Cluster Warhead)';
