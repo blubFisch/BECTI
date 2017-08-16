@@ -195,7 +195,11 @@ switch (_action) do {
 			{
 				_value = ((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270002) lbValue _x;
 				_who = (uiNamespace getVariable "cti_dialog_ui_aimicromenu_units") select _value;
-				if (_who isEqualTo effectiveCommander vehicle _who && !(vehicle _who isEqualTo _who)) then {(vehicle _who) setDammage 1};
+				
+				// Vehicles: destroy if this unit is the last remaining crew
+				if (!(vehicle _who isEqualTo _who) && {{alive _x} count crew vehicle _who == 1}) then {
+					(vehicle _who) setDammage 1;
+				};
 				_who setDammage 1;
 			} forEach _selection;
 			{((uiNamespace getVariable "cti_dialog_ui_aimicromenu") displayCtrl 270002) lbDelete _x} forEach _selection;
